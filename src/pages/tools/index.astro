@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+const title = 'Free Tools for China Travel';
+const description =
+  'Interactive tools to plan your China trip: compare eSIM data plans and check whether your payment card works with Alipay and WeChat Pay.';
+
+const tools = [
+  {
+    href: '/tools/esim-comparison/',
+    title: 'eSIM Plan Comparator',
+    desc: 'Compare data allowance, validity, price, and network across the top China travel eSIMs.',
+    icon: '📶',
+  },
+  {
+    href: '/tools/payment-checker/',
+    title: 'Payment Compatibility Checker',
+    desc: 'Check if your card works with Alipay and WeChat Pay, plus limits and fees, by nationality.',
+    icon: '💳',
+  },
+];
+---
+
+<BaseLayout title={`${title} | China Travel Kit`} description={description}>
+  <Header />
+  <main class="container-page py-12">
+    <header class="max-w-2xl">
+      <h1 class="text-3xl font-bold text-gray-900 md:text-4xl">Tool Center</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <section class="mt-8 grid gap-6 md:grid-cols-2">
+      {tools.map((tool) => (
+        <a href={tool.href} class="card block hover:no-underline">
+          <div class="text-3xl">{tool.icon}</div>
+          <h2 class="mt-3 text-lg font-bold text-gray-900">{tool.title}</h2>
+          <p class="mt-1.5 text-sm text-gray-600">{tool.desc}</p>
+          <span class="mt-3 inline-block text-sm font-semibold text-brand-600">Open tool →</span>
+        </a>
+      ))}
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'About China Travel Kit';
+const description =
+  'China Travel Kit is an independent resource helping foreign visitors handle payments, connectivity, and transport in China with confidence.';
+---
+
+<BaseLayout title={`${title} | China Travel Kit`} description={description}>
+  <Header />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <h1 class="text-3xl font-bold text-gray-900">About China Travel Kit</h1>
+      <p class="mt-4">
+        China Travel Kit is an independent guide built for foreign visitors who want a smooth,
+        stress-free trip to China. Traveling in China has never been easier — but the digital-first
+        ecosystem of mobile payments, eSIM data, and app-based transport can feel overwhelming if
+        you have never used it before.
+      </p>
+      <p>
+        Our mission is simple: turn the questions travelers actually ask into clear, tested,
+        step-by-step answers. Every guide is written in plain English, focused on what works right
+        now, and updated as apps and regulations change.
+      </p>
+      <h2>What We Cover</h2>
+      <ul>
+        <li><strong>Payment:</strong> setting up Alipay and WeChat Pay, linking foreign cards, and paying like a local.</li>
+        <li><strong>eSIM &amp; Data:</strong> choosing and activating the right data plan before you arrive.</li>
+        <li><strong>Transport:</strong> booking high-speed trains, using ride-hailing, and getting around cities.</li>
+      </ul>
+      <h2>How We Stay Free</h2>
+      <p>
+        This site is supported by advertising and affiliate partnerships. When you use some of the
+        links on our site, we may earn a commission at no extra cost to you. This never influences
+        which products we recommend — our guidance is based on what genuinely helps travelers.
+      </p>
+      <h2>Get in Touch</h2>
+      <p>
+        Spotted something out of date or have a question we haven't answered? Head to our
+        <a href="/contact/">contact page</a> — we read every message.
+      </p>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

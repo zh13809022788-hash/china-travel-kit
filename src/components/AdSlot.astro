@@ -1,0 +1,27 @@
+---
+export interface Props {
+  format?: 'banner' | 'in-article' | 'sidebar';
+  label?: string;
+}
+
+const { format = 'banner', label = 'Advertisement' } = Astro.props;
+
+const sizeClasses: Record<string, string> = {
+  banner: 'min-h-[90px] md:min-h-[120px]',
+  'in-article': 'min-h-[250px]',
+  sidebar: 'min-h-[600px] w-full max-w-[300px]',
+};
+---
+
+<aside
+  class:list={[
+    'my-6 flex items-center justify-center rounded-lg border border-dashed border-gray-300 bg-gray-50 text-xs uppercase tracking-wide text-gray-400',
+    sizeClasses[format],
+  ]}
+  data-ad-slot={format}
+  aria-label={label}
+>
+  {/* ==== AD CODE SLOT: paste ad network snippet here ==== */}
+  {/* <!-- AD_SLOT_{format.toUpperCase()} --> */}
+  <span>{label} ({format})</span>
+</aside>

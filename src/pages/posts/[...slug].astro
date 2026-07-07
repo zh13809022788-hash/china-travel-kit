@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { data } = post;
+
+// Per-category affiliate CTA mapping
+const affiliateByCategory: Record<string, { title: string; description: string; buttonText: string }> = {
+  payment: {
+    title: 'Travel-Ready Payment Setup',
+    description: 'Get a prepaid travel card that works seamlessly with Alipay and WeChat Pay in China.',
+    buttonText: 'Get Started',
+  },
+  esim: {
+    title: 'Recommended China eSIM',
+    description: 'Skip the airport queue — activate a high-speed data plan before you land.',
+    buttonText: 'View Plans',
+  },
+  transport: {
+    title: 'Book Trains & Rides Easily',
+    description: 'Reserve high-speed train tickets and airport transfers in English, hassle-free.',
+    buttonText: 'Book Now',
+  },
+};
+
+const affiliate = affiliateByCategory[data.category];
+---
+
+<BlogPost
+  title={data.title}
+  description={data.description}
+  pubDate={data.pubDate}
+  category={data.category}
+  tags={data.tags}
+  faqs={data.faqs}
+  affiliate={affiliate}
+>
+  <Content />
+</BlogPost>

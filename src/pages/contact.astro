@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Contact Us';
+const description =
+  'Get in touch with the China Travel Kit team with questions, corrections, or partnership enquiries.';
+---
+
+<BaseLayout title={`${title} | China Travel Kit`} description={description}>
+  <Header />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <h1 class="text-3xl font-bold text-gray-900">Contact Us</h1>
+      <p class="mt-4">
+        We'd love to hear from you. Whether you found an error in a guide, have a question about
+        traveling in China, or want to discuss a partnership, use the details below.
+      </p>
+      <h2>Email</h2>
+      <p>
+        General enquiries and corrections:
+        <a href="mailto:hello@your-domain.com">hello@your-domain.com</a>
+      </p>
+      <p>
+        Partnerships and advertising:
+        <a href="mailto:partners@your-domain.com">partners@your-domain.com</a>
+      </p>
+      <h2>Response Time</h2>
+      <p>
+        We aim to reply to all messages within 3–5 business days. For time-sensitive travel
+        questions, please check our guides first — the answer may already be there.
+      </p>
+      <h2>Corrections</h2>
+      <p>
+        Apps, prices, and regulations in China change frequently. If you notice something that no
+        longer matches your experience, let us know and we'll verify and update the guide.
+      </p>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
