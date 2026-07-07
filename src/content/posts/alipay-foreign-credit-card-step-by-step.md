@@ -36,7 +36,7 @@ You will need a few things ready:
 
 A note on timing and rules: set everything up before you travel, ideally on a stable home internet connection. Card linking sometimes triggers a fraud check with your bank, and it is far easier to call them from home than to sort it out at an airport. Also tell your bank you will be using the card internationally so they do not block the first transaction. Identity verification is a regulatory requirement in China, so expect to scan your passport and do a quick facial check; this is normal and one-time.
 
-<!-- AFFILIATE_ESIM -->
+[Get the best China eSIM](https://example.com/affiliate?tag=AFF_ESIM)
 
 ## Step-by-Step: Set Up Alipay and Link Your Card
 

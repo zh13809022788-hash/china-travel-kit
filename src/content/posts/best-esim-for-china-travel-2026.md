@@ -36,7 +36,7 @@ Second, your phone must be carrier-unlocked. If you bought your phone on a contr
 
 While you're at it, make a note of your phone's model and operating system version, and make sure you'll have Wi-Fi available for the installation step. Installing an eSIM profile requires a data connection, and doing it before departure is far less stressful than hunting for airport Wi-Fi on arrival.
 
-<!-- AFFILIATE_ESIM -->
+[Get the best China eSIM](https://example.com/affiliate?tag=AFF_ESIM)
 
 ## How to Choose the Right China eSIM
 
