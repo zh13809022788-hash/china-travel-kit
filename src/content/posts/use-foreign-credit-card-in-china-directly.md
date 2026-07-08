@@ -36,8 +36,6 @@ Second, check your card's foreign transaction fee. Many cards charge 1 to 3 perc
 
 Third, understand the landscape you're walking into. Physical card acceptance in China is improving but still patchy. The single most effective thing you can do is link that same card to a mobile wallet, which we cover in our dedicated payment guides. Think of your physical card as your backup and your ATM key, not your everyday spending tool.
 
-[Check which payment method fits your trip](https://example.com/affiliate?tag=AFF_PAYMENT)
-
 ## Where Foreign Cards Work in China
 
 Acceptance breaks down fairly predictably by the type of business.

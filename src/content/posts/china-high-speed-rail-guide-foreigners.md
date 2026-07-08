@@ -36,8 +36,6 @@ Second, have your passport ready and accurate. Your ticket is tied to your passp
 
 Third, set up a payment method that works, whether a foreign card or a mobile wallet like Alipay or WeChat Pay, since both booking channels accept these.
 
-[Book your China train tickets](https://example.com/affiliate?tag=AFF_TRAVEL)
-
 ## How to Book Your Tickets
 
 Booking ahead is straightforward once you know the steps.

@@ -39,8 +39,6 @@ A few timing and rules notes worth knowing up front. You can install WeChat and 
 
 You will also want mobile data the moment you arrive, since WeChat Pay needs a live connection to work. A travel eSIM is the simplest way to stay online without hunting for a SIM card at the airport.
 
-[Get the best China eSIM](https://example.com/affiliate?tag=AFF_ESIM)
-
 ## Step-by-Step Setup
 
 ### 1. Understand WeChat versus WeChat Pay
@@ -66,8 +64,6 @@ In the Wallet or Services screen, choose Add a Card or Bank Cards. Enter your ca
 ### 6. Complete identity verification
 
 This is the step that unlocks higher limits and is mandatory for foreign cards. You will be asked to enter your name exactly as printed in your passport, your passport number, nationality, and date of birth. Some users are prompted to photograph the passport and take a selfie for facial matching. Enter everything precisely, because a mismatch between your passport and card name is a frequent cause of rejection. Processing usually finishes within a few minutes.
-
-[Recommended payment solutions](https://example.com/affiliate?tag=AFF_PAYMENT)
 
 ### 7. Make your first payment
 

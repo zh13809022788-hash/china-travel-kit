@@ -34,8 +34,6 @@ Second, check whether your phone supports eSIM and is carrier-unlocked. Most iPh
 
 With those two things in mind, let's compare.
 
-[Compare connection options for your trip](https://example.com/affiliate?tag=AFF_ESIM)
-
 ## Travel eSIM
 
 A travel eSIM is a digital SIM you install on your phone before you travel, then activate on arrival.

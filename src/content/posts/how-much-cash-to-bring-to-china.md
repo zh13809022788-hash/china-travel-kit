@@ -34,8 +34,6 @@ Because of this, you don't need to arrive with a thick stack of yuan. In fact, o
 
 Also know that foreign cash itself, whether dollars or euros, is not spendable in China. It must be exchanged for yuan first. So the only reason to carry foreign currency is to exchange it at a bank.
 
-[Plan your China payment setup](https://example.com/affiliate?tag=AFF_PAYMENT)
-
 ## How Much Cash to Actually Bring
 
 For a typical one-week trip, a buffer of roughly 1,000 to 2,000 RMB in cash is comfortable for most travelers. That covers the scattered situations where mobile pay isn't an option, without leaving you carrying a risky amount. For longer trips, you don't need to scale this up linearly, because you can withdraw more from ATMs whenever you run low.

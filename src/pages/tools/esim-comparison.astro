@@ -74,7 +74,6 @@ const plans = [
             <th class="py-3 pr-4 font-semibold">Price (USD)</th>
             <th class="py-3 pr-4 font-semibold">Network</th>
             <th class="py-3 pr-4 font-semibold">Notes</th>
-            <th class="py-3 font-semibold"></th>
           </tr>
         </thead>
         <tbody id="plan-rows"></tbody>
@@ -124,12 +123,6 @@ const plans = [
         <td class="py-3 pr-4 font-semibold">$${p.price.toFixed(2)}</td>
         <td class="py-3 pr-4">${p.network}</td>
         <td class="py-3 pr-4 text-gray-500">${p.note}</td>
-        <td class="py-3">
-          <a href="#AFFILIATE_ESIM" rel="sponsored nofollow" target="_blank"
-             class="inline-flex items-center justify-center rounded-lg bg-brand-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-brand-700">
-            Get It Now
-          </a>
-        </td>
       </tr>`
       )
       .join('');

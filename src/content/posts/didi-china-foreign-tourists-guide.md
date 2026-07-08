@@ -47,8 +47,6 @@ There are three ways to access Didi, and choosing the right one matters:
 
 For most short-stay tourists, the Alipay mini-program is the path of least resistance: you set up one wallet, and both payments and rides run through it. If you travel to China regularly or want the richest features, install the standalone app as well.
 
-[Book travel & tickets](https://example.com/affiliate?tag=AFF_TRAVEL)
-
 ## Step-by-Step: Booking Your First Didi
 
 ### 1. Get Didi
@@ -64,8 +62,6 @@ Enter your mobile number and the country code for your home country. Didi sends 
 ### 3. Set up payment
 
 This is where the wallet approach shines.
-
-[Recommended payment solutions](https://example.com/affiliate?tag=AFF_PAYMENT)
 
 If you are booking inside the Alipay or WeChat mini-program, Didi charges the international card already linked to that wallet, so there is nothing more to do. If you have not linked a card yet, open your wallet's card section, add your Visa, Mastercard, or JCB, and complete the one-time passport identity check first.
 

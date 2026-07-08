@@ -36,8 +36,6 @@ Second, carry a small amount of cash as backup, since a few situations, like an 
 
 Now, city by city.
 
-[Get your China transport essentials sorted](https://example.com/affiliate?tag=AFF_TRAVEL)
-
 ## Beijing
 
 Beijing has two major airports, and they're very different distances from the center.

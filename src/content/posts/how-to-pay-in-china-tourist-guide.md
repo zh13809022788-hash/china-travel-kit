@@ -37,8 +37,6 @@ Setting up payment is much easier before you land than scrambling after arrival.
 - **A foreign credit or debit card** — ideally one with no foreign transaction fees. Visa and Mastercard have the widest support.
 - **Mobile connectivity** on arrival, via an eSIM or roaming, so you can receive verification codes and use the apps immediately.
 
-[Get the best China eSIM](https://example.com/affiliate?tag=AFF_ESIM)
-
 ## Your Three Payment Options, Ranked
 
 ### Option 1: Mobile Wallets (Alipay & WeChat Pay) — Your Primary Method
@@ -85,8 +83,6 @@ For most trips, splitting spending so that everyday purchases stay small keeps c
 ## A Realistic Day of Spending in China
 
 Morning: scan a QR to buy breakfast from a street stall (Alipay). Midday: tap through the metro gate with a transit QR inside the app. Afternoon: pay a museum entry fee by scanning their code. Evening: split a restaurant bill with WeChat Pay. Late night: grab a snack from a vending machine with a scan. You may go an entire trip without opening your wallet for physical cash — that is the norm now.
-
-[Recommended payment solutions](https://example.com/affiliate?tag=AFF_PAYMENT)
 
 ## Summary
 

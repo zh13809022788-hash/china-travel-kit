@@ -67,15 +67,11 @@ Select the train and class you want. The app shows real-time availability. If a 
 
 ### 6. Pay for your ticket
 
-[Recommended payment solutions](https://example.com/affiliate?tag=AFF_PAYMENT)
-
 Proceed to payment. The official platform accepts foreign Visa and Mastercard credit cards, and you can also pay via Alipay or WeChat Pay linked to a foreign card. Complete the payment within the countdown timer shown, or the seats are released. If a foreign card is declined, paying through a linked mobile wallet usually succeeds, so it is worth having one set up as a fallback.
 
 ### 7. Receive your e-ticket
 
 Once payment clears, your booking is confirmed and stored in the app under your orders. There is no physical ticket to collect for standard travel. Your passport is now linked to that seat. Take a screenshot of the confirmation, including the train number, date, departure time, coach, and seat, so you have the details offline.
-
-[Book travel & tickets](https://example.com/affiliate?tag=AFF_TRAVEL)
 
 ## At the Station
 

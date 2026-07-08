@@ -58,8 +58,6 @@ Roaming on your home carrier's plan usually routes your data through your home n
 
 Don't count on hotel or public Wi-Fi to reach blocked apps, because those connections run through the same filtering. And if you go the local SIM route, know that you'd need a reputable VPN installed before arrival, since VPN apps and sites are hard to reach once you're inside the country. For most travelers, an eSIM sidesteps this entire problem.
 
-[Find a travel eSIM that keeps your apps working](https://example.com/affiliate?tag=AFF_ESIM)
-
 ## Step-by-Step: Setting Up Before You Land
 
 Getting this right is mostly about preparation at home.

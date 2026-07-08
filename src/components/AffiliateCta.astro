@@ -12,8 +12,14 @@ const {
   buttonText = 'Learn More',
   placeholder = '#AFFILIATE_LINK',
 } = Astro.props;
+
+// Only render the CTA once a real affiliate URL is provided. While the link is
+// still a placeholder (e.g. "#AFFILIATE_ESIM"), render nothing so no dead link
+// appears on the page — the correct state before affiliate programs are joined.
+const isRealLink = /^https?:\/\//.test(placeholder);
 ---
 
+{isRealLink && (
 <div class="my-8 overflow-hidden rounded-xl border border-brand-200 bg-brand-50">
   <div class="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
     <div>
@@ -30,3 +36,4 @@ const {
     </a>
   </div>
 </div>
+)}

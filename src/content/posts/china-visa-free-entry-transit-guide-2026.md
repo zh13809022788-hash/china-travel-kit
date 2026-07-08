@@ -32,8 +32,6 @@ An important caveat up front: visa policy is set by the Chinese government and c
 
 With that said, there are two main visa-free routes to understand, and they serve different kinds of trips. One is designed for stopovers, the other for ordinary visits. Let's take them in turn.
 
-[Plan your China trip with confidence](https://example.com/affiliate?tag=AFF_TRAVEL)
-
 ## The 240-Hour Visa-Free Transit Scheme
 
 Introduced in December 2024, this policy replaced the older 72 and 144-hour transit schemes with a much more generous window.
