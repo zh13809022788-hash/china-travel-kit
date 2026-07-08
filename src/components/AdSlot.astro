@@ -1,4 +1,6 @@
 ---
+import { ADSENSE_PUBLISHER_ID, ADSENSE_SLOTS } from '../config';
+
 export interface Props {
   format?: 'banner' | 'in-article' | 'sidebar';
   label?: string;
@@ -11,17 +13,41 @@ const sizeClasses: Record<string, string> = {
   'in-article': 'min-h-[250px]',
   sidebar: 'min-h-[600px] w-full max-w-[300px]',
 };
+
+// Show a real AdSense unit only when both the publisher ID and this format's
+// slot ID are configured in src/config.ts. Otherwise fall back to the dashed
+// placeholder, which is the correct state before AdSense approval.
+const slotId = ADSENSE_SLOTS[format];
+const showRealAd = Boolean(ADSENSE_PUBLISHER_ID && slotId);
 ---
 
-<aside
-  class:list={[
-    'my-6 flex items-center justify-center rounded-lg border border-dashed border-gray-300 bg-gray-50 text-xs uppercase tracking-wide text-gray-400',
-    sizeClasses[format],
-  ]}
-  data-ad-slot={format}
-  aria-label={label}
->
-  {/* ==== AD CODE SLOT: paste ad network snippet here ==== */}
-  {/* <!-- AD_SLOT_{format.toUpperCase()} --> */}
-  <span>{label} ({format})</span>
-</aside>
+{
+  showRealAd ? (
+    <aside class:list={['my-6 block', sizeClasses[format]]} aria-label={label}>
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client={ADSENSE_PUBLISHER_ID}
+        data-ad-slot={slotId}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+      <script is:inline>
+        (adsbygoogle = window.adsbygoogle || []).push();
+      </script>
+    </aside>
+  ) : (
+    <aside
+      class:list={[
+        'my-6 flex items-center justify-center rounded-lg border border-dashed border-gray-300 bg-gray-50 text-xs uppercase tracking-wide text-gray-400',
+        sizeClasses[format],
+      ]}
+      data-ad-slot={format}
+      aria-label={label}
+    >
+      <span>
+        {label} ({format})
+      </span>
+    </aside>
+  )
+}

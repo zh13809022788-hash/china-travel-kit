@@ -5,8 +5,8 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  // Site base URL placeholder — replace with your real domain before deploy
-  site: 'https://your-domain.com',
+  // Production site URL — used for sitemap and canonical/SEO absolute links
+  site: 'https://chinatripbox.com',
   output: 'static',
   integrations: [
     tailwind({
