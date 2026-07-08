@@ -208,7 +208,8 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         cfg = load_config(args.config)
-        cfg.validate(require_generation=True)
+        # dry-run 不推收录, 无需 BAIDU_TOKEN/INDEXNOW_KEY
+        cfg.validate(require_generation=True, require_indexing=not args.dry_run)
     except ConfigError as e:
         print(f"配置错误: {e}", file=sys.stderr)
         return 2

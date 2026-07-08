@@ -183,19 +183,20 @@ class Config:
         return self.raw.get("categories", {})
 
     # ---- validation ----
-    def validate(self, *, require_generation: bool = True) -> None:
-        """校验关键项。dry-run 下 require_generation=True 仍需 API key 才能生成。"""
+    def validate(self, *, require_generation: bool = True, require_indexing: bool = True) -> None:
+        """校验关键项。dry-run 下 require_generation=True 仍需 API key 才能生成,
+        但 require_indexing=False 可跳过收录密钥校验(dry-run 不推收录)。"""
         if not self.domain:
             raise ConfigError("site.domain 未配置")
         if require_generation and not self.secrets.anthropic_api_key:
             raise ConfigError(
                 "缺少环境变量 ANTHROPIC_API_KEY —— 生成文章需要 Claude API 密钥"
             )
-        if self.baidu_enabled and not self.secrets.baidu_token:
+        if require_indexing and self.baidu_enabled and not self.secrets.baidu_token:
             raise ConfigError(
                 "indexing.baidu_enabled=true 但缺少环境变量 BAIDU_TOKEN"
             )
-        if self.indexnow_enabled and not self.secrets.indexnow_key:
+        if require_indexing and self.indexnow_enabled and not self.secrets.indexnow_key:
             raise ConfigError(
                 "indexing.indexnow_enabled=true 但缺少环境变量 INDEXNOW_KEY"
             )
