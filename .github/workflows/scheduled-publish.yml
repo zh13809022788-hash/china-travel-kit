@@ -1,0 +1,97 @@
+name: Scheduled Auto-Publish
+
+# 方案① —— 云端定时任务(无需本地开机)。
+# 三段发布(北京时间 09:00 / 15:00 / 20:00 = UTC 01:00 / 07:00 / 12:00)。
+# 自包含: 生成 -> 提交 -> push -> 构建 -> 直接部署 Cloudflare Pages。
+# (Actions 默认 GITHUB_TOKEN 的 push 不会触发下游 deploy workflow, 故此处内联部署。)
+
+on:
+  schedule:
+    - cron: "0 1 * * *"    # 09:00 Asia/Shanghai
+    - cron: "0 7 * * *"    # 15:00 Asia/Shanghai
+    - cron: "0 12 * * *"   # 20:00 Asia/Shanghai
+  workflow_dispatch:       # 支持手动触发(调试 / 补发)
+    inputs:
+      count:
+        description: "强制本次发布篇数(留空=按时段份额)"
+        required: false
+        default: ""
+      dry_run:
+        description: "dry-run: 只生成不发布(true/false)"
+        required: false
+        default: "false"
+
+# 避免三段任务并发写同一分支
+concurrency:
+  group: autopublish
+  cancel-in-progress: false
+
+permissions:
+  contents: write          # 允许 push 文章提交
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "chinatripbox-bot"
+          git config user.email "bot@users.noreply.github.com"
+
+      - name: Prepare config
+        working-directory: automation
+        run: |
+          # CI 中直接使用模板配置(密钥走环境变量, 不入库)
+          cp config.example.toml config.toml
+
+      - name: Install Python deps
+        run: pip install -r automation/requirements.txt
+
+      - name: Generate & publish (commit + push)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BAIDU_TOKEN: ${{ secrets.BAIDU_TOKEN }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ -n "${{ github.event.inputs.count }}" ]; then ARGS="$ARGS --count ${{ github.event.inputs.count }}"; fi
+          python -m automation.autopublish.run $ARGS
+
+      - name: Install site deps
+        run: npm ci
+
+      - name: Build site (regenerates sitemap)
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          directory: "./dist"
+
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: publish-logs-${{ github.run_id }}
+          path: automation/logs/
+          if-no-files-found: ignore

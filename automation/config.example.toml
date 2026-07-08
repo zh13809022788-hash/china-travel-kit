@@ -1,0 +1,50 @@
+# ============================================================================
+# chinatripbox.com 自动发布流水线 —— 配置模板
+# 用法: 复制本文件为 automation/config.toml 后按需修改。
+#       密钥不要写在这里，统一走环境变量(见文末)。
+# ============================================================================
+
+[site]
+domain        = "chinatripbox.com"                    # 站点域名
+repo_path     = "."                                   # Astro 仓库根路径(相对本文件所在仓库根)。留 "." 即可
+posts_dir     = "src/content/posts"                   # 文章 Markdown 目录(相对 repo_path)
+git_branch    = "main"                                # 发布分支
+post_url_tmpl = "https://{domain}/posts/{slug}/"      # 文章 URL 模板({domain}/{slug} 会被替换)
+
+[schedule]
+slots               = ["09:00", "15:00", "20:00"]     # 三段发布时间(本地时区)
+timezone            = "Asia/Shanghai"                 # 计算当天日期与配额分配用
+daily_min           = 8                               # 每日产出下限
+daily_max           = 10                              # 每日产出上限(⚠ 长期安全建议 ≤8, 详见 README)
+per_slot_jitter_sec = [30, 180]                       # 同一时段内每篇文章之间的随机延时区间(秒)
+featured_ratio      = 0.0                             # 生成文章标记 featured=true 的概率(0~1)
+
+[model]
+provider = "anthropic"                                # 生成模型提供方(当前支持 anthropic)
+model_id = "claude-opus-4-8"                          # 模型 ID
+max_tokens = 8000                                     # 单篇生成上限
+# 鉴权密钥从环境变量读取: ANTHROPIC_API_KEY
+
+[indexing]
+baidu_enabled  = true                                 # 是否推送百度普通收录
+baidu_endpoint = "http://data.zz.baidu.com/urls?site={site}&token={token}"  # 收录推送接口({site}=域名, {token}=BAIDU_TOKEN)
+indexnow_enabled = false                              # 可选: IndexNow(面向 Bing/海外搜索引擎)
+indexnow_endpoint = "https://api.indexnow.org/indexnow"
+retry_once     = true                                 # 推送失败自动重试 1 次
+
+[categories]
+# 站点允许的分类(必须匹配 src/content/config.ts 的枚举)
+allowed = ["payment", "esim", "transport", "essentials", "food"]
+# 分类 -> 正文内联盟占位符(生成器会在正文中插入对应注释)
+[categories.affiliate]
+esim      = "<!-- AFFILIATE_ESIM -->"
+payment   = "<!-- AFFILIATE_PAYMENT -->"
+transport = "<!-- AFFILIATE_TRAVEL -->"
+
+# ============================================================================
+# 环境变量(密钥) —— 不要写进本文件:
+#   ANTHROPIC_API_KEY   Claude API 密钥(必填)
+#   BAIDU_TOKEN         百度普通收录 token (baidu_enabled=true 时必填)
+#   INDEXNOW_KEY        IndexNow 密钥 (indexnow_enabled=true 时必填)
+#   GIT_PUSH_TOKEN      仅本地免交互 push 需要(可选; Actions 用 checkout token)
+# ============================================================================

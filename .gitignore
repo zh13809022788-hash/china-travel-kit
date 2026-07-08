@@ -37,3 +37,7 @@ coverage/
 secrets.json
 credentials.json
 
+# ---- Automation pipeline (keep secrets & logs out of git) ----
+automation/config.toml
+automation/logs/
+
