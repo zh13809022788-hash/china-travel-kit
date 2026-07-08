@@ -42,6 +42,7 @@ cp automation/config.example.toml automation/config.toml
 
 # 3) 设置密钥(环境变量, 不写进 toml)
 export ANTHROPIC_API_KEY="sk-ant-..."        # 必填
+# export ANTHROPIC_BASE_URL="https://your-proxy..."  # 用第三方代理 key(非 sk-ant-)时必填
 export BAIDU_TOKEN="你的百度普通收录token"     # baidu_enabled=true 时必填
 # export INDEXNOW_KEY="..."                   # 可选(Bing/海外)
 # export GIT_PUSH_TOKEN="ghp_..."             # 可选: 本地免交互 push(https remote)
@@ -82,6 +83,7 @@ python -m automation.autopublish.run --config /path/config.toml
 ### 部署步骤
 1. 仓库 **Settings → Secrets and variables → Actions** 添加：
    - `ANTHROPIC_API_KEY`（必填）
+   - `ANTHROPIC_BASE_URL`（用第三方代理 key 时必填；官方 `sk-ant-` key 不需要）
    - `BAIDU_TOKEN`（启用百度收录时）
    - `INDEXNOW_KEY`（启用 IndexNow 时）
    - `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` / `CLOUDFLARE_PROJECT_NAME`（部署用，与现有 workflow 相同）

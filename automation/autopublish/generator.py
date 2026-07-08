@@ -120,7 +120,11 @@ class Generator:
         if self._client is None:
             import anthropic  # 延迟导入, 便于无密钥时的 import 阶段
 
-            self._client = anthropic.Anthropic(api_key=self.cfg.secrets.anthropic_api_key)
+            kwargs = {"api_key": self.cfg.secrets.anthropic_api_key}
+            # 第三方代理 key(非 sk-ant-) 需指定 base_url; 官方 key 留空即可
+            if self.cfg.anthropic_base_url:
+                kwargs["base_url"] = self.cfg.anthropic_base_url
+            self._client = anthropic.Anthropic(**kwargs)
         return self._client
 
     def _build_prompt(self, topic: Topic, skeleton: list[str]) -> str:

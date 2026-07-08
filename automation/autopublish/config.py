@@ -114,6 +114,12 @@ class Config:
     def max_tokens(self) -> int:
         return int(self._model.get("max_tokens", 8000))
 
+    @property
+    def anthropic_base_url(self) -> str | None:
+        """第三方代理的 API 地址。优先取环境变量 ANTHROPIC_BASE_URL,
+        其次取 config.toml 的 [model].base_url; 官方 key 时留空。"""
+        return os.environ.get("ANTHROPIC_BASE_URL") or self._model.get("base_url") or None
+
     # ---- indexing ----
     @property
     def baidu_enabled(self) -> bool:
