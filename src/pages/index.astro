@@ -10,8 +10,11 @@ const featuredTools = TOOLS.filter((t) => t.featured).slice(0, 6);
 
 const posts = await getCollection('posts');
 const sorted = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const featured = sorted.filter((p) => p.data.featured).slice(0, 3);
-const popular = (featured.length > 0 ? featured : sorted).slice(0, 6);
+// Featured guides surface first, then every remaining guide by date, so all
+// articles are reachable directly from the homepage (better for SEO & AdSense).
+const featuredPosts = sorted.filter((p) => p.data.featured);
+const restPosts = sorted.filter((p) => !p.data.featured);
+const popular = [...featuredPosts, ...restPosts];
 
 const categories = [
   {
@@ -73,9 +76,10 @@ const categories = [
         </div>
       </section>
 
-      <!-- Popular guides -->
+      <!-- All guides -->
       <section class="py-8">
-        <h2 class="text-2xl font-bold text-gray-900">Popular Guides</h2>
+        <h2 class="text-2xl font-bold text-gray-900">All Guides</h2>
+        <p class="mt-1 text-gray-600">Every practical guide for your China trip, updated for 2026.</p>
         <div class="mt-6 grid gap-6 md:grid-cols-2">
           {popular.map((post) => (
             <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">

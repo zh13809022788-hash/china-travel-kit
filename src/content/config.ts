@@ -6,7 +6,7 @@ const posts = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
-    category: z.enum(['payment', 'esim', 'transport']),
+    category: z.enum(['payment', 'esim', 'transport', 'essentials', 'food']),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     faqs: z
