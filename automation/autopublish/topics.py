@@ -49,6 +49,32 @@ class TopicQueue:
     def total_count(self) -> int:
         return len(self._data["queue"])
 
+    def all_keywords(self) -> set[str]:
+        """队列里全部关键词(含已用), 小写归一, 用于去重。"""
+        return {str(t.get("keyword", "")).strip().lower() for t in self._data["queue"]}
+
+    def append(self, items: list[dict[str, Any]]) -> int:
+        """追加新选题(去重: 关键词不区分大小写); 返回实际新增条数。"""
+        existing = self.all_keywords()
+        added = 0
+        for it in items:
+            kw = str(it.get("keyword", "")).strip()
+            if not kw or kw.lower() in existing:
+                continue
+            self._data["queue"].append(
+                {
+                    "keyword": kw,
+                    "category": it.get("category", ""),
+                    "angle": it.get("angle", ""),
+                    "used": False,
+                }
+            )
+            existing.add(kw.lower())
+            added += 1
+        if added:
+            self._flush()
+        return added
+
     def take(self, n: int, allowed_categories: list[str] | None = None) -> list[Topic]:
         """取最多 n 条未使用选题(不改动 used, 由 mark_used 在发布成功后置位)。"""
         picked: list[Topic] = []

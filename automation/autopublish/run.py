@@ -39,6 +39,7 @@ from .indexing import push_all
 from . import publisher
 from .logger import DailyState, PublishRecord, RunLogger, now_local
 from .topics import Topic, TopicQueue
+from .topic_gen import generate_topics
 
 
 def _daily_target(cfg: Config, date_str: str) -> int:
@@ -116,8 +117,24 @@ def run_slot(cfg: Config, *, count: int | None, slot: str | None, dry_run: bool)
         return 0
 
     queue = TopicQueue(cfg.topics_path)
+
+    # 队列可用选题不足本次份额时, 让大模型自主补题(可用 config 关闭)
+    if cfg.autogen_topics and queue.available_count() < share:
+        need = share - queue.available_count()
+        # 多生成一些做缓冲, 减少下次调用频率
+        want = max(need, cfg.autogen_batch)
+        print(f"选题不足({queue.available_count()}<{share}), 调用大模型补题 {want} 个...")
+        try:
+            avoid = sorted(queue.all_keywords())
+            candidates = generate_topics(cfg, want, avoid)
+            added = queue.append(candidates)
+            print(f"  自动补题: 生成 {len(candidates)} 个, 去重后新增 {added} 个, "
+                  f"现可用 {queue.available_count()}。")
+        except Exception as e:  # noqa: BLE001 - 补题失败不应中断已有选题的发布
+            print(f"  ⚠ 自动补题失败: {type(e).__name__}: {e}(继续用现有选题)")
+
     if queue.available_count() == 0:
-        print("⚠ 选题队列为空(topics.json 无未使用选题), 无法生成。请补充选题。")
+        print("⚠ 选题队列为空且未能自动补题, 无法生成。请补充 topics.json 或检查 API。")
         return 0
     topics = queue.take(share, allowed_categories=cfg.allowed_categories)
     if not topics:

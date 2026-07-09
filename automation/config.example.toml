@@ -18,6 +18,8 @@ daily_min           = 8                               # 每日产出下限
 daily_max           = 10                              # 每日产出上限(⚠ 长期安全建议 ≤8, 详见 README)
 per_slot_jitter_sec = [30, 180]                       # 同一时段内每篇文章之间的随机延时区间(秒)
 featured_ratio      = 0.0                             # 生成文章标记 featured=true 的概率(0~1)
+autogen_topics      = true                            # 队列不足时让大模型自动补选题(true=无人值守; false=只用手动队列)
+autogen_batch       = 10                              # 每次自动补题生成的数量(缓冲, 减少调用频率)
 
 [model]
 provider = "anthropic"                                # 生成模型提供方(当前支持 anthropic)

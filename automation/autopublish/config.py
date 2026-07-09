@@ -101,6 +101,16 @@ class Config:
     def featured_ratio(self) -> float:
         return float(self._schedule.get("featured_ratio", 0.0))
 
+    @property
+    def autogen_topics(self) -> bool:
+        """队列不足时是否让大模型自动补题(默认开启)。"""
+        return bool(self._schedule.get("autogen_topics", True))
+
+    @property
+    def autogen_batch(self) -> int:
+        """每次自动补题生成的数量(缓冲, 减少调用频率)。"""
+        return int(self._schedule.get("autogen_batch", 10))
+
     # ---- model ----
     @property
     def provider(self) -> str:
