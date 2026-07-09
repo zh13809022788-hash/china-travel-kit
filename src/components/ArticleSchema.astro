@@ -1,0 +1,31 @@
+---
+// Article JSON-LD structured data (site-wide first use).
+export interface Props {
+  title: string;
+  description: string;
+  url: string; // page path, e.g. "/digital-nomads/visa/"
+  datePublished: string; // ISO date, e.g. "2026-07-09"
+}
+
+const { title, description, url, datePublished } = Astro.props;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  mainEntityOfPage: new URL(url, Astro.site).toString(),
+  datePublished,
+  dateModified: datePublished,
+  author: {
+    '@type': 'Organization',
+    name: 'ChinaTripBox',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'ChinaTripBox',
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
