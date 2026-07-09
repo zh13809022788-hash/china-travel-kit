@@ -15,6 +15,7 @@ import type { FaqItem } from '../components/FaqSection.astro';
 import RelatedReading from '../components/RelatedReading.astro';
 import type { RelatedItem } from '../components/RelatedReading.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
+import CoverImage from '../components/CoverImage.astro';
 
 export interface Props {
   title: string; // <h1> and SEO title base
@@ -25,6 +26,9 @@ export interface Props {
   toc?: TocItem[];
   faqs?: FaqItem[];
   related?: RelatedItem[];
+  cover?: string; // image name in src/assets/images/ (e.g. "cover-visa")
+  coverAlt?: string;
+  image?: string; // OG image path override
 }
 
 const {
@@ -36,6 +40,9 @@ const {
   toc = [],
   faqs = [],
   related = [],
+  cover,
+  coverAlt = '',
+  image,
 } = Astro.props;
 
 const formattedDate = new Date(datePublished).toLocaleDateString('en-US', {
@@ -45,7 +52,7 @@ const formattedDate = new Date(datePublished).toLocaleDateString('en-US', {
 });
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} type="article">
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} type="article" image={image}>
   <Header />
   <main class="container-page py-8">
     <article class="prose-content">
@@ -58,6 +65,8 @@ const formattedDate = new Date(datePublished).toLocaleDateString('en-US', {
           <time datetime={datePublished}>{formattedDate}</time>
         </div>
       </header>
+
+      {cover && <CoverImage name={cover} alt={coverAlt || title} loading="eager" />}
 
       <Toc items={toc} />
 

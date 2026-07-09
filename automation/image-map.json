@@ -1,0 +1,16 @@
+{
+  "_comment": "封面图取图映射。fetch_images.py 读取此表，用 query 调 Unsplash 搜索，取相关度最高的图，下载到 src/assets/images/{name}.jpg，并把作者署名写入 credits.json。orientation=landscape 适合头图。你可调整 query 以改变取图方向；改后删掉对应图片重跑即可。",
+  "output_dir": "src/assets/images",
+  "images": [
+    { "name": "cover-long-stay", "query": "Shanghai apartment skyline living", "orientation": "landscape" },
+    { "name": "cover-digital-nomads", "query": "remote work laptop cafe China city", "orientation": "landscape" },
+    { "name": "cover-visa", "query": "China passport travel documents", "orientation": "landscape" },
+    { "name": "cover-payment", "query": "mobile payment QR code smartphone China", "orientation": "landscape" },
+    { "name": "cover-ai-opc", "query": "China city skyline technology night", "orientation": "landscape" },
+    { "name": "city-shanghai", "query": "Shanghai the Bund skyline", "orientation": "landscape" },
+    { "name": "city-beijing", "query": "Beijing Forbidden City Great Wall", "orientation": "landscape" },
+    { "name": "city-chengdu", "query": "Chengdu panda Sichuan", "orientation": "landscape" },
+    { "name": "city-hangzhou", "query": "Hangzhou West Lake", "orientation": "landscape" },
+    { "name": "city-sanya", "query": "Sanya Hainan tropical beach", "orientation": "landscape" }
+  ]
+}

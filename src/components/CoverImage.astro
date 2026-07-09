@@ -1,0 +1,61 @@
+---
+// Cover/hero image with Unsplash attribution.
+// Resolves an image from src/assets/images/ by name (kebab), optimizes via
+// astro:assets (auto WebP + responsive), and renders the required credit line.
+//
+// Attribution data comes from src/assets/images/credits.json (written by
+// automation/fetch_images.py). Renders nothing if the named image is missing,
+// so pages degrade gracefully before images are fetched.
+import { Image } from 'astro:assets';
+import creditsData from '../assets/images/credits.json';
+
+export interface Props {
+  name: string; // e.g. "city-shanghai" -> src/assets/images/city-shanghai.jpg
+  alt: string;
+  loading?: 'eager' | 'lazy';
+}
+
+const { name, alt, loading = 'eager' } = Astro.props;
+
+// Eagerly map every jpg in the images dir so we can look up by name.
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/images/*.{jpg,jpeg,png,webp}',
+  { eager: true }
+);
+const entry = Object.entries(images).find(([path]) =>
+  path.split('/').pop()?.replace(/\.(jpg|jpeg|png|webp)$/, '') === name
+);
+const img = entry?.[1].default;
+
+const credits: Record<string, { photographer?: string; photographer_url?: string; unsplash_url?: string }> =
+  creditsData as any;
+const credit = credits[name];
+---
+
+{
+  img && (
+    <figure class="my-6">
+      <Image
+        src={img}
+        alt={alt}
+        widths={[480, 800, 1080]}
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading={loading}
+        class="w-full rounded-xl object-cover"
+        style="aspect-ratio: 16 / 9;"
+      />
+      {credit?.photographer && (
+        <figcaption class="mt-1.5 text-xs text-gray-400">
+          Photo by{' '}
+          <a href={credit.photographer_url} rel="nofollow noopener" target="_blank" class="hover:text-brand-600">
+            {credit.photographer}
+          </a>{' '}
+          on{' '}
+          <a href={credit.unsplash_url} rel="nofollow noopener" target="_blank" class="hover:text-brand-600">
+            Unsplash
+          </a>
+        </figcaption>
+      )}
+    </figure>
+  )
+}
