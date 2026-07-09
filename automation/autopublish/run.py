@@ -24,6 +24,15 @@ import sys
 import tempfile
 from pathlib import Path
 
+# Windows 任务计划/Cron 的默认控制台常是 GBK, 打印中文或符号(如 ✓)会抛
+# UnicodeEncodeError 导致进程非零退出、甚至中途崩溃丢文章。这里强制 stdout/stderr
+# 走 UTF-8 并对不可编码字符降级替换, 保证无人值守运行稳定。
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")  # type: ignore[attr-defined]
+    except (AttributeError, ValueError):
+        pass
+
 from .config import Config, ConfigError, load_config
 from .generator import Generator, GeneratedPost
 from .indexing import push_all
