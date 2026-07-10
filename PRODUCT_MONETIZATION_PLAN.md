@@ -4,6 +4,18 @@ Last updated: 2026-07-10
 
 This file is the working product plan for ChinaTripBox monetization, AI travel help, human one-on-one services, and early SEO growth. Update this file whenever the product direction, pricing, paid service scope, or indexing strategy changes.
 
+Mirror copy:
+
+```text
+D:\独立站\PLAN\PRODUCT_MONETIZATION_PLAN.md
+```
+
+2026-07-10 rule:
+
+- At the end of each working session, keep the project copy and the mirror copy synchronized.
+- Every future decision or adjustment added to this file must include a clear date marker.
+- If only one copy is edited during a session, copy it to the other location before finishing.
+
 ## Current Product Direction
 
 ChinaTripBox should evolve from a static China travel guide site into a lightweight travel planning product.
@@ -98,6 +110,64 @@ Payment tools to consider later:
 - Lemon Squeezy
 - PayPal
 
+## AI API and Human Request Intake
+
+2026-07-10 decision:
+
+The current `/travel-help/` page is only a front-end prototype. It does not yet call a real AI model API and does not save human help requests.
+
+Important AI API rule:
+
+- Never put a model API key in front-end JavaScript, Astro pages, or public client code.
+- Domestic model API keys such as DeepSeek, Qwen/Tongyi, Moonshot/Kimi, Zhipu/GLM, or Baidu Qianfan should be stored as server-side environment variables only.
+- Use a backend proxy such as Cloudflare Pages Functions, Cloudflare Workers, or another server endpoint.
+- The browser should call the site's backend endpoint, and the backend should call the model provider.
+
+Recommended first AI integration:
+
+```text
+Frontend /travel-help/
+-> POST /api/travel-help
+-> Cloudflare Pages Function or Worker
+-> Domestic LLM provider API
+-> Return concise travel guidance to the page
+```
+
+Recommended first human request intake:
+
+```text
+Frontend form
+-> POST /api/human-help-request
+-> Send email notification to site owner
+-> Optionally save a copy to Google Sheets, Airtable, Notion, or a simple database
+```
+
+Current owner email:
+
+```text
+zh13809022788@gmail.com
+```
+
+Short-term solution:
+
+- Keep the current email handoff as a fallback.
+- Add a proper form submission endpoint before serious monetization.
+- Send every one-on-one request to the owner's email with trip stage, topic, city/route, user question, and reply email.
+
+Better later solution:
+
+- Add a lightweight request dashboard or use Airtable/Notion/Google Sheets.
+- Add status fields: new, replied, paid, completed, refunded, spam.
+- Add a payment link only after the request is reviewed.
+
+Preferred early workflow:
+
+1. User gets free AI help.
+2. User clicks `Request human review`.
+3. User leaves email and trip details.
+4. Site owner receives the request by email.
+5. Owner replies manually with either free guidance, a tip link, or a paid planning link.
+
 ## MVP Implementation Plan
 
 Phase 1:
@@ -173,6 +243,27 @@ Keep a steady publishing rhythm:
 
 Avoid suddenly adding a large number of low-quality or thin pages. Stable, useful, original content is better for Google quality evaluation.
 
+2026-07-10 decision:
+
+- Do not publish more articles today.
+- Today already included important search setup work: sitemap submission, Google verification file, `/travel-help/`, sitemap fixes, and structured data cleanup.
+- Avoid making the site look like it is adding too much content too quickly.
+- Resume with 1 high-quality article tomorrow or the day after, then maintain the 2-3 posts/week pace.
+
+Recommended next article topics:
+
+- `China Trip Planner for First-Time Visitors: Payment, eSIM, Transport and Apps`
+- `What to Set Up Before Traveling to China: Alipay, eSIM, DiDi and Train Tickets`
+
+These posts should naturally link to:
+
+- `/payment/`
+- `/esim/`
+- `/transport/`
+- `/tools/`
+- `/travel-help/`
+- Future `/trip-planner/`
+
 ## Near-Term Priority Pages
 
 Build or improve these in order:
@@ -198,9 +289,37 @@ High-priority supporting posts:
 ## Operating Rules
 
 - Update this file whenever monetization, pricing, service scope, SEO strategy, or tool direction changes.
+- Add a date marker for every future decision or meaningful adjustment.
+- Keep this file synchronized with `D:\独立站\PLAN\PRODUCT_MONETIZATION_PLAN.md` at the end of each session.
 - Keep new paid services simple until there is user demand.
 - Prefer useful free tools over marketing pages.
 - Do not promise official, legal, immigration, banking, medical, or emergency advice.
 - Keep user trust above short-term conversion.
 - Build with static pages first, then add backend/API/payment only after demand is validated.
 
+## Next Session Resume Notes
+
+If the assistant loses conversation context, start by reading this file.
+
+Current state as of 2026-07-10:
+
+- Google Search Console sitemap is successful for `/sitemap-index.xml`.
+- Homepage is already indexed by Google.
+- `/travel-help/` is live and discovered, but may still be pending index.
+- Google verification file is live.
+- The fake `?q={search_term_string}` SearchAction schema was removed.
+- Do not publish more articles on 2026-07-10.
+
+Recommended next work:
+
+1. Clean up any incorrect sitemap submissions in Google Search Console manually if still visible.
+2. Build `/trip-planner/` as the next product page and free planning tool.
+3. Add stronger homepage links to core category pages and future `/trip-planner/`.
+4. Publish the next article tomorrow or later, not today.
+5. Use one of these next article topics:
+   - `China Trip Planner for First-Time Visitors: Payment, eSIM, Transport and Apps`
+   - `What to Set Up Before Traveling to China: Alipay, eSIM, DiDi and Train Tickets`
+
+Important rule:
+
+- Every future change to monetization, content cadence, paid service design, indexing strategy, or Trip Planner scope should update this file before finishing the session.
