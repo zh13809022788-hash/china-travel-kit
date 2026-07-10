@@ -38,8 +38,9 @@ const credit = credits[name];
       <Image
         src={img}
         alt={alt}
-        widths={[480, 800, 1080]}
+        widths={[480, 800]}
         sizes="(max-width: 768px) 100vw, 768px"
+        quality={65}
         loading={loading}
         class="w-full rounded-xl object-cover"
         style="aspect-ratio: 16 / 9;"
