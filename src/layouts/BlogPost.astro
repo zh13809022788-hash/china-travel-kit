@@ -115,9 +115,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
       {/* 5. FAQ module */}
       <FaqSection items={faqs} />
 
-      <script type="application/ld+json">
-        {JSON.stringify(jsonLd)}
-      </script>
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
       {/* 6. Affiliate CTA card */}
       {affiliate && (
