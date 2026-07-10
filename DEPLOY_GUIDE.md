@@ -54,7 +54,7 @@ Replace with a real link block or button target in the content, for example:
 
 ## 6. Post-Deployment Actions
 1. Verify your site is live on the Cloudflare Pages URL and your custom domain.
-2. Submit your sitemap URL to Google Search Console: `https://your-domain.com/sitemap.xml`.
+2. Submit your sitemap URL to Google Search Console: `https://your-domain.com/sitemap-index.xml`.
 3. Replace all placeholder site URLs with your actual domain in `astro.config.mjs` and `public/robots.txt`.
 4. Replace placeholder email addresses in `src/pages/contact.astro` if needed.
 5. Monitor page performance and content quality after launch.
