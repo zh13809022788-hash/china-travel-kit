@@ -242,6 +242,24 @@ Payment tools to consider later:
 
 The current `/travel-help/` page is only a front-end prototype. It does not yet call a real AI model API and does not save human help requests.
 
+2026-07-10 implementation decision:
+
+- Use DeepSeek as the first production AI provider.
+- Environment variable name: `DEEPSEEK_API_KEY`.
+- The key must be set in Cloudflare Pages/Workers environment variables, never in front-end code or committed files.
+- The first backend endpoint is `/api/travel-help`.
+- The current implementation path is:
+
+```text
+/travel-help/ browser form
+-> POST /api/travel-help
+-> Cloudflare Pages Function
+-> DeepSeek chat completions API
+-> AI answer returned to the page
+```
+
+- If DeepSeek is unavailable or the key is missing, the page falls back to a local guidance response.
+
 Important AI API rule:
 
 - Never put a model API key in front-end JavaScript, Astro pages, or public client code.
