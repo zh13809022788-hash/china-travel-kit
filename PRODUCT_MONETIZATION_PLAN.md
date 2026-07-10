@@ -24,11 +24,17 @@ The preferred model is:
 
 1. Free China trip planning tools
 2. Free AI-assisted practical help
-3. Optional human one-on-one planning or review
+3. Paid AI-assisted plus human-reviewed trip planning
 4. Voluntary tips after help is provided
 5. Affiliate revenue from useful travel products such as eSIMs, payment cards, hotels, insurance, or transport services
 
 The site should avoid looking like a hard-sell consulting business. The user should first receive real free value, then see a natural upgrade path when their trip is complex or time-sensitive.
+
+2026-07-10 decision:
+
+- Free work is handled by AI first.
+- Paid work is handled by AI plus human review, editing, judgment, and final delivery.
+- The first paid offer should be lightweight `Trip Review` or `Arrival Setup Review`, not a heavy full-service travel agency-style itinerary.
 
 ## Core Free Tool: China Trip Planner
 
@@ -84,6 +90,126 @@ City-by-city trip preparation plan based on dates, budget, travel style, and nee
 ```
 
 Start with email-based fulfilment before adding payment automation. Do not add complex accounts, dashboards, or booking flows until there is real demand.
+
+## Paid Trip Review and Human-AI Planning
+
+2026-07-10 decision:
+
+Use a lighter paid model first. Do not start with heavy full custom itinerary consulting. The first paid product should be a human-reviewed travel plan, where AI creates the draft and the human improves, verifies, edits, and delivers the final answer.
+
+Core principle:
+
+```text
+Free = AI-generated help
+Paid = AI draft + human review + practical judgment + cleaner deliverable
+```
+
+Preferred early positioning:
+
+```text
+China Trip Review
+Get your China itinerary checked for payment, transport, eSIM, timing, and first-day mistakes.
+```
+
+Why this is better for cold start:
+
+- Lower user trust barrier than a $199-$399 custom consulting offer.
+- Less delivery pressure than planning from zero.
+- Easier to fulfill asynchronously by email.
+- Easier to standardize and template.
+- Clear practical value: catch mistakes before the user arrives in China.
+
+Recommended paid offers:
+
+```text
+$19 China Arrival Setup Review
+For users who already know their arrival city, hotel area, and travel dates. Review first-day setup, airport-to-hotel route, payment readiness, eSIM/data plan, cash backup, and key app setup.
+
+$49 7-Day/10-Day China Trip Review
+For users who already have a rough itinerary. Review city order, timing, transport, payment/eSIM readiness, hotel-area logic, and common mistakes. Deliver a concise improvement checklist.
+
+$99 First China Trip Plan
+For users who need more help but still within a 7-14 day trip. AI creates the base plan, human edits and improves it, then delivers a practical plan with payment, eSIM, transport, and day-by-day structure.
+```
+
+Do not launch the high-ticket `$149-$399` full custom itinerary offer yet. Reconsider it only after there are testimonials, case studies, and proof that users are willing to pay.
+
+Recommended URLs:
+
+```text
+/trip-planner/   Free AI planning tool
+/trip-review/    Paid AI + human review service
+/templates/      Editable itinerary templates later
+```
+
+Initial workflow:
+
+1. User uses free AI help or free Trip Planner.
+2. User sees an upgrade CTA for human review.
+3. User submits email, trip dates, cities, current plan, budget, and main worries.
+4. AI generates a first draft internally.
+5. Human reviews, corrects, edits, and adds practical judgment.
+6. Human sends final answer by email.
+7. Optional payment/tip link is included depending on the service model.
+
+Early intake fields:
+
+- Email
+- Arrival city
+- Destination cities
+- Travel dates or trip length
+- First-time visitor status
+- Current plan or main question
+- Payment setup status
+- eSIM/internet setup status
+- Budget range
+- Biggest worry
+
+Service page structure for `/trip-review/`:
+
+1. Hero
+   - `Get your China trip checked before you arrive`
+   - Focus on payment, eSIM, transport, hotel area, timing, and first-day mistakes
+
+2. Free vs paid explanation
+   - Free AI help gives a quick answer
+   - Paid review adds human judgment and a cleaner written plan
+
+3. Package table
+   - $19 Arrival Setup Review
+   - $49 Trip Review
+   - $99 First China Trip Plan
+
+4. Sample deliverable preview
+   - Checklist-style output
+   - Route/timing comments
+   - Payment/eSIM/transport risk notes
+
+5. Scope and limits
+   - Not legal, immigration, medical, banking, or emergency advice
+   - No account login, passport handling, or payment-app identity verification on behalf of users
+
+6. CTA
+   - `Request a human review`
+
+Payment approach:
+
+- Start with manual payment links or email-based payment requests.
+- Use Stripe Payment Links, PayPal, Lemon Squeezy, or Buy Me a Coffee later.
+- Do not build a full checkout or account system until there is demand.
+
+Cold-start acquisition:
+
+- Reddit and Quora: answer practical China travel questions; do not spam links.
+- Medium and Pinterest: publish useful route/setup content and link to relevant inner pages.
+- Website CTAs: add Trip Review CTAs to `/travel-help/`, future `/trip-planner/`, and major guides.
+
+Delivery efficiency:
+
+- Use AI to create the first draft.
+- Human only handles verification, editing, prioritization, and practical judgment.
+- Build reusable checklists for arrival, payment, eSIM, transport, and city sequence.
+- Keep standard review delivery short and focused.
 
 ## AI Help and Tip Model
 
@@ -167,6 +293,45 @@ Preferred early workflow:
 3. User leaves email and trip details.
 4. Site owner receives the request by email.
 5. Owner replies manually with either free guidance, a tip link, or a paid planning link.
+
+## Trust Positioning and Footer Language
+
+2026-07-10 decision:
+
+The site should strengthen trust signals, but should not overstate a company identity before the operating and payment structure is clear.
+
+Current trust positioning:
+
+```text
+ChinaTripBox is an independent China travel planning site for foreign visitors.
+```
+
+Footer language should emphasize:
+
+- Independent China travel planning site
+- Practical guides and tools
+- Optional human-reviewed trip help
+- Affiliate disclosure
+- Clear limits: not legal, immigration, medical, banking, emergency, or official government advice
+
+Do not prominently claim a company operator yet unless the payment processor, tax reporting, service provider identity, refund terms, and business scope are aligned.
+
+Current footer direction:
+
+```text
+ChinaTripBox is an independent China travel planning site for foreign visitors.
+We publish practical guides, tools, and optional human-reviewed trip help.
+Some links may earn us a commission.
+We provide general travel information only, not legal, immigration, medical, banking, emergency, or official government advice.
+```
+
+Later, if paid services are formally launched, decide whether the service provider is:
+
+- Personal operator
+- Registered company
+- Another legal entity
+
+The Terms page should then clearly match the payment and service provider identity.
 
 ## MVP Implementation Plan
 
