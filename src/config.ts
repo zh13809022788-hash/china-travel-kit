@@ -26,6 +26,13 @@ export interface Tool {
 
 export const TOOLS: Tool[] = [
   {
+    href: '/tools/show-to-driver/',
+    title: 'Show to Driver',
+    desc: 'Create a large Chinese address card for taxi drivers, hotel front desks, and asking directions on your phone.',
+    icon: '🚕',
+    featured: true,
+  },
+  {
     href: '/tools/visa-free-checker/',
     title: 'Visa-Free & Transit Checker',
     desc: 'See if you can enter China visa-free, use 240-hour transit, or need to apply — by nationality.',

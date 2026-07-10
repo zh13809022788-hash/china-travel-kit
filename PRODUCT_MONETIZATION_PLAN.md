@@ -260,6 +260,12 @@ The current `/travel-help/` page is only a front-end prototype. It does not yet 
 
 - If DeepSeek is unavailable or the key is missing, the page falls back to a local guidance response.
 
+2026-07-10 deployment note:
+
+- `DEEPSEEK_API_KEY` was added to Cloudflare Pages production secrets for project `china-travel-kit`.
+- `/api/travel-help` was tested on production and returned a `deepseek-chat` answer successfully.
+- The API key was not committed to the repository.
+
 Important AI API rule:
 
 - Never put a model API key in front-end JavaScript, Astro pages, or public client code.
@@ -352,6 +358,56 @@ Later, if paid services are formally launched, decide whether the service provid
 The Terms page should then clearly match the payment and service provider identity.
 
 ## MVP Implementation Plan
+
+2026-07-10 decision:
+
+After reviewing the AI cockpit, +86 access help, digital nomad hub, WhatsApp bridge, PWA, and SOS ideas, the agreed direction is to keep the current stage lightweight and low-risk.
+
+Use this priority order:
+
+1. Build practical web tools that solve immediate traveler problems.
+2. Let AI provide the free first response.
+3. Offer paid human review only when the issue needs judgment, urgency, or personalization.
+4. Avoid sensitive data collection, account handling, identity verification, and emergency promises until there is clear demand, legal clarity, and an operating process.
+
+Suitable now:
+
+- Reposition `/travel-help/` as a free China digital survival AI.
+- Add a mobile-first `Show to Driver` tool with large Chinese text for taxis, hotel front desks, and asking directions.
+- Add a Chinese error or app-message translator tool. Start with text input; image upload can come later.
+- Improve mobile usability for the AI help page and key tools.
+- Use `Request Priority Human Review` as the safer paid CTA, not `SOS`, `Emergency`, or `24/7 Rescue`.
+
+Near-term validation:
+
+- Add a simple human-help intake form that sends requests by email first.
+- Optionally add WhatsApp or email contact links for users who need follow-up.
+- Test low-risk paid products such as Arrival Setup Review, Trip Review, and First China Trip Plan.
+- Build Digital Nomad Hub slowly as content and resource pages, not as a heavy service marketplace at the beginning.
+
+Postpone until later:
+
+- Do not use the phrase `+86 Bypass` publicly. If this area is tested later, use safer wording such as `China App Access Help`, `China Digital Setup Help`, or `Booking Assistance`.
+- Do not collect passport images, full ID details, passwords, payment credentials, or one-time verification codes in the current stage.
+- Do not offer 24/7 SOS, emergency rescue, real-time voice support, or guaranteed immediate response while operating as a one-person project.
+- Do not promise代实名,代注册,代提交护照, or helping users bypass platform rules.
+- Do not build WebRTC voice/video support or WhatsApp Business API until real demand justifies the setup and support burden.
+
+Recommended first build sequence:
+
+1. Upgrade `/travel-help/` copy and prompts around practical China digital survival.
+2. Build `/tools/show-to-driver/`.
+3. Build `/tools/chinese-error-translator/`.
+4. Add `Request Priority Human Review` CTA and email-based intake.
+5. Later build `/trip-planner/` and `/trip-review/` around the same AI-free plus human-paid model.
+
+2026-07-10 implementation note:
+
+- `/tools/show-to-driver/` was added as the first mobile-first lightweight utility.
+- The tool generates a large Chinese message card for taxi drivers, hotel staff, pickup points, and asking directions.
+- It runs fully in the browser and does not collect or store user data.
+- The tool was added to the shared `TOOLS` config so it appears in the Tool Center and homepage tool grid.
+- Next related lightweight tool: `/tools/chinese-error-translator/`.
 
 Phase 1:
 
