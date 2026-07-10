@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'China Travel Resources for Foreign Visitors';
+const description =
+  'A practical resource hub for foreign visitors to China: payments, eSIMs, trains, visas, city guides, tools, and first-trip planning links.';
+
+const resourceGroups = [
+  {
+    title: 'First-trip essentials',
+    description: 'Start here if you are planning your first trip and need the basics in one place.',
+    links: [
+      { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'China visa-free entry and transit guide' },
+      { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'What to pack for China' },
+      { href: '/tools/budget-cash-estimator/', title: 'Budget and cash estimator' },
+      { href: '/tools/best-time-to-visit/', title: 'Best time to visit China' },
+    ],
+  },
+  {
+    title: 'Payments and money',
+    description: 'Mobile payments, cash backup, cards, and everyday checkout problems.',
+    links: [
+      { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China as a tourist' },
+      { href: '/posts/alipay-foreign-credit-card-step-by-step/', title: 'Set up Alipay with a foreign card' },
+      { href: '/posts/wechat-pay-foreign-visitors-guide/', title: 'WeChat Pay guide for foreign visitors' },
+      { href: '/tools/payment-checker/', title: 'Payment compatibility checker' },
+    ],
+  },
+  {
+    title: 'Internet and apps',
+    description: 'Stay online, choose an eSIM, and know which apps work before arrival.',
+    links: [
+      { href: '/posts/best-esim-for-china-travel-2026/', title: 'Best eSIM for China travel' },
+      { href: '/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'China eSIM vs roaming cost' },
+      { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access and apps in China' },
+      { href: '/tools/app-availability-checker/', title: 'Will my apps work in China?' },
+    ],
+  },
+  {
+    title: 'Transport and city guides',
+    description: 'Trains, metro, airports, ride-hailing, and practical city planning.',
+    links: [
+      { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'China high-speed rail guide for foreigners' },
+      { href: '/posts/book-china-train-tickets-12306-foreigners/', title: 'Book China train tickets on 12306' },
+      { href: '/posts/didi-china-foreign-tourists-guide/', title: 'Use DiDi as a foreign tourist' },
+      { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai city guide for foreigners' },
+    ],
+  },
+];
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
+  <main class="container-page py-10">
+    <section class="max-w-3xl">
+      <p class="section-kicker">Resource hub</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+    </section>
+
+    <section class="mt-10 grid gap-5 md:grid-cols-2">
+      {resourceGroups.map((group) => (
+        <article class="card">
+          <h2 class="text-xl font-bold text-gray-950">{group.title}</h2>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{group.description}</p>
+          <ul class="mt-5 grid gap-3">
+            {group.links.map((link) => (
+              <li>
+                <a href={link.href} class="font-semibold text-brand-700 hover:text-brand-800">
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
