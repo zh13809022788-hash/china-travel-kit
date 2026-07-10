@@ -4,7 +4,7 @@
 // below (the "ca-pub-XXXXXXXXXXXXXXXX" value from your AdSense account).
 // Leaving it empty keeps the dashed placeholder boxes and loads no ad script,
 // which is the correct state while your account is still under review.
-export const ADSENSE_PUBLISHER_ID = '';
+export const ADSENSE_PUBLISHER_ID = 'ca-pub-3673928456254144';
 
 // Optional: per-format ad slot IDs from AdSense (the numeric "data-ad-slot"
 // value you get when you create an ad unit). Fill these in once you have units.
