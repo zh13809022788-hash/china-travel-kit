@@ -18,6 +18,8 @@ faqs:
     answer: "Increasingly, yes. Hangzhou is a major technology and e-commerce hub with a strong software culture, good infrastructure, and a more relaxed, lower-cost environment than Shanghai. That combination appeals to remote workers and solo founders who want tech energy without first-tier prices."
   - question: "Do people speak English in Hangzhou?"
     answer: "English is more limited than in Shanghai but the metro is bilingual and the tech industry means some English-friendly venues exist. Translation apps and the mini-programs in Alipay and WeChat handle daily needs, so non-Chinese speakers can get around comfortably."
+cover: "city-hangzhou"
+coverAlt: "Hangzhou West Lake with traditional garden pavilion"
 ---
 
 ## Introduction

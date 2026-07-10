@@ -18,6 +18,8 @@ faqs:
     answer: "Mobile payment, as everywhere in China. Set up Alipay or WeChat Pay with a foreign card before arrival and pay by QR code almost everywhere. Keep a few hundred RMB in small notes for older taxis and small vendors. Direct foreign-card acceptance is limited to international hotels and upscale malls."
   - question: "When is the best time to visit Beijing?"
     answer: "Autumn (September-October) is widely considered the best: mild, dry, and clear. Spring is pleasant but can be dusty. Summers are hot, humid, and busy; winters are cold but atmospheric and less crowded, and offer clear skies on good days."
+cover: "city-beijing"
+coverAlt: "Beijing Forbidden City historic architecture"
 ---
 
 ## Introduction

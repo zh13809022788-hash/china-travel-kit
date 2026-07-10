@@ -18,6 +18,8 @@ faqs:
     answer: "Yes. Its tropical winter climate makes it a favorite seasonal base for those escaping cold weather, and monthly accommodation rates plus a low overall cost of living support extended stays. The main caveat is season: the same heat and humidity that make winter ideal make summer uncomfortable."
   - question: "Do people speak English in Sanya?"
     answer: "English is limited, as Sanya's tourism is overwhelmingly domestic. Resorts and larger hotels have some English-speaking staff, but elsewhere you will rely on translation apps and the mini-programs inside Alipay and WeChat, which handle ordering, transport, and payment well enough to get by."
+cover: "city-sanya"
+coverAlt: "Sanya tropical beach on Hainan island"
 ---
 
 ## Introduction

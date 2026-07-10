@@ -18,6 +18,8 @@ faqs:
     answer: "Yes. Shanghai has the widest English coverage, the deepest expat community, the most international services, and excellent transport in China, which makes landing and living straightforward. The trade-off is the highest cost of living in the country, driven mainly by rent."
   - question: "Is Shanghai safe for tourists?"
     answer: "Very. Violent crime is rare and the city feels safe day and night by international standards. The main precautions are ordinary ones: watch for pickpockets in crowded tourist spots, use licensed taxis or DiDi, and keep digital copies of your passport and visa."
+cover: "city-shanghai"
+coverAlt: "Shanghai skyline and the Bund at dusk"
 ---
 
 ## Introduction

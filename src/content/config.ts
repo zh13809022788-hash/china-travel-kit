@@ -12,6 +12,8 @@ const posts = defineCollection({
     faqs: z
       .array(z.object({ question: z.string(), answer: z.string() }))
       .default([]),
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
   }),
 });
 

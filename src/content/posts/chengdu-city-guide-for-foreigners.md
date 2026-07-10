@@ -18,6 +18,8 @@ faqs:
     answer: "Less than in Shanghai, but the metro is bilingual and the growing foreign community means some English-friendly cafes and services exist. Translation apps and the mini-programs inside Alipay and WeChat handle most daily situations, so a non-Chinese speaker can get by comfortably."
   - question: "How many days do you need in Chengdu?"
     answer: "Two to three days covers the pandas, the old streets and teahouses, a hotpot dinner, and the city's temples and parks. Add days if you plan to use Chengdu as a launchpad for day trips like Leshan's Giant Buddha or longer journeys into western Sichuan."
+cover: "city-chengdu"
+coverAlt: "Giant pandas at Chengdu Research Base of Giant Panda Breeding"
 ---
 
 ## Introduction
