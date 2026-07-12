@@ -1,5 +1,7 @@
 """文章生成: 调 Claude API 独立原创英文文章, 组装合法 frontmatter + 唯一 slug。
 
+首要策略: 防止 AI 内容降权。宁可少发、慢发, 也不能发布像批量 AI 生成的泛泛旅游文章。
+
 差异化策略(降低批量 AI 痕迹, 提升海外搜索引擎友好度):
   - 从多套正文骨架模板中随机选一套, 使 H2 结构不雷同;
   - 每篇要求独立信息增量、变化切入角度(angle);
@@ -139,6 +141,8 @@ class Generator:
         skeleton_str = "\n".join(skeleton)
         return f"""You are an expert travel writer producing an ORIGINAL English article for chinatripbox.com, a guide site for foreigners traveling in China.
 
+Primary quality rule: protect chinatripbox.com from AI-content devaluation. If the draft would read like a generic AI travel article, rewrite it before returning JSON. The article must feel edited, specific, and useful enough that a traveler would save it before a China trip.
+
 Write a completely original, factual, genuinely useful article. Do NOT copy or paraphrase any specific external source — write from general, well-established travel knowledge. Each article must add its own information increment (concrete steps, comparisons, numbers, caveats a real traveler needs).
 
 TOPIC: {topic.keyword}
@@ -149,6 +153,10 @@ STRUCTURE — use these H2 section headings, in this order (you may add ### subs
 
 REQUIREMENTS:
 - Natural, human, specific prose. Vary sentence length. Avoid generic filler and obvious AI boilerplate ("In today's fast-paced world", "Whether you're a...").
+- Avoid AI-content tells: no generic significance claims, no promotional travel-brochure tone, no vague attributions like "experts say", no "let's dive in", no formulaic "in conclusion", no padded summary, no repetitive rule-of-three phrasing, and no overuse of em dashes.
+- Add practical judgment: include real traveler constraints, failure cases, backup plans, thresholds, timing, app/payment/transport friction, or "when not to do this" details where relevant.
+- Prefer concrete, checkable statements over broad advice. Do not invent official policy, prices, limits, or app behavior; if details vary, say exactly what varies and what the traveler should verify.
+- If the topic is payment, visa, transport, telecom, safety, or health-adjacent, include a concise caution to verify current rules with the relevant official provider or authority.
 - Use Markdown: ## / ### headings, **bold**, ordered and unordered lists where helpful. No images.
 {affiliate_line}- End with a short summary section (per the structure above).
 
