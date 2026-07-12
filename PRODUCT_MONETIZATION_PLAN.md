@@ -409,6 +409,16 @@ Recommended first build sequence:
 - The tool was added to the shared `TOOLS` config so it appears in the Tool Center and homepage tool grid.
 - Next related lightweight tool: `/tools/chinese-error-translator/`.
 
+2026-07-12 implementation note:
+
+- `/trip-planner/` was added as a free browser-side China trip planning tool.
+- The planner collects home region, arrival city, destination cities, trip length, purpose, budget, travel style, and practical setup needs.
+- It generates a first-pass plan covering pre-departure setup, payment and cash backup, eSIM/internet, airport and transport, a simple day-by-day framework, and common mistake warnings.
+- The planner does not save user input and includes an email handoff link for optional human Trip Review.
+- The site header now includes a `Planner` navigation link.
+- The homepage now links to `/trip-planner/` through the first-trip shortcuts, search index, and main CTA area.
+- `npm run build` passed successfully and generated `/trip-planner/index.html`.
+
 Phase 1:
 
 - Keep `/travel-help/` live as the support prototype.

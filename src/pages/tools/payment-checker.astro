@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
+import FaqSection from '../../components/FaqSection.astro';
 
 const title = 'Payment Card Compatibility Checker for China';
 const description =
@@ -14,6 +15,31 @@ const nationalities = [
   'Germany', 'France', 'Japan', 'Singapore', 'Other',
 ];
 const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
+
+const nextSteps = [
+  { href: '/posts/alipay-foreign-credit-card-step-by-step/', title: 'Set up Alipay with a foreign card' },
+  { href: '/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: 'Link Visa or Mastercard to WeChat Pay' },
+  { href: '/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: 'Know when cash still helps' },
+  { href: '/payment/', title: 'See all China payment guides' },
+];
+
+const faqItems = [
+  {
+    question: 'Will every foreign Visa or Mastercard work in China?',
+    answer:
+      'No. Visa and Mastercard are the safest starting point for Alipay and WeChat Pay, but individual banks can still block verification, reject online wallet binding, or flag China transactions. Keep a second card and a small cash backup.',
+  },
+  {
+    question: 'Should tourists set up both Alipay and WeChat Pay?',
+    answer:
+      'Yes, if possible. Alipay is often easier for visitors to set up, while WeChat Pay can be useful for mini programs, restaurants, and local services. Having both reduces the chance of being stuck at a merchant.',
+  },
+  {
+    question: 'How much cash should I bring if mobile payment works?',
+    answer:
+      'Bring enough small notes for airport transport, backup meals, and small shops, but do not rely on cash alone. Many places prefer QR payment, and some staff may not have change ready.',
+  },
+];
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description}>
@@ -24,6 +50,21 @@ const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Payment Compatibility Checker</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
+
+    <section class="mt-6 grid gap-4 md:grid-cols-3" aria-label="What this payment checker helps with">
+      <div class="rounded-lg border border-gray-200 bg-white p-4">
+        <h2 class="text-base font-bold text-gray-900">Check wallet support</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">See whether your card network is a good fit for Alipay and WeChat Pay.</p>
+      </div>
+      <div class="rounded-lg border border-gray-200 bg-white p-4">
+        <h2 class="text-base font-bold text-gray-900">Plan around limits</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Review common transaction limits and fees before you make larger purchases.</p>
+      </div>
+      <div class="rounded-lg border border-gray-200 bg-white p-4">
+        <h2 class="text-base font-bold text-gray-900">Build a backup plan</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Know when to carry cash, switch cards, or prepare both payment apps.</p>
+      </div>
+    </section>
 
     <AdSlot format="banner" />
 
@@ -60,6 +101,33 @@ const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
         placeholder="#AFFILIATE_PAYMENT"
       />
     </div>
+
+    <section class="mt-12 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div class="rounded-lg border border-gray-200 bg-white p-6">
+        <h2 class="text-2xl font-bold text-gray-900">How to use this checker</h2>
+        <ol class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
+          <li><strong class="text-gray-900">1. Choose your passport or residence country.</strong> This helps frame common bank and verification issues.</li>
+          <li><strong class="text-gray-900">2. Choose your card network.</strong> Visa and Mastercard are usually the best first choices for China travel wallets.</li>
+          <li><strong class="text-gray-900">3. Prepare at least one fallback.</strong> Bring a second card, install both payment apps, and keep small cash for edge cases.</li>
+        </ol>
+        <p class="mt-4 text-sm leading-6 text-gray-600">
+          Payment rules, wallet verification, and issuer risk checks can change. Treat the result as practical trip planning guidance, then confirm any large transaction limits inside Alipay, WeChat Pay, and your card issuer before departure.
+        </p>
+      </div>
+
+      <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
+        <h2 class="text-lg font-bold text-gray-900">Next payment steps</h2>
+        <div class="mt-4 grid gap-3">
+          {nextSteps.map((item) => (
+            <a href={item.href} class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">
+              {item.title}
+            </a>
+          ))}
+        </div>
+      </aside>
+    </section>
+
+    <FaqSection items={faqItems} title="Payment checker FAQ" />
   </main>
   <Footer />
 </BaseLayout>

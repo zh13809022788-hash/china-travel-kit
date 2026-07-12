@@ -14,6 +14,9 @@ export const ADSENSE_SLOTS: Record<string, string> = {
   sidebar: '',
 };
 
+// Microsoft Clarity project ID. Leave empty to disable Clarity tracking.
+export const CLARITY_PROJECT_ID = 'xl5po1by2u';
+
 // Interactive tools, shared between the homepage grid and the Tool Center.
 // Order here controls display order; `featured` tools surface on the homepage.
 export interface Tool {
