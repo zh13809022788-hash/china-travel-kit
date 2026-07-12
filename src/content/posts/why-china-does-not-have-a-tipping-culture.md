@@ -88,6 +88,8 @@ Better options often include:
 
 A good review can matter more than a small tip, especially for restaurants, hotels, guides, and local services that depend on platform ratings.
 
+At hosted dinners, appreciation may show up through toasts rather than tips. If someone offers baijiu and you are not sure what it is, this [baijiu beginner guide](https://baijiu365.com/baijiu-101/) gives enough context to understand the ritual without turning a travel etiquette question into a drinking contest.
+
 ## Common Traveler Mistakes
 
 The first mistake is forcing a tip after staff refuse it. If someone gives the money back, accept it with a smile. They are not testing your generosity.

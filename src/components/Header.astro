@@ -1,13 +1,19 @@
 ---
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/trip-planner/', label: 'Planner' },
+  { href: '/resources/', label: 'Start Here' },
+  { href: '/essentials/', label: 'Essentials' },
+  { href: '/payment/', label: 'Payments' },
+  { href: '/esim/', label: 'Internet' },
+  { href: '/transport/', label: 'Transport' },
+  { href: '/cities/', label: 'Cities' },
+  { href: '/food/', label: 'Food' },
+  { href: '/tools/', label: 'Tools' },
+];
+const secondaryLinks = [
+  { href: '/trip-planner/', label: 'Trip Planner' },
   { href: '/long-stay/', label: 'Long Stay' },
   { href: '/digital-nomads/', label: 'Digital Nomads' },
-  { href: '/payment/', label: 'Payment' },
-  { href: '/esim/', label: 'eSIM' },
-  { href: '/transport/', label: 'Transport' },
-  { href: '/tools/', label: 'Tools' },
   { href: '/travel-help/', label: 'Help' },
   { href: '/about/', label: 'About' },
 ];
@@ -24,7 +30,7 @@ const isActive = (href: string) =>
     </a>
 
     <!-- Desktop nav -->
-    <ul class="hidden items-center gap-6 md:flex">
+    <ul class="hidden items-center gap-4 lg:flex xl:gap-5">
       {navLinks.map((link) => (
         <li>
           <a
@@ -43,7 +49,7 @@ const isActive = (href: string) =>
     <!-- Mobile hamburger -->
     <button
       id="menu-toggle"
-      class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 md:hidden"
+      class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 lg:hidden"
       aria-label="Toggle navigation menu"
       aria-expanded="false"
     >
@@ -56,9 +62,9 @@ const isActive = (href: string) =>
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden border-t border-gray-200 md:hidden">
+  <div id="mobile-menu" class="hidden border-t border-gray-200 lg:hidden">
     <ul class="container-page flex flex-col py-2">
-      {navLinks.map((link) => (
+      {[...navLinks, ...secondaryLinks].map((link) => (
         <li>
           <a
             href={link.href}

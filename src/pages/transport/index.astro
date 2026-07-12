@@ -13,6 +13,13 @@ const posts = (await getCollection('posts'))
 const title = 'China Transport Guides — Trains, Ride-Hailing & Getting Around';
 const description =
   'Learn how to book high-speed train tickets, use Didi ride-hailing, and navigate public transport in China as a foreign visitor.';
+
+const transportPaths = [
+  { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Long-distance trains', desc: 'Use this for city-to-city planning, seat classes, passport entry, and station timing.' },
+  { href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Airport arrival', desc: 'Compare metro, taxi, ride-hailing, and airport rail for the first ride into town.' },
+  { href: '/posts/didi-china-foreign-tourists-guide/', title: 'Ride-hailing', desc: 'Set up DiDi, use translated pickup pins, and reduce driver-call friction.' },
+  { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Metro systems', desc: 'Learn QR tickets, transfers, and rush-hour habits through the Shanghai example.' },
+];
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description}>
@@ -25,6 +32,16 @@ const description =
     </header>
 
     <AdSlot format="banner" />
+
+    <section class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4" aria-labelledby="transport-paths">
+      <h2 id="transport-paths" class="sr-only">Transport planning paths</h2>
+      {transportPaths.map((path) => (
+        <a href={path.href} class="card block hover:no-underline">
+          <h3 class="text-lg font-bold text-gray-950">{path.title}</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{path.desc}</p>
+        </a>
+      ))}
+    </section>
 
     <section class="mt-8 grid gap-6 md:grid-cols-2">
       {posts.map((post, i) => (

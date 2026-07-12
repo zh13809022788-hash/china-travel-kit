@@ -34,6 +34,28 @@ const affiliateByCategory: Record<string, { title: string; description: string; 
 };
 
 const affiliate = affiliateByCategory[data.category];
+const allPosts = await getCollection('posts');
+const related = allPosts
+  .filter((candidate) => candidate.slug !== post.slug)
+  .map((candidate) => {
+    const sharedTags = candidate.data.tags.filter((tag) => data.tags.includes(tag)).length;
+    const categoryMatch = candidate.data.category === data.category ? 2 : 0;
+    const cityMatch =
+      ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya'].some(
+        (city) => post.slug.includes(city) && candidate.slug.includes(city)
+      )
+        ? 3
+        : 0;
+    return { candidate, score: sharedTags + categoryMatch + cityMatch };
+  })
+  .filter((item) => item.score > 0)
+  .sort((a, b) => b.score - a.score || b.candidate.data.pubDate.valueOf() - a.candidate.data.pubDate.valueOf())
+  .slice(0, 4)
+  .map(({ candidate }) => ({
+    title: candidate.data.title,
+    description: candidate.data.description,
+    href: `/posts/${candidate.slug}/`,
+  }));
 ---
 
 <BlogPost
@@ -45,6 +67,7 @@ const affiliate = affiliateByCategory[data.category];
   faqs={data.faqs}
   cover={data.cover}
   coverAlt={data.coverAlt}
+  related={related}
   affiliate={affiliate}
 >
   <Content />

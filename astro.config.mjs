@@ -5,8 +5,8 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  // Production site URL — used for sitemap and canonical/SEO absolute links
-  site: 'https://chinatripbox.com',
+  // Production site URL used for sitemap and canonical/SEO absolute links.
+  site: 'https://www.chinatripbox.com',
   output: 'static',
   integrations: [
     tailwind({

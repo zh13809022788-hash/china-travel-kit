@@ -1,0 +1,114 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+const allPosts = await getCollection('posts');
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya'];
+const cityPosts = allPosts
+  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const title = 'China City Guides for Foreign Visitors';
+const description =
+  'Plan practical city stops in China with guides for Beijing, Shanghai, Chengdu, Hangzhou, and Sanya, plus airport, metro, food, and transport next steps.';
+
+const cities = [
+  {
+    name: 'Beijing',
+    href: '/posts/beijing-city-guide-for-foreigners/',
+    desc: 'Best for history, hutongs, the Great Wall, and first-time classic sightseeing.',
+    next: '/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
+    nextLabel: 'Daxing airport transfer guide',
+  },
+  {
+    name: 'Shanghai',
+    href: '/posts/shanghai-city-guide-for-foreigners/',
+    desc: 'Best for an easy landing, international food, skyline walks, and strong metro coverage.',
+    next: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
+    nextLabel: 'Shanghai metro guide',
+  },
+  {
+    name: 'Chengdu',
+    href: '/posts/chengdu-city-guide-for-foreigners/',
+    desc: 'Best for Sichuan food, teahouse pace, pandas, and a softer big-city rhythm.',
+    next: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
+    nextLabel: 'Chengdu street-food guide',
+  },
+  {
+    name: 'Hangzhou',
+    href: '/posts/hangzhou-city-guide-for-foreigners/',
+    desc: 'Best for West Lake, green scenery, weekend pacing, and a polished city break.',
+    next: '/transport/',
+    nextLabel: 'Plan trains and local transport',
+  },
+  {
+    name: 'Sanya',
+    href: '/posts/sanya-city-guide-for-foreigners/',
+    desc: 'Best for warm winter weather, resort stays, beach time, and Hainan side trips.',
+    next: '/posts/what-to-pack-for-china-a-season-by-season-checklist/',
+    nextLabel: 'Seasonal packing guide',
+  },
+];
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
+  <main class="container-page py-10">
+    <header class="max-w-3xl">
+      <p class="section-kicker">City planning</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
+      <h2 id="city-shortcuts" class="sr-only">City shortcuts</h2>
+      {cities.map((city) => (
+        <article class="card">
+          <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
+          <div class="mt-5 grid gap-2 text-sm font-semibold">
+            <a href={city.href} class="text-brand-700 hover:text-brand-800">Open city guide</a>
+            <a href={city.next} class="text-gray-700 hover:text-brand-700">{city.nextLabel}</a>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">All city-related guides</p>
+            <h2>City articles and local transport</h2>
+          </div>
+        </div>
+        <div class="mt-6 grid gap-5 md:grid-cols-2">
+          {cityPosts.map((post) => (
+            <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+              <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
+        <p class="section-kicker">Before choosing a city</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Check the logistics stack</h2>
+        <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
+          <li><a href="/payment/" class="font-semibold text-brand-700">Payments:</a> set up Alipay, WeChat Pay, and cash backup before smaller-city travel.</li>
+          <li><a href="/esim/" class="font-semibold text-brand-700">Internet:</a> choose eSIM, roaming, or local SIM before relying on maps and translation.</li>
+          <li><a href="/transport/" class="font-semibold text-brand-700">Transport:</a> compare trains, airport transfers, DiDi, and metro QR codes.</li>
+          <li><a href="/tools/best-time-to-visit/" class="font-semibold text-brand-700">Timing:</a> check weather, holidays, and crowd pressure by month.</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

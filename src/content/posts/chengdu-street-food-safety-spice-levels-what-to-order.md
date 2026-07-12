@@ -102,6 +102,8 @@ A realistic warning: many stalls make dishes to a fixed recipe and can't truly d
 
 Skip cold water to fight the burn; it doesn't help much. Locals reach for **sweet soy milk (豆浆)**, cold **suan mei tang (plum drink)**, or plain rice to cut the heat. Dairy and starch calm chili better than water does.
 
+If a sit-down meal turns into a hosted dinner, you may also see small glasses of baijiu used for toasts rather than casual sipping. You do not need to become an expert for a Chengdu food crawl, but Baijiu365's guide to [how to drink baijiu politely](https://baijiu365.com/how-to-drink-baijiu/) is useful background before a banquet-style meal.
+
 ## Setup Walkthrough
 
 A little prep makes the whole thing smoother. Do these before you head out for the evening.

@@ -49,6 +49,11 @@ const jsonLd = {
       publisher: {
         '@id': `${siteURL}#organization`,
       },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${siteURL}?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
     },
     {
       '@type': 'WebPage',

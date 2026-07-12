@@ -24,6 +24,13 @@ const categoryLabels: Record<string, string> = {
 
 const topicHubs = [
   {
+    href: '/resources/',
+    label: 'Start here',
+    title: 'Find the right guide',
+    desc: 'A guided index for first timers, including visas, payments, internet, transport, food, cities, and tools.',
+    accent: 'bg-indigo-50 text-indigo-700 ring-indigo-100',
+  },
+  {
     href: '/payment/',
     label: 'Payment',
     title: 'Pay in China',
@@ -45,6 +52,20 @@ const topicHubs = [
     accent: 'bg-emerald-50 text-emerald-700 ring-emerald-100',
   },
   {
+    href: '/cities/',
+    label: 'Cities',
+    title: 'Choose your base',
+    desc: 'City guides for Beijing, Shanghai, Chengdu, Hangzhou, and Sanya, with arrival and neighborhood context.',
+    accent: 'bg-violet-50 text-violet-700 ring-violet-100',
+  },
+  {
+    href: '/food/',
+    label: 'Food',
+    title: 'Eat with confidence',
+    desc: 'Food delivery, street-food safety, spice levels, tipping, and restaurant etiquette for visitors.',
+    accent: 'bg-orange-50 text-orange-700 ring-orange-100',
+  },
+  {
     href: '/essentials/',
     label: 'Essentials',
     title: 'Plan the Basics',
@@ -54,10 +75,10 @@ const topicHubs = [
 ];
 
 const quickPaths = [
+  { href: '/resources/', title: 'I need the best starting point', desc: 'Use the resource hub to jump into the right guide, tool, or city pathway.' },
   { href: '/trip-planner/', title: 'Build my China plan', desc: 'Create a practical payment, eSIM, transport, and first-day setup plan.' },
   { href: '/tools/payment-checker/', title: 'Can I pay with my card?', desc: 'Check Alipay, WeChat Pay, card limits, and cash backup before you land.' },
   { href: '/tools/visa-free-checker/', title: 'Do I need a visa?', desc: 'Check visa-free entry and transit options by passport and route.' },
-  { href: '/tools/esim-comparison/', title: 'Which eSIM should I buy?', desc: 'Compare China travel data plans, validity, and likely real-world use.' },
 ];
 
 const arrivalTasks = [
@@ -116,6 +137,20 @@ const mainPages = [
     href: '/tools/',
     category: 'Tools',
     tags: ['tools', 'calculator', 'checker'],
+  },
+  {
+    title: 'China City Guides',
+    description: 'Choose where to land and how to plan Beijing, Shanghai, Chengdu, Hangzhou, and Sanya.',
+    href: '/cities/',
+    category: 'Cities',
+    tags: ['cities', 'beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya'],
+  },
+  {
+    title: 'China Food and Dining Guides',
+    description: 'Order food, handle spice levels, understand tipping, and avoid common dining mistakes.',
+    href: '/food/',
+    category: 'Food',
+    tags: ['food', 'dining', 'meituan', 'chengdu', 'tipping'],
   },
 ];
 
@@ -264,7 +299,7 @@ const searchItems = [
           </div>
           <a href="/tools/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">View all tools</a>
         </div>
-        <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {topicHubs.map((topic) => (
             <a href={topic.href} class="card group block hover:no-underline">
               <span class:list={['inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ring-1', topic.accent]}>{topic.label}</span>

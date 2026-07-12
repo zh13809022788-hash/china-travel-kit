@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://chinatripbox.com/sitemap-index.xml
+Sitemap: https://www.chinatripbox.com/sitemap-index.xml
