@@ -1,0 +1,52 @@
+# ChinaTripBox
+
+> Practical China travel planning guides and tools for foreign visitors, focused on payments, eSIMs, transport, apps, first-day setup, city planning, and everyday travel logistics.
+
+## Core Pages
+- [Home](https://www.chinatripbox.com/)
+- [Resources](https://www.chinatripbox.com/resources/)
+- [Trip Planner](https://www.chinatripbox.com/trip-planner/)
+- [Travel Help](https://www.chinatripbox.com/travel-help/)
+- [Payment Hub](https://www.chinatripbox.com/payment/)
+- [eSIM Hub](https://www.chinatripbox.com/esim/)
+- [Transport Hub](https://www.chinatripbox.com/transport/)
+- [Tools](https://www.chinatripbox.com/tools/)
+- [Cities](https://www.chinatripbox.com/cities/)
+- [Food](https://www.chinatripbox.com/food/)
+
+## Featured Guides
+- [China Trip Planner for First-Time Visitors: Payment, eSIM, Transport and Apps](https://www.chinatripbox.com/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/): A practical China trip planning guide for first-time visitors: what to set up before departure, how to handle payment, internet, transport, apps, cash, and the first day after landing.
+- [China Visa-Free Entry and Transit in 2026: Do You Need a Visa to Visit?](https://www.chinatripbox.com/posts/china-visa-free-entry-transit-guide-2026/): A clear 2026 guide to China's visa-free policies: the 240-hour transit scheme, the 30-day unilateral visa-free entry, who qualifies, and the rules every tourist must know.
+- [How to Pay in China as a Tourist: The Complete 2026 Guide](https://www.chinatripbox.com/posts/how-to-pay-in-china-tourist-guide/): A practical, up-to-date guide to paying in China as a foreign visitor — from mobile wallets and foreign cards to cash and common pitfalls to avoid.
+- [Best eSIM for China Travel in 2026: How to Choose and Set Up](https://www.chinatripbox.com/posts/best-esim-for-china-travel-2026/): Find the best eSIM for China travel in 2026. Compare data plans, learn which options bypass app restrictions, and follow our step-by-step setup guide.
+
+## Latest Guides
+- [China Trip Planner for First-Time Visitors: Payment, eSIM, Transport and Apps](https://www.chinatripbox.com/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/): A practical China trip planning guide for first-time visitors: what to set up before departure, how to handle payment, internet, transport, apps, cash, and the first day after landing.
+- [What to Set Up Before Traveling to China: Alipay, eSIM, DiDi and Train Tickets](https://www.chinatripbox.com/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/): A pre-departure checklist for China travelers covering Alipay, WeChat Pay, eSIM, DiDi, train tickets, maps, translation, cash backup, and arrival-day mistakes.
+- [Why China Does Not Have a Tipping Culture](https://www.chinatripbox.com/posts/why-china-does-not-have-a-tipping-culture/): A traveler-friendly explanation of why tipping is uncommon in mainland China, how service prices work, and what to do when you want to show appreciation.
+- [Beijing City Guide for Foreigners: What to Know Before You Go](https://www.chinatripbox.com/posts/beijing-city-guide-for-foreigners/): A practical Beijing guide for foreign visitors: getting around, top sights, paying, staying connected, neighborhoods, food, and tips for short or longer stays.
+- [Can You Still Use Cash in China as a Foreigner in 2026?](https://www.chinatripbox.com/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/): A practical 2026 guide to using cash in China as a foreigner: where notes still work, where they get refused, and how to keep small bills for taxis.
+- [Chengdu City Guide for Foreigners: What to Know Before You Go](https://www.chinatripbox.com/posts/chengdu-city-guide-for-foreigners/): A practical Chengdu guide for foreign visitors: pandas, food, getting around, paying, staying connected, and tips for both short trips and longer stays.
+- [Chengdu Street Food: Safety, Spice Levels & What to Order](https://www.chinatripbox.com/posts/chengdu-street-food-safety-spice-levels-what-to-order/): A practical guide to Chengdu street food for foreign travelers: how to judge hygiene, decode spice levels, and pick the dishes worth queuing for on your trip.
+- [Hangzhou City Guide for Foreigners: What to Know Before You Go](https://www.chinatripbox.com/posts/hangzhou-city-guide-for-foreigners/): A practical Hangzhou guide for foreign visitors: West Lake, tea villages, getting around, paying, staying connected, and tips for short trips or longer stays.
+- [Link a Foreign Visa or Mastercard to WeChat Pay in China](https://www.chinatripbox.com/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/): A practical 2024-2026 guide for tourists on linking a foreign Visa or Mastercard to WeChat Pay, with fees, transaction caps, and fixes for common errors.
+- [Sanya City Guide for Foreigners: What to Know Before You Go](https://www.chinatripbox.com/posts/sanya-city-guide-for-foreigners/): A practical Sanya guide for foreign visitors: beaches, best season, getting around, paying, staying connected, and tips for short trips or longer winter stays.
+- [Shanghai City Guide for Foreigners: What to Know Before You Go](https://www.chinatripbox.com/posts/shanghai-city-guide-for-foreigners/): A practical Shanghai guide for foreign visitors: getting around, paying, staying connected, neighborhoods, food, and tips for both short trips and longer stays.
+- [Shanghai Metro for Foreigners: Tickets, QR Codes & Transfers](https://www.chinatripbox.com/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/): Learn how to ride the Shanghai Metro as a foreigner: buying tickets, using Alipay and WeChat QR codes, mastering transfers, and avoiding common rookie mistakes.
+
+## Interactive Tools
+- [Show to Driver](https://www.chinatripbox.com/tools/show-to-driver/): Create a large Chinese address card for taxi drivers, hotel front desks, and asking directions on your phone.
+- [Visa-Free & Transit Checker](https://www.chinatripbox.com/tools/visa-free-checker/): See if you can enter China visa-free, use 240-hour transit, or need to apply — by nationality.
+- [Best Time to Visit China](https://www.chinatripbox.com/tools/best-time-to-visit/): See weather, crowds, and what to pack by city and month across major Chinese destinations.
+- [Budget & Cash Estimator](https://www.chinatripbox.com/tools/budget-cash-estimator/): Estimate your total trip budget and how much cash to bring, by length, style, and city tier.
+- [eSIM Plan Comparator](https://www.chinatripbox.com/tools/esim-comparison/): Compare data allowance, validity, price, and network across the top China travel eSIMs.
+- [Payment Compatibility Checker](https://www.chinatripbox.com/tools/payment-checker/): Check if your card works with Alipay and WeChat Pay, plus limits and fees, by nationality.
+- [Will My Apps Work in China?](https://www.chinatripbox.com/tools/app-availability-checker/): Check if Google, WhatsApp, Instagram and more work without a VPN — with a local alternative for each.
+- [RMB Currency Converter](https://www.chinatripbox.com/tools/currency-converter/): Convert your currency to yuan and back, and see what everyday things cost in China.
+- [Power Plug & Voltage Checker](https://www.chinatripbox.com/tools/power-plug-checker/): Find out if you need a plug adapter or voltage converter for China, based on your home country.
+- [Clothing & Shoe Size Converter](https://www.chinatripbox.com/tools/clothing-size-converter/): Convert US, UK, and EU sizes to Chinese sizes for clothing and footwear before you shop.
+- [Essential Chinese Phrases](https://www.chinatripbox.com/tools/essential-phrases/): A printable list of must-know Mandarin phrases with pinyin — payment, transport, food, and help.
+
+## Editorial Scope
+- General travel information only, not legal, immigration, medical, banking, emergency, or official government advice.
+- Content is written for foreign visitors who need practical setup help before and during a China trip.
