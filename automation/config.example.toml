@@ -30,7 +30,7 @@ base_url = "https://sub.llmwc.com"                      # 中转站代理地址(
 # 鉴权密钥从环境变量读取: ANTHROPIC_API_KEY
 
 [indexing]
-baidu_enabled  = true                                 # 是否推送百度普通收录
+baidu_enabled  = false                                # 英文海外站暂不启用百度普通收录
 baidu_endpoint = "http://data.zz.baidu.com/urls?site={site}&token={token}"  # 收录推送接口({site}=域名, {token}=BAIDU_TOKEN)
 indexnow_enabled = false                              # 可选: IndexNow(面向 Bing/海外搜索引擎)
 indexnow_endpoint = "https://api.indexnow.org/indexnow"
