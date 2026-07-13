@@ -14,6 +14,7 @@ const corePages = [
   ['Tools', '/tools/'],
   ['Cities', '/cities/'],
   ['Food', '/food/'],
+  ['Affiliate Disclosure', '/affiliate-disclosure/'],
 ];
 
 export async function GET() {

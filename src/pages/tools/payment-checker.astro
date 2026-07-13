@@ -128,6 +128,48 @@ const faqItems = [
       </aside>
     </section>
 
+    <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="payment-checker-seo">
+      <h2 id="payment-checker-seo" class="text-2xl font-bold text-gray-900">What this checker can and cannot tell you</h2>
+      <p class="mt-3 text-sm leading-6 text-gray-600">
+        This tool is designed for pre-departure planning. It helps you think through card network,
+        wallet support, likely fee points, and backup methods before you are standing at a China
+        checkout counter. It cannot guarantee that your individual bank will approve every payment.
+      </p>
+      <div class="mt-5 overflow-x-auto rounded-lg border border-gray-200">
+        <table class="min-w-full divide-y divide-gray-200 text-sm">
+          <thead class="bg-gray-50 text-left text-gray-700">
+            <tr>
+              <th class="px-4 py-3 font-semibold">Risk</th>
+              <th class="px-4 py-3 font-semibold">Why it happens</th>
+              <th class="px-4 py-3 font-semibold">Best backup</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 bg-white text-gray-600">
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Card binding fails</td>
+              <td class="px-4 py-3">Issuer blocks wallet verification or 3-D Secure fails.</td>
+              <td class="px-4 py-3">Try another Visa/Mastercard from a different bank.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Large payment rejected</td>
+              <td class="px-4 py-3">Wallet, merchant, or issuer limit triggers a review.</td>
+              <td class="px-4 py-3">Split payment, use physical card, or ask hotel/merchant for options.</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">No signal at checkout</td>
+              <td class="px-4 py-3">Weak mobile data, no roaming, or app cannot load.</td>
+              <td class="px-4 py-3">Use the other wallet, merchant Wi-Fi, or small cash backup.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm leading-6 text-gray-600">
+        For the strongest setup, read the full <a href="/posts/how-to-pay-in-china-tourist-guide/" class="font-semibold">China tourist payment guide</a>,
+        compare <a href="/posts/alipay-vs-wechat-pay-foreigners/" class="font-semibold">Alipay vs WeChat Pay</a>,
+        and keep a small RMB backup using our <a href="/posts/how-much-cash-to-bring-to-china/" class="font-semibold">cash guide</a>.
+      </p>
+    </section>
+
     <FaqSection items={faqItems} title="Payment checker FAQ" />
   </main>
   <Footer />

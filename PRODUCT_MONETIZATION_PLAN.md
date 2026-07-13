@@ -1,6 +1,6 @@
 # ChinaTripBox Product and Monetization Plan
 
-Last updated: 2026-07-10
+Last updated: 2026-07-14
 
 This file is the working product plan for ChinaTripBox monetization, AI travel help, human one-on-one services, and early SEO growth. Update this file whenever the product direction, pricing, paid service scope, or indexing strategy changes.
 
@@ -614,3 +614,44 @@ Next ChinaTripBox work:
 2. Upgrade city guides from thin summaries into practical city planning pages.
 3. Add a short `Related setup guides` block to high-traffic posts.
 4. Keep the 2-3 original English posts/week cadence; do not bulk publish thin articles.
+
+## 2026-07-14 Traffic Growth Execution
+
+Today moved ChinaTripBox from general site improvement into a more explicit traffic-growth track.
+
+Completed:
+
+- Added `docs/GROWTH_PLAN_30_DAYS.md` as the working 30-day traffic/content task plan.
+- Added a homepage section, `If you only read three pages`, pointing new visitors to:
+  - `What to Set Up Before Traveling to China`
+  - `How to Pay in China as a Tourist`
+  - `China High-Speed Rail Guide for Foreigners`
+- Added an `If you only have 30 minutes` group to `/resources/` for fast pre-departure planning.
+- Added `/affiliate-disclosure/` and linked it from the footer and `/llms.txt`.
+- Published three high-intent growth articles:
+  - `/posts/alipay-vs-wechat-pay-foreigners/`
+  - `/posts/first-24-hours-in-china-arrival-checklist/`
+  - `/posts/do-you-need-a-vpn-in-china-2026/`
+- Expanded `/tools/payment-checker/` into a stronger landing page with a payment-risk table, explanatory copy, and links to payment guides.
+- Expanded `/tools/visa-free-checker/` with visa-free mistake prevention copy and links to the arrival checklist, visa-free guide, and airport transport guide.
+
+Verification:
+
+- `npm.cmd run check:content` passed for 34 posts.
+- `npm.cmd run build` passed and generated 70 pages.
+
+Publishing decision:
+
+- Publishing three substantial posts today is acceptable because they target distinct search intents and include FAQ/internal-link structure.
+- Do not repeat this as a daily bulk-publishing habit. Resume a steadier pace of 3-5 strong pages per week unless there is a specific editorial reason.
+
+Next traffic tasks:
+
+1. Publish Day 2-4 items from `docs/GROWTH_PLAN_30_DAYS.md`:
+   - `China Apps Checklist for Tourists`
+   - `China Visa-Free Transit 240-Hour Rule Explained`
+   - `Best China eSIM for iPhone Users`
+2. Upgrade `/tools/app-availability-checker/` and `/tools/esim-comparison/` into fuller tool landing pages.
+3. Add internal links from older eSIM/payment posts to the new VPN, Alipay vs WeChat Pay, and arrival checklist articles.
+4. Use Clarity after deployment to check whether users click the new homepage three-page pathway and resource-hub 30-minute path.
+5. Use Search Console after indexing to rewrite titles/descriptions for pages with impressions but weak CTR.

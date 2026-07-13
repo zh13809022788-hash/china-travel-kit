@@ -30,3 +30,18 @@ Date: 2026-07-12
 - Review GSC after deployment for canonical consolidation between non-www and www.
 - Add last-updated metadata distinct from publish date when articles receive substantive updates.
 - Consider hand-curated related links for the top 10 traffic pages after search data is available.
+
+## 2026-07-14 Update
+
+- Kept today's work scoped to ChinaTripBox only.
+- Added a homepage "If you only read three pages" pathway to push new visitors toward the highest-intent setup, payment, and train guides.
+- Added an "If you only have 30 minutes" group to `/resources/` for users who need a fast pre-departure reading path.
+- Added a dedicated `/affiliate-disclosure/` page and linked it from the footer and `llms.txt`.
+- Verification passed: `npm.cmd run check:content` and `npm.cmd run build`; Astro generated 67 pages.
+- Added `docs/GROWTH_PLAN_30_DAYS.md` with a 30-day publishing queue, measurement routine, and internal-link targets.
+- Published three high-intent posts:
+  - `/posts/alipay-vs-wechat-pay-foreigners/`
+  - `/posts/first-24-hours-in-china-arrival-checklist/`
+  - `/posts/do-you-need-a-vpn-in-china-2026/`
+- Expanded `/tools/payment-checker/` and `/tools/visa-free-checker/` with SEO support copy, risk tables/checklists, and next-step links.
+- Verification passed again after content expansion: `npm.cmd run check:content` passed for 34 posts and `npm.cmd run build` generated 70 pages.

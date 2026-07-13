@@ -27,3 +27,18 @@ Status: Pipeline Executed Successfully at Mon Jul 13 15:26:09 UTC 2026
 Status: Pipeline Executed Successfully at Mon Jul 13 16:30:11 UTC 2026
 Status: Pipeline Executed Successfully at Mon Jul 13 16:37:16 UTC 2026
 Status: Pipeline Executed Successfully at Mon Jul 13 17:19:39 UTC 2026
+
+## 2026-07-14 Codex Update
+
+- ChinaTripBox-only pass: improved homepage and resources pathways for high-intent first-time visitors.
+- Added `/affiliate-disclosure/` and footer/llms.txt links for clearer monetization trust signals.
+- `npm.cmd run check:content` passed for 31 posts.
+- `npm.cmd run build` passed; 67 pages generated.
+
+## 2026-07-14 Growth Pass
+
+- Added `docs/GROWTH_PLAN_30_DAYS.md` with a 30-day SEO/content queue and weekly measurement checklist.
+- Published 3 high-intent growth posts: Alipay vs WeChat Pay, first 24 hours arrival checklist, and China VPN/internet guide.
+- Expanded `/tools/payment-checker/` and `/tools/visa-free-checker/` into stronger tool landing pages with explanatory SEO copy and internal links.
+- `npm.cmd run check:content` passed for 34 posts.
+- `npm.cmd run build` passed; 70 pages generated.
