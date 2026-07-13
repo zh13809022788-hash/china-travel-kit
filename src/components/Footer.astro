@@ -1,4 +1,6 @@
 ---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
 const year = new Date().getFullYear();
 const legalLinks = [
   { href: '/travel-help/', label: 'Travel Help' },
@@ -10,6 +12,29 @@ const legalLinks = [
   { href: '/privacy/', label: 'Privacy Policy' },
   { href: '/terms/', label: 'Terms' },
 ];
+
+// Detect current locale from URL path
+const pathname = Astro.url.pathname;
+const currentLocale = pathname.startsWith('/zh-tw/') ? 'zh-TW'
+  : pathname.startsWith('/ja/') ? 'ja'
+  : pathname.startsWith('/ko/') ? 'ko'
+  : 'en';
+
+// Build alternate paths for the same page in other languages
+function swapLocale(path: string, to: string): string {
+  // Strip current locale prefix
+  let base = path;
+  if (base.startsWith('/zh-tw/')) base = base.slice(6);
+  else if (base.startsWith('/ja/')) base = base.slice(3);
+  else if (base.startsWith('/ko/')) base = base.slice(3);
+  if (to === 'en') return base;
+  return `/${to === 'zh-TW' ? 'zh-tw' : to}${base}`;
+}
+
+const enPath = currentLocale !== 'en' ? swapLocale(pathname, 'en') : undefined;
+const zhTwPath = currentLocale !== 'zh-TW' ? swapLocale(pathname, 'zh-TW') : undefined;
+const jaPath = currentLocale !== 'ja' ? swapLocale(pathname, 'ja') : undefined;
+const koPath = currentLocale !== 'ko' ? swapLocale(pathname, 'ko') : undefined;
 ---
 
 <footer class="mt-auto border-t border-gray-200 bg-gray-50">
@@ -38,8 +63,9 @@ const legalLinks = [
         ))}
       </ul>
     </div>
-    <div class="mt-8 border-t border-gray-200 pt-6 text-sm text-gray-500">
-      &copy; {year} ChinaTripBox. All rights reserved.
+    <div class="mt-8 border-t border-gray-200 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <span class="text-sm text-gray-500">&copy; {year} ChinaTripBox. All rights reserved.</span>
+      <LanguageSwitcher currentLocale={currentLocale} enPath={enPath} zhTwPath={zhTwPath} jaPath={jaPath} koPath={koPath} />
     </div>
   </div>
 </footer>

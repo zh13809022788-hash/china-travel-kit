@@ -46,20 +46,20 @@ const koPath = alternates?.ko ?? (isHome ? '/ko/' : undefined);
 ---
 
 <header class="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur">
-  <nav class="container-page flex h-16 items-center justify-between">
-    <a href={homePath} class="flex items-center gap-2 font-bold text-gray-900 hover:no-underline">
+  <nav class="container-page flex h-16 items-center justify-between gap-3">
+    <a href={homePath} class="flex shrink-0 items-center gap-2 font-bold text-gray-900 hover:no-underline">
       <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">CT</span>
-      <span class="text-lg">ChinaTripBox</span>
+      <span class="hidden text-lg sm:inline">ChinaTripBox</span>
     </a>
 
     <!-- Desktop nav -->
-    <ul class="hidden items-center gap-4 lg:flex xl:gap-5">
+    <ul class="hidden items-center gap-3 lg:flex xl:gap-4">
       {navLinks.map((link) => (
         <li>
           <a
             href={link.href}
             class:list={[
-              'text-sm font-medium transition-colors hover:text-brand-600 hover:no-underline',
+              'text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline',
               isActive(link.href) ? 'text-brand-600' : 'text-gray-700',
             ]}
           >
@@ -69,31 +69,29 @@ const koPath = alternates?.ko ?? (isHome ? '/ko/' : undefined);
       ))}
     </ul>
 
-    <div class="hidden lg:block">
+    <!-- Right side: language + hamburger -->
+    <div class="flex items-center gap-2">
       <LanguageSwitcher currentLocale={locale} enPath={enPath} zhTwPath={zhTwPath} jaPath={jaPath} koPath={koPath} />
-    </div>
 
-    <!-- Mobile hamburger -->
-    <button
-      id="menu-toggle"
-      class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 lg:hidden"
-      aria-label="Toggle navigation menu"
-      aria-expanded="false"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
+      <!-- Mobile hamburger -->
+      <button
+        id="menu-toggle"
+        class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 lg:hidden"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </nav>
 
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden border-t border-gray-200 lg:hidden">
     <div class="container-page py-2">
-      <div class="pb-2">
-        <LanguageSwitcher currentLocale={locale} enPath={enPath} zhTwPath={zhTwPath} jaPath={jaPath} koPath={koPath} />
-      </div>
     <ul class="flex flex-col">
       {[...navLinks, ...secondaryLinks].map((link) => (
         <li>
