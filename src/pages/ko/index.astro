@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/images/city-shanghai.jpg';
+
+const posts = await getCollection('posts-ko');
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categoryLabels: Record<string, string> = {
+  payment: '결제',
+  esim: 'eSIM·인터넷',
+  transport: '교통',
+  essentials: '여행 준비',
+  food: '음식',
+};
+---
+
+<BaseLayout
+  title="ChinaTripBox 한국어 가이드 | 중국 여행 결제·통신·교통"
+  description="중국을 방문하는 한국인 여행객을 위한 실용 가이드: Alipay, WeChat Pay, eSIM, 고속철도, DiDi, 비자부터 도착 후 준비까지."
+  locale="ko"
+  alternates={{ en: '/', 'zh-TW': '/zh-tw/', ko: '/ko/' }}
+>
+  <Header locale="ko" />
+  <main>
+    <section class="border-b border-gray-200 bg-gray-50">
+      <div class="container-page grid gap-8 py-12 lg:grid-cols-[1fr_360px] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wide text-brand-700">ChinaTripBox 한국어</p>
+          <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+            중국 여행 전에 결제·통신·교통·입국 준비를 완료하세요
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+            한국인 여행객을 위한 중국 여행 실용 가이드입니다. Alipay, WeChat Pay, eSIM, 고속철도, DiDi 등 가장 막히기 쉬운 부분을 미리 해결하세요.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/ko/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">결제 가이드 보기</a>
+            <a href="/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">출발 전 체크리스트</a>
+          </div>
+        </div>
+
+        <aside class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+          <Image
+            src={heroImage}
+            alt="상하이 도시 스카이라인, 중국 여행 계획 이미지"
+            widths={[360, 720]}
+            sizes="(max-width: 1024px) 100vw, 360px"
+            quality={65}
+            loading="eager"
+            class="h-52 w-full object-cover"
+          />
+          <div class="p-5">
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">추천 읽기 순서</p>
+            <h2 class="mt-2 text-lg font-bold text-gray-950">도착 첫날 필요한 것부터 시작하세요</h2>
+            <p class="mt-2 text-sm leading-6 text-gray-600">
+              결제, 통신, 택시, 기차표 네 가지가 사전 준비 가치가 가장 높습니다.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="container-page py-10">
+      <AdSlot format="banner" />
+
+      <section class="py-8">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">최신 한국어 가이드</p>
+            <h2>중국 여행 실용 기사</h2>
+          </div>
+          <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">영어 버전으로</a>
+        </div>
+
+        <div class="mt-6 divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white">
+          {sortedPosts.map((post) => (
+            <a href={`/ko/posts/${post.slug}/`} class="group block p-5 hover:bg-gray-50 hover:no-underline">
+              <div class="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-brand-700">
+                <span>{categoryLabels[post.data.category] ?? post.data.category}</span>
+                <span class="text-gray-300">/</span>
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {post.data.pubDate.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </div>
+              <h3 class="mt-2 text-lg font-bold text-gray-950 group-hover:text-brand-700">{post.data.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <AdSlot format="banner" />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

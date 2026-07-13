@@ -21,10 +21,12 @@ export interface Props {
   cover?: string;
   coverAlt?: string;
   related?: RelatedItem[];
-  locale?: 'en' | 'zh-TW';
+  locale?: 'en' | 'zh-TW' | 'ja' | 'ko';
   alternates?: {
     en?: string;
     'zh-TW'?: string;
+    ja?: string;
+    ko?: string;
   };
   affiliate?: {
     title: string;
@@ -56,11 +58,11 @@ const author = {
 };
 
 const categoryLabels: Record<string, string> = {
-  payment: locale === 'zh-TW' ? '付款' : 'Payment',
-  esim: 'eSIM',
-  transport: locale === 'zh-TW' ? '交通' : 'Transport',
-  essentials: locale === 'zh-TW' ? '行前準備' : 'Trip Planning',
-  food: locale === 'zh-TW' ? '美食與用餐' : 'Food & Dining',
+  payment: locale === 'zh-TW' ? '付款' : locale === 'ja' ? '決済' : locale === 'ko' ? '결제' : 'Payment',
+  esim: locale === 'zh-TW' ? 'eSIM 與網路' : locale === 'ja' ? 'eSIM・通信' : locale === 'ko' ? 'eSIM・인터넷' : 'eSIM',
+  transport: locale === 'zh-TW' ? '交通' : locale === 'ja' ? '交通' : locale === 'ko' ? '교통' : 'Transport',
+  essentials: locale === 'zh-TW' ? '行前準備' : locale === 'ja' ? '旅行準備' : locale === 'ko' ? '여행 준비' : 'Trip Planning',
+  food: locale === 'zh-TW' ? '美食與用餐' : locale === 'ja' ? 'グルメ' : locale === 'ko' ? '음식' : 'Food & Dining',
 };
 
 const categoryPaths: Record<string, string> = {
@@ -116,7 +118,7 @@ const faqJsonLd =
 
 const jsonLd = faqJsonLd ? [articleJsonLd, faqJsonLd] : articleJsonLd;
 
-const formattedDate = pubDate.toLocaleDateString(locale === 'zh-TW' ? 'zh-TW' : 'en-US', {
+const formattedDate = pubDate.toLocaleDateString(locale === 'zh-TW' ? 'zh-TW' : locale === 'ja' ? 'ja-JP' : locale === 'ko' ? 'ko-KR' : 'en-US', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
@@ -134,7 +136,7 @@ const formattedDate = pubDate.toLocaleDateString(locale === 'zh-TW' ? 'zh-TW' : 
       <header class="mb-8">
         <Breadcrumbs
           items={[
-            { label: locale === 'zh-TW' ? '首頁' : 'Home', href: locale === 'zh-TW' ? '/zh-tw/' : '/' },
+            { label: locale === 'zh-TW' ? '首頁' : locale === 'ja' ? 'ホーム' : locale === 'ko' ? '홈' : 'Home', href: locale === 'zh-TW' ? '/zh-tw/' : locale === 'ja' ? '/ja/' : locale === 'ko' ? '/ko/' : '/' },
             { label: categoryLabels[category] ?? category, href: categoryPaths[category] ?? '/' },
             { label: title },
           ]}
@@ -146,7 +148,7 @@ const formattedDate = pubDate.toLocaleDateString(locale === 'zh-TW' ? 'zh-TW' : 
         <p class="mt-3 text-lg text-gray-600">{description}</p>
         <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-500">
           <time datetime={pubDate.toISOString()}>{formattedDate}</time>
-          <span>{locale === 'zh-TW' ? '作者：' : 'By '}<a href="/authors/chinatripbox-editorial-team/" class="font-medium text-gray-700 hover:text-brand-600">ChinaTripBox Editorial Team</a></span>
+          <span>{locale === 'zh-TW' ? '作者：' : locale === 'ja' ? '著者：' : locale === 'ko' ? '작성자: ' : 'By '}<a href="/authors/chinatripbox-editorial-team/" class="font-medium text-gray-700 hover:text-brand-600">ChinaTripBox Editorial Team</a></span>
           {tags.length > 0 && (
             <span class="flex flex-wrap gap-2">
               {tags.map((tag) => (
@@ -169,14 +171,18 @@ const formattedDate = pubDate.toLocaleDateString(locale === 'zh-TW' ? 'zh-TW' : 
       {/* 5. FAQ module */}
       <FaqSection items={faqs} />
 
-      <RelatedReading items={related} title={locale === 'zh-TW' ? '下一步推薦閱讀' : 'Recommended next steps'} />
+      <RelatedReading items={related} title={locale === 'zh-TW' ? '下一步推薦閱讀' : locale === 'ja' ? 'おすすめの関連記事' : locale === 'ko' ? '추천 다음 읽을거리' : 'Recommended next steps'} />
 
       <p class="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-600">
         {locale === 'zh-TW'
           ? '發現內容過時或有誤？請附上頁面網址 '
+          : locale === 'ja'
+          ? '情報が古い、または誤りがありましたら、ページURLとともに '
+          : locale === 'ko'
+          ? '내용이 오래되었거나 잘못된 부분이 있으면 페이지 URL과 함께 '
           : 'Found something outdated or incorrect? Please '}
-        <a href="/contact/" class="font-semibold">{locale === 'zh-TW' ? '回報修正' : 'send a correction'}</a>
-        {locale === 'zh-TW' ? '，我們會盡快檢查。' : ' with the page URL so we can review it.'}
+        <a href="/contact/" class="font-semibold">{locale === 'zh-TW' ? '回報修正' : locale === 'ja' ? 'お知らせください' : locale === 'ko' ? '알려주세요' : 'send a correction'}</a>
+        {locale === 'zh-TW' ? '，我們會盡快檢查。' : locale === 'ja' ? ' をお送りください。確認いたします。' : locale === 'ko' ? '. 확인 후 수정하겠습니다.' : ' with the page URL so we can review it.'}
       </p>
 
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

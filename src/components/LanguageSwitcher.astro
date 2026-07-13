@@ -1,14 +1,18 @@
 ---
 export interface Props {
-  currentLocale: 'en' | 'zh-TW';
+  currentLocale: 'en' | 'zh-TW' | 'ja' | 'ko';
   enPath?: string;
   zhTwPath?: string;
+  jaPath?: string;
+  koPath?: string;
 }
 
-const { currentLocale, enPath, zhTwPath } = Astro.props;
+const { currentLocale, enPath, zhTwPath, jaPath, koPath } = Astro.props;
 const options = [
   { locale: 'en', label: 'English', path: enPath },
   { locale: 'zh-TW', label: '繁體中文', path: zhTwPath },
+  { locale: 'ja', label: '日本語', path: jaPath },
+  { locale: 'ko', label: '한국어', path: koPath },
 ] as const;
 
 const visibleOptions = options.filter((option) => option.path);

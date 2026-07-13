@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/images/city-shanghai.jpg';
+
+const posts = await getCollection('posts-ja');
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categoryLabels: Record<string, string> = {
+  payment: '決済',
+  esim: 'eSIM・通信',
+  transport: '交通',
+  essentials: '旅行準備',
+  food: 'グルメ',
+};
+---
+
+<BaseLayout
+  title="ChinaTripBox 日本語ガイド | 中国旅行の決済・通信・交通"
+  description="中国を訪れる日本人旅行者向けの実用ガイド：Alipay、WeChat Pay、eSIM、高速鉄道、DiDi、ビザから到着後の準備まで。"
+  locale="ja"
+  alternates={{ en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/' }}
+>
+  <Header locale="ja" />
+  <main>
+    <section class="border-b border-gray-200 bg-gray-50">
+      <div class="container-page grid gap-8 py-12 lg:grid-cols-[1fr_360px] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wide text-brand-700">ChinaTripBox 日本語</p>
+          <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+            中国旅行前に決済・通信・交通・入国準備を整える
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+            日本人旅行者向けの中国旅行実用ガイド。Alipay、WeChat Pay、eSIM、高速鉄道、DiDiなど、つまずきやすいポイントを事前に解決しましょう。
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/ja/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">決済ガイドを見る</a>
+            <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">出発前チェックリスト</a>
+          </div>
+        </div>
+
+        <aside class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+          <Image
+            src={heroImage}
+            alt="上海の都市スカイライン、中国旅行計画のイメージ"
+            widths={[360, 720]}
+            sizes="(max-width: 1024px) 100vw, 360px"
+            quality={65}
+            loading="eager"
+            class="h-52 w-full object-cover"
+          />
+          <div class="p-5">
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">おすすめの読む順番</p>
+            <h2 class="mt-2 text-lg font-bold text-gray-950">到着初日に必要なことから始める</h2>
+            <p class="mt-2 text-sm leading-6 text-gray-600">
+              決済、通信、タクシー、鉄道チケットの4つが、事前準備の価値が最も高い項目です。
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="container-page py-10">
+      <AdSlot format="banner" />
+
+      <section class="py-8">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">最新日本語ガイド</p>
+            <h2>中国旅行の実用記事</h2>
+          </div>
+          <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">英語版へ</a>
+        </div>
+
+        <div class="mt-6 divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white">
+          {sortedPosts.map((post) => (
+            <a href={`/ja/posts/${post.slug}/`} class="group block p-5 hover:bg-gray-50 hover:no-underline">
+              <div class="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-brand-700">
+                <span>{categoryLabels[post.data.category] ?? post.data.category}</span>
+                <span class="text-gray-300">/</span>
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {post.data.pubDate.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </div>
+              <h3 class="mt-2 text-lg font-bold text-gray-950 group-hover:text-brand-700">{post.data.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <AdSlot format="banner" />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

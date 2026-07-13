@@ -10,14 +10,13 @@ export default defineConfig({
   output: 'static',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-TW'],
+    locales: ['en', 'zh-TW', 'ja', 'ko'],
     routing: {
       prefixDefaultLocale: false,
     },
   },
   integrations: [
     tailwind({
-      // We provide our own base styles in src/styles/global.css
       applyBaseStyles: false,
     }),
     sitemap({
@@ -26,6 +25,8 @@ export default defineConfig({
         locales: {
           en: 'en-US',
           'zh-TW': 'zh-TW',
+          ja: 'ja-JP',
+          ko: 'ko-KR',
         },
       },
     }),

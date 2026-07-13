@@ -8,10 +8,12 @@ export interface Props {
   image?: string;
   type?: string;
   noindex?: boolean;
-  locale?: 'en' | 'zh-TW';
+  locale?: 'en' | 'zh-TW' | 'ja' | 'ko';
   alternates?: {
     en?: string;
     'zh-TW'?: string;
+    ja?: string;
+    ko?: string;
   };
 }
 
@@ -29,10 +31,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
 const siteName = 'ChinaTripBox';
 const siteURL = new URL('/', Astro.site).toString();
-const htmlLang = locale === 'zh-TW' ? 'zh-TW' : 'en';
+const htmlLang = locale === 'zh-TW' ? 'zh-TW' : locale === 'ja' ? 'ja' : locale === 'ko' ? 'ko' : 'en';
 const enAlternate = alternates?.en ? new URL(alternates.en, Astro.site).toString() : null;
 const zhTwAlternate = alternates?.['zh-TW'] ? new URL(alternates['zh-TW'], Astro.site).toString() : null;
-const availableLanguage = locale === 'zh-TW' ? ['zh-TW', 'en'] : ['en', 'zh-TW'];
+const jaAlternate = alternates?.ja ? new URL(alternates.ja, Astro.site).toString() : null;
+const koAlternate = alternates?.ko ? new URL(alternates.ko, Astro.site).toString() : null;
+const availableLanguage = locale === 'zh-TW' ? ['zh-TW', 'en'] : locale === 'ja' ? ['ja', 'en'] : locale === 'ko' ? ['ko', 'en'] : ['en', 'zh-TW', 'ja', 'ko'];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -127,6 +131,8 @@ const jsonLd = {
     <link rel="canonical" href={canonicalURL} />
     {enAlternate && <link rel="alternate" hreflang="en" href={enAlternate} />}
     {zhTwAlternate && <link rel="alternate" hreflang="zh-TW" href={zhTwAlternate} />}
+    {jaAlternate && <link rel="alternate" hreflang="ja" href={jaAlternate} />}
+    {koAlternate && <link rel="alternate" hreflang="ko" href={koAlternate} />}
     {enAlternate && <link rel="alternate" hreflang="x-default" href={enAlternate} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 

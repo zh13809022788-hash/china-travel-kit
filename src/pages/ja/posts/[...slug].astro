@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPost from '../../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts-ja');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { data } = post;
+
+const affiliateByCategory: Record<string, { title: string; description: string; buttonText: string }> = {
+  payment: {
+    title: '事前の決済設定',
+    description: 'AlipayとWeChat Payで使える旅行用カードを準備すれば、中国到着後も安心です。',
+    buttonText: '設定を始める',
+  },
+  esim: {
+    title: 'おすすめの中国eSIM',
+    description: '空港で並ぶ必要なし。出発前に高速データ通信を有効化しましょう。',
+    buttonText: 'プランを見る',
+  },
+  transport: {
+    title: '鉄道・送迎を簡単予約',
+    description: '英語で高速鉄道チケットと空港送迎を予約すれば、コミュニケーションの不安を減らせます。',
+    buttonText: '予約する',
+  },
+};
+
+const affiliate = affiliateByCategory[data.category];
+const allPosts = await getCollection('posts-ja');
+const related = allPosts
+  .filter((candidate) => candidate.slug !== post.slug)
+  .map((candidate) => {
+    const sharedTags = candidate.data.tags.filter((tag) => data.tags.includes(tag)).length;
+    const categoryMatch = candidate.data.category === data.category ? 2 : 0;
+    const cityMatch =
+      ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya'].some(
+        (city) => post.slug.includes(city) && candidate.slug.includes(city)
+      )
+        ? 3
+        : 0;
+    return { candidate, score: sharedTags + categoryMatch + cityMatch };
+  })
+  .filter((item) => item.score > 0)
+  .sort((a, b) => b.score - a.score || b.candidate.data.pubDate.valueOf() - a.candidate.data.pubDate.valueOf())
+  .slice(0, 4)
+  .map(({ candidate }) => ({
+    title: candidate.data.title,
+    description: candidate.data.description,
+    href: `/ja/posts/${candidate.slug}/`,
+  }));
+---
+
+<BlogPost
+  title={data.title}
+  description={data.description}
+  pubDate={data.pubDate}
+  category={data.category}
+  tags={data.tags}
+  faqs={data.faqs}
+  cover={data.cover}
+  coverAlt={data.coverAlt}
+  related={related}
+  locale="ja"
+  alternates={{ en: `/posts/${post.slug}/`, ja: `/ja/posts/${post.slug}/` }}
+  affiliate={affiliate}
+>
+  <Content />
+</BlogPost>
