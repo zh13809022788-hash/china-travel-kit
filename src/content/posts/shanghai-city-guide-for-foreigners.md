@@ -51,6 +51,32 @@ Shanghai's food scene runs from soup dumplings (xiaolongbao) and street breakfas
 
 Shanghai is the gateway to the Yangtze Delta's water towns — Zhujiajiao is the closest, reachable by metro and bus — and high-speed rail puts Hangzhou and Suzhou within about an hour, making both easy day trips or overnight extensions.
 
+## Best For
+
+Shanghai is the best Chinese city for travelers who want a soft landing. It is ideal for first-time visitors, business travelers, families, and anyone anxious about language barriers because the metro, airports, hotels, malls, and many restaurants are easier to navigate than in most other cities. It is also the strongest base for longer stays if you want international schools, coworking spaces, familiar services, and a broad foreign community.
+
+The trade-off is that Shanghai can feel less traditionally Chinese on the surface than Beijing, Xi'an, or Chengdu. The city rewards neighborhood walking, food, galleries, cafes, and side trips more than a checklist of ancient monuments. If you want imperial history, pair it with Beijing; if you want scenery and tea culture, add Hangzhou by high-speed rail.
+
+## Suggested Itinerary
+
+For a **three-day Shanghai trip**, start with the Bund, Nanjing Road, People's Square, and an evening skyline view. Use day two for the former French Concession, Xintiandi, a museum or gallery, and a dinner reservation. Spend day three in Yu Garden, the old city area, and Pudong's Lujiazui towers, or make a half-day trip to Zhujiajiao if you want a water-town feel without leaving the metro network.
+
+With **five to seven days**, add slower neighborhood time: Jing'an temples and malls, West Bund museums, riverside cycling, cafe-hopping in the former French Concession, and a high-speed rail day trip to Hangzhou or Suzhou. Shanghai works especially well when you avoid over-scheduling and let the city function as a comfortable base.
+
+## Practical Planning Notes
+
+Shanghai has two airports. Pudong is the main international gateway and sits far east of the center; Hongqiao is closer to downtown and integrated with a major train station. Check which airport or rail station you are using before booking hotels or transfers, because cross-city transfers can take longer than expected.
+
+The metro is usually the fastest way to move across town, but late-night returns often require DiDi because many lines stop around 10:30-11 p.m. For payments, Shanghai is one of the easiest places to rely on Alipay or WeChat Pay, though direct foreign-card acceptance is still mostly limited to hotels, luxury retail, and some international restaurants.
+
+Weather affects the experience. Summers are hot and humid, winters are damp and chilly, and spring or autumn are the most comfortable. If rain is forecast, keep museum, mall, cafe, and restaurant plans ready rather than forcing long outdoor walks along the river.
+
+## Read Next
+
+- [Shanghai metro guide](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
+
 ## Summary
 
 Shanghai combines genuine convenience for foreigners with world-class transport, food, and culture. For a short trip it is an effortless introduction to urban China; for a longer stay it is the country's most comfortable landing pad, provided you are prepared for the cost of living.

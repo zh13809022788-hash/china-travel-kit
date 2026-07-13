@@ -1,5 +1,5 @@
 ---
-title: "China High-Speed Rail Guide for Foreigners 2026: Booking, Passport Entry, and Seat Classes"
+title: "China High-Speed Rail Guide for Foreigners: Booking and Seats"
 description: "A complete 2026 guide to riding China's high-speed rail as a foreigner: how to book with the 12306 app, use your passport as a paperless ticket, and choose seat classes."
 pubDate: 2026-07-08
 category: transport
@@ -85,6 +85,12 @@ If the gate doesn't accept your passport scan, head to the staffed window or ask
 If you're worried about finding your way, note that major high-speed stations increasingly display key information in English, and staff can often point you in the right direction. Screenshots of your booking details help if you need to show someone.
 
 If your route is long, consider First Class for the extra comfort, but don't feel you need to, since Second Class is genuinely comfortable. And remember to build in time to reach the station itself, as these stations are sometimes on the edge of a city and take a while to get to.
+
+## Read Next
+
+- [booking China train tickets on 12306](/posts/book-china-train-tickets-12306-foreigners/)
+- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
+- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## Summary
 

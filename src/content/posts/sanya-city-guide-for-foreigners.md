@@ -49,6 +49,34 @@ As across China, set up mobile payment before you arrive — Alipay or WeChat Pa
 
 Seafood is Sanya's specialty — pick fresh catch at a seafood market or restaurant and have it cooked to order. Hainanese specialties like Wenchang chicken and tropical fruits round out the local table. Resort areas offer international options, and delivery apps with in-app translation make ordering easy.
 
+## Best For
+
+Sanya is best for travelers who want a beach break inside China, especially in winter. It suits families, couples, resort travelers, retirees, remote workers escaping cold weather, and anyone who wants seafood and tropical scenery after a mainland city trip. It is also useful for longer seasonal stays because apartment rentals and resort packages can be competitive outside the busiest holiday peaks.
+
+It is less suitable if you expect Southeast Asia-style backpacker infrastructure, widespread English, or dense public transport. Sanya tourism is heavily domestic, so resorts are easier than independent local travel for non-Chinese speakers. You can still manage with translation apps and DiDi, but plan more carefully than you would in Shanghai.
+
+## Suggested Itinerary
+
+For a **three-day Sanya trip**, choose one base rather than moving hotels. Spend day one settling into Dadonghai, Yalong Bay, or Sanya Bay and learning the local transport pattern. Use day two for your best beach or island excursion, and reserve day three for seafood, a viewpoint, a spa, or a relaxed resort day. The point of Sanya is not to overfill the schedule.
+
+With **five to seven days**, split time between beach rest and a few outings: Wuzhizhou Island, Nanshan cultural area, Yanoda rainforest, local seafood markets, and different bays. Longer winter stays should include practical routines: nearby supermarkets, reliable food delivery, a preferred DiDi pickup point, and a backup indoor plan for rainy days.
+
+## Practical Planning Notes
+
+Choose the bay before choosing the hotel. Dadonghai is convenient and walkable, Yalong Bay is best for resort beaches, Sanya Bay is central and often better value, and Haitang Bay has newer luxury resorts but is farther from the city. A cheap hotel in the wrong bay can cost more in daily transfers than it saves.
+
+Weather and holidays matter more here than in most China city trips. Winter is the prime season, but Chinese New Year can push prices and crowds sharply higher. Summer brings heat, humidity, rain, and possible typhoons, so travel insurance and flexible plans are sensible.
+
+Hainan entry rules can differ from mainland China rules, and policies change. Confirm visa conditions before booking, especially if you plan to continue from Sanya to mainland cities. For daily spending, mobile payment is still the standard, but resorts may also accept foreign cards at front desks and higher-end restaurants.
+
+For longer stays, check the ordinary-life details before committing to an apartment or resort package: nearby supermarkets, pharmacy access, laundry, food delivery coverage, and whether DiDi pickups are easy at the property entrance. A beautiful beach location can feel inconvenient if every meal or errand requires a long ride.
+
+## Read Next
+
+- [season-by-season China packing checklist](/posts/what-to-pack-for-china-a-season-by-season-checklist/)
+- [China visa-free and transit guide](/posts/china-visa-free-entry-transit-guide-2026/)
+- [best time to visit tool](/tools/best-time-to-visit/)
+
 ## Summary
 
 Sanya offers a tropical beach escape unlike anywhere else in China, at its best in the winter months when the weather is warm and dry. For a short trip it is a relaxing change from the mainland's cities; for a long winter stay it is a comfortable, affordable seasonal base — just plan around the summer heat and rains.

@@ -101,3 +101,10 @@ Taxi drivers are required to take cash but often can't break a ¥100 for a short
 Cash in China in 2026 is a dependable backup, not a dead end. It's fully legal, it works almost everywhere that has a human at the counter, and it becomes genuinely important in taxis, rural areas, and anytime your phone or card lets you down.
 
 Set up Alipay or WeChat Pay for everyday ease, then carry roughly 500 to 1,000 RMB weighted toward ¥10 and ¥20 notes. Break your big bills early at a supermarket or the hotel desk, save the small ones for cabs and markets, and keep a little emergency stash apart from the rest. Do that, and you'll rarely be caught out either way.
+
+## Read Next
+
+- [how much cash to bring to China](/posts/how-much-cash-to-bring-to-china/)
+- [tourist payment guide for China](/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay setup with a foreign card](/posts/alipay-foreign-credit-card-step-by-step/)
+

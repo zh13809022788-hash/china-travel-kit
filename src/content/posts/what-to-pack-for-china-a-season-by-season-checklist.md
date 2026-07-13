@@ -92,3 +92,10 @@ Domestic flights enforce luggage limits, trains involve lifting bags onto racks,
 ## Summary
 
 A smart China packing list has two layers: a year-round core (adapter, documents, personal medicines, tissues, a water bottle, and good shoes) and a seasonal wardrobe tuned to your specific cities. Sort your digital essentials, VPN, offline maps, and mobile payments, before you leave home, because they're hard to fix on the ground. Check the climate of your actual route rather than the country as a whole, pack lighter than feels natural, and you'll arrive ready to enjoy the trip instead of scrambling to fill gaps.
+
+## Read Next
+
+- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [best eSIM for China travel](/posts/best-esim-for-china-travel-2026/)
+- [Sanya city guide](/posts/sanya-city-guide-for-foreigners/)
+

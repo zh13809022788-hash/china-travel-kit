@@ -84,6 +84,12 @@ For most trips, splitting spending so that everyday purchases stay small keeps c
 
 Morning: scan a QR to buy breakfast from a street stall (Alipay). Midday: tap through the metro gate with a transit QR inside the app. Afternoon: pay a museum entry fee by scanning their code. Evening: split a restaurant bill with WeChat Pay. Late night: grab a snack from a vending machine with a scan. You may go an entire trip without opening your wallet for physical cash — that is the norm now.
 
+## Read Next
+
+- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [how much cash to bring](/posts/how-much-cash-to-bring-to-china/)
+
 ## Summary
 
 Paying in China as a tourist in 2026 comes down to one core move: **set up Alipay and WeChat Pay with a linked foreign card before you travel.** Carry a physical Visa or Mastercard as a backup for hotels and big stores, and keep a modest cash reserve for the rare gap. Do that, and you'll pay for everything from street food to high-speed rail as smoothly as a local — no Chinese bank account required. Set it up once, test it on arrival, and enjoy a genuinely cashless, frictionless trip.

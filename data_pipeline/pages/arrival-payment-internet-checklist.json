@@ -1,0 +1,44 @@
+{
+  "slug": "arrival-payment-internet-checklist",
+  "title": "China Arrival Payment and Internet Checklist",
+  "description": "A build-time JSON example showing how ChinaTripBox can publish static pages directly from data_pipeline records.",
+  "pubDate": "2026-07-13",
+  "category": "essentials",
+  "tags": ["arrival", "payment", "internet", "data-pipeline"],
+  "featured": false,
+  "summary": [
+    "This page is generated from data_pipeline/pages/arrival-payment-internet-checklist.json at Astro build time.",
+    "Use the same structure for generated guides, city facts, tool landing pages, and other static data products."
+  ],
+  "sections": [
+    {
+      "heading": "Before departure",
+      "body": [
+        "Install Alipay, WeChat, your eSIM app, your airline app, and an offline translation app before you fly.",
+        "Keep a small RMB cash backup plan because wallet verification, bank fraud checks, and roaming problems can all happen during the first day."
+      ],
+      "bullets": [
+        "Verify your payment wallet before leaving home.",
+        "Save your hotel address in English and Chinese.",
+        "Download offline maps or screenshots for the airport-to-hotel route."
+      ]
+    },
+    {
+      "heading": "After landing",
+      "body": [
+        "Turn on your data option first, then test payment with a low-stakes purchase before relying on QR payment for taxis, metro tickets, or restaurants.",
+        "If your wallet fails, use a staffed counter, hotel front desk, or ATM instead of repeatedly trying the same blocked card."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this JSON page rendered dynamically on the server?",
+      "answer": "No. Astro reads the JSON during the build and writes a normal static HTML page into dist."
+    },
+    {
+      "question": "Can data_pipeline generate many pages this way?",
+      "answer": "Yes. Add more JSON files under data_pipeline/pages and Astro will include them in getStaticPaths during the next build."
+    }
+  ]
+}

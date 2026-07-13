@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -7,7 +7,9 @@ import AffiliateCta from '../../components/AffiliateCta.astro';
 
 const title = 'China Visa-Free & Transit Checker';
 const description =
-  'Check whether you can enter China visa-free, use 240-hour transit without a visa, or need to apply — based on your nationality and trip type.';
+  'Check whether you can enter China visa-free, use 240-hour transit without a visa, or need to apply based on your nationality and trip type.';
+
+const lastReviewed = 'July 13, 2026';
 
 // Representative policy data for 2026. This is guidance, not legal advice;
 // travelers must confirm with an embassy before booking.
@@ -26,6 +28,9 @@ const countries = [
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Visa-Free & Transit Checker</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
+      <p class="mt-3 text-sm text-gray-500">
+        Last reviewed: {lastReviewed}. This checker is a planning aid, not an official eligibility decision.
+      </p>
     </header>
 
     <AdSlot format="banner" />
@@ -66,6 +71,19 @@ const countries = [
         placeholder="#AFFILIATE_TRAVEL"
       />
     </div>
+
+    <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="official-sources">
+      <h2 id="official-sources" class="text-xl font-bold text-gray-950">Official sources to verify before booking</h2>
+      <p class="mt-2 text-sm leading-6 text-gray-600">
+        Visa-free country lists, entry ports, permitted travel areas, and airline boarding checks can change.
+        Treat official government and airline rules as final.
+      </p>
+      <ul class="mt-4 grid gap-2 text-sm leading-6 text-gray-700">
+        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">National Immigration Administration</a> for border inspection and transit exemption updates.</li>
+        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">State Council information portal</a> for English-language policy announcements.</li>
+        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministry of Foreign Affairs</a> and Chinese embassy or consulate websites for passport-specific rules.</li>
+      </ul>
+    </section>
   </main>
   <Footer />
 </BaseLayout>
@@ -108,7 +126,7 @@ const countries = [
           points: [
             'You must hold a confirmed onward ticket to a third country or region within 240 hours.',
             'Entry and exit must be through designated transit ports (most major international airports qualify).',
-            'You are usually limited to the province/region of entry — check the specific port rules.',
+            'You are usually limited to the province/region of entry - check the specific port rules.',
           ],
         };
       }
@@ -132,18 +150,18 @@ const countries = [
         points: [
           'Your passport should be valid for at least 6 months with blank pages.',
           'Have proof of onward/return travel and accommodation ready for immigration.',
-          'The 30 days is per entry — confirm the latest count before you book.',
+          'The 30 days is per entry - confirm the latest count before you book.',
         ],
       };
     }
     if (hasTransit) {
       return {
         tone: 'info',
-        heading: 'A visa is likely required — but transit exemption may help',
+        heading: 'A visa is likely required - but transit exemption may help',
         body: `${country} is not on our 30-day visa-free list for tourism/business, so a visa is generally required. However, if you are passing through to a third country, you may use the 240-hour visa-free transit instead.`,
         points: [
           'For a dedicated visit, apply for an L (tourist) or M (business) visa in advance.',
-          'For a stopover en route elsewhere, you may qualify for 240-hour transit — switch "Trip type" to Transit to check.',
+          'For a stopover en route elsewhere, you may qualify for 240-hour transit - switch "Trip type" to Transit to check.',
         ],
       };
     }
@@ -195,3 +213,4 @@ const countries = [
     result.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 </script>
+

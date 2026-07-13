@@ -120,6 +120,12 @@ A few common snags and how to handle them:
 
 For anything the app cannot solve, Didi offers English-language in-app support through the help section, where you can report issues, recover lost items, or dispute a fare.
 
+## Read Next
+
+- [airport to city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Show to Driver tool](/tools/show-to-driver/)
+- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+
 ## Summary
 
 Didi turns one of the hardest parts of travel in China into one of the easiest. By booking through the standalone DiDi app or, more simply, the Didi mini-program inside Alipay or WeChat, foreign tourists get an English interface, upfront fares, and automatic payment from a linked international card. Enter your pickup and destination in English, check the map pins, pick a ride tier, and confirm the plate before you climb in. Lean on the in-app translation for any communication, use the trip-sharing and SOS safety features on longer rides, and remember that fares rise during surge periods. Set up your wallet and app before you land, and you will step off the plane ready to get anywhere in the city without speaking a word of Chinese.

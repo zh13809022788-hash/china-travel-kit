@@ -92,6 +92,12 @@ Troubleshooting common problems:
 
 If a charge appears stuck, check the transaction record under Wallet before retrying, so you do not accidentally pay twice.
 
+## Read Next
+
+- [link a foreign Visa or Mastercard to WeChat Pay](/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/)
+- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
+- [China tourist payment guide](/posts/how-to-pay-in-china-tourist-guide/)
+
 ## Summary
 
 WeChat Pay has become genuinely accessible to foreign visitors, and setting it up is the single most useful thing you can do to travel smoothly in China. The path is straightforward: install WeChat, register with your phone number, open the Wallet, link a supported international card, verify your identity with your passport, and test a small payment. Remember that WeChat and WeChat Pay are one app, not two, and that the payment tools live under the Me tab.

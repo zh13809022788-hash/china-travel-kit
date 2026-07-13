@@ -52,6 +52,34 @@ As across China, set up mobile payment before arrival: Alipay or WeChat Pay link
 
 Chengdu is the springboard for western China: Leshan's giant riverside Buddha and Mount Emei are easy trips, and the city is a common staging point for journeys toward Jiuzhaigou and Tibetan Sichuan. High-speed rail links it to the wider national network.
 
+## Best For
+
+Chengdu is best for travelers who want food, atmosphere, and a slower rhythm rather than nonstop sightseeing. It is a strong choice for repeat visitors to China, food-focused travelers, remote workers comparing lower-cost bases, and anyone who wants to combine a major city with western China side trips. The city feels more relaxed than Beijing or Shanghai while still offering modern metro lines, malls, cafes, hospitals, and a growing international community.
+
+It is less ideal if you dislike spicy food, humid summers, or smoky restaurant environments, though all three can be managed. Non-spicy dishes exist, hotel and mall dining is easy, and the metro handles most daily movement. English is limited compared with Shanghai, so translation apps matter more, especially in local restaurants and markets.
+
+## Suggested Itinerary
+
+For a **two- or three-day Chengdu trip**, go to the panda base at opening time on day one, then spend the afternoon at Wenshu Monastery or People's Park for tea. Use the evening for hotpot or a milder Sichuan dinner. On day two, explore Kuanzhai Alley, Jinli, or a museum, then leave space for snacks and teahouse time. A third day can be used for Leshan Giant Buddha, a food tour, or a slower neighborhood day.
+
+With **five days or more**, Chengdu becomes a base rather than a checklist. Add Mount Qingcheng, Dujiangyan, Leshan, or Emei depending on your energy and season. Longer stays also let you explore cafes, parks, and smaller restaurants without turning every meal into a planned event.
+
+## Practical Planning Notes
+
+Visit the panda base early. The animals are most active in the morning, crowds build quickly, and midday heat often sends pandas indoors or to sleep. For hotpot, choose a split pot if you are uncertain about spice, and ask hotel staff or a translation app to write down mild preferences before you go.
+
+Chengdu is a good rail hub, but western Sichuan trips can involve long drives, altitude, and changing weather. Do not assume every mountain or Tibetan-area destination is a casual day trip. For ordinary city movement, the metro plus DiDi is enough; for late dinners, ride-hailing is often easier than finding the nearest station.
+
+Costs are one of Chengdu's advantages. Hotels, food, and daily services are usually much cheaper than Shanghai, making the city attractive for longer stays. The main compromise is language coverage and fewer international services, so prepare your payment, maps, and translation setup before arrival.
+
+For accommodation, first-time visitors usually do best near Tianfu Square, Chunxi Road, or a metro-connected area inside the main ring. Food travelers may prefer neighborhoods with easy restaurant access over resort-style hotels. If you plan several day trips, choose a base that keeps rides to rail stations simple.
+
+## Read Next
+
+- [Chengdu street food guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [ordering food without Chinese](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+
 ## Summary
 
 Chengdu delivers a rare combination — unique attractions, world-famous food, a laid-back culture, and low costs — that makes it a standout for both short visits and longer stays. For foreigners seeking big-city amenities without big-city intensity or prices, it is one of China's most appealing bases.

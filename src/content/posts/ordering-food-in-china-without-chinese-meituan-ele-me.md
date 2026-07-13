@@ -103,3 +103,10 @@ Many restaurants set a minimum spend (起送价). Add a drink or side to clear i
 ## Final Tips
 
 Get the setup done on your first calm evening, not when you're starving. Link both Alipay and WeChat Pay, save your hotel address in Chinese, and test with one small order so you learn the flow with low stakes. Lean on the **Alipay mini-program** whenever the standalone apps fight you, keep a courier note in Chinese saved for reuse, and default to **Meituan** for the widest choice with **Ele.me** as your backup. With those pieces in place, ordering food in China without Chinese goes from a daily obstacle to a genuine travel superpower.
+
+## Read Next
+
+- [Chengdu street food guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [Chengdu city guide](/posts/chengdu-city-guide-for-foreigners/)
+- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+

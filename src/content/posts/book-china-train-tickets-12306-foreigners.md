@@ -99,6 +99,12 @@ The trade-off is a **small service or convenience fee per ticket** on top of the
 - **Passport will not scan at the gate.** Use the manual lane and show staff your passport and booking. This is expected for foreign documents.
 - **Name mismatch.** The name on your booking must match your passport exactly. If it does not, correct it before travel to avoid boarding trouble.
 
+## Read Next
+
+- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [airport and city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+
 ## Summary
 
 Booking China's trains as a foreigner in 2026 is far easier than its reputation suggests. Download the official 12306 international app, register and verify your passport a few days before you travel, then search, pick a seat class, and pay with a foreign card or a linked mobile wallet. Your ticket is a paperless e-ticket tied to your passport, so at the station you simply clear security, present your passport at the manual gate, and board. If you prefer a smoother English experience, Trip.com or China Highlights sell the same tickets for a small fee. Set up your account early, arrive at the station with time to spare, and you will glide across China on some of the best trains in the world.

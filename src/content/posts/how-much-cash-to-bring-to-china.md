@@ -68,6 +68,12 @@ There are legal thresholds for carrying money across the border. You must declar
 
 For an ordinary tourist trip, you'll be comfortably below both limits, so this rarely comes up. But if you're planning to carry a substantial amount of cash for any reason, stay under these thresholds or be prepared to declare, and keep exchange receipts for larger amounts in case you want to convert leftover yuan back on departure.
 
+## Read Next
+
+- [cash in China for foreigners](/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/)
+- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [foreign credit card acceptance in China](/posts/use-foreign-credit-card-in-china-directly/)
+
 ## Summary
 
 Cash in China is a backup, not your wallet's main event. For a week-long trip, 1,000 to 2,000 RMB in small and medium notes gives you a comfortable buffer for the small vendors, temples, and occasional taxis where mobile pay falls short, plus insurance if your wallet app fails. Lean on Alipay or WeChat Pay for everyday spending, withdraw yuan as needed from Bank of China or ICBC ATMs while always choosing to be charged in yuan, and don't over-exchange upfront. Keep the customs limits of USD 5,000 and 20,000 RMB in mind only if you're carrying a lot. Get this balance right and you'll never be caught short, or stuck holding a wad of yuan you can't spend.

@@ -119,3 +119,10 @@ A little prep makes the whole thing smoother. Do these before you head out for t
 ## Key Takeaways
 
 Chengdu street food rewards a little knowledge and a light touch. Choose busy stalls with visible cooking and high turnover, stick to bottled water, and treat cold or pre-cut items with more caution than freshly fried ones. Learn the difference between **la** (chili burn) and **ma** (numbing peppercorn), order small your first time, and remember that "mild" here is relative. Start with gentler dishes like sweet water noodles and guo kui before working up to dan dan noodles, chuan chuan skewers, and full mala. Set up mobile payment and a translation app in advance, keep soy milk or rice handy to tame the heat, and you'll get the best of one of the world's great eating cities with very little risk.
+
+## Read Next
+
+- [Chengdu city guide](/posts/chengdu-city-guide-for-foreigners/)
+- [ordering food in China without Chinese](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+- [China tipping etiquette guide](/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
+

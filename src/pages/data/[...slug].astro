@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('dataPipelinePages');
+  return pages.map((page) => ({
+    params: { slug: page.id },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { data } = page;
+
+const related = (await getCollection('dataPipelinePages'))
+  .filter((candidate) => candidate.id !== page.id)
+  .map((candidate) => {
+    const sharedTags = candidate.data.tags.filter((tag) => data.tags.includes(tag)).length;
+    const categoryMatch = candidate.data.category === data.category ? 2 : 0;
+    return { candidate, score: sharedTags + categoryMatch };
+  })
+  .filter((item) => item.score > 0)
+  .sort((a, b) => b.score - a.score || b.candidate.data.pubDate.valueOf() - a.candidate.data.pubDate.valueOf())
+  .slice(0, 4)
+  .map(({ candidate }) => ({
+    title: candidate.data.title,
+    description: candidate.data.description,
+    href: `/data/${candidate.id}/`,
+  }));
+---
+
+<BlogPost
+  title={data.title}
+  description={data.description}
+  pubDate={data.pubDate}
+  category={data.category}
+  tags={data.tags}
+  faqs={data.faqs}
+  cover={data.cover}
+  coverAlt={data.coverAlt}
+  related={related}
+>
+  {data.summary.length > 0 && (
+    <div class="rounded-lg border border-brand-100 bg-brand-50 p-5 text-sm leading-7 text-gray-700">
+      {data.summary.map((item) => <p class="mb-2 last:mb-0">{item}</p>)}
+    </div>
+  )}
+
+  {data.sections.map((section) => (
+    <section>
+      <h2>{section.heading}</h2>
+      {section.body.map((paragraph) => <p>{paragraph}</p>)}
+      {section.bullets.length > 0 && (
+        <ul>
+          {section.bullets.map((bullet) => <li>{bullet}</li>)}
+        </ul>
+      )}
+    </section>
+  ))}
+</BlogPost>

@@ -54,6 +54,32 @@ Beijing's signature dish is Peking duck, best experienced at a dedicated roast-d
 - **Sanlitun (Chaoyang):** the nightlife, shopping, and expat hub, with international restaurants.
 - **Houhai / hutong areas:** atmospheric and historic, with boutique courtyard stays.
 
+## Best For
+
+Beijing is best for travelers who want the deepest historical itinerary in China and do not mind a city that requires a little more planning. It suits first-time visitors who care about imperial history, museums, architecture, food, and a Great Wall day trip. It is less ideal if your priority is an easy nightlife-and-shopping city or if you only have one relaxed weekend, because the sights are large, security checks take time, and many top attractions require advance booking.
+
+For families, Beijing works well because the headline attractions are memorable and the metro is predictable, but build in recovery time. The Forbidden City, Summer Palace, and Great Wall can each consume more energy than they look on a map. For solo travelers, the city is safe and straightforward, though English is patchier than in Shanghai and you will use translation apps more often.
+
+## Suggested Itinerary
+
+For a **three-day Beijing trip**, spend day one around Tiananmen Square, the Forbidden City, Jingshan Park, and Wangfujing or a hutong dinner. Use day two for the Great Wall at Mutianyu, returning in time for a simple dinner near your hotel. Day three can cover the Temple of Heaven in the morning and the Summer Palace in the afternoon, or swap one for the Lama Temple and hutongs if you prefer neighborhood wandering.
+
+With **five days**, slow the pace. Add the National Museum or Capital Museum, a dedicated hutong walk around Shichahai, the 798 Art District, and a flexible food evening. A longer stay also makes it easier to handle ticket availability, weather, and the long distances between sights without turning every day into a forced march.
+
+## Practical Planning Notes
+
+Book major sights early, especially the Forbidden City and popular Great Wall transfers. Carry your passport because many attractions and train services require identity checks. Security screening is common at metro stations, public squares, museums, and major tourist areas, so do not schedule tight connections between attractions.
+
+Beijing is seasonal. Spring can be beautiful but windy and dusty; summer brings heat, humidity, and domestic crowds; autumn has the best combination of temperature and visibility; winter is cold but often clear and less crowded. If you are sensitive to air quality, check the forecast and keep indoor alternatives ready.
+
+For transport planning, cluster each day by district. Dongcheng and Xicheng hold many historic sights, Chaoyang is better for nightlife and international dining, and the Great Wall should be treated as a full-day outing rather than an add-on.
+
+## Read Next
+
+- [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+
 ## Summary
 
 Beijing rewards visitors with the country's greatest concentration of historical grandeur, backed by excellent transport and visitor infrastructure. It takes a little more planning than Shanghai because of its scale, but for history and culture it is unmatched — and a rewarding, if less international, base for a longer stay.

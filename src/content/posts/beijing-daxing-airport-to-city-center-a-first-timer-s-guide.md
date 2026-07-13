@@ -102,3 +102,10 @@ A practical tip: agree on the general route or confirm the meter before pulling 
 ## Summary
 
 For a daytime arrival at Daxing, the Airport Express to Caoqiao then a metro transfer is the fast, cheap default at 35 RMB and under an hour to most of the city. If you're heading west or catching an onward train, the intercity railway to Beijing West in 28 minutes is hard to beat. Land after about 22:30 and the trains are done, so a metered taxi or Didi (130 to 200 RMB) becomes your reliable choice, with overnight buses as a budget backup. Set up mobile payment and offline maps before you fly, keep your hotel address in Chinese handy, and give yourself a buffer against the train curfew, and your first arrival will be smooth even if it's the middle of the night.
+
+## Read Next
+
+- [Beijing city guide](/posts/beijing-city-guide-for-foreigners/)
+- [airport transport guide for major China cities](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [DiDi ride-hailing guide](/posts/didi-china-foreign-tourists-guide/)
+

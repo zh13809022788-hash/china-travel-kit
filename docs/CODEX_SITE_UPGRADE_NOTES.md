@@ -4,6 +4,7 @@ Date: 2026-07-12
 
 ## Decisions Made
 
+- Added an Astro content-layer collection for `data_pipeline/pages/**/*.json`, so pipeline output can become static pages without first being converted to Markdown.
 - Kept ChinaTripBox focused on practical China travel logistics: payments, internet, transport, cities, food/dining, tools, and longer-stay planning.
 - Treated `/resources/` as the main "start here" index rather than creating a marketing landing page.
 - Added dedicated crawlable hubs for `/cities/` and `/food/` because city guides and food/etiquette content were high-value but previously depended on article discovery.
@@ -16,6 +17,7 @@ Date: 2026-07-12
 - Homepage now points users toward the resource hub, topic clusters, city guides, food/dining guides, and practical tools.
 - Resource hub now groups links by user intent: first-trip setup, payments, internet/apps, transport/cities, food/etiquette, and longer stays.
 - Article pages now render automatic "Recommended next steps" links based on shared category, tags, and city context.
+- JSON records in `data_pipeline/pages/` now build to static `/data/<slug>/` pages through the `dataPipelinePages` collection and `src/pages/data/[...slug].astro`.
 - Transport hub now has clearer paths for trains, airport transfers, ride-hailing, and metro usage.
 - Food hub includes practical dining pathways and a small, contextual culture-companion box.
 - City hub groups Beijing, Shanghai, Chengdu, Hangzhou, and Sanya guides with local next-step links.

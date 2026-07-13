@@ -1,5 +1,5 @@
 ---
-title: "Alipay for Foreigners: How to Set Up and Link a Foreign Credit Card (Step-by-Step)"
+title: "Alipay for Foreigners: Link a Foreign Credit Card Step by Step"
 description: "A clear 2026 step-by-step guide to installing Alipay, verifying your identity, and linking a foreign Visa or Mastercard so you can pay anywhere in China."
 pubDate: 2026-07-07
 category: payment
@@ -94,6 +94,12 @@ That small test payment confirms everything works before you rely on it for a ta
 - **Verification stuck pending.** Give it up to a day. If it does not clear, use Alipay's in-app help center to reach support.
 
 A practical habit: keep a small amount of RMB cash and a physical Visa or Mastercard as a backup. The one time your connection drops or a card hits a limit, you will be glad to have an alternative.
+
+## Read Next
+
+- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [cash backup guide for China](/posts/how-much-cash-to-bring-to-china/)
 
 ## Summary
 

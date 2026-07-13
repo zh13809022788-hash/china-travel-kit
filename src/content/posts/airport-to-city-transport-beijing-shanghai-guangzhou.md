@@ -1,5 +1,5 @@
 ---
-title: "Airport to City Transport in Beijing, Shanghai, and Guangzhou: 2026 Tourist Guide"
+title: "Airport to City Transport in Beijing, Shanghai, and Guangzhou"
 description: "How to get from the airport to the city center in Beijing, Shanghai, and Guangzhou in 2026, with metro, airport express, maglev, taxi, and DiDi options, costs, and times."
 pubDate: 2026-07-08
 category: transport
@@ -69,6 +69,12 @@ A simple way to decide across all three cities.
 3. **Want speed and a bit of novelty in Shanghai:** the Pudong Maglev is genuinely quick and a memorable start to a trip.
 
 For payment, use your mobile wallet wherever possible. Metro machines and gates increasingly accept Alipay and WeChat Pay QR codes, DiDi charges your linked wallet or card in-app, and taxis usually take mobile pay or cash. Having a wallet set up plus a little cash means you're never stuck at the one machine that won't take your method.
+
+## Read Next
+
+- [Beijing Daxing airport transfer guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [Shanghai metro guide for foreigners](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [DiDi China guide for tourists](/posts/didi-china-foreign-tourists-guide/)
 
 ## Summary
 

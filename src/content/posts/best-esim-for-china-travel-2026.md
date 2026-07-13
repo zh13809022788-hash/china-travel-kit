@@ -92,6 +92,12 @@ If your usual apps won't load even though data works, you likely bought a plan t
 
 Finally, if the profile simply won't install, confirm you're on Wi-Fi, that your phone is unlocked, and that you haven't already used a single-use QR code. Contact the provider's support, which for most travel eSIM companies is available around the clock by chat.
 
+## Read Next
+
+- [eSIM vs roaming cost breakdown](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [Pocket WiFi vs eSIM vs local SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [internet access and apps that work in China](/posts/internet-access-china-apps-that-work-2026/)
+
 ## Summary
 
 An eSIM is the cleanest way to stay connected in China, but the details decide whether your trip is smooth or frustrating. Confirm your phone supports eSIM and is carrier-unlocked before anything else. When choosing a plan, prioritize one that routes traffic to bypass content restrictions so your normal apps keep working, then balance data allowance, validity, price, and network coverage against your itinerary. Install the profile at home over Wi-Fi, wait to enable data roaming until you land if the validity starts on connection, set the eSIM as your data line, and verify before you leave the airport. Get those steps right and you'll walk out of arrivals fully connected, with maps, messaging, and everything else working just as they do at home.

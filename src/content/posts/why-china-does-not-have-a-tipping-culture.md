@@ -121,3 +121,10 @@ China does not "forget" to tip. It simply runs on a different assumption: the pr
 For visitors, this is one of the small pleasures of traveling in mainland China. The bill arrives, you pay the amount shown, and the moment is finished. No awkward math, no guilt, no guessing what the server secretly expects.
 
 Be polite, pay clearly, keep small cash for the rare private-guide exception, and do not force gratuities where they do not belong. In mainland China, that is not stingy. It is culturally fluent.
+
+## Read Next
+
+- [when tipping is expected in China](/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
+- [ordering food in China without Chinese](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+- [China trip planner for first-time visitors](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+

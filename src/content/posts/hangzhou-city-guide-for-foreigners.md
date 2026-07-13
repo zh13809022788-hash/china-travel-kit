@@ -48,6 +48,34 @@ As across China, mobile payment is essential — set up Alipay or WeChat Pay wit
 
 Hangzhou cuisine is milder and subtler than Sichuan's, known for dishes like West Lake vinegar fish, Dongpo pork, and beggar's chicken, plus fresh seasonal ingredients and, of course, Longjing tea used in cooking. Lakeside restaurants and the old streets offer plenty of approachable options, with picture menus and delivery apps easing ordering.
 
+## Best For
+
+Hangzhou is best for travelers who want scenery without giving up big-city convenience. It fits couples, photographers, walkers, tea lovers, remote workers, and anyone adding a calmer stop after Shanghai. The city is polished and prosperous, with strong metro coverage and a growing technology economy, but its appeal still comes from West Lake, temple hills, tea villages, canals, and a slower pace.
+
+It is not the best choice if you want nightlife on Shanghai's scale or a long list of blockbuster sights. Hangzhou works when you give it time to breathe: lake walks, tea, temples, and short rides into the hills. For a first China trip, it is usually strongest as a two- or three-day extension from Shanghai rather than a standalone entry city.
+
+## Suggested Itinerary
+
+For a **two-day Hangzhou trip**, spend the first day around West Lake: walk or cycle part of the Su Causeway or Bai Causeway, take a short boat ride, and finish near a lakeside viewpoint or Hefang Street. On day two, visit Lingyin Temple in the morning, continue to Longjing tea village for lunch or tea, and return to the city by DiDi or bus.
+
+With **three or four days**, add the Grand Canal area, Xiaohe Street, a slower cafe or tea afternoon, and more time in the hills west of the lake. If you are based in Shanghai, Hangzhou can be a day trip, but an overnight stay is better because the lake is most pleasant early and late, before tour groups peak.
+
+## Practical Planning Notes
+
+West Lake is large, and trying to circle the entire lake on foot can consume a whole day. Pick sections instead: the causeways for classic views, the east side for convenience, the west side for quieter greenery, and the hills for tea and temples. Shared bikes are useful, but weekend crowding can make walking easier in the busiest stretches.
+
+High-speed trains from Shanghai are frequent, but Hangzhou has multiple stations. Check whether your ticket uses Hangzhou East, Hangzhou West, or another station before planning your hotel transfer. For Longjing and Lingyin, DiDi is often the simplest option, especially if you do not want to navigate buses in Chinese.
+
+Hangzhou's weather is humid in summer and can be gray or damp in winter. Spring tea season and autumn are especially attractive. During national holidays and weekends, West Lake crowds can be intense, so book accommodation early and schedule popular areas for morning or evening.
+
+For hotels, first-time visitors should stay near the east side of West Lake, Wulin Square, or a convenient metro stop rather than deep in the hills. Scenic boutique stays can be lovely, but they may add taxi time every day. If you are coming from Shanghai for one night, convenience matters more than a postcard view.
+
+## Read Next
+
+- [Shanghai city guide](/posts/shanghai-city-guide-for-foreigners/)
+- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [book China train tickets on 12306](/posts/book-china-train-tickets-12306-foreigners/)
+
 ## Summary
 
 Hangzhou blends timeless scenery with a modern tech economy and a gentler pace than its giant neighbor. For short-trip visitors it is one of the most beautiful and accessible cities in eastern China; for remote workers and longer-stay residents it offers an appealing mix of infrastructure, livability, and lower costs.

@@ -95,3 +95,10 @@ One trip, and you've hit nearly every rule.
 ## Wrapping Up
 
 The mental model is simple: in mainland China, assume **no tip** unless you're dealing with a private guide or driver, or you spot a service charge already on the bill. Carry a little cash for those specific moments, read your receipts, and don't force gratuities on people who politely refuse them. Cross into Hong Kong or Macau and shift back toward familiar 10-percent tipping habits. Get those few distinctions right and you'll handle every bill in China like you've done it a hundred times.
+
+## Read Next
+
+- [why China does not have a tipping culture](/posts/why-china-does-not-have-a-tipping-culture/)
+- [Chengdu street food guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+

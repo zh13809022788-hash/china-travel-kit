@@ -79,3 +79,10 @@ A sensible strategy is to set up **both WeChat Pay and Alipay** with your foreig
 ## Summary
 
 Linking a foreign Visa or Mastercard to WeChat Pay is straightforward once you know the moving parts. Create and verify your account early, match your card name to your passport, warn your bank about the verification charge, and understand that payments over 200 RMB carry about a 3% fee within limits that reset per transaction, day, month, and year. Set up both WeChat Pay and Alipay for redundancy, keep small payments under the fee threshold, and carry a bit of cash as a fallback. Do the prep before you fly, and paying your way across China becomes a single tap.
+
+## Read Next
+
+- [WeChat Pay guide for foreign visitors](/posts/wechat-pay-foreign-visitors-guide/)
+- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
+- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+

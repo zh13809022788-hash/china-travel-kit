@@ -124,3 +124,10 @@ The gap between Option A and Option B is nearly **$200** for a single trip. That
 For 10 days in China, an eSIM is the clear value pick: roughly $15-35 versus $100+ for roaming, and often with the same unblocked access if you choose a plan that routes internationally. Roaming's only real edge is zero setup and guaranteed access to blocked apps, which a well-chosen eSIM already matches.
 
 Buy a 5-10GB China eSIM that mentions Hong Kong routing or "no VPN needed," install a VPN before you fly as backup, and keep your physical SIM active (data off) for the texts your home services send. Do that and you'll spend less, stay connected, and skip the roaming-bill hangover when you get home.
+
+## Read Next
+
+- [best eSIM for China travel](/posts/best-esim-for-china-travel-2026/)
+- [Pocket WiFi vs eSIM vs SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [internet access in China](/posts/internet-access-china-apps-that-work-2026/)
+

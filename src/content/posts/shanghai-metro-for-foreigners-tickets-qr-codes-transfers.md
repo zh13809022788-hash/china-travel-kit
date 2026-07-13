@@ -82,3 +82,10 @@ Some interchange stations are enormous. People's Square, where Lines 1, 2, and 8
 ## Final Tips
 
 The Shanghai Metro is genuinely one of the easiest big-city subways in the world for a non-Chinese speaker, once your phone is set up to pay. Sort out Alipay or WeChat on hotel WiFi before your first ride, keep about 50 yuan in coins and small notes as a fallback, and note your exit number so you don't surface on the wrong side of a huge intersection. Screenshot your route or use an offline map, follow the color-coded signs, and you'll be transferring across the city like a local by day two.
+
+## Read Next
+
+- [Shanghai city guide](/posts/shanghai-city-guide-for-foreigners/)
+- [airport to city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
+

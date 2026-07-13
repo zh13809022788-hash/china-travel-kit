@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Page Not Found';
+const description = 'The ChinaTripBox page you requested could not be found.';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
+  <Header />
+  <main class="container-page py-16">
+    <section class="mx-auto max-w-2xl">
+      <p class="section-kicker">404</p>
+      <h1 class="mt-2 text-4xl font-bold text-gray-950">Page not found</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">
+        The page may have moved, or the address may be incorrect. Start from the guide hub or use a
+        planning tool below.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/" class="btn-primary">Go home</a>
+        <a href="/resources/" class="btn-outline">Start here</a>
+        <a href="/tools/" class="btn-outline">Open tools</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

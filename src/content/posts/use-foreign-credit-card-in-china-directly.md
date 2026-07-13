@@ -1,5 +1,5 @@
 ---
-title: "Can You Use a Foreign Credit Card in China in 2026? Where It Works and Where It Doesn't"
+title: "Can You Use a Foreign Credit Card in China? Where It Works"
 description: "A practical 2026 guide to using foreign Visa, Mastercard, and Amex cards in China at hotels, shops, and ATMs, plus how to avoid declined payments and bad exchange rates."
 pubDate: 2026-07-08
 category: payment
@@ -87,6 +87,12 @@ If your card gets frozen mid-trip, contact your issuer immediately through the n
 If an ATM rejects your card, try a different major bank, particularly Bank of China or ICBC, before assuming the card is the problem. Not all machines accept all networks.
 
 If the fees feel high, remember the two levers you control: use a no-foreign-fee card where possible, and always transact in yuan rather than your home currency.
+
+## Read Next
+
+- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay foreign card setup](/posts/alipay-foreign-credit-card-step-by-step/)
+- [how much cash to bring to China](/posts/how-much-cash-to-bring-to-china/)
 
 ## Summary
 

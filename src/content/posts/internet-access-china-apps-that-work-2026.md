@@ -1,5 +1,5 @@
 ---
-title: "Internet Access in China 2026: Which Apps Work and How Tourists Stay Connected"
+title: "Internet Access in China: Which Apps Work for Tourists"
 description: "What's blocked in China in 2026, which apps still work, and how tourists keep Google, WhatsApp, and Instagram running using a travel eSIM or roaming."
 pubDate: 2026-07-08
 category: esim
@@ -79,6 +79,12 @@ Getting this right is mostly about preparation at home.
 ## A Note on Legality
 
 This guide describes the practical reality visitors face, not a workaround for any law. The legal status of VPN use by individuals in China is a gray area, and travelers should follow local law. The approaches most tourists use, namely a travel eSIM that roams internationally or their home carrier's roaming, keep your normal apps working simply because your data routes through networks outside the mainland filtering system, which is standard behavior for roaming connections rather than an attempt to evade anything.
+
+## Read Next
+
+- [best eSIM for China travel](/posts/best-esim-for-china-travel-2026/)
+- [eSIM vs roaming cost guide](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [what to set up before traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 
 ## Summary
 

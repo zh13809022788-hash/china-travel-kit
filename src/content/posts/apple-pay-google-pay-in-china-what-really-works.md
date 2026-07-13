@@ -79,3 +79,10 @@ Before obsessing over contactless, do this: install **Alipay** or **WeChat Pay**
 ## Summary
 
 Apple Pay can genuinely help you in China, but only at hotels, malls, chain stores, and some metro gates that accept contactless foreign cards. Google Pay works in the same narrow slots with the added catch that Google is blocked, so provision it fully before you arrive and lean on it lightly. The real workhorse for a tourist is Alipay or WeChat Pay linked to a foreign card, which reaches the vast QR-only majority of Chinese merchants. Set up a QR app, keep Apple Pay for taps, carry a little cash, and you'll pay smoothly almost anywhere you go.
+
+## Read Next
+
+- [mobile payment guide for tourists](/posts/how-to-pay-in-china-tourist-guide/)
+- [linking a foreign card to Alipay](/posts/alipay-foreign-credit-card-step-by-step/)
+- [where foreign credit cards work directly](/posts/use-foreign-credit-card-in-china-directly/)
+
