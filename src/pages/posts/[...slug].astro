@@ -35,11 +35,13 @@ const affiliateByCategory: Record<string, { title: string; description: string; 
 
 const affiliate = affiliateByCategory[data.category];
 const allPosts = await getCollection('posts');
-const translatedPosts = await getCollection('posts-zh-tw');
-const hasZhTwTranslation = translatedPosts.some((candidate) => candidate.slug === post.slug);
-const alternates = hasZhTwTranslation
-  ? { en: `/posts/${post.slug}/`, 'zh-TW': `/zh-tw/posts/${post.slug}/` }
-  : undefined;
+const zhTwPosts = await getCollection('posts-zh-tw');
+const jaPosts = await getCollection('posts-ja');
+const koPosts = await getCollection('posts-ko');
+const alternates: { en?: string; 'zh-TW'?: string; ja?: string; ko?: string } = { en: `/posts/${post.slug}/` };
+if (zhTwPosts.some((candidate) => candidate.slug === post.slug)) alternates['zh-TW'] = `/zh-tw/posts/${post.slug}/`;
+if (jaPosts.some((candidate) => candidate.slug === post.slug)) alternates.ja = `/ja/posts/${post.slug}/`;
+if (koPosts.some((candidate) => candidate.slug === post.slug)) alternates.ko = `/ko/posts/${post.slug}/`;
 const related = allPosts
   .filter((candidate) => candidate.slug !== post.slug)
   .map((candidate) => {
