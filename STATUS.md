@@ -64,3 +64,4 @@ Status: Pipeline Executed Successfully at Mon Jul 13 20:02:46 UTC 2026
 - Codex i18n: 10 zh-TW translated articles + LanguageSwitcher + hreflang.
 - `npm run build` passed; 88 pages generated.
 Status: Pipeline Executed Successfully at Mon Jul 13 21:50:26 UTC 2026
+Status: Pipeline Executed Successfully at Mon Jul 13 22:01:51 UTC 2026
