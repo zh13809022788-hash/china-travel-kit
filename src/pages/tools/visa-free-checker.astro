@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
 const title = 'China Visa-Free & Transit Checker';
 const description =
@@ -68,7 +69,7 @@ const countries = [
         title="Plan the Rest of Your Trip"
         description="Sort your connectivity, payments, and transport before you land in China."
         buttonText="See Travel Essentials"
-        placeholder="#AFFILIATE_TRAVEL"
+        placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
 

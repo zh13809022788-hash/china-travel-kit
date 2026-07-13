@@ -17,6 +17,14 @@ export const ADSENSE_SLOTS: Record<string, string> = {
 // Microsoft Clarity project ID. Leave empty to disable Clarity tracking.
 export const CLARITY_PROJECT_ID = 'xl5po1by2u';
 
+// 填入真实联盟 https 链接后，全站对应 CTA 自动生效；留空则 CTA 隐藏
+// （AffiliateCta 组件已处理 placeholder 非真链接时隐藏）。
+export const AFFILIATE_LINKS: Record<string, string> = {
+  esim: '',
+  payment: '',
+  transport: '',
+};
+
 // Interactive tools, shared between the homepage grid and the Tool Center.
 // Order here controls display order; `featured` tools surface on the homepage.
 export interface Tool {

@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
 const title = 'eSIM Plan Comparator for China Travel';
 const description =
@@ -85,7 +86,7 @@ const plans = [
       title="Ready to Get Connected?"
       description="Activate a recommended China eSIM and be online the moment you land."
       buttonText="Get Your eSIM"
-      placeholder="#AFFILIATE_ESIM"
+      placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
   <Footer />
