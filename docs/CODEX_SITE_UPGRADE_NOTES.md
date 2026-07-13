@@ -45,3 +45,10 @@ Date: 2026-07-12
   - `/posts/do-you-need-a-vpn-in-china-2026/`
 - Expanded `/tools/payment-checker/` and `/tools/visa-free-checker/` with SEO support copy, risk tables/checklists, and next-step links.
 - Verification passed again after content expansion: `npm.cmd run check:content` passed for 34 posts and `npm.cmd run build` generated 70 pages.
+- Added first Survival Kit module pass:
+  - `src/data/survival-kits.json`
+  - `ShowToLocal`, `SurvivalChecklist`, and `ContextAiBubble` components
+  - `/tools/survival-kit/`
+  - shared Tool Center and resource hub links
+- Survival Kit verification passed: `npm.cmd run check:content` passed for 34 posts and `npm.cmd run build` generated 71 pages.
+- Follow-up tasks are recorded in `PRODUCT_MONETIZATION_PLAN.md` and `docs/GROWTH_PLAN_30_DAYS.md`, including expansion to 8 themes and selective AI bubble rollout.

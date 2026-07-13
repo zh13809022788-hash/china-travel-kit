@@ -1,0 +1,69 @@
+---
+interface Props {
+  themeId: string;
+  steps: string[];
+}
+
+const { themeId, steps } = Astro.props;
+---
+
+<section class="survival-checklist rounded-lg border border-gray-200 bg-white p-5 shadow-sm" data-checklist-id={themeId}>
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <p class="section-kicker">Interactive checklist</p>
+      <h2 class="mt-1 text-2xl font-bold text-gray-950">Get ready step by step</h2>
+      <p class="mt-2 text-sm leading-6 text-gray-600">Progress is saved on this device with localStorage.</p>
+    </div>
+    <p class="checklist-count text-sm font-semibold text-gray-700">0/{steps.length} complete</p>
+  </div>
+
+  <div class="mt-4 h-2 overflow-hidden rounded-full bg-gray-100">
+    <div class="checklist-bar h-full w-0 rounded-full bg-brand-600 transition-all"></div>
+  </div>
+
+  <div class="mt-5 grid gap-3">
+    {steps.map((step, index) => (
+      <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-700 hover:border-brand-200 hover:bg-brand-50">
+        <input class="checklist-item mt-1 h-4 w-4 rounded border-gray-300 text-brand-600" type="checkbox" value={index} data-clarity-click={`checklist-${themeId}-${index}`} />
+        <span>{step}</span>
+      </label>
+    ))}
+  </div>
+
+  <div class="checklist-done mt-5 hidden rounded-lg border border-green-200 bg-green-50 p-4 text-sm font-semibold text-green-800">
+    Ready for your trip. Your checklist is complete.
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.survival-checklist').forEach((section) => {
+    const id = section.dataset.checklistId ?? 'survival';
+    const key = `chinatripbox-checklist-${id}`;
+    const boxes = Array.from(section.querySelectorAll<HTMLInputElement>('.checklist-item'));
+    const bar = section.querySelector<HTMLElement>('.checklist-bar');
+    const count = section.querySelector<HTMLElement>('.checklist-count');
+    const done = section.querySelector<HTMLElement>('.checklist-done');
+
+    const saved = new Set<number>(JSON.parse(localStorage.getItem(key) || '[]'));
+
+    function render() {
+      const checked = boxes.filter((box) => box.checked).length;
+      const total = boxes.length;
+      if (bar) bar.style.width = `${total ? (checked / total) * 100 : 0}%`;
+      if (count) count.textContent = `${checked}/${total} complete`;
+      if (done) {
+        done.classList.toggle('hidden', checked !== total || total === 0);
+        done.classList.toggle('animate-pulse', checked === total && total > 0);
+      }
+      const values = boxes.filter((box) => box.checked).map((box) => Number(box.value));
+      localStorage.setItem(key, JSON.stringify(values));
+    }
+
+    boxes.forEach((box) => {
+      box.checked = saved.has(Number(box.value));
+      box.addEventListener('change', render);
+    });
+
+    render();
+  });
+</script>

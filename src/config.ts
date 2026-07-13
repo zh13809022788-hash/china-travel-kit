@@ -37,6 +37,13 @@ export interface Tool {
 
 export const TOOLS: Tool[] = [
   {
+    href: '/tools/survival-kit/',
+    title: 'China Survival Kit',
+    desc: 'Use full-screen translation cards and saved checklists for arrival, restaurants, hotels, and local communication.',
+    icon: 'KIT',
+    featured: true,
+  },
+  {
     href: '/tools/show-to-driver/',
     title: 'Show to Driver',
     desc: 'Create a large Chinese address card for taxi drivers, hotel front desks, and asking directions on your phone.',

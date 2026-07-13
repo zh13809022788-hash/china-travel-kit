@@ -10,8 +10,9 @@
   - 按 category 在正文中插入对应联盟占位符。
 
 严格约束(否则 astro build 会失败):
-  - frontmatter 只允许 7 个字段: title, description, pubDate, category, tags, featured, faqs
+  - frontmatter 允许 8 个字段: title, description, pubDate, category, tags, featured, faqs, series(可选)
   - category 必须是允许枚举之一
+  - series 可选, 值为 food-of-china|history-of-china|modern-china|nature-of-china|culture-of-china
   - pubDate 为裸 YYYY-MM-DD
 """
 from __future__ import annotations
@@ -59,6 +60,159 @@ SKELETONS = [
     ],
 ]
 
+# 系列文章专属骨架模板 —— 灵感/故事型内容结构, 与工具型 SKELETONS 区分
+# 每个 series 有多套模板, 生成器按 seed_index 轮换
+SERIES_SKELETONS: dict[str, list[list[str]]] = {
+    "food-of-china": [
+        [
+            "## What Makes This Cuisine Distinct",
+            "## The Flavors You'll Encounter",
+            "## Where to Try It Like a Local",
+            "## What to Order First",
+            "## Practical Tips for Foreign Visitors",
+        ],
+        [
+            "## The Story Behind the Dish",
+            "## Regional Variations",
+            "## How to Eat It Properly",
+            "## What to Pair It With",
+            "## Worth Seeking Out",
+        ],
+        [
+            "## A First Taste",
+            "## Decoding the Menu",
+            "## What Surprises Foreigners",
+            "## How to Find the Real Thing",
+            "## Takeaways for Your Trip",
+        ],
+    ],
+    "history-of-china": [
+        [
+            "## The Story Behind This Place",
+            "## What You're Actually Looking At",
+            "## How to Visit Without the Crowds",
+            "## What Most Tourists Miss",
+            "## Practical Visit Tips",
+        ],
+        [
+            "## A Brief History",
+            "## Walking the Site",
+            "## Decoding What You See",
+            "## Nearby Sites Worth Combining",
+            "## Planning Your Visit",
+        ],
+        [
+            "## Why This Place Matters",
+            "## The Scale of What's Here",
+            "## What to Look For",
+            "## Logistics and Timing",
+            "## Making the Most of Your Visit",
+        ],
+    ],
+    "modern-china": [
+        [
+            "## The Experience",
+            "## Why It's Different Here",
+            "## What Surprises Foreigners Most",
+            "## How to Navigate It",
+            "## Practical Takeaways",
+        ],
+        [
+            "## First Impressions",
+            "## How It Actually Works",
+            "## What You Need to Prepare",
+            "## Common Points of Confusion",
+            "## Worth Trying Yourself",
+        ],
+        [
+            "## The Setup",
+            "## What's Happening Around You",
+            "## How to Participate",
+            "## What to Watch Out For",
+            "## Final Tips",
+        ],
+    ],
+    "nature-of-china": [
+        [
+            "## What Makes This Place Special",
+            "## The Landscape Explained",
+            "## Planning Your Visit",
+            "## Best Routes and Viewpoints",
+            "## Practical Tips for Foreign Visitors",
+        ],
+        [
+            "## First Impressions",
+            "## What You'll See",
+            "## How to Get There",
+            "## Where to Stay",
+            "## Making the Most of Your Time",
+        ],
+        [
+            "## Why This Place Is Worth the Trip",
+            "## The Natural Features",
+            "## Timing and Seasons",
+            "## Navigating the Park",
+            "## Essentials to Know Before You Go",
+        ],
+    ],
+    "culture-of-china": [
+        [
+            "## The Tradition Explained",
+            "## Where It Comes From",
+            "## How to Experience It as a Visitor",
+            "## What to Try or Buy",
+            "## Practical Tips",
+        ],
+        [
+            "## A Cultural Deep Dive",
+            "## What It Means in Daily Life",
+            "## Where Visitors Can Engage",
+            "## Common Misunderstandings",
+            "## Takeaways for Travelers",
+        ],
+        [
+            "## The Background",
+            "## What You're Seeing",
+            "## How Locals Experience It",
+            "## Where to Participate",
+            "## Worth Exploring Further",
+        ],
+    ],
+}
+
+# 系列专属事实核查红线 —— 历史/文化高风险, 美食/自然/现代中风险
+SERIES_PROMPT_RULES: dict[str, str] = {
+    "history-of-china": (
+        "SERIES-SPECIFIC RULES (History — high fact-risk):\n"
+        "- Do not invent historical dates, dynasty names, quotes, or architectural facts.\n"
+        "- If a fact is uncertain or historically debated, state that explicitly rather than presenting it as certain.\n"
+        "- Cross-check dynasty names and dates against the standard Chinese dynasty timeline.\n"
+        "- When describing sites, use only verifiable facts about location, size, and history."
+    ),
+    "culture-of-china": (
+        "SERIES-SPECIFIC RULES (Culture — high fact-risk):\n"
+        "- Do not invent historical dates, dynasty names, quotes, or architectural facts.\n"
+        "- If a fact is uncertain or historically debated, state that explicitly rather than presenting it as certain.\n"
+        "- Attribute cultural practices to the correct region or tradition."
+    ),
+    "food-of-china": (
+        "SERIES-SPECIFIC RULES (Food — medium fact-risk):\n"
+        "- Do not invent specific restaurant names, prices, or opening hours.\n"
+        "- When describing regional dishes, attribute them to the correct region."
+    ),
+    "nature-of-china": (
+        "SERIES-SPECIFIC RULES (Nature — medium fact-risk):\n"
+        "- Do not invent specific prices, permit requirements, or access policies.\n"
+        "- When describing natural features, use only verifiable geological and geographical facts.\n"
+        "- Note that permit and access rules for foreign visitors can change."
+    ),
+    "modern-china": (
+        "SERIES-SPECIFIC RULES (Modern China — medium fact-risk):\n"
+        "- Do not fabricate statistics about China's economy, population, or infrastructure.\n"
+        "- When describing experiences (trains, payments, apps), keep claims verifiable and current."
+    ),
+}
+
 
 @dataclass
 class GeneratedPost:
@@ -70,6 +224,7 @@ class GeneratedPost:
     faqs: list[dict[str, str]]
     body: str
     slug: str
+    series: str = ""
 
     def to_markdown(self, pub_date: str) -> str:
         """组装完整 .md 文件内容(YAML frontmatter + 正文)。"""
@@ -78,6 +233,8 @@ class GeneratedPost:
         fm.append(f"description: {_yaml_str(self.description)}")
         fm.append(f"pubDate: {pub_date}")  # 裸 YYYY-MM-DD
         fm.append(f"category: {self.category}")
+        if self.series:
+            fm.append(f"series: {self.series}")
         fm.append("tags: [" + ", ".join(_yaml_str(t) for t in self.tags) + "]")
         fm.append(f"featured: {'true' if self.featured else 'false'}")
         if self.faqs:
@@ -138,6 +295,8 @@ class Generator:
             else ""
         )
         angle_line = f"- Angle / unique take for this article: {topic.angle}\n" if topic.angle else ""
+        series_rules = SERIES_PROMPT_RULES.get(topic.series, "")
+        series_block = f"\n{series_rules}\n" if series_rules else ""
         skeleton_str = "\n".join(skeleton)
         return f"""You are an expert travel writer producing an ORIGINAL English article for chinatripbox.com, a guide site for foreigners traveling in China.
 
@@ -147,7 +306,7 @@ Write a completely original, factual, genuinely useful article. Do NOT copy or p
 
 TOPIC: {topic.keyword}
 CATEGORY: {topic.category}
-{angle_line}
+{angle_line}{series_block}
 STRUCTURE — use these H2 section headings, in this order (you may add ### subsections and adapt wording naturally, but keep the overall flow):
 {skeleton_str}
 
@@ -173,7 +332,11 @@ The "body" must NOT contain the frontmatter or the title as an H1. Start directl
 
     def generate(self, topic: Topic, *, seed_index: int, extra_taken: set[str] | None = None) -> GeneratedPost:
         """生成一篇文章。seed_index 用于确定性地轮换骨架模板(避免依赖随机源)。"""
-        skeleton = SKELETONS[seed_index % len(SKELETONS)]
+        if topic.series and topic.series in SERIES_SKELETONS:
+            series_skel = SERIES_SKELETONS[topic.series]
+            skeleton = series_skel[seed_index % len(series_skel)]
+        else:
+            skeleton = SKELETONS[seed_index % len(SKELETONS)]
         prompt = self._build_prompt(topic, skeleton)
 
         client = self._client_lazy()
@@ -217,6 +380,7 @@ The "body" must NOT contain the frontmatter or the title as an H1. Start directl
             faqs=faqs,
             body=body,
             slug=slug,
+            series=topic.series,
         )
 
     def _decide_featured(self, seed_index: int) -> bool:

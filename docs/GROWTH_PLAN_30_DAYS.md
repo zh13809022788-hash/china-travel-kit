@@ -78,3 +78,22 @@ Next planned batch:
 - `China Apps Checklist for Tourists`
 - `China Visa-Free Transit 240-Hour Rule Explained`
 - `Best China eSIM for iPhone Users`
+
+### 2026-07-14 Survival Kit Module Pass
+
+Completed the first modular Survival Kit pass:
+
+- Added JSON-driven survival-kit content in `src/data/survival-kits.json`.
+- Added reusable full-screen translation card component.
+- Added checklist component with localStorage persistence and completion state.
+- Added context-aware AI entry bubble that opens `/travel-help/` with topic-aware prompts.
+- Added `/tools/survival-kit/` and surfaced it in the Tool Center and resource hub.
+- Initial themes live: arrival setup and food exploration.
+
+Deferred into follow-up tasks:
+
+- Expand to the remaining six themes: payment, transport, hotel check-in, medical/allergy, shopping/refunds, emergency help.
+- Add the AI bubble to `/food/`, `/payment/`, `/transport/`, and `/trip-planner/` only after mobile layout review.
+- Add survival-kit links from related article bodies.
+- Review Clarity heatmaps for translation card clicks, custom card usage, and checklist completion.
+- Review persistent duplicate content-id build warnings for the three new growth posts after a clean environment build.

@@ -43,3 +43,23 @@ Status: Pipeline Executed Successfully at Mon Jul 13 17:19:39 UTC 2026
 - `npm.cmd run check:content` passed for 34 posts.
 - `npm.cmd run build` passed; 70 pages generated.
 Status: Pipeline Executed Successfully at Mon Jul 13 20:02:46 UTC 2026
+
+## 2026-07-14 Survival Kit Module Pass
+
+- Added JSON-driven Survival Kit system for scenario-based interaction.
+- Added reusable full-screen translation cards, localStorage checklist progress, and context AI entry bubble.
+- Added `/tools/survival-kit/` with initial `arrival_setup` and `food_exploration` themes.
+- Added Survival Kit entry to shared tools and resource hub.
+- Updated the project plan and growth plan with completed work plus deferred tasks.
+- `npm.cmd run check:content` passed for 34 posts.
+- `npm.cmd run build` passed; 71 pages generated.
+
+## 2026-07-14 Content Series + i18n Pass
+
+- Added 5 content series infrastructure: food/history/modern/nature/culture.
+- 36 seed topics added to topics.json with series-specific prompts and skeletons.
+- 6 series hub pages created under /series/.
+- Schema updated: series field added to posts + postsZhTw collections.
+- Backfilled series field on 2 existing food posts.
+- Codex i18n: 10 zh-TW translated articles + LanguageSwitcher + hreflang.
+- `npm run build` passed; 88 pages generated.

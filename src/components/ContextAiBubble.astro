@@ -1,0 +1,64 @@
+---
+interface Props {
+  defaultPrompt?: string;
+}
+
+const { defaultPrompt = 'Help me plan the practical setup for my China trip.' } = Astro.props;
+---
+
+<aside class="fixed bottom-4 right-4 z-40 max-w-[calc(100vw-2rem)]">
+  <button
+    id="ai-bubble-toggle"
+    class="rounded-full bg-brand-600 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-brand-700"
+    type="button"
+    data-clarity-click="context-ai-bubble-open"
+  >
+    Ask AI
+  </button>
+  <div id="ai-bubble-panel" class="mt-3 hidden w-[min(360px,calc(100vw-2rem))] rounded-lg border border-gray-200 bg-white p-4 shadow-xl">
+    <div class="flex items-start justify-between gap-3">
+      <div>
+        <p class="section-kicker">Context help</p>
+        <h2 class="mt-1 text-base font-bold text-gray-950">Ask about this topic</h2>
+      </div>
+      <button id="ai-bubble-close" class="text-sm font-semibold text-gray-500" type="button">Close</button>
+    </div>
+    <p id="ai-bubble-context" class="mt-2 text-sm leading-6 text-gray-600">{defaultPrompt}</p>
+    <div class="mt-3 grid gap-2">
+      <button class="ai-preset rounded-lg border border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-700 hover:border-brand-200" type="button">What should I do first?</button>
+      <button class="ai-preset rounded-lg border border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-700 hover:border-brand-200" type="button">What mistakes should I avoid?</button>
+      <button class="ai-preset rounded-lg border border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-700 hover:border-brand-200" type="button">Give me a simple checklist.</button>
+    </div>
+    <a id="ai-bubble-link" href={`/travel-help/?q=${encodeURIComponent(defaultPrompt)}`} class="btn-primary mt-4 w-full">Open travel help</a>
+  </div>
+</aside>
+
+<script>
+  const toggle = document.getElementById('ai-bubble-toggle');
+  const panel = document.getElementById('ai-bubble-panel');
+  const close = document.getElementById('ai-bubble-close');
+  const context = document.getElementById('ai-bubble-context');
+  const link = document.getElementById('ai-bubble-link') as HTMLAnchorElement | null;
+
+  const path = window.location.pathname;
+  const promptMap = [
+    { test: '/food/', prompt: 'Help me order food in China, explain allergies, spice level, and restaurant etiquette.' },
+    { test: '/payment/', prompt: 'Help me choose a payment setup for China using Alipay, WeChat Pay, cards, and cash backup.' },
+    { test: '/transport/', prompt: 'Help me plan China transport, trains, metro, airport transfer, and ride-hailing.' },
+    { test: '/tools/survival-kit/', prompt: 'Help me use a China survival kit for arrival, food, payment, and local communication.' },
+  ];
+  const matched = promptMap.find((item) => path.includes(item.test));
+  const basePrompt = matched?.prompt || context?.textContent || 'Help me plan my China trip.';
+
+  if (context) context.textContent = basePrompt;
+  if (link) link.href = `/travel-help/?q=${encodeURIComponent(basePrompt)}`;
+
+  toggle?.addEventListener('click', () => panel?.classList.toggle('hidden'));
+  close?.addEventListener('click', () => panel?.classList.add('hidden'));
+  document.querySelectorAll<HTMLButtonElement>('.ai-preset').forEach((button) => {
+    button.addEventListener('click', () => {
+      const q = `${basePrompt} ${button.textContent?.trim() ?? ''}`;
+      if (link) link.href = `/travel-help/?q=${encodeURIComponent(q)}`;
+    });
+  });
+</script>

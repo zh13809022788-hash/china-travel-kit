@@ -2,6 +2,13 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const categorySchema = z.enum(['payment', 'esim', 'transport', 'essentials', 'food']);
+const seriesSchema = z.enum([
+  'food-of-china',
+  'history-of-china',
+  'modern-china',
+  'nature-of-china',
+  'culture-of-china',
+]);
 const faqSchema = z.object({ question: z.string(), answer: z.string() });
 
 const posts = defineCollection({
@@ -11,6 +18,7 @@ const posts = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     category: categorySchema,
+    series: seriesSchema.optional(),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     faqs: z.array(faqSchema).default([]),
@@ -26,6 +34,7 @@ const postsZhTw = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     category: categorySchema,
+    series: seriesSchema.optional(),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     faqs: z.array(faqSchema).default([]),
@@ -52,6 +61,7 @@ const dataPipelinePages = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     category: categorySchema,
+    series: seriesSchema.optional(),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     cover: z.string().optional(),

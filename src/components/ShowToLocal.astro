@@ -1,0 +1,156 @@
+---
+interface ToolCard {
+  name: string;
+  text_cn: string;
+  text_en: string;
+  category?: string;
+}
+
+interface Props {
+  themeId: string;
+  tools: ToolCard[];
+}
+
+const { themeId, tools } = Astro.props;
+---
+
+<section class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm" data-survival-theme={themeId}>
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <p class="section-kicker">Show to local</p>
+      <h2 class="mt-1 text-2xl font-bold text-gray-950">Translation cards</h2>
+      <p class="mt-2 text-sm leading-6 text-gray-600">
+        Tap a card to show a full-screen Chinese message. Add your own phrase when the preset cards are not enough.
+      </p>
+    </div>
+    <button class="show-local-open-custom btn-outline" type="button" data-clarity-click="survival-custom-card">
+      Add custom card
+    </button>
+  </div>
+
+  <div class="show-local-grid mt-5 grid gap-3 md:grid-cols-2">
+    {tools.map((tool) => (
+      <button
+        class="show-local-card rounded-lg border border-gray-200 bg-gray-50 p-4 text-left transition hover:border-brand-200 hover:bg-brand-50"
+        type="button"
+        data-cn={tool.text_cn}
+        data-en={tool.text_en}
+        data-name={tool.name}
+        data-clarity-click={`survival-card-${themeId}-${tool.category ?? 'general'}`}
+      >
+        <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{tool.name}</span>
+        <span class="mt-2 block text-2xl font-black leading-tight text-gray-950">{tool.text_cn}</span>
+        <span class="mt-2 block text-sm leading-6 text-gray-600">{tool.text_en}</span>
+      </button>
+    ))}
+  </div>
+
+  <div class="custom-card-panel mt-5 hidden rounded-lg border border-gray-200 bg-gray-50 p-4">
+    <div class="grid gap-3 md:grid-cols-2">
+      <label class="text-sm font-medium text-gray-700">
+        English note
+        <textarea class="custom-en mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" rows="3" placeholder="I am vegetarian. No meat or seafood, please."></textarea>
+      </label>
+      <label class="text-sm font-medium text-gray-700">
+        Chinese text
+        <textarea class="custom-cn mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" rows="3" placeholder="我是素食者，请不要放肉和海鲜。"></textarea>
+      </label>
+    </div>
+    <button class="custom-show btn-primary mt-3" type="button" data-clarity-click="survival-show-custom-card">Show custom card</button>
+  </div>
+</section>
+
+<div class="show-local-overlay fixed inset-0 z-50 hidden bg-black text-white" role="dialog" aria-modal="true" aria-label="Show translation card">
+  <div class="flex min-h-screen flex-col">
+    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/20 p-4">
+      <div>
+        <p class="overlay-name text-sm font-semibold uppercase tracking-wide text-white/70">Translation card</p>
+        <p class="overlay-en text-sm text-white/80"></p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button class="overlay-size rounded-lg border border-white/30 px-3 py-2 text-sm font-semibold" type="button">Large type</button>
+        <button class="overlay-theme rounded-lg border border-white/30 px-3 py-2 text-sm font-semibold" type="button">Light mode</button>
+        <button class="overlay-close rounded-lg bg-white px-3 py-2 text-sm font-semibold text-black" type="button">Close</button>
+      </div>
+    </div>
+    <div class="flex flex-1 items-center justify-center p-6">
+      <p class="overlay-cn max-w-5xl break-words text-center text-5xl font-black leading-tight sm:text-7xl"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.querySelector<HTMLElement>('.show-local-overlay');
+  const overlayCn = overlay?.querySelector<HTMLElement>('.overlay-cn');
+  const overlayEn = overlay?.querySelector<HTMLElement>('.overlay-en');
+  const overlayName = overlay?.querySelector<HTMLElement>('.overlay-name');
+  const closeBtn = overlay?.querySelector<HTMLButtonElement>('.overlay-close');
+  const sizeBtn = overlay?.querySelector<HTMLButtonElement>('.overlay-size');
+  const themeBtn = overlay?.querySelector<HTMLButtonElement>('.overlay-theme');
+  let large = true;
+  let dark = true;
+
+  function showCard(cn: string, en: string, name = 'Translation card') {
+    if (!overlay || !overlayCn || !overlayEn || !overlayName) return;
+    overlayCn.textContent = cn || 'Please help me.';
+    overlayEn.textContent = en || '';
+    overlayName.textContent = name;
+    overlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCard() {
+    if (!overlay) return;
+    overlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('.show-local-card').forEach((button) => {
+    button.addEventListener('click', () => {
+      showCard(button.dataset.cn ?? '', button.dataset.en ?? '', button.dataset.name ?? '');
+    });
+  });
+
+  document.querySelectorAll<HTMLElement>('[data-survival-theme]').forEach((section) => {
+    const customPanel = section.querySelector<HTMLElement>('.custom-card-panel');
+    const openCustom = section.querySelector<HTMLButtonElement>('.show-local-open-custom');
+    const customShow = section.querySelector<HTMLButtonElement>('.custom-show');
+    const customCn = section.querySelector<HTMLTextAreaElement>('.custom-cn');
+    const customEn = section.querySelector<HTMLTextAreaElement>('.custom-en');
+
+    openCustom?.addEventListener('click', () => {
+      customPanel?.classList.toggle('hidden');
+    });
+
+    customShow?.addEventListener('click', () => {
+      showCard(customCn?.value.trim() ?? '', customEn?.value.trim() ?? '', 'Custom card');
+    });
+  });
+
+  closeBtn?.addEventListener('click', closeCard);
+  overlay?.addEventListener('click', (event) => {
+    if (event.target === overlay) closeCard();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeCard();
+  });
+
+  sizeBtn?.addEventListener('click', () => {
+    large = !large;
+    overlayCn?.classList.toggle('text-5xl', !large);
+    overlayCn?.classList.toggle('sm:text-7xl', large);
+    overlayCn?.classList.toggle('text-3xl', !large);
+    overlayCn?.classList.toggle('sm:text-5xl', !large);
+    sizeBtn.textContent = large ? 'Normal type' : 'Large type';
+  });
+
+  themeBtn?.addEventListener('click', () => {
+    if (!overlay) return;
+    dark = !dark;
+    overlay.classList.toggle('bg-black', dark);
+    overlay.classList.toggle('text-white', dark);
+    overlay.classList.toggle('bg-white', !dark);
+    overlay.classList.toggle('text-black', !dark);
+    themeBtn.textContent = dark ? 'Light mode' : 'High contrast';
+  });
+</script>

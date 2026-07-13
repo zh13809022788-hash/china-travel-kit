@@ -655,3 +655,61 @@ Next traffic tasks:
 3. Add internal links from older eSIM/payment posts to the new VPN, Alipay vs WeChat Pay, and arrival checklist articles.
 4. Use Clarity after deployment to check whether users click the new homepage three-page pathway and resource-hub 30-minute path.
 5. Use Search Console after indexing to rewrite titles/descriptions for pages with impressions but weak CTR.
+
+## 2026-07-14 Survival Kit Modular Upgrade
+
+Task objective:
+
+Move ChinaTripBox from static reading pages toward scenario-based interaction by introducing a reusable Survival Kit system. The first implementation should stay compatible with the current static architecture:
+
+```text
+Astro + Tailwind CSS + Markdown/JSON content
+```
+
+Do not migrate to Next.js, React app routing, Vue, or a heavier stack unless there is a separate product reason later. Use Astro pages/components, lightweight browser JavaScript, and JSON-driven content.
+
+Implemented in the first pass:
+
+- Added JSON-driven survival kit data in `src/data/survival-kits.json`.
+- Added reusable `ShowToLocal` component for full-screen translation cards.
+- Added reusable `SurvivalChecklist` component with localStorage progress persistence.
+- Added lightweight `ContextAiBubble` component that detects page context and deep-links to `/travel-help/` with a relevant prompt.
+- Added `/tools/survival-kit/` as the first survival kit landing page.
+- Added two initial themes:
+  - `arrival_setup`
+  - `food_exploration`
+- Added `/tools/survival-kit/` to the shared tool registry and resource hub.
+
+Implementation boundaries:
+
+- The requirement for automatic screen-brightness detection was intentionally converted into manual high-contrast/light-mode and large/normal type controls. Browser access to actual device brightness is not reliable enough for this feature.
+- The AI bubble is an entry point into the existing travel-help flow, not a new always-loaded AI SDK. This keeps Core Web Vitals safer.
+- No sensitive data is stored. Checklist progress is localStorage-only and phrase cards run in the browser.
+
+Remaining Survival Kit work:
+
+1. Expand from 2 themes to the planned 8 dimensions:
+   - Arrival Setup
+   - Payment
+   - Food & Dining
+   - Transport
+   - Hotel Check-in
+   - Medical & Allergy
+   - Shopping & Refunds
+   - Emergency Help
+2. Add theme-specific landing anchors or separate static routes if Clarity shows users engage with a specific kit.
+3. Add the AI context bubble to selected high-value hubs only after checking layout impact:
+   - `/food/`
+   - `/payment/`
+   - `/transport/`
+   - `/trip-planner/`
+4. Add Clarity event naming conventions for survival-kit clicks and checklist completions.
+5. Polish the survival card UI after mobile screenshot review.
+6. Consider replacing the older `/tools/show-to-driver/` page with the reusable `ShowToLocal` component after verifying no useful functionality is lost.
+7. Add survival-kit links from the new arrival, food, payment, and app checklist articles.
+
+Verification:
+
+- `npm.cmd run check:content` passed for 34 posts.
+- `npm.cmd run build` passed and generated 71 pages.
+- Build currently shows duplicate content-id warnings for the three growth posts added earlier. These warnings do not fail the build, but should be reviewed before the next deployment if they persist after a clean checkout/build.

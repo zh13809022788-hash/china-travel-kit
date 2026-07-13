@@ -1,5 +1,5 @@
 {
-  "_comment": "选题/关键词队列。每个对象一个选题。脚本按 used=false 顺序取题，发布后自动置 used=true 并写回。你只需持续往 queue 里追加新选题即可。category 必须是 payment|esim|transport|essentials|food 之一。angle 可选，用于给生成器一个差异化切入角度。",
+  "_comment": "选题/关键词队列。每个对象一个选题。脚本按 used=false 顺序取题，发布后自动置 used=true 并写回。你只需持续往 queue 里追加新选题即可。category 必须是 payment|esim|transport|essentials|food 之一。angle 可选，用于给生成器一个差异化切入角度。series 可选，用于内容系列归类：food-of-china|history-of-china|modern-china|nature-of-china|culture-of-china。",
   "queue": [
     {
       "keyword": "how to get from Beijing Daxing airport to city center",
@@ -107,6 +107,258 @@
       "keyword": "how to order food in Xi'an for vegetarians and Muslims",
       "category": "food",
       "angle": "halal Hui quarter navigation and key phrases to avoid pork and meat broth",
+      "used": false
+    },
+    {
+      "keyword": "China's 8 great culinary traditions explained for foreigners",
+      "category": "food",
+      "angle": "layman breakdown of the eight regional cuisines, what makes each distinct",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Sichuan food a foreigner's spice survival guide",
+      "category": "food",
+      "angle": "decoding la vs ma, what to order if you can't handle spice, Sichuan peppercorn explained",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Hot pot across China regional styles compared",
+      "category": "food",
+      "angle": "Chongqing mala vs Cantonese da bin lo vs Beijing instant-boil vs Yunnan mushroom",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Chinese street food what's safe and what to skip",
+      "category": "food",
+      "angle": "hygiene signals, high turnover equals safe, what looks dangerous but isn't",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Chinese breakfast 10 regional morning foods worth trying",
+      "category": "food",
+      "angle": "jianbing, baozi, congee, youtiao, soy milk, regional differences across China",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Dim sum 101 what to order in Guangzhou",
+      "category": "food",
+      "angle": "Cantonese tea house etiquette, must-order items, how to order without Chinese",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Vegetarian and vegan in China is it possible",
+      "category": "food",
+      "angle": "hidden meat in vegetable dishes, monastery cuisine, key phrases to avoid meat and broth",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Peking duck beyond the tourist traps",
+      "category": "food",
+      "angle": "where locals actually go, what counts as authentic, price reality vs tourist pricing",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Chinese liquor baijiu what foreigners should know",
+      "category": "food",
+      "angle": "taste profile, drinking etiquette, how to politely decline or pace yourself at banquets",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Ordering food without Chinese the picture menu guide",
+      "category": "food",
+      "angle": "visual point-and-order, translation apps that work offline, avoiding common mistakes",
+      "series": "food-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Great Wall of China which section should you visit",
+      "category": "essentials",
+      "angle": "Badaling crowded vs Mutianyu foreigner-friendly vs Jinshanling quiet, logistics compared",
+      "series": "history-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Terracotta Army complete visitor guide",
+      "category": "essentials",
+      "angle": "pit-by-pit highlights, getting from Xi'an, ticket tips and timing",
+      "series": "history-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Chinese dynasties explained for beginners",
+      "category": "essentials",
+      "angle": "quick-reference timeline, which dynasties built what you can still visit today",
+      "series": "history-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Forbidden City how to visit like you know the history",
+      "category": "essentials",
+      "angle": "must-see halls, architectural symbolism, crowd-avoidance route",
+      "series": "history-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Silk Road in China following ancient trade routes today",
+      "category": "essentials",
+      "angle": "Xi'an to Dunhuang to Kashgar, what you can still see and experience along the route",
+      "series": "history-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Ancient water towns near Shanghai which to choose",
+      "category": "essentials",
+      "angle": "Zhouzhuang vs Tongli vs Xitang, what each offers and how to get there",
+      "series": "history-of-china",
+      "used": false
+    },
+    {
+      "keyword": "China's ancient capitals Xi'an Luoyang and Nanjing compared",
+      "category": "essentials",
+      "angle": "what each capital contributed, what to see there now, which is worth your time",
+      "series": "history-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Temple of Heaven and Ming Tombs decoded for visitors",
+      "category": "essentials",
+      "angle": "ritual meaning, how emperors used these spaces, practical visit tips",
+      "series": "history-of-china",
+      "used": false
+    },
+    {
+      "keyword": "China's cashless society what surprises foreigners most",
+      "category": "payment",
+      "angle": "culture shock of nobody carrying cash, QR codes at street stalls, what to prepare",
+      "series": "modern-china",
+      "used": false
+    },
+    {
+      "keyword": "Riding the world's fastest train Beijing to Shanghai",
+      "category": "transport",
+      "angle": "first-person experience, speed and comfort vs flying, what the ride is actually like",
+      "series": "modern-china",
+      "used": false
+    },
+    {
+      "keyword": "Shenzhen China's hardware and tech capital",
+      "category": "essentials",
+      "angle": "Huaqiangbei electronics market, fishing village to megacity story, what to see",
+      "series": "modern-china",
+      "used": false
+    },
+    {
+      "keyword": "Sleeping on a Chinese overnight train what it's really like",
+      "category": "transport",
+      "angle": "hard sleeper vs soft sleeper, logistics, is it worth it vs high-speed rail",
+      "series": "modern-china",
+      "used": false
+    },
+    {
+      "keyword": "China's megacities a foreigner's survival vocabulary",
+      "category": "essentials",
+      "angle": "navigating mega stations, scale shock, first-day overwhelm and how to cope",
+      "series": "modern-china",
+      "used": false
+    },
+    {
+      "keyword": "WeChat as a super app why China doesn't need email",
+      "category": "essentials",
+      "angle": "one app replacing twenty, what this means for visitors and short-term stays",
+      "series": "modern-china",
+      "used": false
+    },
+    {
+      "keyword": "Zhangjiajie the real Avatar mountains visitor guide",
+      "category": "essentials",
+      "angle": "film inspiration, glass bridge, how many days to plan, best route through the park",
+      "series": "nature-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Jiuzhaigou Valley China's fairy-tale lakes",
+      "category": "essentials",
+      "angle": "colorful lakes, ticket lottery system, best season and how to plan",
+      "series": "nature-of-china",
+      "used": false
+    },
+    {
+      "keyword": "The Yellow Mountains Huangshan a photographer's guide",
+      "category": "essentials",
+      "angle": "sea of clouds, sunrise spots, pine trees, where to stay on the mountain",
+      "series": "nature-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Guilin and Yangshuo karst landscape guide",
+      "category": "essentials",
+      "angle": "Li River cruise, countryside cycling, best viewpoints and how to get around",
+      "series": "nature-of-china",
+      "used": false
+    },
+    {
+      "keyword": "China's most spectacular national parks for foreign visitors",
+      "category": "essentials",
+      "angle": "roundup, which require permits, foreigner access restrictions to know",
+      "series": "nature-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Tibet plateau what foreigners need to know before going",
+      "category": "essentials",
+      "angle": "permit reality, altitude sickness, where you can actually go with a foreign passport",
+      "series": "nature-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Chinese tea culture a foreigner's guide",
+      "category": "essentials",
+      "angle": "beyond teabags, gongfu tea ceremony, teahouse etiquette, what to try",
+      "series": "culture-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Spring Festival Chinese New Year what travelers should know",
+      "category": "essentials",
+      "angle": "everything shuts down, ticket madness, what stays open, timing your trip",
+      "series": "culture-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Understanding face mianzi and guanxi in China",
+      "category": "essentials",
+      "angle": "the social fabric behind Chinese interactions, practical examples for travelers",
+      "series": "culture-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Chinese calligraphy and painting where to experience it",
+      "category": "essentials",
+      "angle": "workshops, what to buy, how to appreciate, where visitors can try",
+      "series": "culture-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Kung Fu in China Shaolin Temple and beyond",
+      "category": "essentials",
+      "angle": "Shaolin visit, real martial arts vs performance, where to see or try",
+      "series": "culture-of-china",
+      "used": false
+    },
+    {
+      "keyword": "Chinese zodiac and lucky numbers explained",
+      "category": "essentials",
+      "angle": "why 8 is lucky and 4 is avoided, zodiac animal meanings, benmingnian concept",
+      "series": "culture-of-china",
       "used": false
     }
   ]

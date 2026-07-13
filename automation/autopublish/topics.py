@@ -19,6 +19,7 @@ class Topic:
     keyword: str
     category: str
     angle: str = ""
+    series: str = ""
     used: bool = False
     _index: int = -1  # 在 queue 中的原始下标, 用于回写
 
@@ -26,6 +27,8 @@ class Topic:
         d = {"keyword": self.keyword, "category": self.category, "used": self.used}
         if self.angle:
             d["angle"] = self.angle
+        if self.series:
+            d["series"] = self.series
         return d
 
 
@@ -66,6 +69,7 @@ class TopicQueue:
                     "keyword": kw,
                     "category": it.get("category", ""),
                     "angle": it.get("angle", ""),
+                    "series": it.get("series", ""),
                     "used": False,
                 }
             )
@@ -92,6 +96,7 @@ class TopicQueue:
                     keyword=item.get("keyword", "").strip(),
                     category=category,
                     angle=item.get("angle", ""),
+                    series=item.get("series", ""),
                     used=False,
                     _index=i,
                 )
