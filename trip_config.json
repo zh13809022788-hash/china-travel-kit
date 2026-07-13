@@ -1,5 +1,16 @@
 {
   "PROJECT_IDENTITY": "Chinatripbox_V1",
-  "API_ENDPOINT": "在此处填入专用接口地址",
-  "API_TOKEN": "在此处填入专用Token"
+  "GLOBAL_PROXY": {
+    "BASE_URL": "https://sub.llmwc.com"
+  },
+  "SERVICES": {
+    "REALTIME_CHAT": {
+      "MODEL": "DEEPSEEK_V3",
+      "SECRET_KEY_NAME": "DEEPSEEK_API_KEY"
+    },
+    "CONTENT_PIPELINE": {
+      "MODEL": "CLAUDE_OPUS_4_8",
+      "SECRET_KEY_NAME": "ANTHROPIC_API_KEY"
+    }
+  }
 }
