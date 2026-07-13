@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="700">
+    China Travel Kit
+  </text>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="28" opacity="0.9">
+    Payment, eSIM, transport guides for visitors
+  </text>
+</svg>
