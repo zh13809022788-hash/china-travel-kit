@@ -23,6 +23,7 @@ const visibleOptions = options.filter((option) => option.path);
         ) : (
           <a
             href={option.path}
+            data-lang-switch={option.locale}
             class="rounded-full px-2.5 py-1 text-gray-600 transition-colors hover:bg-gray-100 hover:text-brand-600 hover:no-underline"
           >
             {option.label}
@@ -32,3 +33,11 @@ const visibleOptions = options.filter((option) => option.path);
     </div>
   )
 }
+
+<script>
+  document.querySelectorAll('[data-lang-switch]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      try { localStorage.setItem('ctb-lang-pref', this.getAttribute('data-lang-switch')); } catch(e) {}
+    });
+  });
+</script>

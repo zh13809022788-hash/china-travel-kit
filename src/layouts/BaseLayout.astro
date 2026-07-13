@@ -147,6 +147,32 @@ const jsonLd = {
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
+    <script is:inline set:html={`(function(){
+      var PREF_KEY='ctb-lang-pref';
+      try{if(localStorage.getItem(PREF_KEY))return;}catch(e){return;}
+      var langs=navigator.languages||[navigator.language]||[];
+      var detected=null;
+      for(var i=0;i<langs.length;i++){
+        var lang=(langs[i]||'').toLowerCase();
+        if(lang.startsWith('zh-tw')||lang.startsWith('zh-hant')||lang==='zh-hk'||lang==='zh-mo'){detected='zh-TW';break;}
+        if(lang.startsWith('ja')){detected='ja';break;}
+        if(lang.startsWith('ko')){detected='ko';break;}
+        if(lang.startsWith('zh')){detected='zh-TW';break;}
+        if(lang.startsWith('en')){detected='en';break;}
+      }
+      if(!detected||detected==='en')return;
+      var alts=document.querySelectorAll('link[rel="alternate"][hreflang]');
+      for(var j=0;j<alts.length;j++){
+        var hl=alts[j].getAttribute('hreflang');
+        var hr=alts[j].getAttribute('href');
+        if(hl===detected&&hr){
+          try{var tp=new URL(hr).pathname;}catch(e){continue;}
+          if(window.location.pathname!==tp){window.location.replace(hr);}
+          break;
+        }
+      }
+    })();`} />
+
     <slot name="head" />
   </head>
   <body class="flex min-h-screen flex-col">
