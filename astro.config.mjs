@@ -8,12 +8,27 @@ export default defineConfig({
   // Production site URL used for sitemap and canonical/SEO absolute links.
   site: 'https://www.chinatripbox.com',
   output: 'static',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh-TW'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   integrations: [
     tailwind({
       // We provide our own base styles in src/styles/global.css
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en-US',
+          'zh-TW': 'zh-TW',
+        },
+      },
+    }),
     mdx(),
   ],
 });

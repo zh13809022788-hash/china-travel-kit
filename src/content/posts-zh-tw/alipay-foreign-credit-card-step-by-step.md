@@ -1,0 +1,90 @@
+---
+title: "外國人使用 Alipay：一步步綁定海外信用卡"
+description: "2026 年 Alipay 設定教學：安裝 App、完成身分驗證，並綁定海外 Visa 或 Mastercard，在中國用手機付款。"
+pubDate: 2026-07-07
+category: payment
+tags: ["alipay", "foreign card", "setup", "mobile payment"]
+featured: false
+faqs:
+  - question: "Alipay TourPass 是什麼，2026 年還需要嗎？"
+    answer: "TourPass 曾是外國旅客使用的預付儲值小程式。自 2023 年起，Alipay 已允許國際旅客直接在主 App 綁定海外 Visa 或 Mastercard，多數旅客不再需要 TourPass。現在最標準、最簡單的做法是直接綁卡。"
+  - question: "哪些海外卡可以綁到 Alipay？"
+    answer: "Alipay 支援 Visa、Mastercard、JCB、Diners Club 與 Discover 等主要國際卡組織。信用卡通常比簽帳金融卡穩定。卡片必須允許國際線上交易，若銀行有旅遊通知或網購限制，請出發前先處理。"
+  - question: "使用 Alipay 需要中國手機號碼或銀行帳戶嗎？"
+    answer: "不需要。你可以用本國手機號碼註冊並接收簡訊驗證碼，也可以用海外卡取代中國銀行帳戶。只要有行動數據或 Wi-Fi，就能完成註冊與身分驗證。"
+  - question: "透過 Alipay 用海外卡付款會有手續費嗎？"
+    answer: "200 RMB 以下交易通常免 Alipay 服務費；超過 200 RMB 的付款可能有約 3% 服務費。你的發卡銀行也可能收海外交易費，無外幣手續費卡最省。"
+  - question: "為什麼付款或綁卡一直被拒？"
+    answer: "常見原因包括銀行封鎖國際或線上交易、護照與卡片姓名不一致、臉部驗證未完成，或達到單筆交易限額。請聯絡銀行開通國際使用，確認資料一致，必要時拆分大額付款。"
+  - question: "Alipay 設定大約要多久？"
+    answer: "多數人約 10 到 15 分鐘可完成，前提是護照與卡片在手，且銀行沒有擋交易。出發前在穩定網路下設定，會比落地後排除問題輕鬆很多。"
+---
+
+如果你聽說中國到處都用 QR Code 付款，擔心外國人會被排除在外，這篇就是給你的。對旅客而言，最穩的付款方式通常是 **Alipay 綁定國際卡**。流程不複雜，但第一次進 App 很容易迷路，身分驗證也要仔細。
+
+## Before You Begin
+
+你需要準備：
+
+- **智慧型手機**，iOS 或 Android 都可。
+- **護照**，用於一次性身分驗證。
+- **海外信用卡或簽帳金融卡**，Visa 與 Mastercard 支援最廣。
+- **可收簡訊的手機號碼**，本國號碼即可。
+- **行動數據或 Wi-Fi**，註冊、驗證與付款都需要連線。
+
+建議出發前在家完成。綁卡有時會觸發銀行風控，在本國聯絡銀行比在機場處理容易得多。
+
+## Step-by-Step: Set Up Alipay and Link Your Card
+
+### 1. 下載並安裝 Alipay
+
+在 Apple App Store 或 Google Play 搜尋 **Alipay**，下載 Ant Group 發布的官方版本。最好在出發前完成，因為不同地區的商店可用性可能不同。
+
+### 2. 註冊帳號
+
+打開 App，選擇註冊，選國家或地區，輸入本國手機號碼並收簡訊驗證碼。你不需要中國號碼，也不需要中國銀行帳戶。
+
+### 3. 設定語言並找到卡片區
+
+國際帳號通常會顯示英文。進入首頁底部的 **Me**，找到 **Bank Cards**、**Add Card** 或錢包圖示。
+
+### 4. 新增海外信用卡或簽帳金融卡
+
+選 **Add Card**，依卡面輸入卡號、有效期、CVV 與持卡人姓名。姓名盡量與護照一致。Alipay 會自動辨識卡組織。
+
+### 5. 完成身分驗證
+
+這一步最容易出錯，請慢慢做：
+
+- 依護照輸入法定姓名與生日。
+- 拍攝或上傳護照資料頁。
+- 依畫面完成臉部驗證，例如眨眼或轉頭。
+
+資料越一致，通過越快；偶爾會進入人工審核。
+
+### 6. 確認並授權卡片
+
+驗證後 Alipay 會連結卡片。你的銀行可能會傳一次性驗證碼或 App 通知要求批准。部分銀行會有小額預授權，之後會自動退回。
+
+### 7. 做第一筆小額付款
+
+抵達後先用小額交易測試，例如買水。付款方式有兩種：
+
+- **掃商家 QR Code：** 點 Alipay 首頁的 **Scan**，掃碼、輸入金額並確認。
+- **出示自己的付款碼：** 點 **Pay/Collect**，讓商家掃你的個人 QR Code。
+
+確認成功後，再放心用於餐廳、計程車或景點。
+
+## Troubleshooting
+
+若綁卡失敗，先確認銀行允許海外與線上交易，姓名是否與護照一致，臉部驗證是否完成。若大額付款失敗，可能是平台或銀行限額，拆成兩筆通常更容易成功。
+
+## Read Next
+
+- [How to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay foreign visitors guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [How much cash to bring](/posts/how-much-cash-to-bring-to-china/)
+
+## Summary
+
+Alipay 對外國旅客已經相當實用。出發前下載、用本國號碼註冊、綁定海外卡、完成護照與臉部驗證，落地後做一筆小額測試。把它設好後，你在中國多數日常場景都能用 QR Code 順利付款。

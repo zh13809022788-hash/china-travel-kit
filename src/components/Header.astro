@@ -1,4 +1,15 @@
 ---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+export interface Props {
+  locale?: 'en' | 'zh-TW';
+  alternates?: {
+    en?: string;
+    'zh-TW'?: string;
+  };
+}
+
+const { locale = 'en', alternates } = Astro.props;
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/resources/', label: 'Start Here' },
@@ -20,11 +31,15 @@ const secondaryLinks = [
 const pathname = Astro.url.pathname;
 const isActive = (href: string) =>
   href === '/' ? pathname === '/' : pathname.startsWith(href);
+const isZhTw = locale === 'zh-TW';
+const isHome = pathname === '/' || pathname === '/zh-tw/';
+const enPath = alternates?.en ?? (isHome ? '/' : undefined);
+const zhTwPath = alternates?.['zh-TW'] ?? (isHome ? '/zh-tw/' : undefined);
 ---
 
 <header class="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur">
   <nav class="container-page flex h-16 items-center justify-between">
-    <a href="/" class="flex items-center gap-2 font-bold text-gray-900 hover:no-underline">
+    <a href={isZhTw ? '/zh-tw/' : '/'} class="flex items-center gap-2 font-bold text-gray-900 hover:no-underline">
       <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">CT</span>
       <span class="text-lg">ChinaTripBox</span>
     </a>
@@ -46,6 +61,10 @@ const isActive = (href: string) =>
       ))}
     </ul>
 
+    <div class="hidden lg:block">
+      <LanguageSwitcher currentLocale={locale} enPath={enPath} zhTwPath={zhTwPath} />
+    </div>
+
     <!-- Mobile hamburger -->
     <button
       id="menu-toggle"
@@ -63,7 +82,11 @@ const isActive = (href: string) =>
 
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden border-t border-gray-200 lg:hidden">
-    <ul class="container-page flex flex-col py-2">
+    <div class="container-page py-2">
+      <div class="pb-2">
+        <LanguageSwitcher currentLocale={locale} enPath={enPath} zhTwPath={zhTwPath} />
+      </div>
+    <ul class="flex flex-col">
       {[...navLinks, ...secondaryLinks].map((link) => (
         <li>
           <a
@@ -78,6 +101,7 @@ const isActive = (href: string) =>
         </li>
       ))}
     </ul>
+    </div>
   </div>
 </header>
 

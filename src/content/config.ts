@@ -19,6 +19,21 @@ const posts = defineCollection({
   }),
 });
 
+const postsZhTw = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    category: categorySchema,
+    tags: z.array(z.string()).default([]),
+    featured: z.boolean().default(false),
+    faqs: z.array(faqSchema).default([]),
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
+  }),
+});
+
 const dataPipelinePages = defineCollection({
   loader: glob({
     base: './data_pipeline/pages',
@@ -55,4 +70,4 @@ const dataPipelinePages = defineCollection({
   }),
 });
 
-export const collections = { posts, dataPipelinePages };
+export const collections = { posts, 'posts-zh-tw': postsZhTw, dataPipelinePages };

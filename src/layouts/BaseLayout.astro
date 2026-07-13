@@ -8,6 +8,11 @@ export interface Props {
   image?: string;
   type?: string;
   noindex?: boolean;
+  locale?: 'en' | 'zh-TW';
+  alternates?: {
+    en?: string;
+    'zh-TW'?: string;
+  };
 }
 
 const {
@@ -16,12 +21,18 @@ const {
   image = '/og-default.svg',
   type = 'website',
   noindex = false,
+  locale = 'en',
+  alternates,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
 const siteName = 'ChinaTripBox';
 const siteURL = new URL('/', Astro.site).toString();
+const htmlLang = locale === 'zh-TW' ? 'zh-TW' : 'en';
+const enAlternate = alternates?.en ? new URL(alternates.en, Astro.site).toString() : null;
+const zhTwAlternate = alternates?.['zh-TW'] ? new URL(alternates['zh-TW'], Astro.site).toString() : null;
+const availableLanguage = locale === 'zh-TW' ? ['zh-TW', 'en'] : ['en', 'zh-TW'];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -41,7 +52,7 @@ const jsonLd = {
         '@type': 'ContactPoint',
         contactType: 'customer support',
         url: new URL('/contact/', Astro.site).toString(),
-        availableLanguage: ['en'],
+        availableLanguage,
       },
     },
     {
@@ -77,7 +88,7 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={htmlLang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -114,6 +125,9 @@ const jsonLd = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    {enAlternate && <link rel="alternate" hreflang="en" href={enAlternate} />}
+    {zhTwAlternate && <link rel="alternate" hreflang="zh-TW" href={zhTwAlternate} />}
+    {enAlternate && <link rel="alternate" hreflang="x-default" href={enAlternate} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Open Graph -->

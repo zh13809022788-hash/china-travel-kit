@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/images/city-shanghai.jpg';
+
+const posts = await getCollection('posts-zh-tw');
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categoryLabels: Record<string, string> = {
+  payment: '付款',
+  esim: 'eSIM 與網路',
+  transport: '交通',
+  essentials: '行前準備',
+  food: '美食與用餐',
+};
+---
+
+<BaseLayout
+  title="ChinaTripBox 繁體中文指南 | 中國自由行付款、上網與交通"
+  description="面向海外華人的中國自由行實用指南：Alipay、WeChat Pay、eSIM、高鐵、DiDi、簽證與抵達後的日常準備。"
+  locale="zh-TW"
+  alternates={{ en: '/', 'zh-TW': '/zh-tw/' }}
+>
+  <Header locale="zh-TW" />
+  <main>
+    <section class="border-b border-gray-200 bg-gray-50">
+      <div class="container-page grid gap-8 py-12 lg:grid-cols-[1fr_360px] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wide text-brand-700">ChinaTripBox 繁體中文</p>
+          <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+            出發中國前，先搞定付款、上網、交通與入境準備
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+            這裡整理給海外華人與港澳台、東南亞旅客的實用中國旅行指南。從 Alipay、WeChat Pay、eSIM、高鐵到 DiDi，先把最容易卡住的環節處理好。
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/zh-tw/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">先看付款指南</a>
+            <a href="/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">查看行前清單</a>
+          </div>
+        </div>
+
+        <aside class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+          <Image
+            src={heroImage}
+            alt="上海城市天際線，代表中國城市旅行規劃"
+            widths={[360, 720]}
+            sizes="(max-width: 1024px) 100vw, 360px"
+            quality={65}
+            loading="eager"
+            class="h-52 w-full object-cover"
+          />
+          <div class="p-5">
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">建議閱讀順序</p>
+            <h2 class="mt-2 text-lg font-bold text-gray-950">先解決抵達第一天會用到的事</h2>
+            <p class="mt-2 text-sm leading-6 text-gray-600">
+              付款、網路、叫車與火車票是最值得提前設定的四件事。
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="container-page py-10">
+      <AdSlot format="banner" />
+
+      <section class="py-8">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">最新繁體指南</p>
+            <h2>中國自由行實用文章</h2>
+          </div>
+          <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">返回英文版</a>
+        </div>
+
+        <div class="mt-6 divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white">
+          {sortedPosts.map((post) => (
+            <a href={`/zh-tw/posts/${post.slug}/`} class="group block p-5 hover:bg-gray-50 hover:no-underline">
+              <div class="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-brand-700">
+                <span>{categoryLabels[post.data.category] ?? post.data.category}</span>
+                <span class="text-gray-300">/</span>
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {post.data.pubDate.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </div>
+              <h3 class="mt-2 text-lg font-bold text-gray-950 group-hover:text-brand-700">{post.data.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <AdSlot format="banner" />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

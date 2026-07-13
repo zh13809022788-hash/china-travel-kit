@@ -1,0 +1,76 @@
+---
+title: "2026 去中國要帶多少現金？旅客金錢指南"
+description: "2026 年旅客去中國要帶多少現金、哪些場景仍會用到人民幣、換匯與 ATM 技巧，以及入出境現金申報限制。"
+pubDate: 2026-07-08
+category: payment
+tags: ["cash", "currency exchange", "china money", "rmb"]
+featured: false
+faqs:
+  - question: "去中國一週應該帶多少現金？"
+    answer: "多數旅客在行動錢包之外，準備約 1,000 到 2,000 RMB 現金作為備援就很足夠。中國以行動支付為主，現金主要用於小攤、部分計程車、寺廟或付款 App 失效時。需要時也可再從 ATM 提款。"
+  - question: "2026 年中國哪些地方還需要現金？"
+    answer: "小型或鄉鎮商家、部分老式計程車、寺廟捐款箱、在地市場，以及行動錢包驗證失敗時仍可能需要現金。中國法律要求商家接受人民幣現金，因此它是最穩的備用方式。"
+  - question: "哪裡換人民幣匯率比較好？"
+    answer: "Bank of China 分行與大型銀行 ATM 通常匯率較好，機場換匯櫃台通常較差。可帶乾淨的美元或歐元到銀行換，或抵達後用 Bank of China、ICBC ATM 提款。若機器詢問是否用本國貨幣結算，請選人民幣，避免額外加價。"
+  - question: "可以合法帶多少現金進中國？"
+    answer: "入境或出境時，若攜帶外幣等值超過 USD 5,000，或人民幣超過 20,000 RMB，需要向海關申報。一般旅遊通常遠低於這些門檻。"
+  - question: "離開中國時可以把剩下人民幣換回本國貨幣嗎？"
+    answer: "可以在銀行或機場櫃台換回，但匯率與便利性不同，大額可能需要原始換匯憑證。因此不要一開始換太多，按需從 ATM 提款更彈性。"
+  - question: "美元或歐元可以在中國直接使用嗎？"
+    answer: "不可以。中國商家只收人民幣，外幣現金必須先在銀行換成人民幣，或直接從 ATM 提人民幣。若要換匯，請帶乾淨無破損的外幣鈔票。"
+---
+
+## Introduction
+
+中國幾乎是手機付款社會。從捷運到一碗麵，當地人多半掃 QR Code 完成付款。那旅客還要不要帶現金？答案是：需要，但比你想像少。
+
+2026 年的中國，現金不是主力，而是安全網。它能在小攤不收行動支付、錢包 App 驗證卡住、或你去到偏遠地區時救急。
+
+## Before You Begin
+
+你的主要付款方式應該是 Alipay 或 WeChat Pay 綁定海外卡。現金放在第二層，處理少數例外。
+
+不要帶一大疊人民幣入境。一次換太多容易匯率差，也可能離境時剩很多要換回。更好的方式是帶少量啟動現金，或抵達後從 ATM 提款，需要時再補。
+
+外幣現金本身不能在中國直接消費，必須先換成人民幣。
+
+## How Much Cash to Actually Bring
+
+一般一週旅行，約 1,000 到 2,000 RMB 現金對多數人很舒服。這足以處理少數不能行動支付的場景，又不會讓你帶太多現金在身上。
+
+長途旅行不需要按天數線性增加，因為你可以途中提款。請準備一些 10、20、50 RMB 小鈔，市場、寺廟或小店比 100 RMB 大鈔更好用。
+
+## Where You'll Still Spend Cash
+
+你可能在以下場景用到現金：
+
+- 小型或鄉鎮商家
+- 部分老式計程車
+- 寺廟捐款箱
+- 在地市場與街邊小攤
+- Alipay 或 WeChat Pay 驗證失敗
+- 海外卡臨時被銀行拒絕
+
+重點是，人民幣現金是法律上的支付方式，是行動支付出問題時的保險。
+
+<!-- AFFILIATE_PAYMENT -->
+
+## Exchanging Money the Smart Way
+
+銀行匯率通常比機場換匯好，Bank of China 是常見選擇。若帶外幣換匯，請帶乾淨、無破損、無塗寫的美元或歐元。
+
+很多旅客最方便的方式，是抵達後直接從 Bank of China 或 ICBC ATM 提人民幣。這樣不必攜帶大量外幣。提款或刷卡時若機器問你要用本國貨幣還是人民幣結算，請選人民幣，避免動態貨幣轉換加價。
+
+## Customs Limits You Should Know
+
+中國出入境現金有申報門檻：外幣等值超過 USD 5,000，或人民幣超過 20,000 RMB，需要申報。一般旅客通常不會接近，但若你因特殊原因攜帶大量現金，請保留換匯憑證並遵守申報規定。
+
+## Read Next
+
+- [cash in China for foreigners](/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/)
+- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [foreign credit card acceptance in China](/posts/use-foreign-credit-card-in-china-directly/)
+
+## Summary
+
+在中國，現金是備援，不是主錢包。一週旅行準備 1,000 到 2,000 RMB 小鈔與中面額鈔票，通常足以應付小商家、寺廟、偶爾的計程車與付款 App 失效。日常消費以 Alipay 或 WeChat Pay 為主，需要時從大型銀行 ATM 補現金即可。
