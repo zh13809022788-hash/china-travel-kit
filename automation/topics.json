@@ -1,0 +1,113 @@
+{
+  "_comment": "选题/关键词队列。每个对象一个选题。脚本按 used=false 顺序取题，发布后自动置 used=true 并写回。你只需持续往 queue 里追加新选题即可。category 必须是 payment|esim|transport|essentials|food 之一。angle 可选，用于给生成器一个差异化切入角度。",
+  "queue": [
+    {
+      "keyword": "how to get from Beijing Daxing airport to city center",
+      "category": "transport",
+      "angle": "first-time arrival, late-night options",
+      "used": true
+    },
+    {
+      "keyword": "using Apple Pay and Google Pay in China as a tourist",
+      "category": "payment",
+      "angle": "what actually works vs what doesn't",
+      "used": true
+    },
+    {
+      "keyword": "best food apps for ordering in China without Chinese",
+      "category": "food",
+      "angle": "English-friendly ordering, Meituan/Ele.me",
+      "used": true
+    },
+    {
+      "keyword": "China eSIM vs roaming cost comparison 2026",
+      "category": "esim",
+      "angle": "real price breakdown for a 10-day trip",
+      "used": true
+    },
+    {
+      "keyword": "what to pack for a first trip to China",
+      "category": "essentials",
+      "angle": "season-by-season checklist",
+      "used": true
+    },
+    {
+      "keyword": "taking the metro in Shanghai as a foreigner",
+      "category": "transport",
+      "angle": "buying tickets, QR codes, transfers",
+      "used": true
+    },
+    {
+      "keyword": "how to tip and handle service charges in China",
+      "category": "essentials",
+      "angle": "etiquette, when tipping is expected",
+      "used": true
+    },
+    {
+      "keyword": "street food safety and must-try dishes in Chengdu",
+      "category": "food",
+      "angle": "spice levels, hygiene, what to order",
+      "used": true
+    },
+    {
+      "keyword": "how to link a foreign Visa or Mastercard to WeChat Pay in China",
+      "category": "payment",
+      "angle": "step-by-step for tourists after the 2024-2026 card-binding limit changes, including transaction caps",
+      "used": true
+    },
+    {
+      "keyword": "can you still use cash in China as a foreigner in 2026",
+      "category": "payment",
+      "angle": "where cash is refused vs accepted, and how to get small notes for taxis and rural areas",
+      "used": true
+    },
+    {
+      "keyword": "how to buy a China eSIM that works in Tibet and Xinjiang",
+      "category": "esim",
+      "angle": "coverage and registration gotchas in restricted or remote regions most guides skip",
+      "used": false
+    },
+    {
+      "keyword": "do China eSIMs let you access Google and Instagram without a VPN",
+      "category": "esim",
+      "angle": "which international eSIMs route around the firewall vs which don't, tested for social apps",
+      "used": false
+    },
+    {
+      "keyword": "how to book high-speed train tickets on China Railway 12306 with a foreign passport",
+      "category": "transport",
+      "angle": "navigating passport verification and seat selection on the official app for non-residents",
+      "used": false
+    },
+    {
+      "keyword": "how to get from Chengdu airport to the giant panda base by public transport",
+      "category": "transport",
+      "angle": "cheapest metro-plus-bus route with timings for a half-day visit",
+      "used": false
+    },
+    {
+      "keyword": "how to use DiDi in China as an English-speaking foreigner",
+      "category": "transport",
+      "angle": "setting up the app, paying with a foreign card, and handling driver calls without Chinese",
+      "used": false
+    },
+    {
+      "keyword": "how to register your accommodation with police as a foreigner in China",
+      "category": "essentials",
+      "angle": "the 24-hour registration rule for hotels vs Airbnb and private stays, and what happens if you skip it",
+      "used": false
+    },
+    {
+      "keyword": "how to find clean public toilets while traveling in China",
+      "category": "essentials",
+      "angle": "reading signage, bring-your-own-tissue reality, and apps that locate Western-style toilets",
+      "used": false
+    },
+    {
+      "keyword": "how to order food in Xi'an for vegetarians and Muslims",
+      "category": "food",
+      "angle": "halal Hui quarter navigation and key phrases to avoid pork and meat broth",
+      "used": false
+    }
+  ]
+}

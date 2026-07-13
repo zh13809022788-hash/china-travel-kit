@@ -1,0 +1,83 @@
+{
+  "cover-digital-nomads": {
+    "photographer": "Joshua Fernandez",
+    "photographer_url": "https://unsplash.com/@joshuafernandez?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/woman-in-yellow-hoodie-sitting-on-red-plastic-seat-XNV4BLIMwGw?utm_source=chinatripbox&utm_medium=referral",
+    "query": "remote work laptop cafe China city",
+    "description": "Waiting",
+    "width": 4608,
+    "height": 3456
+  },
+  "cover-visa": {
+    "photographer": "Sergio Kian",
+    "photographer_url": "https://unsplash.com/@sergiokian?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/one-hundred-chinese-yuan-sits-on-top-of-passports-g1sxX_bUiiE?utm_source=chinatripbox&utm_medium=referral",
+    "query": "China passport travel documents",
+    "description": "One hundred chinese yuan sits on top of passports.",
+    "width": 6000,
+    "height": 3735
+  },
+  "cover-payment": {
+    "photographer": "Saradasish Pradhan",
+    "photographer_url": "https://unsplash.com/@saradasish?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/a-close-up-of-a-cell-phone-on-a-table--SDEwTeaZ4A?utm_source=chinatripbox&utm_medium=referral",
+    "query": "mobile payment QR code smartphone China",
+    "description": "A close up of a cell phone on a table",
+    "width": 5475,
+    "height": 3650
+  },
+  "cover-ai-opc": {
+    "photographer": "Henry Chen",
+    "photographer_url": "https://unsplash.com/@chentianlu?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/city-skyline-during-night-time-x7clQSWhlfE?utm_source=chinatripbox&utm_medium=referral",
+    "query": "China city skyline technology night",
+    "description": "city skyline during night time",
+    "width": 7036,
+    "height": 4207
+  },
+  "city-shanghai": {
+    "photographer": "Freeman Zhou",
+    "photographer_url": "https://unsplash.com/@freeman_zhou?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/black-and-blue-wooden-table-oV9hp8wXkPE?utm_source=chinatripbox&utm_medium=referral",
+    "query": "Shanghai the Bund skyline",
+    "description": "The view of lujiazui from the bund",
+    "width": 8192,
+    "height": 4696
+  },
+  "city-beijing": {
+    "photographer": "__ drz __",
+    "photographer_url": "https://unsplash.com/@__drz__?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/empty-brown-and-white-building-during-daytime-wXyf-U8HqiI?utm_source=chinatripbox&utm_medium=referral",
+    "query": "Beijing Forbidden City Great Wall",
+    "description": "empty brown and white building during daytime",
+    "width": 6240,
+    "height": 3510
+  },
+  "city-chengdu": {
+    "photographer": "Pascal Müller",
+    "photographer_url": "https://unsplash.com/@millerthachiller?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/two-white-and-black-pandas-lying-on-floor-during-daytime-4EajIuUxgAQ?utm_source=chinatripbox&utm_medium=referral",
+    "query": "Chengdu panda Sichuan",
+    "description": "two new born panda babys at the panda breeding station in Chengdu, China. Aren’t they cute?",
+    "width": 5456,
+    "height": 3632
+  },
+  "city-hangzhou": {
+    "photographer": "jevens julian",
+    "photographer_url": "https://unsplash.com/@julian11?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/gray-pergula-between-green-grass-GEjGkc7Tb7Y?utm_source=chinatripbox&utm_medium=referral",
+    "query": "Hangzhou West Lake",
+    "description": "gray pergula between green grass",
+    "width": 5905,
+    "height": 4016
+  },
+  "city-sanya": {
+    "photographer": "Pe Seth",
+    "photographer_url": "https://unsplash.com/@peseth086?utm_source=chinatripbox&utm_medium=referral",
+    "unsplash_url": "https://unsplash.com/photos/wavy-seashore-during-daytime-0L97UPHJi2U?utm_source=chinatripbox&utm_medium=referral",
+    "query": "Sanya Hainan tropical beach",
+    "description": "Sea",
+    "width": 3926,
+    "height": 2209
+  }
+}

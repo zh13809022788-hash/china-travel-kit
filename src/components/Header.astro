@@ -1,0 +1,91 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/resources/', label: 'Start Here' },
+  { href: '/essentials/', label: 'Essentials' },
+  { href: '/payment/', label: 'Payments' },
+  { href: '/esim/', label: 'Internet' },
+  { href: '/transport/', label: 'Transport' },
+  { href: '/cities/', label: 'Cities' },
+  { href: '/food/', label: 'Food' },
+  { href: '/tools/', label: 'Tools' },
+];
+const secondaryLinks = [
+  { href: '/trip-planner/', label: 'Trip Planner' },
+  { href: '/long-stay/', label: 'Long Stay' },
+  { href: '/digital-nomads/', label: 'Digital Nomads' },
+  { href: '/travel-help/', label: 'Help' },
+  { href: '/about/', label: 'About' },
+];
+const pathname = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/' ? pathname === '/' : pathname.startsWith(href);
+---
+
+<header class="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur">
+  <nav class="container-page flex h-16 items-center justify-between">
+    <a href="/" class="flex items-center gap-2 font-bold text-gray-900 hover:no-underline">
+      <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">CT</span>
+      <span class="text-lg">ChinaTripBox</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden items-center gap-4 lg:flex xl:gap-5">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class:list={[
+              'text-sm font-medium transition-colors hover:text-brand-600 hover:no-underline',
+              isActive(link.href) ? 'text-brand-600' : 'text-gray-700',
+            ]}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 lg:hidden"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden border-t border-gray-200 lg:hidden">
+    <ul class="container-page flex flex-col py-2">
+      {[...navLinks, ...secondaryLinks].map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class:list={[
+              'block py-2.5 text-sm font-medium hover:no-underline',
+              isActive(link.href) ? 'text-brand-600' : 'text-gray-700',
+            ]}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(open === false));
+  });
+</script>

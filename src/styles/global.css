@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Global reset & base ---- */
+@layer base {
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #6b7280;
+    --color-border: #e5e7eb;
+    --content-width: 768px;
+    --surface-soft: #f8fafc;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f8fafc 55%, #ffffff 100%);
+    color: var(--color-text);
+    font-family: theme('fontFamily.sans');
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  a {
+    color: theme('colors.brand.600');
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ---- Reusable component classes ---- */
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  .prose-content {
+    max-width: var(--content-width);
+    margin-inline: auto;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-700 hover:no-underline;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-800 shadow-sm transition-colors hover:border-brand-600 hover:text-brand-600 hover:no-underline;
+  }
+
+  .card {
+    @apply rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md;
+  }
+
+  .section-heading {
+    @apply flex flex-col gap-3 border-b border-gray-200 pb-4 sm:flex-row sm:items-end sm:justify-between;
+  }
+
+  .section-heading h2 {
+    @apply text-2xl font-bold tracking-normal text-gray-950;
+  }
+
+  .section-kicker {
+    @apply text-xs font-semibold uppercase tracking-wide text-brand-700;
+  }
+
+  .search-shell {
+    @apply overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm ring-1 ring-black/5;
+  }
+
+  .search-chip {
+    @apply rounded-full border border-gray-200 bg-white px-3 py-1.5 text-gray-700 shadow-sm transition hover:border-brand-200 hover:bg-brand-50 hover:text-brand-700;
+  }
+}

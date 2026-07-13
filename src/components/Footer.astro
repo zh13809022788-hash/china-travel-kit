@@ -1,0 +1,44 @@
+---
+const year = new Date().getFullYear();
+const legalLinks = [
+  { href: '/travel-help/', label: 'Travel Help' },
+  { href: '/resources/', label: 'Resources' },
+  { href: '/about/', label: 'About' },
+  { href: '/contact/', label: 'Contact' },
+  { href: '/editorial-policy/', label: 'Editorial Policy' },
+  { href: '/privacy/', label: 'Privacy Policy' },
+  { href: '/terms/', label: 'Terms' },
+];
+---
+
+<footer class="mt-auto border-t border-gray-200 bg-gray-50">
+  <div class="container-page py-10">
+    <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+      <div>
+        <div class="flex items-center gap-2 font-bold text-gray-900">
+          <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand-600 text-sm text-white">CT</span>
+          ChinaTripBox
+        </div>
+        <p class="mt-2 max-w-xl text-sm leading-6 text-gray-500">
+          ChinaTripBox is an independent China travel planning site for foreign visitors.
+          We publish practical guides, tools, and optional human-reviewed trip help. Some
+          links may earn us a commission.
+        </p>
+        <p class="mt-2 max-w-xl text-xs leading-5 text-gray-500">
+          We provide general travel information only, not legal, immigration, medical,
+          banking, emergency, or official government advice.
+        </p>
+      </div>
+      <ul class="flex flex-wrap gap-5">
+        {legalLinks.map((link) => (
+          <li>
+            <a href={link.href} class="text-sm text-gray-600 hover:text-brand-600">{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="mt-8 border-t border-gray-200 pt-6 text-sm text-gray-500">
+      &copy; {year} ChinaTripBox. All rights reserved.
+    </div>
+  </div>
+</footer>

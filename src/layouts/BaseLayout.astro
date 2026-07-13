@@ -1,0 +1,137 @@
+---
+import '../styles/global.css';
+import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID } from '../config';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = 'ChinaTripBox — Payment, eSIM & Transport Guides for Visitors',
+  description = 'Practical, up-to-date guides for foreign visitors to China: mobile payments, eSIM data plans, trains, ride-hailing and more.',
+  image = '/og-default.svg',
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image, Astro.site);
+const siteName = 'ChinaTripBox';
+const siteURL = new URL('/', Astro.site).toString();
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteURL}#organization`,
+      name: siteName,
+      url: siteURL,
+      logo: new URL('/favicon.svg', Astro.site).toString(),
+      description:
+        'Independent China travel guides and planning tools for foreign visitors, covering mobile payments, eSIMs, transport, trip planning, and everyday travel logistics.',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        url: new URL('/contact/', Astro.site).toString(),
+        availableLanguage: ['en'],
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteURL}#website`,
+      name: siteName,
+      url: siteURL,
+      description,
+      publisher: {
+        '@id': `${siteURL}#organization`,
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${siteURL}?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalURL.toString()}#webpage`,
+      url: canonicalURL.toString(),
+      name: title,
+      description,
+      isPartOf: {
+        '@id': `${siteURL}#website`,
+      },
+      about: {
+        '@id': `${siteURL}#organization`,
+      },
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="ChinaTripBox Travel Guides" href="/rss.xml" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="google-site-verification" content="4IazPod-9BT1hQUHHWC0xb6GO0esJ2o3oZB9Iq_d_lA" />
+    {ADSENSE_PUBLISHER_ID && <meta name="google-adsense-account" content={ADSENSE_PUBLISHER_ID} />}
+    {
+      ADSENSE_PUBLISHER_ID && (
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`}
+          crossorigin="anonymous"
+        />
+      )
+    }
+
+    {
+      CLARITY_PROJECT_ID && (
+        <script
+          is:inline
+          set:html={`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");
+          `}
+        />
+      )
+    }
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <slot name="head" />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <slot />
+  </body>
+</html>

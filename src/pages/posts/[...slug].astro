@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { data } = post;
+
+// Per-category affiliate CTA mapping
+const affiliateByCategory: Record<string, { title: string; description: string; buttonText: string }> = {
+  payment: {
+    title: 'Travel-Ready Payment Setup',
+    description: 'Get a prepaid travel card that works seamlessly with Alipay and WeChat Pay in China.',
+    buttonText: 'Get Started',
+  },
+  esim: {
+    title: 'Recommended China eSIM',
+    description: 'Skip the airport queue — activate a high-speed data plan before you land.',
+    buttonText: 'View Plans',
+  },
+  transport: {
+    title: 'Book Trains & Rides Easily',
+    description: 'Reserve high-speed train tickets and airport transfers in English, hassle-free.',
+    buttonText: 'Book Now',
+  },
+};
+
+const affiliate = affiliateByCategory[data.category];
+const allPosts = await getCollection('posts');
+const related = allPosts
+  .filter((candidate) => candidate.slug !== post.slug)
+  .map((candidate) => {
+    const sharedTags = candidate.data.tags.filter((tag) => data.tags.includes(tag)).length;
+    const categoryMatch = candidate.data.category === data.category ? 2 : 0;
+    const cityMatch =
+      ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya'].some(
+        (city) => post.slug.includes(city) && candidate.slug.includes(city)
+      )
+        ? 3
+        : 0;
+    return { candidate, score: sharedTags + categoryMatch + cityMatch };
+  })
+  .filter((item) => item.score > 0)
+  .sort((a, b) => b.score - a.score || b.candidate.data.pubDate.valueOf() - a.candidate.data.pubDate.valueOf())
+  .slice(0, 4)
+  .map(({ candidate }) => ({
+    title: candidate.data.title,
+    description: candidate.data.description,
+    href: `/posts/${candidate.slug}/`,
+  }));
+---
+
+<BlogPost
+  title={data.title}
+  description={data.description}
+  pubDate={data.pubDate}
+  category={data.category}
+  tags={data.tags}
+  faqs={data.faqs}
+  cover={data.cover}
+  coverAlt={data.coverAlt}
+  related={related}
+  affiliate={affiliate}
+>
+  <Content />
+</BlogPost>

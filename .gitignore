@@ -4,10 +4,13 @@
 # Dependencies
 node_modules/
 
-# Environment & secrets (uncomment trip_config.json when real tokens are added)
-# trip_config.json
+# Environment & secrets
+# trip_config.json  # uncomment when real tokens are added
 .env
+.env.*
 .env.local
+.dev.vars
+*.local
 
 # OS files
 .DS_Store
@@ -20,6 +23,36 @@ Thumbs.db
 # Build output
 dist/
 build/
+.astro/
+.cache/
+coverage/
 
 # Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+.venv/
+
+# Secrets
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# Automation pipeline
+automation/config.toml
+automation/logs/
+
+# SSH keys
+ssh_key.txt
+
+# Lockfiles (keep if you prefer a package manager)
+# package-lock.json
+# pnpm-lock.yaml
