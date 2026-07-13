@@ -81,7 +81,13 @@ jobs:
       - name: Build site (regenerates sitemap)
         run: npm run build
 
-      - name: Deploy to Cloudflare Pages
+      # Deploy is handled by Cloudflare Pages Git integration: every push to
+      # main triggers an automatic Cloudflare build & deploy. This step is kept
+      # only as an optional fallback and is non-fatal — if the CLOUDFLARE_API_TOKEN
+      # lacks Pages:Edit permission it 404s, but that no longer blocks the run,
+      # because the site already deploys via Git integration on the push above.
+      - name: Deploy to Cloudflare Pages (optional fallback)
+        continue-on-error: true
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
