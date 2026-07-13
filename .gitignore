@@ -1,0 +1,25 @@
+# WorkBuddy internal
+.workbuddy/
+
+# Dependencies
+node_modules/
+
+# Environment & secrets (uncomment trip_config.json when real tokens are added)
+# trip_config.json
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log

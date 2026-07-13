@@ -1,0 +1,43 @@
+name: Chinatripbox Automated Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # 允许你手动触发，方便老板随时调度
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Verify Identity
+        run: |
+          # 检查是否存在专属锚点，确保没有混入白酒项目的数据
+          if [ -f "trip_config.json" ]; then
+            echo "Identity Verified: Chinatripbox Pipeline Active."
+          else
+            echo "Error: Identity file missing. Pipeline Aborted."
+            exit 1
+          fi
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run Data Processing
+        run: |
+          # 这里调用旅游专用的数据处理逻辑
+          echo "Processing Trip Data from /data..."
+          # 模拟后续接入的逻辑
+
+      - name: Update Status Board
+        run: |
+          echo "Status: Pipeline Executed Successfully at $(date)" >> STATUS.md
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add STATUS.md
+          git commit -m "Update status board via automation"
+          git push
