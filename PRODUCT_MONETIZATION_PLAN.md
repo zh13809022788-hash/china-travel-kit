@@ -572,3 +572,16 @@ Recommended next work:
 Important rule:
 
 - Every future change to monetization, content cadence, paid service design, indexing strategy, or Trip Planner scope should update this file before finishing the session.
+
+## 2026-07-13 Publishing Update
+
+Published 2 new original English supporting posts for the first-time China visitor cluster:
+
+- `China Trip Planner for First-Time Visitors: Payment, eSIM, Transport and Apps`
+- `What to Set Up Before Traveling to China: Alipay, eSIM, DiDi and Train Tickets`
+
+Both posts support the planned SEO path around `/trip-planner/`, `/payment/`, `/esim/`, `/transport/`, `/tools/`, and `/travel-help/`. The decision was to publish 2 substantial articles rather than force a third thin article.
+
+Verification:
+
+- `npm run build` passed on 2026-07-13 and generated 63 static pages plus sitemap.
