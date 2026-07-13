@@ -585,3 +585,32 @@ Both posts support the planned SEO path around `/trip-planner/`, `/payment/`, `/
 Verification:
 
 - `npm run build` passed on 2026-07-13 and generated 63 static pages plus sitemap.
+
+## 2026-07-13 Infrastructure and Quality Update
+
+Implemented additional indexing and quality infrastructure after the 2-post publishing update:
+
+- Added `/rss.xml` using `@astrojs/rss` so new guides can be discovered through RSS readers and feed-aware crawlers.
+- Added `/llms.txt` with core pages, featured guides, latest guides, tools, and editorial scope for AI/search agents.
+- Added RSS discovery metadata in the base layout.
+- Improved `/tools/` SEO by expanding the title/description, adding use-case sections, linking to the two new first-time visitor articles, and adding CollectionPage/WebApplication JSON-LD for the tool collection.
+- Added stronger internal entry links from `/resources/`, `/trip-planner/`, and `/travel-help/` to the two new articles.
+- Added `npm run check:content` as a local content quality report script. It checks post frontmatter, category, body length, section count, FAQ count, internal links, placeholder text, and unusually high external link count.
+
+Quality check policy:
+
+- Default mode is report-only so historical content debt does not block urgent publishing.
+- Strict mode is available with `npm run check:content -- --strict` when a future release should fail on content quality issues.
+
+Known content quality debt from the first report:
+
+- Many older posts have too few internal links.
+- City guide posts are relatively thin and should be expanded before aggressive Google indexing pushes.
+- Several long SEO titles should be reviewed later, but title length alone is not blocking.
+
+Next ChinaTripBox work:
+
+1. Expand internal links across older payment/eSIM/transport posts.
+2. Upgrade city guides from thin summaries into practical city planning pages.
+3. Add a short `Related setup guides` block to high-traffic posts.
+4. Keep the 2-3 original English posts/week cadence; do not bulk publish thin articles.
