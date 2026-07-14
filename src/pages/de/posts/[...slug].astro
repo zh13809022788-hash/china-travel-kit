@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPost from '../../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts-de');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { data } = post;
+
+const affiliateByCategory: Record<string, { title: string; description: string; buttonText: string }> = {
+  payment: {
+    title: 'Zahlungseinrichtung',
+    description: 'Bereiten Sie eine Reisekarte für Alipay und WeChat Pay vor der Abreise vor — entspannter bei der Ankunft.',
+    buttonText: 'Jetzt einrichten',
+  },
+  esim: {
+    title: 'Empfohlene China eSIM',
+    description: 'Keine Warteschlange am Flughafen. Aktivieren Sie Highspeed-Internet vor dem Abflug.',
+    buttonText: 'Tarife ansehen',
+  },
+  transport: {
+    title: 'Zugtickets & Transfers',
+    description: 'Buchen Sie Hochgeschwindigkeitszug-Tickets und Flughafentransfers auf Englisch — weniger Stress.',
+    buttonText: 'Buchen',
+  },
+};
+
+const affiliate = affiliateByCategory[data.category];
+const allPosts = await getCollection('posts-de');
+const related = allPosts
+  .filter((candidate) => candidate.slug !== post.slug)
+  .map((candidate) => {
+    const sharedTags = candidate.data.tags.filter((tag) => data.tags.includes(tag)).length;
+    const categoryMatch = candidate.data.category === data.category ? 2 : 0;
+    const cityMatch =
+      ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya'].some(
+        (city) => post.slug.includes(city) && candidate.slug.includes(city)
+      )
+        ? 3
+        : 0;
+    return { candidate, score: sharedTags + categoryMatch + cityMatch };
+  })
+  .filter((item) => item.score > 0)
+  .sort((a, b) => b.score - a.score || b.candidate.data.pubDate.valueOf() - a.candidate.data.pubDate.valueOf())
+  .slice(0, 4)
+  .map(({ candidate }) => ({
+    title: candidate.data.title,
+    description: candidate.data.description,
+    href: `/de/posts/${candidate.slug}/`,
+  }));
+---
+
+<BlogPost
+  title={data.title}
+  description={data.description}
+  pubDate={data.pubDate}
+  category={data.category}
+  tags={data.tags}
+  faqs={data.faqs}
+  cover={data.cover}
+  coverAlt={data.coverAlt}
+  related={related}
+  locale="de"
+  alternates={{ en: `/posts/${post.slug}/`, de: `/de/posts/${post.slug}/` }}
+  affiliate={affiliate}
+>
+  <Content />
+</BlogPost>

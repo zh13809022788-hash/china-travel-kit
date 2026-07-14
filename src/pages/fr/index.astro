@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/images/city-shanghai.jpg';
+
+const posts = await getCollection('posts-fr');
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categoryLabels: Record<string, string> = {
+  payment: 'Paiement',
+  esim: 'eSIM et Internet',
+  transport: 'Transport',
+  essentials: 'Préparation',
+  food: 'Gastronomie',
+};
+---
+
+<BaseLayout
+  title="ChinaTripBox en français | Paiement, Internet et Transport en Chine"
+  description="Guides pratiques pour les voyageurs francophones en Chine : Alipay, WeChat Pay, eSIM, trains à grande vitesse, DiDi, visas et préparation au voyage."
+  locale="fr"
+  alternates={{ en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' }}
+>
+  <Header locale="fr" />
+  <main>
+    <section class="border-b border-gray-200 bg-gray-50">
+      <div class="container-page grid gap-8 py-12 lg:grid-cols-[1fr_360px] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wide text-brand-700">ChinaTripBox Français</p>
+          <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+            Configurez paiement, internet et transport avant d'arriver en Chine
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+            Guides pratiques pour les voyageurs francophones : Alipay, WeChat Pay, eSIM, trains à grande vitesse, DiDi — tout ce qu'il faut régler avant le départ.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/fr/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">Guide de paiement</a>
+            <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">Checklist avant départ</a>
+          </div>
+        </div>
+
+        <aside class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+          <Image
+            src={heroImage}
+            alt="Skyline de Shanghai, planification de voyage en Chine"
+            widths={[360, 720]}
+            sizes="(max-width: 1024px) 100vw, 360px"
+            quality={65}
+            loading="eager"
+            class="h-52 w-full object-cover"
+          />
+          <div class="p-5">
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Ordre de lecture</p>
+            <h2 class="mt-2 text-lg font-bold text-gray-950">Commencez par ce dont vous aurez besoin le premier jour</h2>
+            <p class="mt-2 text-sm leading-6 text-gray-600">
+              Paiement, internet, taxi et billets de train : les quatre choses qui valent la peine d'être préparées à l'avance.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="container-page py-10">
+      <AdSlot format="banner" />
+
+      <section class="py-8">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Nouveaux articles en français</p>
+            <h2>Guides pratiques pour la Chine</h2>
+          </div>
+          <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">Version anglaise</a>
+        </div>
+
+        {sortedPosts.length > 0 ? (
+          <div class="mt-6 divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white">
+            {sortedPosts.map((post) => (
+              <a href={`/fr/posts/${post.slug}/`} class="group block p-5 hover:bg-gray-50 hover:no-underline">
+                <div class="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-brand-700">
+                  <span>{categoryLabels[post.data.category] ?? post.data.category}</span>
+                  <span class="text-gray-300">/</span>
+                  <time datetime={post.data.pubDate.toISOString()}>
+                    {post.data.pubDate.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                </div>
+                <h3 class="mt-2 text-lg font-bold text-gray-950 group-hover:text-brand-700">{post.data.title}</h3>
+                <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div class="mt-6 rounded-lg border border-gray-200 bg-gray-50 p-8 text-center">
+            <p class="text-gray-500">Les traductions françaises arrivent bientôt. <a href="/" class="text-brand-600 hover:underline">Lire en anglais</a>.</p>
+          </div>
+        )}
+      </section>
+
+      <AdSlot format="banner" />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

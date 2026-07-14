@@ -1,6 +1,8 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
+type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
+
 const year = new Date().getFullYear();
 const legalLinks = [
   { href: '/travel-help/', label: 'Travel Help' },
@@ -15,26 +17,39 @@ const legalLinks = [
 
 // Detect current locale from URL path
 const pathname = Astro.url.pathname;
-const currentLocale = pathname.startsWith('/zh-tw/') ? 'zh-TW'
+const currentLocale: LocaleCode = pathname.startsWith('/zh-tw/') ? 'zh-TW'
   : pathname.startsWith('/ja/') ? 'ja'
   : pathname.startsWith('/ko/') ? 'ko'
+  : pathname.startsWith('/ru/') ? 'ru'
+  : pathname.startsWith('/fr/') ? 'fr'
+  : pathname.startsWith('/de/') ? 'de'
+  : pathname.startsWith('/es/') ? 'es'
   : 'en';
 
 // Build alternate paths for the same page in other languages
-function swapLocale(path: string, to: string): string {
+const localePrefixes: [LocaleCode, string][] = [
+  ['zh-TW', '/zh-tw/'], ['ja', '/ja/'], ['ko', '/ko/'],
+  ['ru', '/ru/'], ['fr', '/fr/'], ['de', '/de/'], ['es', '/es/'],
+];
+
+function swapLocale(path: string, to: LocaleCode): string {
   // Strip current locale prefix
   let base = path;
-  if (base.startsWith('/zh-tw/')) base = base.slice(6);
-  else if (base.startsWith('/ja/')) base = base.slice(3);
-  else if (base.startsWith('/ko/')) base = base.slice(3);
+  for (const [code, prefix] of localePrefixes) {
+    if (base.startsWith(prefix)) { base = base.slice(prefix.length); break; }
+  }
   if (to === 'en') return base;
-  return `/${to === 'zh-TW' ? 'zh-tw' : to}${base}`;
+  const prefixMap: Record<string, string> = { 'zh-TW':'zh-tw', ja:'ja', ko:'ko', ru:'ru', fr:'fr', de:'de', es:'es' };
+  return '/' + (prefixMap[to] ?? to) + base;
 }
 
-const enPath = currentLocale !== 'en' ? swapLocale(pathname, 'en') : undefined;
-const zhTwPath = currentLocale !== 'zh-TW' ? swapLocale(pathname, 'zh-TW') : undefined;
-const jaPath = currentLocale !== 'ja' ? swapLocale(pathname, 'ja') : undefined;
-const koPath = currentLocale !== 'ko' ? swapLocale(pathname, 'ko') : undefined;
+const allLocales: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
+const buildPath = (lc: LocaleCode) => lc === currentLocale ? undefined : swapLocale(pathname, lc);
+
+const paths: Record<string, string | undefined> = {};
+for (const lc of allLocales) {
+  paths[lc] = buildPath(lc);
+}
 ---
 
 <footer class="mt-auto border-t border-gray-200 bg-gray-50">
@@ -65,7 +80,17 @@ const koPath = currentLocale !== 'ko' ? swapLocale(pathname, 'ko') : undefined;
     </div>
     <div class="mt-8 border-t border-gray-200 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <span class="text-sm text-gray-500">&copy; {year} ChinaTripBox. All rights reserved.</span>
-      <LanguageSwitcher currentLocale={currentLocale} enPath={enPath} zhTwPath={zhTwPath} jaPath={jaPath} koPath={koPath} />
+      <LanguageSwitcher
+        currentLocale={currentLocale}
+        enPath={paths.en}
+        zhTwPath={paths['zh-TW']}
+        jaPath={paths.ja}
+        koPath={paths.ko}
+        ruPath={paths.ru}
+        frPath={paths.fr}
+        dePath={paths.de}
+        esPath={paths.es}
+      />
     </div>
   </div>
 </footer>

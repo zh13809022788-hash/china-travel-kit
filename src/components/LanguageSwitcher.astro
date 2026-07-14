@@ -1,18 +1,28 @@
 ---
+export type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
+
 export interface Props {
-  currentLocale: 'en' | 'zh-TW' | 'ja' | 'ko';
+  currentLocale: LocaleCode;
   enPath?: string;
   zhTwPath?: string;
   jaPath?: string;
   koPath?: string;
+  ruPath?: string;
+  frPath?: string;
+  dePath?: string;
+  esPath?: string;
 }
 
-const { currentLocale, enPath, zhTwPath, jaPath, koPath } = Astro.props;
+const { currentLocale, enPath, zhTwPath, jaPath, koPath, ruPath, frPath, dePath, esPath } = Astro.props;
 const options = [
   { locale: 'en', label: 'English', path: enPath },
   { locale: 'zh-TW', label: '繁體中文', path: zhTwPath },
   { locale: 'ja', label: '日本語', path: jaPath },
   { locale: 'ko', label: '한국어', path: koPath },
+  { locale: 'ru', label: 'Русский', path: ruPath },
+  { locale: 'fr', label: 'Français', path: frPath },
+  { locale: 'de', label: 'Deutsch', path: dePath },
+  { locale: 'es', label: 'Español', path: esPath },
 ] as const;
 
 const visibleOptions = options.filter((option) => option.path);
@@ -43,7 +53,7 @@ const currentLabel = options.find((o) => o.locale === currentLocale)?.label ?? '
 
       <!-- Dropdown -->
       <div
-        class="lang-dropdown absolute right-0 top-full z-50 mt-1 hidden min-w-[160px] overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg ring-1 ring-black/5"
+        class="lang-dropdown absolute right-0 top-full z-50 mt-1 hidden min-w-[170px] max-h-[60vh] overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg ring-1 ring-black/5"
         role="listbox"
       >
         {visibleOptions.map((option) =>

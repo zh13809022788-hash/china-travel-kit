@@ -1,14 +1,11 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
+type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
+
 export interface Props {
-  locale?: 'en' | 'zh-TW' | 'ja' | 'ko';
-  alternates?: {
-    en?: string;
-    'zh-TW'?: string;
-    ja?: string;
-    ko?: string;
-  };
+  locale?: LocaleCode;
+  alternates?: Partial<Record<LocaleCode, string>>;
 }
 
 const { locale = 'en', alternates } = Astro.props;
@@ -34,15 +31,22 @@ const secondaryLinks = [
 const pathname = Astro.url.pathname;
 const isActive = (href: string) =>
   href === '/' ? pathname === '/' : pathname.startsWith(href);
-const isZhTw = locale === 'zh-TW';
-const isJa = locale === 'ja';
-const isKo = locale === 'ko';
-const isHome = pathname === '/' || pathname === '/zh-tw/' || pathname === '/ja/' || pathname === '/ko/';
-const homePath = isZhTw ? '/zh-tw/' : isJa ? '/ja/' : isKo ? '/ko/' : '/';
-const enPath = alternates?.en ?? (isHome ? '/' : undefined);
-const zhTwPath = alternates?.['zh-TW'] ?? (isHome ? '/zh-tw/' : undefined);
-const jaPath = alternates?.ja ?? (isHome ? '/ja/' : undefined);
-const koPath = alternates?.ko ?? (isHome ? '/ko/' : undefined);
+
+const localePrefixes: Record<string, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
+const isHome = pathname === '/' || Object.values(localePrefixes).includes(pathname);
+const homePath = localePrefixes[locale] ?? '/';
+
+const getPath = (key: LocaleCode) => {
+  if (key === 'en') { const a = alternates?.en; return a ?? (isHome ? '/' : undefined); }
+  if (key === 'zh-TW') { const a = alternates?.['zh-TW']; return a ?? (isHome ? '/zh-tw/' : undefined); }
+  if (key === 'ja') { const a = alternates?.ja; return a ?? (isHome ? '/ja/' : undefined); }
+  if (key === 'ko') { const a = alternates?.ko; return a ?? (isHome ? '/ko/' : undefined); }
+  if (key === 'ru') { const a = alternates?.ru; return a ?? (isHome ? '/ru/' : undefined); }
+  if (key === 'fr') { const a = alternates?.fr; return a ?? (isHome ? '/fr/' : undefined); }
+  if (key === 'de') { const a = alternates?.de; return a ?? (isHome ? '/de/' : undefined); }
+  if (key === 'es') { const a = alternates?.es; return a ?? (isHome ? '/es/' : undefined); }
+  return undefined;
+};
 ---
 
 <header class="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur">
@@ -71,7 +75,17 @@ const koPath = alternates?.ko ?? (isHome ? '/ko/' : undefined);
 
     <!-- Right side: language + hamburger -->
     <div class="flex items-center gap-2">
-      <LanguageSwitcher currentLocale={locale} enPath={enPath} zhTwPath={zhTwPath} jaPath={jaPath} koPath={koPath} />
+      <LanguageSwitcher
+        currentLocale={locale}
+        enPath={getPath('en')}
+        zhTwPath={getPath('zh-TW')}
+        jaPath={getPath('ja')}
+        koPath={getPath('ko')}
+        ruPath={getPath('ru')}
+        frPath={getPath('fr')}
+        dePath={getPath('de')}
+        esPath={getPath('es')}
+      />
 
       <!-- Mobile hamburger -->
       <button

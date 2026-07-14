@@ -38,10 +38,18 @@ const allPosts = await getCollection('posts');
 const zhTwPosts = await getCollection('posts-zh-tw');
 const jaPosts = await getCollection('posts-ja');
 const koPosts = await getCollection('posts-ko');
-const alternates: { en?: string; 'zh-TW'?: string; ja?: string; ko?: string } = { en: `/posts/${post.slug}/` };
+const ruPosts = await getCollection('posts-ru');
+const frPosts = await getCollection('posts-fr');
+const dePosts = await getCollection('posts-de');
+const esPosts = await getCollection('posts-es');
+const alternates: Record<string, string> = { en: `/posts/${post.slug}/` };
 if (zhTwPosts.some((candidate) => candidate.slug === post.slug)) alternates['zh-TW'] = `/zh-tw/posts/${post.slug}/`;
 if (jaPosts.some((candidate) => candidate.slug === post.slug)) alternates.ja = `/ja/posts/${post.slug}/`;
 if (koPosts.some((candidate) => candidate.slug === post.slug)) alternates.ko = `/ko/posts/${post.slug}/`;
+if (ruPosts.some((candidate) => candidate.slug === post.slug)) alternates.ru = `/ru/posts/${post.slug}/`;
+if (frPosts.some((candidate) => candidate.slug === post.slug)) alternates.fr = `/fr/posts/${post.slug}/`;
+if (dePosts.some((candidate) => candidate.slug === post.slug)) alternates.de = `/de/posts/${post.slug}/`;
+if (esPosts.some((candidate) => candidate.slug === post.slug)) alternates.es = `/es/posts/${post.slug}/`;
 const related = allPosts
   .filter((candidate) => candidate.slug !== post.slug)
   .map((candidate) => {

@@ -1,6 +1,8 @@
-﻿---
+---
 import '../styles/global.css';
 import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID } from '../config';
+
+type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
 
 export interface Props {
   title?: string;
@@ -8,13 +10,8 @@ export interface Props {
   image?: string;
   type?: string;
   noindex?: boolean;
-  locale?: 'en' | 'zh-TW' | 'ja' | 'ko';
-  alternates?: {
-    en?: string;
-    'zh-TW'?: string;
-    ja?: string;
-    ko?: string;
-  };
+  locale?: LocaleCode;
+  alternates?: Partial<Record<LocaleCode, string>>;
 }
 
 const {
@@ -31,12 +28,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
 const siteName = 'ChinaTripBox';
 const siteURL = new URL('/', Astro.site).toString();
-const htmlLang = locale === 'zh-TW' ? 'zh-TW' : locale === 'ja' ? 'ja' : locale === 'ko' ? 'ko' : 'en';
-const enAlternate = alternates?.en ? new URL(alternates.en, Astro.site).toString() : null;
-const zhTwAlternate = alternates?.['zh-TW'] ? new URL(alternates['zh-TW'], Astro.site).toString() : null;
-const jaAlternate = alternates?.ja ? new URL(alternates.ja, Astro.site).toString() : null;
-const koAlternate = alternates?.ko ? new URL(alternates.ko, Astro.site).toString() : null;
-const availableLanguage = locale === 'zh-TW' ? ['zh-TW', 'en'] : locale === 'ja' ? ['ja', 'en'] : locale === 'ko' ? ['ko', 'en'] : ['en', 'zh-TW', 'ja', 'ko'];
+
+const htmlLangMap: Record<string, string> = { en: 'en', 'zh-TW': 'zh-TW', ja: 'ja', ko: 'ko', ru: 'ru', fr: 'fr', de: 'de', es: 'es' };
+const htmlLang = htmlLangMap[locale] ?? 'en';
+
+const hreflangCodes: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
+
+const availableLanguage = locale === 'en'
+  ? ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es']
+  : [locale, 'en'];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -129,11 +130,11 @@ const jsonLd = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-    {enAlternate && <link rel="alternate" hreflang="en" href={enAlternate} />}
-    {zhTwAlternate && <link rel="alternate" hreflang="zh-TW" href={zhTwAlternate} />}
-    {jaAlternate && <link rel="alternate" hreflang="ja" href={jaAlternate} />}
-    {koAlternate && <link rel="alternate" hreflang="ko" href={koAlternate} />}
-    {enAlternate && <link rel="alternate" hreflang="x-default" href={enAlternate} />}
+    {hreflangCodes.map((code) => {
+      const altUrl = alternates?.[code] ? new URL(alternates[code]!, Astro.site).toString() : null;
+      return altUrl ? <link rel="alternate" hreflang={code} href={altUrl} /> : null;
+    })}
+    {alternates?.en && <link rel="alternate" hreflang="x-default" href={new URL(alternates.en, Astro.site).toString()} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Open Graph -->
@@ -163,6 +164,10 @@ const jsonLd = {
         if(lang.startsWith('zh-tw')||lang.startsWith('zh-hant')||lang==='zh-hk'||lang==='zh-mo'){detected='zh-TW';break;}
         if(lang.startsWith('ja')){detected='ja';break;}
         if(lang.startsWith('ko')){detected='ko';break;}
+        if(lang.startsWith('ru')){detected='ru';break;}
+        if(lang.startsWith('fr')){detected='fr';break;}
+        if(lang.startsWith('de')){detected='de';break;}
+        if(lang.startsWith('es')){detected='es';break;}
         if(lang.startsWith('zh')){detected='zh-TW';break;}
         if(lang.startsWith('en')){detected='en';break;}
       }
@@ -185,4 +190,3 @@ const jsonLd = {
     <slot />
   </body>
 </html>
-
