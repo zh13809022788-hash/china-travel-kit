@@ -54,7 +54,9 @@
           try{var tp=new URL(altHref).pathname;}catch(e){tp=null;}
           if(tp&&window.location.pathname!==tp){goTo(altHref);return;}
         }
-        // No alternate exists for this page (only in English) → stay on English, don't redirect
+        // No alternate exists → redirect to preferred locale homepage
+        // (nav links point to English pages, this keeps user in their language)
+        goTo(window.location.origin+'/'+localePath(pref)+'/');
         return;
       }
 

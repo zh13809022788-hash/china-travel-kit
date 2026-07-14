@@ -54,7 +54,9 @@
           try{var tp=new URL(altHref).pathname;}catch(e){tp=null;}
           if(tp&&window.location.pathname!==tp){goTo(altHref);return;}
         }
-        // No alternate exists for this page (only in English) → stay on English, don't redirect
+        // No alternate exists → redirect to preferred locale homepage
+        // (nav links point to English pages, this keeps user in their language)
+        goTo(window.location.origin+'/'+localePath(pref)+'/');
         return;
       }
 
@@ -92,7 +94,94 @@ on <a rel="nofollow noopener" target="_blank" class="hover:text-brand-600">
 Unsplash
 </a></figcaption></figure> <div class="article-body max-w-none">  <h2 id="the-short-answer">The Short Answer</h2>
 <p>Mainland China is not a tipping country. In most restaurants, taxis, cafes, hotels, hair salons, and small shops, you pay the price shown and leave. No extra percentage is expected, no tablet screen asks you to choose 18, 20, or 25 percent, and staff will often think loose cash on the table was forgotten rather than intentionally left.</p>
-<p>This surprises travelers from the United States, Canada, and parts of Europe because tipping can feel like a moral test: if you do not add something, are you being cheap? In China, the answer is no. The respectful thing is usually to pay accurately, say thank you, and move on.</p>
+<h3 id="quick-decision-table">Quick Decision Table</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Situation</th><th>Tip?</th><th>How Much</th><th>What To Do</th></tr></thead><tbody><tr><td>Local restaurant, noodle shop</td><td>❌ No</td><td>0</td><td>Pay the bill. Leave nothing.</td></tr><tr><td>High-end restaurant with service charge on bill</td><td>❌ No</td><td>0</td><td>The 10-15% service charge is already included.</td></tr><tr><td>Street food, bubble tea, bakery</td><td>❌ No</td><td>0</td><td>Pay the posted price.</td></tr><tr><td>Taxi / DiDi</td><td>❌ No</td><td>0</td><td>Pay the meter or app total exactly.</td></tr><tr><td>Hotel housekeeping (budget-mid range)</td><td>❌ No</td><td>0</td><td>No tip expected.</td></tr><tr><td>Hotel bellhop (luxury international hotel)</td><td>⚠️ Optional</td><td>10-20 RMB</td><td>Small cash tip understood but not required.</td></tr><tr><td>Private tour guide (full day)</td><td>✅ Yes</td><td>100-200 RMB/day</td><td>Cash in envelope at end of day.</td></tr><tr><td>Private driver (full day)</td><td>✅ Yes</td><td>50-100 RMB/day</td><td>Cash at end of day.</td></tr><tr><td>Group tour guide</td><td>✅ Yes</td><td>30-50 RMB/day</td><td>Often pooled. Ask if already included.</td></tr><tr><td>Hong Kong restaurant</td><td>✅ Yes</td><td>10% service charge + small coins</td><td>Check bill for service charge first.</td></tr><tr><td>Hong Kong hotel porter</td><td>✅ Yes</td><td>HK$10-20/bag</td><td>Small bills.</td></tr></tbody></table>
+<h3 id="how-to-tip-when-tipping-is-expected">How to Tip When Tipping Is Expected</h3>
+<p>When you do need to tip (private guides and drivers):</p>
+<ol>
+<li><strong>Use cash.</strong> Most Chinese run on WeChat Pay and Alipay, but tipping through apps is complicated for foreigners. Carry 100-500 RMB in small bills specifically for tips.</li>
+<li><strong>Use an envelope.</strong> Handing over cash in a plain envelope feels more natural than handing it directly.</li>
+<li><strong>Do it at the end.</strong> At the end of a tour or day, say thank you and hand the envelope. Do not tip during the service.</li>
+<li><strong>Do not insist if refused.</strong> If someone pushes cash back to you, accept the refusal gracefully. They are not testing you.</li>
+<li><strong>Check your bill first.</strong> If “服务费” (service charge) is listed, you do not need to add anything extra.</li>
+</ol>
 <p>The deeper reason is cultural and practical. Chinese service transactions are built around clear prices, fast payment, and the idea that good service is part of the job rather than a separate favor that must be rewarded at the end.</p>
 <h2 id="why-tipping-never-became-normal">Why Tipping Never Became Normal</h2>
 <p>Tipping cultures grow from history. In some countries, service workers are paid in a way that assumes customers will add gratuities. In others, tipping became a social ritual in hotels, restaurants, taxis, and bars. Mainland China took a different path.</p>
