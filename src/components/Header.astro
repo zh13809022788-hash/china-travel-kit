@@ -9,25 +9,47 @@ export interface Props {
 }
 
 const { locale = 'en', alternates } = Astro.props;
+
+// Multilingual nav label map
+const navLabels: Record<string, Record<string, string>> = {
+  'Home':           { en:'Home', 'zh-TW':'首頁', ja:'ホーム', ko:'홈', ru:'Главная', fr:'Accueil', de:'Start', es:'Inicio' },
+  'Plan Your Trip': { en:'Plan Your Trip', 'zh-TW':'行程規劃', ja:'旅行計画', ko:'여행 계획', ru:'План поездки', fr:'Planifier', de:'Reise planen', es:'Planificar' },
+  'Apps & Setup':   { en:'Apps & Setup', 'zh-TW':'App 與設定', ja:'アプリ設定', ko:'앱 설정', ru:'Приложения', fr:'Applications', de:'Apps', es:'Apps' },
+  'Payments':       { en:'Payments', 'zh-TW':'付款', ja:'決済', ko:'결제', ru:'Оплата', fr:'Paiement', de:'Bezahlung', es:'Pagos' },
+  'Internet':       { en:'Internet', 'zh-TW':'網路', ja:'通信', ko:'인터넷', ru:'Интернет', fr:'Internet', de:'Internet', es:'Internet' },
+  'Transport':      { en:'Transport', 'zh-TW':'交通', ja:'交通', ko:'교통', ru:'Транспорт', fr:'Transport', de:'Verkehr', es:'Transporte' },
+  'Cities':         { en:'Cities', 'zh-TW':'城市', ja:'都市', ko:'도시', ru:'Города', fr:'Villes', de:'Städte', es:'Ciudades' },
+  'Food':           { en:'Food', 'zh-TW':'美食', ja:'グルメ', ko:'음식', ru:'Еда', fr:'Gastronomie', de:'Essen', es:'Comida' },
+  'Trip Planning':  { en:'Trip Planning', 'zh-TW':'行前準備', ja:'旅行準備', ko:'여행 준비', ru:'Планирование', fr:'Préparation', de:'Reiseplanung', es:'Planificación' },
+  'Trip Planner':   { en:'Trip Planner', 'zh-TW':'行程工具', ja:'旅行プランナー', ko:'여행 플래너', ru:'Планировщик', fr:'Planificateur', de:'Reiseplaner', es:'Planificador' },
+  'Tools':          { en:'Tools', 'zh-TW':'工具', ja:'ツール', ko:'도구', ru:'Инструменты', fr:'Outils', de:'Werkzeuge', es:'Herramientas' },
+  'Series':         { en:'Series', 'zh-TW':'系列', ja:'シリーズ', ko:'시리즈', ru:'Серии', fr:'Séries', de:'Serien', es:'Series' },
+  'Long Stay':      { en:'Long Stay', 'zh-TW':'長住', ja:'長期滞在', ko:'장기 체류', ru:'Долгое проживание', fr:'Long séjour', de:'Langzeitaufenthalt', es:'Estancia larga' },
+  'Digital Nomads': { en:'Digital Nomads', 'zh-TW':'數位遊民', ja:'デジタルノマド', ko:'디지털 노마드', ru:'Цифровые кочевники', fr:'Nomades digitaux', de:'Digitale Nomaden', es:'Nómadas digitales' },
+  'Help':           { en:'Help', 'zh-TW':'幫助', ja:'ヘルプ', ko:'도움말', ru:'Помощь', fr:'Aide', de:'Hilfe', es:'Ayuda' },
+  'About':          { en:'About', 'zh-TW':'關於', ja:'概要', ko:'소개', ru:'О нас', fr:'À propos', de:'Über uns', es:'Acerca de' },
+};
+const t = (key: string) => navLabels[key]?.[locale] ?? key;
+
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/resources/', label: 'Plan Your Trip' },
-  { href: '/apps/', label: 'Apps & Setup' },
-  { href: '/payment/', label: 'Payments' },
-  { href: '/esim/', label: 'Internet' },
-  { href: '/transport/', label: 'Transport' },
-  { href: '/cities/', label: 'Cities' },
-  { href: '/food/', label: 'Food' },
+  { href: '/', label: t('Home') },
+  { href: '/resources/', label: t('Plan Your Trip') },
+  { href: '/apps/', label: t('Apps & Setup') },
+  { href: '/payment/', label: t('Payments') },
+  { href: '/esim/', label: t('Internet') },
+  { href: '/transport/', label: t('Transport') },
+  { href: '/cities/', label: t('Cities') },
+  { href: '/food/', label: t('Food') },
 ];
 const secondaryLinks = [
-  { href: '/essentials/', label: 'Trip Planning' },
-  { href: '/trip-planner/', label: 'Trip Planner' },
-  { href: '/tools/', label: 'Tools' },
-  { href: '/series/', label: 'Series' },
-  { href: '/long-stay/', label: 'Long Stay' },
-  { href: '/digital-nomads/', label: 'Digital Nomads' },
-  { href: '/travel-help/', label: 'Help' },
-  { href: '/about/', label: 'About' },
+  { href: '/essentials/', label: t('Trip Planning') },
+  { href: '/trip-planner/', label: t('Trip Planner') },
+  { href: '/tools/', label: t('Tools') },
+  { href: '/series/', label: t('Series') },
+  { href: '/long-stay/', label: t('Long Stay') },
+  { href: '/digital-nomads/', label: t('Digital Nomads') },
+  { href: '/travel-help/', label: t('Help') },
+  { href: '/about/', label: t('About') },
 ];
 const pathname = Astro.url.pathname;
 const isActive = (href: string) =>

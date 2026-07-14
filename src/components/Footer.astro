@@ -4,18 +4,8 @@ import LanguageSwitcher from './LanguageSwitcher.astro';
 type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
 
 const year = new Date().getFullYear();
-const legalLinks = [
-  { href: '/travel-help/', label: 'Travel Help' },
-  { href: '/resources/', label: 'Resources' },
-  { href: '/about/', label: 'About' },
-  { href: '/contact/', label: 'Contact' },
-  { href: '/editorial-policy/', label: 'Editorial Policy' },
-  { href: '/affiliate-disclosure/', label: 'Affiliate Disclosure' },
-  { href: '/privacy/', label: 'Privacy Policy' },
-  { href: '/terms/', label: 'Terms' },
-];
 
-// Detect current locale from URL path
+// Detect current locale from URL path — MUST be before legalLinks/footerLabels
 const pathname = Astro.url.pathname;
 const currentLocale: LocaleCode = pathname.startsWith('/zh-tw/') ? 'zh-TW'
   : pathname.startsWith('/ja/') ? 'ja'
@@ -25,6 +15,31 @@ const currentLocale: LocaleCode = pathname.startsWith('/zh-tw/') ? 'zh-TW'
   : pathname.startsWith('/de/') ? 'de'
   : pathname.startsWith('/es/') ? 'es'
   : 'en';
+
+// Multilingual label map
+const footerLabels: Record<string, Record<string, string>> = {
+  'Travel Help':          { en:'Travel Help', 'zh-TW':String.raw`旅遊幫助`, ja: String.raw`旅行ヘルプ`, ko: String.raw`여행 도움말`, ru:String.raw`Помощь в поездке`, fr:String.raw`Aide voyage`, de:String.raw`Reisehilfe`, es:String.raw`Ayuda de viaje` },
+  'Resources':            { en:'Resources', 'zh-TW':String.raw`資源`, ja:String.raw`リソース`, ko:String.raw`자료`, ru:String.raw`Ресурсы`, fr:String.raw`Ressources`, de:String.raw`Ressourcen`, es:String.raw`Recursos` },
+  'About':                { en:'About', 'zh-TW':String.raw`關於`, ja:String.raw`概要`, ko:String.raw`소개`, ru:String.raw`О нас`, fr:String.raw`À propos`, de:String.raw`Über uns`, es:String.raw`Acerca de` },
+  'Contact':              { en:'Contact', 'zh-TW':String.raw`聯繫`, ja:String.raw`お問い合わせ`, ko:String.raw`문의`, ru:String.raw`Контакты`, fr:String.raw`Contact`, de:String.raw`Kontakt`, es:String.raw`Contacto` },
+  'Editorial Policy':     { en:'Editorial Policy', 'zh-TW':String.raw`編輯政策`, ja:String.raw`編集方針`, ko:String.raw`편집 정책`, ru:String.raw`Редакционная политика`, fr:String.raw`Politique editeuriale`, de:String.raw`Redaktionsrichtlinie`, es:String.raw`Politica editorial` },
+  'Affiliate Disclosure': { en:'Affiliate Disclosure', 'zh-TW':String.raw`聯盟披露`, ja:String.raw`アフィリエイト開示`, ko:String.raw`제휴 공개`, ru:String.raw`Партнёрское раскрытие`, fr:String.raw`Divulgation affiliation`, de:String.raw`Partner-Offenlegung`, es:String.raw`Divulgacion de afiliados` },
+  'Privacy Policy':       { en:'Privacy Policy', 'zh-TW':String.raw`隱私政策`, ja:String.raw`プライバシーポリシー`, ko:String.raw`개인정보처리방침`, ru:String.raw`Политика конфиденциальности`, fr:String.raw`Politique de confidentialite`, de:String.raw`Datenschutz`, es:String.raw`Politica de privacidad` },
+  'Terms':                { en:'Terms', 'zh-TW':String.raw`條款`, ja:String.raw`利用規約`, ko:String.raw`이용약관`, ru:String.raw`Условия`, fr:String.raw`Conditions`, de:String.raw`AGB`, es:String.raw`Terminos` },
+  'All rights reserved':  { en:'All rights reserved.', 'zh-TW':String.raw`版權所有。`, ja:String.raw`無断転載を禁じます`, ko:String.raw`모든 권리 보유`, ru:String.raw`Все права защищены`, fr:String.raw`Tous droits reserves`, de:String.raw`Alle Rechte vorbehalten`, es:String.raw`Todos los derechos reservados` },
+};
+const ft = (key: string) => footerLabels[key]?.[currentLocale] ?? key;
+
+const legalLinks = [
+  { href: '/travel-help/', label: ft('Travel Help') },
+  { href: '/resources/', label: ft('Resources') },
+  { href: '/about/', label: ft('About') },
+  { href: '/contact/', label: ft('Contact') },
+  { href: '/editorial-policy/', label: ft('Editorial Policy') },
+  { href: '/affiliate-disclosure/', label: ft('Affiliate Disclosure') },
+  { href: '/privacy/', label: ft('Privacy Policy') },
+  { href: '/terms/', label: ft('Terms') },
+];
 
 // Build alternate paths for the same page in other languages
 const localePrefixes: [LocaleCode, string][] = [
@@ -79,7 +94,7 @@ for (const lc of allLocales) {
       </ul>
     </div>
     <div class="mt-8 border-t border-gray-200 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-      <span class="text-sm text-gray-500">&copy; {year} ChinaTripBox. All rights reserved.</span>
+      <span class="text-sm text-gray-500">&copy; {year} ChinaTripBox. {ft('All rights reserved')}</span>
       <LanguageSwitcher
         currentLocale={currentLocale}
         enPath={paths.en}
