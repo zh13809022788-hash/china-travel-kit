@@ -30,6 +30,34 @@ const footerLabels: Record<string, Record<string, string>> = {
 };
 const ft = (key: string) => footerLabels[key]?.[currentLocale] ?? key;
 
+// Footer description text per locale
+const footerDesc: Record<string, string> = {
+  en: "ChinaTripBox is an independent China travel planning site for foreign visitors. We publish practical guides, tools, and optional human-reviewed trip help. Some links may earn us a commission.",
+  'zh-TW': "ChinaTripBox 是為外國旅客提供的中國旅遊規劃獨立網站。我們提供實用指南、工具以及可選的人工審閱旅行協助。部分連結可能為我們帶來佣金。",
+  ja: "ChinaTripBoxは外国人旅行者のための中国旅行計画サイトです。実用的なガイド、ツール、オプションの旅行サポートを提供しています。一部のリンクは手数料を得る場合があります。",
+  ko: "ChinaTripBox는 외국인 여행자를 위한 독립 중국 여행 계획 사이트입니다. 실용적인 가이드, 도구 및 선택적 여행 도움말을 제공합니다. 일부 링크는 수수료를 받을 수 있습니다.",
+  ru: "ChinaTripBox — независимый сайт планирования поездок в Китай для иностранных посетителей. Мы публикуем практические руководства, инструменты и помощь в поездках. Некоторые ссылки могут приносить нам комиссию.",
+  fr: "ChinaTripBox est un site indépendant de planification de voyages en Chine pour les visiteurs étrangers. Nous publions des guides pratiques, des outils et une aide optionnelle. Certains liens peuvent nous rapporter une commission.",
+  de: "ChinaTripBox ist eine unabhängige China-Reiseplanungsseite für ausländische Besucher. Wir veröffentlichen praktische Reiseführer, Werkzeuge und optionale Reisehilfe. Einige Links können Provisionen enthalten.",
+  es: "ChinaTripBox es un sitio independiente de planificación de viajes a China para visitantes extranjeros. Publicamos guías prácticas, herramientas y ayuda opcional. Algunos enlaces pueden generarnos una comisión.",
+};
+const fd = (key: 'desc' | 'disclaimer') => {
+  const t: Record<string, Record<string, string>> = {
+    desc: footerDesc,
+    disclaimer: {
+      en: "We provide general travel information only, not legal, immigration, medical, banking, emergency, or official government advice.",
+      'zh-TW': "我們僅提供一般旅遊資訊，不構成法律、移民、醫療、銀行、緊急情況或官方政府建議。",
+      ja: "当サイトは一般的な旅行情報のみを提供しており、法的、入国管理、医療、銀行、緊急、または公的な政府アドバイスを提供するものではありません。",
+      ko: "당사는 일반 여행 정보만 제공하며 법률, 이민, 의료, 은행, 비상 또는 공식 정부 조언을 제공하지 않습니다.",
+      ru: "Мы предоставляем только общую туристическую информацию, а не юридические, иммиграционные, медицинские, банковские, экстренные или официальные государственные консультации.",
+      fr: "Nous fournissons uniquement des informations générales de voyage, pas des conseils juridiques, d'immigration, médicaux, bancaires, d'urgence ou officiels.",
+      de: "Wir bieten nur allgemeine Reiseinformationen, keine rechtliche, einwanderungsbezogene, medizinische, bankbezogene, Notfall- oder amtliche Beratung.",
+      es: "Proporcionamos solo información general de viajes, no asesoramiento legal, migratorio, médico, bancario, de emergencia o gubernamental oficial.",
+    },
+  };
+  return t[key]?.[currentLocale] ?? t[key]?.en ?? '';
+};
+
 const legalLinks = [
   { href: '/travel-help/', label: ft('Travel Help') },
   { href: '/resources/', label: ft('Resources') },
@@ -75,15 +103,8 @@ for (const lc of allLocales) {
           <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand-600 text-sm text-white">CT</span>
           ChinaTripBox
         </div>
-        <p class="mt-2 max-w-xl text-sm leading-6 text-gray-500">
-          ChinaTripBox is an independent China travel planning site for foreign visitors.
-          We publish practical guides, tools, and optional human-reviewed trip help. Some
-          links may earn us a commission.
-        </p>
-        <p class="mt-2 max-w-xl text-xs leading-5 text-gray-500">
-          We provide general travel information only, not legal, immigration, medical,
-          banking, emergency, or official government advice.
-        </p>
+        <p class="mt-2 max-w-xl text-sm leading-6 text-gray-500">{fd('desc')}</p>
+        <p class="mt-2 max-w-xl text-xs leading-5 text-gray-500">{fd('disclaimer')}</p>
       </div>
       <ul class="flex flex-wrap gap-5">
         {legalLinks.map((link) => (

@@ -204,8 +204,7 @@ const jsonLd = {
           try{var tp=new URL(altHref).pathname;}catch(e){tp=null;}
           if(tp&&window.location.pathname!==tp){goTo(altHref);return;}
         }
-        // No alternate exists for this page (e.g. /about/ has no fr version) → go to locale homepage
-        goTo(window.location.origin+'/'+localePath(pref)+'/');
+        // No alternate exists for this page (only in English) → stay on English, don't redirect
         return;
       }
 

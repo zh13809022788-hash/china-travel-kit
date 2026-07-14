@@ -33,41 +33,29 @@ const t = (key: string) => navLabels[key]?.[locale] ?? key;
 
 const localePrefixes: Record<string, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
 
-// Prefix nav link hrefs with current locale so navigation stays in same language
-const localePath = (href: string) => {
-  if (locale === 'en') return href;
-  const prefix = localePrefixes[locale] ?? '/';
-  return prefix + href.slice(1);
-};
-
 const navLinks = [
-  { href: localePath('/'), label: t('Home') },
-  { href: localePath('/resources/'), label: t('Plan Your Trip') },
-  { href: localePath('/apps/'), label: t('Apps & Setup') },
-  { href: localePath('/payment/'), label: t('Payments') },
-  { href: localePath('/esim/'), label: t('Internet') },
-  { href: localePath('/transport/'), label: t('Transport') },
-  { href: localePath('/cities/'), label: t('Cities') },
-  { href: localePath('/food/'), label: t('Food') },
+  { href: '/', label: t('Home') },
+  { href: '/resources/', label: t('Plan Your Trip') },
+  { href: '/apps/', label: t('Apps & Setup') },
+  { href: '/payment/', label: t('Payments') },
+  { href: '/esim/', label: t('Internet') },
+  { href: '/transport/', label: t('Transport') },
+  { href: '/cities/', label: t('Cities') },
+  { href: '/food/', label: t('Food') },
 ];
 const secondaryLinks = [
-  { href: localePath('/essentials/'), label: t('Trip Planning') },
-  { href: localePath('/trip-planner/'), label: t('Trip Planner') },
-  { href: localePath('/tools/'), label: t('Tools') },
-  { href: localePath('/series/'), label: t('Series') },
-  { href: localePath('/long-stay/'), label: t('Long Stay') },
-  { href: localePath('/digital-nomads/'), label: t('Digital Nomads') },
-  { href: localePath('/travel-help/'), label: t('Help') },
-  { href: localePath('/about/'), label: t('About') },
+  { href: '/essentials/', label: t('Trip Planning') },
+  { href: '/trip-planner/', label: t('Trip Planner') },
+  { href: '/tools/', label: t('Tools') },
+  { href: '/series/', label: t('Series') },
+  { href: '/long-stay/', label: t('Long Stay') },
+  { href: '/digital-nomads/', label: t('Digital Nomads') },
+  { href: '/travel-help/', label: t('Help') },
+  { href: '/about/', label: t('About') },
 ];
 const pathname = Astro.url.pathname;
-const isActive = (href: string) => {
-  // Home link: exact match against any locale's homepage
-  const homePaths = Object.values(localePrefixes);
-  if (homePaths.includes(href)) return homePaths.includes(pathname);
-  // Other pages: check if pathname starts with href
-  return pathname.startsWith(href);
-};
+const isActive = (href: string) =>
+  href === '/' ? pathname === '/' : pathname.startsWith(href);
 
 const isHome = pathname === '/' || Object.values(localePrefixes).includes(pathname);
 const homePath = localePrefixes[locale] ?? '/';
