@@ -37,15 +37,12 @@ const isHome = pathname === '/' || Object.values(localePrefixes).includes(pathna
 const homePath = localePrefixes[locale] ?? '/';
 
 const getPath = (key: LocaleCode) => {
-  if (key === 'en') { const a = alternates?.en; return a ?? (isHome ? '/' : undefined); }
-  if (key === 'zh-TW') { const a = alternates?.['zh-TW']; return a ?? (isHome ? '/zh-tw/' : undefined); }
-  if (key === 'ja') { const a = alternates?.ja; return a ?? (isHome ? '/ja/' : undefined); }
-  if (key === 'ko') { const a = alternates?.ko; return a ?? (isHome ? '/ko/' : undefined); }
-  if (key === 'ru') { const a = alternates?.ru; return a ?? (isHome ? '/ru/' : undefined); }
-  if (key === 'fr') { const a = alternates?.fr; return a ?? (isHome ? '/fr/' : undefined); }
-  if (key === 'de') { const a = alternates?.de; return a ?? (isHome ? '/de/' : undefined); }
-  if (key === 'es') { const a = alternates?.es; return a ?? (isHome ? '/es/' : undefined); }
-  return undefined;
+  // Preferred: exact translation exists for this page
+  const alt = alternates?.[key];
+  if (alt) return alt;
+  // Fallback: link to the language homepage so the switcher always has valid options
+  const homeFallback: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
+  return homeFallback[key];
 };
 ---
 
