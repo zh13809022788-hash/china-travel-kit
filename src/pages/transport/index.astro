@@ -36,6 +36,26 @@ const transportPaths = [
 
     <AdSlot format="banner" />
 
+    <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-transport">
+      <h2 id="featured-transport" class="sr-only">Featured transport guides</h2>
+      <a href="/posts/china-high-speed-rail-guide-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">High-Speed Rail Guide</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Book tickets, choose classes, navigate stations</p>
+      </a>
+      <a href="/posts/book-china-train-tickets-12306-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">12306 Train Booking</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Step-by-step guide with foreign passport</p>
+      </a>
+      <a href="/posts/didi-china-foreign-tourists-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">DiDi Ride-Hailing</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">How to use China's ride-hailing app</p>
+      </a>
+      <a href="/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">Airport Transfers</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Beijing, Shanghai, Guangzhou guides</p>
+      </a>
+    </section>
+
     <section class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4" aria-labelledby="transport-paths">
       <h2 id="transport-paths" class="sr-only">Transport planning paths</h2>
       {transportPaths.map((path) => (

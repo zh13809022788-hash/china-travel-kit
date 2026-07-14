@@ -166,6 +166,9 @@ const homeLabel = ui.home[locale] ?? 'Home';
         <p class="mt-3 text-lg text-gray-600">{description}</p>
         <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-500">
           <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+          <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-700">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Updated Jul 2026
           <span>{ui.by[locale] ?? 'By '}<a href="/authors/chinatripbox-editorial-team/" class="font-medium text-gray-700 hover:text-brand-600">ChinaTripBox Editorial Team</a></span>
           {tags.length > 0 && (
             <span class="flex flex-wrap gap-2">
