@@ -1,6 +1,6 @@
 ---
-title: "China eSIM vs Roaming 2026: The Real 10-Day Cost"
-description: "A concrete 2026 price breakdown of eSIM versus carrier roaming for a 10-day China trip, with real numbers, firewall caveats, and which option actually saves."
+title: "China eSIM vs Roaming 2026: The Real 10-Day Cost Comparison for Tourists"
+description: "Should you buy a China eSIM or use your home carrier roaming in 2026? A practical cost and performance comparison for a 10-day trip, with recommendations by traveler type."
 pubDate: 2026-07-08
 category: esim
 tags: ["china esim", "roaming cost", "travel esim", "china travel", "2026"]

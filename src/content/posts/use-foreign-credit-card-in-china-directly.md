@@ -1,6 +1,6 @@
 ---
-title: "Can You Use a Foreign Credit Card in China? Where It Works"
-description: "A practical 2026 guide to using foreign Visa, Mastercard, and Amex cards in China at hotels, shops, and ATMs, plus how to avoid declined payments and bad exchange rates."
+title: "Can You Use a Foreign Credit Card in China 2026? Where It Works"
+description: "Find out where foreign Visa and Mastercard credit cards are accepted in China in 2026 — hotels, ATMs, international chains — and when you still need Alipay or WeChat Pay."
 pubDate: 2026-07-08
 category: payment
 tags: ["credit card", "visa mastercard", "china payment", "atm"]

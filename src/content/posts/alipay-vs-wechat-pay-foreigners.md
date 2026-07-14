@@ -1,6 +1,6 @@
 ---
-title: "Alipay vs WeChat Pay for Foreigners: Which Should You Use in China?"
-description: "Compare Alipay and WeChat Pay for foreign visitors to China: setup, foreign card support, fees, mini programs, transport, restaurants, and backup strategy."
+title: "Alipay vs WeChat Pay for Foreigners 2026: Which Payment App Should You Use?"
+description: "Compare Alipay and WeChat Pay for your China trip in 2026 — setup difficulty, card support, fees, and which one works best for tourists, with step-by-step setup instructions."
 pubDate: 2026-07-14
 category: payment
 tags: ["alipay", "wechat pay", "mobile payment", "foreign cards"]

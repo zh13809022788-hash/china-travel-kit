@@ -1,6 +1,6 @@
 ---
-title: "Beijing City Guide for Foreigners: What to Know Before You Go"
-description: "A practical Beijing guide for foreign visitors: getting around, top sights, paying, staying connected, neighborhoods, food, and tips for short or longer stays."
+title: "Beijing City Guide for Foreigners 2026: What to Know Before You Go"
+description: "Complete 2026 guide to Beijing for first-time foreign visitors — top attractions, getting around, food, accommodation areas, Great Wall day trips, and practical travel tips."
 pubDate: 2026-07-09
 category: essentials
 tags: ["beijing", "city guide", "china travel", "expat"]

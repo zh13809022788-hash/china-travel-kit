@@ -1,6 +1,6 @@
 ---
-title: "China Trip Planner: Payment, eSIM, Transport and Apps"
-description: "A practical China trip planning guide for first-time visitors: set up payment, internet, transport, apps, cash, and the first day after landing."
+title: "China Trip Planner 2026: Payment, eSIM, Transport and Apps for First-Time Visitors"
+description: "Complete China trip planner for first-time visitors in 2026 — what to set up before departure: payments, eSIM, transport apps, packing checklist, and a 24-hour arrival plan."
 pubDate: 2026-07-13
 category: essentials
 tags: ["first time china", "trip planner", "payment", "esim", "transport", "apps"]

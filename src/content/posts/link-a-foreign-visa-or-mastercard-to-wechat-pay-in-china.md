@@ -1,6 +1,6 @@
 ---
-title: "Link a Foreign Visa or Mastercard to WeChat Pay in China"
-description: "A practical 2024-2026 guide for tourists on linking a foreign Visa or Mastercard to WeChat Pay, with fees, transaction caps, and fixes for common errors."
+title: "Link a Foreign Visa or Mastercard to WeChat Pay in China 2026: Step-by-Step"
+description: "Step-by-step 2026 guide to linking your foreign Visa or Mastercard to WeChat Pay — app setup, identity verification, card binding, and troubleshooting common errors."
 pubDate: 2026-07-09
 category: payment
 tags: ["wechat pay", "payment", "foreign card", "china travel", "mastercard"]

@@ -1,6 +1,6 @@
 ---
-title: "Hangzhou City Guide for Foreigners: What to Know Before You Go"
-description: "A practical Hangzhou guide for foreign visitors: West Lake, tea villages, getting around, paying, staying connected, and tips for short trips or longer stays."
+title: "Hangzhou City Guide for Foreigners 2026: West Lake and Beyond"
+description: "Complete 2026 guide to Hangzhou for foreign tourists — West Lake attractions, tea culture, day trips from Shanghai, transport tips, and practical advice for a weekend visit."
 pubDate: 2026-07-09
 category: essentials
 tags: ["hangzhou", "city guide", "china travel", "expat"]

@@ -1,6 +1,6 @@
 ---
-title: "Chengdu City Guide for Foreigners: What to Know Before You Go"
-description: "A practical Chengdu guide for foreign visitors: pandas, food, getting around, paying, staying connected, and tips for both short trips and longer stays."
+title: "Chengdu City Guide for Foreigners 2026: Pandas, Food and Travel Tips"
+description: "Complete 2026 guide to Chengdu for foreign visitors — panda bases, Sichuan food, teahouses, transport tips, day trips, and practical advice for enjoying this food capital of China."
 pubDate: 2026-07-09
 category: essentials
 tags: ["chengdu", "city guide", "china travel", "expat"]

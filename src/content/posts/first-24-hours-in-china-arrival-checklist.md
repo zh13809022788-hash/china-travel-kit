@@ -1,6 +1,6 @@
 ---
-title: "First 24 Hours in China: Arrival Checklist for Foreign Visitors"
-description: "A practical first-day China arrival checklist covering airport internet, Alipay, WeChat Pay, transport, hotel check-in, food, cash, maps, and common mistakes."
+title: "First 24 Hours in China 2026: Complete Arrival Checklist for Foreign Visitors"
+description: "What to do in your first 24 hours in China as a foreign tourist — airport arrival checklist, getting internet, setting up Alipay, using Didi, and navigating to your hotel without stress."
 pubDate: 2026-07-14
 category: essentials
 tags: ["arrival checklist", "first time china", "payment", "transport"]

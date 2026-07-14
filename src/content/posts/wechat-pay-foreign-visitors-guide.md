@@ -1,6 +1,6 @@
 ---
-title: "WeChat Pay for Foreign Visitors: Complete Setup and Usage Guide"
-description: "Set up WeChat Pay in China with a foreign card. Step-by-step guide covering account registration, ID verification, fees, limits, and troubleshooting."
+title: "WeChat Pay for Foreign Visitors 2026: Complete Setup and Usage Guide"
+description: "How to set up WeChat Pay as a foreign tourist in 2026 — download, registration, linking a foreign card, and using it for payments, transfers, and mini-programs in China."
 pubDate: 2026-07-06
 category: payment
 tags: ["wechat pay", "weixin", "foreign card", "mobile payment"]

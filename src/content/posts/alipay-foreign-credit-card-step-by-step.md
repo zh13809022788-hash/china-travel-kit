@@ -1,6 +1,6 @@
 ---
-title: "Alipay for Foreigners: Link a Foreign Credit Card Step by Step"
-description: "A clear 2026 step-by-step guide to installing Alipay, verifying your identity, and linking a foreign Visa or Mastercard so you can pay anywhere in China."
+title: "Alipay for Foreigners 2026: How to Link a Foreign Credit Card Step by Step"
+description: "Complete 2026 guide to setting up Alipay as a foreign visitor: download the app, verify your passport, and link a Visa or Mastercard for payments anywhere in China."
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "foreign card", "setup", "mobile payment"]

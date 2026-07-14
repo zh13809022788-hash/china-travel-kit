@@ -1,6 +1,6 @@
 ---
-title: "Why China Does Not Have a Tipping Culture"
-description: "A traveler-friendly explanation of why tipping is uncommon in mainland China, how service prices work, and what to do when you want to show appreciation."
+title: "Why China Does Not Have a Tipping Culture: A Foreigner's Guide to Service Etiquette"
+description: "Understand why tipping is not customary in China — cultural differences, when service charges apply, how to show appreciation without tipping, and practical etiquette for foreign visitors."
 pubDate: 2026-07-11
 category: essentials
 tags: ["tipping", "china culture", "travel etiquette", "restaurants", "service"]

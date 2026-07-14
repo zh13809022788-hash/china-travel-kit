@@ -1,6 +1,6 @@
 ---
-title: "Tipping in China: When It's Expected and When It's Not"
-description: "A practical guide to tipping and service charges in China for foreign travelers: where gratuities are expected, where they insult, and how to handle the bill."
+title: "Tipping in China 2026: When It's Expected and When It's Not (Tourist Guide)"
+description: "Should you tip in China in 2026? Practical guide for foreign visitors — which services expect tips, which do not, how much to tip at hotels and restaurants, and cultural etiquette to avoid awkward moments."
 pubDate: 2026-07-09
 category: essentials
 tags: ["tipping", "china travel", "etiquette", "service charge", "essentials"]

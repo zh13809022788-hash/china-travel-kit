@@ -1,6 +1,6 @@
 ---
-title: "What to Pack for China: A Season-by-Season Checklist"
-description: "Plan your first trip to China with a practical season-by-season packing checklist covering clothes, tech, meds, documents, and the small things travelers."
+title: "What to Pack for China 2026: Season-by-Season Checklist for Foreign Tourists"
+description: "Ultimate packing checklist for China travel in 2026 — what to pack by season (spring, summer, autumn, winter), essential apps and documents, luggage tips, and items you should not forget."
 pubDate: 2026-07-09
 category: essentials
 tags: ["china travel", "packing list", "travel essentials", "first trip", "china tips"]

@@ -1,6 +1,6 @@
 ---
-title: "How to Book China Train Tickets on 12306 as a Foreigner (2026)"
-description: "A step-by-step 2026 guide to booking China high-speed rail on the official 12306 app with your passport, paying with a foreign card, and paperless station entry."
+title: "How to Book China Train Tickets on 12306 as a Foreigner 2026"
+description: "Step-by-step guide to booking China train tickets on 12306 with a foreign passport in 2026 — registration, verification, payment options, and alternative booking platforms."
 pubDate: 2026-07-04
 category: transport
 tags: ["12306", "train tickets", "high-speed rail", "transport"]

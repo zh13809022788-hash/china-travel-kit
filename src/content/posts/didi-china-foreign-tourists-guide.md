@@ -1,6 +1,6 @@
 ---
-title: "Didi for Foreign Tourists: How to Use China's Ride-Hailing App (2026)"
-description: "Learn to use Didi in China as a foreign tourist in 2026: English app setup, linking a foreign card, entering destinations, safety features, fares, and fixes."
+title: "Didi for Foreign Tourists 2026: How to Use China's Ride-Hailing App"
+description: "Step-by-step 2026 guide to using DiDi in China as a foreign tourist — English interface setup, adding payment methods, booking rides, and tips for airport and city travel."
 pubDate: 2026-07-03
 category: transport
 tags: ["didi", "ride-hailing", "taxi", "transport"]

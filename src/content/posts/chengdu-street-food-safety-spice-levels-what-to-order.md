@@ -1,6 +1,6 @@
 ---
-title: "Chengdu Street Food: Safety, Spice Levels & What to Order"
-description: "A practical guide to Chengdu street food for foreign travelers: how to judge hygiene, decode spice levels, and pick the dishes worth queuing for on your trip."
+title: "Chengdu Street Food 2026: Safety, Spice Levels and What to Order"
+description: "Your practical 2026 guide to Chengdu street food — how to handle Sichuan spice levels, food safety tips, must-try dishes, and how to order without speaking Chinese."
 pubDate: 2026-07-09
 category: food
 series: food-of-china

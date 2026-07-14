@@ -1,6 +1,6 @@
 ---
-title: "How Much Cash Should You Bring to China in 2026? A Tourist's Money Guide"
-description: "How much cash to bring to China as a tourist in 2026, where cash is still needed, currency exchange and ATM tips, and the customs limits you need to know."
+title: "How Much Cash to Bring to China in 2026: Tourist Money Guide"
+description: "Practical cash advice for China travelers in 2026 — how much RMB to carry, where to exchange foreign currency, ATM fees, and how to balance cash with mobile payments."
 pubDate: 2026-07-08
 category: payment
 tags: ["cash", "currency exchange", "china money", "rmb"]

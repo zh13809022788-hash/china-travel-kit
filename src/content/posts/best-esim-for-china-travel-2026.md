@@ -1,6 +1,6 @@
 ---
-title: "Best eSIM for China Travel in 2026: How to Choose and Set Up"
-description: "Find the best eSIM for China travel in 2026. Compare data plans, learn which options bypass app restrictions, and follow our step-by-step setup guide."
+title: "Best eSIM for China Travel 2026: How to Choose and Set Up (Airalo, Holafly, Nomad)"
+description: "Compare the best eSIM providers for China in 2026 — Airalo, Holafly, Nomad — with pricing, data limits, setup steps, and whether you can bypass the Great Firewall without a VPN."
 pubDate: 2026-07-05
 category: esim
 tags: ["esim", "china data", "mobile internet", "travel sim"]

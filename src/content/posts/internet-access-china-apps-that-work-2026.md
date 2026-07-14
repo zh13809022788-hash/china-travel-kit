@@ -1,6 +1,6 @@
 ---
-title: "Internet Access in China: Which Apps Work for Tourists"
-description: "What's blocked in China in 2026, which apps still work, and how tourists keep Google, WhatsApp, and Instagram running using a travel eSIM or roaming."
+title: "Internet Access in China 2026: Which Apps Work for Tourists Without a VPN"
+description: "A practical 2026 guide to which apps work in China without a VPN, which are blocked, and how to stay connected with messaging, maps, and social media as a foreign tourist."
 pubDate: 2026-07-08
 category: esim
 tags: ["internet china", "blocked apps", "esim", "roaming"]

@@ -1,6 +1,6 @@
 ---
-title: "Sanya City Guide for Foreigners: What to Know Before You Go"
-description: "A practical Sanya guide for foreign visitors: beaches, best season, getting around, paying, staying connected, and tips for short trips or longer winter stays."
+title: "Sanya City Guide for Foreigners 2026: Beaches, Resorts and Travel Tips"
+description: "Complete 2026 guide to Sanya for foreign visitors — best beaches, resort areas, water activities, Hainan Island tips, winter sun escape planning, and practical transport advice."
 pubDate: 2026-07-09
 category: essentials
 tags: ["sanya", "hainan", "city guide", "china travel"]

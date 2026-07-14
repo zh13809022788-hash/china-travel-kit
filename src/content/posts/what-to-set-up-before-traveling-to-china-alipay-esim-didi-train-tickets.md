@@ -1,6 +1,6 @@
 ---
-title: "What to Set Up Before Traveling to China: Alipay, eSIM and DiDi"
-description: "A pre-departure checklist for China travelers covering Alipay, WeChat Pay, eSIM, DiDi, train tickets, maps, translation, cash backup, and arrival-day mistakes."
+title: "What to Set Up Before Traveling to China 2026: Apps, Payments and Documents"
+description: "Essential pre-departure checklist for China 2026 — install Alipay and WeChat Pay, buy an eSIM, set up Didi and 12306, download translation apps, and prepare your documents before you fly."
 pubDate: 2026-07-13
 category: essentials
 tags: ["china checklist", "alipay", "esim", "didi", "train tickets", "travel apps"]

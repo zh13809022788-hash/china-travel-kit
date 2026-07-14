@@ -1,6 +1,6 @@
 ---
-title: "China Visa-Free Entry and Transit in 2026: Do You Need a Visa to Visit?"
-description: "A clear 2026 guide to China's visa-free policies: the 240-hour transit scheme, the 30-day unilateral visa-free entry, who qualifies, and the rules every tourist must know."
+title: "China Visa-Free Entry and Transit 2026: Do You Need a Visa?"
+description: "Complete 2026 guide to China visa-free entry, 240-hour transit, and visa policies by nationality — eligibility checker, airport processes, required documents, and common questions for foreign travelers."
 pubDate: 2026-07-08
 category: transport
 tags: ["visa free", "china visa", "transit visa", "entry rules"]

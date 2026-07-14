@@ -1,6 +1,6 @@
 ---
-title: "Shanghai Metro for Foreigners: Tickets, QR Codes & Transfers"
-description: "Learn how to ride the Shanghai Metro as a foreigner: buying tickets, using Alipay and WeChat QR codes, mastering transfers, and avoiding common rookie mistakes."
+title: "Shanghai Metro for Foreigners 2026: Tickets, QR Codes and Transfer Guide"
+description: "How to use the Shanghai metro as a foreign tourist in 2026 — ticket types, Alipay QR code entry, line transfers, airport connections, and practical tips for navigating the system."
 pubDate: 2026-07-09
 category: transport
 tags: ["shanghai metro", "china transport", "qr code payment", "subway tickets", "alipay"]

@@ -1,6 +1,6 @@
 ---
-title: "Airport to City Transport in Beijing, Shanghai, and Guangzhou"
-description: "How to get from the airport to the city center in Beijing, Shanghai, and Guangzhou in 2026, with metro, airport express, maglev, taxi, and DiDi options, costs, and times."
+title: "Airport to City Transport in Beijing, Shanghai and Guangzhou 2026: Complete Guide"
+description: "How to get from the airport to city center in Beijing, Shanghai, and Guangzhou in 2026 — metro, airport express, taxi, Didi costs, times, and step-by-step instructions for first-time visitors."
 pubDate: 2026-07-08
 category: transport
 tags: ["airport transport", "beijing", "shanghai", "guangzhou"]

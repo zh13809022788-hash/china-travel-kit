@@ -1,6 +1,6 @@
 ---
-title: "Beijing Daxing Airport to City Center: A First-Timer's Guide"
-description: "Landing at Beijing Daxing (PKX)? Compare the airport express, intercity train, buses, and taxis, plus the best late-night ways to reach central Beijing fast."
+title: "Beijing Daxing Airport to City Center 2026: First-Timer's Transport Guide"
+description: "Complete 2026 guide to getting from Beijing Daxing International Airport to the city center — airport express train, taxi costs, Didi, metro options, and tips for first-time visitors."
 pubDate: 2026-07-08
 category: transport
 tags: ["beijing", "daxing airport", "airport transfer", "airport express", "late-night travel"]

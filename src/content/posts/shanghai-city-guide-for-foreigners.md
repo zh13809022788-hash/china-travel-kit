@@ -1,6 +1,6 @@
 ---
-title: "Shanghai City Guide for Foreigners: What to Know Before You Go"
-description: "A practical Shanghai guide for foreign visitors: getting around, paying, staying connected, neighborhoods, food, and tips for both short trips and longer stays."
+title: "Shanghai City Guide for Foreigners 2026: What to Know Before You Go"
+description: "Complete 2026 guide to Shanghai for foreign tourists — best areas to stay, top attractions, metro tips, food recommendations, day trips, and practical advice for a smooth visit."
 pubDate: 2026-07-09
 category: essentials
 tags: ["shanghai", "city guide", "china travel", "expat"]

@@ -1,6 +1,6 @@
 ---
-title: "Apple Pay & Google Pay in China: What Really Works"
-description: "A tourist's honest guide to using Apple Pay and Google Pay in China: where contactless taps actually work, where they fail, and what to set up instead now."
+title: "Apple Pay & Google Pay in China 2026: What Actually Works for Foreigners"
+description: "Can you use Apple Pay or Google Pay in China in 2026? A practical guide for foreign visitors on contactless payment options, limits, and when to use Alipay or WeChat instead."
 pubDate: 2026-07-08
 category: payment
 tags: ["apple pay", "google pay", "china payment", "contactless", "travel tips"]

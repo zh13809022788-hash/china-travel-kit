@@ -1,6 +1,6 @@
 ---
-title: "China High-Speed Rail Guide for Foreigners: Booking and Seats"
-description: "A complete 2026 guide to riding China's high-speed rail as a foreigner: how to book with the 12306 app, use your passport as a paperless ticket, and choose seat classes."
+title: "China High-Speed Rail Guide for Foreigners 2026: Booking, Classes and Tips"
+description: "Essential 2026 guide to China's high-speed rail for foreign travelers — ticket classes, how to book with a passport, station navigation, onboard amenities, and money-saving tips."
 pubDate: 2026-07-08
 category: transport
 tags: ["high-speed rail", "12306", "china train", "transport"]

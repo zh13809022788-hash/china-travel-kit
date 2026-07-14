@@ -1,6 +1,6 @@
 ---
-title: "How to Pay in China as a Tourist: The Complete 2026 Guide"
-description: "A practical, up-to-date guide to paying in China as a foreign visitor — from mobile wallets and foreign cards to cash and common pitfalls to avoid."
+title: "How to Pay in China as a Tourist 2026: Complete Payment Guide"
+description: "Everything foreign tourists need to know about paying in China in 2026 — Alipay, WeChat Pay, foreign credit cards, cash backup, and step-by-step setup before departure."
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "wechat pay", "mobile payment", "cash"]

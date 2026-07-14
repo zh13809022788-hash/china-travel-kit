@@ -1,6 +1,6 @@
 ---
-title: "Can You Still Use Cash in China as a Foreigner in 2026?"
-description: "A practical 2026 guide to using cash in China as a foreigner: where notes still work, where they get refused, and how to keep small bills for taxis."
+title: "Can You Still Use Cash in China in 2026? A Foreign Visitor's Guide"
+description: "China is mostly cashless, but cash still works. This 2026 guide explains when you need cash, where to exchange currency, and how much RMB to carry as a backup payment method."
 pubDate: 2026-07-09
 category: payment
 tags: ["cash", "payment", "china travel", "rmb", "money tips"]
