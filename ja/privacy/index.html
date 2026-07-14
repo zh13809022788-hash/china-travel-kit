@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" type="application/rss+xml" title="ChinaTripBox Travel Guides" href="/rss.xml"><meta name="generator" content="Astro v5.18.2"><meta name="google-site-verification" content="4IazPod-9BT1hQUHHWC0xb6GO0esJ2o3oZB9Iq_d_lA"><meta name="google-adsense-account" content="ca-pub-3673928456254144"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3673928456254144" crossorigin="anonymous"></script><script>
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "xl5po1by2u");
+          </script><title>Privacy Policy | ChinaTripBox</title><meta name="description" content="How ChinaTripBox collects, uses, and protects your information, including cookies, advertising, and affiliate disclosures."><link rel="canonical" href="https://www.chinatripbox.com/ja/privacy/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="ChinaTripBox"><meta property="og:title" content="Privacy Policy | ChinaTripBox"><meta property="og:description" content="How ChinaTripBox collects, uses, and protects your information, including cookies, advertising, and affiliate disclosures."><meta property="og:url" content="https://www.chinatripbox.com/ja/privacy/"><meta property="og:image" content="https://www.chinatripbox.com/og-default.svg"><meta name="twitter:image" content="https://www.chinatripbox.com/og-default.svg"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Privacy Policy | ChinaTripBox"><meta name="twitter:description" content="How ChinaTripBox collects, uses, and protects your information, including cookies, advertising, and affiliate disclosures."><meta name="twitter:image" content="https://www.chinatripbox.com/og-default.svg"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.chinatripbox.com/#organization","name":"ChinaTripBox","url":"https://www.chinatripbox.com/","logo":"https://www.chinatripbox.com/favicon.svg","sameAs":["https://www.chinatripbox.com/about/","https://www.chinatripbox.com/editorial-policy/"],"description":"Independent China travel guides and planning tools for foreign visitors, covering mobile payments, eSIMs, transport, trip planning, and everyday travel logistics.","contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://www.chinatripbox.com/contact/","availableLanguage":["ja","en"]}},{"@type":"WebSite","@id":"https://www.chinatripbox.com/#website","name":"ChinaTripBox","url":"https://www.chinatripbox.com/","description":"How ChinaTripBox collects, uses, and protects your information, including cookies, advertising, and affiliate disclosures.","publisher":{"@id":"https://www.chinatripbox.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.chinatripbox.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.chinatripbox.com/ja/privacy/#webpage","url":"https://www.chinatripbox.com/ja/privacy/","name":"Privacy Policy | ChinaTripBox","description":"How ChinaTripBox collects, uses, and protects your information, including cookies, advertising, and affiliate disclosures.","isPartOf":{"@id":"https://www.chinatripbox.com/#website"},"about":{"@id":"https://www.chinatripbox.com/#organization"}}]}</script><script>(function(){
+      var PREF_KEY='ctb-lang-pref';
+      var LOCALE_PREFIXES=['zh-tw','ja','ko','ru','fr','de','es'];
+      var pref=null,locales=null;
+      try{pref=localStorage.getItem(PREF_KEY);}catch(e){}
+
+      // Helper: check if current path already has a locale prefix
+      function hasLocalePrefix(p){
+        var parts=p.replace(/\/$/,'').split('/');
+        if(parts.length<2)return null;
+        var first=parts[1].toLowerCase();
+        for(var k=0;k<LOCALE_PREFIXES.length;k++){if(first===LOCALE_PREFIXES[k])return LOCALE_PREFIXES[k];}
+        return null;
+      }
+
+      // Helper: normalize locale to path prefix (Astro uses lowercase paths)
+      function localePath(locale){return locale.toLowerCase();}
+
+      // Helper: redirect to a URL
+      function goTo(url){if(url&&window.location.href!==url){window.location.replace(url);}}
+
+      // Helper: find hreflang alternate href for a locale code
+      function findAlt(locale){
+        var alts=document.querySelectorAll('link[rel="alternate"][hreflang]');
+        for(var j=0;j<alts.length;j++){
+          var hl=alts[j].getAttribute('hreflang');
+          var hr=alts[j].getAttribute('href');
+          if(hl===locale&&hr)return hr;
+        }
+        return null;
+      }
+
+      // --- Stage 1: User has a language preference ---
+      if(pref&&pref!=='en'){
+        var currentLocale=hasLocalePrefix(window.location.pathname);
+        // If we're already on a page in the preferred locale, do nothing
+        if(currentLocale&&currentLocale===localePath(pref)){return;}
+        // If we're on a non-preferred locale page, redirect to preferred version of same page
+        // (e.g. on /de/posts/x/ with pref=fr → try /fr/posts/x/)
+        if(currentLocale){
+          var swappedPath=window.location.pathname.replace(new RegExp('^/'+currentLocale+'/','i'),'/'+localePath(pref)+'/');
+          goTo(swappedPath);
+          return;
+        }
+        // We're on an English page — try hreflang alternate for preferred locale
+        var altHref=findAlt(pref);
+        if(altHref){
+          try{var tp=new URL(altHref).pathname;}catch(e){tp=null;}
+          if(tp&&window.location.pathname!==tp){goTo(altHref);return;}
+        }
+        // No alternate exists → redirect to preferred locale homepage
+        // (nav links point to English pages, this keeps user in their language)
+        goTo(window.location.origin+'/'+localePath(pref)+'/');
+        return;
+      }
+
+      // --- Stage 2: No preference or explicitly set to English — auto-detect from browser language ---
+      var langs=navigator.languages||[navigator.language]||[];
+      var detected=null;
+      for(var i=0;i<langs.length;i++){
+        var lang=(langs[i]||'').toLowerCase();
+        if(lang.startsWith('zh-tw')||lang.startsWith('zh-hant')||lang==='zh-hk'||lang==='zh-mo'){detected='zh-TW';break;}
+        if(lang.startsWith('ja')){detected='ja';break;}
+        if(lang.startsWith('ko')){detected='ko';break;}
+        if(lang.startsWith('ru')){detected='ru';break;}
+        if(lang.startsWith('fr')){detected='fr';break;}
+        if(lang.startsWith('de')){detected='de';break;}
+        if(lang.startsWith('es')){detected='es';break;}
+        if(lang.startsWith('zh')){detected='zh-TW';break;}
+        if(lang.startsWith('en')){detected='en';break;}
+      }
+      if(!detected||detected==='en')return;
+      // Check we're not already on a locale page
+      if(hasLocalePrefix(window.location.pathname))return;
+      var alt=findAlt(detected);
+      if(alt){
+        try{var tp2=new URL(alt).pathname;}catch(e){tp2=null;}
+        if(tp2&&window.location.pathname!==tp2){goTo(alt);}
+      }
+    })();</script><link rel="stylesheet" href="/_astro/_slug_.i4eVZaIC.css"></head> <body class="flex min-h-screen flex-col">  <header class="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur"> <nav class="container-page flex h-16 items-center justify-between gap-3"> <a href="/ja/" class="flex shrink-0 items-center gap-2 font-bold text-gray-900 hover:no-underline"> <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">CT</span> <span class="hidden text-lg sm:inline">ChinaTripBox</span> </a> <!-- Desktop nav --> <ul class="hidden items-center gap-3 lg:flex xl:gap-4"> <li> <a href="/ja/" class="text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline text-gray-700"> ホーム </a> </li><li> <a href="/ja/resources/" class="text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline text-gray-700"> 旅行計画 </a> </li><li> <a href="/ja/apps/" class="text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline text-gray-700"> アプリ設定 </a> </li><li> <a href="/ja/payment/" class="text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline text-gray-700"> 決済 </a> </li><li> <a href="/ja/esim/" class="text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline text-gray-700"> 通信 </a> </li><li> <a href="/ja/transport/" class="text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline text-gray-700"> 交通 </a> </li><li> <a href="/ja/cities/" class="text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline text-gray-700"> 都市 </a> </li><li> <a href="/ja/food/" class="text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline text-gray-700"> グルメ </a> </li> </ul> <!-- Right side: language + hamburger --> <div class="flex items-center gap-2"> <div class="lang-switcher relative" data-lang-switcher><button type="button" class="lang-toggle inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700" aria-label="Switch language" aria-expanded="false" aria-haspopup="listbox"><!-- Globe icon --><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="hidden sm:inline">日本語</span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="transition-transform lang-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg></button><!-- Dropdown --><div class="lang-dropdown absolute right-0 top-full z-50 mt-1 hidden min-w-[170px] max-h-[60vh] overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg ring-1 ring-black/5" role="listbox"><a href="/" data-lang-switch="en" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>English</a><a href="/zh-tw/" data-lang-switch="zh-TW" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>繁體中文</a><span class="flex items-center gap-2 px-3.5 py-2.5 text-sm font-semibold text-brand-700 bg-brand-50" role="option" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>日本語</span><a href="/ko/" data-lang-switch="ko" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>한국어</a><a href="/ru/" data-lang-switch="ru" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>Русский</a><a href="/fr/" data-lang-switch="fr" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>Français</a><a href="/de/" data-lang-switch="de" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>Deutsch</a><a href="/es/" data-lang-switch="es" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>Español</a></div></div><script type="module">function d(){document.querySelectorAll(".lang-switcher").forEach(function(e){const t=e.querySelector(".lang-toggle"),o=e.querySelector(".lang-dropdown"),r=e.querySelector(".lang-chevron");if(!t||!o)return;let n=!1;function i(){n=!0,o.classList.remove("hidden"),t.setAttribute("aria-expanded","true"),r?.classList.add("rotate-180")}function c(){n=!1,o.classList.add("hidden"),t.setAttribute("aria-expanded","false"),r?.classList.remove("rotate-180")}t.addEventListener("click",function(a){a.stopPropagation(),n?c():i()}),document.addEventListener("click",function(){n&&c()}),document.addEventListener("keydown",function(a){a.key==="Escape"&&n&&c()})}),document.querySelectorAll("[data-lang-switch]").forEach(function(e){e.addEventListener("click",function(){try{localStorage.setItem("ctb-lang-pref",this.getAttribute("data-lang-switch"))}catch{}})})}d();</script> <!-- Mobile hamburger --> <button id="menu-toggle" class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 lg:hidden" aria-label="Toggle navigation menu" aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <line x1="3" y1="12" x2="21" y2="12"></line> <line x1="3" y1="6" x2="21" y2="6"></line> <line x1="3" y1="18" x2="21" y2="18"></line> </svg> </button> </div> </nav> <!-- Mobile menu --> <div id="mobile-menu" class="hidden border-t border-gray-200 lg:hidden"> <div class="container-page py-2"> <ul class="flex flex-col"> <li> <a href="/ja/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> ホーム </a> </li><li> <a href="/ja/resources/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 旅行計画 </a> </li><li> <a href="/ja/apps/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> アプリ設定 </a> </li><li> <a href="/ja/payment/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 決済 </a> </li><li> <a href="/ja/esim/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 通信 </a> </li><li> <a href="/ja/transport/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 交通 </a> </li><li> <a href="/ja/cities/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 都市 </a> </li><li> <a href="/ja/food/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> グルメ </a> </li><li> <a href="/ja/essentials/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 旅行準備 </a> </li><li> <a href="/ja/trip-planner/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 旅行プランナー </a> </li><li> <a href="/ja/tools/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> ツール </a> </li><li> <a href="/ja/series/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> シリーズ </a> </li><li> <a href="/ja/long-stay/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 長期滞在 </a> </li><li> <a href="/ja/digital-nomads/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> デジタルノマド </a> </li><li> <a href="/ja/travel-help/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> ヘルプ </a> </li><li> <a href="/ja/about/" class="block py-2.5 text-sm font-medium hover:no-underline text-gray-700"> 概要 </a> </li> </ul> </div> </div> </header> <script type="module">const e=document.getElementById("menu-toggle"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{const t=n?.classList.toggle("hidden");e.setAttribute("aria-expanded",String(t===!1))});</script> <main class="container-page py-12"> <article class="prose-content article-body"> <h1 class="text-3xl font-bold text-gray-900">Privacy Policy</h1> <p class="mt-2 text-sm text-gray-500">Last updated: July 10, 2026</p> <p class="mt-4">
+This Privacy Policy explains how ChinaTripBox ("we", "us", or "our") collects, uses, and
+        safeguards information when you visit this website. By using this site, you agree to the
+        practices described below.
+</p> <h2>Information We Collect</h2> <p>
+We do not require you to create an account or submit personal information to read our
+        content. We may collect limited, non-identifying information automatically, such as browser
+        type, device, pages visited, and approximate location derived from your IP address, for the
+        purpose of understanding site usage and improving our guides.
+</p> <p>
+If you contact us by email, we may receive your name, email address, message content, and
+        any information you choose to include. We use this information only to respond to your
+        request, review corrections, or manage partnership enquiries.
+</p> <p>
+If you use a future AI-assisted travel help feature, your question and related context may
+        be processed by a third-party AI provider so that an answer can be generated or summarized.
+        Do not submit passport photos, bank card numbers, passwords, PINs, one-time verification
+        codes, or other sensitive personal information.
+</p> <h2>Cookies</h2> <p>
+This site uses cookies and similar technologies to enable core functionality, remember your
+        preferences, measure traffic, serve advertising, and protect site performance. You can
+        control or disable cookies through your browser settings, though some features may not work
+        as intended if you do.
+</p> <p>
+For visitors in regions where consent is required, including the European Economic Area, the
+        United Kingdom, and Switzerland, we may use Google's certified consent management tools or
+        another Google-certified consent management platform to request and store your cookie and
+        advertising choices.
+</p> <h2>Advertising</h2> <p>
+We display advertisements to keep this site free. Third-party vendors, including Google, may
+        use cookies to serve ads based on your prior visits to this and other websites. Google's use
+        of advertising cookies enables it and its partners to serve ads based on your visits. You
+        may opt out of personalized advertising by visiting
+<a href="https://www.google.com/settings/ads" rel="nofollow">Google Ads Settings</a>.
+</p> <p>
+Google and its partners may process data for ad measurement, fraud prevention, frequency
+        capping, personalized advertising, and non-personalized advertising, depending on your
+        location and consent choices. You can learn more about how Google uses information from
+        sites and apps that use its services at
+<a href="https://policies.google.com/technologies/partner-sites" rel="nofollow">Google's partner sites policy</a>.
+</p> <h2>Analytics and Performance</h2> <p>
+We may use privacy-conscious analytics, hosting logs, or performance tools to understand
+        traffic trends, detect errors, and keep the site fast and reliable. These tools may collect
+        technical information such as page views, device type, browser, referring page, and general
+        region.
+</p> <h2>Affiliate Disclosure</h2> <p>
+Some links on this site are affiliate links. If you click one and make a purchase, we may
+        earn a commission at no additional cost to you. We only recommend products and services we
+        believe are genuinely useful to travelers.
+</p> <h2>Third-Party Links</h2> <p>
+Our guides link to external websites and services. We are not responsible for the privacy
+        practices or content of these third-party sites. We encourage you to review their privacy
+        policies.
+</p> <h2>AI-Assisted Features</h2> <p>
+We may use AI tools to answer simple travel questions, summarize requests, or route complex
+        issues for human review. AI responses may be incomplete or inaccurate and should be checked
+        against official sources when the decision is important.
+</p> <h2>Your Choices</h2> <p>
+You can manage cookies through your browser settings, use Google Ads Settings to control ad
+        personalization, and contact us if you want to ask about information you previously sent to
+        us by email.
+</p> <h2>Data Security</h2> <p>
+We take reasonable measures to protect the information handled through this site. However,
+        no method of transmission over the internet is completely secure, and we cannot guarantee
+        absolute security.
+</p> <h2>Children's Privacy</h2> <p>
+This site is not directed at children under 13, and we do not knowingly collect personal
+        information from children.
+</p> <h2>Changes to This Policy</h2> <p>
+We may update this Privacy Policy from time to time. Any changes will be posted on this page
+        with an updated revision date.
+</p> <h2>Contact</h2> <p>
+If you have questions about this Privacy Policy, please reach us via our
+<a href="/contact/">contact page</a>.
+</p> </article> </main> <footer class="mt-auto border-t border-gray-200 bg-gray-50"> <div class="container-page py-10"> <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center"> <div> <div class="flex items-center gap-2 font-bold text-gray-900"> <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand-600 text-sm text-white">CT</span>
+ChinaTripBox
+</div> <p class="mt-2 max-w-xl text-sm leading-6 text-gray-500">ChinaTripBoxは外国人旅行者のための中国旅行計画サイトです。実用的なガイド、ツール、オプションの旅行サポートを提供しています。一部のリンクは手数料を得る場合があります。</p> <p class="mt-2 max-w-xl text-xs leading-5 text-gray-500">当サイトは一般的な旅行情報のみを提供しており、法的、入国管理、医療、銀行、緊急、または公的な政府アドバイスを提供するものではありません。</p> </div> <ul class="flex flex-wrap gap-5"> <li> <a href="/ja/travel-help/" class="text-sm text-gray-600 hover:text-brand-600">旅行ヘルプ</a> </li><li> <a href="/ja/resources/" class="text-sm text-gray-600 hover:text-brand-600">リソース</a> </li><li> <a href="/ja/about/" class="text-sm text-gray-600 hover:text-brand-600">概要</a> </li><li> <a href="/ja/contact/" class="text-sm text-gray-600 hover:text-brand-600">お問い合わせ</a> </li><li> <a href="/ja/editorial-policy/" class="text-sm text-gray-600 hover:text-brand-600">編集方針</a> </li><li> <a href="/ja/affiliate-disclosure/" class="text-sm text-gray-600 hover:text-brand-600">アフィリエイト開示</a> </li><li> <a href="/ja/privacy/" class="text-sm text-gray-600 hover:text-brand-600">プライバシーポリシー</a> </li><li> <a href="/ja/terms/" class="text-sm text-gray-600 hover:text-brand-600">利用規約</a> </li> </ul> </div> <div class="mt-8 border-t border-gray-200 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"> <span class="text-sm text-gray-500">&copy; 2026 ChinaTripBox. 無断転載を禁じます</span> <div class="lang-switcher relative" data-lang-switcher><button type="button" class="lang-toggle inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700" aria-label="Switch language" aria-expanded="false" aria-haspopup="listbox"><!-- Globe icon --><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="hidden sm:inline">日本語</span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="transition-transform lang-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg></button><!-- Dropdown --><div class="lang-dropdown absolute right-0 top-full z-50 mt-1 hidden min-w-[170px] max-h-[60vh] overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg ring-1 ring-black/5" role="listbox"><a href="privacy/" data-lang-switch="en" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>English</a><a href="/zh-twprivacy/" data-lang-switch="zh-TW" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>繁體中文</a><a href="/koprivacy/" data-lang-switch="ko" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>한국어</a><a href="/ruprivacy/" data-lang-switch="ru" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>Русский</a><a href="/frprivacy/" data-lang-switch="fr" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>Français</a><a href="/deprivacy/" data-lang-switch="de" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>Deutsch</a><a href="/esprivacy/" data-lang-switch="es" class="flex items-center gap-2 px-3.5 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-brand-700 hover:no-underline" role="option" aria-selected="false"><span class="inline-block w-[14px]"></span>Español</a></div></div> </div> </div> </footer>  </body></html>
