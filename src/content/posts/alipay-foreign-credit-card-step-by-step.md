@@ -4,6 +4,9 @@ description: "A clear 2026 step-by-step guide to installing Alipay, verifying yo
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "foreign card", "setup", "mobile payment"]
+cover: "topic-alipay"
+coverAlt: "Alipay mobile payment app on a smartphone with Chinese yuan notes"
+
 featured: false
 faqs:
   - question: "What is the Alipay TourPass and do I still need it in 2026?"

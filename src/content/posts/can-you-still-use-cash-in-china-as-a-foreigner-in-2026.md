@@ -4,6 +4,9 @@ description: "A practical 2026 guide to using cash in China as a foreigner: wher
 pubDate: 2026-07-09
 category: payment
 tags: ["cash", "payment", "china travel", "rmb", "money tips"]
+cover: "topic-cash-china"
+coverAlt: "Chinese yuan banknotes and coins spread on a surface"
+
 featured: false
 faqs:
   - question: "Is cash legal to use everywhere in China in 2026?"

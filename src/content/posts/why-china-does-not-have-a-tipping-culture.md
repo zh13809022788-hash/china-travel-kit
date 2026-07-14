@@ -4,6 +4,9 @@ description: "A traveler-friendly explanation of why tipping is uncommon in main
 pubDate: 2026-07-11
 category: essentials
 tags: ["tipping", "china culture", "travel etiquette", "restaurants", "service"]
+cover: "topic-no-tipping-culture"
+coverAlt: "Chinese dining table with dishes in a casual restaurant setting"
+
 featured: false
 faqs:
   - question: "Is it rude not to tip in China?"

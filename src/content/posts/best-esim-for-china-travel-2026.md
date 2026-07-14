@@ -4,6 +4,9 @@ description: "Find the best eSIM for China travel in 2026. Compare data plans, l
 pubDate: 2026-07-05
 category: esim
 tags: ["esim", "china data", "mobile internet", "travel sim"]
+cover: "topic-esim-vs-roaming"
+coverAlt: "eSIM setup screen on a smartphone with data plan options"
+
 featured: true
 faqs:
   - question: "Do China travel eSIMs let me use apps like Google, WhatsApp, and Instagram?"

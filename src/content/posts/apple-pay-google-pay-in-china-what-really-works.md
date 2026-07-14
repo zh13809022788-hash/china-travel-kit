@@ -4,6 +4,9 @@ description: "A tourist's honest guide to using Apple Pay and Google Pay in Chin
 pubDate: 2026-07-08
 category: payment
 tags: ["apple pay", "google pay", "china payment", "contactless", "travel tips"]
+cover: "topic-apple-pay-google-pay"
+coverAlt: "Contactless payment with a smartphone at a retail terminal"
+
 featured: false
 faqs:
   - question: "Does Apple Pay work in China for tourists?"

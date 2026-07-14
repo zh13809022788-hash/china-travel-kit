@@ -4,6 +4,9 @@ description: "Compare Alipay and WeChat Pay for foreign visitors to China: setup
 pubDate: 2026-07-14
 category: payment
 tags: ["alipay", "wechat pay", "mobile payment", "foreign cards"]
+cover: "topic-alipay-vs-wechat"
+coverAlt: "Two smartphones showing Alipay and WeChat Pay payment QR codes"
+
 featured: true
 faqs:
   - question: "Should foreigners use Alipay or WeChat Pay in China?"

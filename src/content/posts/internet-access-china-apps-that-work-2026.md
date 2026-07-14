@@ -4,6 +4,9 @@ description: "What's blocked in China in 2026, which apps still work, and how to
 pubDate: 2026-07-08
 category: esim
 tags: ["internet china", "blocked apps", "esim", "roaming"]
+cover: "topic-internet-apps"
+coverAlt: "Smartphone screen with various app icons for internet access"
+
 featured: false
 faqs:
   - question: "Which apps are blocked in China in 2026?"

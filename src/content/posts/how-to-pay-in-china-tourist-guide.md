@@ -4,6 +4,9 @@ description: "A practical, up-to-date guide to paying in China as a foreign visi
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "wechat pay", "mobile payment", "cash"]
+cover: "topic-how-to-pay"
+coverAlt: "Various payment methods including smartphone and cards arranged on a table"
+
 featured: true
 faqs:
   - question: "Can I use my Visa or Mastercard directly in China?"

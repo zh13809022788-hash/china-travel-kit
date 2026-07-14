@@ -4,6 +4,9 @@ description: "A step-by-step 2026 guide to booking China high-speed rail on the 
 pubDate: 2026-07-04
 category: transport
 tags: ["12306", "train tickets", "high-speed rail", "transport"]
+cover: "topic-12306-train"
+coverAlt: "China train ticket booking app on smartphone with railway station background"
+
 featured: false
 faqs:
   - question: "Do I need a Chinese ID or bank account to book on 12306?"

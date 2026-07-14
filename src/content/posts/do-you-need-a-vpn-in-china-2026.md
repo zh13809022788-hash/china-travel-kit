@@ -4,6 +4,9 @@ description: "A practical China internet guide for tourists: what works without 
 pubDate: 2026-07-14
 category: esim
 tags: ["vpn", "internet", "esim", "apps"]
+cover: "topic-vpn-great-firewall"
+coverAlt: "The Great Wall of China with digital network overlay concept"
+
 featured: true
 faqs:
   - question: "Do tourists need a VPN in China?"

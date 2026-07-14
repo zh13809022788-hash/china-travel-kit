@@ -4,6 +4,9 @@ description: "A practical first-day China arrival checklist covering airport int
 pubDate: 2026-07-14
 category: essentials
 tags: ["arrival checklist", "first time china", "payment", "transport"]
+cover: "topic-first-24-hours"
+coverAlt: "International airport arrival hall with luggage and signage"
+
 featured: true
 faqs:
   - question: "What should I do first after landing in China?"

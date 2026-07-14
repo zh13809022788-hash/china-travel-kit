@@ -4,6 +4,9 @@ description: "A pre-departure checklist for China travelers covering Alipay, WeC
 pubDate: 2026-07-13
 category: essentials
 tags: ["china checklist", "alipay", "esim", "didi", "train tickets", "travel apps"]
+cover: "topic-predeparture-setup"
+coverAlt: "Smartphone setup checklist with travel apps and passport nearby"
+
 featured: false
 faqs:
   - question: "What apps should I install before traveling to China?"

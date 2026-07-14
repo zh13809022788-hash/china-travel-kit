@@ -4,6 +4,9 @@ description: "A practical 2024-2026 guide for tourists on linking a foreign Visa
 pubDate: 2026-07-09
 category: payment
 tags: ["wechat pay", "payment", "foreign card", "china travel", "mastercard"]
+cover: "topic-credit-card"
+coverAlt: "Foreign Visa and Mastercard credit cards arranged on a surface"
+
 featured: false
 faqs:
   - question: "Can I really use a foreign Visa or Mastercard with WeChat Pay?"

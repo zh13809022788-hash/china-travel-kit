@@ -4,6 +4,9 @@ description: "A practical 2026 guide to using foreign Visa, Mastercard, and Amex
 pubDate: 2026-07-08
 category: payment
 tags: ["credit card", "visa mastercard", "china payment", "atm"]
+cover: "topic-credit-card"
+coverAlt: "Foreign credit card being used at a payment terminal"
+
 featured: false
 faqs:
   - question: "Can I use my foreign Visa or Mastercard directly at shops in China?"

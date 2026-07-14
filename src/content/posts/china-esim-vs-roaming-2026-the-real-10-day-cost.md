@@ -4,6 +4,9 @@ description: "A concrete 2026 price breakdown of eSIM versus carrier roaming for
 pubDate: 2026-07-08
 category: esim
 tags: ["china esim", "roaming cost", "travel esim", "china travel", "2026"]
+cover: "topic-esim-vs-roaming"
+coverAlt: "Comparison of eSIM and roaming data plans on two smartphones"
+
 featured: false
 faqs:
   - question: "Is roaming or an eSIM cheaper for a 10-day China trip?"

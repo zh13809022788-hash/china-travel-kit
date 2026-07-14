@@ -4,6 +4,9 @@ description: "Learn how to ride the Shanghai Metro as a foreigner: buying ticket
 pubDate: 2026-07-09
 category: transport
 tags: ["shanghai metro", "china transport", "qr code payment", "subway tickets", "alipay"]
+cover: "topic-shanghai-metro"
+coverAlt: "Shanghai metro station platform with modern subway train"
+
 featured: false
 faqs:
   - question: "Can I use a foreign credit card on the Shanghai Metro?"

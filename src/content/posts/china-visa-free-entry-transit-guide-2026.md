@@ -4,6 +4,9 @@ description: "A clear 2026 guide to China's visa-free policies: the 240-hour tra
 pubDate: 2026-07-08
 category: transport
 tags: ["visa free", "china visa", "transit visa", "entry rules"]
+cover: "topic-visa-free"
+coverAlt: "Passport with Chinese visa stamps and boarding pass"
+
 featured: true
 faqs:
   - question: "Do I need a visa to visit China in 2026?"

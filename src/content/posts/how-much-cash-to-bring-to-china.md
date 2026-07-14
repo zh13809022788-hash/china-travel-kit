@@ -4,6 +4,9 @@ description: "How much cash to bring to China as a tourist in 2026, where cash i
 pubDate: 2026-07-08
 category: payment
 tags: ["cash", "currency exchange", "china money", "rmb"]
+cover: "topic-cash-china"
+coverAlt: "Chinese yuan banknotes and coins spread on a surface"
+
 featured: false
 faqs:
   - question: "How much cash should I bring to China for a one-week trip?"

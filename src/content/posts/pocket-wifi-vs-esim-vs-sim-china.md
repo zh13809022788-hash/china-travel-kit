@@ -4,6 +4,9 @@ description: "Compare pocket WiFi, travel eSIM, and local SIM cards for China tr
 pubDate: 2026-07-08
 category: esim
 tags: ["esim", "pocket wifi", "sim card", "china internet"]
+cover: "topic-pocket-wifi"
+coverAlt: "Pocket WiFi device, eSIM card and local SIM card arranged for comparison"
+
 featured: false
 faqs:
   - question: "Is an eSIM or pocket WiFi better for China?"

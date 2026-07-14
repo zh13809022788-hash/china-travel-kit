@@ -4,6 +4,9 @@ description: "A practical guide to tipping and service charges in China for fore
 pubDate: 2026-07-09
 category: essentials
 tags: ["tipping", "china travel", "etiquette", "service charge", "essentials"]
+cover: "topic-tipping-china"
+coverAlt: "Restaurant table setting with meal and dining atmosphere"
+
 featured: false
 faqs:
   - question: "Do I need to tip at restaurants in China?"

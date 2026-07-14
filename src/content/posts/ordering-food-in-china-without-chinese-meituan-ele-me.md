@@ -5,6 +5,9 @@ pubDate: 2026-07-08
 category: food
 series: food-of-china
 tags: ["meituan", "ele.me", "food delivery china", "alipay", "no chinese"]
+cover: "topic-food-delivery"
+coverAlt: "Food delivery packaging with a smartphone showing ordering app"
+
 featured: false
 faqs:
   - question: "Can I use Meituan or Ele.me with a foreign phone number?"

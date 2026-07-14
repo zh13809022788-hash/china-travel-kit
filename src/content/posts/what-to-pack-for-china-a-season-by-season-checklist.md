@@ -4,6 +4,9 @@ description: "Plan your first trip to China with a practical season-by-season pa
 pubDate: 2026-07-09
 category: essentials
 tags: ["china travel", "packing list", "travel essentials", "first trip", "china tips"]
+cover: "topic-packing-checklist"
+coverAlt: "Open suitcase with travel essentials and clothing for different seasons"
+
 featured: false
 faqs:
   - question: "Do I need to bring a VPN app to China?"

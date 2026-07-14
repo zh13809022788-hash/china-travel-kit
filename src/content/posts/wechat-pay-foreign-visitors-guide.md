@@ -4,6 +4,9 @@ description: "Set up WeChat Pay in China with a foreign card. Step-by-step guide
 pubDate: 2026-07-06
 category: payment
 tags: ["wechat pay", "weixin", "foreign card", "mobile payment"]
+cover: "topic-alipay-vs-wechat"
+coverAlt: "WeChat Pay mobile payment interface on a smartphone"
+
 featured: false
 faqs:
   - question: "Can I use WeChat Pay in China with a foreign credit card?"

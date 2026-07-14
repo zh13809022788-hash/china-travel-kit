@@ -4,6 +4,9 @@ description: "How to get from the airport to the city center in Beijing, Shangha
 pubDate: 2026-07-08
 category: transport
 tags: ["airport transport", "beijing", "shanghai", "guangzhou"]
+cover: "topic-airport-transport"
+coverAlt: "Airport express train platform with modern train in station"
+
 featured: false
 faqs:
   - question: "What's the cheapest way from the airport to the city in China?"

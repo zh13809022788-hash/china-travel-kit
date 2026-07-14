@@ -5,6 +5,9 @@ pubDate: 2026-07-09
 category: food
 series: food-of-china
 tags: ["chengdu", "street food", "sichuan", "food safety", "spicy food"]
+cover: "topic-chengdu-food"
+coverAlt: "Spicy Sichuan street food dishes at a night market stall"
+
 featured: false
 faqs:
   - question: "Is Chengdu street food safe for foreigners to eat?"

@@ -4,6 +4,9 @@ description: "A practical China trip planning guide for first-time visitors: set
 pubDate: 2026-07-13
 category: essentials
 tags: ["first time china", "trip planner", "payment", "esim", "transport", "apps"]
+cover: "topic-trip-planner"
+coverAlt: "Travel planning setup with map, smartphone, passport and itinerary"
+
 featured: true
 faqs:
   - question: "What should I set up first for a China trip?"

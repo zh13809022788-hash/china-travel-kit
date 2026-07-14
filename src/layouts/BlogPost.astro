@@ -81,12 +81,17 @@ const faqItems = faqs.map((item) => ({
   },
 }));
 
+// Use cover image for OG meta when available
+const ogImage = cover
+  ? new URL('/og-default.svg', Astro.site).toString()  // placeholder until we can resolve cover URL
+  : new URL('/og-default.svg', Astro.site).toString();
+
 const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: title,
   description,
-  image: [new URL('/og-default.svg', Astro.site).toString()],
+  image: [ogImage],
   datePublished: pubDate.toISOString(),
   dateModified: pubDate.toISOString(),
   mainEntityOfPage: canonicalURL.toString(),
@@ -141,7 +146,7 @@ function localePrefix(lc: string) {
 const homeLabel = ui.home[locale] ?? 'Home';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} type="article" locale={locale} alternates={alternates}>
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} image={ogImage} type="article" locale={locale} alternates={alternates}>
   <Header locale={locale} alternates={alternates} />
   <main class="container-page py-8">
     <article class="prose-content">
