@@ -27,7 +27,31 @@ faqs:
 
 Mainland China is not a tipping country. In most restaurants, taxis, cafes, hotels, hair salons, and small shops, you pay the price shown and leave. No extra percentage is expected, no tablet screen asks you to choose 18, 20, or 25 percent, and staff will often think loose cash on the table was forgotten rather than intentionally left.
 
-This surprises travelers from the United States, Canada, and parts of Europe because tipping can feel like a moral test: if you do not add something, are you being cheap? In China, the answer is no. The respectful thing is usually to pay accurately, say thank you, and move on.
+### Quick Decision Table
+
+| Situation | Tip? | How Much | What To Do |
+|-----------|------|----------|------------|
+| Local restaurant, noodle shop | ❌ No | 0 | Pay the bill. Leave nothing. |
+| High-end restaurant with service charge on bill | ❌ No | 0 | The 10-15% service charge is already included. |
+| Street food, bubble tea, bakery | ❌ No | 0 | Pay the posted price. |
+| Taxi / DiDi | ❌ No | 0 | Pay the meter or app total exactly. |
+| Hotel housekeeping (budget-mid range) | ❌ No | 0 | No tip expected. |
+| Hotel bellhop (luxury international hotel) | ⚠️ Optional | 10-20 RMB | Small cash tip understood but not required. |
+| Private tour guide (full day) | ✅ Yes | 100-200 RMB/day | Cash in envelope at end of day. |
+| Private driver (full day) | ✅ Yes | 50-100 RMB/day | Cash at end of day. |
+| Group tour guide | ✅ Yes | 30-50 RMB/day | Often pooled. Ask if already included. |
+| Hong Kong restaurant | ✅ Yes | 10% service charge + small coins | Check bill for service charge first. |
+| Hong Kong hotel porter | ✅ Yes | HK$10-20/bag | Small bills. |
+
+### How to Tip When Tipping Is Expected
+
+When you do need to tip (private guides and drivers):
+
+1. **Use cash.** Most Chinese run on WeChat Pay and Alipay, but tipping through apps is complicated for foreigners. Carry 100-500 RMB in small bills specifically for tips.
+2. **Use an envelope.** Handing over cash in a plain envelope feels more natural than handing it directly.
+3. **Do it at the end.** At the end of a tour or day, say thank you and hand the envelope. Do not tip during the service.
+4. **Do not insist if refused.** If someone pushes cash back to you, accept the refusal gracefully. They are not testing you.
+5. **Check your bill first.** If "服务费" (service charge) is listed, you do not need to add anything extra.
 
 The deeper reason is cultural and practical. Chinese service transactions are built around clear prices, fast payment, and the idea that good service is part of the job rather than a separate favor that must be rewarded at the end.
 
