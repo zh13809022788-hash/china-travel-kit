@@ -3,17 +3,34 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import CoverImage from '../../components/CoverImage.astro';
+import ChinaMap from '../../components/ChinaMap.astro';
 import AdSlot from '../../components/AdSlot.astro';
 
 const allPosts = await getCollection('posts');
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya'];
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
 const cityPosts = allPosts
   .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
 const title = 'China City Guides for Foreign Visitors';
 const description =
-  'Plan practical city stops in China with guides for Beijing, Shanghai, Chengdu, Hangzhou, and Sanya, plus airport, metro, food, and transport next steps.';
+  'Plan practical city stops in China with guides for Beijing, Shanghai, Guangzhou, Chengdu, Xi\'an, Hangzhou, Chongqing, and Sanya, plus airport, metro, food, and transport next steps.';
+
+const mapCities = [
+  { name: 'Beijing', x: 470, y: 80, href: '#beijing' },
+  { name: 'Xi\'an', x: 340, y: 155, href: '#xian' },
+  { name: 'Nanjing', x: 490, y: 180, href: '' },
+  { name: 'Shanghai', x: 540, y: 200, href: '#shanghai' },
+  { name: 'Chengdu', x: 250, y: 220, href: '#chengdu' },
+  { name: 'Hangzhou', x: 520, y: 205, href: '#hangzhou' },
+  { name: 'Chongqing', x: 310, y: 260, href: '#chongqing' },
+  { name: 'Guilin', x: 370, y: 300, href: '' },
+  { name: 'Kunming', x: 210, y: 335, href: '' },
+  { name: 'Guangzhou', x: 400, y: 370, href: '#guangzhou' },
+  { name: 'Shenzhen', x: 430, y: 390, href: '' },
+  { name: 'Sanya', x: 360, y: 440, href: '#sanya' },
+];
 
 const cities = [
   {
@@ -48,6 +65,39 @@ const cities = [
     whyGo: 'Pandas, Sichuan food, teahouses, lower costs, and western China side trips.',
     next: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
     nextLabel: 'Chengdu street-food guide',
+  },
+  {
+    name: 'Xi\'an',
+    href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
+    desc: 'Best for ancient history, the Terracotta Warriors, old city walls, and hands-on Chinese heritage.',
+    days: '3-4 days',
+    bestSeason: 'March-May, September-November',
+    difficulty: 'Medium',
+    whyGo: 'Terracotta Warriors, ancient city wall, Muslim Quarter food street, and a deep sense of Chinese history.',
+    next: '/posts/china-high-speed-rail-guide-foreigners/',
+    nextLabel: 'High-speed rail to Xi\'an',
+  },
+  {
+    name: 'Guangzhou',
+    href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
+    desc: 'Best for Cantonese food, trade city energy, southern gateway, and easy Hong Kong access.',
+    days: '3-4 days',
+    bestSeason: 'October-December, March-April',
+    difficulty: 'Medium',
+    whyGo: 'Cantonese dim sum, Chen Clan Academy, Canton Tower, and a warmer southern alternative to Beijing and Shanghai.',
+    next: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+    nextLabel: 'Cantonese food guide',
+  },
+  {
+    name: 'Chongqing',
+    href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+    desc: 'Best for Sichuan hotpot, futuristic skyline, mountain-city terrain, and Yangtze River cruises.',
+    days: '3-4 days',
+    bestSeason: 'March-May, September-November',
+    difficulty: 'Hard',
+    whyGo: 'Chongqing hotpot, Hongya Cave, night skyline, Yangtze cable car, and a uniquely vertical city layout.',
+    next: '/food/',
+    nextLabel: 'Chongqing food guide',
   },
   {
     name: 'Hangzhou',
@@ -132,12 +182,16 @@ const faqJsonLd = {
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
+    <CoverImage name="city-shanghai" alt="Shanghai skyline and the Bund at dusk representing China city travel" loading="eager" />
+
+    <ChinaMap cities={mapCities} />
+
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
       <h2 id="city-shortcuts" class="sr-only">City shortcuts</h2>
       {cities.map((city) => (
-        <article class="card">
+        <article class="card" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">

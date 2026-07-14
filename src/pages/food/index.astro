@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
+import CoverImage from '../../components/CoverImage.astro';
 
 const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
@@ -53,6 +54,8 @@ const cultureLinks = [
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
+
+    <CoverImage name="topic-chengdu-food" alt="Spicy Sichuan street food dishes at a night market in China" loading="lazy" />
 
     <AdSlot format="banner" />
 

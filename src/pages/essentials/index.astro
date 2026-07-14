@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
+import CoverImage from '../../components/CoverImage.astro';
 
 const CATEGORY = 'essentials';
 const posts = (await getCollection('posts'))
@@ -23,6 +24,8 @@ const description =
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Trip Planning Guides</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
+
+    <CoverImage name="hub-essentials" alt="Travel essentials and planning gear for a trip to China" loading="lazy" />
 
     <AdSlot format="banner" />
 

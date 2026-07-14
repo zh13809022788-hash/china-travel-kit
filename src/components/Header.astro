@@ -11,18 +11,19 @@ export interface Props {
 const { locale = 'en', alternates } = Astro.props;
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/resources/', label: 'Start Here' },
-  { href: '/essentials/', label: 'Essentials' },
+  { href: '/resources/', label: 'Plan Your Trip' },
+  { href: '/apps/', label: 'Apps & Setup' },
   { href: '/payment/', label: 'Payments' },
   { href: '/esim/', label: 'Internet' },
   { href: '/transport/', label: 'Transport' },
   { href: '/cities/', label: 'Cities' },
   { href: '/food/', label: 'Food' },
-  { href: '/series/', label: 'Series' },
-  { href: '/tools/', label: 'Tools' },
 ];
 const secondaryLinks = [
+  { href: '/essentials/', label: 'Trip Planning' },
   { href: '/trip-planner/', label: 'Trip Planner' },
+  { href: '/tools/', label: 'Tools' },
+  { href: '/series/', label: 'Series' },
   { href: '/long-stay/', label: 'Long Stay' },
   { href: '/digital-nomads/', label: 'Digital Nomads' },
   { href: '/travel-help/', label: 'Help' },

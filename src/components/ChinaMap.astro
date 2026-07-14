@@ -1,0 +1,79 @@
+---
+// China map SVG component with clickable city markers.
+// Cities displayed at approximate relative positions.
+// Each marker links to the city guide page.
+
+export interface CityMarker {
+  name: string;
+  x: number;  // SVG x coordinate
+  y: number;  // SVG y coordinate
+  href: string;
+}
+
+export interface Props {
+  cities: CityMarker[];
+}
+
+const { cities } = Astro.props;
+---
+
+<figure class="my-8 overflow-hidden rounded-xl border border-gray-200 bg-[#f8f6f0]">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" width="100%" height="auto" role="img" aria-label="China city map with clickable markers">
+    <defs>
+      <!-- East China Sea hint -->
+      <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e8f4f8" />
+        <stop offset="100%" stop-color="#dceef5" />
+      </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect x="0" y="0" width="680" height="520" rx="12" fill="#f8f6f0" />
+
+    <!-- Simplified China land area (abstract shape) -->
+    <path d="M120 80 Q160 60 200 70 Q240 55 280 60 Q320 50 360 55 Q400 50 440 65 Q480 55 520 70 Q550 80 560 100 Q570 120 565 150 Q560 180 550 200 Q540 220 520 240 Q500 260 480 280 Q460 300 440 310 Q420 330 400 340 Q380 350 360 360 Q340 370 320 380 Q300 390 280 400 Q260 410 240 420 Q220 430 200 440 Q180 450 160 440 Q140 430 130 410 Q120 390 115 360 Q110 330 108 300 Q105 270 105 240 Q105 210 108 180 Q110 150 115 120 Q118 95 120 80Z"
+          fill="#e8dcc8" stroke="#d4c8b0" stroke-width="0.8" />
+
+    <!-- Grid lines (subtle reference) -->
+    <line x1="60" y1="130" x2="620" y2="130" stroke="#e0dbd0" stroke-width="0.3" stroke-dasharray="4,4" />
+    <line x1="60" y1="230" x2="620" y2="230" stroke="#e0dbd0" stroke-width="0.3" stroke-dasharray="4,4" />
+    <line x1="60" y1="330" x2="620" y2="330" stroke="#e0dbd0" stroke-width="0.3" stroke-dasharray="4,4" />
+    <line x1="60" y1="430" x2="620" y2="430" stroke="#e0dbd0" stroke-width="0.3" stroke-dasharray="4,4" />
+
+    <!-- Direction labels -->
+    <text x="340" y="480" text-anchor="middle" class="ts" style="font:400 11px sans-serif;fill:#b0a898">South China Sea</text>
+
+    <!-- City markers and labels -->
+    {cities.map((city) => (
+      <g>
+        <!-- Connecting line cluster (neighbors) -->
+        {city.href && (
+          <a href={city.href} class="cursor-pointer">
+            <!-- Pulse ring -->
+            <circle cx={city.x} cy={city.y} r="14" fill="none" stroke="#3C3489" stroke-width="0.5" opacity="0.2">
+              <animate attributeName="r" values="14;20;14" dur="3s" repeatCount="indefinite" />
+              <animate attributeName="opacity" values="0.2;0;0.2" dur="3s" repeatCount="indefinite" />
+            </circle>
+            <!-- Marker dot -->
+            <circle cx={city.x} cy={city.y} r="6" fill="#534AB7" stroke="#fff" stroke-width="2" />
+            <!-- City label -->
+            <text x={city.x} y={city.y - 16} text-anchor="middle" style="font:500 12px sans-serif;fill:#2C2C2A">
+              {city.name}
+            </text>
+          </a>
+        )}
+        {!city.href && (
+          <g opacity="0.5">
+            <circle cx={city.x} cy={city.y} r="4" fill="#B4B2A9" stroke="#fff" stroke-width="1.5" />
+            <text x={city.x} y={city.y - 14} text-anchor="middle" style="font:400 11px sans-serif;fill:#888780">
+              {city.name}
+            </text>
+          </g>
+        )}
+      </g>
+    ))}
+  </svg>
+  <figcaption class="border-t border-gray-200 px-5 py-2.5 text-xs text-gray-500">
+    Click a city marker to open its travel guide. Dots show approximate geographic positions.
+  </figcaption>
+</figure>
