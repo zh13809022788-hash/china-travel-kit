@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection.astro';
 import type { FaqItem } from '../components/FaqSection.astro';
 import CoverImage from '../components/CoverImage.astro';
 import RelatedReading from '../components/RelatedReading.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 import type { RelatedItem } from '../components/RelatedReading.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -196,6 +197,10 @@ const homeLabel = ui.home[locale] ?? 'Home';
       </p>
 
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+      <div class="mt-8">
+        <NewsletterSignup />
+      </div>
 
       {affiliate && (
         <AffiliateCta

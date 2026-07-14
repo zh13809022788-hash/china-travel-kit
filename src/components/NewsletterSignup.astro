@@ -1,0 +1,45 @@
+---
+// Email newsletter signup form.
+// Replace MAILCHIMP_URL with your actual Mailchimp/ConvertKit endpoint.
+// Currently posts to Formspree as free fallback.
+
+const MAILCHIMP_URL = ''; // Set your Mailchimp action URL here
+const FORMSPREE_URL = 'https://formspree.io/f/your-form-id'; // Replace with your Formspree ID
+
+const actionUrl = MAILCHIMP_URL || FORMSPREE_URL;
+const isMailchimp = !!MAILCHIMP_URL;
+---
+
+<div class="rounded-xl border border-brand-100 bg-brand-50 p-6">
+  <div class="max-w-lg">
+    <h3 class="text-lg font-bold text-gray-950">China Travel Tips — Weekly Newsletter</h3>
+    <p class="mt-1.5 text-sm leading-6 text-gray-600">
+      Get practical China travel updates: policy changes, new guides, tool updates, and seasonal tips. No spam, unsubscribe anytime.
+    </p>
+    <form
+      action={actionUrl}
+      method="post"
+      target="_blank"
+      class="mt-4 flex flex-col gap-3 sm:flex-row"
+    >
+      <input
+        type="email"
+        name="EMAIL"
+        placeholder="your@email.com"
+        required
+        class="min-w-0 flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-100"
+      />
+      {isMailchimp && <input type="hidden" name="u" value="" />}
+      {isMailchimp && <input type="hidden" name="id" value="" />}
+      <button
+        type="submit"
+        class="shrink-0 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+      >
+        Subscribe
+      </button>
+    </form>
+    <p class="mt-2 text-xs text-gray-500">
+      {isMailchimp ? 'Powered by Mailchimp' : 'Powered by Formspree'} &middot; Free, unsubscribe anytime
+    </p>
+  </div>
+</div>
