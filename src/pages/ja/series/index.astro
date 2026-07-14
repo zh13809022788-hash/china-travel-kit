@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'China Travel Content Series';
+const description = 'Explore China through five themed series: food, history, modern life, nature, and culture — each designed to inspire and inform foreign travelers.';
+
+const seriesList = [
+  {
+    href: '/series/food-of-china/',
+    title: 'Food of China',
+    desc: 'From street stalls to banquet halls — a foreigner\'s culinary journey through eight great cuisines, regional breakfasts, hot pot styles, and the dishes worth crossing a city for.',
+    icon: 'Food & Drink',
+  },
+  {
+    href: '/series/history-of-china/',
+    title: 'History of China',
+    desc: 'Ancient sites decoded for travelers — the Great Wall, Terracotta Army, Forbidden City, Silk Road, and the stories behind what you\'re actually looking at.',
+    icon: 'History',
+  },
+  {
+    href: '/series/modern-china/',
+    title: 'Modern China',
+    desc: 'What surprises foreigners most — cashless streets, the world\'s fastest trains, megacity scale, super apps, and the everyday tech that defines life in China today.',
+    icon: 'Modern Life',
+  },
+  {
+    href: '/series/nature-of-china/',
+    title: 'Nature of China',
+    desc: 'Avatar mountains, fairy-tale lakes, karst landscapes, and the Tibetan plateau — China\'s most spectacular natural sites with practical guides for foreign visitors.',
+    icon: 'Nature',
+  },
+  {
+    href: '/series/culture-of-china/',
+    title: 'Culture of China',
+    desc: 'Tea ceremony, Spring Festival, face and guanxi, calligraphy, kung fu, and the zodiac — cultural traditions explained for travelers who want to go beyond surface tourism.',
+    icon: 'Culture',
+  },
+];
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
+  <Header locale="ja" />
+  <main class="container-page py-10">
+    <header class="max-w-3xl">
+      <p class="section-kicker">Content Series</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+    </header>
+
+    <section class="mt-10 grid gap-5 md:grid-cols-2">
+      {seriesList.map((s) => (
+        <a href={s.href} class="card block hover:no-underline">
+          <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{s.icon}</span>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">{s.title}</h2>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{s.desc}</p>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Explore series</span>
+        </a>
+      ))}
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

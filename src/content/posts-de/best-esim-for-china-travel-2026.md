@@ -1,96 +1,79 @@
----
-title: "Beste eSIM für China-Reisen 2026: Auswahl und Einrichtung"
-description: "Finden Sie die beste eSIM für China-Reisen 2026. Vergleichen Sie Datentarife, lernen Sie, welche Optionen App-Beschränkungen umgehen, und folgen Sie unserer Schritt-für-Schritt-Einrichtung."
+﻿---
+title: "Beste eSIM für China 2026: Auswahl, Kosten und Einrichtung"
+description: "So wählen Reisende eine China-eSIM: Gerätecheck, Datenmenge, Routing über Hongkong, Airalo, Holafly, Nomad, Aktivierung und Fehlerbehebung."
 pubDate: 2026-07-05
 category: esim
 tags: ["esim", "china data", "mobile internet", "travel sim"]
+cover: "topic-esim-vs-roaming"
+coverAlt: "eSIM setup screen on a smartphone with data plan options"
 featured: true
 faqs:
-  - question: "Lassen mich China-Reise-eSIMs Apps wie Google, WhatsApp und Instagram nutzen?"
-    answer: "Die meisten für China vermarkteten Reise-eSIMs roamen über ein ausländisches Netz statt über ein inländisches chinesisches. Weil Ihr Datenverkehr über das Heimatland dieses Anbieters austritt, erreichen Sie Google, WhatsApp, Instagram und andere Dienste normalerweise ohne separates VPN. Prüfen Sie das vor dem Kauf immer in der Produktbeschreibung, denn einige wenige Tarife nutzen ein lokales Netz mit denselben Inhaltsbeschränkungen wie eine inländische SIM."
-  - question: "Muss mein Telefon eSIM unterstützen, um sie in China zu nutzen?"
-    answer: "Ja. Ihr Telefon braucht eSIM-Hardware und muss ohne Netzsperre sein. Die meisten iPhones ab XS, neuere Google Pixel und Samsung-Galaxy-Flaggschiffe unterstützen eSIM, aber manche regionsspezifischen Modelle, besonders bestimmte in Festlandchina verkaufte iPhones, haben die Funktion nicht. Prüfen Sie vor der Reise in den Einstellungen, ob es eine Option wie 'Add eSIM' oder 'Add Data Plan' gibt."
-  - question: "Sollte ich meine China-eSIM vor oder nach der Landung aktivieren?"
-    answer: "Installieren Sie das eSIM-Profil vor der Abreise, solange Sie zuverlässiges WLAN haben. Warten Sie aber mit dem Aktivieren von Datenroaming bis zur Landung, außer die Gültigkeit des Tarifs beginnt bereits bei der Installation. Viele Tarife starten erst bei der ersten Netzverbindung, daher gibt Ihnen die Aktivierung bei Ankunft die volle Nutzungsdauer im Land."
-  - question: "Wie viele Daten brauche ich wirklich für eine China-Reise?"
-    answer: "Für eine ein- bis zweiwöchige Reise mit Karten, Nachrichten, Fahrdiensten, Übersetzung und sozialen Medien kommen die meisten Reisenden mit 1 bis 2 GB pro Tag oder einem Gesamtpaket von 10 bis 20 GB gut aus. Viel Videostreaming oder Hotspot-Nutzung erhöht den Bedarf, wählen Sie dafür einen unbegrenzten oder großen Tarif."
-  - question: "Kann ich meine normale Telefonnummer behalten, während ich eine China-eSIM nutze?"
-    answer: "Ja. Mit eSIM können Sie zwei Leitungen gleichzeitig nutzen. So bleibt Ihre Heim-SIM für Anrufe und SMS unter Ihrer ursprünglichen Nummer aktiv, während die China-eSIM die Datenverbindung übernimmt. Denken Sie nur daran, dass die aktive Heimleitung Roamingkosten verursachen kann; deaktivieren Sie daher deren Datenroaming."
-  - question: "Was passiert, wenn meine eSIM nach der Landung in China kein Signal hat?"
-    answer: "Schalten Sie zuerst den Flugmodus ein und aus, prüfen Sie, ob Datenroaming für die eSIM-Leitung aktiviert ist, und stellen Sie sicher, dass die eSIM als Standard für mobile Daten ausgewählt ist. Wenn es weiterhin nicht funktioniert, wählen Sie in den Mobilfunkeinstellungen manuell einen Netzbetreiber. Ein installiertes, aber nie vollständig aktiviertes Profil ist die häufigste Ursache."
+  - question: "Funktionieren Google, WhatsApp und Instagram mit einer China-eSIM?"
+    answer: "Oft ja, wenn der Tarif über Hongkong oder ein internationales Gateway routet. Tarife mit rein lokalem Routing können denselben Sperren unterliegen wie eine chinesische SIM."
+  - question: "Welche Handys können eSIM nutzen?"
+    answer: "Das Gerät braucht eSIM-Hardware und muss entsperrt sein. Viele iPhones ab XS/XR, neuere Google Pixel und Samsung-Flaggschiffe unterstützen eSIM; einzelne China-Modelle nicht."
+  - question: "Wann sollte ich die eSIM aktivieren?"
+    answer: "Installieren Sie das Profil zu Hause über WLAN. Aktivieren Sie Datenroaming erst nach der Landung, sofern die Laufzeit nicht bereits mit Installation startet."
+  - question: "Wie viel Datenvolumen brauche ich?"
+    answer: "Für ein bis zwei Wochen reichen vielen Reisenden 1 bis 2 GB pro Tag oder 10 bis 20 GB insgesamt. Video, Hotspot und viele Uploads brauchen mehr."
+  - question: "Kann meine normale Nummer aktiv bleiben?"
+    answer: "Ja. Bei Dual-SIM bleibt die Heimat-SIM für Anrufe und SMS aktiv, während die eSIM mobile Daten liefert. Deaktivieren Sie Datenroaming auf der Heimat-SIM."
 ---
 
-## Einführung
+Eine gute eSIM ist die bequemste Art, in China direkt nach der Landung online zu sein. Sie müssen keinen SIM-Schalter suchen, keine lokale Registrierung erledigen und können schon am Gepäckband Karten, Hoteladresse, Übersetzung und Fahrdienst öffnen. In China kommt ein zweiter Punkt dazu: Nicht nur der Preis zählt, sondern auch das Routing.
 
-Mit einem toten Telefon in China zu landen, ist eine besondere Art von Stress. Sie steigen nach einem 12-Stunden-Flug aus, müssen eine Fahrt rufen, dem Hotel schreiben und eine Karte öffnen, aber das Roaming Ihres Heimatproviders ist entweder absurd teuer oder funktioniert schlicht nicht. Noch schlimmer: Selbst wenn Sie online kommen, können sich Ihre Alltags-Apps unerreichbar anfühlen.
+Wenn Ihre eSIM den Datenverkehr über Hongkong oder ein anderes internationales Gateway leitet, funktionieren viele gewohnte Apps meist ohne zusätzliches VPN. Bei einem lokal gerouteten Tarif kann das Internet dagegen wie bei einer chinesischen SIM wirken.
 
-Dieses zweite Problem überrascht die meisten Erstbesucher. Festlandchinas Netze filtern den Zugriff auf einen großen Teil des globalen Internets. Eine lokal gekaufte SIM kann Sie daher von gewohnten Karten-, Nachrichten- und Social-Apps abschneiden. Eine eSIM löst beide Probleme auf einmal, wenn Sie die richtige wählen. Sie bringt Sie beim Landen online, und die besseren Reise-eSIMs routen Ihren Datenverkehr so, dass Ihre normalen Apps funktionieren. Diese Anleitung zeigt, wie Sie den richtigen Tarif wählen und ihn ohne Stress einrichten.
+## Erst das Handy prüfen
 
-## Bevor Sie Beginnen
+Vor dem Kauf müssen zwei Dinge stimmen. Erstens braucht Ihr Telefon eSIM-Unterstützung. In den Einstellungen sollte es einen Punkt wie **Add eSIM**, **Mobilfunktarif hinzufügen** oder **Add Data Plan** geben. Zweitens muss das Gerät carrier-unlocked sein. Ein gesperrtes Vertragshandy akzeptiert keine Drittanbieter-eSIM.
 
-Bevor Sie Geld ausgeben, prüfen Sie, ob Ihr Telefon überhaupt eSIM nutzen kann. Zwei Dinge müssen stimmen.
+Prüfen Sie das vor der Reise. Am Flughafen herauszufinden, dass Ihr Gerät gesperrt ist, ist eine unnötig harte Lektion.
 
-Erstens braucht Ihr Gerät eSIM-Hardware. Die meisten iPhones ab XS und XR unterstützen sie, ebenso neuere Google-Pixel-Telefone und Samsung-Galaxy-Flaggschiffe. Der schnellste Check: Öffnen Sie die Einstellungen und suchen Sie nach einer Option wie "Add eSIM" oder "Add Data Plan". Wenn sie vorhanden ist, passt es. Wichtiger Vorbehalt: Manche in Festlandchina verkauften Telefone haben eSIM deaktiviert. Ein lokal gekauftes Gerät kann also nicht funktionieren, obwohl dasselbe Modell anderswo funktioniert.
+## Worauf es bei China-eSIMs ankommt
 
-Zweitens muss Ihr Telefon entsperrt sein. Wenn Sie es mit Vertrag oder Ratenplan gekauft haben, kann es an den ursprünglichen Anbieter gebunden sein und Drittanbieter-eSIMs blockieren. Klären Sie den Entsperrstatus vor der Reise mit Ihrem Anbieter. Das ist zu Hause viel einfacher als am Flughafen.
+### Routing
 
-Notieren Sie außerdem Modell und Betriebssystemversion Ihres Telefons und stellen Sie sicher, dass Sie für die Installation WLAN haben. Ein eSIM-Profil zu installieren braucht eine Datenverbindung, und vor der Abreise ist es deutlich stressfreier als bei der Suche nach Flughafen-WLAN.
+Für China ist Routing das wichtigste Kriterium. Suchen Sie nach Hinweisen wie "routes via Hong Kong", "unrestricted access" oder "no VPN needed". Ist die Produktseite unklar und der Preis auffällig niedrig, sollten Sie nicht davon ausgehen, dass ausländische Apps funktionieren.
 
-## Wie Sie die Richtige China-eSIM Wählen
+### Daten und Laufzeit
 
-Nicht alle China-eSIMs sind gleich, und die Unterschiede sind hier wichtiger als fast überall sonst. Wägen Sie diese Kriterien gegeneinander ab.
+Es gibt Tagespakete, feste Datenpools und "unlimited"-Tarife mit Drosselung. Für normale Nutzung mit Karten, Messenger, DiDi, Übersetzung und etwas Social Media sind 1 bis 2 GB pro Tag realistisch. Bei Video, Hotspot oder langen Arbeitstagen nehmen Sie mehr.
 
-### Ob Sie Inhaltsbeschränkungen Umgeht
+Achten Sie darauf, wann die Laufzeit beginnt: bei Installation oder erst bei erster Verbindung. Davon hängt ab, ob Sie die eSIM vor Abflug nur installieren oder schon aktivieren.
 
-Das ist der wichtigste Faktor für China. Die meisten für China vermarkteten Reise-eSIMs verbinden sich nicht direkt mit einem inländischen chinesischen Netz. Stattdessen roamen sie in einem Partnernetz und leiten Ihre Daten über das Heimatland dieses Anbieters aus, oft Hongkong oder einen anderen asiatischen Standort. Weil Ihr Datenverkehr außerhalb des Festland-Filtersystems austritt, funktionieren vertraute Apps meist ohne zusätzliche Software.
+### Anbieter im Überblick
 
-Eine Minderheit der Tarife verbindet sich jedoch mit einem lokalen Festlandnetz und unterliegt denselben Beschränkungen wie eine inländische SIM. Lesen Sie die Produktbeschreibung genau und suchen Sie nach klaren Aussagen zu uneingeschränktem Zugriff oder eingebautem Roaming. Wenn ein Tarif dazu schweigt und auffällig billig ist, gehen Sie von lokalem Routing aus.
+| Anbieter | Typische Tarife | Preis grob | Hotspot | Gut für |
+| --- | --- | --- | --- | --- |
+| Airalo | 1 GB/Tag oder 1-20 GB Pool | ca. 4,50-26 USD | Ja | Sparsame Nutzer, kurze Trips |
+| Holafly | Unlimited mit Drosselung | ca. 19-54 USD | Oft nein | Vielnutzer, einfache Lösung |
+| Nomad | 1-20 GB Pool | ca. 3,50-22 USD | Ja | Flexible Mittelklasse |
+| Lokale SIM | lokale Daten | ca. 100-300 RMB | Ja | Längere Aufenthalte ohne Bedarf an Auslandsapps |
 
-### Datenvolumen und Gültigkeit
-
-Tarife gibt es als Tageskontingente, etwa 1 GB pro Tag für 10 Tage, als feste Pakete, etwa 20 GB für die ganze Reise, oder als unbegrenzte Pakete, die nach einer Schwelle drosseln können. Tagespläne passen zu vorhersehbarer, moderater Nutzung. Paketpläne geben Flexibilität, wenn der Verbrauch schwankt. Für eine typische ein- bis zweiwöchige Reise mit Karten, Nachrichten, Fahrdiensten, Übersetzung und sozialen Medien rechnen Sie mit etwa 1 bis 2 GB pro Tag. Wenn Sie Videos streamen oder andere Geräte anbinden, planen Sie mehr oder wählen Sie unbegrenzt.
-
-Prüfen Sie auch die Gültigkeitsdauer und wann sie beginnt. Manche Tarife zählen ab Installation des Profils, andere ab erster Netzverbindung. Das beeinflusst den Aktivierungszeitpunkt.
-
-### Preis und Netzabdeckung
-
-Der Preis steigt mit Datenvolumen und Dauer, aber die billigste Option ist falsche Sparsamkeit, wenn sie lokal routet oder schlechte Abdeckung hat. Suchen Sie nach eSIMs, die etablierte Netze mit starker Stadt- und Fernverkehrsabdeckung nutzen. Wenn Ihre Route abgelegene Gebiete oder bestimmte Regionen enthält, prüfen Sie, ob das zugrunde liegende Netz sie erreicht. Aktuelle Reisebewertungen zu Geschwindigkeit und Zuverlässigkeit sind die wenigen Minuten wert.
-
-Der Kompromiss kurz gesagt: Tarife mit uneingeschränktem Routing kosten etwas mehr und können wegen längerer Datenwege minimal höhere Latenz haben, ersparen Ihnen aber VPN-Probleme vor Ort. Für die meisten Besucher lohnt sich dieser kleine Aufpreis.
+Airalo und Nomad sind für viele Kurzreisen der beste Wert. Holafly ist bequem, wenn Sie nicht dauernd Daten zählen möchten. Entscheidend bleibt aber immer die Tarifbeschreibung, nicht nur der Markenname.
 
 <!-- AFFILIATE_ESIM -->
 
-## Schritt-für-Schritt-Einrichtung
+## Einrichtung Schritt für Schritt
 
-Hier ist der vollständige Ablauf vom Kauf bis zur funktionierenden Verbindung.
+1. Kaufen Sie die eSIM vor der Reise über stabiles WLAN.
+2. Speichern Sie QR-Code, manuelle Aktivierungsdaten und Support-Mail offline.
+3. Installieren Sie das Profil auf dem Handy.
+4. Benennen Sie die Leitungen klar, zum Beispiel **Home** und **China Data**.
+5. Lassen Sie Datenroaming für die eSIM bis zur Landung aus, falls die Laufzeit erst bei Verbindung beginnt.
+6. Nach der Landung: eSIM einschalten, Datenroaming für diese Leitung aktivieren und als mobile Datenleitung wählen.
+7. WLAN kurz ausschalten und testen, ob Karten, Messenger und Browser funktionieren.
 
-1. **Kaufen Sie die eSIM vor der Reise.** Kaufen Sie bei einem seriösen Anbieter, solange Sie zu Hause stabiles WLAN haben. Normalerweise erhalten Sie die eSIM innerhalb weniger Minuten per E-Mail.
+Datenroaming klingt bei einer Reise-eSIM falsch, ist aber meistens nötig, weil der Tarif technisch auf Partnernetzen roamt.
 
-2. **QR-Code erhalten.** Der Anbieter sendet einen QR-Code und oft einen manuellen Aktivierungscode als Reserve. Speichern Sie die E-Mail und machen Sie einen Screenshot, damit Sie offline darauf zugreifen können.
+## Fehlerbehebung
 
-3. **eSIM-Profil installieren.** Auf dem iPhone gehen Sie zu Einstellungen, dann Mobilfunk oder Mobile Service, dann Add eSIM, und scannen den QR-Code. Auf Android öffnen Sie Einstellungen, dann Netzwerk und Internet, dann SIMs, und fügen eine heruntergeladene SIM hinzu. Tun Sie das zu Hause über WLAN. Die Installation lädt nur das Profil herunter; sie startet nicht zwingend die Tariflaufzeit.
+Kein Signal? Flugmodus kurz ein- und ausschalten, Datenroaming auf der eSIM prüfen und sicherstellen, dass die eSIM als Datenleitung gewählt ist. Hilft das nicht, stellen Sie die Netzwahl manuell um und wählen einen verfügbaren Betreiber.
 
-4. **Leitungen benennen.** Nach der Installation haben Sie zwei Leitungen. Benennen Sie sie klar, etwa "Home" und "China Data", damit Sie sie später nicht verwechseln.
+Daten funktionieren, aber ausländische Apps nicht? Dann routet der Tarif möglicherweise lokal. In diesem Fall hilft nur ein vorbereitetes VPN oder ein anderer Tarif. Langsame Verbindung kann an Drosselung, Netzabdeckung oder einem überlasteten Standort liegen.
 
-5. **Aktivierungszeit entscheiden.** Wenn Ihr Tarif ab Installation gültig ist, aktivieren Sie ihn kurz vor Abflug. Wenn er ab erster Netzverbindung startet, was häufiger ist, lassen Sie Datenroaming bis zur Landung aus, damit Sie die volle Dauer in China erhalten.
-
-6. **Datenroaming bei Ankunft aktivieren.** Nach der Landung öffnen Sie die Mobilfunkeinstellungen, wählen die China-eSIM-Leitung und aktivieren Datenroaming. Das klingt widersprüchlich, aber Reise-eSIMs roamen technisch in einem Partnernetz, daher ist dieser Schalter nötig.
-
-7. **Als Datenleitung festlegen.** Wählen Sie in den Mobilfunkeinstellungen die China-eSIM als Standardleitung für mobile Daten. Ihre Heimleitung kann für Anrufe und SMS aktiv bleiben, aber deaktivieren Sie deren Datenroaming, um Überraschungsgebühren zu vermeiden.
-
-8. **Verbindung prüfen.** Schalten Sie WLAN kurz aus und öffnen Sie eine Karten-App oder Website, um die Datenverbindung zu prüfen. Wenn Ihre vertrauten Apps ohne VPN laden, erledigt der Tarif mit uneingeschränktem Routing seinen Job.
-
-## Häufige Probleme Beheben
-
-Wenn Sie nach der Landung kein Signal haben, beginnen Sie einfach. Schalten Sie den Flugmodus ein und aus, damit das Telefon erneut nach Netzen sucht. Prüfen Sie, ob Datenroaming speziell auf der eSIM-Leitung aktiviert ist, denn das ist das häufigste Versehen. Bestätigen Sie dann, dass die eSIM als Standard für mobile Daten gewählt ist.
-
-Wenn das Telefon weiterhin keine Verbindung bekommt, wechseln Sie in den Mobilfunkeinstellungen von automatischer auf manuelle Netzwahl und wählen einen verfügbaren Betreiber. Gelegentlich greift die automatische Auswahl nicht auf das Partnernetz.
-
-Langsame Geschwindigkeiten sind manchmal ein Abdeckungsproblem und manchmal Drosselung nach Überschreiten einer Highspeed-Schwelle bei einem unbegrenzten Tarif. Ein anderer Standort oder ein Blick auf verbleibende Highspeed-Daten klärt meist, was zutrifft.
-
-Wenn Daten funktionieren, Ihre üblichen Apps aber nicht laden, haben Sie wahrscheinlich einen Tarif gekauft, der lokal routet. Dann ist ein seriöses VPN, das vor der Ankunft installiert wurde, Ihre Reserve. Genau deshalb erspart eine eSIM mit uneingeschränktem Routing von Anfang an so viel Ärger.
-
-Wenn sich das Profil gar nicht installieren lässt, prüfen Sie, ob Sie im WLAN sind, das Telefon entsperrt ist und Sie keinen nur einmal verwendbaren QR-Code bereits genutzt haben. Kontaktieren Sie den Support des Anbieters, der bei den meisten Reise-eSIM-Firmen rund um die Uhr per Chat erreichbar ist.
+Lässt sich das Profil nicht installieren, prüfen Sie WLAN, Gerätesperre und ob der QR-Code bereits verwendet wurde. Viele QR-Codes sind nur einmal nutzbar.
 
 ## Weiterlesen
 
@@ -98,6 +81,6 @@ Wenn sich das Profil gar nicht installieren lässt, prüfen Sie, ob Sie im WLAN 
 - [Pocket WiFi vs eSIM vs local SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
 - [internet access and apps that work in China](/posts/internet-access-china-apps-that-work-2026/)
 
-## Zusammenfassung
+## Fazit
 
-Eine eSIM ist der sauberste Weg, in China verbunden zu bleiben, aber die Details entscheiden, ob die Reise glatt oder frustrierend wird. Prüfen Sie zuerst, ob Ihr Telefon eSIM unterstützt und entsperrt ist. Wählen Sie dann einen Tarif, der Daten so routet, dass Inhaltsbeschränkungen umgangen werden und Ihre normalen Apps weiter funktionieren. Danach balancieren Sie Datenvolumen, Gültigkeit, Preis und Netzabdeckung gegen Ihre Route. Installieren Sie das Profil zu Hause über WLAN, aktivieren Sie Datenroaming erst nach der Landung, wenn die Gültigkeit mit der Verbindung startet, setzen Sie die eSIM als Datenleitung und prüfen Sie alles vor Verlassen des Flughafens. Wenn diese Schritte sitzen, verlassen Sie die Ankunftshalle vollständig verbunden, mit Karten, Nachrichten und allem anderen wie zu Hause.
+Die beste China-eSIM ist nicht einfach die billigste. Sie passt zu Ihrem Handy, hat genug Daten, startet zur richtigen Zeit und routet möglichst international. Installieren Sie sie zu Hause, aktivieren Sie sie nach der Landung und behalten Sie Ihre Heimat-SIM nur für SMS aktiv. Dann steigen Sie in China online aus dem Flugzeug, statt erst Ihr Internet zu reparieren.

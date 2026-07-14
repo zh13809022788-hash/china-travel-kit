@@ -1,192 +1,155 @@
 ---
-title: "Planificateur de voyage en Chine : paiement, eSIM, transport et applications"
-description: "Un guide pratique de préparation d'un voyage en Chine pour les primo-visiteurs : configurer paiement, Internet, transport, applications, espèces et première journée après l'arrivée."
+title: "Préparer un premier voyage en Chine en 2026 : paiement, eSIM, transport et apps"
+description: "Planificateur pratique pour un premier voyage en Chine : données mobiles, Alipay, WeChat Pay, transport, applications, itinéraire réaliste et premières 24 heures."
 pubDate: 2026-07-13
 category: essentials
 tags: ["first time china", "trip planner", "payment", "esim", "transport", "apps"]
+cover: "topic-trip-planner"
+coverAlt: "Préparation de voyage avec carte, smartphone, passeport et itinéraire"
+
 featured: true
 faqs:
   - question: "Que faut-il configurer en premier pour un voyage en Chine ?"
-    answer: "Configurez d'abord les données mobiles et le paiement. Une eSIM ou un forfait d'itinérance fonctionnel vous permet d'utiliser les cartes, la traduction, les VTC et les applications de portefeuille, tandis qu'Alipay ou WeChat Pay couvre la plupart des achats quotidiens."
-  - question: "Ai-je besoin à la fois d'Alipay et de WeChat Pay ?"
-    answer: "Vous pouvez souvent vous débrouiller avec un seul, mais les primo-visiteurs devraient configurer les deux si possible. Alipay est généralement plus fluide pour les paiements touristiques et les mini-programmes, tandis que WeChat Pay est utile si vous envoyez des messages à des contacts locaux ou utilisez des services WeChat."
-  - question: "Combien d'espèces dois-je apporter en Chine ?"
-    answer: "Apportez une petite réserve en RMB plutôt que de dépendre des espèces. Quelques centaines de yuans en petites coupures suffisent pour les rares échecs de paiement, mais le paiement mobile doit être votre méthode principale en ville."
-  - question: "Faut-il réserver les billets de train chinois avant l'arrivée ?"
-    answer: "Pour les itinéraires populaires, les week-ends, les vacances et les trains à grande vitesse entre grandes villes, réserver à l'avance est plus sûr. Pour des trajets urbains flexibles, vous pouvez parfois réserver plus près de la date, mais n'attendez pas la dernière minute pendant les périodes chargées."
-  - question: "Quelle est la plus grosse erreur d'un premier voyage en Chine ?"
-    answer: "La plus grosse erreur est d'atterrir sans données mobiles ni moyen de paiement fonctionnel. La plupart des autres problèmes deviennent plus faciles à résoudre dès que votre téléphone est connecté et que vous pouvez payer."
+    answer: "Commencez par les données mobiles et le paiement. Une eSIM ou un roaming fonctionnel permet d'utiliser cartes, traduction et VTC ; Alipay ou WeChat Pay couvre la majorité des achats quotidiens."
+  - question: "Faut-il Alipay et WeChat Pay ?"
+    answer: "Un seul peut suffire, mais un premier visiteur devrait préparer les deux si possible. Alipay est souvent plus simple pour les touristes ; WeChat Pay devient utile pour certains commerçants, contacts locaux et services WeChat."
+  - question: "Combien d'espèces emporter ?"
+    answer: "Prenez une petite réserve, pas un gros budget en liquide. Quelques centaines de RMB en petites coupures suffisent pour les rares échecs de paiement ou petits vendeurs."
+  - question: "Faut-il réserver les trains avant l'arrivée ?"
+    answer: "Pour les grandes lignes, week-ends, vacances et horaires populaires, il vaut mieux réserver à l'avance. Les trajets moins demandés peuvent parfois attendre, mais évitez le dernier moment."
+  - question: "Quelle est la plus grosse erreur d'un premier voyageur ?"
+    answer: "Arriver sans données mobiles et sans moyen de paiement fonctionnel. Une fois le téléphone connecté et les paiements prêts, la plupart des autres problèmes deviennent gérables."
 ---
 
-Préparer un premier voyage en Chine consiste moins à choisir chaque musée qu'à s'assurer que le système pratique fonctionne. Si votre téléphone a des données, que vos applications de paiement marchent, que votre premier transfert depuis l'aéroport est clair et que vous savez quelles applications ouvrir pour la nourriture, les trajets, les trains et la traduction, le voyage devient beaucoup plus facile.
+Préparer un premier voyage en Chine ne commence pas par une liste de temples et de restaurants. La priorité est de rendre le séjour fonctionnel : Internet, paiement, transfert depuis l'aéroport, applications de base, puis seulement l'itinéraire détaillé. Si ces fondations sont prêtes, vous pouvez improviser. Si elles ne le sont pas, les deux premiers jours peuvent se transformer en dépannage.
 
-Ce guide vous donne un ordre de préparation pratique. Ce n'est pas un itinéraire rêvé. C'est la couche de configuration qui évite à un primo-visiteur de perdre les deux premiers jours sur des problèmes évitables.
+## Le bon ordre de préparation
 
-## L'ordre de préparation pour un premier voyage en Chine
+Utilisez cet ordre :
 
-La plupart des voyageurs planifient dans le mauvais ordre. Ils commencent par les hôtels, les attractions et les restaurants, puis découvrent après l'atterrissage qu'ils ne peuvent pas payer, charger une carte, appeler un VTC ou réserver facilement un billet de train.
+1. accès Internet ;
+2. paiement mobile ;
+3. transfert aéroport-hôtel ;
+4. applications essentielles ;
+5. ordre des villes et transport interurbain ;
+6. itinéraire quotidien ;
+7. nourriture, billets et plans de secours.
 
-Utilisez plutôt cet ordre :
+Les quatre premiers points sont le socle. Une fois qu'ils fonctionnent, le reste du voyage devient beaucoup plus flexible.
 
-1. Accès Internet
-2. Configuration du paiement
-3. Trajet aéroport-centre-ville
-4. Applications essentielles
-5. Ordre des villes et transport
-6. Itinéraire quotidien
-7. Nourriture, billets et plans de secours
+## 1. Avoir Internet dès l'arrivée
 
-Les quatre premiers éléments sont la fondation. Une fois qu'ils fonctionnent, le reste du voyage devient flexible.
+Le premier test pratique est simple : votre téléphone doit fonctionner quand vous sortez de l'aéroport. Pour beaucoup de visiteurs, la solution la plus simple est une eSIM de voyage installée avant le départ. Choisissez un forfait qui explique clairement son routage si vous voulez garder l'accès à certaines applications étrangères.
 
-## 1. Obtenir un accès Internet avant l'atterrissage
+Avant de partir :
 
-Votre première question pratique est simple : votre téléphone fonctionnera-t-il quand vous sortirez de l'aéroport ?
-
-Pour la plupart des visiteurs, la réponse la plus simple est une eSIM de voyage installée avant le départ. Une bonne eSIM de voyage pour la Chine vous donne des données à l'arrivée et peut garder accessibles des applications familières comme Google, WhatsApp, Instagram, Gmail et d'autres services, selon la façon dont le fournisseur achemine le trafic. Lisez attentivement les détails du forfait avant d'acheter.
-
-Si votre téléphone ne prend pas en charge l'eSIM, utilisez l'itinérance internationale ou achetez une SIM physique après l'arrivée. Le roaming est généralement plus cher, mais il peut être la solution de secours la moins contraignante pour le premier jour.
-
-Avant le départ :
-
-- Confirmez que votre téléphone est débloqué.
-- Confirmez qu'il prend en charge l'eSIM si vous comptez en utiliser une.
-- Installez le profil eSIM pendant que vous avez encore un Wi-Fi fiable.
-- Enregistrez hors ligne les instructions de configuration du fournisseur.
-- Gardez le Wi-Fi d'aéroport comme secours, pas comme plan principal.
+- vérifiez que le téléphone est désimlocké ;
+- confirmez la compatibilité eSIM si vous en utilisez une ;
+- installez le profil sur un Wi-Fi fiable ;
+- sauvegardez les instructions du fournisseur hors ligne ;
+- gardez le Wi-Fi d'aéroport comme secours, pas comme plan principal.
 
 Guide lié : [Best eSIM for China Travel in 2026](/posts/best-esim-for-china-travel-2026/).
 
-## 2. Configurer le paiement avant le départ
+## 2. Préparer le paiement
 
-La Chine fonctionne d'abord au paiement mobile. Dans les grandes villes, petits restaurants, supérettes, taxis, attractions et vendeurs de rue s'attendent souvent à un paiement par QR code. Les cartes étrangères fonctionnent dans certains hôtels, centres commerciaux, aéroports et lieux haut de gamme, mais elles ne suffisent pas pour le quotidien.
+La Chine est d'abord un pays de paiement mobile. Les cartes étrangères peuvent fonctionner dans les grands hôtels, aéroports, malls haut de gamme et certains restaurants internationaux, mais elles ne suffisent pas pour la vie quotidienne.
 
-Configurez au moins un portefeuille mobile avant de partir :
+Préparez au moins un wallet :
 
-- Alipay
-- WeChat Pay
+- Alipay ;
+- WeChat Pay.
 
-Alipay est souvent le premier portefeuille le plus fluide pour les touristes, car l'application est centrée sur le paiement, la traduction, les mini-programmes de transport et les services de voyage. WeChat Pay est aussi important, surtout si vous utilisez WeChat pour écrire à des personnes en Chine.
+Faites-le avant le départ :
 
-Faites ceci avant le départ :
+- installez les deux applications ;
+- inscrivez-vous avec votre numéro habituel ;
+- ajoutez une Visa ou Mastercard si votre banque le permet ;
+- terminez la vérification d'identité si elle est demandée ;
+- partez avec deux cartes de banques différentes si possible ;
+- gardez quelques RMB en petites coupures.
 
-- Téléchargez les deux applications.
-- Inscrivez-vous avec votre numéro mobile habituel.
-- Associez une Visa ou Mastercard si votre banque émettrice le permet.
-- Terminez la vérification d'identité si elle est demandée.
-- Apportez au moins deux cartes de banques différentes si possible.
-- Gardez une petite réserve d'espèces en RMB.
-
-N'attendez pas le hall des arrivées de l'aéroport pour résoudre le paiement. Vous pourriez avoir besoin d'une vérification SMS, de contrôles de sécurité de carte ou d'une connexion stable.
-
-Guides liés :
+Guides utiles :
 
 - [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
 - [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
 - [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
 
-## 3. Prévoir votre premier transfert depuis l'aéroport
+## 3. Planifier le premier transfert
 
-Votre premier transfert compte, car vous serez fatigué, chargé de bagages et encore en train de tester votre configuration. Ne faites pas de votre premier défi logistique en Chine un trajet compliqué en bus local, sauf si vous aimez le stress.
+Le premier trajet ne doit pas être le moment où vous découvrez les transports chinois avec une valise et le décalage horaire. Avant le vol, notez :
 
-Avant d'atterrir, notez :
+- nom de l'aéroport et terminal ;
+- nom de l'hôtel en anglais et en chinois ;
+- adresse complète en chinois ;
+- station de métro la plus proche ;
+- instruction taxi de secours ;
+- durée ou prix approximatif.
 
-- Nom et terminal de l'aéroport
-- Nom de l'hôtel en anglais et en chinois
-- Adresse de l'hôtel en chinois
-- Station de métro la plus proche
-- Instruction de taxi de secours
-- Tarif ou durée approximative
+Le métro ou le train aéroportuaire est souvent efficace si l'hôtel est bien placé. Pour une arrivée tardive, une famille ou beaucoup de bagages, DiDi ou un taxi peut valoir le coût. Le [Show to Driver tool](/tools/show-to-driver/) permet de créer un message chinois lisible pour un chauffeur.
 
-Dans les grandes villes, le train d'aéroport ou le métro peut être efficace si votre hôtel est près d'une station pratique. Pour les arrivées tardives, les familles, les bagages lourds ou les primo-visiteurs, un taxi ou un service de VTC peut valoir le coût supplémentaire.
+## 4. Installer les applications vraiment utiles
 
-Utilisez l'[outil Show to Driver](/tools/show-to-driver/) pour créer un grand message en chinois pour votre hôtel, votre point de prise en charge ou votre destination.
+Vous n'avez pas besoin de vingt applications. Il faut couvrir les points de blocage :
 
-## 4. Installer les applications essentielles
+- paiement : Alipay, WeChat Pay ;
+- transport urbain : DiDi, QR de métro dans Alipay ou WeChat ;
+- traduction : application avec mode hors ligne si possible ;
+- cartes : solution qui fonctionne pour vos villes ;
+- billets : 12306 ou plateforme en anglais ;
+- hôtel et compagnie aérienne ;
+- eSIM ou opérateur.
 
-Vous n'avez pas besoin de vingt applications chinoises. Il vous faut une courte liste qui couvre les blocages du quotidien.
+Le test est concret : pouvez-vous atterrir, vous connecter, acheter de l'eau, appeler une voiture, montrer l'adresse de l'hôtel et envoyer un message ? Si oui, la base est prête.
 
-### Indispensables
+## 5. Construire un itinéraire réaliste
 
-- Alipay ou WeChat Pay pour le paiement
-- Une application de cartes qui fonctionne pour votre trajet
-- Une application de traduction avec packs hors ligne
-- L'application du fournisseur eSIM ou de l'opérateur
-- L'application de la compagnie aérienne et celle de réservation d'hôtel
+La Chine est grande. Le train à grande vitesse est excellent, mais chaque changement de ville demande du temps : rejoindre la gare, sécurité, embarquement, arrivée, transfert hôtel et check-in.
 
-### Très utiles
+Repères simples :
 
-- DiDi pour les VTC
-- 12306 ou une plateforme de billets de train en anglais
-- Applications de livraison de nourriture ou de découverte de restaurants si vous pouvez gérer des interfaces en chinois
-- WeChat si vous devez contacter hôtels, guides, contacts professionnels ou amis locaux
+- 5 à 7 jours : 1 à 2 villes ;
+- 8 à 10 jours : 2 à 3 villes ;
+- 12 à 14 jours : 3 à 4 villes si les liaisons sont directes.
 
-Le test pratique est le suivant : pouvez-vous atterrir, vous connecter, payer une bouteille d'eau, appeler un VTC, montrer l'adresse de votre hôtel et écrire à quelqu'un si les plans changent ? Si oui, votre configuration d'applications est suffisante.
-
-## 5. Construire un ordre de villes réaliste
-
-Les premiers voyages en Chine échouent souvent parce qu'ils essaient de couvrir trop de villes. La Chine est immense, et le train à grande vitesse est excellent, mais chaque transfert coûte du temps : faire les bagages, aller à la gare, passer la sécurité, embarquer, arriver, prendre le métro ou un taxi jusqu'à l'hôtel, puis faire le check-in.
-
-Pour un premier voyage :
-
-- 5-7 jours : choisissez 1-2 villes.
-- 8-10 jours : choisissez 2-3 villes.
-- 12-14 jours : choisissez 3-4 villes si les liaisons sont directes.
-
-Ne traitez pas Pékin, Shanghai, Xi'an, Chengdu, Guilin, Zhangjiajie et Hong Kong comme s'il s'agissait de quartiers. Ce sont de grands déplacements.
-
-Utilisez le train à grande vitesse pour des routes comme Pékin-Shanghai, Shanghai-Hangzhou, Chengdu-Chongqing et beaucoup de paires de villes plus courtes. Utilisez l'avion pour les longs sauts où le train consommerait la majeure partie d'une journée.
+Utilisez le train pour Beijing-Shanghai, Shanghai-Hangzhou, Chengdu-Chongqing et beaucoup de trajets régionaux. Prenez l'avion pour les distances où le rail consomme presque toute une journée.
 
 Guides liés :
 
 - [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
 - [Book China Train Tickets on 12306 as a Foreigner](/posts/book-china-train-tickets-12306-foreigners/)
 
-## 6. Faire une checklist pour le premier jour
+## 6. Première journée : vérifier le système
 
-Votre premier jour doit rester simple. Le but n'est pas de tout voir. Le but est de prouver que le système fonctionne.
+Le premier jour doit être simple :
 
-Après l'arrivée :
+1. activer eSIM ou roaming ;
+2. vérifier cartes et messagerie ;
+3. faire un petit paiement Alipay ou WeChat Pay ;
+4. rejoindre l'hôtel ;
+5. sauvegarder l'adresse en chinois ;
+6. obtenir un peu de cash si nécessaire ;
+7. acheter eau et repas simple ;
+8. dormir avant de modifier tout l'itinéraire.
 
-1. Activez l'eSIM ou le roaming.
-2. Confirmez que la messagerie et les cartes fonctionnent.
-3. Faites un petit paiement avec Alipay ou WeChat Pay.
-4. Rejoignez votre hôtel.
-5. Enregistrez l'adresse de votre hôtel en chinois.
-6. Retirez ou échangez un petit montant d'espèces si nécessaire.
-7. Achetez de l'eau et un repas simple.
-8. Dormez avant de prendre de grandes décisions d'itinéraire.
+Une fois ces étapes validées, vous avez le contrôle.
 
-Si vous terminez ces étapes, le voyage est sous contrôle.
+## Erreurs courantes
 
-## Erreurs de préparation courantes
+**Compter sur les cartes étrangères.** Elles sont utiles mais pas suffisantes. Le QR code est le réflexe local.
 
-### Erreur 1 : compter sur les cartes étrangères
+**Penser que le Wi-Fi d'aéroport règle tout.** Il peut demander un SMS, être lent ou tomber au mauvais moment.
 
-Les cartes étrangères s'améliorent en Chine, mais elles ne constituent toujours pas un plan complet de paiement quotidien. Les portefeuilles mobiles sont la norme.
+**Trop de villes.** Un voyage plus lent est souvent meilleur qu'une course entre gares et hôtels.
 
-### Erreur 2 : supposer que le Wi-Fi d'aéroport résout tout
+**Ne pas sauvegarder les adresses chinoises.** Un nom anglais d'hôtel ne suffit pas toujours pour un chauffeur ou un livreur.
 
-Le Wi-Fi d'aéroport peut aider, mais il peut demander une vérification SMS, être lent ou être peu pratique quand vous passez l'immigration et récupérez les bagages.
+**Oublier les sauvegardes.** Deux cartes, un peu de cash, des copies hors ligne et des captures d'écran évitent beaucoup de stress.
 
-### Erreur 3 : surcharger l'itinéraire
+## Outils utiles
 
-La Chine récompense les voyages plus lents. Un plan réaliste avec moins de villes paraît généralement plus riche qu'un voyage de checklist avec des transferts constants.
+Pour créer une première structure, utilisez le [China Trip Planner](/trip-planner/). Pour des questions rapides, essayez [China Travel Help](/travel-help/). Les outils pratiques sont regroupés dans le [ChinaTripBox Tool Center](/tools/).
 
-### Erreur 4 : ne pas enregistrer les adresses chinoises
+## Résumé
 
-Les noms d'hôtel en anglais ne suffisent souvent pas pour les chauffeurs de taxi, livreurs ou employés locaux. Enregistrez les adresses en chinois.
-
-### Erreur 5 : oublier les secours
-
-Apportez une deuxième carte bancaire, un peu d'espèces en RMB, des copies hors ligne des réservations et des captures d'écran des adresses importantes.
-
-## Utiliser le planificateur de voyage gratuit
-
-Si vous voulez un premier plan structuré, utilisez le [China Trip Planner](/trip-planner/) gratuit. Il demande vos villes, la durée du voyage, le budget, le style de voyage et les besoins de configuration, puis vous donne une checklist pratique couvrant paiement, eSIM, transport, applications et erreurs courantes.
-
-Pour les questions pratiques rapides, utilisez [China Travel Help](/travel-help/). Pour les outils, commencez par le [ChinaTripBox Tool Center](/tools/).
-
-## Conclusion
-
-Pour un premier voyage en Chine, ne commencez pas par un itinéraire parfait. Commencez par un système qui fonctionne : Internet, paiement, transport, applications et première journée simple. Une fois cette fondation en place, la Chine devient beaucoup plus facile à explorer.
-
+Un premier voyage en Chine se prépare d'abord comme un système : données, paiement, transport, applications et premier jour simple. Une fois ces éléments prêts, vous pouvez décider plus librement des restaurants, musées, quartiers et excursions. L'objectif n'est pas de tout verrouiller, mais de ne pas être bloqué dès l'arrivée.

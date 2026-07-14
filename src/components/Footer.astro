@@ -58,15 +58,23 @@ const fd = (key: 'desc' | 'disclaimer') => {
   return t[key]?.[currentLocale] ?? t[key]?.en ?? '';
 };
 
+const localePrefixMap: Record<string, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
+const footerLocalePath = (href: string) => {
+  if (currentLocale === 'en') return href;
+  const prefix = localePrefixMap[currentLocale];
+  if (href === '/') return prefix;
+  return prefix + href.replace(/^\//, '');
+};
+
 const legalLinks = [
-  { href: '/travel-help/', label: ft('Travel Help') },
-  { href: '/resources/', label: ft('Resources') },
-  { href: '/about/', label: ft('About') },
-  { href: '/contact/', label: ft('Contact') },
-  { href: '/editorial-policy/', label: ft('Editorial Policy') },
-  { href: '/affiliate-disclosure/', label: ft('Affiliate Disclosure') },
-  { href: '/privacy/', label: ft('Privacy Policy') },
-  { href: '/terms/', label: ft('Terms') },
+  { href: footerLocalePath('/travel-help/'), label: ft('Travel Help') },
+  { href: footerLocalePath('/resources/'), label: ft('Resources') },
+  { href: footerLocalePath('/about/'), label: ft('About') },
+  { href: footerLocalePath('/contact/'), label: ft('Contact') },
+  { href: footerLocalePath('/editorial-policy/'), label: ft('Editorial Policy') },
+  { href: footerLocalePath('/affiliate-disclosure/'), label: ft('Affiliate Disclosure') },
+  { href: footerLocalePath('/privacy/'), label: ft('Privacy Policy') },
+  { href: footerLocalePath('/terms/'), label: ft('Terms') },
 ];
 
 // Build alternate paths for the same page in other languages

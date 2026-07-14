@@ -1,109 +1,113 @@
 ---
-title: "Commander à manger en Chine sans chinois : Meituan et Ele.me"
-description: "Un guide pratique de la livraison de repas en Chine sans chinois : configurer Meituan et Ele.me, payer avec des cartes étrangères, gérer les adresses et éviter les problèmes courants."
+title: "Commander à manger en Chine sans parler chinois : Meituan, Ele.me et astuces 2026"
+description: "Guide pratique pour commander de la nourriture en Chine sans chinois : Meituan, Ele.me, mini-programmes Alipay, adresse, paiement, coursiers et dépannage."
 pubDate: 2026-07-08
 category: food
 series: food-of-china
 tags: ["meituan", "ele.me", "food delivery china", "alipay", "no chinese"]
+cover: "topic-food-delivery"
+coverAlt: "Sacs de livraison de nourriture avec un smartphone affichant une application de commande"
+
 featured: false
 faqs:
-  - question: "Puis-je utiliser Meituan ou Ele.me avec un numéro de téléphone étranger ?"
-    answer: "Oui, les deux applications acceptent les numéros internationaux pour l'inscription, mais le code SMS de vérification arrive parfois mal sur les réseaux étrangers ; s'inscrire via le mini-programme Alipay, qui utilise votre connexion Alipay existante, est donc souvent la voie la plus fluide."
-  - question: "Ai-je besoin d'un compte bancaire chinois pour payer la livraison ?"
-    answer: "Non, vous pouvez associer une Visa ou Mastercard étrangère à Alipay ou WeChat Pay et payer via eux, même si de petits frais par transaction peuvent s'appliquer et que certaines cartes sont parfois refusées ; avoir les deux portefeuilles prêts aide donc comme secours."
-  - question: "Comment saisir mon adresse si je ne peux pas taper en chinois ?"
-    answer: "La méthode la plus simple est de laisser l'application détecter votre position GPS, puis de demander à votre hôtel ou hôte d'écrire le nom du bâtiment et l'unité en chinois pour le coller dans le champ de notes d'adresse destiné au livreur."
-  - question: "La nourriture est-elle vraiment moins chère sur ces apps qu'au restaurant ?"
-    answer: "Les prix de livraison sont généralement proches des prix sur place, et même s'il y a de petits frais de livraison, souvent 3 à 8 yuans, plus des frais d'emballage, les promotions et coupons fréquents peuvent rendre la commande comparable ou moins chère qu'un repas au restaurant."
-  - question: "Le livreur peut-il m'appeler si je ne parle pas chinois ?"
-    answer: "Les livreurs appellent parfois ; il est donc utile d'ajouter une note en chinois comme 'veuillez laisser à la porte' et de garder la traduction prête, ou de choisir une livraison sans contact à un casier ou à la réception pour éviter complètement la conversation téléphonique."
-  - question: "Quelle application est meilleure pour un voyageur de court séjour, Meituan ou Ele.me ?"
-    answer: "Meituan a généralement le plus grand choix de restaurants et fonctionne bien dans tout le pays, donc c'est le meilleur choix par défaut pour les voyageurs, tandis qu'Ele.me est un bon secours, très intégré à Alipay et proposant parfois des promotions différentes."
+  - question: "Peut-on utiliser Meituan ou Ele.me avec un numéro étranger ?"
+    answer: "Oui, mais les SMS de vérification peuvent parfois ne pas arriver. Passer par les mini-programmes dans Alipay est souvent plus simple, car vous utilisez déjà le compte et le paiement Alipay."
+  - question: "Faut-il un compte bancaire chinois ?"
+    answer: "Non. Vous pouvez payer via Alipay ou WeChat Pay avec une carte Visa ou Mastercard étrangère liée, même si certaines cartes peuvent être refusées ponctuellement."
+  - question: "Comment saisir une adresse sans chinois ?"
+    answer: "Laissez l'application détecter votre position, puis demandez à l'hôtel ou à votre hôte d'écrire le nom du bâtiment, l'étage et les instructions en chinois. Copiez-les dans les notes de livraison."
+  - question: "La livraison est-elle moins chère qu'un restaurant ?"
+    answer: "Les prix sont souvent proches du restaurant. Ajoutez une petite livraison, souvent quelques yuans, et parfois des frais d'emballage. Les promotions peuvent rendre la commande très économique."
+  - question: "Que faire si le livreur appelle et je ne comprends pas ?"
+    answer: "Ajoutez une note en chinois comme 'laisser à la réception' ou 'laisser devant la porte'. Gardez une application de traduction prête et privilégiez la livraison sans contact à l'hôtel."
+  - question: "Meituan ou Ele.me : lequel choisir ?"
+    answer: "Meituan est généralement le meilleur choix par défaut grâce à son choix très large. Ele.me est un bon secours, notamment via Alipay et pour certaines promotions."
 ---
 
-## Pourquoi c'est important
+La livraison de nourriture est partout en Chine. Dans une grande ville, vous pouvez faire livrer un repas chaud, du thé au lait, des fruits, des médicaments courants ou un chargeur en moins d'une heure. Pour un voyageur qui ne lit pas le chinois, le défi n'est pas la disponibilité : c'est l'adresse, le paiement, l'interface et la communication avec le coursier.
 
-La Chine fonctionne à la livraison de nourriture. Dans la plupart des villes, vous pouvez faire apporter à la porte de votre hôtel un repas chaud, un bubble tea, des fruits frais ou un chargeur oublié en moins de 40 minutes, souvent pour seulement quelques yuans de frais de livraison. Le piège : les deux applications qui dominent cet univers, **Meituan** et **Ele.me**, sont conçues pour les utilisateurs domestiques et s'ouvrent par défaut en chinois.
+Les deux grands noms sont **Meituan** et **Ele.me**. Les applications complètes sont pensées pour les utilisateurs chinois, mais un visiteur peut s'en sortir avec Alipay, la traduction d'écran, les menus photo et quelques phrases prêtes.
 
-Cela bloque beaucoup de visiteurs. Les menus de restaurants hors zones touristiques ont rarement de l'anglais, et après une longue journée de voyage, marcher en pointant des photos perd vite son charme. Une fois ces applications opérationnelles, vous débloquez la même commodité que les locaux, d'un vrai dîner régional à un snack à 1 h du matin, sans parler un mot de mandarin.
+## Ce qu'il faut préparer
 
-Ce guide se concentre sur la voie réaliste : quoi configurer avant de dépendre de ces apps, comment la commande fonctionne réellement quand l'interface n'est pas dans votre langue, et les endroits précis où les gens restent coincés.
+### Paiement
 
-## Ce qu'il faut savoir d'abord
+La livraison ne se règle presque jamais en espèces. Préparez **Alipay** et, si possible, **WeChat Pay** avec une carte étrangère liée. Alipay est particulièrement utile car il héberge des mini-programmes Meituan et Ele.me, souvent plus simples que les apps séparées.
 
-Avant de pouvoir commander quoi que ce soit, trois éléments doivent être en place. En ignorer un vous bloquera au paiement.
+### Numéro et connexion
 
-### 1. Un portefeuille de paiement mobile fonctionnel
+Les applications peuvent demander un SMS. Les numéros étrangers fonctionnent parfois, parfois non. Si le code n'arrive pas, essayez le mini-programme dans Alipay. Vous avez aussi besoin d'une eSIM ou d'un roaming stable pour suivre la commande.
 
-Les applications de livraison en Chine n'acceptent pas les espèces et traitent rarement directement une carte étrangère. Vous payez via **Alipay** ou **WeChat Pay**. Les deux permettent désormais aux visiteurs internationaux d'associer une Visa ou Mastercard étrangère :
+### Adresse en chinois
 
-- **Alipay** : ajoutez votre carte dans la section internationale/"Tour Card". Alipay héberge aussi Meituan et Ele.me comme *mini-programmes*, ce qui compte beaucoup (voir plus bas).
-- **WeChat Pay** : ajoutez une carte dans les paramètres Wallet. WeChat propose aussi de la commande de repas intégrée.
+Demandez à l'hôtel ou à votre hôte d'écrire :
 
-Configurez **les deux** si possible. Les cartes sont refusées plus souvent qu'on ne l'imagine, et avoir un portefeuille de secours sauve une soirée affamée.
+- nom de l'hôtel ou du bâtiment ;
+- adresse chinoise complète ;
+- étage, chambre ou réception ;
+- instruction de remise.
 
-### 2. Un numéro qui reçoit les SMS
+Sauvegardez ce texte dans Notes. Une adresse anglaise est rarement suffisante pour un livreur.
 
-L'inscription utilise une vérification SMS. Les numéros étrangers fonctionnent parfois, mais parfois le code n'arrive pas sans message d'erreur. Si votre numéro ne se vérifie pas, utilisez la voie mini-programme via Alipay, puisqu'elle s'appuie sur votre compte Alipay existant.
+## Meituan ou Ele.me
 
-### 3. Un moyen de gérer le texte chinois
+| Critère | Meituan | Ele.me |
+| --- | --- | --- |
+| Choix | Très large, fort dans tout le pays | Bon, surtout dans les grandes villes |
+| Accès | App dédiée ou mini-programme | Très pratique via Alipay |
+| Promotions | Fréquentes | Fréquentes, différentes de Meituan |
+| Pour un voyageur | Meilleur choix par défaut | Bon plan B |
 
-Vous avez trois bonnes options, et vous utiliserez probablement les trois :
+Installez Meituan si vous voulez le maximum de choix. Gardez Ele.me comme secours, surtout si vous utilisez déjà beaucoup Alipay.
 
-- **Traduction intégrée / téléphone** : les téléphones modernes traduisent bien le texte à l'écran. La traduction intégrée de l'iPhone et le mode caméra de Google Translate aident pour les menus.
-- **Le mini-programme Alipay** : c'est le plus gros conseil. Ouvrir Meituan ou Ele.me *dans* Alipay donne souvent une interface plus propre et, dans certaines régions, partiellement en anglais, en plus d'éviter une connexion séparée.
-- **Votre hôtel** : la réception peut écrire votre adresse en chinois et confirmer le nom du bâtiment. Faites-le une fois et enregistrez-la.
+## Commander étape par étape
 
-### Meituan vs Ele.me en un coup d'œil
+1. Ouvrez Meituan, Ele.me ou le mini-programme dans Alipay.
+2. Autorisez la localisation GPS.
+3. Vérifiez que le point est sur le bon hôtel ou bâtiment.
+4. Parcourez les restaurants par photos, notes, distance et délai.
+5. Utilisez la traduction d'écran pour les noms de plats et options.
+6. Ajoutez les plats au panier et vérifiez les frais de livraison et d'emballage.
+7. Collez l'adresse chinoise et ajoutez une note au coursier.
+8. Payez avec Alipay ou WeChat Pay.
+9. Suivez le livreur sur la carte et surveillez les notifications.
 
-| | Meituan | Ele.me |
-|---|---|---|
-| Propriétaire | Meituan | Alibaba |
-| Choix | Le plus large, fort dans tout le pays | Bon, plus fort dans les grandes villes |
-| Meilleur accès | Application autonome ou mini-programme Alipay | Mini-programme Alipay |
-| Verdict voyageur | Meilleur choix par défaut | Secours fiable |
+Les frais de livraison sont souvent modestes, parfois autour de quelques yuans, mais varient selon distance, météo et heure. Certains restaurants imposent un minimum de commande ; ajoutez une boisson ou un accompagnement si nécessaire.
 
-Pour la plupart des visiteurs de court séjour, **Meituan est celui à installer en premier.** Ajoutez Ele.me comme assurance et pour ses coupons séparés.
+## Notes utiles en chinois
 
-## Comment cela fonctionne en pratique
+Gardez ces phrases dans votre téléphone :
 
-Voici le déroulé réel une fois configuré. Les étapes sont presque identiques sur les deux applications.
+- 请放在前台。 = Merci de laisser à la réception.
+- 请放门口。 = Merci de laisser devant la porte.
+- 我不会说中文，请发消息。 = Je ne parle pas chinois, merci d'envoyer un message.
+- 酒店前台可以代收。 = La réception de l'hôtel peut recevoir la commande.
 
-1. **Définissez votre position.** Laissez l'application utiliser le GPS, ou cherchez votre hôtel par nom. Confirmez que le marqueur est sur le bon bâtiment. Les zones de livraison dépendent de la distance ; un marqueur décalé peut cacher de bons restaurants ou ajouter des frais.
-2. **Parcourez par catégorie ou photo.** Les icônes repas, boissons, desserts et courses sont assez visuelles pour naviguer. Les cartes restaurant affichent photo, note (sur 5), prix moyen par personne, distance et temps de livraison estimé.
-3. **Lisez le menu avec les photos.** La plupart des fiches sont riches en photos, très utile quand on ne lit pas les noms. Appuyez sur un article, ajustez la quantité et notez les options comme le niveau d'épices si demandé. Utilisez la traduction d'écran pour ce qui reste ambigu.
-4. **Vérifiez les frais.** Au paiement, vous verrez le total nourriture, des **frais de livraison** (typiquement 3 à 8 yuans) et de petits **frais d'emballage** par article. Appliquez les bannières de coupons affichées ; elles sont courantes et cumulent les économies.
-5. **Confirmez l'adresse et ajoutez une note.** Collez votre adresse chinoise dans le champ de détail. Ajoutez une note au livreur en chinois, par exemple "请放在前台" (veuillez laisser à la réception) ou "请放门口" (veuillez laisser à la porte).
-6. **Payez.** Choisissez Alipay ou WeChat Pay et autorisez. C'est terminé.
-7. **Suivez la livraison.** Une carte en direct montre la progression du livreur. Vous recevez généralement un SMS ou une alerte dans l'application à son arrivée.
-
-### Un raccourci à répéter
-
-Si la saisie et les connexions vous posent problème, ouvrez Alipay, cherchez "Meituan" ou "Ele.me" dans la barre de mini-programmes, et commandez depuis là. Votre identité et votre paiement sont déjà gérés, et vous évitez les échecs d'inscription les plus courants.
+Copiez une phrase dans la note de livraison. Cela réduit les appels du coursier.
 
 ## Dépannage
 
-**Le code SMS n'arrive jamais.**
-Passez par le mini-programme Alipay, qui n'a pas besoin d'une nouvelle vérification SMS. Si vous devez utiliser l'application autonome, redemandez le code sur Wi-Fi, ou demandez à votre hôtel de le recevoir sur un numéro local.
+**Le SMS n'arrive pas.** Essayez le mini-programme Alipay. Il évite souvent une inscription séparée.
 
-**Ma carte est toujours refusée.**
-Les cartes étrangères sont imprévisibles. Essayez l'autre portefeuille (WeChat vs Alipay), confirmez que la carte est bien ajoutée et assurez-vous que votre banque n'a pas signalé la charge comme activité étrangère suspecte. Avoir les deux portefeuilles liés est la vraie solution.
+**Aucun restaurant n'apparaît.** Le point GPS est probablement faux ou vous êtes hors zone de livraison. Repositionnez l'adresse sur le bâtiment exact.
 
-**Aucun restaurant n'apparaît.**
-C'est généralement un problème de position. Vérifiez que votre marqueur GPS est sur votre vrai bâtiment, pas un repère voisin, et que vous êtes dans une zone de livraison. Les zones rurales et certaines zones de resort ont une couverture limitée.
+**La carte est refusée.** Essayez l'autre wallet, vérifiez la carte liée et regardez si la banque demande une validation.
 
-**Le livreur appelle et je ne comprends pas.**
-Ne paniquez pas. Répondez avec une application de traduction ouverte, ou ignorez l'appel ; il suivra souvent votre note écrite. Choisir la livraison sans contact à la réception ou à un casier évite complètement l'appel.
+**Le livreur appelle.** Répondez avec la traduction prête, ou laissez la note faire le travail. Dans un hôtel, la réception peut souvent aider.
 
-**L'article livré est faux ou manquant.**
-Les deux applications ont une assistance intégrée et des boutons de remboursement sur la page de commande. Prenez une photo, utilisez le flux de réclamation et traduisez la réponse. Les remboursements pour vraies erreurs sont courants et souvent rapides.
+**Article manquant ou erreur.** Prenez une photo et utilisez le bouton de support ou remboursement dans la commande. Les remboursements partiels sont courants quand l'erreur est claire.
 
-**Le minimum de commande n'est pas atteint.**
-Beaucoup de restaurants fixent un montant minimum. Ajoutez une boisson ou un accompagnement pour l'atteindre, ou choisissez un restaurant avec un seuil plus bas affiché sur sa carte.
+**Minimum de commande.** Cherchez le montant minimum affiché sur la page du restaurant et ajoutez un petit article.
 
-## Derniers conseils
+## Conseils pour restaurants sur place
 
-Faites la configuration pendant votre première soirée calme, pas quand vous mourez de faim. Associez Alipay et WeChat Pay, enregistrez l'adresse de votre hôtel en chinois et testez avec une petite commande pour apprendre le flux sans enjeu. Appuyez-vous sur le **mini-programme Alipay** chaque fois que les applications autonomes résistent, gardez une note en chinois pour le livreur à réutiliser, et choisissez par défaut **Meituan** pour le plus grand choix avec **Ele.me** en secours. Avec ces pièces en place, commander à manger en Chine sans chinois passe d'obstacle quotidien à vrai superpouvoir de voyage.
+Même sans livraison, ces habitudes aident :
+
+- choisissez les restaurants avec menus photo ou QR code ;
+- utilisez la traduction caméra ;
+- repérez le niveau de piment avant de commander ;
+- montrez une capture d'écran du plat voulu ;
+- payez par QR code avec Alipay ou WeChat Pay.
 
 ## À lire ensuite
 
@@ -111,3 +115,6 @@ Faites la configuration pendant votre première soirée calme, pas quand vous mo
 - [Chengdu city guide](/posts/chengdu-city-guide-for-foreigners/)
 - [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
 
+## Résumé
+
+Pour commander à manger en Chine sans parler chinois, préparez d'abord Alipay ou WeChat Pay, une adresse en chinois et une connexion mobile fiable. Utilisez Meituan pour le choix, Ele.me comme secours, et les mini-programmes Alipay si les SMS ou les apps dédiées bloquent. Avec une note de livraison prête et quelques phrases chinoises sauvegardées, la livraison devient beaucoup moins intimidante.

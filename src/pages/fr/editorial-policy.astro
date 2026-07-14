@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Editorial Policy';
+const description =
+  'How ChinaTripBox researches, writes, reviews, and updates travel guides for foreign visitors to China.';
+const lastUpdated = 'July 10, 2026';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
+  <Header locale="fr" />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <h1 class="text-3xl font-bold text-gray-900">Editorial Policy</h1>
+      <p class="mt-2 text-sm text-gray-500">Last updated: {lastUpdated}</p>
+
+      <p class="mt-4">
+        ChinaTripBox publishes independent travel guides for foreign visitors to China. Our goal is
+        to make practical topics easier to understand, including payments, mobile internet,
+        transport, city planning, and everyday travel logistics.
+      </p>
+
+      <h2>How We Research</h2>
+      <p>
+        We use official sources where available, provider documentation, app help centers, public
+        policy pages, traveler reports, and hands-on checks when possible. For topics that change
+        frequently, such as payment limits, eSIM availability, visa-free entry rules, and app
+        support, we aim to verify details before publishing or updating a guide.
+      </p>
+
+      <h2>How We Write</h2>
+      <p>
+        Our articles are written for real travelers, not for search engines alone. We prioritize
+        clear steps, common mistakes, realistic caveats, and plain-English explanations over generic
+        travel inspiration.
+      </p>
+
+      <h2>Updates and Corrections</h2>
+      <p>
+        China travel information can change quickly. We review important guides periodically and
+        update pages when we find outdated steps, changed prices, new app behavior, or revised
+        rules. If you spot an issue, please contact us with the page URL and what you believe needs
+        correction.
+      </p>
+
+      <h2>Advertising and Affiliate Links</h2>
+      <p>
+        ChinaTripBox may earn money from advertising and affiliate links. Commercial relationships
+        do not determine our core editorial advice. When a page includes affiliate links, using
+        those links may earn us a commission at no extra cost to you.
+      </p>
+
+      <h2>Independence</h2>
+      <p>
+        ChinaTripBox is not affiliated with the Chinese government, Google, Apple, Alipay, WeChat,
+        China Railway, telecom carriers, airlines, banks, or any visa office unless clearly stated.
+        Brand names are used for identification and practical traveler guidance.
+      </p>
+
+      <h2>Limitations</h2>
+      <p>
+        Our content is general travel information. It is not legal, immigration, financial,
+        medical, tax, or emergency advice. Always confirm official requirements with the relevant
+        government agency, airline, payment provider, bank, telecom provider, or service operator.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        To suggest a correction or ask about our editorial process, please use our
+        <a href="/contact/">contact page</a>.
+      </p>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -29,6 +29,7 @@ export interface Props {
   cover?: string; // image name in src/assets/images/ (e.g. "cover-visa")
   coverAlt?: string;
   image?: string; // OG image path override
+  locale?: string;
 }
 
 const {
@@ -43,6 +44,7 @@ const {
   cover,
   coverAlt = '',
   image,
+  locale = 'en',
 } = Astro.props;
 
 const formattedDate = new Date(datePublished).toLocaleDateString('en-US', {
@@ -52,8 +54,8 @@ const formattedDate = new Date(datePublished).toLocaleDateString('en-US', {
 });
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} type="article" image={image}>
-  <Header />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} type="article" image={image} locale={locale}>
+  <Header locale={locale} />
   <main class="container-page py-8">
     <article class="prose-content">
       <Breadcrumbs items={breadcrumbs} />

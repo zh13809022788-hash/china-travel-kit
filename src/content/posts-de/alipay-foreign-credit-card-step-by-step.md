@@ -1,99 +1,58 @@
----
-title: "Alipay für Ausländer: Eine ausländische Kreditkarte Schritt für Schritt verknüpfen"
-description: "Eine klare Schritt-für-Schritt-Anleitung für 2026: Alipay installieren, Identität verifizieren und eine ausländische Visa oder Mastercard verknüpfen, damit Sie überall in China bezahlen können."
+﻿---
+title: "Alipay in China 2026: Ausländische Kreditkarte Schritt für Schritt verknüpfen"
+description: "Praxisnaher Alipay-Guide für China-Reisende: App installieren, Reisepass verifizieren, Visa oder Mastercard hinterlegen, Gebühren und typische Fehler vermeiden."
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "foreign card", "setup", "mobile payment"]
+cover: "topic-alipay"
+coverAlt: "Alipay mobile payment app on a smartphone with Chinese yuan notes"
 featured: false
 faqs:
-  - question: "Was ist der Alipay TourPass und brauche ich ihn 2026 noch?"
-    answer: "TourPass war ein vorausbezahltes Mini-Programm zum Aufladen, das ausländische Besucher nutzten, bevor Alipay das direkte Verknüpfen von Karten erlaubte. Seit 2023 können internationale Reisende eine ausländische Visa oder Mastercard direkt mit der Haupt-App verknüpfen, daher brauchen die meisten Touristen TourPass nicht mehr. Das direkte Verknüpfen der Karte ist heute der Standard und der einfachere Weg; darauf konzentriert sich diese Anleitung."
-  - question: "Welche ausländischen Karten kann ich mit Alipay verknüpfen?"
-    answer: "Alipay unterstützt große internationale Netzwerke, darunter Visa, Mastercard, JCB, Diners Club und Discover. Kreditkarten funktionieren in der Regel zuverlässiger als Debitkarten. Die Karte muss internationale Online-Transaktionen erlauben. Falls Ihr Konto Reisehinweise oder Sperren für Onlinekäufe hat, klären Sie das vor dem Verknüpfen mit Ihrer Bank."
-  - question: "Brauche ich eine chinesische Telefonnummer oder ein chinesisches Bankkonto für Alipay?"
-    answer: "Nein. Sie können sich mit Ihrer Mobilnummer aus dem Heimatland registrieren und den Bestätigungscode dort empfangen. Sie verknüpfen Ihre ausländische Karte statt eines chinesischen Bankkontos. Sie brauchen nur funktionierende mobile Daten oder WLAN, um Registrierung und Identitätsprüfung abzuschließen."
-  - question: "Fallen Gebühren an, wenn ich mit einer ausländischen Karte über Alipay bezahle?"
-    answer: "Transaktionen von 200 RMB oder weniger sind normalerweise von Alipays Servicegebühr befreit. Bei Zahlungen über 200 RMB erhebt Alipay etwa 3% Servicegebühr. Zusätzlich kann Ihr Kartenherausgeber eine Auslandseinsatzgebühr berechnen; eine Karte ohne Fremdwährungsgebühr spart daher am meisten."
-  - question: "Warum wird meine Zahlung oder Kartenverknüpfung immer wieder abgelehnt?"
-    answer: "Die häufigsten Ursachen sind eine Bank, die internationale oder Online-Transaktionen blockiert, ein Namensunterschied zwischen Reisepass und Karte, eine unvollständige Gesichtsverifizierung oder ein erreichtes Transaktionslimit. Lassen Sie internationale Nutzung von Ihrer Bank freischalten, achten Sie auf exakt übereinstimmende Angaben und teilen Sie große Zahlungen auf, wenn Sie ein Limit überschreiten."
-  - question: "Wie lange dauert die gesamte Alipay-Einrichtung?"
-    answer: "Bei den meisten dauert es etwa zehn bis fünfzehn Minuten, sofern Karte und Reisepass bereitliegen und die Bank die Transaktion nicht blockiert. Erledigen Sie es vor dem Flug über eine stabile Internetverbindung, damit Sie nach der Ankunft keinen Stress mit Fehlersuche haben."
+  - question: "Brauche ich 2026 noch den Alipay TourPass?"
+    answer: "In der Regel nein. TourPass war früher eine Prepaid-Lösung für Besucher. Heute verknüpfen die meisten Reisenden ihre internationale Visa, Mastercard, JCB, Diners Club oder Discover direkt in der normalen Alipay-App."
+  - question: "Kann ich Alipay ohne chinesische Telefonnummer nutzen?"
+    answer: "Ja. Die Registrierung funktioniert mit einer ausländischen Mobilnummer, solange Sie den SMS-Code empfangen können. Ein chinesisches Bankkonto ist für den touristischen Alltag nicht nötig."
+  - question: "Welche Gebühren fallen bei ausländischen Karten an?"
+    answer: "Zahlungen bis 200 RMB sind meist ohne Alipay-Servicegebühr. Über 200 RMB kommen ungefähr 3 Prozent Plattformgebühr hinzu; Ihre Bank kann zusätzlich Auslandseinsatzgebühren berechnen."
+  - question: "Warum wird meine Karte abgelehnt?"
+    answer: "Häufig blockiert die Bank internationale Online-Transaktionen, der Name stimmt nicht exakt mit Pass und Karte überein, oder die Identitätsprüfung ist nicht vollständig abgeschlossen."
+  - question: "Wie lange dauert die Einrichtung?"
+    answer: "Wenn Reisepass, Karte und SMS-Empfang bereitliegen, meist 10 bis 15 Minuten. Am besten erledigen Sie alles vor dem Abflug über stabiles WLAN."
 ---
 
-Wenn Sie gelesen haben, dass China auf QR-Code-Zahlungen läuft, und befürchten, als Ausländer ausgeschlossen zu sein, ist diese Anleitung für Sie. Die zuverlässigste Art, als Besucher in China zu bezahlen, ist Alipay mit einer verknüpften internationalen Karte. Die Einrichtung ist unkompliziert, sobald Sie die genaue Reihenfolge kennen. Beim ersten Mal kann die App aber verwirrend wirken, und ein kleiner Fehler bei der Verifizierung kann alles aufhalten. Unten finden Sie den vollständigen aktuellen Ablauf für 2026, so geschrieben, dass Sie ihn von Anfang bis Ende befolgen können.
+Alipay ist für viele China-Reisende die praktischste Bezahl-App. Im Alltag zahlen Sie damit im Supermarkt, im Taxi, im Museum, am Snackstand und oft auch in Mini-Programmen für Verkehr oder Tickets. Eine chinesische Bankkarte brauchen Sie dafür nicht mehr zwingend: Seit einigen Jahren können Besucher internationale Karten direkt hinterlegen.
 
-## Bevor Sie Beginnen
+Wichtig ist nur, die Einrichtung nicht erst dann zu beginnen, wenn Sie mit Koffer am Flughafen stehen. Die App selbst ist nicht schwierig, aber SMS-Codes, Bankfreigaben und Passprüfung sind genau die Dinge, die unter Zeitdruck nerven.
 
-Diese Anleitung gilt für alle ausländischen Besucher, die in China wie Einheimische bezahlen möchten, ohne ein chinesisches Bankkonto zu eröffnen. Sie funktioniert für ein Wochenende ebenso wie für mehrere Monate.
+## Was Sie vorher bereitlegen sollten
 
-Sie sollten Folgendes bereithalten:
+Sie brauchen ein aktuelles Smartphone, Ihren Reisepass, eine internationale Kredit- oder Debitkarte und eine Telefonnummer, die SMS empfangen kann. Visa und Mastercard funktionieren am häufigsten, auch JCB, Discover und Diners Club werden unterstützt. Kreditkarten sind erfahrungsgemäß zuverlässiger als Debitkarten.
 
-- **Ein Smartphone** mit einer halbwegs aktuellen iOS- oder Android-Version und Platz für eine weitere App.
-- **Ihren Reisepass**, der für die einmalige Identitätsprüfung in Alipay verwendet wird.
-- **Eine ausländische Kredit- oder Debitkarte.** Visa und Mastercard werden am breitesten unterstützt; JCB, Diners Club und Discover funktionieren ebenfalls. Ideal ist eine Kreditkarte ohne Auslandseinsatzgebühren.
-- **Eine funktionierende Mobilnummer**, um den SMS-Bestätigungscode zu empfangen. Ihre Nummer aus dem Heimatland reicht aus.
-- **Mobile Daten oder WLAN**, denn ohne Verbindung können Sie sich nicht registrieren, verifizieren oder bezahlen.
+Informieren Sie Ihre Bank vor der Reise, dass die Karte in China und für Online-Zahlungen genutzt wird. Manche Banken blockieren die kleine Prüfbuchung sonst als Betrugsverdacht. Eine zweite Karte von einer anderen Bank ist eine gute Reserve.
 
-Ein Hinweis zu Timing und Regeln: Richten Sie alles vor der Reise ein, idealerweise über eine stabile heimische Internetverbindung. Das Verknüpfen einer Karte löst manchmal eine Betrugsprüfung bei der Bank aus, und von zu Hause aus ist ein Anruf deutlich einfacher als am Flughafen. Informieren Sie Ihre Bank außerdem, dass Sie die Karte international nutzen werden, damit sie die erste Transaktion nicht blockiert. Die Identitätsprüfung ist in China regulatorisch vorgeschrieben. Rechnen Sie also damit, Ihren Reisepass zu scannen und eine kurze Gesichtsprüfung zu machen; das ist normal und einmalig.
+## Alipay einrichten
 
-## Schritt für Schritt: Alipay Einrichten und Ihre Karte Verknüpfen
+1. Laden Sie die offizielle Alipay-App aus dem App Store oder Google Play herunter.
+2. Registrieren Sie sich mit Ihrer normalen Mobilnummer und geben Sie den SMS-Code ein.
+3. Öffnen Sie unten **Me** und dann **Bank Cards** oder **Add Card**.
+4. Tragen Sie Kartennummer, Ablaufdatum, CVV und den Namen exakt wie auf der Karte ein.
+5. Folgen Sie der Identitätsprüfung mit Reisepass und Gesichtsscan.
+6. Bestätigen Sie die Bankfreigabe, falls Ihre Bank einen Code oder eine Push-Nachricht sendet.
+7. Testen Sie die App mit einer kleinen Zahlung, zum Beispiel Wasser oder Kaffee.
 
-Befolgen Sie diese Schritte der Reihe nach. Der gesamte Vorgang dauert meist zehn bis fünfzehn Minuten.
+Bei der Passprüfung zählt Genauigkeit. Der Name in Alipay, auf dem Reisepass und auf der Karte sollte so gut wie möglich übereinstimmen. Nutzen Sie keine Spitznamen und achten Sie auf zweite Vornamen.
 
-### 1. Alipay herunterladen und installieren
+## So bezahlen Sie vor Ort
 
-Öffnen Sie den App Store Ihres Telefons (Apple App Store oder Google Play) und suchen Sie nach **Alipay**. Laden Sie die offizielle internationale Version von Ant Group herunter. Tun Sie das möglichst vor der Abreise, da sich manche App Stores innerhalb Chinas anders verhalten.
-
-### 2. Konto registrieren
-
-Öffnen Sie die App und wählen Sie die Registrierung. Wählen Sie Ihr Land oder Ihre Region, geben Sie Ihre **Mobilnummer aus dem Heimatland** ein und bestätigen Sie sie. Alipay sendet einen SMS-Code an diese Nummer; geben Sie ihn zur Bestätigung ein. Legen Sie anschließend ein starkes Login-Passwort fest. Für all das brauchen Sie weder eine chinesische Nummer noch ein chinesisches Bankkonto.
-
-### 3. Sprache einstellen und den Kartenbereich finden
-
-Bei internationalen Konten ist Alipay normalerweise auf Englisch voreingestellt, Sie können das bei Bedarf in den Einstellungen prüfen. Suchen Sie auf dem Startbildschirm unten nach **Me**, dann nach **Bank Cards**, oder tippen Sie auf **Add Card** beziehungsweise das Wallet-Symbol. Dort verknüpfen Sie Ihre Zahlungsmethode.
-
-### 4. Ausländische Kredit- oder Debitkarte hinzufügen
-
-Wählen Sie **Add Card** und geben Sie die Kartendaten exakt wie aufgedruckt ein: Kartennummer, Ablaufdatum und CVV-Sicherheitscode. Tragen Sie den Namen des Karteninhabers genau so ein, wie er auf der Karte steht, möglichst passend zu Ihrem Reisepass. Alipay erkennt das Kartennetz automatisch.
-
-### 5. Identitätsprüfung abschließen
-
-Diesen Schritt überstürzen viele und machen Fehler, nehmen Sie sich also Zeit. Alipay fordert Sie auf:
-
-- Ihren offiziellen Namen und Ihr Geburtsdatum so einzugeben, wie sie im Reisepass stehen.
-- Die Fotoseite Ihres **Reisepasses** zu fotografieren oder hochzuladen.
-- Eine **Gesichtsverifizierung** anhand der Hinweise auf dem Bildschirm abzuschließen, meist durch Blinzeln oder Kopfdrehen bei gutem Licht.
-
-Achten Sie darauf, dass der eingegebene Name mit Reisepass und Karte übereinstimmt. Die Verifizierung ist meist nach wenigen Minuten abgeschlossen, kann aber gelegentlich wegen manueller Prüfung länger dauern.
-
-### 6. Karte bestätigen und autorisieren
-
-Nach der Verifizierung verknüpft Alipay die Karte. Ihre Bank kann Ihnen einen einmaligen Bestätigungscode oder eine App-Benachrichtigung zur Freigabe senden; erledigen Sie das zeitnah. Manche Banken setzen eine kleine temporäre Autorisierung, um die Karte zu prüfen. Diese wird automatisch erstattet.
-
-### 7. Erste Zahlung durchführen
-
-Sobald Ihre Karte verknüpft ist, testen Sie sie mit einem kleinen Kauf, etwa einer Flasche Wasser. Es gibt zwei Zahlungswege:
-
-- **QR-Code des Händlers scannen:** Tippen Sie auf dem Alipay-Startbildschirm auf **Scan**, richten Sie die Kamera auf den Code des Händlers, geben Sie den Betrag ein und bestätigen Sie mit Passwort oder Gesichtserkennung.
-- **Eigenen Zahlungscode zeigen:** Tippen Sie auf **Pay/Collect**, um Ihren persönlichen QR-Code anzuzeigen, den der Händler an der Kasse scannt.
-
-Diese kleine Testzahlung bestätigt, dass alles funktioniert, bevor Sie sich für ein Taxi oder Essen darauf verlassen.
+Es gibt zwei typische Varianten. Entweder scannen Sie den QR-Code des Händlers über **Scan**, geben den Betrag ein und bestätigen. Oder Sie öffnen **Pay/Collect** und zeigen Ihren persönlichen Zahlungscode, den die Kasse scannt. Für kleine Läden ist die erste Variante häufig, in Supermärkten eher die zweite.
 
 <!-- AFFILIATE_PAYMENT -->
 
-## Limits, Gebühren und Fehlerbehebung
+## Gebühren, Limits und Backup
 
-**Gebühren.** Alipay berechnet in der Regel keine Servicegebühr für Transaktionen von **200 RMB oder weniger**. Bei Zahlungen über 200 RMB müssen Sie mit etwa **3%** Servicegebühr rechnen. Ihr Kartenherausgeber kann zusätzlich eine eigene Auslandseinsatzgebühr berechnen. Deshalb lohnt sich eine Karte ohne Fremdwährungsgebühr. Außerdem gibt es regulierte Limits pro Einzeltransaktion und pro Jahr; die meisten Touristen kommen nicht in die Nähe, aber sehr große Käufe können blockiert werden und müssen aufgeteilt werden.
+Merken Sie sich die 200-RMB-Grenze: Kleinere Zahlungen sind meist gebührenfrei, größere Zahlungen kosten ungefähr 3 Prozent Servicegebühr. Zusätzlich kann Ihre eigene Bank 1 bis 3 Prozent Auslandseinsatzgebühr nehmen. Für Hotelrechnungen oder größere Einkäufe kann außerdem ein Transaktionslimit greifen. Teilen Sie große Beträge auf oder nutzen Sie eine physische Karte, wenn nötig.
 
-**Häufige Fehler und Lösungen:**
-
-- **Karte kann nicht verknüpft werden.** Meist blockiert Ihre Bank eine ungewohnte internationale Transaktion. Rufen Sie die Bank an, bestätigen Sie Online- und Auslandseinsatz und versuchen Sie es erneut.
-- **Gesichtsverifizierung schlägt fehl.** Gehen Sie an einen hellen, gleichmäßig beleuchteten Ort, nehmen Sie Brille oder Hut ab und halten Sie das Telefon ruhig auf Augenhöhe. Versuchen Sie es erneut, statt es immer wieder zu erzwingen.
-- **Namensabweichung.** Der Name im Reisepass, im Alipay-Profil und auf der Karte muss zusammenpassen. Korrigieren Sie Tippfehler und geben Sie die Daten erneut ein.
-- **Zahlung beim Händler abgelehnt.** Prüfen Sie zuerst Ihre mobile Datenverbindung. Bei einem hohen Betrag haben Sie eventuell ein Einzeltransaktionslimit erreicht; teilen Sie die Zahlung in zwei kleinere Beträge oder verwenden Sie für diesen Kauf eine physische Karte.
-- **Verifizierung bleibt ausstehend.** Geben Sie ihr bis zu einen Tag. Wenn sie nicht durchgeht, kontaktieren Sie den Support über Alipays Hilfezentrum in der App.
-
-Praktischer Tipp: Bewahren Sie etwas RMB-Bargeld und eine physische Visa oder Mastercard als Reserve auf. Wenn einmal die Verbindung ausfällt oder eine Karte ein Limit erreicht, sind Sie froh über eine Alternative.
+Wenn etwas nicht funktioniert, prüfen Sie zuerst die Datenverbindung. Danach kommen Bankblockade, Namensabweichung und nicht abgeschlossene Verifizierung als häufigste Ursachen. Für die Reise bleibt sinnvoll: Alipay und WeChat Pay einrichten, etwas Bargeld in RMB dabeihaben und mindestens eine physische Karte mitnehmen.
 
 ## Weiterlesen
 
@@ -101,6 +60,6 @@ Praktischer Tipp: Bewahren Sie etwas RMB-Bargeld und eine physische Visa oder Ma
 - [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
 - [cash backup guide for China](/posts/how-much-cash-to-bring-to-china/)
 
-## Zusammenfassung
+## Fazit
 
-Alipay als Ausländer im Jahr 2026 einzurichten, läuft auf eine klare Reihenfolge hinaus: offizielle App herunterladen, mit der heimischen Telefonnummer registrieren, eine ausländische Visa oder Mastercard verknüpfen, die einmalige Pass- und Gesichtsverifizierung abschließen und eine kleine Testzahlung machen. Sie brauchen weder ein chinesisches Bankkonto noch eine chinesische Telefonnummer, und der alte TourPass-Aufladeweg ist nicht mehr nötig, weil direktes Kartenverknüpfen heute Standard ist. Erledigen Sie die Einrichtung vor der Reise über stabiles Internet, informieren Sie Ihre Bank über den Auslandseinsatz und merken Sie sich die Gebührengrenzen: kostenlos unter 200 RMB, etwa 3% darüber. Ist das einmal erledigt, bezahlen Sie Streetfood, Hochgeschwindigkeitszüge, Taxis und Museumstickets mit einem einzigen Scan, genau wie Einheimische.
+Alipay ist 2026 für Besucher gut nutzbar, wenn Sie die Einrichtung sauber vorbereiten: App installieren, mit der Heimatnummer registrieren, Reisepass verifizieren, Karte hinterlegen und eine kleine Testzahlung machen. Der alte TourPass ist für die meisten Reisenden nicht mehr nötig. Sobald Alipay läuft, wird China im Alltag deutlich einfacher.

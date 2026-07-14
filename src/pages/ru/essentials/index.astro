@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import CoverImage from '../../../components/CoverImage.astro';
+
+const CATEGORY = 'essentials';
+const posts = (await getCollection('posts'))
+  .filter((p) => p.data.category === CATEGORY)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const title = 'China Trip Planning Guides — Visas, Timing & Essentials';
+const description =
+  'Plan your trip to China with confidence: visas and entry rules, the best time to visit, what to pack, safety, and everything to sort before you fly.';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
+  <Header locale="ru" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Trip Planning</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Trip Planning Guides</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <CoverImage name="hub-essentials" alt="Travel essentials and planning gear for a trip to China" loading="lazy" />
+
+    <AdSlot format="banner" />
+
+    <section class="mt-8 grid gap-6 md:grid-cols-2">
+      {posts.map((post, i) => (
+        <>
+          <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+            <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
+            <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
+            <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">
+              {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+            </time>
+          </a>
+          {(i + 1) % 3 === 0 && <div class="md:col-span-2"><AdSlot format="in-article" /></div>}
+        </>
+      ))}
+      {posts.length === 0 && <p class="text-gray-500">Guides coming soon.</p>}
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

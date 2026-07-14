@@ -1,0 +1,242 @@
+---
+import GuideLayout from '../../../layouts/GuideLayout.astro';
+
+const title = 'The Complete China Digital Nomad Guide (2026)';
+const description =
+  'Everything you need to live and work remotely from China: visa options, payment methods, best cities, internet access, cost of living, and practical tips.';
+const url = '/digital-nomads/';
+const datePublished = '2026-07-09';
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Digital Nomads' },
+];
+
+const toc = [
+  { id: 'overview', label: 'China for Digital Nomads' },
+  { id: 'guides', label: 'Core Guides' },
+  { id: 'internet', label: 'Internet & Remote Work' },
+  { id: 'cost', label: 'Cost of Living by City' },
+  { id: 'english', label: 'English & Livability' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'next', label: 'Next Step: AI Business' },
+];
+
+const faqs = [
+  {
+    question: 'Is China good for digital nomads?',
+    answer:
+      'China is excellent on infrastructure — fast mobile data, cheap high-speed rail, safe cities, near-universal mobile payments, and low day-to-day costs. The trade-offs are the lack of a dedicated nomad visa and the Great Firewall, which blocks many Western work tools unless you plan around it. For nomads who prepare, it is one of the most convenient and affordable bases in Asia.',
+  },
+  {
+    question: 'How much does it cost per month to live in China as a nomad?',
+    answer:
+      'Budget roughly 5,500-8,500 RMB per month in a smaller city like Dali, 7,000-11,000 RMB in a new-first-tier city like Chengdu or Hangzhou, and 12,000-18,000 RMB in central Shanghai or Shenzhen. Rent is the main driver; food, transport, and data are cheap everywhere.',
+  },
+  {
+    question: 'Can you use Google, Gmail, and other Western apps in China?',
+    answer:
+      'On a domestic Chinese connection, Google, Gmail, WhatsApp, Instagram, and many others are blocked. Nomads work around this in two main ways: some international travel eSIMs route traffic through a foreign network so these services load normally, or you arrange your own compliant access before arrival. Always test your critical work tools early.',
+  },
+  {
+    question: 'Is the internet fast enough for remote work in China?',
+    answer:
+      'Yes. Domestic broadband and mobile data are fast and widely available, and video calls to domestic contacts are smooth. The bottleneck is international routing to blocked or overseas services, which can be slower or need a workaround. For work that lives mostly on international platforms, choose your connectivity setup deliberately.',
+  },
+  {
+    question: 'Do people speak English in China?',
+    answer:
+      'In international districts of big cities, enough English exists to get by, and signage on metros and at airports is bilingual. Outside those areas English is limited. Translation apps and the mini-programs inside Alipay and WeChat bridge almost every gap, so you can function well without Mandarin — though a few phrases help a lot.',
+  },
+  {
+    question: 'Is China safe for foreign remote workers?',
+    answer:
+      'Violent crime is rare and cities feel very safe at night by international standards. The main risks are administrative rather than physical: staying within your visa terms, registering your address, and not doing local work you are not authorized for. Handle the paperwork correctly and daily life is comfortable and low-stress.',
+  },
+  {
+    question: 'How long can you stay in China as a nomad?',
+    answer:
+      'On a tourist (L) visa, typically 30-90 days per entry with one possible extension; on a business (M) visa, often 90-180 days per entry over a multi-year validity. There is no visa that permits indefinite casual living. Our visa guide breaks down every option and how to combine them legally.',
+  },
+  {
+    question: "What's the best time of year to base yourself in China?",
+    answer:
+      'Spring (April-May) and autumn (September-October) are the most comfortable nationwide, with mild weather and clear skies. Summers are hot and humid across most of the country; northern winters are cold while the tropical south, like Sanya, is warm. Match your city and season: Sanya in winter, Chengdu or Shanghai in spring and autumn.',
+  },
+  {
+    question: 'Can I run my own business or take clients while in China?',
+    answer:
+      'Working remotely for overseas clients or your own foreign-registered business from China sits in a gray area rather than a clearly permitted one, and doing local work for Chinese clients on a tourist visa is not allowed. If you plan to run a one-person cross-border operation, read our dedicated AI one-person company guide for the compliance boundaries.',
+  },
+  {
+    question: 'Do I need a Chinese bank account?',
+    answer:
+      'Usually not. Alipay and WeChat Pay accept major foreign cards for everyday spending, which covers rent-free daily life for most nomads. A local account only becomes useful if you need to receive RMB domestically or pay certain landlords by bank transfer for a longer lease.',
+  },
+];
+
+const related = [
+  {
+    title: 'China Visa for Digital Nomads (2026)',
+    description: 'Tourist visas, business visas, transit rules, and border runs — every legal way to stay.',
+    href: '/digital-nomads/visa/',
+  },
+  {
+    title: 'How to Pay for Things in China as a Foreigner',
+    description: 'Alipay, WeChat Pay, cash, and foreign cards — set up daily payments and banking.',
+    href: '/digital-nomads/payment/',
+  },
+  {
+    title: "Long-Term Stay in China: A Foreigner's Guide",
+    description: 'Accommodation, monthly costs, and daily life for stays of one to six months.',
+    href: '/long-stay/',
+  },
+];
+---
+
+<GuideLayout
+  title={title}
+  description={description}
+  url={url}
+  datePublished={datePublished}
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  related={related}
+  cover="cover-digital-nomads"
+  coverAlt="A digital nomad working remotely from a cafe in China"
+ locale="zh-TW">
+  <h2 id="overview">China for Digital Nomads: The Honest Picture</h2>
+  <p>
+    China rarely tops the standard digital-nomad listicles, and that is exactly why it rewards the
+    people who look closer. Set against the usual Southeast Asian hubs, it offers something few of
+    them can match: bullet trains that turn a country the size of a continent into a series of
+    afternoon hops, mobile payments so universal you can go weeks without touching cash, food
+    delivery and ride-hailing that are cheap and instant, and streets that feel genuinely safe at
+    2 a.m. For a remote worker who values infrastructure and low friction over a ready-made expat
+    party scene, the day-to-day quality of life is hard to beat.
+  </p>
+  <p>
+    The honest counterweight is two real challenges you must plan around. First, there is no
+    dedicated digital-nomad visa, so staying legally means using tourist or business visas
+    thoughtfully rather than relying on a purpose-built permit. Second, the Great Firewall blocks a
+    large share of the Western tools many remote workers depend on — Google Workspace, WhatsApp,
+    many social platforms — unless your connectivity is set up to route around it. Neither is a
+    dealbreaker, but both reward preparation. Nomads who arrive having sorted their visa and their
+    internet access thrive; those who wing it get frustrated in the first week.
+  </p>
+  <p>
+    This guide is the hub for everything else. It links to deep guides on the two topics that trip
+    people up most — visas and payments — then covers the practical realities of internet, cost of
+    living, and livability that shape where you should base yourself. Whether you are considering a
+    one-month trial or building a longer life here, start with the picture below and follow the
+    links into the detail.
+  </p>
+
+  <h2 id="guides">Core Guides</h2>
+  <p>Three deep guides cover the topics that most affect a nomad's experience in China.</p>
+  <h3>Visa &amp; legal stay</h3>
+  <p>
+    There is no nomad visa, so understanding your options is the single most important thing you
+    can do before booking a flight. Our
+    <a href="/digital-nomads/visa/">China visa guide for digital nomads</a> breaks down tourist
+    visas, business visas, visa-free transit, why the work visa does not fit freelancers, and how
+    border runs actually work in 2026.
+  </p>
+  <h3>Payment &amp; daily banking</h3>
+  <p>
+    Mobile payment is not optional in China — it is how you buy almost everything. Our
+    <a href="/digital-nomads/payment/">payment guide for foreigners</a> covers linking overseas
+    cards to Alipay and WeChat Pay, when you still need cash, transaction limits, and how nomads
+    handle rent, coworking fees, and cross-border money.
+  </p>
+  <h3>Best cities to base</h3>
+  <p>
+    The right city depends on your budget, your tolerance for big-city intensity, and whether you
+    need frequent border access. See the <a href="#cost">cost-of-living comparison</a> below, and
+    dive into individual city guides for
+    <a href="/posts/shanghai-city-guide-for-foreigners/">Shanghai</a>,
+    <a href="/posts/chengdu-city-guide-for-foreigners/">Chengdu</a>,
+    <a href="/posts/hangzhou-city-guide-for-foreigners/">Hangzhou</a>, and
+    <a href="/posts/sanya-city-guide-for-foreigners/">Sanya</a>.
+  </p>
+
+  <h2 id="internet">Internet &amp; Remote Work Environment</h2>
+  <p>
+    China's domestic network is fast, cheap, and everywhere. Fiber broadband reaches even modest
+    apartments, 5G blankets cities, and public transport and cafes offer reliable Wi-Fi. For work
+    that touches domestic Chinese services, you will rarely think about connectivity at all.
+  </p>
+  <p>
+    The complication is international access. Because many Western platforms are blocked on domestic
+    connections, your setup matters. Two approaches dominate: choosing an international eSIM that
+    roams on a foreign network so blocked apps load normally, or arranging compliant access to your
+    work tools before you arrive. Whichever you pick, test your essential stack — email, video
+    calls, file sync, code repositories — in your first day, not the night before a deadline.
+  </p>
+  <p>
+    On the physical side, coworking spaces are well established in first- and new-first-tier cities,
+    with day passes and monthly memberships widely available. In smaller towns like Dali, cafes and
+    a growing number of nomad-oriented spaces fill the gap. If reliable in-person infrastructure
+    matters to you, weight your city choice toward Shanghai, Shenzhen, Chengdu, or Hangzhou.
+  </p>
+
+  <h2 id="cost">Cost of Living by City</h2>
+  <p>
+    Monthly single-person budgets vary widely by city tier. These figures cover rent, food, local
+    transport, and data for a comfortable lifestyle.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>Cities</th>
+        <th>Monthly budget (RMB)</th>
+        <th>Best for</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First tier</td>
+        <td>Shanghai, Shenzhen</td>
+        <td>12,000-18,000</td>
+        <td>Convenience, English, coworking, border access</td>
+      </tr>
+      <tr>
+        <td>New first tier</td>
+        <td>Chengdu, Hangzhou</td>
+        <td>7,000-11,000</td>
+        <td>Balance of cost, amenities, and pace</td>
+      </tr>
+      <tr>
+        <td>Smaller / resort</td>
+        <td>Dali, Sanya</td>
+        <td>5,500-8,500</td>
+        <td>Low cost, lifestyle, community</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="english">English Friendliness &amp; Livability</h2>
+  <p>
+    English coverage tracks city tier and district. In Shanghai's former French Concession or
+    Shenzhen's tech hubs, you can live largely in English; in a Chengdu suburb or a Dali village,
+    far less so. The great equalizer is technology: real-time translation apps and the mini-programs
+    inside Alipay and WeChat handle ordering, transport, appointments, and shopping. Combined with
+    bilingual metro signage and English-capable ride-hailing, a motivated newcomer can function from
+    day one. Livability is high across the board — cheap transport, abundant food delivery, safe
+    streets, and excellent public infrastructure — with air quality and winter cold being the main
+    regional variables to weigh when choosing where to settle.
+  </p>
+
+  <h2 id="next">Next Step: Running an AI Business from China</h2>
+  <p>
+    Some remote workers go a step further than freelancing and run their own lean, one-person
+    operations — increasingly AI-powered, cross-border businesses served entirely from a laptop. That
+    path adds a layer of compliance questions around visas, tax, and whether you need a local entity.
+    If that is your direction, our
+    <a href="/digital-nomads/ai-opc/">guide to running an AI one-person company in China</a> covers
+    the legal boundaries, cross-border payment setup, and infrastructure specific to foreigners
+    operating from within China.
+  </p>
+</GuideLayout>

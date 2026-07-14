@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Terms of Use';
+const description =
+  'Terms for using ChinaTripBox, including informational use, external links, advertising, and limitations of liability.';
+const lastUpdated = 'July 10, 2026';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
+  <Header locale="ko" />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <h1 class="text-3xl font-bold text-gray-900">Terms of Use</h1>
+      <p class="mt-2 text-sm text-gray-500">Last updated: {lastUpdated}</p>
+
+      <p class="mt-4">
+        By using ChinaTripBox, you agree to these Terms of Use. If you do not agree, please do not
+        use this website.
+      </p>
+
+      <h2>Informational Purpose</h2>
+      <p>
+        ChinaTripBox provides general travel information for foreign visitors to China. We work to
+        keep our guides accurate and useful, but information about apps, prices, routes, policies,
+        entry rules, and service availability can change without notice.
+      </p>
+
+      <h2>No Professional Advice</h2>
+      <p>
+        Content on this site is not legal, immigration, financial, medical, tax, security, or
+        emergency advice. You are responsible for confirming official requirements and making your
+        own travel decisions.
+      </p>
+
+      <h2>AI and Travel Help Features</h2>
+      <p>
+        ChinaTripBox may offer AI-assisted or human-backed travel help for practical questions.
+        These features are for general travel support only. AI responses may be inaccurate or
+        incomplete, and human helpers are not official representatives, legal advisors, immigration
+        advisors, medical professionals, financial advisors, banks, telecom providers, airlines, or
+        payment platforms.
+      </p>
+      <p>
+        Do not submit passport photos, bank card numbers, passwords, PINs, one-time verification
+        codes, or other sensitive information. We may refuse, remove, or ignore requests that appear
+        unsafe, unlawful, abusive, or outside the scope of practical travel assistance.
+      </p>
+
+      <h2>External Links</h2>
+      <p>
+        We link to third-party websites, tools, apps, products, and services. We do not control
+        those third parties and are not responsible for their content, pricing, privacy practices,
+        availability, or decisions.
+      </p>
+
+      <h2>Advertising and Affiliate Relationships</h2>
+      <p>
+        ChinaTripBox may display advertisements and may use affiliate links. We may receive
+        compensation if you click an affiliate link or make a purchase through one of those links.
+        This does not increase your cost.
+      </p>
+
+      <h2>Tips and Paid Help</h2>
+      <p>
+        If optional tips, paid requests, or one-on-one help are introduced, payment terms, refund
+        rules, platform fees, and helper responsibilities will be shown before payment. Tips are
+        voluntary unless a paid service is clearly offered and accepted.
+      </p>
+
+      <h2>Acceptable Use</h2>
+      <p>
+        You may use this site for personal, non-commercial travel planning. You may not misuse the
+        site, attempt to disrupt it, scrape it at scale, or republish substantial portions of our
+        content without permission.
+      </p>
+
+      <h2>Limitation of Liability</h2>
+      <p>
+        ChinaTripBox is provided on an "as is" and "as available" basis. To the fullest extent
+        permitted by law, we are not liable for losses or damages arising from your use of the site,
+        reliance on information, travel disruption, service changes, or third-party actions.
+      </p>
+
+      <h2>Changes to These Terms</h2>
+      <p>
+        We may update these Terms of Use from time to time. Continued use of the site after changes
+        are posted means you accept the updated terms.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have questions about these terms, please contact us through our
+        <a href="/contact/">contact page</a>.
+      </p>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

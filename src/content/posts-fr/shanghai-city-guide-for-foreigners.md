@@ -1,75 +1,83 @@
 ---
-title: "Guide de Shanghai pour les étrangers : ce qu'il faut savoir avant de partir"
-description: "Un guide pratique de Shanghai pour les visiteurs étrangers : transports, paiement, connexion, quartiers, nourriture et conseils pour courts voyages comme longs séjours."
+title: "Guide de Shanghai pour voyageurs étrangers en 2026"
+description: "Guide pratique de Shanghai : quartiers où loger, métro, paiement mobile, aéroports, cuisine, excursions, sécurité et conseils pour un premier séjour."
 pubDate: 2026-07-09
 category: essentials
 tags: ["shanghai", "city guide", "china travel", "expat"]
 featured: false
 faqs:
-  - question: "Shanghai est-elle facile pour les étrangers qui ne parlent pas chinois ?"
-    answer: "Shanghai est la grande ville chinoise la plus facile pour les non-sinophones. La signalétique du métro, les annonces en station et l'orientation dans les aéroports sont bilingues, et les quartiers internationaux ont des restaurants et services adaptés à l'anglais. Ailleurs, les applications de traduction et les mini-programmes dans Alipay et WeChat couvrent commandes, transport et achats, donc vous pouvez fonctionner confortablement sans mandarin."
-  - question: "Comment aller des aéroports de Shanghai au centre-ville ?"
-    answer: "Depuis Pudong International, le Maglev plus métro ou un trajet direct en métro rejoint le centre en environ une heure, tandis qu'un taxi prend 45 à 60 minutes selon le trafic. Depuis Hongqiao, le métro rejoint le centre en environ 30 à 40 minutes. Les VTC via DiDi fonctionnent avec une carte étrangère dans les deux aéroports."
-  - question: "Quel est le meilleur moyen de payer à Shanghai ?"
-    answer: "Le paiement mobile domine. Configurez Alipay ou WeChat Pay avec votre carte étrangère avant l'arrivée et vous pourrez payer par QR code presque partout. Gardez quelques centaines de RMB en petites coupures en secours pour les vieux taxis et petits vendeurs. Les cartes étrangères fonctionnent directement surtout dans les hôtels internationaux et centres commerciaux haut de gamme."
-  - question: "Combien de jours faut-il à Shanghai ?"
-    answer: "Trois à quatre jours couvrent les sites principaux : le Bund, un jardin classique, quelques quartiers distincts et une excursion d'une journée. Une semaine permet de prendre le rythme de la ville, d'explorer lentement l'ancienne Concession française et de profiter de l'art contemporain et de la scène culinaire sans se presser."
-  - question: "Shanghai est-elle une bonne base pour un séjour plus long ?"
-    answer: "Oui. Shanghai a la meilleure couverture en anglais, la plus grande communauté expatriée, les services les plus internationaux et d'excellents transports en Chine, ce qui rend l'arrivée et la vie quotidienne simples. Le compromis est le coût de la vie le plus élevé du pays, surtout tiré par le loyer."
-  - question: "Shanghai est-elle sûre pour les touristes ?"
-    answer: "Très. Les crimes violents sont rares et la ville paraît sûre jour et nuit selon les standards internationaux. Les principales précautions sont ordinaires : surveiller les pickpockets dans les sites touristiques bondés, utiliser des taxis officiels ou DiDi, et garder des copies numériques de votre passeport et visa."
+  - question: "Shanghai est-elle facile sans parler chinois ?"
+    answer: "Oui, c'est probablement la grande ville chinoise la plus simple pour les non-sinophones. Métro, aéroports, hôtels internationaux et grands quartiers affichent souvent l'anglais, et les applications comblent le reste."
+  - question: "Comment aller des aéroports au centre ?"
+    answer: "Depuis Pudong, le Maglev puis le métro, ou le métro direct, rejoignent le centre en environ une heure ; un taxi prend souvent 45 à 60 minutes. Depuis Hongqiao, le métro atteint le centre en 30 à 40 minutes."
+  - question: "Comment payer à Shanghai ?"
+    answer: "Alipay et WeChat Pay sont les méthodes les plus pratiques. Associez une carte étrangère avant l'arrivée et gardez quelques RMB en secours. Les cartes étrangères directes passent surtout dans les hôtels internationaux et commerces haut de gamme."
+  - question: "Combien de jours faut-il pour Shanghai ?"
+    answer: "Trois à quatre jours couvrent le Bund, la vieille ville, un ou deux quartiers, Pudong et éventuellement une excursion. Une semaine permet de profiter plus lentement des musées, cafés, restaurants et villes voisines."
+  - question: "Shanghai est-elle une bonne base longue durée ?"
+    answer: "Oui. C'est la ville chinoise la plus internationale, avec beaucoup de services en anglais, de transports, d'écoles, de coworking et de communautés étrangères. Le coût, surtout le logement, est le principal inconvénient."
+  - question: "Shanghai est-elle sûre ?"
+    answer: "Oui, la ville est très sûre par rapport aux standards internationaux. Restez simplement prudent dans les zones très fréquentées, utilisez DiDi ou des taxis officiels et gardez des copies numériques de vos documents."
 cover: "city-shanghai"
-coverAlt: "Skyline de Shanghai et Bund au crépuscule"
+coverAlt: "Skyline de Shanghai et le Bund au crépuscule"
 ---
 
-## Introduction
-
-Shanghai est l'endroit où la plupart des étrangers vivent leur première rencontre la plus fluide avec la Chine. C'est la ville la plus internationale du pays : un lieu où une façade fluviale centenaire d'architecture coloniale fait face à une skyline de tours géantes, et où l'on peut prendre le métro, commander le dîner et tout payer au téléphone en un seul après-midi. Pour les visiteurs, elle offre une arrivée facile ; pour les résidents de plus longue durée, elle offre le plus grand bassin de services internationaux du pays. Ce guide couvre les essentiels pratiques pour les deux cas.
+Shanghai est souvent la porte d'entrée la plus douce pour un premier voyage en Chine. La ville combine métro efficace, signalétique bilingue, quartiers internationaux, paiement mobile omniprésent et une scène culinaire très large. Elle est moins centrée sur les monuments impériaux que Beijing, mais beaucoup plus facile à prendre en main dès le premier jour.
 
 ## Se déplacer
 
-Le métro de Shanghai est l'un des plus vastes et efficaces au monde, entièrement indiqué en anglais, et bon marché. Ajoutez le QR code de transport à Alipay ou WeChat Pay pour entrer directement, ou achetez des tickets unitaires aux machines bilingues. Les trains circulent fréquemment du petit matin jusqu'à environ 22 h 30-23 h.
+Le métro est rapide, propre, dense et bien indiqué en anglais. Ajoutez le QR code transport dans Alipay ou WeChat Pay pour entrer sans acheter de ticket à chaque trajet, ou utilisez les machines bilingues. La plupart des lignes s'arrêtent vers 22 h 30 à 23 h, donc prévoyez DiDi pour les retours tardifs.
 
-Pour les trajets porte à porte, DiDi (l'application chinoise de VTC) fonctionne avec une carte étrangère associée et vous évite d'expliquer les directions en chinois. Les taxis de rue sont nombreux et au compteur ; gardez de petites espèces pour les vieux véhicules sans lecteur QR. La ville est aussi plate et de plus en plus adaptée au vélo, avec des vélos partagés déverrouillables via des mini-programmes.
+DiDi fonctionne bien avec une carte liée et évite d'expliquer une adresse oralement. Les taxis officiels sont nombreux. Shanghai est aussi relativement plate : dans certains quartiers, les vélos partagés et la marche sont agréables.
 
-## Où séjourner : quartiers
+## Où loger
 
-- **Le Bund et People's Square :** central, iconique et bien connecté, idéal pour une première visite avec les grands sites à pied.
-- **Ancienne Concession française :** rues arborées et basses pleines de cafés, boutiques et restaurants ; le quartier préféré de beaucoup d'étrangers en long séjour pour son atmosphère.
-- **Jing'an :** soigné et central, avec centres commerciaux, bureaux et accès métro facile ; pratique pour les voyageurs d'affaires.
-- **Pudong (Lujiazui) :** quartier financier moderne de gratte-ciel ; superbes vues, ambiance plus corporate.
+- **Bund / People's Square :** central, iconique, très pratique pour une première visite.
+- **Former French Concession :** rues arborées, cafés, boutiques, restaurants ; excellent pour marcher.
+- **Jing'an :** central, pratique, malls, bureaux et bons accès métro.
+- **Pudong / Lujiazui :** skyline moderne, hôtels haut de gamme, ambiance plus business.
+- **Hongqiao :** pratique pour certains voyages d'affaires ou trains, moins touristique.
 
-## Argent et connexion
+Pour trois ou quatre jours, Bund, People's Square, Jing'an ou French Concession sont les plus faciles.
 
-Configurez le paiement mobile avant d'arriver : c'est la préparation la plus utile pour Shanghai. Alipay et WeChat Pay acceptent désormais les principales cartes étrangères, et le paiement QR est accepté pratiquement partout. Nos guides plus larges sur le paiement et la connexion vont plus loin, mais la version courte est : associez une carte, gardez un peu d'espèces et prenez une eSIM pour être en ligne dès l'atterrissage.
+## Paiement, Internet et arrivée
+
+Préparez Alipay ou WeChat Pay avant le vol. Shanghai accepte très largement les QR codes, même pour de petites dépenses. Les cartes étrangères physiques restent utiles dans les hôtels internationaux et restaurants haut de gamme, mais ne doivent pas être votre seul plan.
+
+Installez aussi une eSIM ou activez un roaming utilisable dès l'aéroport. Vous aurez besoin d'Internet pour le métro, DiDi, la traduction, les cartes et les confirmations d'hôtel.
+
+Shanghai a deux grands aéroports. **Pudong** est plus éloigné et sert beaucoup de vols internationaux. **Hongqiao** est plus proche du centre et connecté à une grande gare. Vérifiez bien l'aéroport ou la gare avant de réserver l'hôtel.
+
+## À voir
+
+- **Le Bund :** promenade classique face aux tours de Pudong.
+- **Lujiazui :** skyline, tours, vues en hauteur et grands malls.
+- **Yu Garden et vieille ville :** architecture traditionnelle, ruelles commerciales, foule importante.
+- **Former French Concession :** balades, cafés, restaurants, petites boutiques.
+- **Musées et galeries :** People's Square, West Bund et plusieurs espaces d'art contemporain.
+- **Nanjing Road :** axe commercial très fréquenté, utile mais pas indispensable pour tout le monde.
+
+Shanghai se vit bien par quartiers. Laissez du temps pour marcher, entrer dans un café, prendre le métro et changer de rythme.
 
 ## Nourriture
 
-La scène culinaire de Shanghai va des xiaolongbao et petits-déjeuners de rue à l'un des paysages de fine dining et restaurants internationaux les plus ambitieux d'Asie. Les spécialités locales sont légèrement sucrées par rapport à d'autres régions. Commander est facile : beaucoup de lieux ont des menus avec photos ou en anglais, et les applications de livraison permettent de commander à l'hôtel avec paiement et traduction intégrés.
+La ville est connue pour les xiaolongbao, les petits-déjeuners de rue, les plats légèrement sucrés de la cuisine locale et une scène internationale très développée. Les restaurants avec menus photo ou anglais sont plus courants qu'ailleurs en Chine. Les applications de livraison permettent aussi de commander à l'hôtel si vous avez configuré le paiement.
 
-## Excursions d'une journée
+## Excursions
 
-Shanghai est la porte d'entrée des villes d'eau du delta du Yangzi : Zhujiajiao est la plus proche, accessible en métro et bus, et le train à grande vitesse place Hangzhou et Suzhou à environ une heure, ce qui en fait des excursions faciles ou des extensions d'une nuit.
+Shanghai est une excellente base pour le delta du Yangtsé. Suzhou et Hangzhou sont accessibles en train à grande vitesse, souvent autour d'une heure selon le train. Zhujiajiao donne un aperçu de ville d'eau sans gros déplacement. Pour une première visite courte, une seule excursion suffit.
 
-## Idéal pour
+## Itinéraire conseillé
 
-Shanghai est la meilleure ville chinoise pour les voyageurs qui veulent une arrivée en douceur. Elle est idéale pour les primo-visiteurs, voyageurs d'affaires, familles et toute personne anxieuse face à la barrière linguistique, car métro, aéroports, hôtels, centres commerciaux et de nombreux restaurants sont plus faciles à utiliser que dans la plupart des autres villes. C'est aussi la base la plus forte pour les longs séjours si vous voulez écoles internationales, espaces de coworking, services familiers et grande communauté étrangère.
+Pour **3 jours**, commencez par Bund, Nanjing Road, People's Square et une vue de Pudong le soir. Le deuxième jour, explorez la Former French Concession, Xintiandi et un musée ou une galerie. Le troisième jour, combinez Yu Garden, vieille ville et Lujiazui, ou remplacez par Zhujiajiao si vous voulez une ambiance de ville d'eau.
 
-Le compromis est que Shanghai peut paraître moins traditionnellement chinoise en surface que Pékin, Xi'an ou Chengdu. La ville récompense les promenades de quartier, la nourriture, les galeries, les cafés et les excursions plus qu'une checklist de monuments anciens. Si vous voulez l'histoire impériale, combinez-la avec Pékin ; si vous voulez paysages et culture du thé, ajoutez Hangzhou en train à grande vitesse.
+Avec **5 à 7 jours**, ajoutez West Bund, Jing'an, une journée à Hangzhou ou Suzhou, plus du temps libre pour cafés, restaurants et balades.
 
-## Itinéraire suggéré
+## Conseils pratiques
 
-Pour un **voyage de trois jours à Shanghai**, commencez par le Bund, Nanjing Road, People's Square et une vue nocturne sur la skyline. Consacrez le deuxième jour à l'ancienne Concession française, Xintiandi, un musée ou une galerie, et une réservation de dîner. Passez le troisième jour au jardin Yu, dans la vieille ville et aux tours de Lujiazui à Pudong, ou faites une demi-journée à Zhujiajiao si vous voulez une ambiance de ville d'eau sans quitter le réseau métro.
+Le printemps et l'automne sont les saisons les plus confortables. L'été est chaud et humide ; l'hiver est humide et froid. En cas de pluie, Shanghai se prête bien aux musées, malls, cafés et restaurants.
 
-Avec **cinq à sept jours**, ajoutez du temps lent dans les quartiers : temples et centres commerciaux de Jing'an, musées de West Bund, vélo au bord du fleuve, cafés dans l'ancienne Concession française et excursion en train à grande vitesse à Hangzhou ou Suzhou. Shanghai fonctionne particulièrement bien quand vous évitez de surprogrammer et laissez la ville servir de base confortable.
-
-## Notes pratiques de préparation
-
-Shanghai a deux aéroports. Pudong est la principale porte internationale et se situe loin à l'est du centre ; Hongqiao est plus proche du centre et intégré à une grande gare. Vérifiez quel aéroport ou gare vous utilisez avant de réserver hôtels ou transferts, car traverser la ville peut prendre plus longtemps que prévu.
-
-Le métro est généralement le moyen le plus rapide de traverser la ville, mais les retours tard le soir demandent souvent DiDi car beaucoup de lignes s'arrêtent vers 22 h 30-23 h. Pour les paiements, Shanghai est l'un des endroits les plus faciles pour compter sur Alipay ou WeChat Pay, même si l'acceptation directe des cartes étrangères reste surtout limitée aux hôtels, boutiques de luxe et certains restaurants internationaux.
-
-La météo change l'expérience. Les étés sont chauds et humides, les hivers humides et froids, et le printemps ou l'automne sont les plus confortables. Si la pluie est prévue, gardez des plans de musées, centres commerciaux, cafés et restaurants au lieu de forcer de longues marches en extérieur le long du fleuve.
+La ville est très sûre, mais les foules autour du Bund, de Nanjing Road ou de Yu Garden demandent une vigilance normale. Gardez vos documents en sécurité et des copies numériques accessibles hors ligne.
 
 ## À lire ensuite
 
@@ -79,7 +87,6 @@ La météo change l'expérience. Les étés sont chauds et humides, les hivers h
 
 ## Résumé
 
-Shanghai combine une vraie commodité pour les étrangers avec des transports, une cuisine et une culture de classe mondiale. Pour un court voyage, c'est une introduction sans friction à la Chine urbaine ; pour un séjour plus long, c'est la base d'arrivée la plus confortable du pays, à condition d'être préparé au coût de la vie.
+Shanghai est la ville chinoise la plus simple pour atterrir, comprendre le système et prendre confiance. Elle combine transports efficaces, paiement mobile facile, quartiers internationaux, nourriture variée et bonnes excursions. Pour l'histoire impériale, ajoutez Beijing ; pour une première arrivée fluide, Shanghai est difficile à battre.
 
-> **Vous préparez un séjour plus long à Shanghai ?** Consultez notre [guide de long séjour](/long-stay/) et notre [guide digital nomad](/digital-nomads/) pour les voyages prolongés, couvrant visas, coûts mensuels, logement et travail à distance depuis la ville.
-
+> **Planning a longer stay in Shanghai?** Check out our [long-term living guide](/long-stay/) and [digital nomad guide](/digital-nomads/) for extended trips, covering visas, monthly costs, accommodation, and working remotely from the city.

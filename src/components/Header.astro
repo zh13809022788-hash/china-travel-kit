@@ -8,7 +8,20 @@ export interface Props {
   alternates?: Partial<Record<LocaleCode, string>>;
 }
 
-const { locale = 'en', alternates } = Astro.props;
+const { locale: propLocale = 'en', alternates } = Astro.props;
+
+// Auto-detect locale from URL path (like Footer does) — ensures header always matches URL
+const urlPath = Astro.url.pathname;
+const detectedLocale: LocaleCode = urlPath.startsWith('/zh-tw/') ? 'zh-TW'
+  : urlPath.startsWith('/ja/') ? 'ja'
+  : urlPath.startsWith('/ko/') ? 'ko'
+  : urlPath.startsWith('/ru/') ? 'ru'
+  : urlPath.startsWith('/fr/') ? 'fr'
+  : urlPath.startsWith('/de/') ? 'de'
+  : urlPath.startsWith('/es/') ? 'es'
+  : 'en';
+// Use prop if explicitly set, otherwise fall back to URL detection
+const locale: LocaleCode = propLocale !== 'en' ? propLocale : detectedLocale;
 
 // Multilingual nav label map
 const navLabels: Record<string, Record<string, string>> = {
@@ -33,6 +46,14 @@ const t = (key: string) => navLabels[key]?.[locale] ?? key;
 
 const localePrefixes: Record<string, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
 
+// localePath: prepend locale prefix to a path so nav links stay in the selected language
+const localePath = (href: string) => {
+  if (locale === 'en') return href;
+  const prefix = localePrefixes[locale];
+  if (href === '/') return prefix;
+  return prefix + href.replace(/^\//, '');
+};
+
 const navLinks = [
   { href: '/', label: t('Home') },
   { href: '/resources/', label: t('Plan Your Trip') },
@@ -54,8 +75,13 @@ const secondaryLinks = [
   { href: '/about/', label: t('About') },
 ];
 const pathname = Astro.url.pathname;
-const isActive = (href: string) =>
-  href === '/' ? pathname === '/' : pathname.startsWith(href);
+const isActive = (href: string) => {
+  if (href === '/') {
+    return pathname === '/' || Object.values(localePrefixes).includes(pathname);
+  }
+  // Check both the plain path and the locale-prefixed path
+  return pathname.startsWith(href) || pathname.startsWith(localePath(href));
+};
 
 const isHome = pathname === '/' || Object.values(localePrefixes).includes(pathname);
 const homePath = localePrefixes[locale] ?? '/';
@@ -82,7 +108,7 @@ const getPath = (key: LocaleCode) => {
       {navLinks.map((link) => (
         <li>
           <a
-            href={link.href}
+            href={localePath(link.href)}
             class:list={[
               'text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline',
               isActive(link.href) ? 'text-brand-600' : 'text-gray-700',
@@ -131,7 +157,7 @@ const getPath = (key: LocaleCode) => {
       {[...navLinks, ...secondaryLinks].map((link) => (
         <li>
           <a
-            href={link.href}
+            href={localePath(link.href)}
             class:list={[
               'block py-2.5 text-sm font-medium hover:no-underline',
               isActive(link.href) ? 'text-brand-600' : 'text-gray-700',

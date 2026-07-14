@@ -1,132 +1,103 @@
 ---
-title: "eSIM en China vs roaming 2026: el coste real de 10 días"
-description: "Un desglose concreto de precios de 2026 entre eSIM y roaming de operador para un viaje de 10 días a China, con cifras reales, advertencias sobre el firewall y qué opción ahorra de verdad."
+title: "eSIM o roaming en China en 2026: coste real para un viaje de 10 días"
+description: "Comparativa práctica entre comprar una eSIM para China o usar roaming internacional: costes, acceso a apps bloqueadas, datos necesarios y recomendaciones."
 pubDate: 2026-07-08
 category: esim
 tags: ["china esim", "roaming cost", "travel esim", "china travel", "2026"]
+cover: "topic-esim-vs-roaming"
+coverAlt: "Comparison of eSIM and roaming data plans on two smartphones"
+
 featured: false
 faqs:
-  - question: "¿Es más barato el roaming o una eSIM para un viaje de 10 días a China?"
-    answer: "Una eSIM casi siempre es más barata: una buena eSIM de China para 10 días cuesta aproximadamente 15-35 dólares, mientras que los pases diarios de roaming de operadores estadounidenses rondan los 12 dólares al día, unos 120 dólares para el mismo viaje."
-  - question: "¿Una eSIM de China evita el Gran Cortafuegos?"
-    answer: "Depende de cómo enrute el tráfico la eSIM; los planes que enrutan por Hong Kong o una pasarela extranjera suelen evitar el firewall, mientras que las eSIM que funcionan en una red china puramente doméstica están sujetas a los mismos bloqueos que una SIM local."
-  - question: "¿El roaming de mi operador me dejará usar Google y WhatsApp en China?"
-    answer: "Normalmente sí, porque los datos en roaming se tunelizan de vuelta a tu red de origen, así que sitios bloqueados como Google, WhatsApp e Instagram suelen funcionar sin VPN, una ventaja real del roaming."
-  - question: "¿Necesito una VPN si uso una eSIM en China?"
-    answer: "Si tu eSIM enruta internacionalmente, a menudo no la necesitarás, pero llevar una VPN reputada instalada antes de llegar es un buen seguro, porque las tiendas de apps y sitios de descarga de VPN son difíciles de alcanzar una vez dentro de China."
-  - question: "¿Cuántos datos necesito para 10 días en China?"
-    answer: "La mayoría de viajeros usa de 500 MB a 1 GB al día para mapas, mensajería, traducción y apps de transporte, así que un plan de 10 días en el rango de 5-15 GB cubre el uso típico con margen para alguna videollamada."
-  - question: "¿Puedo mantener activo mi número mientras uso una eSIM de China?"
-    answer: "Sí, en un teléfono dual SIM puedes mantener tu SIM física activa para llamadas y SMS en tu número de casa mientras la eSIM gestiona los datos, aunque deberías desactivar el roaming de datos en la SIM física para evitar cargos sorpresa."
+  - question: "¿Es más barato roaming o eSIM para 10 días en China?"
+    answer: "Casi siempre la eSIM. Un buen plan de 10 días suele costar unos 15-35 USD, mientras que muchos pases diarios de roaming rondan los 10-12 USD al día, es decir, cerca de 100-120 USD por diez días."
+  - question: "¿Una eSIM para China evita el Gran Cortafuegos?"
+    answer: "Depende del enrutamiento. Los planes que salen por Hong Kong u otra pasarela internacional suelen evitar muchos bloqueos; los que usan una red local china se comportan como una SIM nacional."
+  - question: "¿El roaming de mi operador permite usar Google o WhatsApp?"
+    answer: "Normalmente sí, porque el tráfico suele volver a la red de tu país. Esa es una ventaja real del roaming frente a una eSIM barata con enrutamiento local."
+  - question: "¿Necesito VPN si uso eSIM?"
+    answer: "Si la eSIM enruta internacionalmente, a menudo no. Aun así, llevar una VPN instalada antes de llegar puede servir como respaldo, porque descargarla dentro de China puede ser difícil."
+  - question: "¿Cuántos datos necesito para 10 días?"
+    answer: "Muchos viajeros consumen entre 500 MB y 1 GB al día para mapas, mensajería, traducción y transporte. Un plan de 5-15 GB suele cubrir diez días con margen razonable."
+  - question: "¿Puedo conservar mi número habitual con una eSIM?"
+    answer: "Sí, si tu móvil admite doble SIM. Deja tu SIM principal activa para llamadas o SMS y usa la eSIM para datos, pero desactiva el roaming de datos de la línea principal para evitar cargos."
 ---
 
-## La respuesta corta
+Para un viaje de diez días por China, la eSIM suele ganar por precio. Un plan decente para mapas, mensajería, traducción y DiDi cuesta alrededor de **15-35 USD**. Un pase diario de roaming internacional, en cambio, suele moverse cerca de **10-12 USD por día**, lo que deja la factura en **100-120 USD**.
 
-Para un viaje de 10 días a China en 2026, una **eSIM gana por precio con mucha diferencia**. Una buena eSIM de viaje con datos suficientes para mapas, mensajería y apps de transporte cuesta entre **15 y 35 dólares** para todo el viaje. Activar el roaming internacional de tu operador habitual, en cambio, suele costar **10-12 dólares al día**, lo que acaba en unos **100-120 dólares** por los mismos diez días.
+La comparación no termina ahí. El roaming tiene una ventaja: muchas veces permite abrir Google, WhatsApp, Gmail o Instagram sin configuración extra, porque el tráfico se enruta por tu operador de origen. Una eSIM barata que use una red local china puede no hacerlo.
 
-Lo único que el roaming te compra y una eSIM barata quizá no: acceso automático a sitios bloqueados. Como los datos en roaming vuelven a tu red de origen, Google Maps, WhatsApp, Gmail e Instagram suelen funcionar sin VPN. Ese es el intercambio real, y por eso esta comparación no trata solo del importe.
-
-Mi recomendación breve: compra una eSIM para China que indique explícitamente que enruta por Hong Kong o una pasarela internacional. Obtienes acceso desbloqueado tipo roaming **y** el precio bajo de una eSIM.
+La recomendación práctica: compra una eSIM para China que diga claramente que enruta por Hong Kong o por una pasarela internacional. Así combinas precio bajo con acceso parecido al roaming.
 
 <!-- AFFILIATE_ESIM -->
 
-## Desglose completo
+## Costes Típicos Para 10 Días
 
-Pongamos cifras una junto a otra para un viaje de 10 días. Los precios siguientes son rangos típicos de 2026; revisa siempre las tarifas actuales de tu propio operador, porque cambian.
+### Roaming diario
 
-### Roaming de operador (pases de pago por día)
+| Operador o país | Coste aproximado en China | Total 10 días |
+|---|---:|---:|
+| Verizon TravelPass | ~12 USD/día | ~120 USD |
+| AT&T International Day Pass | ~12 USD/día | ~120 USD |
+| T-Mobile | incluido pero lento, o pase de alta velocidad | 0 USD lento o ~35-50 USD |
+| EE Reino Unido | ~6 GBP/día | ~60 GBP |
+| Vodafone Reino Unido/UE | varía según zona | ~6-8 GBP/día |
 
-| Operador (país de origen) | Coste de roaming en China | Total 10 días |
-|---|---|---|
-| Verizon TravelPass (EE. UU.) | ~$12/día | ~$120 |
-| AT&T International Day Pass (EE. UU.) | ~$12/día | ~$120 |
-| T-Mobile (EE. UU.) | Incluido pero limitado (~256 kbps), o pase de alta velocidad pagado | $0 lento, o ~$35-50 por un pase de datos |
-| EE (Reino Unido) | ~£6/día como extra | ~£60 (~$75) |
-| Vodafone (Reino Unido/UE) | Varía; China suele estar fuera de zonas incluidas | ~£6-8/día |
+El roaming es cómodo: no instalas nada y conservas tu número. El problema es que los días se acumulan rápido, y muchos planes "ilimitados" reducen velocidad después de cierto consumo.
 
-Los pases diarios son cómodos porque reflejan tu plan de casa, y en muchos solo te cobran los días en que realmente usas datos. Pero se acumulan rápido, y "ilimitado" suele tener un límite blando o reducción de velocidad tras cierto umbral.
+### eSIM de viaje
 
-### eSIM de viaje (paquetes de datos)
+| Tamaño del plan | Precio típico | Para quién encaja |
+|---|---:|---|
+| 3 GB / 15-30 días | ~8-12 USD | Uso ligero y Wi-Fi frecuente |
+| 5 GB / 30 días | ~12-18 USD | Mapas y mensajes diarios |
+| 10 GB / 30 días | ~18-28 USD | Uso cómodo, algo de vídeo |
+| 20 GB o ilimitado | ~30-45 USD | Videollamadas o hotspot |
 
-| Tamaño del plan | Precio típico | Bueno para |
-|---|---|---|
-| 3GB / 15-30 días | ~$8-12 | Usuarios ligeros, mucho Wi-Fi |
-| 5GB / 30 días | ~$12-18 | Mapas + mensajería diaria |
-| 10GB / 30 días | ~$18-28 | Mapas intensivos, algo de streaming |
-| 20GB o "ilimitado" | ~$30-45 | Videollamadas, compartir internet |
+Para diez días, el punto equilibrado suele ser **5-10 GB**. Si vas a subir muchas fotos, hacer videollamadas o compartir internet, sube de categoría.
 
-Para la mayoría de viajeros, un **plan de 5GB a 10GB es el punto dulce** para diez días. Eso equivale a unos 500 MB-1 GB por día, suficiente para navegación, traducción, DiDi, WeChat y copias de fotos.
+## El Detalle Que Decide Todo: El Enrutamiento
 
-### La cuenta aproximada
+En China no basta con preguntar "¿tiene datos?". Pregunta **por dónde salen esos datos**:
 
-- **eSIM, 10GB:** alrededor de **$22**
-- **Roaming, 10 días a $12/día:** alrededor de **$120**
+- eSIM con ruta por **Hong Kong o pasarela internacional**: muchas apps extranjeras funcionan sin VPN.
+- eSIM o SIM local de **red china doméstica**: sujeta a bloqueos habituales.
+- **Roaming del operador de casa**: normalmente evita los bloqueos porque el tráfico vuelve a tu país.
 
-Eso es más de **5 veces de diferencia**. Incluso las opciones de roaming más baratas rara vez superan a una eSIM de gama media cuando pasas de unos pocos días.
+Antes de comprar, busca frases como "no VPN needed", "works with Google" o "routes via Hong Kong". Si el proveedor no lo explica, ten una VPN instalada como seguro.
 
-## A qué prestar atención
+## Ejemplo Realista
 
-China añade complicaciones que no verás en la mayoría de destinos. Algunas cosas importan más que el precio.
+Imagina dos personas: Shanghai cuatro días, Beijing cuatro días y Xi'an dos días. Cada una usa mapas, traducción, WeChat, WhatsApp, DiDi, correo y alguna videollamada. El consumo moderado puede quedar en **700-900 MB diarios** por persona, es decir, unos **7-9 GB** en diez días.
 
-**El Gran Cortafuegos.** Este es el punto grande. Google (Maps, Gmail, Search), WhatsApp, Instagram, Facebook, X y la mayoría de apps occidentales están bloqueados en redes domésticas chinas. Lo que decide si te afecta es **cómo se enrutan tus datos**, no solo la marca de la eSIM:
+Opción con roaming caro:
 
-- Las eSIM que enrutan por **Hong Kong o una pasarela extranjera** suelen evitar el firewall. Tus apps funcionan con normalidad.
-- Las eSIM (o SIM físicas) en una **red china puramente doméstica** sufren los mismos bloqueos que un usuario local. Necesitarías una VPN.
-- El **roaming de tu operador de casa** casi siempre evita el firewall, porque tu tráfico vuelve primero a casa.
+- 12 USD x 10 días x 2 teléfonos = **240 USD**
+- Ventaja: cero configuración, apps extranjeras normalmente funcionan.
+- Desventaja: precio alto.
 
-Antes de comprar, busca en la página del producto frases como "no VPN needed" o "routes via Hong Kong". Si es imprecisa, asume que querrás una VPN de respaldo.
+Opción con eSIM de 10 GB bien enrutada:
 
-**Instala tu VPN antes de aterrizar.** Los sitios de descarga de VPN y sus listados en tiendas de apps son difíciles de alcanzar dentro de China. Configúrala en casa, inicia sesión y confirma que conecta. Es un seguro barato incluso si tu eSIM afirma evitar bloqueos.
+- 22 USD x 2 teléfonos = **44 USD**
+- Ventaja: gran ahorro y apps habituales accesibles.
+- Desventaja: suele ser solo datos; mantén tu SIM normal para SMS.
 
-**Solo datos vs. llamadas y SMS.** La mayoría de eSIM de viaje son solo de datos. No obtendrás un número chino y no podrás recibir un SMS estándar en la línea eSIM. Eso importa si un servicio de casa te envía un código de verificación. Mantén activa tu SIM física para esos SMS, pero **apaga su roaming de datos** para no pagar dos veces.
+La diferencia puede acercarse a 200 USD en un solo viaje.
 
-**Códigos de verificación y apps locales.** Alipay y WeChat Pay ya funcionan bien con tarjetas extranjeras, y una conexión de datos basta para usarlos. Pero algunas apps chinas piden un número local para registrarte. Planifica alrededor de eso si dependes de un servicio específico.
+## Cosas Que No Debes Pasar Por Alto
 
-**Letra pequeña de "ilimitado".** Tanto los pases de roaming como las eSIM adoran la palabra ilimitado. Busca el **punto de reducción por uso razonable** (a menudo después de 1-3 GB/día) donde la velocidad cae mucho.
+- La mayoría de eSIM turísticas son **solo datos**: no tendrás número chino.
+- Mantén tu SIM principal activa si necesitas SMS bancarios, pero apaga su roaming de datos.
+- Instala cualquier VPN antes de llegar.
+- Revisa la política de "ilimitado": muchas reducen velocidad tras 1-3 GB diarios.
+- Si viajas a zonas remotas, mira qué red usa la eSIM: China Mobile, China Unicom o China Telecom.
 
-**Cobertura y redes.** Las eSIM en China suelen funcionar sobre China Mobile, China Unicom o China Telecom. La cobertura es excelente en ciudades y líneas ferroviarias. Si vas a regiones occidentales remotas, revisa qué red específica usa la eSIM.
-
-## Ejemplo real
-
-Un caso concreto: vuelas a Shanghai, pasas cuatro días allí, tomas el tren a Beijing cuatro días y luego dos días en Xi'an. Diez días en total, dos viajeros con el mismo itinerario pero cada uno en su teléfono.
-
-**Para qué usarás datos realmente:**
-
-1. Mapas e indicaciones a pie, todo el día
-2. Apps de traducción (la traducción con cámara consume algo más)
-3. DiDi para moverte
-4. WeChat y WhatsApp para mensajería
-5. Subir fotos, revisar correo, alguna videollamada a casa
-
-Ese patrón promedia unos **700-900 MB al día** por persona para un usuario moderado. En diez días, llámalo **7-9 GB**. Una eSIM de 10 GB lo cubre con margen.
-
-**Opción A: ambos viajeros con Verizon TravelPass:**
-
-- $12/día x 10 días x 2 teléfonos = **$240**
-- Pro: sin configuración, apps bloqueadas funcionan, mantiene tu número normal
-- Contra: la ruta más cara con diferencia
-
-**Opción B: ambos viajeros con una eSIM de 10 GB enrutada por Hong Kong:**
-
-- ~$22 x 2 = **$44**
-- Pro: enorme ahorro, apps desbloqueadas, fácil de instalar antes del vuelo
-- Contra: solo datos, así que mantienes tu SIM de casa para SMS
-
-**Opción C: mixta:**
-
-- Un teléfono con eSIM ($22) como hotspot principal y el otro conectado a él
-- Total: **~$22**, si un plan de 10 GB aguanta el uso compartido de dos personas (justo pero posible para usuarios ligeros)
-
-La diferencia entre la Opción A y la B es casi **$200** en un solo viaje. Eso ya paga bastantes dumplings y pato pekinés.
-
-## Cierre
-
-Para 10 días en China, una eSIM es la opción de mejor valor: alrededor de $15-35 frente a más de $100 por roaming, y a menudo con el mismo acceso desbloqueado si eliges un plan que enruta internacionalmente. La única ventaja real del roaming es la configuración cero y el acceso garantizado a apps bloqueadas, algo que una eSIM bien elegida ya iguala.
-
-Compra una eSIM de China de 5-10 GB que mencione enrutamiento por Hong Kong o "no VPN needed", instala una VPN antes de volar como respaldo y mantén tu SIM física activa (datos apagados) para los SMS que envían tus servicios de casa. Haz eso y gastarás menos, seguirás conectado y evitarás la resaca de la factura de roaming al volver.
-
-## Leer después
+## Leer Después
 
 - [best eSIM for China travel](/posts/best-esim-for-china-travel-2026/)
 - [Pocket WiFi vs eSIM vs SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
 - [internet access in China](/posts/internet-access-china-apps-that-work-2026/)
+
+## Resumen
+
+Para diez días en China, una eSIM bien elegida suele ser la mejor compra: cuesta mucho menos que el roaming y puede ofrecer acceso similar a apps extranjeras si enruta internacionalmente. El roaming sigue siendo la opción de menor fricción, pero se paga caro. Compra una eSIM de 5-10 GB con ruta clara por Hong Kong o pasarela internacional, instala un respaldo antes de volar y conserva tu SIM principal solo para llamadas o SMS.
