@@ -4,61 +4,71 @@ import LanguageSwitcher from './LanguageSwitcher.astro';
 type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
 
 const year = new Date().getFullYear();
-
-// Detect current locale from URL path — MUST be before legalLinks/footerLabels
 const pathname = Astro.url.pathname;
-const currentLocale: LocaleCode = pathname.startsWith('/zh-tw/') ? 'zh-TW'
-  : pathname.startsWith('/ja/') ? 'ja'
-  : pathname.startsWith('/ko/') ? 'ko'
-  : pathname.startsWith('/ru/') ? 'ru'
-  : pathname.startsWith('/fr/') ? 'fr'
-  : pathname.startsWith('/de/') ? 'de'
-  : pathname.startsWith('/es/') ? 'es'
-  : 'en';
 
-// Multilingual label map
-const footerLabels: Record<string, Record<string, string>> = {
-  'Travel Help':          { en:'Travel Help', 'zh-TW':String.raw`旅遊幫助`, ja: String.raw`旅行ヘルプ`, ko: String.raw`여행 도움말`, ru:String.raw`Помощь в поездке`, fr:String.raw`Aide voyage`, de:String.raw`Reisehilfe`, es:String.raw`Ayuda de viaje` },
-  'Resources':            { en:'Resources', 'zh-TW':String.raw`資源`, ja:String.raw`リソース`, ko:String.raw`자료`, ru:String.raw`Ресурсы`, fr:String.raw`Ressources`, de:String.raw`Ressourcen`, es:String.raw`Recursos` },
-  'About':                { en:'About', 'zh-TW':String.raw`關於`, ja:String.raw`概要`, ko:String.raw`소개`, ru:String.raw`О нас`, fr:String.raw`À propos`, de:String.raw`Über uns`, es:String.raw`Acerca de` },
-  'Contact':              { en:'Contact', 'zh-TW':String.raw`聯繫`, ja:String.raw`お問い合わせ`, ko:String.raw`문의`, ru:String.raw`Контакты`, fr:String.raw`Contact`, de:String.raw`Kontakt`, es:String.raw`Contacto` },
-  'Editorial Policy':     { en:'Editorial Policy', 'zh-TW':String.raw`編輯政策`, ja:String.raw`編集方針`, ko:String.raw`편집 정책`, ru:String.raw`Редакционная политика`, fr:String.raw`Politique editeuriale`, de:String.raw`Redaktionsrichtlinie`, es:String.raw`Politica editorial` },
-  'Affiliate Disclosure': { en:'Affiliate Disclosure', 'zh-TW':String.raw`聯盟披露`, ja:String.raw`アフィリエイト開示`, ko:String.raw`제휴 공개`, ru:String.raw`Партнёрское раскрытие`, fr:String.raw`Divulgation affiliation`, de:String.raw`Partner-Offenlegung`, es:String.raw`Divulgacion de afiliados` },
-  'Privacy Policy':       { en:'Privacy Policy', 'zh-TW':String.raw`隱私政策`, ja:String.raw`プライバシーポリシー`, ko:String.raw`개인정보처리방침`, ru:String.raw`Политика конфиденциальности`, fr:String.raw`Politique de confidentialite`, de:String.raw`Datenschutz`, es:String.raw`Politica de privacidad` },
-  'Terms':                { en:'Terms', 'zh-TW':String.raw`條款`, ja:String.raw`利用規約`, ko:String.raw`이용약관`, ru:String.raw`Условия`, fr:String.raw`Conditions`, de:String.raw`AGB`, es:String.raw`Terminos` },
-  'All rights reserved':  { en:'All rights reserved.', 'zh-TW':String.raw`版權所有。`, ja:String.raw`無断転載を禁じます`, ko:String.raw`모든 권리 보유`, ru:String.raw`Все права защищены`, fr:String.raw`Tous droits reserves`, de:String.raw`Alle Rechte vorbehalten`, es:String.raw`Todos los derechos reservados` },
+const localePrefixMap: Record<LocaleCode, string> = {
+  en: '/',
+  'zh-TW': '/zh-tw/',
+  ja: '/ja/',
+  ko: '/ko/',
+  ru: '/ru/',
+  fr: '/fr/',
+  de: '/de/',
+  es: '/es/',
 };
+
+const currentLocale: LocaleCode = pathname.startsWith('/zh-tw/')
+  ? 'zh-TW'
+  : pathname.startsWith('/ja/')
+    ? 'ja'
+    : pathname.startsWith('/ko/')
+      ? 'ko'
+      : pathname.startsWith('/ru/')
+        ? 'ru'
+        : pathname.startsWith('/fr/')
+          ? 'fr'
+          : pathname.startsWith('/de/')
+            ? 'de'
+            : pathname.startsWith('/es/')
+              ? 'es'
+              : 'en';
+
+const footerLabels: Record<string, Record<LocaleCode, string>> = {
+  'Travel Help': { en: 'Travel Help', 'zh-TW': '旅行幫助', ja: '旅行ヘルプ', ko: '여행 도움말', ru: 'Помощь в поездке', fr: 'Aide voyage', de: 'Reisehilfe', es: 'Ayuda de viaje' },
+  Resources: { en: 'Resources', 'zh-TW': '資源', ja: 'リソース', ko: '자료', ru: 'Ресурсы', fr: 'Ressources', de: 'Ressourcen', es: 'Recursos' },
+  About: { en: 'About', 'zh-TW': '關於', ja: '概要', ko: '소개', ru: 'О нас', fr: 'À propos', de: 'Über uns', es: 'Acerca de' },
+  Contact: { en: 'Contact', 'zh-TW': '聯絡', ja: 'お問い合わせ', ko: '문의', ru: 'Контакты', fr: 'Contact', de: 'Kontakt', es: 'Contacto' },
+  'Editorial Policy': { en: 'Editorial Policy', 'zh-TW': '編輯政策', ja: '編集方針', ko: '편집 정책', ru: 'Редакционная политика', fr: 'Politique éditoriale', de: 'Redaktionsrichtlinie', es: 'Política editorial' },
+  'Affiliate Disclosure': { en: 'Affiliate Disclosure', 'zh-TW': '聯盟揭露', ja: 'アフィリエイト開示', ko: '제휴 고지', ru: 'Партнёрское раскрытие', fr: 'Divulgation affiliation', de: 'Partner-Offenlegung', es: 'Divulgación de afiliados' },
+  'Privacy Policy': { en: 'Privacy Policy', 'zh-TW': '隱私政策', ja: 'プライバシーポリシー', ko: '개인정보 처리방침', ru: 'Политика конфиденциальности', fr: 'Politique de confidentialité', de: 'Datenschutz', es: 'Política de privacidad' },
+  Terms: { en: 'Terms', 'zh-TW': '條款', ja: '利用規約', ko: '이용약관', ru: 'Условия', fr: 'Conditions', de: 'AGB', es: 'Términos' },
+  'All rights reserved': { en: 'All rights reserved.', 'zh-TW': '版權所有。', ja: '無断転載を禁じます。', ko: '모든 권리 보유.', ru: 'Все права защищены.', fr: 'Tous droits réservés.', de: 'Alle Rechte vorbehalten.', es: 'Todos los derechos reservados.' },
+};
+
+const footerDesc: Record<LocaleCode, string> = {
+  en: 'ChinaTripBox is an independent China travel planning site for foreign visitors. We publish practical guides, tools, and optional human-reviewed trip help. Some links may earn us a commission.',
+  'zh-TW': 'ChinaTripBox 是面向外國旅客的獨立中國旅行規劃網站，提供實用指南、工具，以及可選的人工作業協助。部分連結可能為我們帶來佣金。',
+  ja: 'ChinaTripBox は外国人旅行者向けの独立した中国旅行計画サイトです。実用的なガイド、ツール、必要に応じた人による旅行サポートを提供しています。一部のリンクから手数料を得る場合があります。',
+  ko: 'ChinaTripBox는 외국인 방문객을 위한 독립 중국 여행 계획 사이트입니다. 실용 가이드, 도구, 선택형 여행 지원을 제공합니다. 일부 링크를 통해 수수료를 받을 수 있습니다.',
+  ru: 'ChinaTripBox — независимый сайт планирования поездок в Китай для иностранных гостей. Мы публикуем практические гиды, инструменты и дополнительную помощь по поездке. Некоторые ссылки могут приносить нам комиссию.',
+  fr: 'ChinaTripBox est un site indépendant de planification de voyages en Chine pour les visiteurs étrangers. Nous publions des guides pratiques, des outils et une aide optionnelle. Certains liens peuvent nous rapporter une commission.',
+  de: 'ChinaTripBox ist eine unabhängige China-Reiseplanungsseite für ausländische Besucher. Wir veröffentlichen praktische Reiseführer, Werkzeuge und optionale Reisehilfe. Einige Links können Provisionen enthalten.',
+  es: 'ChinaTripBox es un sitio independiente de planificación de viajes a China para visitantes extranjeros. Publicamos guías prácticas, herramientas y ayuda opcional. Algunos enlaces pueden generarnos una comisión.',
+};
+
+const disclaimer: Record<LocaleCode, string> = {
+  en: 'We provide general travel information only, not legal, immigration, medical, banking, emergency, or official government advice.',
+  'zh-TW': '我們僅提供一般旅行資訊，不構成法律、移民、醫療、銀行、緊急或官方政府建議。',
+  ja: '当サイトは一般的な旅行情報のみを提供し、法律、入国管理、医療、銀行、緊急対応、政府公式の助言ではありません。',
+  ko: '본 사이트는 일반 여행 정보만 제공하며 법률, 출입국, 의료, 금융, 긴급 상황 또는 정부 공식 조언이 아닙니다.',
+  ru: 'Мы предоставляем только общую туристическую информацию, а не юридические, иммиграционные, медицинские, банковские, экстренные или официальные государственные консультации.',
+  fr: 'Nous fournissons uniquement des informations générales de voyage, pas des conseils juridiques, d’immigration, médicaux, bancaires, d’urgence ou officiels.',
+  de: 'Wir bieten nur allgemeine Reiseinformationen, keine rechtliche, einwanderungsbezogene, medizinische, bankbezogene, Notfall- oder amtliche Beratung.',
+  es: 'Proporcionamos solo información general de viajes, no asesoramiento legal, migratorio, médico, bancario, de emergencia ni gubernamental oficial.',
+};
+
 const ft = (key: string) => footerLabels[key]?.[currentLocale] ?? key;
 
-// Footer description text per locale
-const footerDesc: Record<string, string> = {
-  en: "ChinaTripBox is an independent China travel planning site for foreign visitors. We publish practical guides, tools, and optional human-reviewed trip help. Some links may earn us a commission.",
-  'zh-TW': "ChinaTripBox 是為外國旅客提供的中國旅遊規劃獨立網站。我們提供實用指南、工具以及可選的人工審閱旅行協助。部分連結可能為我們帶來佣金。",
-  ja: "ChinaTripBoxは外国人旅行者のための中国旅行計画サイトです。実用的なガイド、ツール、オプションの旅行サポートを提供しています。一部のリンクは手数料を得る場合があります。",
-  ko: "ChinaTripBox는 외국인 여행자를 위한 독립 중국 여행 계획 사이트입니다. 실용적인 가이드, 도구 및 선택적 여행 도움말을 제공합니다. 일부 링크는 수수료를 받을 수 있습니다.",
-  ru: "ChinaTripBox — независимый сайт планирования поездок в Китай для иностранных посетителей. Мы публикуем практические руководства, инструменты и помощь в поездках. Некоторые ссылки могут приносить нам комиссию.",
-  fr: "ChinaTripBox est un site indépendant de planification de voyages en Chine pour les visiteurs étrangers. Nous publions des guides pratiques, des outils et une aide optionnelle. Certains liens peuvent nous rapporter une commission.",
-  de: "ChinaTripBox ist eine unabhängige China-Reiseplanungsseite für ausländische Besucher. Wir veröffentlichen praktische Reiseführer, Werkzeuge und optionale Reisehilfe. Einige Links können Provisionen enthalten.",
-  es: "ChinaTripBox es un sitio independiente de planificación de viajes a China para visitantes extranjeros. Publicamos guías prácticas, herramientas y ayuda opcional. Algunos enlaces pueden generarnos una comisión.",
-};
-const fd = (key: 'desc' | 'disclaimer') => {
-  const t: Record<string, Record<string, string>> = {
-    desc: footerDesc,
-    disclaimer: {
-      en: "We provide general travel information only, not legal, immigration, medical, banking, emergency, or official government advice.",
-      'zh-TW': "我們僅提供一般旅遊資訊，不構成法律、移民、醫療、銀行、緊急情況或官方政府建議。",
-      ja: "当サイトは一般的な旅行情報のみを提供しており、法的、入国管理、医療、銀行、緊急、または公的な政府アドバイスを提供するものではありません。",
-      ko: "당사는 일반 여행 정보만 제공하며 법률, 이민, 의료, 은행, 비상 또는 공식 정부 조언을 제공하지 않습니다.",
-      ru: "Мы предоставляем только общую туристическую информацию, а не юридические, иммиграционные, медицинские, банковские, экстренные или официальные государственные консультации.",
-      fr: "Nous fournissons uniquement des informations générales de voyage, pas des conseils juridiques, d'immigration, médicaux, bancaires, d'urgence ou officiels.",
-      de: "Wir bieten nur allgemeine Reiseinformationen, keine rechtliche, einwanderungsbezogene, medizinische, bankbezogene, Notfall- oder amtliche Beratung.",
-      es: "Proporcionamos solo información general de viajes, no asesoramiento legal, migratorio, médico, bancario, de emergencia o gubernamental oficial.",
-    },
-  };
-  return t[key]?.[currentLocale] ?? t[key]?.en ?? '';
-};
-
-const localePrefixMap: Record<string, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
 const footerLocalePath = (href: string) => {
   if (currentLocale === 'en') return href;
   const prefix = localePrefixMap[currentLocale];
@@ -77,32 +87,29 @@ const legalLinks = [
   { href: footerLocalePath('/terms/'), label: ft('Terms') },
 ];
 
-// Build alternate paths for the same page in other languages
-const localePrefixes: [LocaleCode, string][] = [
-  ['zh-TW', '/zh-tw/'], ['ja', '/ja/'], ['ko', '/ko/'],
-  ['ru', '/ru/'], ['fr', '/fr/'], ['de', '/de/'], ['es', '/es/'],
-];
-
-function swapLocale(path: string, to: LocaleCode): string {
-  // Strip current locale prefix
+const swapLocale = (path: string, to: LocaleCode) => {
   let base = path;
-  for (const [code, prefix] of localePrefixes) {
-    if (base.startsWith(prefix)) { base = base.slice(prefix.length); break; }
+  for (const prefix of Object.values(localePrefixMap).filter((p) => p !== '/')) {
+    if (base.startsWith(prefix)) {
+      base = base.slice(prefix.length - 1);
+      break;
+    }
   }
-  // Remove any leading slash to avoid double-slash like /de//data/
-  base = base.replace(/^\//, '');
-  if (to === 'en') return '/' + base;
-  const prefixMap: Record<string, string> = { 'zh-TW':'zh-tw', ja:'ja', ko:'ko', ru:'ru', fr:'fr', de:'de', es:'es' };
-  return '/' + (prefixMap[to] ?? to) + '/' + base;
-}
+  if (to === 'en') return base || '/';
+  const prefix = localePrefixMap[to].replace(/\/$/, '');
+  return base === '/' ? `${prefix}/` : `${prefix}${base}`;
+};
 
-const allLocales: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
-const buildPath = (lc: LocaleCode) => lc === currentLocale ? undefined : swapLocale(pathname, lc);
-
-const paths: Record<string, string | undefined> = {};
-for (const lc of allLocales) {
-  paths[lc] = buildPath(lc);
-}
+const paths = {
+  en: currentLocale === 'en' ? undefined : swapLocale(pathname, 'en'),
+  'zh-TW': currentLocale === 'zh-TW' ? undefined : swapLocale(pathname, 'zh-TW'),
+  ja: currentLocale === 'ja' ? undefined : swapLocale(pathname, 'ja'),
+  ko: currentLocale === 'ko' ? undefined : swapLocale(pathname, 'ko'),
+  ru: currentLocale === 'ru' ? undefined : swapLocale(pathname, 'ru'),
+  fr: currentLocale === 'fr' ? undefined : swapLocale(pathname, 'fr'),
+  de: currentLocale === 'de' ? undefined : swapLocale(pathname, 'de'),
+  es: currentLocale === 'es' ? undefined : swapLocale(pathname, 'es'),
+};
 ---
 
 <footer class="mt-auto border-t border-gray-200 bg-gray-50">
@@ -113,8 +120,8 @@ for (const lc of allLocales) {
           <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand-600 text-sm text-white">CT</span>
           ChinaTripBox
         </div>
-        <p class="mt-2 max-w-xl text-sm leading-6 text-gray-500">{fd('desc')}</p>
-        <p class="mt-2 max-w-xl text-xs leading-5 text-gray-500">{fd('disclaimer')}</p>
+        <p class="mt-2 max-w-xl text-sm leading-6 text-gray-500">{footerDesc[currentLocale]}</p>
+        <p class="mt-2 max-w-xl text-xs leading-5 text-gray-500">{disclaimer[currentLocale]}</p>
       </div>
       <ul class="flex flex-wrap gap-5">
         {legalLinks.map((link) => (
@@ -124,7 +131,7 @@ for (const lc of allLocales) {
         ))}
       </ul>
     </div>
-    <div class="mt-8 border-t border-gray-200 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div class="mt-8 flex flex-col gap-4 border-t border-gray-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
       <span class="text-sm text-gray-500">&copy; {year} ChinaTripBox. {ft('All rights reserved')}</span>
       <LanguageSwitcher
         currentLocale={currentLocale}

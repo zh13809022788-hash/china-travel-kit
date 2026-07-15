@@ -1,13 +1,18 @@
-"""Generate ALL missing locale hub pages for every nav-relevant route.
+"""Generate ALL locale hub pages for every nav-relevant route.
 
 Handles two source patterns:
 1. Single-file pages: src/pages/X.astro  ->  src/pages/{locale}/X.astro
 2. Directory-index:   src/pages/X/index.astro  ->  src/pages/{locale}/X/index.astro
+
+Locale pages must stay in their own language route. This script adjusts article
+collections, date formatting, and internal links so generated copies do not send
+users back to English pages.
 """
 
 import os, re
+from pathlib import Path
 
-PROJECT_ROOT = r'D:\独立站\china-travel-kit'
+PROJECT_ROOT = str(Path(__file__).resolve().parents[1])
 PAGES_DIR = os.path.join(PROJECT_ROOT, 'src', 'pages')
 
 LOCALES = [
@@ -19,6 +24,25 @@ LOCALES = [
     ('de', 'de'),
     ('es', 'es'),
 ]
+
+LOCALE_META = {
+    'zh-tw': {'collection': 'posts-zh-tw', 'date': 'zh-TW'},
+    'ja': {'collection': 'posts-ja', 'date': 'ja-JP'},
+    'ko': {'collection': 'posts-ko', 'date': 'ko-KR'},
+    'ru': {'collection': 'posts-ru', 'date': 'ru-RU'},
+    'fr': {'collection': 'posts-fr', 'date': 'fr-FR'},
+    'de': {'collection': 'posts-de', 'date': 'de-DE'},
+    'es': {'collection': 'posts-es', 'date': 'es-ES'},
+}
+
+INTERNAL_ROOTS = (
+    'posts', 'tools', 'cities', 'payment', 'esim', 'transport', 'food',
+    'trip-planner', 'resources', 'apps', 'essentials', 'long-stay',
+    'digital-nomads', 'travel-help', 'about', 'contact', 'privacy', 'terms',
+    'editorial-policy', 'affiliate-disclosure', 'series',
+)
+
+LOCALE_DIR_RE = r'(?:zh-tw|ja|ko|ru|fr|de|es)'
 
 # Single-file pages: (filename)
 SINGLE_FILE_PAGES = [
@@ -102,6 +126,32 @@ def add_locale_props(content, locale_code):
     return content
 
 
+def localize_generated_content(content, locale_dir):
+    """Keep generated locale pages wired to their matching language."""
+    meta = LOCALE_META[locale_dir]
+    collection = meta['collection']
+    date_locale = meta['date']
+    roots = '|'.join(re.escape(root) for root in INTERNAL_ROOTS)
+
+    content = content.replace("getCollection('posts')", f"getCollection('{collection}')")
+    content = content.replace("toLocaleDateString('en-US'", f"toLocaleDateString('{date_locale}'")
+    content = content.replace('href={`/posts/', f'href={{`/{locale_dir}/posts/')
+    content = content.replace('href={`/tools/', f'href={{`/{locale_dir}/tools/')
+    content = content.replace('href={`/digital-nomads/', f'href={{`/{locale_dir}/digital-nomads/')
+
+    content = re.sub(
+        rf'href="/(?!{LOCALE_DIR_RE}/)({roots})/',
+        rf'href="/{locale_dir}/\1/',
+        content,
+    )
+    content = re.sub(
+        rf"(href|next|guide): '/(?!{LOCALE_DIR_RE}/)({roots})/",
+        rf"\1: '/{locale_dir}/\2/",
+        content,
+    )
+    return content
+
+
 def generate():
     count = 0
     for locale_dir, locale_code in LOCALES:
@@ -120,6 +170,7 @@ def generate():
 
             content = adjust_imports_single(content)
             content = add_locale_props(content, locale_code)
+            content = localize_generated_content(content, locale_dir)
 
             dst = os.path.join(locale_pages_dir, fname)
             with open(dst, 'w', encoding='utf-8') as f:
@@ -140,6 +191,7 @@ def generate():
 
             content = adjust_imports_dir(content)
             content = add_locale_props(content, locale_code)
+            content = localize_generated_content(content, locale_dir)
 
             dst_dir = os.path.join(locale_pages_dir, dirname)
             os.makedirs(dst_dir, exist_ok=True)

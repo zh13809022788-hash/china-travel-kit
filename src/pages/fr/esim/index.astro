@@ -7,11 +7,11 @@ import AdSlot from '../../../components/AdSlot.astro';
 import CoverImage from '../../../components/CoverImage.astro';
 
 const CATEGORY = 'esim';
-const posts = (await getCollection('posts'))
+const posts = (await getCollection('posts-fr'))
   .filter((p) => p.data.category === CATEGORY)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'China eSIM & Data Guides — Stay Online on Arrival';
+const title = 'eSIM et données en Chine : rester connecté à l’arrivée';
 const description =
   'Compare and set up the best eSIM data plans for travel in China. Get connected the moment you land, no physical SIM swap required.';
 
@@ -31,9 +31,9 @@ const connectionChoices = [
 ];
 
 const internetTools = [
-  { href: '/tools/esim-comparison/', title: 'eSIM plan comparator', desc: 'Compare travel data plans, validity, and expected use cases.' },
-  { href: '/tools/app-availability-checker/', title: 'App availability checker', desc: 'Check whether common apps work in China and what alternatives to prepare.' },
-  { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access guide', desc: 'Understand app access, VPN expectations, and practical setup before arrival.' },
+  { href: '/fr/tools/esim-comparison/', title: 'eSIM plan comparator', desc: 'Compare travel data plans, validity, and expected use cases.' },
+  { href: '/fr/tools/app-availability-checker/', title: 'App availability checker', desc: 'Check whether common apps work in China and what alternatives to prepare.' },
+  { href: '/fr/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access guide', desc: 'Understand app access, VPN expectations, and practical setup before arrival.' },
 ];
 ---
 
@@ -51,20 +51,20 @@ const internetTools = [
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-esim">
-      <h2 id="featured-esim" class="sr-only">Featured internet guides</h2>
-      <a href="/posts/best-esim-for-china-travel-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+      <h2 id="featured-esim" class="sr-only">Guides internet à lire</h2>
+      <a href="/fr/posts/best-esim-for-china-travel-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">Best eSIM 2026</span>
         <p class="mt-1 text-xs leading-5 text-gray-600">Compare Airalo, Holafly, Nomad for China travel</p>
       </a>
-      <a href="/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+      <a href="/fr/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">eSIM vs Roaming</span>
         <p class="mt-1 text-xs leading-5 text-gray-600">Real 10-day cost comparison for tourists</p>
       </a>
-      <a href="/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+      <a href="/fr/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">VPN Guide 2026</span>
         <p class="mt-1 text-xs leading-5 text-gray-600">Do tourists still need a VPN in China?</p>
       </a>
-      <a href="/posts/pocket-wifi-vs-esim-vs-sim-china/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+      <a href="/fr/posts/pocket-wifi-vs-esim-vs-sim-china/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">Pocket WiFi vs eSIM</span>
         <p class="mt-1 text-xs leading-5 text-gray-600">Compare all connectivity options</p>
       </a>
@@ -102,18 +102,18 @@ const internetTools = [
     <section class="mt-8 grid gap-6 md:grid-cols-2">
       {posts.map((post, i) => (
         <>
-          <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+          <a href={`/fr/posts/${post.slug}/`} class="card block hover:no-underline">
             <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">
-              {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              {post.data.pubDate.toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' })}
             </time>
           </a>
           {(i + 1) % 3 === 0 && <div class="md:col-span-2"><AdSlot format="in-article" /></div>}
         </>
       ))}
-      {posts.length === 0 && <p class="text-gray-500">Guides coming soon.</p>}
+      {posts.length === 0 && <p class="text-gray-500">Guides bientôt disponibles.</p>}
     </section>
   </main>
   <Footer />

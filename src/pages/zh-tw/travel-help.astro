@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -15,9 +15,9 @@ const quickPrompts = [
 ];
 
 const supportAreas = [
-  'Payment setup: Alipay, WeChat Pay, cards, fees, and cash backup',
+  '付款 setup: Alipay, WeChat Pay, cards, fees, and cash backup',
   'Connectivity: eSIMs, roaming, VPN-sensitive apps, and airport arrival data',
-  'Transport: airport routes, metro, DiDi, taxis, and high-speed rail basics',
+  '交通: airport routes, metro, DiDi, taxis, and high-speed rail basics',
   'App use: translation, food delivery, maps, ride-hailing, and screenshots',
   'Trip setup: first-day checklist, city-specific prep, and practical next steps',
   'Human escalation: complex cases that need back-and-forth context',
@@ -47,7 +47,7 @@ const safetyRules = [
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
             <a href="#travel-help-chat" class="btn-primary">Start a request</a>
-            <a href="/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">Use pre-trip checklist</a>
+            <a href="/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">Use pre-trip checklist</a>
             <a href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Travel%20Help%20Request" class="btn-outline">
               Email directly
             </a>
@@ -71,7 +71,7 @@ const safetyRules = [
               <dd class="font-semibold text-gray-900">AI + email follow-up</dd>
             </div>
             <div class="flex items-center justify-between gap-4">
-              <dt class="text-gray-500">Payment</dt>
+              <dt class="text-gray-500">付款</dt>
               <dd class="font-semibold text-gray-900">Not active</dd>
             </div>
           </dl>
@@ -142,9 +142,9 @@ const safetyRules = [
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
                   Main topic
                   <select id="help-topic" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                    <option>Payment apps</option>
+                    <option>付款 apps</option>
                     <option>Internet and eSIM</option>
-                    <option>Transport route</option>
+                    <option>交通 route</option>
                     <option>Food, delivery, or local apps</option>
                     <option>General trip setup</option>
                   </select>
@@ -229,11 +229,11 @@ const safetyRules = [
         <p class="section-kicker">Self-service first</p>
         <h2 class="mt-2 text-2xl font-bold text-gray-950">Guides that answer common first-trip questions</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
-          <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+          <a href="/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
             <h3 class="font-bold text-gray-950">First-time China trip planner</h3>
             <p class="mt-2 text-sm leading-6 text-gray-600">Use this when you are still arranging payment, data, transport, and your first arrival day.</p>
           </a>
-          <a href="/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+          <a href="/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
             <h3 class="font-bold text-gray-950">Pre-departure setup checklist</h3>
             <p class="mt-2 text-sm leading-6 text-gray-600">Check Alipay, WeChat Pay, eSIM, DiDi, train tickets, translation, addresses, and cash backup before you fly.</p>
           </a>
@@ -256,14 +256,14 @@ const safetyRules = [
   const submitButton = document.getElementById('help-submit') as HTMLButtonElement | null;
 
   const guideLinks: Record<string, { label: string; href: string }> = {
-    'Payment apps': { label: 'payment setup guide', href: '/payment/' },
-    'Internet and eSIM': { label: 'eSIM guide', href: '/esim/' },
-    'Transport route': { label: 'transport guide', href: '/transport/' },
+    '付款 apps': { label: 'payment setup guide', href: '/zh-tw/payment/' },
+    'Internet and eSIM': { label: 'eSIM guide', href: '/zh-tw/esim/' },
+    '交通 route': { label: 'transport guide', href: '/zh-tw/transport/' },
     'Food, delivery, or local apps': {
       label: 'food delivery guide',
-      href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+      href: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     },
-    'General trip setup': { label: 'tools page', href: '/tools/' },
+    'General trip setup': { label: 'tools page', href: '/zh-tw/tools/' },
   };
 
   const escapeHtml = (value: string) =>

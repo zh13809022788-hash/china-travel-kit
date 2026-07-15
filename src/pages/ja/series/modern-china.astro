@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
 const seriesSlug = 'modern-china';
-const posts = (await getCollection('posts'))
+const posts = (await getCollection('posts-ja'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -14,21 +14,21 @@ const title = 'Modern China — What Surprises Foreigners Most';
 const description = 'Discover modern China as a foreign traveler: cashless society, the world\'s fastest trains, megacity navigation, super apps, overnight trains, and the tech that defines everyday life.';
 
 const relatedTools = [
-  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Mobile payment setup for tourists' },
-  { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'High-speed rail guide', desc: 'Riding China\'s bullet trains' },
-  { href: '/posts/best-esim-for-china-travel-2026/', title: 'Best eSIM for China', desc: 'Stay connected on arrival' },
+  { href: '/ja/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Mobile payment setup for tourists' },
+  { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: 'High-speed rail guide', desc: 'Riding China\'s bullet trains' },
+  { href: '/ja/posts/best-esim-for-china-travel-2026/', title: 'Best eSIM for China', desc: 'Stay connected on arrival' },
 ];
 
 const relatedCities = [
-  { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'China\'s financial megacity' },
-  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Ancient capital meets modern hub' },
-  { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Shanghai metro', desc: 'Navigating a mega transit system' },
+  { href: '/ja/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'China\'s financial megacity' },
+  { href: '/ja/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Ancient capital meets modern hub' },
+  { href: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Shanghai metro', desc: 'Navigating a mega transit system' },
 ];
 
 const otherSeries = [
-  { href: '/series/food-of-china/', title: 'Food of China' },
-  { href: '/series/history-of-china/', title: 'History of China' },
-  { href: '/series/culture-of-china/', title: 'Culture of China' },
+  { href: '/ja/series/food-of-china/', title: 'Food of China' },
+  { href: '/ja/series/history-of-china/', title: 'History of China' },
+  { href: '/ja/series/culture-of-china/', title: 'Culture of China' },
 ];
 ---
 
@@ -54,7 +54,7 @@ const otherSeries = [
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/ja/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>

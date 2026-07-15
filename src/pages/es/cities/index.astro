@@ -7,13 +7,13 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const allPosts = await getCollection('posts');
+const allPosts = await getCollection('posts-es');
 const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
 const cityPosts = allPosts
   .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-const title = 'China City Guides for Foreign Visitors';
+const title = 'Guías de ciudades chinas para visitantes extranjeros';
 const description =
   'Plan practical city stops in China with guides for Beijing, Shanghai, Guangzhou, Chengdu, Xi\'an, Hangzhou, Chongqing, and Sanya, plus airport, metro, food, and transport next steps.';
 
@@ -35,90 +35,90 @@ const mapCities = [
 const cities = [
   {
     name: 'Beijing',
-    href: '/posts/beijing-city-guide-for-foreigners/',
+    href: '/es/posts/beijing-city-guide-for-foreigners/',
     desc: 'Best for history, hutongs, the Great Wall, and first-time classic sightseeing.',
     days: '4-5 days',
     bestSeason: 'September-October',
     difficulty: 'Medium',
     whyGo: 'Imperial history, museums, and the easiest Great Wall access.',
-    next: '/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
+    next: '/es/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
     nextLabel: 'Daxing airport transfer guide',
   },
   {
     name: 'Shanghai',
-    href: '/posts/shanghai-city-guide-for-foreigners/',
+    href: '/es/posts/shanghai-city-guide-for-foreigners/',
     desc: 'Best for an easy landing, international food, skyline walks, and strong metro coverage.',
     days: '3-4 days',
     bestSeason: 'March-May, October-November',
     difficulty: 'Easy',
     whyGo: 'The smoothest first stop for metro, airports, food, and English-friendly services.',
-    next: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
+    next: '/es/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
     nextLabel: 'Shanghai metro guide',
   },
   {
     name: 'Chengdu',
-    href: '/posts/chengdu-city-guide-for-foreigners/',
+    href: '/es/posts/chengdu-city-guide-for-foreigners/',
     desc: 'Best for Sichuan food, teahouse pace, pandas, and a softer big-city rhythm.',
     days: '3-5 days',
     bestSeason: 'March-June, September-November',
     difficulty: 'Medium',
     whyGo: 'Pandas, Sichuan food, teahouses, lower costs, and western China side trips.',
-    next: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
+    next: '/es/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
     nextLabel: 'Chengdu street-food guide',
   },
   {
     name: 'Xi\'an',
-    href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
+    href: '/es/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
     desc: 'Best for ancient history, the Terracotta Warriors, old city walls, and hands-on Chinese heritage.',
     days: '3-4 days',
     bestSeason: 'March-May, September-November',
     difficulty: 'Medium',
     whyGo: 'Terracotta Warriors, ancient city wall, Muslim Quarter food street, and a deep sense of Chinese history.',
-    next: '/posts/china-high-speed-rail-guide-foreigners/',
+    next: '/es/posts/china-high-speed-rail-guide-foreigners/',
     nextLabel: 'High-speed rail to Xi\'an',
   },
   {
     name: 'Guangzhou',
-    href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
+    href: '/es/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
     desc: 'Best for Cantonese food, trade city energy, southern gateway, and easy Hong Kong access.',
     days: '3-4 days',
     bestSeason: 'October-December, March-April',
     difficulty: 'Medium',
     whyGo: 'Cantonese dim sum, Chen Clan Academy, Canton Tower, and a warmer southern alternative to Beijing and Shanghai.',
-    next: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+    next: '/es/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     nextLabel: 'Cantonese food guide',
   },
   {
     name: 'Chongqing',
-    href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+    href: '/es/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     desc: 'Best for Sichuan hotpot, futuristic skyline, mountain-city terrain, and Yangtze River cruises.',
     days: '3-4 days',
     bestSeason: 'March-May, September-November',
     difficulty: 'Hard',
     whyGo: 'Chongqing hotpot, Hongya Cave, night skyline, Yangtze cable car, and a uniquely vertical city layout.',
-    next: '/food/',
+    next: '/es/food/',
     nextLabel: 'Chongqing food guide',
   },
   {
     name: 'Hangzhou',
-    href: '/posts/hangzhou-city-guide-for-foreigners/',
+    href: '/es/posts/hangzhou-city-guide-for-foreigners/',
     desc: 'Best for West Lake, green scenery, weekend pacing, and a polished city break.',
     days: '2-3 days',
     bestSeason: 'March-May, September-November',
     difficulty: 'Easy-medium',
     whyGo: 'West Lake, tea villages, temples, and a calm high-speed rail add-on from Shanghai.',
-    next: '/transport/',
+    next: '/es/transport/',
     nextLabel: 'Plan trains and local transport',
   },
   {
     name: 'Sanya',
-    href: '/posts/sanya-city-guide-for-foreigners/',
+    href: '/es/posts/sanya-city-guide-for-foreigners/',
     desc: 'Best for warm winter weather, resort stays, beach time, and Hainan side trips.',
     days: '3-7 days',
     bestSeason: 'November-April',
     difficulty: 'Medium',
     whyGo: 'China beach time, winter sun, seafood, resorts, and longer seasonal stays.',
-    next: '/posts/what-to-pack-for-china-a-season-by-season-checklist/',
+    next: '/es/posts/what-to-pack-for-china-a-season-by-season-checklist/',
     nextLabel: 'Seasonal packing guide',
   },
 ];
@@ -177,7 +177,7 @@ const faqJsonLd = {
   <Header locale="es" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">City planning</p>
+      <p class="section-kicker">Planificación de ciudades</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -282,7 +282,7 @@ const faqJsonLd = {
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {cityPosts.map((post) => (
-            <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+            <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
@@ -295,10 +295,10 @@ const faqJsonLd = {
         <p class="section-kicker">Before choosing a city</p>
         <h2 class="mt-1 text-xl font-bold text-gray-950">Check the logistics stack</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-          <li><a href="/payment/" class="font-semibold text-brand-700">Payments:</a> set up Alipay, WeChat Pay, and cash backup before smaller-city travel.</li>
-          <li><a href="/esim/" class="font-semibold text-brand-700">Internet:</a> choose eSIM, roaming, or local SIM before relying on maps and translation.</li>
-          <li><a href="/transport/" class="font-semibold text-brand-700">Transport:</a> compare trains, airport transfers, DiDi, and metro QR codes.</li>
-          <li><a href="/tools/best-time-to-visit/" class="font-semibold text-brand-700">Timing:</a> check weather, holidays, and crowd pressure by month.</li>
+          <li><a href="/es/payment/" class="font-semibold text-brand-700">Pagoss:</a> set up Alipay, WeChat Pay, and cash backup before smaller-city travel.</li>
+          <li><a href="/es/esim/" class="font-semibold text-brand-700">Internet:</a> choose eSIM, roaming, or local SIM before relying on maps and translation.</li>
+          <li><a href="/es/transport/" class="font-semibold text-brand-700">Transporte:</a> compare trains, airport transfers, DiDi, and metro QR codes.</li>
+          <li><a href="/es/tools/best-time-to-visit/" class="font-semibold text-brand-700">Timing:</a> check weather, holidays, and crowd pressure by month.</li>
         </ul>
       </aside>
     </section>

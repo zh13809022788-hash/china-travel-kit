@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
 const seriesSlug = 'culture-of-china';
-const posts = (await getCollection('posts'))
+const posts = (await getCollection('posts-zh-tw'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -14,21 +14,21 @@ const title = 'Culture of China — Traditions & Customs for Travelers';
 const description = 'Explore Chinese culture as a foreign traveler: tea ceremony, Spring Festival, face and guanxi, calligraphy, kung fu, the zodiac, and the traditions that shape daily life in China.';
 
 const relatedTools = [
-  { href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Tipping & etiquette', desc: 'When to tip, when not to, and why' },
-  { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing for festivals', desc: 'What to bring during holiday seasons' },
-  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Payments during festival season' },
+  { href: '/zh-tw/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Tipping & etiquette', desc: 'When to tip, when not to, and why' },
+  { href: '/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing for festivals', desc: 'What to bring during holiday seasons' },
+  { href: '/zh-tw/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: '付款s during festival season' },
 ];
 
 const relatedCities = [
-  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Imperial culture and hutong life' },
-  { href: '/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Tea culture and West Lake heritage' },
-  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Teahouse culture and slow living' },
+  { href: '/zh-tw/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Imperial culture and hutong life' },
+  { href: '/zh-tw/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Tea culture and West Lake heritage' },
+  { href: '/zh-tw/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Teahouse culture and slow living' },
 ];
 
 const otherSeries = [
-  { href: '/series/food-of-china/', title: 'Food of China' },
-  { href: '/series/history-of-china/', title: 'History of China' },
-  { href: '/series/modern-china/', title: 'Modern China' },
+  { href: '/zh-tw/series/food-of-china/', title: 'Food of China' },
+  { href: '/zh-tw/series/history-of-china/', title: 'History of China' },
+  { href: '/zh-tw/series/modern-china/', title: 'Modern China' },
 ];
 ---
 
@@ -54,7 +54,7 @@ const otherSeries = [
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/zh-tw/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>

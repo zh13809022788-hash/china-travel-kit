@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,7 +7,7 @@ import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 import FaqSection from '../../../components/FaqSection.astro';
 
-const title = 'Payment Card Compatibility Checker for China';
+const title = 'Pagos Card Compatibility Checker for China';
 const description =
   'Check whether your credit card works with Alipay and WeChat Pay in China. See support status, limits, fees, and how to set up by nationality and card network.';
 
@@ -18,10 +18,10 @@ const nationalities = [
 const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
 
 const nextSteps = [
-  { href: '/posts/alipay-foreign-credit-card-step-by-step/', title: 'Set up Alipay with a foreign card' },
-  { href: '/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: 'Link Visa or Mastercard to WeChat Pay' },
-  { href: '/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: 'Know when cash still helps' },
-  { href: '/payment/', title: 'See all China payment guides' },
+  { href: '/es/posts/alipay-foreign-credit-card-step-by-step/', title: 'Set up Alipay with a foreign card' },
+  { href: '/es/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: 'Link Visa or Mastercard to WeChat Pay' },
+  { href: '/es/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: 'Know when cash still helps' },
+  { href: '/es/payment/', title: 'See all China payment guides' },
 ];
 
 const faqItems = [
@@ -48,7 +48,7 @@ const faqItems = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Payment Compatibility Checker</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Pagos Compatibility Checker</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -112,7 +112,7 @@ const faqItems = [
           <li><strong class="text-gray-900">3. Prepare at least one fallback.</strong> Bring a second card, install both payment apps, and keep small cash for edge cases.</li>
         </ol>
         <p class="mt-4 text-sm leading-6 text-gray-600">
-          Payment rules, wallet verification, and issuer risk checks can change. Treat the result as practical trip planning guidance, then confirm any large transaction limits inside Alipay, WeChat Pay, and your card issuer before departure.
+          Pagos rules, wallet verification, and issuer risk checks can change. Treat the result as practical trip planning guidance, then confirm any large transaction limits inside Alipay, WeChat Pay, and your card issuer before departure.
         </p>
       </div>
 
@@ -164,13 +164,13 @@ const faqItems = [
         </table>
       </div>
       <p class="mt-4 text-sm leading-6 text-gray-600">
-        For the strongest setup, read the full <a href="/posts/how-to-pay-in-china-tourist-guide/" class="font-semibold">China tourist payment guide</a>,
-        compare <a href="/posts/alipay-vs-wechat-pay-foreigners/" class="font-semibold">Alipay vs WeChat Pay</a>,
-        and keep a small RMB backup using our <a href="/posts/how-much-cash-to-bring-to-china/" class="font-semibold">cash guide</a>.
+        For the strongest setup, read the full <a href="/es/posts/how-to-pay-in-china-tourist-guide/" class="font-semibold">China tourist payment guide</a>,
+        compare <a href="/es/posts/alipay-vs-wechat-pay-foreigners/" class="font-semibold">Alipay vs WeChat Pay</a>,
+        and keep a small RMB backup using our <a href="/es/posts/how-much-cash-to-bring-to-china/" class="font-semibold">cash guide</a>.
       </p>
     </section>
 
-    <FaqSection items={faqItems} title="Payment checker FAQ" />
+    <FaqSection items={faqItems} title="Pagos checker FAQ" />
   </main>
   <Footer />
 </BaseLayout>

@@ -1,16 +1,16 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import CoverImage from '../../../components/CoverImage.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const title = 'Essential China Apps for Foreign Travelers: Download Links & Web Alternatives';
+const title = '外国人旅行者向け中国必須アプリ：ダウンロードリンクとWeb代替';
 const description = 'A complete directory of apps you need in China — WeChat, Alipay, DiDi, Baidu Maps, Meituan, 12306, VPN and more. Every app includes App Store / Google Play download links and H5 web versions that work without installing.';
 
 const appGroups = [
   {
-    category: 'Payment & Wallet',
+    category: '決済 & Wallet',
     apps: [
       {
         name: 'Alipay',
@@ -19,7 +19,7 @@ const appGroups = [
         ios: 'https://apps.apple.com/app/alipay/id333206289',
         h5: null,
         note: 'Setup takes 10-15 min. Need passport for verification.',
-        guide: '/posts/alipay-foreign-credit-card-step-by-step/',
+        guide: '/ja/posts/alipay-foreign-credit-card-step-by-step/',
       },
       {
         name: 'WeChat',
@@ -28,12 +28,12 @@ const appGroups = [
         ios: 'https://apps.apple.com/app/wechat/id414478124',
         h5: 'https://web.wechat.com/',
         note: 'WeChat Pay needs a linked card. WeChat itself works for messaging without setup.',
-        guide: '/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/',
+        guide: '/ja/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/',
       },
     ],
   },
   {
-    category: 'Transport & Ride-Hailing',
+    category: '交通 & Ride-Hailing',
     apps: [
       {
         name: 'DiDi',
@@ -42,16 +42,16 @@ const appGroups = [
         ios: 'https://apps.apple.com/app/didi/id1164272094',
         h5: 'https://m.didiglobal.com/',
         note: 'H5 version works in browser or WeChat mini-program. No app needed for occasional rides.',
-        guide: '/posts/didi-china-foreign-tourists-guide/',
+        guide: '/ja/posts/didi-china-foreign-tourists-guide/',
       },
       {
-        name: 'Alipay Transport Mini-Program',
+        name: 'Alipay 交通 Mini-Program',
         desc: 'Within Alipay, use the transport mini-program to scan QR codes for city metro and buses in most major cities.',
         android: null,
         ios: null,
         h5: null,
-        note: 'Open Alipay → "Transport" icon. No separate install needed.',
-        guide: '/transport/',
+        note: 'Open Alipay → "交通" icon. No separate install needed.',
+        guide: '/ja/transport/',
       },
       {
         name: '12306',
@@ -60,7 +60,7 @@ const appGroups = [
         ios: 'https://apps.apple.com/app/12306/id564757494',
         h5: 'https://www.12306.cn/',
         note: 'Tricky for foreigners. Use Trip.com (English, no verification hassle).',
-        guide: '/posts/book-china-train-tickets-12306-foreigners/',
+        guide: '/ja/posts/book-china-train-tickets-12306-foreigners/',
       },
       {
         name: 'Trip.com (Ctrip)',
@@ -101,7 +101,7 @@ const appGroups = [
         ios: null,
         h5: 'https://maps.google.com/',
         note: 'Will not work for turn-by-turn navigation in China without VPN.',
-        guide: '/posts/do-you-need-a-vpn-in-china-2026/',
+        guide: '/ja/posts/do-you-need-a-vpn-in-china-2026/',
       },
     ],
   },
@@ -115,7 +115,7 @@ const appGroups = [
         ios: 'https://apps.apple.com/app/meituan/id423924287',
         h5: 'https://waimai.meituan.com/',
         note: 'H5 food delivery works in browser. Pay with Alipay at delivery.',
-        guide: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+        guide: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Ele.me',
@@ -124,7 +124,7 @@ const appGroups = [
         ios: 'https://apps.apple.com/app/ele-me/id532785356',
         h5: 'https://www.ele.me/',
         note: 'Both Meituan and Ele.me work. Try both for best restaurant coverage.',
-        guide: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+        guide: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Dianping',
@@ -133,7 +133,7 @@ const appGroups = [
         ios: 'https://apps.apple.com/app/dianping/id416896465',
         h5: 'https://www.dianping.com/',
         note: 'Use the photo search feature — see what dishes look like before ordering.',
-        guide: '/food/',
+        guide: '/ja/food/',
       },
     ],
   },
@@ -147,7 +147,7 @@ const appGroups = [
         ios: null,
         h5: null,
         note: 'ESSENTIAL: Install and test before arriving. Activate when you land.',
-        guide: '/posts/do-you-need-a-vpn-in-china-2026/',
+        guide: '/ja/posts/do-you-need-a-vpn-in-china-2026/',
       },
       {
         name: 'Google Translate',
@@ -156,7 +156,7 @@ const appGroups = [
         ios: 'https://apps.apple.com/app/google-translate/id414706506',
         h5: 'https://translate.google.com/',
         note: 'Best translation tool. Download offline pack before trip.',
-        guide: '/tools/survival-kit/',
+        guide: '/ja/tools/survival-kit/',
       },
     ],
   },
@@ -191,7 +191,7 @@ const appGroups = [
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Mobile apps</p>
-      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">Essential China Apps</h1>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">中国旅行の必須アプリ</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 

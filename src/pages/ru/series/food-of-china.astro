@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
 const seriesSlug = 'food-of-china';
-const posts = (await getCollection('posts'))
+const posts = (await getCollection('posts-ru'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -14,21 +14,21 @@ const title = 'Food of China — A Foreigner\'s Culinary Journey';
 const description = 'Explore Chinese food culture as a foreign traveler: eight great cuisines, regional hot pot, street food safety, dim sum, breakfast, vegetarian options, and the dishes worth crossing a city for.';
 
 const relatedTools = [
-  { href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Order food without Chinese', desc: 'Meituan & Ele.me setup for foreigners' },
-  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Alipay, WeChat Pay, and cash for dining' },
-  { href: '/food/', title: 'Food & dining guides', desc: 'All food-related articles on ChinaTripBox' },
+  { href: '/ru/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Order food without Chinese', desc: 'Meituan & Ele.me setup for foreigners' },
+  { href: '/ru/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Alipay, WeChat Pay, and cash for dining' },
+  { href: '/ru/food/', title: 'Еда и рестораны guides', desc: 'All food-related articles on ChinaTripBox' },
 ];
 
 const relatedCities = [
-  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Sichuan food capital' },
-  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Peking duck and northern cuisine' },
-  { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Soup dumplings and fusion' },
+  { href: '/ru/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Sichuan food capital' },
+  { href: '/ru/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Peking duck and northern cuisine' },
+  { href: '/ru/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Soup dumplings and fusion' },
 ];
 
 const otherSeries = [
-  { href: '/series/history-of-china/', title: 'History of China' },
-  { href: '/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/series/modern-china/', title: 'Modern China' },
+  { href: '/ru/series/history-of-china/', title: 'History of China' },
+  { href: '/ru/series/culture-of-china/', title: 'Culture of China' },
+  { href: '/ru/series/modern-china/', title: 'Modern China' },
 ];
 ---
 
@@ -54,7 +54,7 @@ const otherSeries = [
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/ru/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>

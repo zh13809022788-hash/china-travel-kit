@@ -1,7 +1,12 @@
-"""Generate locale hub copies for deep sub-pages (tools/*, series/*, digital-nomads/*)."""
-import os, re
+"""Generate locale copies for deep sub-pages.
 
-PROJECT_ROOT = r'D:\独立站\china-travel-kit'
+Generated locale pages must use the matching translated post collection and
+locale-prefixed internal links.
+"""
+import os, re
+from pathlib import Path
+
+PROJECT_ROOT = str(Path(__file__).resolve().parents[1])
 PAGES_DIR = os.path.join(PROJECT_ROOT, 'src', 'pages')
 
 LOCALES = [
@@ -13,6 +18,25 @@ LOCALES = [
     ('de', 'de'),
     ('es', 'es'),
 ]
+
+LOCALE_META = {
+    'zh-tw': {'collection': 'posts-zh-tw', 'date': 'zh-TW'},
+    'ja': {'collection': 'posts-ja', 'date': 'ja-JP'},
+    'ko': {'collection': 'posts-ko', 'date': 'ko-KR'},
+    'ru': {'collection': 'posts-ru', 'date': 'ru-RU'},
+    'fr': {'collection': 'posts-fr', 'date': 'fr-FR'},
+    'de': {'collection': 'posts-de', 'date': 'de-DE'},
+    'es': {'collection': 'posts-es', 'date': 'es-ES'},
+}
+
+INTERNAL_ROOTS = (
+    'posts', 'tools', 'cities', 'payment', 'esim', 'transport', 'food',
+    'trip-planner', 'resources', 'apps', 'essentials', 'long-stay',
+    'digital-nomads', 'travel-help', 'about', 'contact', 'privacy', 'terms',
+    'editorial-policy', 'affiliate-disclosure', 'series',
+)
+
+LOCALE_DIR_RE = r'(?:zh-tw|ja|ko|ru|fr|de|es)'
 
 # Source pages (relative to PAGES_DIR)
 SOURCES = [
@@ -43,7 +67,31 @@ SOURCES = [
 ]
 
 
-def process_file(content, locale_code):
+def localize_generated_content(content, locale_dir):
+    meta = LOCALE_META[locale_dir]
+    collection = meta['collection']
+    date_locale = meta['date']
+    roots = '|'.join(re.escape(root) for root in INTERNAL_ROOTS)
+
+    content = content.replace("getCollection('posts')", f"getCollection('{collection}')")
+    content = content.replace("toLocaleDateString('en-US'", f"toLocaleDateString('{date_locale}'")
+    content = content.replace('href={`/posts/', f'href={{`/{locale_dir}/posts/')
+    content = content.replace('href={`/tools/', f'href={{`/{locale_dir}/tools/')
+    content = content.replace('href={`/digital-nomads/', f'href={{`/{locale_dir}/digital-nomads/')
+    content = re.sub(
+        rf'href="/(?!{LOCALE_DIR_RE}/)({roots})/',
+        rf'href="/{locale_dir}/\1/',
+        content,
+    )
+    content = re.sub(
+        rf"(href|next|guide): '/(?!{LOCALE_DIR_RE}/)({roots})/",
+        rf"\1: '/{locale_dir}/\2/",
+        content,
+    )
+    return content
+
+
+def process_file(content, locale_dir, locale_code):
     """Adjust imports and add locale props."""
     # Adjust imports: '../../' → '../../../'
     content = content.replace("from '../../layouts/", "from '../../../layouts/")
@@ -70,7 +118,7 @@ def process_file(content, locale_code):
     content = re.sub(r'<Header\s*/>', f'<Header locale="{locale_code}" />', content)
     content = re.sub(r'<Header(?!\s+locale)(\s+[^>]*)?>', f'<Header locale="{locale_code}"\\1>', content)
 
-    return content
+    return localize_generated_content(content, locale_dir)
 
 
 def generate():
@@ -87,7 +135,7 @@ def generate():
             with open(src, 'r', encoding='utf-8') as f:
                 content = f.read()
 
-            content = process_file(content, locale_code)
+            content = process_file(content, locale_dir, locale_code)
 
             dst = os.path.join(locale_root, rel_path)
             dst_dir = os.path.dirname(dst)

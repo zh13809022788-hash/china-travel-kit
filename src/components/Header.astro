@@ -10,48 +10,71 @@ export interface Props {
 
 const { locale: propLocale = 'en', alternates } = Astro.props;
 
-// Auto-detect locale from URL path (like Footer does) — ensures header always matches URL
-const urlPath = Astro.url.pathname;
-const detectedLocale: LocaleCode = urlPath.startsWith('/zh-tw/') ? 'zh-TW'
-  : urlPath.startsWith('/ja/') ? 'ja'
-  : urlPath.startsWith('/ko/') ? 'ko'
-  : urlPath.startsWith('/ru/') ? 'ru'
-  : urlPath.startsWith('/fr/') ? 'fr'
-  : urlPath.startsWith('/de/') ? 'de'
-  : urlPath.startsWith('/es/') ? 'es'
-  : 'en';
-// Use prop if explicitly set, otherwise fall back to URL detection
+const localePrefixes: Record<LocaleCode, string> = {
+  en: '/',
+  'zh-TW': '/zh-tw/',
+  ja: '/ja/',
+  ko: '/ko/',
+  ru: '/ru/',
+  fr: '/fr/',
+  de: '/de/',
+  es: '/es/',
+};
+
+const pathLocale = (path: string): LocaleCode => {
+  if (path.startsWith('/zh-tw/')) return 'zh-TW';
+  if (path.startsWith('/ja/')) return 'ja';
+  if (path.startsWith('/ko/')) return 'ko';
+  if (path.startsWith('/ru/')) return 'ru';
+  if (path.startsWith('/fr/')) return 'fr';
+  if (path.startsWith('/de/')) return 'de';
+  if (path.startsWith('/es/')) return 'es';
+  return 'en';
+};
+
+const pathname = Astro.url.pathname;
+const detectedLocale = pathLocale(pathname);
 const locale: LocaleCode = propLocale !== 'en' ? propLocale : detectedLocale;
 
-// Multilingual nav label map
-const navLabels: Record<string, Record<string, string>> = {
-  'Home':           { en:'Home', 'zh-TW':'首頁', ja:'ホーム', ko:'홈', ru:'Главная', fr:'Accueil', de:'Start', es:'Inicio' },
-  'Plan Your Trip': { en:'Plan Your Trip', 'zh-TW':'行程規劃', ja:'旅行計画', ko:'여행 계획', ru:'План поездки', fr:'Planifier', de:'Reise planen', es:'Planificar' },
-  'Apps & Setup':   { en:'Apps & Setup', 'zh-TW':'App 與設定', ja:'アプリ設定', ko:'앱 설정', ru:'Приложения', fr:'Applications', de:'Apps', es:'Apps' },
-  'Payments':       { en:'Payments', 'zh-TW':'付款', ja:'決済', ko:'결제', ru:'Оплата', fr:'Paiement', de:'Bezahlung', es:'Pagos' },
-  'Internet':       { en:'Internet', 'zh-TW':'網路', ja:'通信', ko:'인터넷', ru:'Интернет', fr:'Internet', de:'Internet', es:'Internet' },
-  'Transport':      { en:'Transport', 'zh-TW':'交通', ja:'交通', ko:'교통', ru:'Транспорт', fr:'Transport', de:'Verkehr', es:'Transporte' },
-  'Cities':         { en:'Cities', 'zh-TW':'城市', ja:'都市', ko:'도시', ru:'Города', fr:'Villes', de:'Städte', es:'Ciudades' },
-  'Food':           { en:'Food', 'zh-TW':'美食', ja:'グルメ', ko:'음식', ru:'Еда', fr:'Gastronomie', de:'Essen', es:'Comida' },
-  'Trip Planning':  { en:'Trip Planning', 'zh-TW':'行前準備', ja:'旅行準備', ko:'여행 준비', ru:'Планирование', fr:'Préparation', de:'Reiseplanung', es:'Planificación' },
-  'Trip Planner':   { en:'Trip Planner', 'zh-TW':'行程工具', ja:'旅行プランナー', ko:'여행 플래너', ru:'Планировщик', fr:'Planificateur', de:'Reiseplaner', es:'Planificador' },
-  'Tools':          { en:'Tools', 'zh-TW':'工具', ja:'ツール', ko:'도구', ru:'Инструменты', fr:'Outils', de:'Werkzeuge', es:'Herramientas' },
-  'Series':         { en:'Series', 'zh-TW':'系列', ja:'シリーズ', ko:'시리즈', ru:'Серии', fr:'Séries', de:'Serien', es:'Series' },
-  'Long Stay':      { en:'Long Stay', 'zh-TW':'長住', ja:'長期滞在', ko:'장기 체류', ru:'Долгое проживание', fr:'Long séjour', de:'Langzeitaufenthalt', es:'Estancia larga' },
-  'Digital Nomads': { en:'Digital Nomads', 'zh-TW':'數位遊民', ja:'デジタルノマド', ko:'디지털 노마드', ru:'Цифровые кочевники', fr:'Nomades digitaux', de:'Digitale Nomaden', es:'Nómadas digitales' },
-  'Help':           { en:'Help', 'zh-TW':'幫助', ja:'ヘルプ', ko:'도움말', ru:'Помощь', fr:'Aide', de:'Hilfe', es:'Ayuda' },
-  'About':          { en:'About', 'zh-TW':'關於', ja:'概要', ko:'소개', ru:'О нас', fr:'À propos', de:'Über uns', es:'Acerca de' },
+const navLabels: Record<string, Record<LocaleCode, string>> = {
+  Home: { en: 'Home', 'zh-TW': '首頁', ja: 'ホーム', ko: '홈', ru: 'Главная', fr: 'Accueil', de: 'Start', es: 'Inicio' },
+  'Plan Your Trip': { en: 'Plan Your Trip', 'zh-TW': '規劃行程', ja: '旅行計画', ko: '여행 계획', ru: 'План поездки', fr: 'Planifier', de: 'Reise planen', es: 'Planificar' },
+  'Apps & Setup': { en: 'Apps & Setup', 'zh-TW': 'App 與設定', ja: 'アプリ設定', ko: '앱 설정', ru: 'Приложения', fr: 'Applications', de: 'Apps', es: 'Apps' },
+  Payments: { en: 'Payments', 'zh-TW': '付款', ja: '決済', ko: '결제', ru: 'Оплата', fr: 'Paiement', de: 'Bezahlung', es: 'Pagos' },
+  Internet: { en: 'Internet', 'zh-TW': '網路', ja: '通信', ko: '인터넷', ru: 'Интернет', fr: 'Internet', de: 'Internet', es: 'Internet' },
+  Transport: { en: 'Transport', 'zh-TW': '交通', ja: '交通', ko: '교통', ru: 'Транспорт', fr: 'Transport', de: 'Verkehr', es: 'Transporte' },
+  Cities: { en: 'Cities', 'zh-TW': '城市', ja: '都市', ko: '도시', ru: 'Города', fr: 'Villes', de: 'Städte', es: 'Ciudades' },
+  Food: { en: 'Food', 'zh-TW': '美食', ja: 'グルメ', ko: '음식', ru: 'Еда', fr: 'Gastronomie', de: 'Essen', es: 'Comida' },
+  'Trip Planning': { en: 'Trip Planning', 'zh-TW': '行前準備', ja: '旅行準備', ko: '여행 준비', ru: 'Подготовка', fr: 'Préparation', de: 'Reiseplanung', es: 'Preparación' },
+  'Trip Planner': { en: 'Trip Planner', 'zh-TW': '行程工具', ja: '旅行プランナー', ko: '여행 플래너', ru: 'Планировщик', fr: 'Planificateur', de: 'Reiseplaner', es: 'Planificador' },
+  Tools: { en: 'Tools', 'zh-TW': '工具', ja: 'ツール', ko: '도구', ru: 'Инструменты', fr: 'Outils', de: 'Werkzeuge', es: 'Herramientas' },
+  Series: { en: 'Series', 'zh-TW': '系列', ja: 'シリーズ', ko: '시리즈', ru: 'Серии', fr: 'Séries', de: 'Serien', es: 'Series' },
+  'Long Stay': { en: 'Long Stay', 'zh-TW': '長住', ja: '長期滞在', ko: '장기 체류', ru: 'Долгое пребывание', fr: 'Long séjour', de: 'Langzeitaufenthalt', es: 'Estancia larga' },
+  'Digital Nomads': { en: 'Digital Nomads', 'zh-TW': '數位遊牧', ja: 'デジタルノマド', ko: '디지털 노마드', ru: 'Цифровые кочевники', fr: 'Nomades digitaux', de: 'Digitale Nomaden', es: 'Nómadas digitales' },
+  Help: { en: 'Help', 'zh-TW': '幫助', ja: 'ヘルプ', ko: '도움말', ru: 'Помощь', fr: 'Aide', de: 'Hilfe', es: 'Ayuda' },
+  About: { en: 'About', 'zh-TW': '關於', ja: '概要', ko: '소개', ru: 'О нас', fr: 'À propos', de: 'Über uns', es: 'Acerca de' },
 };
 const t = (key: string) => navLabels[key]?.[locale] ?? key;
 
-const localePrefixes: Record<string, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
-
-// localePath: prepend locale prefix to a path so nav links stay in the selected language
 const localePath = (href: string) => {
   if (locale === 'en') return href;
   const prefix = localePrefixes[locale];
   if (href === '/') return prefix;
   return prefix + href.replace(/^\//, '');
+};
+
+const stripLocalePrefix = (path: string) => {
+  for (const prefix of Object.values(localePrefixes).filter((p) => p !== '/')) {
+    if (path.startsWith(prefix)) return path.slice(prefix.length - 1);
+  }
+  return path;
+};
+
+const samePagePath = (targetLocale: LocaleCode) => {
+  const basePath = stripLocalePrefix(pathname);
+  if (targetLocale === 'en') return basePath === '' ? '/' : basePath;
+  const prefix = localePrefixes[targetLocale].replace(/\/$/, '');
+  return basePath === '/' ? `${prefix}/` : `${prefix}${basePath}`;
 };
 
 const navLinks = [
@@ -74,26 +97,13 @@ const secondaryLinks = [
   { href: '/travel-help/', label: t('Help') },
   { href: '/about/', label: t('About') },
 ];
-const pathname = Astro.url.pathname;
 const isActive = (href: string) => {
-  if (href === '/') {
-    return pathname === '/' || Object.values(localePrefixes).includes(pathname);
-  }
-  // Check both the plain path and the locale-prefixed path
+  if (href === '/') return pathname === '/' || Object.values(localePrefixes).includes(pathname);
   return pathname.startsWith(href) || pathname.startsWith(localePath(href));
 };
 
-const isHome = pathname === '/' || Object.values(localePrefixes).includes(pathname);
 const homePath = localePrefixes[locale] ?? '/';
-
-const getPath = (key: LocaleCode) => {
-  // Preferred: exact translation exists for this page
-  const alt = alternates?.[key];
-  if (alt) return alt;
-  // Fallback: link to the language homepage so the switcher always has valid options
-  const homeFallback: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
-  return homeFallback[key];
-};
+const getPath = (key: LocaleCode) => alternates?.[key] ?? samePagePath(key);
 ---
 
 <header class="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur">
@@ -103,14 +113,13 @@ const getPath = (key: LocaleCode) => {
       <span class="hidden text-lg sm:inline">ChinaTripBox</span>
     </a>
 
-    <!-- Desktop nav -->
     <ul class="hidden items-center gap-3 lg:flex xl:gap-4">
       {navLinks.map((link) => (
         <li>
           <a
             href={localePath(link.href)}
             class:list={[
-              'text-sm font-medium whitespace-nowrap transition-colors hover:text-brand-600 hover:no-underline',
+              'whitespace-nowrap text-sm font-medium transition-colors hover:text-brand-600 hover:no-underline',
               isActive(link.href) ? 'text-brand-600' : 'text-gray-700',
             ]}
           >
@@ -120,7 +129,6 @@ const getPath = (key: LocaleCode) => {
       ))}
     </ul>
 
-    <!-- Right side: language + hamburger -->
     <div class="flex items-center gap-2">
       <LanguageSwitcher
         currentLocale={locale}
@@ -134,7 +142,6 @@ const getPath = (key: LocaleCode) => {
         esPath={getPath('es')}
       />
 
-      <!-- Mobile hamburger -->
       <button
         id="menu-toggle"
         class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 lg:hidden"
@@ -150,24 +157,23 @@ const getPath = (key: LocaleCode) => {
     </div>
   </nav>
 
-  <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden border-t border-gray-200 lg:hidden">
     <div class="container-page py-2">
-    <ul class="flex flex-col">
-      {[...navLinks, ...secondaryLinks].map((link) => (
-        <li>
-          <a
-            href={localePath(link.href)}
-            class:list={[
-              'block py-2.5 text-sm font-medium hover:no-underline',
-              isActive(link.href) ? 'text-brand-600' : 'text-gray-700',
-            ]}
-          >
-            {link.label}
-          </a>
-        </li>
-      ))}
-    </ul>
+      <ul class="flex flex-col">
+        {[...navLinks, ...secondaryLinks].map((link) => (
+          <li>
+            <a
+              href={localePath(link.href)}
+              class:list={[
+                'block py-2.5 text-sm font-medium hover:no-underline',
+                isActive(link.href) ? 'text-brand-600' : 'text-gray-700',
+              ]}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   </div>
 </header>

@@ -6,11 +6,11 @@ import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import CoverImage from '../../../components/CoverImage.astro';
 
-const posts = (await getCollection('posts'))
+const posts = (await getCollection('posts-es'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'China Food, Dining & Etiquette Guides';
+const title = 'Guías de comida, restaurantes y etiqueta en China';
 const description =
   'Practical China food guides for foreign visitors: ordering delivery, street-food safety, spice levels, tipping, restaurant etiquette, and dining culture.';
 
@@ -18,17 +18,17 @@ const pathways = [
   {
     title: 'Order without Chinese',
     desc: 'Set up delivery apps, save hotel addresses, and avoid courier-call confusion.',
-    href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+    href: '/es/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
     title: 'Eat street food safely',
     desc: 'Use turnover, visible heat, water habits, and spice phrases to choose better stalls.',
-    href: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
+    href: '/es/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
     title: 'Handle dining etiquette',
     desc: 'Know when not to tip, when service charges matter, and how local restaurant norms work.',
-    href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
+    href: '/es/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
 
@@ -50,7 +50,7 @@ const cultureLinks = [
   <Header locale="es" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Food & dining</p>
+      <p class="section-kicker">Comida y restaurantes</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -80,7 +80,7 @@ const cultureLinks = [
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {posts.map((post) => (
-            <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+            <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>

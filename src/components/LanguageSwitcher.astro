@@ -39,7 +39,6 @@ const currentLabel = options.find((o) => o.locale === currentLocale)?.label ?? '
         aria-expanded="false"
         aria-haspopup="listbox"
       >
-        <!-- Globe icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"></circle>
           <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -51,15 +50,14 @@ const currentLabel = options.find((o) => o.locale === currentLocale)?.label ?? '
         </svg>
       </button>
 
-      <!-- Dropdown -->
       <div
-        class="lang-dropdown absolute right-0 top-full z-50 mt-1 hidden min-w-[170px] max-h-[60vh] overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg ring-1 ring-black/5"
+        class="lang-dropdown absolute right-0 top-full z-50 mt-1 hidden max-h-[60vh] min-w-[170px] overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg ring-1 ring-black/5"
         role="listbox"
       >
         {visibleOptions.map((option) =>
           option.locale === currentLocale ? (
             <span
-              class="flex items-center gap-2 px-3.5 py-2.5 text-sm font-semibold text-brand-700 bg-brand-50"
+              class="flex items-center gap-2 bg-brand-50 px-3.5 py-2.5 text-sm font-semibold text-brand-700"
               role="option"
               aria-selected="true"
             >
@@ -115,18 +113,15 @@ const currentLabel = options.find((o) => o.locale === currentLocale)?.label ?? '
         open ? hide() : show();
       });
 
-      // Close on outside click
       document.addEventListener('click', function() {
         if (open) hide();
       });
 
-      // Close on Escape
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && open) hide();
       });
     });
 
-    // Persist preference on switch
     document.querySelectorAll('[data-lang-switch]').forEach(function(link) {
       link.addEventListener('click', function() {
         try { localStorage.setItem('ctb-lang-pref', this.getAttribute('data-lang-switch')!); } catch(e) {}

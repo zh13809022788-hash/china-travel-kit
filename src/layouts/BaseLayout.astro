@@ -33,6 +33,29 @@ const htmlLangMap: Record<string, string> = { en: 'en', 'zh-TW': 'zh-TW', ja: 'j
 const htmlLang = htmlLangMap[locale] ?? 'en';
 
 const hreflangCodes: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
+const localePrefixes: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
+
+const stripLocalePrefix = (path: string) => {
+  for (const prefix of Object.values(localePrefixes).filter((p) => p !== '/')) {
+    if (path.startsWith(prefix)) return path.slice(prefix.length - 1);
+  }
+  return path;
+};
+
+const samePageAlternates = (() => {
+  const basePath = stripLocalePrefix(Astro.url.pathname);
+  const paths: Partial<Record<LocaleCode, string>> = {};
+  for (const code of hreflangCodes) {
+    if (code === 'en') {
+      paths[code] = basePath || '/';
+    } else {
+      const prefix = localePrefixes[code].replace(/\/$/, '');
+      paths[code] = basePath === '/' ? `${prefix}/` : `${prefix}${basePath}`;
+    }
+  }
+  return paths;
+})();
+const pageAlternates = alternates ?? samePageAlternates;
 
 const availableLanguage = locale === 'en'
   ? ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es']
@@ -131,10 +154,10 @@ const jsonLd = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
     {hreflangCodes.map((code) => {
-      const altUrl = alternates?.[code] ? new URL(alternates[code]!, Astro.site).toString() : null;
+      const altUrl = pageAlternates?.[code] ? new URL(pageAlternates[code]!, Astro.site).toString() : null;
       return altUrl ? <link rel="alternate" hreflang={code} href={altUrl} /> : null;
     })}
-    {alternates?.en && <link rel="alternate" hreflang="x-default" href={new URL(alternates.en, Astro.site).toString()} />}
+    {pageAlternates?.en && <link rel="alternate" hreflang="x-default" href={new URL(pageAlternates.en, Astro.site).toString()} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Open Graph -->
@@ -187,6 +210,7 @@ const jsonLd = {
       }
 
       // --- Stage 1: User has a language preference ---
+      if(pref==='en'){return;}
       if(pref&&pref!=='en'){
         var currentLocale=hasLocalePrefix(window.location.pathname);
         // If we're already on a page in the preferred locale, do nothing
@@ -210,7 +234,7 @@ const jsonLd = {
         return;
       }
 
-      // --- Stage 2: No preference or explicitly set to English — auto-detect from browser language ---
+      // --- Stage 2: No preference — auto-detect from browser language ---
       var langs=navigator.languages||[navigator.language]||[];
       var detected=null;
       for(var i=0;i<langs.length;i++){

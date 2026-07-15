@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
 const seriesSlug = 'history-of-china';
-const posts = (await getCollection('posts'))
+const posts = (await getCollection('posts-de'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -14,21 +14,21 @@ const title = 'History of China — Ancient Sites & Stories for Travelers';
 const description = 'Explore China\'s historical sites as a foreign traveler: the Great Wall, Terracotta Army, Forbidden City, Silk Road, ancient capitals, and water towns — decoded with the stories behind what you see.';
 
 const relatedTools = [
-  { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Visa-free transit and entry requirements' },
-  { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'High-speed rail guide', desc: 'Trains to historical sites across China' },
-  { href: '/posts/book-china-train-tickets-12306-foreigners/', title: 'Book train tickets', desc: '12306 guide for foreign passport holders' },
+  { href: '/de/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Visa-free transit and entry requirements' },
+  { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'High-speed rail guide', desc: 'Trains to historical sites across China' },
+  { href: '/de/posts/book-china-train-tickets-12306-foreigners/', title: 'Book train tickets', desc: '12306 guide for foreign passport holders' },
 ];
 
 const relatedCities = [
-  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Forbidden City, Great Wall, Temple of Heaven' },
-  { href: '/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Ancient capital of the Southern Song' },
-  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Three Kingdoms heritage and ancient streets' },
+  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Forbidden City, Great Wall, Temple of Heaven' },
+  { href: '/de/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Ancient capital of the Southern Song' },
+  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Three Kingdoms heritage and ancient streets' },
 ];
 
 const otherSeries = [
-  { href: '/series/food-of-china/', title: 'Food of China' },
-  { href: '/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/series/nature-of-china/', title: 'Nature of China' },
+  { href: '/de/series/food-of-china/', title: 'Food of China' },
+  { href: '/de/series/culture-of-china/', title: 'Culture of China' },
+  { href: '/de/series/nature-of-china/', title: 'Nature of China' },
 ];
 ---
 
@@ -54,7 +54,7 @@ const otherSeries = [
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>

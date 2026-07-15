@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -9,7 +9,7 @@ const description =
   'Build a practical first China trip plan with payment, eSIM, transport, app setup, cash, and first-day checklist recommendations.';
 
 const needOptions = [
-  { value: 'payment', label: 'Payment setup' },
+  { value: 'payment', label: 'Pagos setup' },
   { value: 'esim', label: 'eSIM and internet' },
   { value: 'transport', label: 'Airport and trains' },
   { value: 'hotel', label: 'Hotel area logic' },
@@ -36,8 +36,8 @@ const needOptions = [
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
             <a href="#planner" class="btn-primary">Start planning</a>
-            <a href="/travel-help/" class="btn-outline">Ask travel help</a>
-            <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Read first-time guide</a>
+            <a href="/es/travel-help/" class="btn-outline">Ask travel help</a>
+            <a href="/es/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Read first-time guide</a>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ const needOptions = [
           <p class="section-kicker">Best for</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">First-time visitor setup</h2>
           <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-            <li>Payment readiness before arrival</li>
+            <li>Pagos readiness before arrival</li>
             <li>eSIM, roaming, and app access decisions</li>
             <li>Airport-to-city first step planning</li>
             <li>Simple city-by-city trip framework</li>
@@ -185,18 +185,18 @@ const needOptions = [
       </section>
 
       <section class="mt-12 grid gap-5 md:grid-cols-3">
-        <a href="/payment/" class="card block hover:no-underline">
-          <p class="section-kicker">Payment</p>
+        <a href="/es/payment/" class="card block hover:no-underline">
+          <p class="section-kicker">Pagos</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">Prepare Alipay and WeChat Pay</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">Set up at least one wallet and one backup payment method before arrival.</p>
         </a>
-        <a href="/esim/" class="card block hover:no-underline">
+        <a href="/es/esim/" class="card block hover:no-underline">
           <p class="section-kicker">Internet</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">Choose an eSIM or roaming setup</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">Make sure you can load maps, translate, message, and call a ride on day one.</p>
         </a>
-        <a href="/transport/" class="card block hover:no-underline">
-          <p class="section-kicker">Transport</p>
+        <a href="/es/transport/" class="card block hover:no-underline">
+          <p class="section-kicker">Transporte</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">Plan your first route</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">Know your airport-to-hotel route and when to use metro, taxi, DiDi, or train.</p>
         </a>
@@ -206,11 +206,11 @@ const needOptions = [
         <p class="section-kicker">Before using the planner</p>
         <h2 class="mt-2 text-2xl font-bold text-gray-950">Read the setup guides if this is your first China trip</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
-          <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+          <a href="/es/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
             <h3 class="font-bold text-gray-950">China trip planner for first-time visitors</h3>
             <p class="mt-2 text-sm leading-6 text-gray-600">Use the same planning order as this tool: internet, payment, airport route, apps, city order, and first-day checklist.</p>
           </a>
-          <a href="/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+          <a href="/es/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
             <h3 class="font-bold text-gray-950">What to set up before traveling to China</h3>
             <p class="mt-2 text-sm leading-6 text-gray-600">A practical pre-departure checklist for Alipay, WeChat Pay, eSIM, DiDi, train tickets, maps, and cash backup.</p>
           </a>
@@ -324,9 +324,9 @@ const needOptions = [
 
     const html = [
       panel('Pre-departure checklist', preDeparture),
-      panel('Payment and cash setup', payment),
+      panel('Pagos and cash setup', payment),
       panel('Internet and app setup', internet),
-      panel('Transport and first day', transport),
+      panel('Transporte and first day', transport),
       panel('Simple day-by-day framework', dayPlan),
       panel('Common mistake warnings', mistakes),
     ].join('');

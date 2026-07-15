@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
 const seriesSlug = 'nature-of-china';
-const posts = (await getCollection('posts'))
+const posts = (await getCollection('posts-zh-tw'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -14,21 +14,21 @@ const title = 'Nature of China — Landscapes & Wild Places';
 const description = 'Explore China\'s natural wonders as a foreign traveler: Zhangjiajie\'s Avatar mountains, Jiuzhaigou\'s fairy-tale lakes, Huangshan\'s sea of clouds, Guilin\'s karst peaks, and the Tibetan plateau.';
 
 const relatedTools = [
-  { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing checklist', desc: 'Season-by-season gear for outdoor trips' },
-  { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Permits and entry rules for remote regions' },
-  { href: '/trip-planner/', title: 'Trip planner', desc: 'Build your China nature itinerary' },
+  { href: '/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing checklist', desc: 'Season-by-season gear for outdoor trips' },
+  { href: '/zh-tw/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Permits and entry rules for remote regions' },
+  { href: '/zh-tw/trip-planner/', title: 'Trip planner', desc: 'Build your China nature itinerary' },
 ];
 
 const relatedCities = [
-  { href: '/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Tropical beaches and rainforest' },
-  { href: '/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'West Lake and tea hills' },
-  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Gateway to western mountains and pandas' },
+  { href: '/zh-tw/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Tropical beaches and rainforest' },
+  { href: '/zh-tw/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'West Lake and tea hills' },
+  { href: '/zh-tw/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Gateway to western mountains and pandas' },
 ];
 
 const otherSeries = [
-  { href: '/series/history-of-china/', title: 'History of China' },
-  { href: '/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/series/food-of-china/', title: 'Food of China' },
+  { href: '/zh-tw/series/history-of-china/', title: 'History of China' },
+  { href: '/zh-tw/series/culture-of-china/', title: 'Culture of China' },
+  { href: '/zh-tw/series/food-of-china/', title: 'Food of China' },
 ];
 ---
 
@@ -54,7 +54,7 @@ const otherSeries = [
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/zh-tw/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>

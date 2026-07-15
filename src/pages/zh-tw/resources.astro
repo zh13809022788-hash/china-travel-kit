@@ -3,85 +3,85 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'China Travel Resources for Foreign Visitors';
+const title = '中國旅行資源中心';
 const description =
-  'A practical resource hub for foreign visitors to China: payments, eSIMs, trains, visas, city guides, tools, and first-trip planning links.';
+  '為外國旅客整理的中國旅行實用入口：付款、eSIM、火車、簽證、城市指南、工具與第一次到中國的行前規劃。';
 
 const resourceGroups = [
   {
-    title: 'If you only have 30 minutes',
-    description: 'A short reading path for travelers who need a workable China setup fast.',
+    title: '如果你只有 30 分鐘',
+    description: '給需要快速完成基本準備的旅客，一條最短閱讀路線。',
     links: [
-      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Pre-departure setup checklist' },
-      { href: '/tools/survival-kit/', title: 'China survival kit cards and checklists' },
-      { href: '/tools/payment-checker/', title: 'Check your payment fallback plan' },
-      { href: '/tools/visa-free-checker/', title: 'Check visa-free entry or transit' },
-      { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Understand train booking and station entry' },
+      { href: '/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '出發前設定清單' },
+      { href: '/zh-tw/tools/survival-kit/', title: '中國旅行生存卡與清單' },
+      { href: '/zh-tw/tools/payment-checker/', title: '檢查你的付款備援方案' },
+      { href: '/zh-tw/tools/visa-free-checker/', title: '查詢免簽入境或過境資格' },
+      { href: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/', title: '了解火車訂票與進站流程' },
     ],
   },
   {
-    title: 'Start here: first-trip setup',
-    description: 'The shortest path from "I am going to China" to a workable arrival plan.',
+    title: '第一次去中國：從這裡開始',
+    description: '從「我要去中國」到可落地執行的抵達方案，先處理最關鍵的事。',
     links: [
-      { href: '/trip-planner/', title: 'Free China trip planner' },
-      { href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'China trip planner for first-time visitors' },
-      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'What to set up before traveling to China' },
-      { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'China visa-free entry and transit guide' },
-      { href: '/tools/best-time-to-visit/', title: 'Best time to visit China' },
-      { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'What to pack for China' },
+      { href: '/zh-tw/trip-planner/', title: '免費中國行程規劃工具' },
+      { href: '/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: '第一次到中國的行程規劃指南' },
+      { href: '/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '去中國前要先設定什麼' },
+      { href: '/zh-tw/posts/china-visa-free-entry-transit-guide-2026/', title: '中國免簽入境與過境指南' },
+      { href: '/zh-tw/tools/best-time-to-visit/', title: '什麼時候最適合去中國' },
+      { href: '/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '中國旅行打包清單' },
     ],
   },
   {
-    title: 'Payments and money',
-    description: 'Mobile payments, cash backup, cards, and everyday checkout problems.',
+    title: '付款與現金',
+    description: '行動支付、現金備援、外卡綁定，以及日常結帳可能遇到的問題。',
     links: [
-      { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China as a tourist' },
-      { href: '/posts/alipay-foreign-credit-card-step-by-step/', title: 'Set up Alipay with a foreign card' },
-      { href: '/posts/wechat-pay-foreign-visitors-guide/', title: 'WeChat Pay guide for foreign visitors' },
-      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Pre-departure payment and app checklist' },
-      { href: '/tools/payment-checker/', title: 'Payment compatibility checker' },
+      { href: '/zh-tw/posts/how-to-pay-in-china-tourist-guide/', title: '外國旅客在中國怎麼付款' },
+      { href: '/zh-tw/posts/alipay-foreign-credit-card-step-by-step/', title: '用外國信用卡設定 Alipay' },
+      { href: '/zh-tw/posts/wechat-pay-foreign-visitors-guide/', title: '外國旅客 WeChat Pay 指南' },
+      { href: '/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '出發前付款與 App 設定清單' },
+      { href: '/zh-tw/tools/payment-checker/', title: '付款相容性檢查工具' },
     ],
   },
   {
-    title: 'Internet and apps',
-    description: 'Stay online, choose an eSIM, and know which apps work before arrival.',
+    title: '網路與 App',
+    description: '保持連線、選擇 eSIM，並在抵達前確認哪些 App 能用。',
     links: [
-      { href: '/posts/best-esim-for-china-travel-2026/', title: 'Best eSIM for China travel' },
-      { href: '/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'China eSIM vs roaming cost' },
-      { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access and apps in China' },
-      { href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'First-time trip planning with eSIM and apps' },
-      { href: '/tools/app-availability-checker/', title: 'Will my apps work in China?' },
+      { href: '/zh-tw/posts/best-esim-for-china-travel-2026/', title: '中國旅行 eSIM 選擇' },
+      { href: '/zh-tw/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: '中國 eSIM 與漫遊費用比較' },
+      { href: '/zh-tw/posts/internet-access-china-apps-that-work-2026/', title: '中國上網與可用 App 指南' },
+      { href: '/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: '第一次旅行的 eSIM 與 App 準備' },
+      { href: '/zh-tw/tools/app-availability-checker/', title: '我的 App 在中國能用嗎？' },
     ],
   },
   {
-    title: 'Transport and city guides',
-    description: 'Trains, metro, airports, ride-hailing, and practical city planning.',
+    title: '交通與城市指南',
+    description: '火車、地鐵、機場、市區叫車，以及實用的城市行程規劃。',
     links: [
-      { href: '/cities/', title: 'China city guide hub' },
-      { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'China high-speed rail guide for foreigners' },
-      { href: '/posts/book-china-train-tickets-12306-foreigners/', title: 'Book China train tickets on 12306' },
-      { href: '/posts/didi-china-foreign-tourists-guide/', title: 'Use DiDi as a foreign tourist' },
-      { href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Airport to city transport guide' },
+      { href: '/zh-tw/cities/', title: '中國城市指南入口' },
+      { href: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/', title: '外國旅客中國高鐵指南' },
+      { href: '/zh-tw/posts/book-china-train-tickets-12306-foreigners/', title: '外國人如何用 12306 訂火車票' },
+      { href: '/zh-tw/posts/didi-china-foreign-tourists-guide/', title: '外國旅客如何使用 DiDi' },
+      { href: '/zh-tw/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: '機場到市區交通指南' },
     ],
   },
   {
-    title: 'Food, etiquette, and everyday life',
-    description: 'Dining, tipping, delivery apps, street food, and practical habits that reduce friction on the ground.',
+    title: '美食、禮儀與日常生活',
+    description: '餐廳點餐、小費、外送 App、街頭小吃，以及能降低現場摩擦的實用習慣。',
     links: [
-      { href: '/food/', title: 'China food and dining hub' },
-      { href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Order food without Chinese' },
-      { href: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: 'Chengdu street-food safety and spice guide' },
-      { href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Tipping in China: when it is expected' },
+      { href: '/zh-tw/food/', title: '中國美食與用餐入口' },
+      { href: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: '不會中文怎麼在中國點餐叫外送' },
+      { href: '/zh-tw/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: '成都街頭小吃安全與辣度指南' },
+      { href: '/zh-tw/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '中國小費：什麼時候需要給' },
     ],
   },
   {
-    title: 'Longer stays and remote work',
-    description: 'For trips measured in weeks or months, start with legality, housing, payment, and work-tool reliability.',
+    title: '長住與遠端工作',
+    description: '如果行程以週或月計算，先確認簽證、住宿、付款和工作工具是否可靠。',
     links: [
-      { href: '/long-stay/', title: 'Long-term stay in China guide' },
-      { href: '/digital-nomads/', title: 'Digital nomad guide to China' },
-      { href: '/digital-nomads/visa/', title: 'China visa guide for digital nomads' },
-      { href: '/digital-nomads/payment/', title: 'Payment setup for long stays' },
+      { href: '/zh-tw/long-stay/', title: '中國長住指南' },
+      { href: '/zh-tw/digital-nomads/', title: '中國數位遊民指南' },
+      { href: '/zh-tw/digital-nomads/visa/', title: '數位遊民中國簽證指南' },
+      { href: '/zh-tw/digital-nomads/payment/', title: '長住付款設定' },
     ],
   },
 ];
@@ -91,7 +91,7 @@ const resourceGroups = [
   <Header locale="zh-TW" />
   <main class="container-page py-10">
     <section class="max-w-3xl">
-      <p class="section-kicker">Resource hub</p>
+      <p class="section-kicker">資源中心</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </section>

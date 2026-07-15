@@ -1,11 +1,11 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import { TOOLS as tools } from '../../../config';
 
-const title = 'Free China Travel Tools: Visa, Payment, eSIM, Budget, Driver Cards and Phrases';
+const title = '무료 중국 여행 도구: 비자, 결제, eSIM, 예산, 기사 카드, 필수 표현';
 const description =
   'Free interactive tools for China travel planning: check visa-free entry, payment card compatibility, eSIM options, trip budget, cash backup, power plugs, Chinese phrases, and taxi driver address cards.';
 
@@ -14,28 +14,28 @@ const toolUseCases = [
     title: 'Before booking flights',
     text: 'Use the visa-free checker, best-time planner, and budget estimator before you lock dates and cities.',
     links: [
-      { href: '/tools/visa-free-checker/', label: 'Visa-free checker' },
-      { href: '/tools/best-time-to-visit/', label: 'Best time to visit' },
-      { href: '/tools/budget-cash-estimator/', label: 'Budget estimator' },
+      { href: '/ko/tools/visa-free-checker/', label: 'Visa-free checker' },
+      { href: '/ko/tools/best-time-to-visit/', label: 'Best time to visit' },
+      { href: '/ko/tools/budget-cash-estimator/', label: 'Budget estimator' },
     ],
   },
   {
     title: 'Before departure',
     text: 'Use payment, eSIM, app, plug, and phrase tools while you still have time to fix setup problems at home.',
     links: [
-      { href: '/tools/payment-checker/', label: 'Payment checker' },
-      { href: '/tools/esim-comparison/', label: 'eSIM comparator' },
-      { href: '/tools/app-availability-checker/', label: 'App checker' },
+      { href: '/ko/tools/payment-checker/', label: '결제 checker' },
+      { href: '/ko/tools/esim-comparison/', label: 'eSIM comparator' },
+      { href: '/ko/tools/app-availability-checker/', label: 'App checker' },
     ],
   },
   {
     title: 'On the ground in China',
     text: 'Use driver cards, currency conversion, and essential phrases when apps, taxis, menus, or front desks get confusing.',
     links: [
-      { href: '/tools/survival-kit/', label: 'Survival kit' },
-      { href: '/tools/show-to-driver/', label: 'Show to Driver' },
-      { href: '/tools/currency-converter/', label: 'RMB converter' },
-      { href: '/tools/essential-phrases/', label: 'Essential phrases' },
+      { href: '/ko/tools/survival-kit/', label: 'Survival kit' },
+      { href: '/ko/tools/show-to-driver/', label: 'Show to Driver' },
+      { href: '/ko/tools/currency-converter/', label: 'RMB converter' },
+      { href: '/ko/tools/essential-phrases/', label: 'Essential phrases' },
     ],
   },
 ];
@@ -60,12 +60,12 @@ const toolsJsonLd = {
   <Header locale="ko" />
   <main class="container-page py-12">
     <header class="max-w-2xl">
-      <p class="section-kicker">Tool center</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Free China Travel Tools</h1>
+      <p class="section-kicker">도구 센터</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">무료 중국 여행 도구</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Use pre-trip checklist</a>
-        <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Read first-time planner</a>
+        <a href="/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Use pre-trip checklist</a>
+        <a href="/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Read first-time planner</a>
       </div>
     </header>
 
@@ -94,7 +94,7 @@ const toolsJsonLd = {
           <div class="text-3xl">{tool.icon}</div>
           <h2 class="mt-3 text-lg font-bold text-gray-900">{tool.title}</h2>
           <p class="mt-1.5 text-sm text-gray-600">{tool.desc}</p>
-          <span class="mt-3 inline-block text-sm font-semibold text-brand-600">Open tool →</span>
+          <span class="mt-3 inline-block text-sm font-semibold text-brand-600">도구 열기 →</span>
         </a>
       ))}
     </section>
