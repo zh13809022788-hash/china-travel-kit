@@ -1,9 +1,9 @@
 ---
-title: "Airport to City Transport in Beijing, Shanghai and Guangzhou 2026: Complete Guide"
-description: "How to get from the airport to city center in Beijing, Shanghai, and Guangzhou in 2026 — metro, airport express, taxi, Didi costs, times, and step-by-step instructions for first-time visitors."
+title: "Airport to City in China 2026: Beijing, Shanghai & Guangzhou Transport Guide"
+description: "How to get from the airport to city center in Beijing (PEK/PKX), Shanghai (PVG/SHA), and Guangzhou (CAN) in 2026 — metro costs, express train times, taxi fares, DiDi alternatives, and step-by-step instructions for first-time visitors."
 pubDate: 2026-07-08
 category: transport
-tags: ["airport transport", "beijing", "shanghai", "guangzhou"]
+tags: ["airport transport", "beijing", "shanghai", "guangzhou", "guangzhou airport to city", "beijing airport transport"]
 cover: "topic-airport-transport"
 coverAlt: "Airport express train platform with modern train in station"
 
@@ -29,6 +29,27 @@ Landing after a long flight, the last thing you want is to stand in an arrivals 
 
 This guide breaks down the main options for each city's major airports in 2026, with rough costs and travel times, plus how to pay. As a rule, trains are cheapest and traffic-proof, while taxis and DiDi offer door-to-door ease at a higher price. Here's how it works in each city.
 
+```mermaid
+graph TD
+    A["Which city are you arriving in?"] --> B{"Beijing"}
+    A --> C{"Shanghai"}
+    A --> D{"Guangzhou"}
+    
+    B --> E{"Which airport?"}
+    E -->|"Capital (PEK)"| F["Airport Express ~25 RMB<br/>or Taxi 100-150 RMB"]
+    E -->|"Daxing (PKX)"| G["Daxing Express ~35 RMB<br/>or Taxi 200+ RMB"]
+    
+    C --> H{"Which airport?"}
+    H -->|"Pudong (PVG)"| I{"Want the experience?"}
+    I -->|"Yes"| J["Maglev ~50 RMB (7 min)"]
+    I -->|"No"| K["Metro Line 2 ~7 RMB<br/>or Taxi 150-200 RMB"]
+    H -->|"Hongqiao (SHA)"| L["Metro ~4-7 RMB<br/>or Taxi 60-100 RMB"]
+    
+    D --> M{"Budget or convenience?"}
+    M -->|"Budget"| N["Metro Line 3 ~7 RMB"]
+    M -->|"Convenience"| O["Taxi 150-180 RMB<br/>or DiDi"]
+```
+
 ## Before You Begin
 
 Two bits of preparation make airport transport painless anywhere in China.
@@ -36,6 +57,8 @@ Two bits of preparation make airport transport painless anywhere in China.
 First, set up a mobile wallet. Alipay or WeChat Pay, linked to your foreign card, lets you pay for metro tickets, ride-hailing, and most other transport without fumbling for cash. DiDi, the main ride-hailing app, is especially convenient because you pay in-app and avoid any language barrier with a driver.
 
 Second, carry a small amount of cash as backup, since a few situations, like an older taxi, may prefer it. With a wallet set up and some yuan on hand, every option below is open to you.
+
+> ⚠️ **避坑提示：高峰期（早7-9点、晚5-8点）机场高速都可能严重堵车**。如果降落时间正好赶上这些时间段，优先选地铁或机场快线，不要打出租车。省下来的时间可能够你多逛一个景点。
 
 Now, city by city.
 

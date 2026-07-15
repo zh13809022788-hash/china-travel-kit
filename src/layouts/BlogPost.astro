@@ -9,6 +9,7 @@ import type { FaqItem } from '../components/FaqSection.astro';
 import CoverImage from '../components/CoverImage.astro';
 import RelatedReading from '../components/RelatedReading.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
+import Mermaid from '../components/Mermaid.astro';
 import type { RelatedItem } from '../components/RelatedReading.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -137,6 +138,9 @@ const ui = {
   correctionPrefix: { en:'Found something outdated or incorrect? Please ', 'zh-TW':'發現內容過時或有誤？請附上頁面網址 ', ja:'情報が古い、または誤りがありましたら、ページURLとともに ', ko:'내용이 오래되었거나 잘못된 부분이 있으면 페이지 URL과 함께 ', ru:'Нашли устаревшую или неверную информацию? ', fr:'Vous avez trouvé une information obsolète ou incorrecte ? ', de:'Veraltete oder falsche Informationen gefunden? ', es:'¿Encontraste algo desactualizado o incorrecto? ' },
   correctionLink: { en:'send a correction', 'zh-TW':'回報修正', ja:'お知らせください', ko:'알려주세요', ru:'отправьте исправление', fr:'envoyez une correction', de:'Korrektur senden', es:'envía una corrección' },
   correctionSuffix: { en:' with the page URL so we can review it.', 'zh-TW':'，我們會盡快檢查。', ja:' をお送りください。確認いたします。', ko:'. 확인 후 수정하겠습니다.', ru:' с URL страницы, и мы проверим.', fr:' avec l\'URL de la page pour que nous puissions la vérifier.', de:' mit der Seiten-URL, damit wir sie überprüfen können.', es:' con la URL de la página para que podamos revisarlo.' },
+  ctaTitle: { en:"Don't forget the essentials", 'zh-TW':'不要忘記必需品', ja:'必需品をお忘れなく', ko:'필수품을 잊지 마세요', ru:'Не забудьте самое необходимое', fr:'N\'oubliez pas l\'essentiel', de:'Vergessen Sie nicht das Wichtigste', es:'No olvides lo esencial' },
+  ctaDesc: { en:'Get our complete pre-departure checklist — what to install, what to bring, and what to set up before your China trip.', 'zh-TW':'查看我們的行前準備清單——安裝什麼、帶什麼、出發前要設定什麼。', ja:'出発前の準備リストをご確認ください。インストールすべきアプリ、持ち物、設定すべきことをまとめました。', ko:'출발 전 준비 체크리스트를 확인하세요. 설치할 앱, 챙길 물건, 설정할 사항을 정리했습니다.', ru:'Получите полный предотъездный чек-лист: что установить, что взять и что настроить перед поездкой в Китай.', fr:'Obtenez notre checklist complète avant le départ : quoi installer, quoi apporter, quoi configurer avant votre voyage en Chine.', de:'Holen Sie sich unsere vollständige Checkliste für die Abreise: was Sie installieren, mitbringen und vor Ihrer China-Reise einrichten sollten.', es:'Obtén nuestra lista de verificación completa antes de la salida: qué instalar, qué traer y qué configurar antes de tu viaje a China.' },
+  ctaButton: { en:'View pre-departure checklist →', 'zh-TW':'查看行前準備清單 →', ja:'出発前チェックリストを見る →', ko:'출발 전 체크리스트 보기 →', ru:'Посмотреть предотъездный чек-лист →', fr:'Voir la checklist avant départ →', de:'Vorab-Checkliste ansehen →', es:'Ver lista de verificación previa →' },
 };
 
 const homeHref = locale === 'en' ? '/' : '/' + localePrefix(locale) + '/';
@@ -184,6 +188,17 @@ const homeLabel = ui.home[locale] ?? 'Home';
       {cover && <CoverImage name={cover} alt={coverAlt ?? title} />}
       <div class="article-body max-w-none">
         <slot />
+        <Mermaid />
+      </div>
+
+      <!-- Bottom CTA: Travel Checklist -->
+      <div class="mt-8 rounded-lg border border-brand-100 bg-brand-50 p-6">
+        <h3 class="text-lg font-bold text-gray-900">{ui.ctaTitle[locale] ?? "Don't forget the essentials"}</h3>
+        <p class="mt-2 text-sm leading-6 text-gray-700">{ui.ctaDesc[locale] ?? "Get our complete pre-departure checklist — what to install, what to bring, and what to set up before your China trip."}</p>
+        <a href="/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/"
+           class="mt-4 inline-block rounded-md bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 hover:no-underline">
+          {ui.ctaButton[locale] ?? "View pre-departure checklist →"}
+        </a>
       </div>
 
       <AdSlot format="in-article" />

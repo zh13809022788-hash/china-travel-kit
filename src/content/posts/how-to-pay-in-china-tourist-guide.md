@@ -1,9 +1,9 @@
 ---
-title: "How to Pay in China as a Tourist 2026: Complete Payment Guide"
-description: "Everything foreign tourists need to know about paying in China in 2026 — Alipay, WeChat Pay, foreign credit cards, cash backup, and step-by-step setup before departure."
+title: "How to Pay for Things in China 2026: 3 Methods Ranked for Tourists (Alipay, Card, Cash)"
+description: "How to pay for things in China as a tourist in 2026 — Alipay, WeChat Pay, foreign credit cards, cash backup, and which method works at each type of merchant. Includes a quick decision flowchart."
 pubDate: 2026-07-07
 category: payment
-tags: ["alipay", "wechat pay", "mobile payment", "cash"]
+tags: ["alipay", "wechat pay", "mobile payment", "cash", "how to pay in china", "china payment guide"]
 cover: "topic-how-to-pay"
 coverAlt: "Various payment methods including smartphone and cards arranged on a table"
 
@@ -25,11 +25,33 @@ faqs:
 
 Paying for things in China can feel intimidating before you arrive. The country has leapfrogged cash and cards almost entirely, and daily life runs on QR-code mobile payments that were, until recently, hard for foreign visitors to access. The good news: as of 2026, paying in China as a tourist is genuinely easy — once you know how the system works and set things up correctly. This guide walks you through every option, in the order that actually matters.
 
+```mermaid
+graph TD
+    A["Need to pay"] --> B{"Merchant type?"}
+    B -->|"Street food, taxi,<br/>small shop, market"| C["Use Alipay or WeChat Pay QR"]
+    B -->|"Hotel, mall,<br/>department store"| D{"Payment terminal?"}
+    D -->|"QR code visible"| C
+    D -->|"Card terminal available"| E["Try foreign Visa/Mastercard<br/>or Apple Pay tap"]
+    B -->|"Rural area or<br/>terminal down"| F["Use cash"]
+    C --> G{"App working?"}
+    G -->|"Yes"| H["✅ Done"]
+    G -->|"No"| F
+    E --> I{"Card accepted?"}
+    I -->|"Yes"| H
+    I -->|"No"| C
+    
+    style C fill:#e8f5e9,stroke:#2e7d32
+    style F fill:#fff3e0,stroke:#e65100
+    style E fill:#e3f2fd,stroke:#1565c0
+```
+
 ## Why China Is a Mobile-First Payment Country
 
 Over the past decade, China moved from cash to a smartphone-based economy faster than anywhere else on earth. Two apps — **Alipay** and **WeChat Pay** — dominate. Street vendors, taxi drivers, museums, noodle shops, and vending machines all display QR codes. Locals simply scan and pay in seconds.
 
 For years this created a barrier for tourists, because these wallets required a Chinese bank account. That has changed. Both Alipay and WeChat Pay now let international visitors link foreign Visa, Mastercard, and other major cards directly. This single change is why a trip to China in 2026 is far smoother than it was even a few years ago.
+
+> ⚠️ **避坑提示：不要等到了中国才装支付宝/微信。** 身份验证需要护照拍照 + 人脸识别，在出发前用家里 Wi-Fi 操作最顺利。如果落地后才发现没装好，机场 Wi-Fi 不稳定加上短信验证码收不到，你会卡在第一步。
 
 ## Before You Go: What to Prepare
 

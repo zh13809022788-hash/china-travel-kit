@@ -1,9 +1,9 @@
 ---
-title: "Best eSIM for China Travel 2026: How to Choose and Set Up (Airalo, Holafly, Nomad)"
-description: "Compare the best eSIM providers for China in 2026 — Airalo, Holafly, Nomad — with pricing, data limits, setup steps, and whether you can bypass the Great Firewall without a VPN."
+title: "Which eSIM Works in China Without a VPN? 2026 Comparison Guide (Airalo, Holafly, Nomad)"
+description: "Compare the best eSIM providers for China in 2026 — Airalo, Holafly, Nomad — with pricing, data limits, and which ones bypass the Great Firewall so Google, WhatsApp, and Instagram work without a separate VPN."
 pubDate: 2026-07-05
 category: esim
-tags: ["esim", "china data", "mobile internet", "travel sim"]
+tags: ["esim", "china data", "mobile internet", "travel sim", "china travel esim", "best esim china"]
 cover: "topic-esim-vs-roaming"
 coverAlt: "eSIM setup screen on a smartphone with data plan options"
 
@@ -29,6 +29,24 @@ Landing in China with a dead phone is a special kind of stress. You step off a 1
 
 That second problem is what catches most first-time visitors off guard. China's mainland networks filter access to a large slice of the global internet, so a locally purchased SIM card can leave you cut off from your usual maps, messaging, and social apps. An eSIM solves both problems at once when you choose the right one. It gets you online the moment you land, and the better travel eSIMs route your traffic in a way that keeps your normal apps working. This guide walks through how to pick the right plan and set it up without hassle.
 
+```mermaid
+graph TD
+    A["Need internet in China"] --> B{"Phone supports eSIM<br/>& carrier-unlocked?"}
+    B -->|"No"| C["Need physical SIM<br/>or Pocket WiFi"]
+    B -->|"Yes"| D{"Need Google, WhatsApp,<br/>Instagram to work?"}
+    D -->|"Yes"| E{"Budget?"}
+    E -->|"Low"| F["Airalo 1 GB/day<br/>~$4.50-$26"]
+    E -->|"Mid"| G["Nomad pooled 1-20 GB<br/>~$3.50-$22"]
+    E -->|"High/Unlimited"| H["Holafly unlimited<br/>~$19-$54"]
+    D -->|"No, local access OK"| I["China Mobile local SIM<br/>¥100-300"]
+    
+    F --> J["✓ Apps work<br/>✓ Hotspot OK"]
+    G --> J
+    H --> K["✓ Apps work<br/>✗ No hotspot"]
+```
+
+> 📌 **底线：如果谷歌地图、WhatsApp、Instagram 对你来说是刚需，就不要买中国移动/联通的本地 SIM 卡，选 Airalo、Holafly 或 Nomad 这些旅游 eSIM。** 它们通过香港或海外路由数据，入境后不需要 VPN 就能正常访问你的常用 app。
+
 ## Before You Begin
 
 Before you spend a cent, confirm your phone can actually use an eSIM. Two things must be true.
@@ -38,6 +56,8 @@ First, your device needs eSIM hardware. Most iPhones from the XS and XR onward s
 Second, your phone must be carrier-unlocked. If you bought your phone on a contract or installment plan, it may be locked to your original carrier, which blocks third-party eSIMs. Contact your carrier to confirm unlock status before you travel. It's far easier to sort this out at home than to discover the problem at the airport.
 
 While you're at it, make a note of your phone's model and operating system version, and make sure you'll have Wi-Fi available for the installation step. Installing an eSIM profile requires a data connection, and doing it before departure is far less stressful than hunting for airport Wi-Fi on arrival.
+
+> ⚠️ **避坑提示：不要在登机口才装 eSIM！** 很多 eSIM 套餐从"激活"（首次连接网络）开始倒计时，而不是从安装时刻算。在国内装好 profile、不开数据漫游，等落地后再开启——这样你能用满全程天数。如果套餐说明不清，默认按"按需激活"处理。
 
 ## How to Choose the Right China eSIM
 

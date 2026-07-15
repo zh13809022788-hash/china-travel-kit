@@ -1,9 +1,9 @@
 ---
-title: "Shanghai Metro for Foreigners 2026: Tickets, QR Codes and Transfer Guide"
-description: "How to use the Shanghai metro as a foreign tourist in 2026 — ticket types, Alipay QR code entry, line transfers, airport connections, and practical tips for navigating the system."
+title: "How to Use the Shanghai Metro as a Foreigner: QR Codes, Tickets & Tips (2026)"
+description: "How to use the Shanghai metro as a foreign tourist in 2026 — Alipay QR code entry, ticket machines, line transfers, airport connections, and troubleshooting for non-Chinese speakers."
 pubDate: 2026-07-09
 category: transport
-tags: ["shanghai metro", "china transport", "qr code payment", "subway tickets", "alipay"]
+tags: ["shanghai metro", "china transport", "qr code payment", "subway tickets", "alipay", "shanghai metro for foreigners"]
 cover: "topic-shanghai-metro"
 coverAlt: "Shanghai metro station platform with modern subway train"
 
@@ -28,6 +28,31 @@ faqs:
 Shanghai's metro is the fastest, cheapest, and least stressful way to move around a city of 25 million people. It has more than 20 lines and over 500 stations, reaching Pudong airport, the Bund, the former French Concession, and nearly every neighborhood a visitor cares about. Taxis get stuck in traffic and drivers rarely speak English; the metro is climate-controlled, punctual to the minute, and clearly signed in English.
 
 The part that trips up foreigners isn't the trains, it's the payment. China went almost fully cashless, and the old advice about buying paper tickets no longer matches how locals actually ride. Getting your payment sorted before you arrive at a turnstile saves you from fumbling at a machine while a queue builds behind you.
+
+```mermaid
+graph TD
+    A["Arrive at metro station"] --> B["Pass security check<br/>(X-ray for bags, drink check)"]
+    B --> C{"Payment method?"}
+    C -->|"Alipay / WeChat QR"| D["Open transit mini-program<br/>→ generate QR code"]
+    C -->|"Single ticket"| E["Find ticket machine<br/>→ English mode<br/>→ Select destination<br/>→ Pay with coins/small notes"]
+    C -->|"Transport card"| F["Tap stored-value card<br/>at gate reader"]
+    
+    D --> G["Hold phone flat on<br/>QR scanner pad"]
+    E --> H["Tap token on reader"]
+    F --> G
+    
+    G --> I["Green arrow + beep → enter"]
+    H --> I
+    
+    I --> J{"Need to transfer?"}
+    J -->|"Yes"| K["Follow colored line signs<br/>inside paid area<br/>(no extra fare)"]
+    J -->|"No"| L["Ride to destination"]
+    
+    K --> L
+    L --> M["Tap QR or insert token<br/>at exit gate → done"]
+```
+
+> ⚠️ **避坑提示：进站闸机扫描 QR 码时，一定要把屏幕亮度调到最高，手机平放贴在扫描板上（不是悬空举着）**。角度不对、亮度不够是 QR 码刷不过的常见问题。如果连续失败，关掉 QR 码页面重新打开刷新。
 
 ## What You Need to Know First
 
