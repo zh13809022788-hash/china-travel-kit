@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'ChinaTripBox Editorial Team';
+const description =
+  'About the ChinaTripBox editorial team, how we research practical China travel guides, and how readers can request corrections.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': new URL('/authors/chinatripbox-editorial-team/#person', Astro.site).toString(),
+  name: title,
+  url: new URL('/authors/chinatripbox-editorial-team/', Astro.site).toString(),
+  affiliation: {
+    '@type': 'Organization',
+    name: 'ChinaTripBox',
+    url: new URL('/', Astro.site).toString(),
+  },
+  knowsAbout: [
+    'China travel planning',
+    'mobile payments in China',
+    'China eSIM and internet access',
+    'China high-speed rail',
+    'foreign visitor logistics in China',
+  ],
+};
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
+  <Header locale="ru" />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <p class="section-kicker">Author</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+
+      <h2>Editorial Focus</h2>
+      <p>
+        The ChinaTripBox editorial team writes practical guides for foreign visitors to China, with
+        a focus on payment setup, eSIM and internet access, high-speed rail, ride-hailing, airport
+        transfers, city planning, food ordering, and common first-trip problems.
+      </p>
+
+      <h2>How We Build Guides</h2>
+      <p>
+        We combine official sources, provider documentation, app help materials, reader questions,
+        traveler reports, and hands-on checks where possible. For fast-changing topics such as
+        visa-free entry, payment limits, app availability, and transport rules, we treat official
+        government or provider pages as the final source.
+      </p>
+
+      <h2>Corrections</h2>
+      <p>
+        China travel logistics change quickly. If you find an outdated step, changed policy, broken
+        link, or missing caveat, please send the page URL through our <a href="/contact/">contact page</a>.
+        We review corrections and update affected guides when the evidence is clear.
+      </p>
+
+      <h2>Editorial Policy</h2>
+      <p>
+        Read our <a href="/editorial-policy/">editorial policy</a> for details on research,
+        updates, affiliate disclosure, independence, and limitations.
+      </p>
+
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

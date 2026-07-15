@@ -1,0 +1,108 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+
+const seriesSlug = 'food-of-china';
+const posts = (await getCollection('posts'))
+  .filter((p) => p.data.series === seriesSlug)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const title = 'Food of China — A Foreigner\'s Culinary Journey';
+const description = 'Explore Chinese food culture as a foreign traveler: eight great cuisines, regional hot pot, street food safety, dim sum, breakfast, vegetarian options, and the dishes worth crossing a city for.';
+
+const relatedTools = [
+  { href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Order food without Chinese', desc: 'Meituan & Ele.me setup for foreigners' },
+  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Alipay, WeChat Pay, and cash for dining' },
+  { href: '/food/', title: 'Food & dining guides', desc: 'All food-related articles on ChinaTripBox' },
+];
+
+const relatedCities = [
+  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Sichuan food capital' },
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Peking duck and northern cuisine' },
+  { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Soup dumplings and fusion' },
+];
+
+const otherSeries = [
+  { href: '/series/history-of-china/', title: 'History of China' },
+  { href: '/series/culture-of-china/', title: 'Culture of China' },
+  { href: '/series/modern-china/', title: 'Modern China' },
+];
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
+  <Header locale="ru" />
+  <main class="container-page py-10">
+    <header class="max-w-3xl">
+      <p class="section-kicker">Content Series</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Articles</p>
+            <h2>Food of China series</h2>
+          </div>
+        </div>
+        {posts.length > 0 ? (
+          <div class="mt-6 grid gap-5 md:grid-cols-2">
+            {posts.map((post) => (
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+                <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
+                <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <p class="mt-6 text-gray-500">Articles in this series are being prepared. Check back soon.</p>
+        )}
+      </div>
+
+      <aside class="space-y-6">
+        <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <p class="section-kicker">Practical tools</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Eat well in China</h2>
+          <div class="mt-4 grid gap-3">
+            {relatedTools.map((item) => (
+              <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+                <h3 class="text-sm font-semibold text-gray-950">{item.title}</h3>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{item.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <p class="section-kicker">City food guides</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Where to eat</h2>
+          <div class="mt-4 grid gap-3">
+            {relatedCities.map((item) => (
+              <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+                <h3 class="text-sm font-semibold text-gray-950">{item.title}</h3>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{item.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <p class="section-kicker">More series</p>
+          <div class="mt-3 grid gap-2">
+            {otherSeries.map((s) => (
+              <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
