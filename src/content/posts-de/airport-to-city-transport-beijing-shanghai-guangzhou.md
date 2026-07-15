@@ -1,6 +1,6 @@
 ---
-title: "Flughafen in die Stadt in China 2026: Beijing, Shanghai und Guangzhou"
-description: "So kommen Reisende 2026 vom Flughafen ins Zentrum: PEK, PKX, PVG, SHA und CAN mit Metro, Airport Express, Maglev, Taxi und DiDi."
+title: "Flughafen in die Stadt in China 2026: Beijing bis Guangzhou"
+description: "Transfer-Guide fuer PEK, PKX, PVG, SHA und CAN: Metro, Airport Express, Maglev, Taxi, DiDi, Kosten und Fahrzeiten."
 pubDate: 2026-07-08
 category: transport
 tags: ["flughafentransfer", "beijing", "shanghai", "guangzhou", "guangzhou flughafen in die stadt", "beijing flughafentransfer"]

@@ -89,9 +89,11 @@ function swapLocale(path: string, to: LocaleCode): string {
   for (const [code, prefix] of localePrefixes) {
     if (base.startsWith(prefix)) { base = base.slice(prefix.length); break; }
   }
-  if (to === 'en') return base;
+  // Remove any leading slash to avoid double-slash like /de//data/
+  base = base.replace(/^\//, '');
+  if (to === 'en') return '/' + base;
   const prefixMap: Record<string, string> = { 'zh-TW':'zh-tw', ja:'ja', ko:'ko', ru:'ru', fr:'fr', de:'de', es:'es' };
-  return '/' + (prefixMap[to] ?? to) + base;
+  return '/' + (prefixMap[to] ?? to) + '/' + base;
 }
 
 const allLocales: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];

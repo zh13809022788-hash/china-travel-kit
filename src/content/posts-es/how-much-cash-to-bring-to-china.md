@@ -39,6 +39,9 @@ Los cajeros de Bank of China e ICBC suelen aceptar redes internacionales. Retira
 
 Pide billetes de 10, 20 y 50 RMB. Los de 100 sirven, pero son incomodos en puestos pequenos. Guarda el efectivo separado de tarjetas y telefono.
 
+<!-- AFFILIATE_PAYMENT -->
+
 ## Resumen
 
 Lleva efectivo, pero poco. La prioridad es tener pago movil listo y usar RMB solo cuando el telefono, la app o el comercio fallen.
+

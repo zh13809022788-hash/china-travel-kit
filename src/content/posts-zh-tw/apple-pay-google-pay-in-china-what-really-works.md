@@ -1,6 +1,6 @@
 ---
 title: "Apple Pay 在中國能用嗎？2026 外國旅客真實支付指南"
-description: "2026 年 Apple Pay 與 Google Pay 在中國的實際可用範圍：哪些地方能感應付款、哪些場景會失敗，以及旅客真正該準備的支付方式。"
+description: "2026 年 Apple Pay 與 Google Pay 在中國的實際可用範圍：感應付款場景、失敗原因與旅客應準備的支付方式。"
 pubDate: 2026-07-08
 category: payment
 tags: ["Apple Pay", "Google Pay", "中國支付", "感應支付", "旅行提示", "Apple Pay 在中國能用嗎"]

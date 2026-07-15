@@ -1,6 +1,6 @@
 ---
 title: "China visafrei 2026: Einreise, 240-Stunden-Transit und Regeln"
-description: "Guide zu Chinas visafreier Einreise und 240-Stunden-Transit: Voraussetzungen, Dokumente, Unterschiede und was Reisende vor der Buchung pruefen sollten."
+description: "Chinas visafreie Einreise und 240-Stunden-Transit: Voraussetzungen, Dokumente, Unterschiede und wichtige Checks vor der Buchung."
 pubDate: 2026-07-08
 category: transport
 tags: ["visafrei", "china visum", "transitvisum", "einreiseregeln"]

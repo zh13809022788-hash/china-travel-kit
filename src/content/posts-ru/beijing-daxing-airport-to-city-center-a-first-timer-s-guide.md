@@ -4,9 +4,6 @@ description: "Экспресс, метро, поезд, такси, DiDi и но
 pubDate: 2026-07-08
 category: transport
 tags: ["Пекин", "Daxing", "аэропорт", "трансфер"]
-cover: "topic-trip-planner"
-coverAlt: "Указатели транспорта в аэропорту Daxing"
-
 featured: false
 faqs:
   - question: "Как далеко?"

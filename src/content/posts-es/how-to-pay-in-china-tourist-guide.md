@@ -1,6 +1,6 @@
 ﻿---
-title: "Como pagar en China en 2026: Alipay, WeChat Pay, tarjeta y efectivo"
-description: "Guia para turistas sobre los metodos de pago en China: Alipay, WeChat Pay, tarjetas extranjeras, efectivo, comisiones y que usar en cada comercio."
+title: "Como pagar en China en 2026: Alipay, WeChat, tarjeta y efectivo"
+description: "Guia para turistas sobre pagos en China: Alipay, WeChat Pay, tarjetas extranjeras, efectivo, comisiones y comercios."
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "wechat pay", "pago movil", "efectivo", "como pagar en china", "guia de pagos china"]
@@ -35,10 +35,10 @@ China es un pais de pagos QR. La tarjeta fisica puede funcionar en hoteles y aer
 
 Configura las apps antes de volar, vincula una Visa o Mastercard, completa verificacion con pasaporte y avisa al banco. Lleva una segunda tarjeta y 300 a 1.000 RMB en billetes pequenos.
 
-<!-- AFFILIATE_PAYMENT -->
 
 > ⚠️ **No esperes al primer restaurante para probar el pago:** compra agua o un snack al llegar y verifica que la app realmente cobra.
 
 ## Resumen
 
 El mejor sistema es redundante: pago movil primero, tarjeta para hoteles y cajeros, efectivo pequeno para emergencias. Con esas tres capas, casi cualquier compra se resuelve.
+

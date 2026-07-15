@@ -1,6 +1,6 @@
 ---
-title: "Zahlen in China 2026: Alipay, WeChat Pay, Karte und Bargeld"
-description: "So bezahlen Touristen in China: beste Methoden nach Situation, Mobile Payment mit auslaendischer Karte, direkte Kreditkarte, Bargeldreserve und typische Fehler."
+title: "Zahlen in China 2026: Alipay, WeChat Pay, Karte, Bargeld"
+description: "So bezahlen Touristen in China: Mobile Payment mit auslaendischer Karte, direkte Kreditkarte, Bargeldreserve und typische Fehler."
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "wechat pay", "mobile zahlung", "bargeld", "zahlen in china", "china zahlungs-guide"]
@@ -36,8 +36,6 @@ Direkte Visa- oder Mastercard-Zahlung funktioniert eher in internationalen Hotel
 ## Methode 3: Bargeld
 
 Ein paar hundert RMB loesen Probleme bei Akku, App-Stoerung, alten Taxis oder laendlichen Stopps. Kleine Scheine sind wichtiger als grosse Summen.
-
-<!-- AFFILIATE_PAYMENT -->
 
 > ⚠️ Testen Sie Ihre Wallet mit einem kleinen Kauf, bevor Sie sie fuer Taxi, Restaurantrechnung oder Zugticket brauchen. Ein frueher Fehler ist leicht zu beheben.
 

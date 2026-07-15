@@ -1,6 +1,6 @@
 ﻿---
-title: "Primeras 24 horas en China 2026: checklist de llegada para extranjeros"
-description: "Que hacer al aterrizar en China: activar internet, comprobar Alipay, elegir transporte del aeropuerto, llegar al hotel y preparar el primer dia sin estres."
+title: "Primeras 24 horas en China 2026: checklist de llegada"
+description: "Que hacer al aterrizar en China: activar internet, probar pagos, elegir transporte, llegar al hotel y preparar el primer dia."
 pubDate: 2026-07-14
 category: essentials
 tags: ["checklist llegada", "primer viaje china", "pago", "transporte"]

@@ -1,6 +1,6 @@
 ---
-title: "China Food Guide 2026: Regionale Kuechen, Bestellen und sicher essen"
-description: "Praktischer Guide zur chinesischen Regionalkueche: was Sie wo essen, wie Sie ohne Chinesisch bestellen, Food Safety, Preise und Restauranttipps."
+title: "China Food Guide 2026: Regionale Kuechen und sicher essen"
+description: "Chinesische Regionalkueche fuer Reisende: was Sie wo essen, wie Sie bestellen, Food Safety, Preise und Restauranttipps."
 pubDate: 2026-07-15
 category: food
 tags: ["chinesisches essen", "regionale kueche", "street food", "food guide", "essen gehen", "sichuan", "kantonesisch"]
@@ -53,3 +53,8 @@ Zahlen Sie mit Alipay oder WeChat Pay. Bargeld funktioniert als Backup, aber vie
 ## Fazit
 
 Essen ist einer der besten Gruende fuer eine China-Reise. Probieren Sie regional, starten Sie bei Schaerfe vorsichtig, nutzen Sie Fotos und Apps, und waehlen Sie belebte Orte. Dann wird Essen in China weniger Risiko und mehr Reisehoehepunkt.
+
+## Weiterlesen
+
+- [Chengdu Street Food Guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [Essen bestellen in China](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)

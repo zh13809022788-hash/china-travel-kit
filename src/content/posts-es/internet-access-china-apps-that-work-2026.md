@@ -35,6 +35,9 @@ WeChat, Alipay, Amap, Baidu Maps y DiDi funcionan dentro del ecosistema chino. A
 
 > ⚠️ **No confies en el Wi-Fi del hotel para desbloquear apps:** normalmente tiene las mismas restricciones que cualquier red local.
 
+<!-- AFFILIATE_ESIM -->
+
 ## Resumen
 
 Si necesitas Google, WhatsApp, Instagram o Gmail, prepara eSIM de viaje, roaming o VPN antes de entrar. Sin esa preparacion, internet puede funcionar pero no tus herramientas habituales.
+

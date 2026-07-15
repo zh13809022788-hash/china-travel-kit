@@ -1,6 +1,6 @@
 ﻿---
 title: "Entrada sin visado y transito en China 2026: necesitas visa?"
-description: "Guia 2026 sobre entrada sin visado a China, transito de 240 horas, requisitos por nacionalidad, documentos, puertos de entrada y comprobaciones oficiales."
+description: "Guia 2026 sobre entrada sin visado a China, transito de 240 horas, requisitos, documentos y fuentes oficiales."
 pubDate: 2026-07-08
 category: transport
 tags: ["sin visado", "visa china", "visado de transito", "reglas de entrada"]
@@ -39,6 +39,9 @@ Pasaporte valido, billete de salida confirmado, reservas de hotel, itinerario cl
 
 Consulta fuentes oficiales antes de comprar vuelos no reembolsables: embajada o consulado chino, Administracion Nacional de Inmigracion, Ministerio de Asuntos Exteriores y la aerolinea. Guarda capturas de reservas y normas relevantes para el mostrador de facturacion.
 
+<!-- AFFILIATE_TRAVEL -->
+
 ## Resumen
 
 Si tu pasaporte esta en entrada unilateral, puedes tener hasta 30 dias sin visado. Si estas en transito hacia un tercer pais, la exencion de 240 horas puede servir. Si no cumples exactamente, solicita visado regular.
+

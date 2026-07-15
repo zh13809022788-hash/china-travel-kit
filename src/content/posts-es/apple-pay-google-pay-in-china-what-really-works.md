@@ -1,6 +1,6 @@
 ﻿---
 title: "Apple Pay y Google Pay en China 2026: lo que realmente funciona"
-description: "Guia honesta para turistas sobre Apple Pay, Google Pay, pagos sin contacto, codigos QR, metro, hoteles, tiendas y metodos de respaldo en China."
+description: "Guia honesta sobre Apple Pay y Google Pay en China: donde funciona contactless, donde falla y que pago usar."
 pubDate: 2026-07-08
 category: payment
 tags: ["apple pay", "google pay", "pagos en china", "contactless", "consejos de viaje", "apple pay en china"]

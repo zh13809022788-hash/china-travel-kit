@@ -1,6 +1,6 @@
 ﻿---
 title: "Aeropuerto Daxing de Pekin al centro 2026: guia de transporte para primerizos"
-description: "Guia completa para ir del Aeropuerto Internacional Beijing Daxing al centro: Airport Express, tren interurbano, taxi, DiDi, bus nocturno, costes y consejos."
+description: "Como ir del aeropuerto Daxing al centro de Pekin: express, tren interurbano, taxi, DiDi, buses nocturnos y costes."
 pubDate: 2026-07-08
 category: transport
 tags: ["pekin", "aeropuerto daxing", "traslado aeropuerto", "airport express", "llegada nocturna"]

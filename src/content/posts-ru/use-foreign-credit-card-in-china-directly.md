@@ -1,6 +1,6 @@
 ---
 title: "Можно ли платить иностранной картой в Китае 2026"
-description: "Где работают Visa и Mastercard, где нужны Alipay/WeChat Pay, как снимать наличны�� и избежать комиссий."
+description: "Где работают Visa и Mastercard, где нужны Alipay/WeChat Pay, как снимать наличные и избежать комиссий."
 pubDate: 2026-07-08
 category: payment
 tags: ["Visa", "Mastercard", "карта", "оплата"]

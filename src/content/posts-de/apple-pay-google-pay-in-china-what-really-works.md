@@ -1,6 +1,6 @@
 ---
 title: "Funktioniert Apple Pay in China? Die ehrliche Antwort fuer 2026"
-description: "Apple Pay und Google Pay in China: Wo kontaktloses Zahlen klappt, wo es scheitert und welche Zahlungsmethode Reisende wirklich brauchen."
+description: "Apple Pay und Google Pay in China: wo kontaktloses Zahlen klappt, wo es scheitert und welche Zahlungsart Reisende brauchen."
 pubDate: 2026-07-08
 category: payment
 tags: ["apple pay", "google pay", "china zahlung", "kontaktlos", "reisetipps", "funktioniert apple pay in china"]

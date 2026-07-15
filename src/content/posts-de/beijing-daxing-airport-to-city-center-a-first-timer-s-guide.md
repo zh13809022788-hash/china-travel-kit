@@ -1,6 +1,6 @@
 ---
 title: "Beijing Daxing Airport ins Zentrum 2026: Transfer-Guide fuer Erstbesucher"
-description: "Kompletter Guide vom Beijing Daxing International Airport ins Stadtzentrum: Daxing Airport Express, Intercity-Bahn, Taxi, DiDi, Nachtbus und spaete Ankunft."
+description: "Vom Beijing Daxing Airport ins Zentrum: Airport Express, Intercity-Bahn, Taxi, DiDi, Nachtbus, Kosten und spaete Ankunft."
 pubDate: 2026-07-08
 category: transport
 tags: ["beijing", "daxing airport", "flughafentransfer", "airport express", "spaete ankunft"]

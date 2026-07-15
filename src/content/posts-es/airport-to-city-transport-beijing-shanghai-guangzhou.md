@@ -1,6 +1,6 @@
 ﻿---
-title: "Transporte del aeropuerto al centro en China 2026: Pekin, Shanghai y Guangzhou"
-description: "Guia practica para ir del aeropuerto al centro en Pekin, Shanghai y Guangzhou: metro, tren express, Maglev, taxi, DiDi, precios aproximados y consejos para tu primera llegada."
+title: "Aeropuerto al centro en China 2026: Pekin, Shanghai y Guangzhou"
+description: "Como ir del aeropuerto al centro en Pekin, Shanghai y Guangzhou: metro, tren express, taxi, DiDi, precios y consejos."
 pubDate: 2026-07-08
 category: transport
 tags: ["transporte aeropuerto", "pekin", "shanghai", "guangzhou", "aeropuerto de guangzhou al centro", "transporte aeropuerto pekin"]

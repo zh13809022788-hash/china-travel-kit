@@ -1,5 +1,5 @@
 ---
-title: "中國自由行規劃 2026：第一次來中國必備支付、eSIM、交通與 App"
+title: "中國自由行規劃 2026：支付、eSIM、交通與 App"
 description: "2026 年第一次來中國的完整規劃指南：出發前要設定的付款、eSIM、交通 App、行李清單與抵達後 24 小時安排。"
 pubDate: 2026-07-13
 category: essentials

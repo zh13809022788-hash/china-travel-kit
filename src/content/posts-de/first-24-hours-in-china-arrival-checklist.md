@@ -1,6 +1,6 @@
 ---
-title: "Die ersten 24 Stunden in China 2026: Ankunfts-Checkliste"
-description: "Was auslaendische Besucher in den ersten 24 Stunden in China erledigen sollten: Internet, Zahlung, Bargeld, Flughafentransfer, Hoteladresse und erste Tests."
+title: "Erste 24 Stunden in China 2026: Ankunfts-Checkliste"
+description: "Was Besucher nach der Landung erledigen sollten: Internet, Zahlung, Bargeld, Flughafentransfer, Hoteladresse und erste Tests."
 pubDate: 2026-07-14
 category: essentials
 tags: ["ankunftscheckliste", "erstes mal china", "zahlung", "transport"]

@@ -1,6 +1,6 @@
 ﻿---
-title: "Guia de comida china para extranjeros 2026: regiones, pedidos y seguridad"
-description: "Guia practica de cocinas regionales chinas para visitantes: que comer por region, como pedir sin chino, seguridad alimentaria, frases utiles y precios."
+title: "Comida china para extranjeros 2026: regiones, pedidos y seguridad"
+description: "Guia de cocinas regionales chinas: que comer, como pedir sin chino, seguridad alimentaria, frases utiles y precios."
 pubDate: 2026-07-15
 category: food
 tags: ["comida china", "cocina regional", "comida callejera", "guia gastronomica", "restaurantes", "sichuan", "cantonesa"]
