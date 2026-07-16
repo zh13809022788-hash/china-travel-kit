@@ -246,8 +246,8 @@ const jsonLd = {
         if(lang.startsWith('fr')){detected='fr';break;}
         if(lang.startsWith('de')){detected='de';break;}
         if(lang.startsWith('es')){detected='es';break;}
-        if(lang.startsWith('zh')){detected='zh-TW';break;}
         if(lang.startsWith('en')){detected='en';break;}
+        // zh-CN/zh-Hans -> no auto-redirect, let user manually choose language
       }
       if(!detected||detected==='en')return;
       // Check we're not already on a locale page
