@@ -25,7 +25,7 @@ faqs:
 
 한국에서 일본이나 동남아를 갈 때처럼 "카드와 네이버지도면 어떻게든 되겠지"라고 생각하면 중국에서는 첫날부터 막힐 수 있습니다. 중국 대도시는 편리하지만, 그 편리함이 모바일 결제와 현지 앱을 전제로 움직입니다. 이 글은 멋진 여행 코스를 짜는 글이 아니라, 첫 1~2일을 허둥대지 않게 만드는 준비 순서입니다.
 
-## The First-Time China Planning Order
+## 중국 첫 여행 준비 순서
 
 많은 여행자가 순서를 거꾸로 잡습니다. 호텔, 맛집, 박물관, 야경 명소부터 저장한 뒤 막상 도착해서는 결제가 안 되고, 지도가 안 열리고, 차량 호출이 어렵고, 기차표 예매에서 막힙니다.
 
@@ -41,7 +41,7 @@ faqs:
 
 앞의 네 가지가 여행의 기반입니다. 이것만 제대로 작동하면 나머지 일정은 현지에서 조정할 여지가 생깁니다.
 
-## 1. Get Internet Access Before You Land
+## 1. 도착 전에 인터넷 접속 준비하기
 
 가장 먼저 확인할 질문은 단순합니다. 공항 문을 나서는 순간 내 휴대폰이 바로 인터넷에 연결될 수 있느냐입니다.
 
@@ -57,9 +57,9 @@ faqs:
 - 설치 방법과 QR 코드, 고객센터 정보를 오프라인으로 저장합니다.
 - 공항 와이파이는 보조 수단으로만 생각합니다.
 
-관련 가이드: [Best eSIM for China Travel in 2026](/posts/best-esim-for-china-travel-2026/).
+관련 가이드: [2026년 중국 여행용 eSIM 추천 가이드](/posts/best-esim-for-china-travel-2026/).
 
-## 2. Set Up Payment Before Departure
+## 2. 출발 전에 결제 수단 설정하기
 
 중국은 모바일 결제가 기본인 나라입니다. 대도시의 작은 식당, 편의점, 택시, 관광지 매표, 노점까지 QR코드 결제를 자연스럽게 요구하는 경우가 많습니다. 해외 신용카드는 고급 호텔, 쇼핑몰, 공항, 일부 브랜드 매장에서 통할 수 있지만 일상 결제 수단으로는 부족합니다.
 
@@ -83,11 +83,11 @@ faqs:
 
 관련 가이드:
 
-- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [여행자를 위한 중국 결제 가이드](/posts/how-to-pay-in-china-tourist-guide/)
+- [해외 카드로 알리페이 설정하기](/posts/alipay-foreign-credit-card-step-by-step/)
+- [외국인 방문객을 위한 WeChat Pay 가이드](/posts/wechat-pay-foreign-visitors-guide/)
 
-## 3. Plan Your First Airport Transfer
+## 3. 첫 공항 이동 계획하기
 
 첫 공항 이동은 여행 전체의 난이도를 크게 좌우합니다. 장거리 비행 뒤라 피곤하고, 짐이 있고, 아직 결제와 데이터 연결을 시험하는 단계입니다. 스트레스에 강한 편이 아니라면 첫 이동부터 복잡한 시내버스 환승을 넣을 필요는 없습니다.
 
@@ -102,13 +102,13 @@ faqs:
 
 베이징, 상하이, 광저우, 선전 같은 대도시는 공항철도나 지하철이 잘 되어 있습니다. 호텔이 역 근처라면 한국에서 공항철도를 타는 감각으로 이동할 수 있습니다. 반대로 밤늦게 도착하거나, 가족 여행이거나, 캐리어가 많거나, 중국이 처음이라면 택시나 DiDi 같은 차량 호출 서비스가 추가 비용만큼의 값을 합니다.
 
-호텔명, 픽업 장소, 목적지를 중국어 큰 글씨로 보여줘야 할 때는 [Show to Driver tool](/tools/show-to-driver/)을 이용하면 편합니다.
+호텔명, 픽업 장소, 목적지를 중국어 큰 글씨로 보여줘야 할 때는 [기사에게 보여주기 도구](/tools/show-to-driver/)을 이용하면 편합니다.
 
-## 4. Install the Essential Apps
+## 4. 필수 앱 설치하기
 
 중국 여행을 위해 앱을 스무 개씩 깔 필요는 없습니다. 매일 실제로 막히는 지점을 해결할 앱만 있으면 됩니다.
 
-### Must-have
+### 필수 앱
 
 - 결제용 Alipay 또는 WeChat Pay
 - 현지 길 찾기에 쓸 지도 앱
@@ -116,7 +116,7 @@ faqs:
 - eSIM 제공사 앱 또는 통신사 앱
 - 항공사 앱과 호텔 예약 앱
 
-### Very useful
+### 있으면 유용한 앱
 
 - 차량 호출용 DiDi
 - 12306 또는 영어 지원 기차표 예약 플랫폼
@@ -125,7 +125,7 @@ faqs:
 
 앱 준비가 충분한지 판단하는 기준은 간단합니다. 도착해서 인터넷에 연결하고, 물 한 병을 결제하고, 차량을 부르고, 호텔 주소를 보여주고, 일정이 바뀌었을 때 누군가에게 연락할 수 있으면 됩니다. 그 정도면 첫 중국 여행의 앱 세팅은 충분합니다.
 
-## 5. Build a Realistic City Order
+## 5. 현실적인 도시 동선 짜기
 
 처음 중국 여행에서 가장 흔한 욕심은 도시를 너무 많이 넣는 것입니다. 중국은 한국보다 훨씬 넓고, 고속철도는 빠르지만 이동 자체가 사라지는 것은 아닙니다. 짐을 싸고, 역까지 가고, 보안검색을 통과하고, 탑승하고, 도착해서 다시 지하철이나 택시로 호텔에 가고, 체크인하는 시간이 모두 필요합니다.
 
@@ -141,10 +141,10 @@ faqs:
 
 관련 가이드:
 
-- [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
-- [Book China Train Tickets on 12306 as a Foreigner](/posts/book-china-train-tickets-12306-foreigners/)
+- [외국인을 위한 중국 고속철 가이드](/posts/china-high-speed-rail-guide-foreigners/)
+- [외국인 12306 중국 기차표 예매 가이드](/posts/book-china-train-tickets-12306-foreigners/)
 
-## 6. Make a First-Day Checklist
+## 6. 첫날 체크리스트 만들기
 
 중국 도착 첫날의 목표는 많은 관광지를 보는 것이 아닙니다. 내 여행 시스템이 실제로 작동하는지 확인하는 날로 잡는 것이 좋습니다.
 
@@ -161,34 +161,34 @@ faqs:
 
 이 여덟 가지가 끝나면 여행은 이미 안정권에 들어온 것입니다.
 
-## Common Planning Mistakes
+## 흔한 계획 실수
 
-### Mistake 1: Relying on foreign cards
+### 실수 1: 해외 카드만 믿기
 
 중국에서 해외 카드 사용 환경은 좋아지고 있지만, 여전히 일상 결제 전체를 맡기기에는 부족합니다. 도시 안에서는 모바일 지갑이 기본값입니다.
 
-### Mistake 2: Assuming airport Wi-Fi solves everything
+### 실수 2: 공항 Wi-Fi로 충분하다고 생각하기
 
 공항 와이파이는 도움이 되지만 만능은 아닙니다. SMS 인증이 필요할 수 있고, 속도가 느릴 수 있으며, 입국심사와 수하물 찾기 중에는 계속 붙잡고 쓰기 어렵습니다.
 
-### Mistake 3: Overloading the itinerary
+### 실수 3: 일정을 너무 빡빡하게 짜기
 
 중국은 천천히 볼수록 만족도가 올라가는 여행지입니다. 도시 수를 줄인 현실적인 일정이, 매일 이동만 하는 체크리스트식 여행보다 훨씬 풍부하게 느껴지는 경우가 많습니다.
 
-### Mistake 4: Not saving Chinese addresses
+### 실수 4: 중국어 주소를 저장하지 않기
 
 호텔의 영어 이름만으로는 택시 기사, 배달 기사, 현지 직원이 바로 알아듣지 못하는 경우가 있습니다. 호텔명과 주소는 반드시 중국어로 저장해 두세요.
 
-### Mistake 5: Forgetting backups
+### 실수 5: 예비 수단을 잊기
 
 카드 한 장, 앱 하나, 데이터 한 가지에만 기대면 작은 오류가 큰 문제로 커질 수 있습니다. 예비 카드, 약간의 위안화 현금, 예약 내역 오프라인 사본, 주요 주소 스크린샷을 준비해 두세요.
 
-## Use the Free Trip Planner
+## 무료 여행 플래너 사용하기
 
-처음 큰 틀을 잡고 싶다면 무료 [China Trip Planner](/trip-planner/)를 이용해 보세요. 방문 도시, 여행 기간, 예산, 여행 스타일, 준비 상태를 입력하면 결제, eSIM, 교통, 앱, 흔한 실수까지 포함한 실전 체크리스트를 만들어 줍니다.
+처음 큰 틀을 잡고 싶다면 무료 [중국 여행 플래너](/trip-planner/)를 이용해 보세요. 방문 도시, 여행 기간, 예산, 여행 스타일, 준비 상태를 입력하면 결제, eSIM, 교통, 앱, 흔한 실수까지 포함한 실전 체크리스트를 만들어 줍니다.
 
-짧은 실무 질문은 [China Travel Help](/travel-help/)에서 확인할 수 있고, 목적지 표시나 여행 도구가 필요하다면 [ChinaTripBox Tool Center](/tools/)에서 시작하면 됩니다.
+짧은 실무 질문은 [중국 여행 도움말](/travel-help/)에서 확인할 수 있고, 목적지 표시나 여행 도구가 필요하다면 [ChinaTripBox 도구 센터](/tools/)에서 시작하면 됩니다.
 
-## Final Takeaway
+## 최종 정리
 
 첫 중국 여행은 완벽한 일정표에서 시작하지 않습니다. 인터넷, 결제, 공항 이동, 필수 앱, 단순한 첫날 계획이라는 기본 시스템에서 시작합니다. 이 기반만 갖춰지면 베이징의 골목, 상하이의 지하철, 청두의 식당, 고속철도역까지 훨씬 편하게 움직일 수 있습니다.
