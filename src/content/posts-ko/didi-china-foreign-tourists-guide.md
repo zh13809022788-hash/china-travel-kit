@@ -118,8 +118,7 @@ Didi 요금은 기본요금, 거리, 시간으로 계산되며 예약 전 예상
 
 앱으로 해결되지 않는 문제는 도움말 섹션의 영어 지원을 통해 신고, 분실물 찾기, 요금 이의 제기를 할 수 있습니다.
 
-## Read Next
-
+## 다음 읽을거리
 - [airport to city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [Show to Driver tool](/tools/show-to-driver/)
 - [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)

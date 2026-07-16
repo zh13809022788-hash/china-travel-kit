@@ -20,22 +20,19 @@ faqs:
     answer: "先開關飛航模式，確認 eSIM 線路已啟用、數據漫遊已開、並被選為預設行動數據。仍不行時，手動選擇網路營運商。最常見原因是設定檔已安裝但尚未完整啟用。"
 ---
 
-## Introduction
-
+## 簡介
 抵達中國後手機沒網路，是很真實的壓力。你需要叫車、聯絡飯店、打開地圖，卻發現本國漫遊很貴或不好用。更麻煩的是，即使連上中國本地網路，平常依賴的國際 App 也可能不能正常使用。
 
 選對 eSIM 可以一次解決兩件事：落地即上網，並讓常用 App 更容易保持可用。關鍵是選擇合適的路由、流量與有效期。
 
-## Before You Begin
-
+## 開始之前
 先確認手機能不能用 eSIM。第一，裝置要有 eSIM 功能；第二，手機不能被電信商鎖定。最快方式是到設定中找「加入 eSIM」或「加入行動方案」。
 
 有些在中國大陸販售的手機可能沒有 eSIM，即使同型號在其他地區支援也一樣。若手機是合約機，也請先向電信商確認已解鎖。
 
 安裝 eSIM 設定檔需要網路，所以出發前在家裡 Wi-Fi 下完成最穩。
 
-## How to Choose the Right China eSIM
-
+## 如何選擇合適的中國 eSIM
 ### 是否繞過內容限制
 
 這是中國 eSIM 最重要的判斷點。多數旅行 eSIM 會漫遊到合作網路，並把流量從香港或其他海外節點出去，因此常用國際 App 通常可用。
@@ -54,8 +51,7 @@ faqs:
 
 <!-- AFFILIATE_ESIM -->
 
-## Step-by-Step Setup Tutorial
-
+## 逐步設定教學
 1. **出發前購買 eSIM。** 在家用穩定 Wi-Fi 購買，通常幾分鐘內收到郵件。
 2. **保存 QR Code。** 把郵件與手動啟用碼截圖，避免抵達後找不到。
 3. **安裝 eSIM 設定檔。** iPhone 到 Settings -> Cellular/Mobile Service -> Add eSIM；Android 到 Network & Internet 或 SIM 設定中新增下載的 SIM。
@@ -64,16 +60,13 @@ faqs:
 6. **抵達後開啟數據漫遊。** 旅行 eSIM 本質上是漫遊，這個開關必須打開。
 7. **設為預設行動數據。** 保留本國線路收簡訊也可以，但關閉本國數據漫遊避免收費。
 
-## Common Mistakes
-
+## 常見錯誤
 不要抵達後才發現手機不支援 eSIM；不要忘記開數據漫遊；不要買沒有說明路由方式的超便宜方案；也不要把 QR Code 只存在雲端，萬一沒網路就打不開。
 
-## Read Next
-
+## 延伸閱讀
 - [Pocket WiFi vs eSIM vs SIM for China](/posts/pocket-wifi-vs-esim-vs-sim-china/)
 - [Internet access in China](/posts/internet-access-china-apps-that-work-2026/)
 - [What to set up before traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 
-## Summary
-
+## 總結
 中國旅行 eSIM 最重要的是三件事：手機支援且已解鎖、方案能讓常用 App 正常使用、流量與天數符合行程。出發前買好並安裝設定檔，抵達後開啟 eSIM、數據漫遊與預設行動數據，通常就能順利上網。

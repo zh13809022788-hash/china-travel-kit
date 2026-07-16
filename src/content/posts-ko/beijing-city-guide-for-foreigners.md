@@ -74,8 +74,7 @@ Beijing은 계절성이 강합니다. 봄은 아름답지만 바람과 먼지가
 
 교통 계획은 하루를 지역별로 묶으십시오. Dongcheng과 Xicheng에는 역사 명소가 많고, Chaoyang은 밤문화와 국제 식당에 좋으며, Great Wall은 덧붙이는 일정이 아니라 하루 일정으로 다루어야 합니다.
 
-## Read Next
-
+## 다음 읽을거리
 - [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
 - [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)

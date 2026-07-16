@@ -92,8 +92,7 @@ faqs:
 
 프로필이 설치되지 않는다면 Wi-Fi에 연결되어 있는지, 휴대폰이 잠금 해제 상태인지, 1회용 QR 코드를 이미 사용하지 않았는지 확인하십시오. 대부분의 여행 eSIM 업체는 채팅으로 24시간 지원을 제공합니다.
 
-## Read Next
-
+## 다음 읽을거리
 - [eSIM vs roaming cost breakdown](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
 - [Pocket WiFi vs eSIM vs local SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
 - [internet access and apps that work in China](/posts/internet-access-china-apps-that-work-2026/)

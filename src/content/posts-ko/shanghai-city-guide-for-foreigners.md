@@ -71,8 +71,7 @@ Shanghai에는 공항이 두 개 있습니다. Pudong은 주요 국제 관문이
 
 날씨도 경험에 영향을 줍니다. 여름은 덥고 습하고, 겨울은 축축하고 쌀쌀하며, 봄과 가을이 가장 편안합니다. 비 예보가 있다면 강변의 긴 야외 산책을 고집하기보다 박물관, 쇼핑몰, 카페, 식당 계획을 준비하십시오.
 
-## Read Next
-
+## 다음 읽을거리
 - [Shanghai metro guide](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
 - [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)

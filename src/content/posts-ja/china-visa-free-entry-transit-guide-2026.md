@@ -83,8 +83,7 @@ faqs:
 - [Ministry of Foreign Affairs](https://www.mfa.gov.cn/eng/)および中国大使館・領事館サイト。国別のビザ免除通知と通常ビザ要件。
 - 航空会社のチェックイン規則。書類が旅程と一致しない場合、搭乗を拒否されることがあります。
 
-## Read Next
-
+## 関連記事
 - [visa-free checker tool](/tools/visa-free-checker/)
 - [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 - [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)

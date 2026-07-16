@@ -95,8 +95,7 @@ Apple App Store 또는 Google Play에서 **Alipay**를 검색하고 Ant Group이
 
 실용적인 습관으로 소액 RMB 현금과 실물 Visa 또는 Mastercard를 예비로 들고 다니십시오. 연결이 끊기거나 카드 한도에 걸리는 순간 대안이 있어 안심됩니다.
 
-## Read Next
-
+## 다음 읽을거리
 - [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
 - [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
 - [cash backup guide for China](/posts/how-much-cash-to-bring-to-china/)

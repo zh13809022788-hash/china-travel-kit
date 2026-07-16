@@ -20,12 +20,10 @@ faqs:
     answer: "高峰、雨天與深夜可能等待較久。可嘗試提高車型、走到更清楚的上車點，或改搭地鐵、飯店叫車與排隊計程車。"
 ---
 
-## Introduction
-
+## 簡介
 中國大城市的捷運很方便，但 DiDi 仍是旅客很常用的工具。帶行李、深夜抵達、下雨、飯店離捷運站遠，或需要從機場到市區時，叫車比自己找路輕鬆很多。
 
-## Before You Go
-
+## 出發前準備
 出發前先完成三件事：
 
 1. 安裝 DiDi 或確認 Alipay、WeChat 裡能打開叫車入口。
@@ -34,36 +32,30 @@ faqs:
 
 同時保存飯店中文地址。英文飯店名有時司機不熟，中文地址最可靠。
 
-## How to Book a Ride
-
+## 如何叫車
 打開 DiDi，確認上車點。機場、車站或商場常有指定上車區，App 會顯示位置，但實地找路可能需要跟著標示走。
 
 輸入目的地時，優先貼上中文地址或選地圖上的正確地點。若不確定，請飯店櫃台幫你確認中文名稱。
 
 選車型後下單，司機接單後可在 App 看到車牌與車型。上車前核對車牌，不要只看車色。
 
-## Payment
-
+## 付款方式
 DiDi 可依版本支援不同付款方式。若海外卡不順，透過 Alipay 或 WeChat Pay 通常更穩。行程結束後在 App 內付款或自動扣款，並保留訂單紀錄。
 
 建議仍帶一點現金，尤其是改搭路邊計程車時。
 
-## Airport and Train Station Tips
-
+## 機場與火車站小提示
 大型機場與高鐵站的叫車點可能離出口有一段距離。不要站在計程車排隊區等 DiDi；請按照 App 或現場「網約車」標示走。若看不懂，截圖給工作人員看。
 
 深夜抵達時，DiDi 可能加價或等候較久。若你很累、行李多，提前安排飯店接送也值得考慮。
 
-## Safety and Etiquette
-
+## 安全與禮儀
 核對車牌與目的地，上車後繫安全帶。若司機打電話或傳訊息，你可以用翻譯 App 回覆簡短內容，例如「我在 3 號門」或「我不會說中文，請按導航走」。
 
-## Read Next
-
+## 延伸閱讀
 - [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [what to set up before China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 - [how to pay in China](/posts/how-to-pay-in-china-tourist-guide/)
 
-## Summary
-
+## 總結
 DiDi 不是在中國旅行的唯一交通方式，但它是非常好的備援與舒適選項。出發前測試登入、準備付款、保存中文地址；現場核對上車點與車牌。這樣即使不會中文，也能大幅降低叫車壓力。

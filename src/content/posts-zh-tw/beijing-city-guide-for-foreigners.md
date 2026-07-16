@@ -22,20 +22,17 @@ cover: "city-beijing"
 coverAlt: "Beijing Forbidden City and traditional imperial architecture"
 ---
 
-## Introduction
-
+## 簡介
 北京是最能感受到中國歷史深度的城市。故宮、天安門、天壇、頤和園、胡同與長城，都不是普通城市景點，而是需要時間消化的重量級行程。
 
 它也比上海更需要計畫。景點大、距離長、安檢多、熱門門票要預約。只要預留時間，北京會非常值得。
 
-## Getting Around
-
+## 交通方式
 北京捷運覆蓋廣、價格低，是遊客最可靠的交通方式。站名與車廂廣播多有英文，但轉乘距離可能很長。用 Alipay 或 WeChat Pay 設定交通 QR Code 會很方便。
 
 DiDi 適合深夜、帶行李或前往不靠近捷運的地點。路邊計程車也可用，但請準備中文地址。
 
-## Where to Stay
-
+## 住宿推薦
 - **東城：** 靠近故宮、王府井、胡同與許多歷史景點，第一次來很方便。
 - **西城：** 接近什剎海、北海與部分傳統街區，步調較生活化。
 - **朝陽：** 國際餐廳、商務、購物與夜生活較多，適合長住或商務旅客。
@@ -43,34 +40,28 @@ DiDi 適合深夜、帶行李或前往不靠近捷運的地點。路邊計程車
 
 選飯店時，靠近地鐵比追求行政區名稱更重要。
 
-## What to See
-
+## 景點推薦
 故宮通常需要提前預約，也需要半天以上。天安門廣場與周邊安檢嚴格，請帶護照並預留時間。景山公園適合俯瞰故宮。頤和園很大，不要低估步行距離。天壇適合早上去，也能看到在地人活動。
 
 長城建議選慕田峪作為第一次體驗，交通與設施相對清楚。
 
-## Food and Daily Setup
-
+## 美食與日常準備
 北京烤鴨、炸醬麵、涮羊肉、豆汁等都值得嘗試。大餐廳較可能有圖片菜單，小店請靠翻譯 App。付款以 Alipay 和 WeChat Pay 為主，帶少量現金備用。
 
-## Suggested Itinerary
-
+## 建議行程
 三天行程可這樣排：第一天故宮、景山、王府井或胡同晚餐；第二天慕田峪長城；第三天天壇與頤和園，或改成雍和宮與胡同散步。
 
 五天則放慢節奏，加入國家博物館、什剎海、798 藝術區與更彈性的美食時間。
 
-## Practical Planning Notes
-
+## 實用規劃筆記
 請隨身帶護照，許多景點與交通服務會核驗身分。北京安檢很常見，景點間不要排得太緊。春秋較舒服，夏天炎熱人多，冬天冷但常有清朗天空。
 
 每天按區域安排。東城與西城集中歷史景點，朝陽適合餐飲購物，長城則當成獨立一天。
 
-## Read Next
-
+## 延伸閱讀
 - [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
 - [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
 
-## Summary
-
+## 總結
 北京最適合想看歷史、建築、博物館與長城的旅客。它安全、交通清楚，但景點大、安檢多、預約要求高。提前訂票、帶護照、按區域安排行程，你會更容易享受這座城市。

@@ -140,6 +140,5 @@ Related guide: [How Much Cash Should You Bring to China?](/posts/how-much-cash-t
 
 不要只帶海外實體卡、完全沒有行動錢包；不要假設所有 App 沒網路也能用；第一次去中國不要安排緊湊的機場轉高鐵；不要只保存英文飯店名；不要把所有付款方式都綁在同一家銀行的一張卡上。
 
-## Final Takeaway
-
+## 重點總結
 去中國前，把最能降低摩擦的工具先設定好：Alipay、WeChat、eSIM、DiDi、火車票規劃、翻譯、中文地址與現金備援。這些小事會決定你的抵達第一天是順利還是手忙腳亂。

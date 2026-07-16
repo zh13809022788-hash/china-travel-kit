@@ -84,8 +84,7 @@ faqs:
 
 아침에는 노점에서 Alipay로 QR을 스캔해 아침을 삽니다. 점심에는 앱 안의 교통 QR로 지하철을 탑니다. 오후에는 박물관 입장료를 QR 코드로 결제합니다. 저녁에는 WeChat Pay로 식당 계산을 나누고, 밤에는 자판기에서 간식을 스캔해 삽니다. 여행 내내 현금 지갑을 열지 않을 수도 있습니다. 지금 중국에서는 그것이 보통입니다.
 
-## Read Next
-
+## 다음 읽을거리
 - [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
 - [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
 - [how much cash to bring](/posts/how-much-cash-to-bring-to-china/)

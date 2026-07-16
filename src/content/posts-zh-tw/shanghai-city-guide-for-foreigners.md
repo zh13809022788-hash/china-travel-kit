@@ -22,53 +22,43 @@ cover: "city-shanghai"
 coverAlt: "Shanghai skyline and the Bund at dusk"
 ---
 
-## Introduction
-
+## 簡介
 上海通常是外國旅客第一次接觸中國最順的城市。外灘的歷史建築與浦東摩天大樓隔江相望，捷運、機場、商場與飯店的英文支援也比多數城市好。對短期旅客，它是柔和落地點；對長住者，它有中國最完整的國際化服務。
 
-## Getting Around
-
+## 交通方式
 上海捷運規模大、效率高、便宜且英文標示完整。你可以在 Alipay 或 WeChat Pay 中設定交通 QR Code，也可以在雙語售票機買單程票。多數線路從早上營運到晚上 10:30 到 11 點左右。
 
 DiDi 適合點到點移動，尤其是深夜、下雨或帶行李。路邊計程車多且打錶，但較舊車輛可能偏好現金或 QR Code。
 
-## Where to Stay: Neighborhoods
-
+## 住宿推薦：區域指南
 - **外灘與人民廣場：** 中央、經典、交通好，適合第一次來想靠近主要景點的人。
 - **前法租界：** 林蔭街道、咖啡館、精品店與餐廳多，氣氛舒適。
 - **靜安：** 商場、辦公與捷運都方便，適合商務旅客。
 - **浦東陸家嘴：** 摩天大樓與金融區，景觀好但更商務化。
 
-## Money & Connectivity
-
+## 金錢與網路
 上海非常適合用 Alipay 或 WeChat Pay。出發前綁好海外卡，抵達後幾乎所有日常支付都能掃碼。少量現金當備用，eSIM 則能確保落地後立刻叫車、查地圖與翻譯。
 
-## Food
-
+## 美食推薦
 上海飲食從小籠包、街頭早餐到高級餐廳都很豐富。本地口味相對偏甜。很多餐廳有圖片菜單或英文；外送 App 也可透過翻譯與行動支付完成訂餐。
 
-## Day Trips
-
+## 一日遊推薦
 上海是長三角旅行起點。朱家角水鄉離市區較近，可用捷運加公車到達；杭州與蘇州搭高鐵約一小時，很適合日歸或過夜延伸。
 
-## Suggested Itinerary
-
+## 建議行程
 三天行程可安排：第一天外灘、南京路、人民廣場與夜景；第二天前法租界、新天地、美術館或餐廳；第三天豫園、老城廂與浦東陸家嘴，或半日去朱家角。
 
 五到七天可加入靜安寺、西岸美術館、濱江騎行、咖啡館散步，以及杭州或蘇州高鐵日歸。
 
-## Practical Planning Notes
-
+## 實用規劃筆記
 上海有浦東與虹橋兩個機場。浦東是主要國際門戶，離市中心較遠；虹橋靠近市區並連接高鐵站。訂飯店與接送前確認機場或車站，避免跨城移動超出預期。
 
 夏季濕熱，冬季濕冷，春秋最舒服。下雨時準備美術館、商場、咖啡館與餐廳備案，比硬走戶外路線更好。
 
-## Read Next
-
+## 延伸閱讀
 - [Shanghai metro guide](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
 - [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
 
-## Summary
-
+## 總結
 上海是第一次到中國最容易上手的城市。交通、付款、英文資訊與國際化服務都成熟，適合短旅、商務與長住。它未必是最傳統的中國城市，但很適合作為舒適基地，再延伸到杭州、蘇州或其他城市。

@@ -83,8 +83,7 @@ faqs:
 - [Ministry of Foreign Affairs](https://www.mfa.gov.cn/eng/) 및 중국 대사관 또는 영사관 사이트의 국가별 무비자 공지와 일반 비자 요건.
 - 항공사의 체크인 규칙. 서류가 일정과 맞지 않으면 항공사가 탑승을 거부할 수 있습니다.
 
-## Read Next
-
+## 다음 읽을거리
 - [visa-free checker tool](/tools/visa-free-checker/)
 - [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 - [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
