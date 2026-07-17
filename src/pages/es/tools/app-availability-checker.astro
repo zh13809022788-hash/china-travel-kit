@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Will My Apps Work in China? App Availability Checker';
+const title = '¿Funcionarán mis apps en China? Comprobador de disponibilidad de apps';
 const description =
-  'Check whether Google, WhatsApp, Instagram, and other apps work in China without a VPN — and see the local alternative for each blocked service.';
+  'Comprueba si Google, WhatsApp, Instagram y otras apps funcionan en China sin VPN y consulta la alternativa local para cada servicio bloqueado.';
 
 interface AppInfo {
   name: string;
@@ -19,25 +19,25 @@ interface AppInfo {
 }
 
 const apps: AppInfo[] = [
-  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Blocked without a VPN.', alt: 'Bing (works) or Baidu' },
-  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Loads but data is inaccurate/offset in mainland China.', alt: 'Apple Maps, Amap, or Baidu Maps' },
-  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Blocked without a VPN.', alt: 'Outlook / a non-Google email' },
-  { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Blocked without a VPN.', alt: 'Bilibili (local)' },
-  { name: 'WhatsApp', category: 'Messaging', status: 'blocked', note: 'Blocked without a VPN.', alt: 'WeChat' },
-  { name: 'Facebook', category: 'Social', status: 'blocked', note: 'Blocked without a VPN.', alt: 'WeChat Moments / RED' },
-  { name: 'Instagram', category: 'Social', status: 'blocked', note: 'Blocked without a VPN.', alt: 'RED (Xiaohongshu)' },
-  { name: 'X (Twitter)', category: 'Social', status: 'blocked', note: 'Blocked without a VPN.', alt: 'Weibo' },
-  { name: 'Telegram', category: 'Messaging', status: 'blocked', note: 'Blocked without a VPN.', alt: 'WeChat' },
-  { name: 'WeChat', category: 'Messaging', status: 'works', note: 'Works fully — the default in China.' },
-  { name: 'Apple services (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Works normally.' },
-  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: 'Works normally.' },
-  { name: 'Booking.com', category: 'Travel', status: 'works', note: 'Works normally.' },
-  { name: 'Airbnb', category: 'Travel', status: 'works', note: 'Works normally.' },
-  { name: 'Trip.com', category: 'Travel', status: 'works', note: 'Works fully — great for trains and hotels.' },
-  { name: 'Alipay', category: 'Pagos', status: 'works', note: 'Works fully — supports foreign cards.' },
-  { name: 'Uber', category: 'Transporte', status: 'blocked', note: 'Not operational in mainland China.', alt: 'DiDi' },
-  { name: 'Netflix', category: 'Media', status: 'blocked', note: 'Not available in mainland China.', alt: 'Local streaming or download beforehand' },
-  { name: 'Spotify', category: 'Media', status: 'blocked', note: 'Not available in mainland China.', alt: 'QQ Music / download offline first' },
+  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Bloqueado sin VPN.', alt: 'Bing (funciona) o Baidu' },
+  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Carga, pero los datos son imprecisos o desplazados en China continental.', alt: 'Apple Maps, Amap o Baidu Maps' },
+  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Bloqueado sin VPN.', alt: 'Outlook u otro correo que no sea de Google' },
+  { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Bloqueado sin VPN.', alt: 'Bilibili (local)' },
+  { name: 'WhatsApp', category: 'Mensajería', status: 'blocked', note: 'Bloqueado sin VPN.', alt: 'WeChat' },
+  { name: 'Facebook', category: 'Social', status: 'blocked', note: 'Bloqueado sin VPN.', alt: 'WeChat Moments / RED' },
+  { name: 'Instagram', category: 'Social', status: 'blocked', note: 'Bloqueado sin VPN.', alt: 'RED (Xiaohongshu)' },
+  { name: 'X (Twitter)', category: 'Social', status: 'blocked', note: 'Bloqueado sin VPN.', alt: 'Weibo' },
+  { name: 'Telegram', category: 'Mensajería', status: 'blocked', note: 'Bloqueado sin VPN.', alt: 'WeChat' },
+  { name: 'WeChat', category: 'Mensajería', status: 'works', note: 'Funciona completamente; es lo habitual en China.' },
+  { name: 'Servicios de Apple (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Funciona con normalidad.' },
+  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: 'Funciona con normalidad.' },
+  { name: 'Booking.com', category: 'Viajes', status: 'works', note: 'Funciona con normalidad.' },
+  { name: 'Airbnb', category: 'Viajes', status: 'works', note: 'Funciona con normalidad.' },
+  { name: 'Trip.com', category: 'Viajes', status: 'works', note: 'Funciona completamente; muy útil para trenes y hoteles.' },
+  { name: 'Alipay', category: 'Pagos', status: 'works', note: 'Funciona completamente; admite tarjetas extranjeras.' },
+  { name: 'Uber', category: 'Transporte', status: 'blocked', note: 'No opera en China continental.', alt: 'DiDi' },
+  { name: 'Netflix', category: 'Multimedia', status: 'blocked', note: 'No disponible en China continental.', alt: 'Streaming local o descarga previa' },
+  { name: 'Spotify', category: 'Multimedia', status: 'blocked', note: 'No disponible en China continental.', alt: 'QQ Music o descarga sin conexión previa' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
