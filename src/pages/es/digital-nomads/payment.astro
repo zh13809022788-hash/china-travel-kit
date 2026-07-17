@@ -3,7 +3,7 @@ import GuideLayout from '../../../layouts/GuideLayout.astro';
 
 const title = 'Cómo pagar en China siendo extranjero (2026)';
 const description =
-  '¿Pueden los extranjeros usar Alipay y WeChat Pay? ¿Todavía necesitas efectivo? Esta guía cubre los métodos de pago para turistas, expatriados y nómadas digitales en China.';
+  '¿Pueden los extranjeros usar Alipay y WeChat Pay? ¿Sigue haciendo falta llevar efectivo? Esta guía explica cómo pagar en China si eres turista, expatriado temporal o nómada digital.';
 const url = '/digital-nomads/payment/';
 const datePublished = '2026-07-09';
 
@@ -14,53 +14,53 @@ const breadcrumbs = [
 ];
 
 const toc = [
-  { id: 'why-mobile', label: 'Por qué domina el pago móvil' },
+  { id: 'why-mobile', label: 'Por qué manda el pago móvil' },
   { id: 'alipay', label: 'Alipay para extranjeros' },
   { id: 'wechat', label: 'WeChat Pay para extranjeros' },
-  { id: 'cash', label: '¿Necesitas efectivo?' },
+  { id: 'cash', label: '¿Hace falta efectivo?' },
   { id: 'cards', label: 'Uso directo de tarjetas extranjeras' },
-  { id: 'scenarios', label: 'Pagos por situación' },
+  { id: 'scenarios', label: 'Pagos según la situación' },
   { id: 'nomad', label: 'Nómadas: alquiler y dinero transfronterizo' },
   { id: 'pitfalls', label: 'Errores comunes' },
   { id: 'faq', label: 'Preguntas frecuentes' },
 ];
 
 const faqs = [
-  { question: '¿Pueden los extranjeros usar Alipay y WeChat Pay en China?', answer: 'Sí. Ambas apps permiten registrarse con número extranjero y vincular tarjetas internacionales Visa, Mastercard o American Express en muchos casos.' },
-  { question: '¿Necesito cuenta bancaria china?', answer: 'No para el gasto diario. Alipay y WeChat Pay funcionan con tarjetas extranjeras. Una cuenta local ayuda solo para recibir RMB o pagar ciertos alquileres.' },
-  { question: '¿Hay límites de gasto?', answer: 'Sí. Las cuentas con tarjeta extranjera tienen límites por transacción y acumulados, además de posibles comisiones en pagos mayores. Revisa la app antes de pagos grandes.' },
-  { question: '¿Se acepta efectivo?', answer: 'Sí, sigue siendo de curso legal, pero muchos comercios prefieren QR y pueden no tener cambio. Lleva algo de RMB como respaldo.' },
-  { question: '¿Funcionará directamente mi tarjeta extranjera?', answer: 'Solo en hoteles internacionales, aeropuertos, centros comerciales de gama alta y algunas cadenas. Para la vida diaria, vincúlala a Alipay o WeChat Pay.' },
-  { question: '¿Cómo pago taxi o DiDi?', answer: 'DiDi puede cobrar automáticamente a tu tarjeta vinculada en Alipay o WeChat Pay. Lleva efectivo pequeño para taxis antiguos como respaldo.' },
-  { question: '¿Puedo recibir pagos como nómada?', answer: 'Para ingresos transfronterizos, sigue usando tu banco y plataformas extranjeras. No canalices ingresos extranjeros por el sistema doméstico chino.' },
+  { question: '¿Pueden los extranjeros usar Alipay y WeChat Pay en China?', answer: 'Sí. Ambas apps permiten registrarse con número extranjero y, en muchos casos, vincular tarjetas internacionales Visa, Mastercard o American Express.' },
+  { question: '¿Necesito una cuenta bancaria china?', answer: 'No para el gasto diario. Alipay y WeChat Pay suelen ser suficientes si vinculas una tarjeta extranjera. Una cuenta local solo ayuda en situaciones concretas, como cobrar RMB o pagar algunos alquileres.' },
+  { question: '¿Existen límites de gasto?', answer: 'Sí. Las cuentas vinculadas a tarjeta extranjera pueden tener topes por operación, acumulados y posibles comisiones en pagos altos. Conviene revisarlo en la app antes de hacer una compra importante.' },
+  { question: '¿Se acepta efectivo?', answer: 'Sí, el efectivo sigue siendo de curso legal, pero muchos negocios prefieren QR y a veces no tienen cambio. Llevar algo de RMB sigue siendo una buena idea.' },
+  { question: '¿Funcionará directamente mi tarjeta extranjera?', answer: 'Solo en algunos hoteles internacionales, aeropuertos, centros comerciales de gama alta y ciertas cadenas. Para la vida diaria, lo normal es usarla a través de Alipay o WeChat Pay.' },
+  { question: '¿Cómo pago un taxi o un DiDi?', answer: 'DiDi puede cargar automáticamente a tu tarjeta vinculada dentro de Alipay o WeChat Pay. Para taxis tradicionales, conviene llevar también algo de efectivo pequeño.' },
+  { question: '¿Puedo recibir pagos como nómada?', answer: 'Si trabajas con ingresos transfronterizos, mantén tu banco y tus plataformas de cobro fuera de China. No es buena idea canalizar ingresos extranjeros por el sistema doméstico chino.' },
 ];
 
 const related = [
-  { title: 'Visa para nómadas digitales en China (2026)', description: 'Todas las formas legales de quedarse: turismo, negocios, tránsito y frontera.', href: '/es/digital-nomads/visa/' },
-  { title: 'Guía completa para nómadas digitales en China', description: 'Internet, coste de vida, mejores ciudades y realidad del trabajo remoto.', href: '/es/digital-nomads/' },
+  { title: 'Visa para nómadas digitales en China (2026)', description: 'Turismo, negocios, tránsito y otras vías legales para quedarse más tiempo.', href: '/es/digital-nomads/visa/' },
+  { title: 'Guía completa para nómadas digitales en China', description: 'Internet, coste de vida, ciudades base y realidad del trabajo remoto.', href: '/es/digital-nomads/' },
   { title: 'Estancia larga en China: guía para extranjeros', description: 'Alojamiento, presupuestos mensuales y logística diaria para uno a seis meses.', href: '/es/long-stay/' },
 ];
 ---
 <GuideLayout title={title} description={description} url={url} datePublished={datePublished} breadcrumbs={breadcrumbs} toc={toc} faqs={faqs} related={related} cover="cover-payment" coverAlt="Pago móvil con código QR en un smartphone en China" locale="es">
-  <p>El dinero en China funciona de forma distinta. El efectivo casi desapareció de las ciudades, las tarjetas extranjeras no sirven en muchos comercios y, al mismo tiempo, pagar es muy fácil cuando tienes Alipay o WeChat Pay configurados.</p>
-  <h2 id="why-mobile">Por qué el pago móvil lo domina todo</h2>
-  <p>El código QR reemplazó a la cartera. Desde tiendas grandes hasta puestos pequeños, escaneas un código o muestras el tuyo. Configura Alipay o WeChat Pay con tu tarjeta extranjera antes de aterrizar.</p>
+  <p>En China, pagar funciona de otra manera. El efectivo casi ha desaparecido de la vida urbana, las tarjetas extranjeras no sirven en muchísimos comercios y, al mismo tiempo, todo se vuelve muy fácil cuando ya tienes Alipay o WeChat Pay bien configurados.</p>
+  <h2 id="why-mobile">Por qué manda el pago móvil</h2>
+  <p>El código QR sustituyó a la cartera física. En supermercados, restaurantes, taxis, cafeterías y puestos pequeños, lo normal es escanear o mostrar un QR. Por eso conviene dejar Alipay o WeChat Pay preparados antes de aterrizar.</p>
   <h2 id="alipay">Alipay para extranjeros</h2>
-  <p>Alipay suele ser la opción más fácil para visitantes extranjeros.</p>
-  <ul><li><strong>Tarjetas admitidas:</strong> Visa, Mastercard, American Express y otras emitidas fuera de China.</li><li><strong>Configuración:</strong> instala Alipay, registra tu número, verifica identidad con pasaporte y añade la tarjeta.</li><li><strong>Límites:</strong> los pagos pequeños suelen no tener comisión; los pagos mayores pueden tener comisión y límites.</li><li><strong>Dónde funciona:</strong> prácticamente donde se acepte pago QR.</li></ul>
+  <p>Para la mayoría de visitantes, Alipay suele ser la opción más fácil y estable.</p>
+  <ul><li><strong>Tarjetas admitidas:</strong> Visa, Mastercard, American Express y otras emitidas fuera de China.</li><li><strong>Configuración:</strong> instala Alipay, registra tu número, verifica tu identidad con el pasaporte y añade la tarjeta.</li><li><strong>Límites:</strong> los pagos pequeños suelen ir sin problema; las operaciones mayores pueden tener comisión o topes.</li><li><strong>Dónde funciona:</strong> prácticamente en cualquier sitio donde acepten pago QR.</li></ul>
   <h2 id="wechat">WeChat Pay para extranjeros</h2>
-  <p>WeChat Pay está dentro de WeChat, una aplicación clave para comunicación y miniprogramas. Conviene tenerlo además de Alipay.</p>
-  <ul><li><strong>Tarjetas:</strong> Visa y Mastercard internacionales principales, con cobertura algo más variable.</li><li><strong>Configuración:</strong> WeChat, Yo, Servicios, Billetera, Tarjetas.</li><li><strong>Comparación:</strong> Alipay suele ser más simple para pagos; WeChat Pay es útil para comercios pequeños y servicios locales.</li></ul>
-  <h2 id="cash">¿Todavía necesitas efectivo?</h2>
-  <p>Sí, como respaldo. Lleva unos cientos de RMB en billetes pequeños para taxis antiguos, zonas rurales, vendedores pequeños o fallos de la aplicación.</p>
+  <p>WeChat Pay vive dentro de WeChat, una app esencial para mensajes, mini-programas y muchas interacciones cotidianas. Merece la pena tenerlo como segunda opción incluso si ya usas Alipay.</p>
+  <ul><li><strong>Tarjetas:</strong> las principales Visa y Mastercard internacionales, aunque la compatibilidad puede variar algo más que en Alipay.</li><li><strong>Configuración:</strong> WeChat, Yo, Servicios, Billetera, Tarjetas.</li><li><strong>Comparación:</strong> Alipay suele ser más directo para pagar; WeChat Pay a veces encaja mejor en negocios pequeños y servicios locales.</li></ul>
+  <h2 id="cash">¿Hace falta efectivo?</h2>
+  <p>Sí, como red de seguridad. Lleva unos cientos de RMB en billetes pequeños para taxis antiguos, vendedores muy modestos, zonas rurales o cualquier fallo puntual de la app o de la tarjeta.</p>
   <h2 id="cards">Uso directo de tarjetas extranjeras</h2>
-  <p>No cuentes con pasar la tarjeta en la mayoría de lugares. Funciona en hoteles internacionales, aeropuertos y algunos centros comerciales; falla en restaurantes cotidianos, transporte y tiendas pequeñas.</p>
-  <h2 id="scenarios">Pagos por situación</h2>
-  <ul><li><strong>Taxi y DiDi:</strong> DiDi cobra a la tarjeta vinculada; efectivo como respaldo.</li><li><strong>Comida a domicilio:</strong> Meituan o Ele.me dentro de Alipay/WeChat.</li><li><strong>Tren de alta velocidad:</strong> 12306 con pasaporte y pago en la aplicación.</li><li><strong>Bicicletas compartidas:</strong> desbloqueo mediante miniprograma.</li><li><strong>Hospital:</strong> los hospitales grandes aceptan pago móvil; lleva pasaporte y algo de efectivo.</li></ul>
-  <h2 id="nomad">Nómadas: alquiler, espacios de coworking y dinero transfronterizo</h2>
-  <p>Para alquileres y espacios de coworking, muchos aceptan Alipay/WeChat o tarjeta. Los propietarios privados pueden pedir transferencia bancaria. Mantén los ingresos empresariales en cuentas extranjeras y trae a China solo gastos de vida.</p>
+  <p>No planifiques tu viaje suponiendo que vas a poder pasar la tarjeta en cualquier sitio. Funcionará sobre todo en hoteles internacionales, aeropuertos y algunos centros comerciales; en restaurantes normales, transporte o comercios pequeños, lo habitual es que no.</p>
+  <h2 id="scenarios">Pagos según la situación</h2>
+  <ul><li><strong>Taxi y DiDi:</strong> DiDi cobra automáticamente a tu tarjeta vinculada; lleva efectivo como respaldo.</li><li><strong>Comida a domicilio:</strong> Meituan o Ele.me dentro de Alipay o WeChat.</li><li><strong>Tren de alta velocidad:</strong> 12306 con pasaporte y pago desde la app o mediante plataformas alternativas.</li><li><strong>Bicis compartidas:</strong> se desbloquean normalmente con mini-programa.</li><li><strong>Hospital:</strong> los hospitales grandes suelen aceptar pago móvil; aun así, conviene llevar pasaporte y algo de efectivo.</li></ul>
+  <h2 id="nomad">Nómadas: alquiler, coworking y dinero transfronterizo</h2>
+  <p>Muchos coworkings y bastantes alquileres aceptan Alipay, WeChat Pay o tarjeta. Algunos propietarios privados, en cambio, pedirán transferencia bancaria. Si trabajas en remoto, mantén los ingresos del negocio en cuentas extranjeras y trae a China solo el dinero destinado a vivir allí.</p>
   <h2 id="pitfalls">Errores comunes</h2>
-  <ul><li><strong>Códigos QR falsos:</strong> escanea solo códigos del comercio.</li><li><strong>Límites:</strong> conoce tus topes antes de compras grandes.</li><li><strong>Cambio informal:</strong> usa bancos, cajeros o tarjeta vinculada.</li><li><strong>Fallo de aplicación:</strong> instala ambas aplicaciones y lleva efectivo pequeño.</li></ul>
-  <h2 id="next">Siguiente: elegir ciudad base</h2>
-  <p>Con visa y pagos resueltos, vuelve a la <a href="/es/digital-nomads/">guía completa para nómadas digitales</a> para comparar costes y ciudades.</p>
+  <ul><li><strong>Escanear QR dudosos:</strong> usa solo códigos del comercio o de canales fiables.</li><li><strong>No revisar límites:</strong> comprueba topes antes de pagos grandes.</li><li><strong>Cambiar dinero por vías informales:</strong> mejor cajeros, bancos o la tarjeta ya vinculada.</li><li><strong>Depender de una sola app:</strong> lleva Alipay y WeChat Pay, además de algo de efectivo.</li></ul>
+  <h2 id="next">Siguiente paso: elegir ciudad base</h2>
+  <p>Con el visado y los pagos claros, vuelve a la <a href="/es/digital-nomads/">guía completa para nómadas digitales</a> para comparar ciudades, costes y estilo de vida.</p>
 </GuideLayout>
