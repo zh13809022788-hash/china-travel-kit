@@ -1,7 +1,7 @@
-﻿---
+---
 import GuideLayout from '../../../layouts/GuideLayout.astro';
 
-const title = 'Der vollständige China-Guide für digitale Nomaden (2026)';
+const title = 'Der vollständige China-Leitfaden für digitale Nomaden (2026)';
 const description =
   'Alles, was du brauchst, um in China zu leben und remote zu arbeiten: Visaoptionen, Zahlungsmethoden, die besten Städte, Internetzugang, Lebenshaltungskosten und praktische Tipps.';
 const url = '/digital-nomads/';
@@ -14,12 +14,12 @@ const breadcrumbs = [
 
 const toc = [
   { id: 'overview', label: 'China für digitale Nomaden' },
-  { id: 'guides', label: 'Wichtige Guides' },
-  { id: 'internet', label: 'Internet & Remote Work' },
+  { id: 'guides', label: 'Wichtige Leitfäden' },
+  { id: 'internet', label: 'Internet & Fernarbeit' },
   { id: 'cost', label: 'Lebenshaltungskosten nach Stadt' },
   { id: 'english', label: 'Englisch & Lebensqualität' },
-  { id: 'faq', label: 'FAQ' },
-  { id: 'next', label: 'Nächster Schritt: KI-Business' },
+  { id: 'faq', label: 'Häufige Fragen' },
+  { id: 'next', label: 'Nächster Schritt: KI-Geschäft' },
 ];
 
 const faqs = [
@@ -39,7 +39,7 @@ const faqs = [
       'Über eine inländische chinesische Verbindung sind Google, Gmail, WhatsApp, Instagram und viele andere Dienste blockiert. Nomaden umgehen das hauptsächlich auf zwei Wegen: Einige internationale Reise-eSIMs leiten Datenverkehr über ein ausländisches Netzwerk, sodass diese Dienste normal laden, oder du richtest vor der Ankunft deinen eigenen regelkonformen Zugang ein. Teste wichtige Arbeitstools immer frühzeitig.',
   },
   {
-    question: 'Ist das Internet in China schnell genug für Remote Work?',
+    question: 'Ist das Internet in China schnell genug für Fernarbeit?',
     answer:
       'Ja. Inländisches Breitband und mobile Daten sind schnell und weit verbreitet, und Videoanrufe zu inländischen Kontakten laufen reibungslos. Der Engpass ist das internationale Routing zu blockierten oder ausländischen Diensten, das langsamer sein oder eine Umgehungslösung erfordern kann. Wenn deine Arbeit überwiegend auf internationalen Plattformen stattfindet, wähle dein Konnektivitäts-Setup bewusst.',
   },
@@ -49,14 +49,14 @@ const faqs = [
       'In internationalen Vierteln großer Städte reicht Englisch meist aus, um zurechtzukommen, und Beschilderungen in U-Bahnen und an Flughäfen sind zweisprachig. Außerhalb dieser Bereiche ist Englisch begrenzt. Übersetzungs-Apps und die Mini-Programme in Alipay und WeChat überbrücken fast jede Lücke, sodass du auch ohne Mandarin gut zurechtkommst, auch wenn ein paar Phrasen sehr helfen.',
   },
   {
-    question: 'Ist China für ausländische Remote Worker sicher?',
+    question: 'Ist China für ausländische Fernarbeitende sicher?',
     answer:
       'Gewaltkriminalität ist selten, und Städte fühlen sich nachts im internationalen Vergleich sehr sicher an. Die Hauptrisiken sind eher administrativ als körperlich: die Einhaltung deiner Visabedingungen, die Registrierung deiner Adresse und keine lokale Arbeit ohne entsprechende Genehmigung. Wenn du die Formalitäten korrekt erledigst, ist der Alltag angenehm und stressarm.',
   },
   {
     question: 'Wie lange kann man als Nomade in China bleiben?',
     answer:
-      'Mit einem Touristenvisum (L) typischerweise 30-90 Tage pro Einreise mit einer möglichen Verlängerung; mit einem Geschäftsvisum (M) häufig 90-180 Tage pro Einreise bei mehrjähriger Gültigkeit. Es gibt kein Visum, das ein unbegrenztes informelles Leben erlaubt. Unser Visa-Guide erklärt jede Option und wie man sie legal kombiniert.',
+      'Mit einem Touristenvisum (L) typischerweise 30-90 Tage pro Einreise mit einer möglichen Verlängerung; mit einem Geschäftsvisum (M) häufig 90-180 Tage pro Einreise bei mehrjähriger Gültigkeit. Es gibt kein Visum, das ein unbegrenztes informelles Leben erlaubt. Unser Visaleitfaden erklärt jede Option und wie man sie legal kombiniert.',
   },
   {
     question: 'Wann ist die beste Jahreszeit, um sich in China niederzulassen?',
@@ -64,20 +64,25 @@ const faqs = [
       'Frühling (April-Mai) und Herbst (September-Oktober) sind landesweit am angenehmsten, mit mildem Wetter und klarem Himmel. Die Sommer sind in weiten Teilen des Landes heiß und feucht; die Winter im Norden sind kalt, während der tropische Süden, etwa Sanya, warm bleibt. Stimme Stadt und Jahreszeit aufeinander ab: Sanya im Winter, Chengdu oder Shanghai im Frühling und Herbst.',
   },
   {
-    question: 'Kann ich in China mein eigenes Business führen oder Kunden betreuen?',
+    question: 'Kann ich in China mein eigenes Geschäft führen oder Kunden betreuen?',
     answer:
-      'Remote für ausländische Kunden oder dein eigenes im Ausland registriertes Business von China aus zu arbeiten, liegt eher in einer Grauzone als in einem klar erlaubten Bereich; lokale Arbeit für chinesische Kunden mit einem Touristenvisum ist nicht erlaubt. Wenn du ein grenzüberschreitendes Ein-Personen-Business betreiben willst, lies unseren speziellen Guide zur KI-Ein-Personen-Firma für die Compliance-Grenzen.',
+      'Fernarbeit für ausländische Kunden oder dein eigenes im Ausland registriertes Geschäft von China aus liegt eher in einer Grauzone als in einem klar erlaubten Bereich; lokale Arbeit für chinesische Kunden mit einem Touristenvisum ist nicht erlaubt. Wenn du ein grenzüberschreitendes Ein-Personen-Geschäft betreiben willst, lies unseren speziellen Leitfaden zur KI-Ein-Personen-Firma für die Compliance-Grenzen.',
   },
   {
     question: 'Brauche ich ein chinesisches Bankkonto?',
     answer:
-      'Meistens nicht. Alipay und WeChat Pay akzeptieren große ausländische Karten für Alltagsausgaben, was das mietfreie tägliche Leben der meisten Nomaden abdeckt. Ein lokales Konto wird erst nützlich, wenn du im Inland RMB empfangen oder bestimmte Vermieter bei längeren Mietverträgen per Banküberweisung bezahlen musst.',
+      'Meistens nicht. Alipay und WeChat Pay akzeptieren große ausländische Karten für Alltagsausgaben, was das tägliche Leben der meisten Nomaden abdeckt. Ein lokales Konto wird erst nützlich, wenn du im Inland RMB empfangen oder bestimmte Vermieter bei längeren Mietverträgen per Banküberweisung bezahlen musst.',
   },
 ];
 
 const related = [
   {
-    title: 'China-Visum für digitale Nomaden (2026)',
+    title: 'Der komplette China-Leitfaden für digitale Nomaden',
+    description: 'Der Überblick: Internet, Lebenshaltungskosten, beste Städte und die Realität von Fernarbeit.',
+    href: '/de/digital-nomads/',
+  },
+  {
+    title: 'China-Visaleitfaden für digitale Nomaden',
     description: 'Touristenvisa, Geschäftsvisa, Transitregeln und Border Runs: alle legalen Möglichkeiten zu bleiben.',
     href: '/de/digital-nomads/visa/',
   },
@@ -85,11 +90,6 @@ const related = [
     title: 'Wie man als Ausländer in China bezahlt',
     description: 'Alipay, WeChat Pay, Bargeld und ausländische Karten: tägliche Zahlungen und Banking einrichten.',
     href: '/de/digital-nomads/payment/',
-  },
-  {
-    title: 'Langzeitaufenthalt in China: Ein Guide für Ausländer',
-    description: 'Unterkunft, monatliche Kosten und Alltag bei Aufenthalten von einem bis sechs Monaten.',
-    href: '/de/long-stay/',
   },
 ];
 ---
@@ -104,7 +104,7 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-digital-nomads"
-  coverAlt="Ein digitaler Nomade arbeitet remote in einem Cafe in China"
+  coverAlt="Ein digitaler Nomade arbeitet remote in einem Café in China"
  locale="de">
   <h2 id="overview">China für digitale Nomaden: Das ehrliche Bild</h2>
   <p>
@@ -112,45 +112,45 @@ const related = [
     belohnt es Menschen, die genauer hinschauen. Im Vergleich zu den klassischen Hubs in
     Südostasien bietet es etwas, womit nur wenige mithalten können: Hochgeschwindigkeitszüge, die
     ein kontinentgroßes Land in eine Reihe kurzer Nachmittagsfahrten verwandeln, mobile Zahlungen,
-    die so allgegenwärtig sind, dass du wochenlang kein Bargeld anfassen musst, günstige und
-    sofort verfügbare Essenslieferung und Ride-Hailing sowie Straßen, die sich um 2 Uhr morgens
-    wirklich sicher anfühlen. Für Remote Worker, die Infrastruktur und Reibungslosigkeit höher
-    bewerten als eine fertige Expat-Partyszene, ist die Alltagsqualität schwer zu schlagen.
+    die so allgegenwärtig sind, dass du wochenlang kein Bargeld anfassen musst, günstige und sofort
+    verfügbare Essenslieferung und Fahrdienste sowie Straßen, die sich um 2 Uhr morgens wirklich
+    sicher anfühlen. Für Fernarbeitende, die Infrastruktur und Reibungslosigkeit höher bewerten als
+    eine fertige Expat-Partyszene, ist die Alltagsqualität schwer zu schlagen.
   </p>
   <p>
     Das ehrliche Gegengewicht sind zwei echte Herausforderungen, die du einplanen musst. Erstens
     gibt es kein spezielles Visum für digitale Nomaden, daher bedeutet legaler Aufenthalt, Touristen-
     oder Geschäftsvisa durchdacht zu nutzen, statt sich auf eine eigens dafür geschaffene
     Genehmigung zu verlassen. Zweitens blockiert die Great Firewall einen großen Teil der
-    westlichen Tools, auf die viele Remote Worker angewiesen sind, darunter Google Workspace,
+    westlichen Tools, auf die viele Fernarbeitende angewiesen sind, darunter Google Workspace,
     WhatsApp und viele soziale Plattformen, sofern deine Verbindung nicht entsprechend eingerichtet
     ist. Beides ist kein Ausschlusskriterium, aber beides belohnt Vorbereitung. Nomaden, die mit
     geklärtem Visum und funktionierendem Internetzugang ankommen, kommen gut zurecht; wer
     improvisiert, ist oft schon in der ersten Woche frustriert.
   </p>
   <p>
-    Dieser Guide ist der Ausgangspunkt für alles Weitere. Er verlinkt auf ausführliche Guides zu
-    den zwei Themen, die Menschen am häufigsten ausbremsen, nämlich Visa und Zahlungen, und erklärt
+    Dieser Leitfaden ist der Ausgangspunkt für alles Weitere. Er verlinkt auf ausführliche Leitfäden
+    zu den zwei Themen, die Menschen am häufigsten ausbremsen, nämlich Visa und Zahlungen, und erklärt
     anschließend die praktischen Realitäten rund um Internet, Lebenshaltungskosten und
     Lebensqualität, die bestimmen, wo du dich niederlassen solltest. Egal, ob du einen einmonatigen
     Test planst oder dir hier ein längeres Leben aufbauen willst: Beginne mit dem Überblick unten
     und folge dann den Links in die Details.
   </p>
 
-  <h2 id="guides">Wichtige Guides</h2>
-  <p>Drei ausführliche Guides behandeln die Themen, die die Erfahrung eines Nomaden in China am stärksten prägen.</p>
+  <h2 id="guides">Wichtige Leitfäden</h2>
+  <p>Drei ausführliche Leitfäden behandeln die Themen, die die Erfahrung eines Nomaden in China am stärksten prägen.</p>
   <h3>Visum &amp; legaler Aufenthalt</h3>
   <p>
     Es gibt kein Nomadenvisum, daher ist das Verständnis deiner Optionen das Wichtigste, was du vor
     der Flugbuchung tun kannst. Unser
-    <a href="/de/digital-nomads/visa/">China-Visa-Guide für digitale Nomaden</a> erklärt
+    <a href="/de/digital-nomads/visa/">China-Visaleitfaden für digitale Nomaden</a> erklärt
     Touristenvisa, Geschäftsvisa, visafreien Transit, warum das Arbeitsvisum nicht zu Freelancern
     passt und wie Border Runs im Jahr 2026 tatsächlich funktionieren.
   </p>
   <h3>Bezahlung &amp; tägliches Banking</h3>
   <p>
-    Mobile Payment ist in China nicht optional: So kaufst du fast alles. Unser
-    <a href="/de/digital-nomads/payment/">Payment-Guide für Ausländer</a> erklärt, wie du
+    Mobile Zahlung ist in China nicht optional: So kaufst du fast alles. Unser
+    <a href="/de/digital-nomads/payment/">Zahlungsleitfaden für Ausländer</a> erklärt, wie du
     ausländische Karten mit Alipay und WeChat Pay verknüpfst, wann du noch Bargeld brauchst, welche
     Transaktionslimits gelten und wie Nomaden Miete, Coworking-Gebühren und grenzüberschreitende
     Geldflüsse handhaben.
@@ -159,19 +159,19 @@ const related = [
   <p>
     Die richtige Stadt hängt von deinem Budget, deiner Toleranz für Großstadtintensität und davon
     ab, ob du häufigen Grenzzugang brauchst. Sieh dir unten den
-    <a href="#cost">Vergleich der Lebenshaltungskosten</a> an und lies die einzelnen Stadtguides zu
+    <a href="#cost">Vergleich der Lebenshaltungskosten</a> an und lies die einzelnen Stadtleitfäden zu
     <a href="/de/posts/shanghai-city-guide-for-foreigners/">Shanghai</a>,
     <a href="/de/posts/chengdu-city-guide-for-foreigners/">Chengdu</a>,
     <a href="/de/posts/hangzhou-city-guide-for-foreigners/">Hangzhou</a> und
     <a href="/de/posts/sanya-city-guide-for-foreigners/">Sanya</a>.
   </p>
 
-  <h2 id="internet">Internet &amp; Remote-Work-Umgebung</h2>
+  <h2 id="internet">Internet &amp; Fernarbeits-Umgebung</h2>
   <p>
     Chinas inländisches Netz ist schnell, günstig und überall verfügbar. Glasfaser-Breitband
-    erreicht selbst einfache Apartments, 5G deckt Städte flächendeckend ab, und öffentlicher
-    Verkehr sowie Cafes bieten zuverlässiges WLAN. Bei Arbeit mit inländischen chinesischen
-    Diensten wirst du kaum über Konnektivität nachdenken.
+    erreicht selbst einfache Apartments, 5G deckt Städte flächendeckend ab, und öffentlicher Verkehr
+    sowie Cafés bieten zuverlässiges WLAN. Bei Arbeit mit inländischen chinesischen Diensten wirst du
+    kaum über Konnektivität nachdenken.
   </p>
   <p>
     Die Schwierigkeit liegt beim internationalen Zugang. Weil viele westliche Plattformen über
@@ -179,13 +179,12 @@ const related = [
     eine internationale eSIM wählen, die über ein ausländisches Netz roamt, damit blockierte Apps
     normal laden, oder vor der Ankunft regelkonformen Zugriff auf deine Arbeitstools einrichten.
     Welche Variante du auch wählst: Teste deinen wichtigsten Stack, also E-Mail, Videoanrufe,
-    Dateisynchronisierung und Code-Repositories, am ersten Tag und nicht am Abend vor einer
-    Deadline.
+    Dateisynchronisierung und Code-Repositories, am ersten Tag und nicht am Abend vor einer Deadline.
   </p>
   <p>
-    Auf der physischen Seite sind Coworking Spaces in First-Tier- und New-First-Tier-Städten gut
-    etabliert, mit weithin verfügbaren Tagespässen und Monatsmitgliedschaften. In kleineren Orten
-    wie Dali schließen Cafes und eine wachsende Zahl nomadenorientierter Spaces die Lücke. Wenn dir
+    Auf der physischen Seite sind Coworking Spaces in Städten der ersten und neuen ersten Kategorie
+    gut etabliert, mit weithin verfügbaren Tagespässen und Monatsmitgliedschaften. In kleineren Orten
+    wie Dali schließen Cafés und eine wachsende Zahl nomadenorientierter Spaces die Lücke. Wenn dir
     verlässliche Infrastruktur vor Ort wichtig ist, gewichte deine Stadtwahl eher in Richtung
     Shanghai, Shenzhen, Chengdu oder Hangzhou.
   </p>
@@ -206,22 +205,22 @@ const related = [
     </thead>
     <tbody>
       <tr>
-        <td>First Tier</td>
+        <td>Erste Kategorie</td>
         <td>Shanghai, Shenzhen</td>
         <td>12,000-18,000</td>
         <td>Komfort, Englisch, Coworking, Grenzzugang</td>
       </tr>
       <tr>
-        <td>New First Tier</td>
+        <td>Neue erste Kategorie</td>
         <td>Chengdu, Hangzhou</td>
         <td>7,000-11,000</td>
         <td>Balance aus Kosten, Ausstattung und Tempo</td>
       </tr>
       <tr>
-        <td>Kleiner / Resort</td>
+        <td>Kleiner Ort / Ferienort</td>
         <td>Dali, Sanya</td>
         <td>5,500-8,500</td>
-        <td>Niedrige Kosten, Lifestyle, Community</td>
+        <td>Niedrige Kosten, Lebensstil, Community</td>
       </tr>
     </tbody>
   </table>
@@ -233,21 +232,22 @@ const related = [
     von Chengdu oder einem Dorf bei Dali deutlich weniger. Der große Ausgleich ist Technologie:
     Echtzeit-Übersetzungs-Apps und die Mini-Programme in Alipay und WeChat helfen bei Bestellungen,
     Verkehr, Terminen und Einkäufen. Zusammen mit zweisprachiger U-Bahn-Beschilderung und
-    Ride-Hailing mit Englischunterstützung kann ein motivierter Neuankömmling ab dem ersten Tag
+    Fahrdiensten mit Englischunterstützung kann ein motivierter Neuankömmling ab dem ersten Tag
     funktionieren. Die Lebensqualität ist insgesamt hoch: günstiger Verkehr, reichlich
     Essenslieferung, sichere Straßen und hervorragende öffentliche Infrastruktur. Luftqualität und
     winterliche Kälte sind die wichtigsten regionalen Faktoren bei der Wahl des Wohnorts.
   </p>
 
-  <h2 id="next">Nächster Schritt: Ein KI-Business von China aus führen</h2>
+  <h2 id="next">Nächster Schritt: Ein KI-Geschäft von China aus führen</h2>
   <p>
-    Manche Remote Worker gehen einen Schritt weiter als Freelancing und führen schlanke
-    Ein-Personen-Operationen: zunehmend KI-gestützte, grenzüberschreitende Businesses, die komplett
+    Manche Fernarbeitende gehen einen Schritt weiter als Freelancing und führen schlanke
+    Ein-Personen-Operationen: zunehmend KI-gestützte, grenzüberschreitende Geschäfte, die komplett
     vom Laptop aus bedient werden. Dieser Weg bringt zusätzliche Compliance-Fragen rund um Visa,
     Steuern und die Frage mit sich, ob du eine lokale Einheit brauchst. Wenn das deine Richtung ist,
     erklärt unser
-    <a href="/de/digital-nomads/ai-opc/">Guide zum Führen einer KI-Ein-Personen-Firma in China</a>
+    <a href="/de/digital-nomads/ai-opc/">Leitfaden zum Führen einer KI-Ein-Personen-Firma in China</a>
     die rechtlichen Grenzen, das Setup für grenzüberschreitende Zahlungen und die Infrastruktur,
     die für Ausländer relevant ist, die von China aus arbeiten.
   </p>
 </GuideLayout>
+
