@@ -40,13 +40,12 @@ const apps: AppInfo[] = [
   { name: 'Spotify', category: 'Media', status: 'blocked', note: 'Not available in mainland China.', alt: 'QQ Music / download offline first' },
 ];
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Will My Apps Work in China?</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">¿Funcionarán Mis Apps en China?</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -54,25 +53,25 @@ const apps: AppInfo[] = [
 
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-4">
       <label class="flex flex-col text-sm sm:max-w-sm">
-        <span class="mb-1 font-medium text-gray-700">Search or filter apps</span>
-        <input id="search" type="text" placeholder="e.g. WhatsApp, Google, Netflix"
+        <span class="mb-1 font-medium text-gray-700">Buscar o filtrar apps</span>
+        <input id="search" type="text" placeholder="p. ej. WhatsApp, Google, Netflix"
           class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
       </label>
       <div class="mt-3 flex flex-wrap gap-2 text-sm">
-        <button data-status="all" class="status-filter btn-primary px-3 py-1">All</button>
-        <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Works</button>
-        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Partial</button>
-        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Blocked</button>
+        <button data-status="all" class="status-filter btn-primary px-3 py-1">Todas</button>
+        <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Funcionan</button>
+        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Parcial</button>
+        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Bloqueadas</button>
       </div>
     </div>
 
     <div id="app-list" class="mt-6 grid gap-3 sm:grid-cols-2"></div>
-    <p id="no-results" class="hidden py-8 text-center text-gray-500">No apps match your search.</p>
+    <p id="no-results" class="hidden py-8 text-center text-gray-500">Ninguna app coincide con tu búsqueda.</p>
 
     <AffiliateCta
-      title="Keep Your Apps Working with a Travel eSIM"
-      description="A China travel eSIM that routes around local restrictions keeps your usual apps online — no separate VPN setup needed."
-      buttonText="See eSIM Options"
+      title="Mantén Tus Apps Funcionando con una eSIM de Viaje"
+      description="Una eSIM de viaje para China que evita las restricciones locales mantiene tus apps habituales en línea — sin necesidad de configurar una VPN aparte."
+      buttonText="Ver Opciones de eSIM"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -87,9 +86,9 @@ const apps: AppInfo[] = [
   let activeStatus = 'all';
 
   const badge = {
-    works: { cls: 'bg-green-100 text-green-800', label: '✅ Works' },
-    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Partial' },
-    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Blocked' },
+    works: { cls: 'bg-green-100 text-green-800', label: '✅ Funcionan' },
+    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Parcial' },
+    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Bloqueadas' },
   };
 
   function render() {
@@ -111,7 +110,7 @@ const apps: AppInfo[] = [
             <span class="whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ${badge[a.status].cls}">${badge[a.status].label}</span>
           </div>
           <p class="mt-2 text-sm text-gray-600">${a.note}</p>
-          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">Use instead:</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
+          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">Usar en su lugar:</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
         </div>`)
       .join('');
 

@@ -10,7 +10,6 @@ const title = 'Conversor de moneda RMB para viajeros en China';
 const description =
   'Convierte tu moneda local a yuanes chinos (RMB) y viceversa, y consulta cuanto cuestan las cosas cotidianas en China para comprobar precios al momento.';
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main class="container-page py-10">
@@ -51,21 +50,21 @@ const description =
       <p id="rate-line" class="mt-3 text-sm text-gray-500"></p>
       <p class="mt-1 text-xs text-gray-400">
         Las tasas son referencias aproximadas para planificar, no tipos de mercado en tiempo real. Consulta tu banco o un conversor
-        en vivo para conocer el tipo exacto en el momento de la transaccion.
+        en vivo para conocer el tipo exacto en el momento de la transacción.
       </p>
     </div>
 
-    <!-- Cuanto cuestan las cosas -->
+    <!-- Cuánto cuestan las cosas -->
     <section class="mt-8">
-      <h2 class="text-xl font-bold text-gray-900">Cuanto cuestan las cosas en China</h2>
-      <p class="mt-1 text-sm text-gray-500">Precios tipicos en RMB, con tu moneda mostrada como referencia.</p>
+      <h2 class="text-xl font-bold text-gray-900">Cuánto cuestan las cosas en China</h2>
+      <p class="mt-1 text-sm text-gray-500">Precios típicos en RMB, con tu moneda mostrada como referencia.</p>
       <div id="cost-grid" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
     </section>
 
     <AffiliateCta
       title="Evita la casa de cambio"
-      description="Vincula una tarjeta sin comision por cambio de divisa a Alipay o WeChat Pay y paga al tipo real, sin recargo de cambio en efectivo."
-      buttonText="Ver configuracion de pagos"
+      description="Vincula una tarjeta sin comisión por cambio de divisa a Alipay o WeChat Pay y paga al tipo real, sin recargo por cambio en efectivo."
+      buttonText="Ver configuración de pagos"
       placeholder={AFFILIATE_LINKS.payment}
     />
   </main>
@@ -90,12 +89,12 @@ const description =
   const commonCosts: { label: string; rmb: number }[] = [
     { label: 'Botella de agua', rmb: 2 },
     { label: 'Viaje en metro', rmb: 4 },
-    { label: 'Snack callejero', rmb: 10 },
-    { label: 'Cafe', rmb: 30 },
+    { label: 'Aperitivo callejero', rmb: 10 },
+    { label: 'Café', rmb: 30 },
     { label: 'Comida en restaurante informal', rmb: 45 },
     { label: 'Trayecto corto en DiDi / taxi', rmb: 25 },
     { label: 'Tren de alta velocidad (1-2 h)', rmb: 250 },
-    { label: 'Entrada de museo / atraccion', rmb: 60 },
+    { label: 'Entrada de museo / atracción', rmb: 60 },
     { label: 'Hotel de gama media / noche', rmb: 450 },
   ];
 

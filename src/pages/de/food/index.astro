@@ -1,4 +1,5 @@
 ---
+
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -11,8 +12,7 @@ const posts = (await getCollection('posts-de'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = 'China-Guides zu Essen, Restaurants und Etikette';
-const description =
-  'Practical China food guides for foreign visitors: ordering delivery, street-food safety, spice levels, tipping, restaurant etiquette, and dining culture.';
+const description = 'Praktische China-Essensguides für ausländische Besucher: Lieferessen bestellen, Streetfood-Sicherheit, Schärfegrade, Trinkgeld, Restaurantetikette und Esskultur.';
 
 const pathways = [
   {
@@ -45,6 +45,7 @@ const cultureLinks = [
   },
 ];
 ---
+
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">

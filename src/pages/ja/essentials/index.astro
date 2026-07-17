@@ -1,4 +1,5 @@
 ---
+
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -12,9 +13,9 @@ const posts = (await getCollection('posts-ja'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = '中国旅行準備ガイド：ビザ、時期、基本準備';
-const description =
-  'Plan your trip to China with confidence: visas and entry rules, the best time to visit, what to pack, safety, and everything to sort before you fly.';
+const description = '中国旅行を安心して計画しましょう。ビザや入国ルール、ベストシーズン、持ち物、安全対策、出発前に準備すべきことをまとめました。';
 ---
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />

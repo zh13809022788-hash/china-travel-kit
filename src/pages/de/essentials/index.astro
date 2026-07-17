@@ -1,4 +1,5 @@
 ---
+
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -12,9 +13,9 @@ const posts = (await getCollection('posts-de'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = 'China-Reiseplanung: Visa, Reisezeit und Grundlagen';
-const description =
-  'Plan your trip to China with confidence: visas and entry rules, the best time to visit, what to pack, safety, and everything to sort before you fly.';
+const description = 'Plane deine Reise nach China mit gutem Gefühl: Visa und Einreisebestimmungen, die beste Reisezeit, Packtipps, Sicherheit und alles, was du vor dem Abflug erledigen solltest.';
 ---
+
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">

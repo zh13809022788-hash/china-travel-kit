@@ -19,7 +19,6 @@ const needOptions = [
   { value: 'food', label: 'Comida y entrega' },
 ];
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main>
@@ -67,7 +66,7 @@ const needOptions = [
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               País o región de origen
-              <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="United States, UK, Singapore..." />
+              <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="Estados Unidos, Reino Unido, Singapur..." />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
@@ -269,7 +268,7 @@ const needOptions = [
     const perCity = Math.max(1, Math.floor(days / Math.max(1, cities.length)));
 
     const preDeparture = [
-      `Install Alipay, WeChat, DiDi, a translation app, and an offline map before leaving ${escapeHtml(home)}.`,
+      `Instala Alipay, WeChat, DiDi, una app de traducción y un mapa offline antes de salir de ${escapeHtml(home)}.`,
       needs.includes('payment')
         ? 'Vincula una Visa o Mastercard extranjera a Alipay y prueba una verificación pequeña antes de salir.'
         : 'Mantén los pagos simples: una billetera móvil, una tarjeta física y algo de efectivo en RMB.',
@@ -283,8 +282,8 @@ const needOptions = [
       'Configuración principal: Alipay con tarjeta extranjera, porque suele ser la primera billetera más práctica para visitantes.',
       'Respaldo: WeChat Pay si tu tarjeta se vincula correctamente, más una Visa o Mastercard física.',
       budget === 'Económico'
-        ? 'Efectivo de respaldo: carry a small amount of RMB for stalls, deposits, or card/wallet issues.'
-        : 'Efectivo de respaldo: keep enough RMB for taxi, snacks, and one simple meal in case mobile payment fails.',
+        ? 'Efectivo de respaldo: lleva una pequeña cantidad de RMB para puestos, depósitos o problemas con tarjetas/billeteras.'
+        : 'Efectivo de respaldo: mantén suficiente RMB para taxi, aperitivos y una comida sencilla por si falla el pago móvil.',
       'No dependas de Apple Pay o Google Pay como método principal en China continental.',
     ];
 
@@ -296,7 +295,7 @@ const needOptions = [
     ];
 
     const transport = [
-      `First route: plan ${escapeHtml(arrival)} airport or station to hotel before landing.`,
+      `Primera ruta: planifica el trayecto desde el aeropuerto o estación de ${escapeHtml(arrival)} hasta el hotel antes de aterrizar.`,
       'Usa metro para rutas urbanas predecibles, DiDi para puerta a puerta y tren de alta velocidad entre ciudades.',
       needs.includes('transport')
         ? 'Para días de tren, reserva con antelación cuando sea posible y mantén los datos del pasaporte iguales en la plataforma.'
@@ -307,7 +306,7 @@ const needOptions = [
     const dayPlan = cities.map((city, index) => {
       const start = index * perCity + 1;
       const end = index === cities.length - 1 ? days : Math.min(days, start + perCity - 1);
-      return `Days ${start}-${end}: ${escapeHtml(city)} - mantén ligera la primera media jornada, confirma pagos/datos y agrupa visitas por distrito.`;
+      return `Días ${start}-${end}: ${escapeHtml(city)} - mantén ligera la primera media jornada, confirma pagos/datos y agrupa visitas por distrito.`;
     });
 
     const mistakes = [
@@ -337,7 +336,7 @@ const needOptions = [
       `País o región de origen: ${home}`,
       `Ciudad de llegada: ${arrival}`,
       `Ciudades de destino: ${cities.join(', ')}`,
-      `Duración del viaje: ${days} days`,
+      `Duración del viaje: ${days} días`,
       `Motivo: ${purpose}`,
       `Económico: ${budget}`,
       `Estilo: ${style}`,

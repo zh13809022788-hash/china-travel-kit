@@ -1,4 +1,5 @@
 ---
+
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -12,8 +13,7 @@ const posts = (await getCollection('posts-es'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = 'Transportee en China: trenes, apps de taxi y movilidad';
-const description =
-  'Aprende a reservar trenes de alta velocidad, usar DiDi y moverte en transporte público en China.';
+const description = 'Aprende a reservar trenes de alta velocidad, usar DiDi y moverte en transporte público en China.';
 
 const transportPaths = [
   { href: '/es/posts/china-high-speed-rail-guide-foreigners/', title: 'Long-distance trains', desc: 'Use this for city-to-city planning, seat classes, passport entry, and station timing.' },
@@ -22,6 +22,7 @@ const transportPaths = [
   { href: '/es/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Metro systems', desc: 'Learn QR tickets, transfers, and rush-hour habits through the Shanghai example.' },
 ];
 ---
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />

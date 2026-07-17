@@ -8,7 +8,6 @@ const title = 'Mostrar al conductor: tarjeta de dirección en chino';
 const description =
   'Crea en tu teléfono una tarjeta grande con un mensaje en chino para taxistas, personal del hotel y para pedir indicaciones en China. Sin inicio de sesión, sin instalar apps y sin guardar datos personales.';
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main class="container-page py-8 md:py-10">
@@ -56,7 +55,7 @@ const description =
             <input
               id="extra"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Número de puerta, lobby del hotel, punto de recogida, equipaje, etc."
+              placeholder="Número de puerta, vestíbulo del hotel, punto de recogida, equipaje, etc."
             />
           </label>
 
@@ -113,7 +112,7 @@ const description =
               Pantalla completa
             </button>
             <a href="/es/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
-              Pedir ayuda de AI
+              Pedir ayuda de IA
             </a>
           </div>
         </div>
@@ -228,7 +227,7 @@ const description =
     if (!card) return;
     if (!document.fullscreenElement) {
       await card.requestFullscreen?.();
-      fullscreenBtn.textContent = 'Exit Pantalla completa';
+      fullscreenBtn.textContent = 'Salir de pantalla completa';
     } else {
       await document.exitFullscreen?.();
       fullscreenBtn.textContent = 'Pantalla completa';
@@ -237,7 +236,7 @@ const description =
 
   document.addEventListener('fullscreenchange', () => {
     if (!fullscreenBtn) return;
-    fullscreenBtn.textContent = document.fullscreenElement ? 'Exit Pantalla completa' : 'Pantalla completa';
+    fullscreenBtn.textContent = document.fullscreenElement ? 'Salir de pantalla completa' : 'Pantalla completa';
   });
 
   quickButtons.forEach((button) => {
@@ -251,4 +250,3 @@ const description =
 
   render();
 </script>
-

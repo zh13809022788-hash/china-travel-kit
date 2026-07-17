@@ -10,23 +10,22 @@ const title = 'China Clothing & Shoe Size Converter';
 const description =
   'Convert US, UK, and EU clothing and shoe sizes to Chinese sizes so you can shop with confidence in China. Covers men\'s and women\'s apparel and footwear.';
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Clothing & Shoe Size Converter</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Conversor de tallas de ropa y calzado</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm">
-      <button data-tab="women-clothing" class="size-tab btn-primary px-3 py-1.5">Women's Clothing</button>
-      <button data-tab="men-clothing" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Men's Clothing</button>
-      <button data-tab="women-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Women's Shoes</button>
-      <button data-tab="men-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Men's Shoes</button>
+      <button data-tab="women-clothing" class="size-tab btn-primary px-3 py-1.5">Ropa de mujer</button>
+      <button data-tab="men-clothing" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Ropa de hombre</button>
+      <button data-tab="women-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Calzado de mujer</button>
+      <button data-tab="men-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Calzado de hombre</button>
     </div>
 
     <div class="mt-6 overflow-x-auto">
@@ -34,9 +33,9 @@ const description =
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
             <th class="py-3 pr-4 font-semibold">China</th>
-            <th class="py-3 pr-4 font-semibold">US</th>
-            <th class="py-3 pr-4 font-semibold">UK</th>
-            <th class="py-3 pr-4 font-semibold">EU</th>
+            <th class="py-3 pr-4 font-semibold">EE. UU.</th>
+            <th class="py-3 pr-4 font-semibold">Reino Unido</th>
+            <th class="py-3 pr-4 font-semibold">UE</th>
           </tr>
         </thead>
         <tbody id="size-rows"></tbody>
@@ -44,14 +43,14 @@ const description =
     </div>
 
     <p class="mt-4 text-xs text-gray-400">
-      Sizing varies by brand and fit. Chinese clothing often runs smaller than Western equivalents —
-      when in doubt, size up or try before you buy. These are general reference charts.
+      Las tallas varían según la marca y el corte. La ropa china suele ser más pequeña que sus equivalentes occidentales —
+      si tienes dudas, elige una talla más o pruébatela antes de comprar. Estas son tablas de referencia generales.
     </p>
 
     <AffiliateCta
-      title="Shop Smart on Your Trip"
-      description="Sort your payments and connectivity first so you can buy from any shop or app in China without friction."
-      buttonText="See Travel Essentials"
+      title="Compra de forma inteligente en tu viaje"
+      description="Organiza primero tus pagos y conectividad para poder comprar en cualquier tienda o aplicación en China sin complicaciones."
+      buttonText="Ver esenciales de viaje"
       placeholder={AFFILIATE_LINKS.transport}
     />
   </main>
@@ -59,8 +58,8 @@ const description =
 </BaseLayout>
 
 <script>
-  // Reference conversion charts. China clothing uses height/bust cm labels,
-  // commonly simplified to numeric sizes; shoes use EU-based cm sizing.
+  // Tablas de conversión de referencia. La ropa china usa etiquetas en cm de altura/pecho,
+  // comúnmente simplificadas a tallas numéricas; el calzado usa tallaje en cm basado en la UE.
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
     'women-clothing': [
       { cn: '155/80A (XS)', us: '0–2', uk: '4–6', eu: '32–34' },

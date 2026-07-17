@@ -30,7 +30,6 @@ const safetyRules = [
   'Confirma normas importantes con fuentes oficiales, aerolíneas, bancos, telecomunicaciones u operadores de apps.',
 ];
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main>
@@ -42,7 +41,7 @@ const safetyRules = [
             Pregunta sobre tu viaje a China antes de que te bloquee
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            Empieza con ayuda gratuita de AI para problemas prácticos de viaje en China. Si tu pregunta necesita
+            Empieza con ayuda gratuita de IA para problemas prácticos de viaje en China. Si tu pregunta necesita
             criterio humano, capturas o contexto de ida y vuelta, conviértela en solicitud de revisión.
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
@@ -56,9 +55,9 @@ const safetyRules = [
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
           <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Estado piloto</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">AI primero, revisión humana después</h2>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">IA primero, revisión humana después</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            Las respuestas gratuitas las genera AI. La ayuda revisada por humanos aún se gestiona por email
+            Las respuestas gratuitas las genera IA. La ayuda revisada por humanos aún se gestiona por email
             mientras probamos el flujo.
           </p>
           <dl class="mt-5 grid gap-3 text-sm">
@@ -68,7 +67,7 @@ const safetyRules = [
             </div>
             <div class="flex items-center justify-between gap-4">
               <dt class="text-gray-500">Vía de respuesta</dt>
-              <dd class="font-semibold text-gray-900">AI + seguimiento por email</dd>
+              <dd class="font-semibold text-gray-900">IA + seguimiento por email</dd>
             </div>
             <div class="flex items-center justify-between gap-4">
               <dt class="text-gray-500">Pagos</dt>
@@ -83,7 +82,7 @@ const safetyRules = [
       <section id="travel-help-chat" class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <div class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <div class="border-b border-gray-200 bg-gray-50 px-5 py-4">
-          <p class="section-kicker">Ayuda gratuita de viaje con AI</p>
+          <p class="section-kicker">Ayuda gratuita de viaje con IA</p>
             <h2 class="mt-1 text-2xl font-bold text-gray-950">Mesa de ayuda de viaje</h2>
           </div>
 
@@ -93,7 +92,7 @@ const safetyRules = [
                 <div class="max-w-[88%] rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-700">
                   <strong class="block text-gray-950">Ayuda de ChinaTripBox</strong>
                   Cuéntanos qué intentas hacer, en qué fase del viaje estás y qué ha ocurrido ya.
-                  La ayuda de AI sugerirá próximos pasos y marcará cuándo conviene revisión humana.
+                  La ayuda de IA sugerirá próximos pasos y marcará cuándo conviene revisión humana.
                 </div>
               </div>
 
@@ -116,12 +115,12 @@ const safetyRules = [
                     name="message"
                     rows="5"
                     class="w-full resize-y rounded-lg border border-gray-300 px-4 py-3 text-sm leading-6 text-gray-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
-                    placeholder="Ejemplo: llego mañana a Shanghai. Mi Mastercard no se vincula a WeChat Pay, pero Alipay funciona. ¿Aún puedo usar metro, DiDi y comida a domicilio?"
+                    placeholder="Ejemplo: llego mañana a Shanghái. Mi Mastercard no se vincula a WeChat Pay, pero Alipay funciona. ¿Aún puedo usar metro, DiDi y comida a domicilio?"
                     required
                   ></textarea>
                   <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <p id="form-status" class="text-sm text-gray-500">Evita datos personales sensibles.</p>
-                    <button id="help-submit" type="submit" class="btn-primary">Preguntar a AI</button>
+                    <button id="help-submit" type="submit" class="btn-primary">Preguntar a la IA</button>
                   </div>
                 </form>
               </div>
@@ -142,7 +141,7 @@ const safetyRules = [
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
                   Tema principal
                   <select id="help-topic" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                    <option>Pagos apps</option>
+                    <option>Apps de pago</option>
                     <option>Internet y eSIM</option>
                     <option>Ruta de transporte</option>
                     <option>Comida, entrega o apps locales</option>
@@ -154,7 +153,7 @@ const safetyRules = [
                   <input
                     id="help-location"
                     class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700"
-                    placeholder="Shanghai, Beijing, aeropuerto al hotel..."
+                    placeholder="Shanghái, Pekín, aeropuerto al hotel..."
                   />
                 </label>
               </div>
@@ -256,7 +255,7 @@ const safetyRules = [
   const submitButton = document.getElementById('help-submit') as HTMLButtonElement | null;
 
   const guideLinks: Record<string, { label: string; href: string }> = {
-    'Pagos apps': { label: 'guía de configuración de pagos', href: '/es/payment/' },
+    'Apps de pago': { label: 'guía de configuración de pagos', href: '/es/payment/' },
     'Internet y eSIM': { label: 'guía de eSIM', href: '/es/esim/' },
     'Ruta de transporte': { label: 'guía de transporte', href: '/es/transport/' },
     'Comida, entrega o apps locales': {
@@ -322,7 +321,7 @@ const safetyRules = [
     const place = locationInput?.value.trim();
     const guide = guideLinks[selectedTopic] ?? guideLinks['Preparación general del viaje'];
     const needsHuman =
-      /screenshot|photo|declin|failed|stuck|urgent|tomorrow|today|passport|verification|identity|hotel|route/i.test(
+      /captura|foto|rechaz|fall|bloquead|urgente|mañana|hoy|pasaporte|verificacion|identidad|hotel|ruta/i.test(
         question,
       );
 
@@ -371,7 +370,7 @@ const safetyRules = [
 
     const data = await response.json() as { answer?: string; error?: string };
     if (!response.ok || !data.answer) {
-      throw new Error(data.error || 'Ayuda de AI no disponible.');
+      throw new Error(data.error || 'Ayuda de IA no disponible.');
     }
     return data.answer;
   };
@@ -384,23 +383,23 @@ const safetyRules = [
       return;
     }
     addBubble(escapeHtml(question), true);
-    const thinking = addBubble('La AI está revisando tu pregunta de viaje...');
-    if (status) status.textContent = 'Preguntando a la ayuda de viaje con AI...';
+    const thinking = addBubble('La IA está revisando tu pregunta de viaje...');
+    if (status) status.textContent = 'Preguntando a la ayuda de viaje con IA...';
     if (submitButton) submitButton.disabled = true;
 
     try {
       const answer = await requestAIAnswer(question);
       if (thinking) {
         thinking.innerHTML = `
-          <strong class="block text-gray-950">Ayuda de viaje con AI</strong>
+          <strong class="block text-gray-950">Ayuda de viaje con IA</strong>
           <span class="mt-2 block">${formatAIAnswer(answer)}</span>
           <span class="mt-3 block text-xs text-gray-500">Para problemas complejos de cuenta, pago, visa, legales, médicos o de emergencia, verifica con el proveedor oficial o solicita revisión humana.</span>
         `;
       }
-      if (status) status.textContent = 'Respuesta de AI lista. Usa el email si quieres revisión humana.';
+      if (status) status.textContent = 'Respuesta de IA lista. Usa el email si quieres revisión humana.';
     } catch {
       if (thinking) thinking.innerHTML = buildReply(question);
-      if (status) status.textContent = 'La AI no está disponible, así que se preparó una respuesta local de respaldo.';
+      if (status) status.textContent = 'La IA no está disponible, así que se preparó una respuesta local de respaldo.';
     } finally {
       if (submitButton) submitButton.disabled = false;
     }

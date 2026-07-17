@@ -1,4 +1,5 @@
 ---
+
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -14,8 +15,7 @@ const cityPosts = allPosts
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
 const title = 'China-Stadtguides für ausländische Besucher';
-const description =
-  'Plan practical city stops in China with guides for Beijing, Shanghai, Guangzhou, Chengdu, Xi\'an, Hangzhou, Chongqing, and Sanya, plus airport, metro, food, and transport next steps.';
+const description = 'Plane praktische Städtestopps in China mit Reiseführern für Peking, Shanghai, Guangzhou, Chengdu, Xi’an, Hangzhou, Chongqing und Sanya sowie nächsten Schritten zu Flughafen, Metro, Essen und Verkehr.';
 
 const mapCities = [
   { name: 'Beijing', x: 470, y: 80, href: '#beijing' },
@@ -172,6 +172,7 @@ const faqJsonLd = {
   })),
 };
 ---
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />

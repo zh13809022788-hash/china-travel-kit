@@ -1,4 +1,5 @@
 ---
+
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -11,8 +12,7 @@ const posts = (await getCollection('posts-zh-tw'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = '中國美食、用餐與禮儀指南';
-const description =
-  'Practical China food guides for foreign visitors: ordering delivery, street-food safety, spice levels, tipping, restaurant etiquette, and dining culture.';
+const description = '給外國旅客的中國實用飲食指南：外送點餐、街頭小吃安全、辣度、給小費、餐廳禮儀與飲食文化。';
 
 const pathways = [
   {
@@ -45,6 +45,7 @@ const cultureLinks = [
   },
 ];
 ---
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
   <Header locale="zh-TW" />

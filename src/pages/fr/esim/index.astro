@@ -1,4 +1,5 @@
 ---
+
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -12,8 +13,7 @@ const posts = (await getCollection('posts-fr'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = 'eSIM et données en Chine : rester connecté à l’arrivée';
-const description =
-  'Compare and set up the best eSIM data plans for travel in China. Get connected the moment you land, no physical SIM swap required.';
+const description = 'Comparez et configurez les meilleurs forfaits de données eSIM pour voyager en Chine. Connectez-vous dès votre arrivée, sans changer de carte SIM physique.';
 
 const connectionChoices = [
   {
@@ -36,6 +36,7 @@ const internetTools = [
   { href: '/fr/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access guide', desc: 'Understand app access, VPN expectations, and practical setup before arrival.' },
 ];
 ---
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />
