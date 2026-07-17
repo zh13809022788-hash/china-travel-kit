@@ -33,6 +33,15 @@ export default defineConfig({
           es: 'es-ES',
         },
       },
+      filter: (page) => {
+        const url = new URL(page);
+        const path = url.pathname;
+        // Keep only English pages; exclude non-English locales and low-value cluster pages
+        const excludedPrefixes = ['/zh-tw/', '/ja/', '/ko/', '/ru/', '/fr/', '/de/', '/es/', '/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
+        if (excludedPrefixes.some((prefix) => path.startsWith(prefix))) return false;
+        if (path === '/404' || path === '/404/') return false;
+        return true;
+      },
     }),
     mdx(),
   ],

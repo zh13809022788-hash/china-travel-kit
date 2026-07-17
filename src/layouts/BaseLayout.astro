@@ -19,10 +19,19 @@ const {
   description = 'Practical, up-to-date guides for foreign visitors to China: mobile payments, eSIM data plans, trains, ride-hailing and more.',
   image = '/og-default.svg',
   type = 'website',
-  noindex = false,
+  noindex: explicitNoindex = false,
   locale = 'en',
   alternates,
 } = Astro.props;
+
+// Auto noindex for non-English locales and low-value cluster pages
+const path = Astro.url.pathname;
+const nonEnglishLocales = ['zh-tw', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
+const isNonEnglish = nonEnglishLocales.some((loc) => path.startsWith(`/${loc}/`));
+const lowValuePaths = ['/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
+const isLowValue = lowValuePaths.some((prefix) => path.startsWith(prefix));
+const is404 = path === '/404/' || path === '/404';
+const noindex = explicitNoindex || isNonEnglish || isLowValue || is404;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
