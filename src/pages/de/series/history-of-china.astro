@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-de'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'History of China — Ancient Sites & Stories for Travelers';
-const description = 'Explore China\'s historical sites as a foreign traveler: the Great Wall, Terracotta Army, Forbidden City, Silk Road, ancient capitals, and water towns — decoded with the stories behind what you see.';
+const title = 'Geschichte Chinas — Antike Stätten & Geschichten für Reisende';
+const description = 'Erkunde Chinas historische Stätten als ausländischer Reisender: die Große Mauer, die Terrakotta-Armee, die Verbotene Stadt, die Seidenstraße, alte Hauptstädte und Wasserstädte — entschlüsselt mit den Geschichten hinter dem, was du siehst.';
 
 const relatedTools = [
-  { href: '/de/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Visa-free transit and entry requirements' },
-  { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'High-speed rail guide', desc: 'Trains to historical sites across China' },
-  { href: '/de/posts/book-china-train-tickets-12306-foreigners/', title: 'Book train tickets', desc: '12306 guide for foreign passport holders' },
+  { href: '/de/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa- und Einreiseleitfaden', desc: 'Visumfreier Transit und Einreiseanforderungen' },
+  { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'Hochgeschwindigkeitszug-Leitfaden', desc: 'Züge zu historischen Stätten in ganz China' },
+  { href: '/de/posts/book-china-train-tickets-12306-foreigners/', title: 'Zugtickets buchen', desc: '12306-Leitfaden für ausländische Reisepassinhaber' },
 ];
 
 const relatedCities = [
-  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Forbidden City, Great Wall, Temple of Heaven' },
-  { href: '/de/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Ancient capital of the Southern Song' },
-  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Three Kingdoms heritage and ancient streets' },
+  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Peking', desc: 'Verbotene Stadt, Große Mauer, Himmelstempel' },
+  { href: '/de/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Alte Hauptstadt der Südlichen Song' },
+  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Drei-Reiche-Erbe und alte Straßen' },
 ];
 
 const otherSeries = [
-  { href: '/de/series/food-of-china/', title: 'Food of China' },
-  { href: '/de/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/de/series/nature-of-china/', title: 'Nature of China' },
+  { href: '/de/series/food-of-china/', title: 'Essen in China' },
+  { href: '/de/series/culture-of-china/', title: 'Kultur Chinas' },
+  { href: '/de/series/nature-of-china/', title: 'Natur Chinas' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
