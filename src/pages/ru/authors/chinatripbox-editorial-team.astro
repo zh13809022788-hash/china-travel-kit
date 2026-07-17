@@ -1,11 +1,11 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-const title = 'ChinaTripBox Editorial Team';
+const title = 'Редакционная команда ChinaTripBox';
 const description =
-  'About the ChinaTripBox editorial team, how we research practical China travel guides, and how readers can request corrections.';
+  'О редакционной команде ChinaTripBox, нашем подходе к практическим гидам по Китаю и способе отправить исправление.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -19,11 +19,11 @@ const jsonLd = {
     url: new URL('/', Astro.site).toString(),
   },
   knowsAbout: [
-    'China travel planning',
-    'mobile payments in China',
-    'China eSIM and internet access',
-    'China high-speed rail',
-    'foreign visitor logistics in China',
+    'планирование поездки в Китай',
+    'мобильные платежи в Китае',
+    'eSIM и интернет в Китае',
+    'скоростные поезда Китая',
+    'практическая логистика для иностранных путешественников в Китае',
   ],
 };
 ---
@@ -32,36 +32,37 @@ const jsonLd = {
   <Header locale="ru" />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <p class="section-kicker">Author</p>
+      <p class="section-kicker">Автор</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
 
-      <h2>Editorial Focus</h2>
+      <h2>Редакционный фокус</h2>
       <p>
-        The ChinaTripBox editorial team writes practical guides for foreign visitors to China, with
-        a focus on payment setup, eSIM and internet access, high-speed rail, ride-hailing, airport
-        transfers, city planning, food ordering, and common first-trip problems.
+        Редакционная команда ChinaTripBox готовит практические гиды для иностранных путешественников
+        по Китаю. Основные темы — настройка оплаты, eSIM и интернет, скоростные поезда, DiDi,
+        трансферы из аэропорта, планирование по городам, заказ еды и типичные проблемы первой поездки.
       </p>
 
-      <h2>How We Build Guides</h2>
+      <h2>Как мы создаём материалы</h2>
       <p>
-        We combine official sources, provider documentation, app help materials, reader questions,
-        traveler reports, and hands-on checks where possible. For fast-changing topics such as
-        visa-free entry, payment limits, app availability, and transport rules, we treat official
-        government or provider pages as the final source.
+        Мы совмещаем официальные источники, документацию сервисов, справочные материалы приложений,
+        вопросы читателей, отчёты путешественников и собственные проверки, когда это возможно. Для
+        быстро меняющихся тем — безвизовый въезд, лимиты по оплате, доступность приложений и правила
+        транспорта — окончательным ориентиром считаем официальные страницы государства или провайдера.
       </p>
 
-      <h2>Corrections</h2>
+      <h2>Исправления</h2>
       <p>
-        China travel logistics change quickly. If you find an outdated step, changed policy, broken
-        link, or missing caveat, please send the page URL through our <a href="/ru/contact/">contact page</a>.
-        We review corrections and update affected guides when the evidence is clear.
+        Логистика поездок по Китаю меняется быстро. Если вы нашли устаревший шаг, изменившееся
+        правило, битую ссылку или недостающее уточнение, отправьте URL страницы через нашу
+        <a href="/ru/contact/">страницу контактов</a>. Мы проверяем такие сообщения и обновляем
+        материалы, если подтверждение достаточно надёжно.
       </p>
 
       <h2>Редакционная политика</h2>
       <p>
-        Read our <a href="/ru/editorial-policy/">editorial policy</a> for details on research,
-        updates, affiliate disclosure, independence, and limitations.
+        Подробности о нашем подходе к исследованию, обновлениям, партнёрским ссылкам, независимости
+        и ограничениям собраны в <a href="/ru/editorial-policy/">редакционной политике</a>.
       </p>
 
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
