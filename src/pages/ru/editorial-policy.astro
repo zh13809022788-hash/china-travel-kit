@@ -1,12 +1,12 @@
-﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 const title = 'Редакционная политика';
 const description =
-  'How ChinaTripBox researches, writes, reviews, and updates travel guides for foreign visitors to China.';
-const lastUpdated = 'July 10, 2026';
+  'Как ChinaTripBox исследует, пишет, проверяет и обновляет материалы о поездках в Китай для иностранных путешественников.';
+const lastUpdated = '10 июля 2026 г.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
@@ -14,62 +14,64 @@ const lastUpdated = 'July 10, 2026';
   <main class="container-page py-12">
     <article class="prose-content article-body">
       <h1 class="text-3xl font-bold text-gray-900">Редакционная политика</h1>
-      <p class="mt-2 text-sm text-gray-500">Last updated: {lastUpdated}</p>
+      <p class="mt-2 text-sm text-gray-500">Последнее обновление: {lastUpdated}</p>
 
       <p class="mt-4">
-        ChinaTripBox publishes independent travel guides for foreign visitors to China. Our goal is
-        to make practical topics easier to understand, including payments, mobile internet,
-        transport, city planning, and everyday travel logistics.
+        ChinaTripBox публикует независимые гиды для иностранных путешественников по Китаю. Наша
+        цель — делать практические темы понятнее: от оплаты и мобильного интернета до транспорта,
+        логистики по городам и повседневных бытовых вопросов в поездке.
       </p>
 
-      <h2>How We Research</h2>
+      <h2>Как мы собираем информацию</h2>
       <p>
-        We use official sources where available, provider documentation, app help centers, public
-        policy pages, traveler reports, and hands-on checks when possible. For topics that change
-        frequently, such as payment limits, eSIM availability, visa-free entry rules, and app
-        support, we aim to verify details before publishing or updating a guide.
+        По возможности мы опираемся на официальные источники, документацию сервисов, справочные
+        центры приложений, публичные страницы с правилами, отчёты путешественников и собственные
+        практические проверки. Для быстро меняющихся тем — например, лимитов по оплате, доступности
+        eSIM, безвизового въезда и работы приложений — мы стараемся перепроверять детали перед
+        публикацией и обновлением материалов.
       </p>
 
-      <h2>How We Write</h2>
+      <h2>Как мы пишем</h2>
       <p>
-        Our articles are written for real travelers, not for search engines alone. We prioritize
-        clear steps, common mistakes, realistic caveats, and plain-English explanations over generic
-        travel inspiration.
+        Наши статьи создаются для реальных путешественников, а не только для поисковой выдачи. Мы
+        делаем акцент на понятных шагах, типичных ошибках, реальных ограничениях и ясных объяснениях
+        вместо расплывчатого туристического вдохновения.
       </p>
 
-      <h2>Updates and Corrections</h2>
+      <h2>Обновления и исправления</h2>
       <p>
-        China travel information can change quickly. We review important guides periodically and
-        update pages when we find outdated steps, changed prices, new app behavior, or revised
-        rules. If you spot an issue, please contact us with the page URL and what you believe needs
-        correction.
+        Информация о поездках в Китай может меняться очень быстро. Мы периодически пересматриваем
+        ключевые материалы и обновляем страницы, когда находим устаревшие шаги, новые цены,
+        изменившееся поведение приложений или пересмотренные правила. Если вы заметили неточность,
+        напишите нам и приложите URL страницы и описание проблемы.
       </p>
 
-      <h2>Advertising and Affiliate Links</h2>
+      <h2>Реклама и партнёрские ссылки</h2>
       <p>
-        ChinaTripBox may earn money from advertising and affiliate links. Commercial relationships
-        do not determine our core editorial advice. When a page includes affiliate links, using
-        those links may earn us a commission at no extra cost to you.
+        ChinaTripBox может зарабатывать на рекламе и партнёрских ссылках. Коммерческие отношения не
+        определяют наши основные рекомендации. Если страница содержит партнёрские ссылки, мы можем
+        получить комиссию, если вы воспользуетесь ими, но для вас цена не изменится.
       </p>
 
-      <h2>Independence</h2>
+      <h2>Независимость</h2>
       <p>
-        ChinaTripBox is not affiliated with the Chinese government, Google, Apple, Alipay, WeChat,
-        China Railway, telecom carriers, airlines, banks, or any visa office unless clearly stated.
-        Brand names are used for identification and practical traveler guidance.
+        ChinaTripBox не аффилирован с правительством Китая, Google, Apple, Alipay, WeChat, China
+        Railway, операторами связи, авиакомпаниями, банками или визовыми службами, если это прямо
+        не указано. Названия брендов используются только для идентификации и практических пояснений.
       </p>
 
-      <h2>Limitations</h2>
+      <h2>Ограничения</h2>
       <p>
-        Our content is general travel information. It is not legal, immigration, financial,
-        medical, tax, or emergency advice. Always confirm official requirements with the relevant
-        government agency, airline, payment provider, bank, telecom provider, or service operator.
+        Наш контент — это общая туристическая информация. Он не является юридической,
+        иммиграционной, финансовой, медицинской, налоговой консультацией или инструкцией для
+        экстренных случаев. Всегда перепроверяйте официальные требования у профильного ведомства,
+        авиакомпании, платёжного сервиса, банка, оператора связи или другого поставщика услуги.
       </p>
 
-      <h2>Contact</h2>
+      <h2>Контакты</h2>
       <p>
-        To suggest a correction or ask about our editorial process, please use our
-        <a href="/ru/contact/">contact page</a>.
+        Если вы хотите предложить исправление или спросить о нашем редакционном процессе,
+        воспользуйтесь <a href="/ru/contact/">страницей контактов</a>.
       </p>
     </article>
   </main>
