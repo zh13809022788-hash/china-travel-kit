@@ -1,94 +1,94 @@
-﻿---
+---
 import GuideLayout from '../../../layouts/GuideLayout.astro';
 
-const title = 'The Complete China Digital Nomad Guide (2026)';
+const title = '中國數位遊牧完整指南（2026）';
 const description =
-  'Everything you need to live and work remotely from China: visa options, payment methods, best cities, internet access, cost of living, and practical tips.';
+  '在中國遠端工作和生活所需的一切：簽證選項、支付方式、最佳城市、網路存取、生活費和實用建議。';
 const url = '/digital-nomads/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
-  { label: 'Digital Nomads' },
+  { label: '首頁', href: '/' },
+  { label: '數位遊牧' },
 ];
 
 const toc = [
-  { id: 'overview', label: 'China for Digital Nomads' },
-  { id: 'guides', label: 'Core Guides' },
-  { id: 'internet', label: 'Internet & Remote Work' },
-  { id: 'cost', label: 'Cost of Living by City' },
-  { id: 'english', label: 'English & Livability' },
-  { id: 'faq', label: 'FAQ' },
-  { id: 'next', label: 'Next Step: AI Business' },
+  { id: 'overview', label: '中國與數位遊牧' },
+  { id: 'guides', label: '核心指南' },
+  { id: 'internet', label: '網路與遠端工作' },
+  { id: 'cost', label: '各城市生活費' },
+  { id: 'english', label: '英語友善度與宜居性' },
+  { id: 'faq', label: '常見問題' },
+  { id: 'next', label: '下一步：AI 個人公司' },
 ];
 
 const faqs = [
   {
-    question: 'Is China good for digital nomads?',
+    question: '中國適合數位遊牧者嗎？',
     answer:
-      'China is excellent on infrastructure — fast mobile data, cheap high-speed rail, safe cities, near-universal mobile payments, and low day-to-day costs. The trade-offs are the lack of a dedicated nomad visa and the Great Firewall, which blocks many Western work tools unless you plan around it. For nomads who prepare, it is one of the most convenient and affordable bases in Asia.',
+      '中國在基礎設施方面表現出色——快速的手機網路、便宜的高鐵、安全的城市、幾乎全民行動支付，以及低廉的日常開支。取捨在於沒有專門的遊牧簽證和防火長城，後者封鎖了許多西方工作工具，除非你提前做好準備。對於有備而來的遊牧者，這裡是亞洲最方便、最實惠的基地之一。',
   },
   {
-    question: 'How much does it cost per month to live in China as a nomad?',
+    question: '作為遊牧者在中國生活每月需要多少錢？',
     answer:
-      'Budget roughly 5,500-8,500 RMB per month in a smaller city like Dali, 7,000-11,000 RMB in a new-first-tier city like Chengdu or Hangzhou, and 12,000-18,000 RMB in central Shanghai or Shenzhen. Rent is the main driver; food, transport, and data are cheap everywhere.',
+      '小城市如大理每月約 5,500-8,500 人民幣，新一線城市如成都或杭州 7,000-11,000 人民幣，上海市中心或深圳 12,000-18,000 人民幣。租金是主要驅動因素；食物、交通和流量到處都便宜。',
   },
   {
-    question: 'Can you use Google, Gmail, and other Western apps in China?',
+    question: '在中國可以使用 Google、Gmail 和其他西方應用程式嗎？',
     answer:
-      'On a domestic Chinese connection, Google, Gmail, WhatsApp, Instagram, and many others are blocked. Nomads work around this in two main ways: some international travel eSIMs route traffic through a foreign network so these services load normally, or you arrange your own compliant access before arrival. Always test your critical work tools early.',
+      '在中國國內網路上，Google、Gmail、WhatsApp、Instagram 等許多服務被封鎖。遊牧者主要透過兩種方式解決：部分國際旅行 eSIM 將流量路由到外國網路使這些服務正常載入，或者你在抵達前自行安排合規的存取方式。務必提早測試你的關鍵工作工具。',
   },
   {
-    question: 'Is the internet fast enough for remote work in China?',
+    question: '中國的網速足以應付遠端工作嗎？',
     answer:
-      'Yes. Domestic broadband and mobile data are fast and widely available, and video calls to domestic contacts are smooth. The bottleneck is international routing to blocked or overseas services, which can be slower or need a workaround. For work that lives mostly on international platforms, choose your connectivity setup deliberately.',
+      '可以。國內寬頻和手機網路快速且普及，與國內聯絡人的視訊通話很流暢。瓶頸在於國際路由到被封鎖或海外服務，可能較慢或需要解決方案。對於主要依賴國際平台的工作，請謹慎選擇你的連接方案。',
   },
   {
-    question: 'Do people speak English in China?',
+    question: '中國人會說英語嗎？',
     answer:
-      'In international districts of big cities, enough English exists to get by, and signage on metros and at airports is bilingual. Outside those areas English is limited. Translation apps and the mini-programs inside Alipay and WeChat bridge almost every gap, so you can function well without Mandarin — though a few phrases help a lot.',
+      '在大城市的國際區域，有足夠的英語可以應付日常。地鐵和機場的標示是雙語的。在這些區域之外，英語有限。翻譯應用程式和支付寶及微信內的小程式幾乎可以解決所有溝通問題，所以即使不會普通話也能正常生活——雖然會幾句話有很大幫助。',
   },
   {
-    question: 'Is China safe for foreign remote workers?',
+    question: '中國對外國遠端工作者安全嗎？',
     answer:
-      'Violent crime is rare and cities feel very safe at night by international standards. The main risks are administrative rather than physical: staying within your visa terms, registering your address, and not doing local work you are not authorized for. Handle the paperwork correctly and daily life is comfortable and low-stress.',
+      '暴力犯罪很少見，以國際標準來看城市在夜間非常安全。主要風險是行政方面的而非人身安全：在簽證期限內停留、登記地址，以及不做未授權的本地工作。正確處理文書手續，日常生活就會舒適且低壓力。',
   },
   {
-    question: 'How long can you stay in China as a nomad?',
+    question: '作為遊牧者在中國可以停留多久？',
     answer:
-      'On a tourist (L) visa, typically 30-90 days per entry with one possible extension; on a business (M) visa, often 90-180 days per entry over a multi-year validity. There is no visa that permits indefinite casual living. Our visa guide breaks down every option and how to combine them legally.',
+      '旅遊簽證（L）通常每次入境 30-90 天，可申請一次延期；商務簽證（M）通常在多年有效期內每次入境 90-180 天。沒有允許無限期休閒居住的簽證。我們的簽證指南詳細分析了每個選項以及如何合法組合使用。',
   },
   {
-    question: "What's the best time of year to base yourself in China?",
+    question: '一年中什麼時候最適合在中國居住？',
     answer:
-      'Spring (April-May) and autumn (September-October) are the most comfortable nationwide, with mild weather and clear skies. Summers are hot and humid across most of the country; northern winters are cold while the tropical south, like Sanya, is warm. Match your city and season: Sanya in winter, Chengdu or Shanghai in spring and autumn.',
+      '春季（4-5 月）和秋季（9-10 月）全國最舒適，天氣溫和、天空晴朗。夏天全國大部分地區炎熱潮濕；北方冬天寒冷，而三亞等熱帶南方則溫暖。城市和季節要搭配：冬天去三亞，春秋去成都或上海。',
   },
   {
-    question: 'Can I run my own business or take clients while in China?',
+    question: '可以在中國經營自己的業務或接客戶嗎？',
     answer:
-      'Working remotely for overseas clients or your own foreign-registered business from China sits in a gray area rather than a clearly permitted one, and doing local work for Chinese clients on a tourist visa is not allowed. If you plan to run a one-person cross-border operation, read our dedicated AI one-person company guide for the compliance boundaries.',
+      '在中國為海外客戶或自己的海外註冊公司遠端工作屬於灰色地帶，而非明確允許。持旅遊簽證為中國客戶做本地工作是不允許的。如果你計劃經營一人跨境業務，請閱讀我們的 AI 個人公司指南了解合規邊界。',
   },
   {
-    question: 'Do I need a Chinese bank account?',
+    question: '需要中國銀行帳戶嗎？',
     answer:
-      'Usually not. Alipay and WeChat Pay accept major foreign cards for everyday spending, which covers rent-free daily life for most nomads. A local account only becomes useful if you need to receive RMB domestically or pay certain landlords by bank transfer for a longer lease.',
+      '通常不需要。支付寶和微信支付接受主要外國卡用於日常消費，對大多數遊牧者來說已經足夠。本地帳戶只有在需要國內接收人民幣或用銀行轉帳支付某些房東的較長租約時才有用。',
   },
 ];
 
 const related = [
   {
-    title: 'China Visa for Digital Nomads (2026)',
-    description: 'Tourist visas, business visas, transit rules, and border runs — every legal way to stay.',
+    title: '數位遊牧中國簽證（2026）',
+    description: '旅遊簽證、商務簽證、過境規則和跨境簽證——所有合法停留方式。',
     href: '/zh-tw/digital-nomads/visa/',
   },
   {
-    title: 'How to Pay for Things in China as a Foreigner',
-    description: 'Alipay, WeChat Pay, cash, and foreign cards — set up daily payments and banking.',
+    title: '外國人在中國如何付款',
+    description: '支付寶、微信支付、現金和外國卡——設定日常支付和銀行業務。',
     href: '/zh-tw/digital-nomads/payment/',
   },
   {
-    title: "Long-Term Stay in China: A Foreigner's Guide",
-    description: 'Accommodation, monthly costs, and daily life for stays of one to six months.',
+    title: '在中國長期居留：外國人指南',
+    description: '一到六個月停留的住宿、每月開支和日常生活。',
     href: '/zh-tw/long-stay/',
   },
 ];
@@ -104,139 +104,94 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-digital-nomads"
-  coverAlt="A digital nomad working remotely from a cafe in China"
+  coverAlt="數位遊牧者在中國咖啡店遠端工作的場景"
  locale="zh-TW">
-  <h2 id="overview">China for Digital Nomads: The Honest Picture</h2>
+  <h2 id="overview">中國與數位遊牧：真實的情況</h2>
   <p>
-    China rarely tops the standard digital-nomad listicles, and that is exactly why it rewards the
-    people who look closer. Set against the usual Southeast Asian hubs, it offers something few of
-    them can match: bullet trains that turn a country the size of a continent into a series of
-    afternoon hops, mobile payments so universal you can go weeks without touching cash, food
-    delivery and ride-hailing that are cheap and instant, and streets that feel genuinely safe at
-    2 a.m. For a remote worker who values infrastructure and low friction over a ready-made expat
-    party scene, the day-to-day quality of life is hard to beat.
+    中國很少出現在標準的數位遊牧榜單上，而這正是獎勵那些深入觀察的人的原因。與常見的東南亞熱點相比，它提供了很少有地方能匹敵的東西：高鐵讓一個大陸級別的國家變成一系列下午的短途旅行，行動支付如此普及以至於你可以幾週不碰現金，外賣和叫車便宜又即時，而且凌晨兩點的街道讓人真正感到安全。對於一個重視基礎設施和低摩擦勝過現成外籍社交圈的遠端工作者來說，日常的生活品質很難被超越。
   </p>
   <p>
-    The honest counterweight is two real challenges you must plan around. First, there is no
-    dedicated digital-nomad visa, so staying legally means using tourist or business visas
-    thoughtfully rather than relying on a purpose-built permit. Second, the Great Firewall blocks a
-    large share of the Western tools many remote workers depend on — Google Workspace, WhatsApp,
-    many social platforms — unless your connectivity is set up to route around it. Neither is a
-    dealbreaker, but both reward preparation. Nomads who arrive having sorted their visa and their
-    internet access thrive; those who wing it get frustrated in the first week.
+    真實的制衡是兩個你必須提前規劃的挑戰。首先，沒有專門的數位遊牧簽證，所以合法停留意味著要聰明地使用旅遊或商務簽證，而不是依賴一個專門設計的許可。其次，防火長城封鎖了遠端工作者依賴的許多西方工具——Google Workspace、WhatsApp、許多社交平台——除非你的網路連接有繞過的安排。兩者都不是致命問題，但都需要準備。簽證和網路都安排好的遊牧者會如魚得水；臨時抱佛腳的人第一週就會感到挫敗。
   </p>
   <p>
-    This guide is the hub for everything else. It links to deep guides on the two topics that trip
-    people up most — visas and payments — then covers the practical realities of internet, cost of
-    living, and livability that shape where you should base yourself. Whether you are considering a
-    one-month trial or building a longer life here, start with the picture below and follow the
-    links into the detail.
+    這份指南是其他一切的樞紐。它連結到最常讓人栽跟頭的兩個主題的深度指南——簽證和支付——然後涵蓋影響你選擇基地的網路、生活費和宜居性等現實問題。無論你是在考慮一個月的試水還是更長期的定居，從下面的概覽開始，然後深入細節。
   </p>
 
-  <h2 id="guides">Core Guides</h2>
-  <p>Three deep guides cover the topics that most affect a nomad's experience in China.</p>
-  <h3>Visa &amp; legal stay</h3>
+  <h2 id="guides">核心指南</h2>
+  <p>三份深度指南涵蓋了最能影響遊牧者在中國體驗的主題。</p>
+  <h3>簽證與合法停留</h3>
   <p>
-    There is no nomad visa, so understanding your options is the single most important thing you
-    can do before booking a flight. Our
-    <a href="/zh-tw/digital-nomads/visa/">China visa guide for digital nomads</a> breaks down tourist
-    visas, business visas, visa-free transit, why the work visa does not fit freelancers, and how
-    border runs actually work in 2026.
+    沒有遊牧簽證，所以了解你的選項是訂機票前最重要的事。我們的
+    <a href="/zh-tw/digital-nomads/visa/">數位遊牧中國簽證指南</a>詳細分析了旅遊簽證、商務簽證、過境免簽、為什麼工作簽證不適合自由工作者，以及 2026 年跨境簽證實際上如何運作。
   </p>
-  <h3>付款 &amp; daily banking</h3>
+  <h3>付款與日常銀行業務</h3>
   <p>
-    Mobile payment is not optional in China — it is how you buy almost everything. Our
-    <a href="/zh-tw/digital-nomads/payment/">payment guide for foreigners</a> covers linking overseas
-    cards to Alipay and WeChat Pay, when you still need cash, transaction limits, and how nomads
-    handle rent, coworking fees, and cross-border money.
+    在中國，行動支付不是選項——它幾乎是你買所有東西的方式。我們的
+    <a href="/zh-tw/digital-nomads/payment/">外國人付款指南</a>涵蓋了將海外卡綁定到支付寶和微信支付、何時仍需要現金、交易限額，以及遊牧者如何處理租金、共用辦公費和跨境資金。
   </p>
-  <h3>Best cities to base</h3>
+  <h3>最佳定居城市</h3>
   <p>
-    The right city depends on your budget, your tolerance for big-city intensity, and whether you
-    need frequent border access. See the <a href="#cost">cost-of-living comparison</a> below, and
-    dive into individual city guides for
-    <a href="/zh-tw/posts/shanghai-city-guide-for-foreigners/">Shanghai</a>,
-    <a href="/zh-tw/posts/chengdu-city-guide-for-foreigners/">Chengdu</a>,
-    <a href="/zh-tw/posts/hangzhou-city-guide-for-foreigners/">Hangzhou</a>, and
-    <a href="/zh-tw/posts/sanya-city-guide-for-foreigners/">Sanya</a>.
+    適合的城市取決於你的預算、對大城市強度的承受能力，以及是否需要頻繁跨境。查看下方的<a href="#cost">生活費比較</a>，並深入個別城市指南了解
+    <a href="/zh-tw/posts/shanghai-city-guide-for-foreigners/">上海</a>、
+    <a href="/zh-tw/posts/chengdu-city-guide-for-foreigners/">成都</a>、
+    <a href="/zh-tw/posts/hangzhou-city-guide-for-foreigners/">杭州</a>和
+    <a href="/zh-tw/posts/sanya-city-guide-for-foreigners/">三亞</a>。
   </p>
 
-  <h2 id="internet">Internet &amp; Remote Work Environment</h2>
+  <h2 id="internet">網路與遠端工作環境</h2>
   <p>
-    China's domestic network is fast, cheap, and everywhere. Fiber broadband reaches even modest
-    apartments, 5G blankets cities, and public transport and cafes offer reliable Wi-Fi. For work
-    that touches domestic Chinese services, you will rarely think about connectivity at all.
+    中國的國內網路快速、便宜且無處不在。光纖寬頻覆蓋普通公寓，5G 覆蓋城市，公共交通和咖啡店提供可靠的 Wi-Fi。對於接觸國內中國服務的工作，你幾乎不需要考慮連接問題。
   </p>
   <p>
-    The complication is international access. Because many Western platforms are blocked on domestic
-    connections, your setup matters. Two approaches dominate: choosing an international eSIM that
-    roams on a foreign network so blocked apps load normally, or arranging compliant access to your
-    work tools before you arrive. Whichever you pick, test your essential stack — email, video
-    calls, file sync, code repositories — in your first day, not the night before a deadline.
+    複雜的是國際存取。由於許多西方平台在國內連接上被封鎖，你的設定很重要。兩種方式佔主導：選擇在外國網路上漫遊的國際 eSIM 讓被封鎖的應用程式正常載入，或在抵達前安排合規的工具存取方式。無論選哪種，在第一天就測試你的核心工具——郵件、視訊會議、檔案同步、程式碼庫——而不是在截止日期前一天晚上才測試。
   </p>
   <p>
-    On the physical side, coworking spaces are well established in first- and new-first-tier cities,
-    with day passes and monthly memberships widely available. In smaller towns like Dali, cafes and
-    a growing number of nomad-oriented spaces fill the gap. If reliable in-person infrastructure
-    matters to you, weight your city choice toward Shanghai, Shenzhen, Chengdu, or Hangzhou.
+    在實體方面，一線和新一線城市的共用辦公空間已很成熟，日票和月費會員廣泛可用。在大理等較小的城鎮，咖啡店和越來越多面向遊牧者的空間填補了空白。如果你需要可靠的實體基礎設施，請將城市選擇偏向上海、深圳、成都或杭州。
   </p>
 
-  <h2 id="cost">Cost of Living by City</h2>
+  <h2 id="cost">各城市生活費</h2>
   <p>
-    Monthly single-person budgets vary widely by city tier. These figures cover rent, food, local
-    transport, and data for a comfortable lifestyle.
+    單人月度預算因城市等級差異很大。以下數據涵蓋舒適生活方式的租金、食物、本地交通和流量。
   </p>
   <table>
     <thead>
       <tr>
-        <th>Tier</th>
-        <th>Cities</th>
-        <th>Monthly budget (RMB)</th>
-        <th>Best for</th>
+        <th>等級</th>
+        <th>城市</th>
+        <th>月預算（人民幣）</th>
+        <th>最適合</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>First tier</td>
-        <td>Shanghai, Shenzhen</td>
+        <td>一線城市</td>
+        <td>上海、深圳</td>
         <td>12,000-18,000</td>
-        <td>Convenience, English, coworking, border access</td>
+        <td>便利、英語、共用辦公、跨境</td>
       </tr>
       <tr>
-        <td>New first tier</td>
-        <td>Chengdu, Hangzhou</td>
+        <td>新一線城市</td>
+        <td>成都、杭州</td>
         <td>7,000-11,000</td>
-        <td>Balance of cost, amenities, and pace</td>
+        <td>成本、設施和節奏的平衡</td>
       </tr>
       <tr>
-        <td>Smaller / resort</td>
-        <td>Dali, Sanya</td>
+        <td>較小/度假城市</td>
+        <td>大理、三亞</td>
         <td>5,500-8,500</td>
-        <td>Low cost, lifestyle, community</td>
+        <td>低成本、生活方式、社群</td>
       </tr>
     </tbody>
   </table>
 
-  <h2 id="english">English Friendliness &amp; Livability</h2>
+  <h2 id="english">英語友善度與宜居性</h2>
   <p>
-    English coverage tracks city tier and district. In Shanghai's former French Concession or
-    Shenzhen's tech hubs, you can live largely in English; in a Chengdu suburb or a Dali village,
-    far less so. The great equalizer is technology: real-time translation apps and the mini-programs
-    inside Alipay and WeChat handle ordering, transport, appointments, and shopping. Combined with
-    bilingual metro signage and English-capable ride-hailing, a motivated newcomer can function from
-    day one. Livability is high across the board — cheap transport, abundant food delivery, safe
-    streets, and excellent public infrastructure — with air quality and winter cold being the main
-    regional variables to weigh when choosing where to settle.
+    英語普及度與城市等級和區域相關。在上海的法租界或深圳的科技樞紐，你幾乎可以完全用英語生活；在成都郊區或大理的村莊，則少得多。最大的平衡器是科技：即時翻譯應用程式和支付寶及微信內的小程式處理點餐、交通、預約和購物。加上雙語地鐵標示和支援英語的叫車服務，一個有動力的新來者從第一天起就能正常運作。各地的宜居性都很高——便宜的交通、豐富的外賣、安全的街道和優秀的公共基礎設施——空氣品質和冬季寒冷是選擇定居地時的主要區域變數。
   </p>
 
-  <h2 id="next">Next Step: Running an AI Business from China</h2>
+  <h2 id="next">下一步：從中國經營 AI 業務</h2>
   <p>
-    Some remote workers go a step further than freelancing and run their own lean, one-person
-    operations — increasingly AI-powered, cross-border businesses served entirely from a laptop. That
-    path adds a layer of compliance questions around visas, tax, and whether you need a local entity.
-    If that is your direction, our
-    <a href="/zh-tw/digital-nomads/ai-opc/">guide to running an AI one-person company in China</a> covers
-    the legal boundaries, cross-border payment setup, and infrastructure specific to foreigners
-    operating from within China.
+    有些遠端工作者走得更遠，不只做自由工作，而是經營自己的精簡一人業務——越來越多是 AI 驅動的跨境業務，完全從筆記型電腦上運作。這條路增加了簽證、稅務和是否需要本地實體的合規問題。如果這是你的方向，我們的
+    <a href="/zh-tw/digital-nomads/ai-opc/">中國 AI 個人公司指南</a>涵蓋了法律邊界、跨境支付設定和外國人在中國境內運營所需的特定基礎設施。
   </p>
 </GuideLayout>
