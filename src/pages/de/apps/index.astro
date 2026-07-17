@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -18,12 +18,12 @@ const appGroups = [
         android: 'https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone',
         ios: 'https://apps.apple.com/app/alipay/id333206289',
         h5: null,
-        note: 'Die Einrichtung dauert 10-15 Min. Für die Verifizierung ist ein Reisepass erforderlich.',
+        note: 'Die Einrichtung dauert 10-15 Minuten. Für die Verifizierung ist ein Reisepass erforderlich.',
         guide: '/de/posts/alipay-foreign-credit-card-step-by-step/',
       },
       {
         name: 'WeChat',
-        desc: 'Chinas Super-App. Nutze sie für Nachrichten, Anrufe, Moments (sozialer Feed) und WeChat Pay. Die meisten Menschen in China verwenden sie täglich für fast alles.',
+        desc: 'Chinas Super-App. Nutze sie für Nachrichten, Anrufe, Moments und WeChat Pay. Die meisten Menschen in China verwenden sie täglich für fast alles.',
         android: 'https://play.google.com/store/apps/details?id=com.tencent.mm',
         ios: 'https://apps.apple.com/app/wechat/id414478124',
         h5: 'https://web.wechat.com/',
@@ -41,7 +41,7 @@ const appGroups = [
         android: 'https://play.google.com/store/apps/details?id=com.didi.sdk',
         ios: 'https://apps.apple.com/app/didi/id1164272094',
         h5: 'https://m.didiglobal.com/',
-        note: 'Die H5-Version funktioniert im Browser oder als WeChat Mini-Programm. Für gelegentliche Fahrten ist keine App nötig.',
+        note: 'Die H5-Version funktioniert im Browser oder als WeChat-Mini-Programm. Für gelegentliche Fahrten ist keine App nötig.',
         guide: '/de/posts/didi-china-foreign-tourists-guide/',
       },
       {
@@ -50,7 +50,7 @@ const appGroups = [
         android: null,
         ios: null,
         h5: null,
-        note: 'Öffne Alipay und tippe auf das Symbol "Verkehr". Keine separate Installation nötig.',
+        note: 'Öffne Alipay und tippe auf das Symbol „Verkehr“. Keine separate Installation nötig.',
         guide: '/de/transport/',
       },
       {
@@ -110,7 +110,7 @@ const appGroups = [
     apps: [
       {
         name: 'Meituan',
-        desc: 'Essenslieferung, Restaurantreservierungen, Kinotickets und Hotelbuchungen. Nur auf Chinesisch. Für englische Hilfe im Alipay Mini-Programm nutzen.',
+        desc: 'Essenslieferung, Restaurantreservierungen, Kinotickets und Hotelbuchungen. Nur auf Chinesisch. Für englische Hilfe im Alipay-Mini-Programm nutzen.',
         android: 'https://play.google.com/store/apps/details?id=com.sankuai.meituan',
         ios: 'https://apps.apple.com/app/meituan/id423924287',
         h5: 'https://waimai.meituan.com/',
@@ -128,7 +128,7 @@ const appGroups = [
       },
       {
         name: 'Dianping',
-        desc: 'Das Yelp Chinas. Restaurantbewertungen, Bewertungen und Fotos. Hilft dabei, gute lokale Lokale zu finden. Nur auf Chinesisch.',
+        desc: 'Das Yelp Chinas. Restaurantbewertungen, Rezensionen und Fotos. Hilft dabei, gute lokale Lokale zu finden. Nur auf Chinesisch.',
         android: 'https://play.google.com/store/apps/details?id=com.dianping.v1',
         ios: 'https://apps.apple.com/app/dianping/id416896465',
         h5: 'https://www.dianping.com/',
@@ -174,7 +174,7 @@ const appGroups = [
       },
       {
         name: 'Fliggy (Alitrip)',
-        desc: 'Alibabas Plattform für Reisebuchungen. In der Alipay App integriert. Gut für Inlandsflüge.',
+        desc: 'Alibabas Plattform für Reisebuchungen. In der Alipay-App integriert. Gut für Inlandsflüge.',
         android: null,
         ios: null,
         h5: 'https://www.fliggy.com/',
@@ -248,7 +248,7 @@ const appGroups = [
     <section class="mt-12 rounded-lg border border-gray-200 p-6">
       <h2 class="text-xl font-bold text-gray-950">H5-Web-Apps: Kein Download nötig</h2>
       <p class="mt-2 text-sm leading-6 text-gray-600">
-        Viele Dienste in China haben <strong>webbasierte (H5) Versionen</strong>, die direkt im Smartphone-Browser oder in WeChat/Alipay Mini-Programmen funktionieren. Sie sind ideal für Kurzzeitreisende, die ihr Smartphone nicht mit mehr als 10 Apps überladen möchten. Die wichtigsten:
+        Viele Dienste in China haben <strong>webbasierte (H5) Versionen</strong>, die direkt im Smartphone-Browser oder in WeChat-/Alipay-Mini-Programmen funktionieren. Sie sind ideal für Kurzzeitreisende, die ihr Smartphone nicht mit mehr als 10 Apps überladen möchten. Die wichtigsten:
       </p>
       <div class="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
         <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">m.didiglobal.com (Englisch verfügbar)</span></div>
@@ -256,7 +256,7 @@ const appGroups = [
         <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">WeChat Web</strong> — <span class="text-gray-600">web.wechat.com (nur Nachrichten)</span></div>
         <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Meituan</strong> — <span class="text-gray-600">waimai.meituan.com (Essenslieferung)</span></div>
         <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Dianping</strong> — <span class="text-gray-600">dianping.com (Restaurantsuche)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay Mini-Programme</strong> — <span class="text-gray-600">Alles in Alipay (keine zusätzliche Installation)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay-Mini-Programme</strong> — <span class="text-gray-600">Alles in Alipay (keine zusätzliche Installation)</span></div>
       </div>
       <p class="mt-4 text-xs text-gray-500">
         <strong>Webversionen funktionieren in den meisten Fällen ohne VPN</strong>. App-Downloads solltest du vor der Ankunft im heimischen WLAN installieren.
@@ -269,3 +269,4 @@ const appGroups = [
   </main>
   <Footer />
 </BaseLayout>
+
