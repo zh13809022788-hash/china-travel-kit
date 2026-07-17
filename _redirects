@@ -1,3 +1,4 @@
+/sitemap.xml /sitemap-index.xml 301
 /sitemap.html /sitemap-index.xml 301
 /en/* /:splat 301
 https://chinatripbox.com/* https://www.chinatripbox.com/:splat 301
