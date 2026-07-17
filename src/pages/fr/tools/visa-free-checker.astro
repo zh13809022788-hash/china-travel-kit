@@ -10,7 +10,7 @@ const title = 'China Visa-libre et vérificateur de transit';
 const description =
   'Vérifiez si vous pouvez entrer China sans visa, utiliser 240 heures de transit sans visa, ou besoin de demander en fonction de votre nationalité et le type de voyage.';
 
-const lastReviewed = 'July 13, 2026';
+const lastReviewed = '13 juillet 2026';
 
 // Representative policy data for 2026. This is guidance, not legal advice;
 // travelers must confirm with an embassy before booking.
@@ -30,7 +30,7 @@ const countries = [
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Vérificateur Visa gratuit et en transit</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <p class="mt-3 text-sm text-gray-500">
-        Dernière révision : {lastReviewed}. This checker is a planning aid, not an official eligibility decision.
+        Dernière révision : {lastReviewed}. Ce vérificateur est une aide à la planification, pas une décision officielle d’éligibilité.
       </p>
     </header>
 
@@ -148,22 +148,22 @@ China.
       if (hasTransit) {
         return {
           tone: 'good',
-          heading: 'You likely qualify for 240-hour visa-free transit',
-          body: `As a ${country} passport holder transiting China to a third country, you can generally stay up to 240 hours (10 days) without a visa when entering through an eligible port.`,
+          heading: 'Vous êtes probablement éligible au transit sans visa de 240 heures',
+          body: `En tant que titulaire d’un passeport ${country} en transit vers un pays tiers, vous pouvez généralement séjourner jusqu’à 240 heures (10 jours) sans visa en entrant par un port éligible.`,
           points: [
-            'You must hold a confirmed onward ticket to a third country or region within 240 hours.',
-            'Entry and exit must be through designated transit ports (most major international airports qualify).',
-            'You are usually limited to the province/region of entry - check the specific port rules.',
+            'Vous devez détenir un billet aller confirmé vers un pays ou une région tiers dans les 240 heures.',
+            'L’entrée et la sortie doivent se faire par des ports de transit désignés (la plupart des grands aéroports internationaux sont éligibles).',
+            'Vous êtes généralement limité à la province/région d’entrée — vérifiez les règles spécifiques au port.',
           ],
         };
       }
       return {
         tone: 'warn',
-        heading: 'Transit visa exemption may not apply to your nationality',
-        body: `${country} is not on the standard 240-hour transit list in our data. You may still qualify for visa-free entry if eligible, or you may need a transit (G) visa.`,
+        heading: 'L’exemption de visa de transit peut ne pas s’appliquer à votre nationalité',
+        body: `${country} ne figure pas sur la liste standard de transit de 240 heures dans nos données. Vous pouvez tout de même être éligible à l’entrée sans visa si vous y avez droit, ou vous pouvez avoir besoin d’un visa de transit (G).`,
         points: [
-          'Check whether your nationality qualifies for full visa-free entry instead.',
-          'If not, apply for the appropriate visa before travel.',
+          'Vérifiez si votre nationalité permet l’entrée sans visa complète à la place.',
+          'Si non, demandez le visa approprié avant le voyage.',
         ],
       };
     }
@@ -172,33 +172,33 @@ China.
     if (has30) {
       return {
         tone: 'good',
-        heading: 'You likely qualify for 30-day visa-free entry',
-        body: `As a ${country} passport holder, you can generally enter China visa-free for up to 30 days for tourism, business, family visits, or transit under the current unilateral policy.`,
+        heading: 'Vous êtes probablement éligible à l’entrée sans visa de 30 jours',
+        body: `En tant que titulaire d’un passeport ${country}, vous pouvez généralement entrer en Chine sans visa pour jusqu’à 30 jours pour le tourisme, les affaires, les visites familiales ou le transit selon la politique unilatérale actuelle.`,
         points: [
-          'Your passport should be valid for at least 6 months with blank pages.',
-          'Have proof of onward/return travel and accommodation ready for immigration.',
-          'The 30 days is per entry - confirm the latest count before you book.',
+          'Votre passeport doit être valide au moins 6 mois avec des pages vierges.',
+          'Ayez une preuve de voyage aller/retour et d’hébergement prête pour l’immigration.',
+          'Les 30 jours sont par entrée — confirmez le nombre exact avant de réserver.',
         ],
       };
     }
     if (hasTransit) {
       return {
         tone: 'info',
-        heading: 'A visa is likely required - but transit exemption may help',
-        body: `${country} is not on our 30-day visa-free list for tourism/business, so a visa is generally required. However, if you are passing through to a third country, you may use the 240-hour visa-free transit instead.`,
+        heading: 'Un visa est probablement requis — mais l’exemption de transit peut aider',
+        body: `${country} ne figure pas sur notre liste d’entrée sans visa de 30 jours pour le tourisme/les affaires, donc un visa est généralement requis. Cependant, si vous passez par la Chine vers un pays tiers, vous pouvez utiliser le transit sans visa de 240 heures à la place.`,
         points: [
-          'For a dedicated visit, apply for an L (tourist) or M (business) visa in advance.',
-          'For a stopover en route elsewhere, you may qualify for 240-hour transit - switch "Type de voyage" to Transit to check.',
+          'Pour une visite dédiée, demandez un visa L (touristique) ou M (affaires) à l’avance.',
+          'Pour une escale vers ailleurs, vous pouvez être éligible au transit de 240 heures — changez « Type de voyage » sur Transit pour vérifier.',
         ],
       };
     }
     return {
       tone: 'warn',
-      heading: 'A visa is likely required',
-      body: `Based on our data, ${country} passport holders generally need a visa to enter China for this trip type. Apply through a Chinese embassy, consulate, or authorized visa center before travelling.`,
+      heading: 'Un visa est probablement requis',
+      body: `D’après nos données, les titulaires d’un passeport ${country} ont généralement besoin d’un visa pour entrer en Chine pour ce type de voyage. Demandez-le auprès d’une ambassade, d’un consulat ou d’un centre de visa agréé avant de voyager.`,
       points: [
-        'Apply for an L (tourist) or M (business) visa well ahead of your trip.',
-        'Requirements typically include an invitation or itinerary, hotel bookings, and return tickets.',
+        'Demandez un visa L (touristique) ou M (affaires) bien avant votre voyage.',
+        'Les justificatifs incluent généralement une invitation ou un itinéraire, des réservations d’hôtel et des billets de retour.',
       ],
     };
   }
