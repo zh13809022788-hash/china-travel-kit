@@ -214,7 +214,7 @@ const homeLabel = ui.home[locale] ?? 'Home';
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
       <div class="mt-8">
-        <NewsletterSignup />
+        <NewsletterSignup locale={locale} />
       </div>
 
       {affiliate && (

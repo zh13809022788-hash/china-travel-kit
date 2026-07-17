@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Página no encontrada';
+const description = 'Página no encontrada - ChinaTripBox';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
+  <Header />
+  <main class="container-page py-16">
+    <section class="mx-auto max-w-2xl">
+      <p class="section-kicker">404</p>
+      <h1 class="mt-2 text-4xl font-bold text-gray-950">Página no encontrada</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">La página solicitada pudo haber sido movida o la dirección es incorrecta.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/es/" class="btn-primary">Inicio</a>
+        <a href="/es/resources/" class="btn-outline">Comenzar aquí</a>
+        <a href="/es/tools/" class="btn-outline">Herramientas</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -3,18 +3,65 @@
 // Replace MAILCHIMP_URL with your actual Mailchimp/ConvertKit endpoint.
 // Currently posts to Formspree as free fallback.
 
-const MAILCHIMP_URL = ''; // Set your Mailchimp action URL here
-const FORMSPREE_URL = 'https://formspree.io/f/your-form-id'; // Replace with your Formspree ID
+const MAILCHIMP_URL = '';
+const FORMSPREE_URL = 'https://formspree.io/f/your-form-id';
 
 const actionUrl = MAILCHIMP_URL || FORMSPREE_URL;
 const isMailchimp = !!MAILCHIMP_URL;
+
+const { locale = 'en' } = Astro.props;
+
+const UI = {
+  title: {
+    en: 'China Travel Tips — Weekly Newsletter',
+    'zh-tw': '中國旅遊秘訣 — 每週電子報',
+    ja: '中国旅行のヒント — 週刊ニュースレター',
+    ko: '중국 여행 팁 — 주간 뉴스레터',
+    ru: 'Советы по Китаю — еженедельная рассылка',
+    fr: 'Conseils Chine — Newsletter hebdomadaire',
+    de: 'China-Reisetipps — wöchentlicher Newsletter',
+    es: 'Consejos para China — Boletín semanal',
+  },
+  desc: {
+    en: 'Get practical China travel updates: policy changes, new guides, tool updates, and seasonal tips. No spam, unsubscribe anytime.',
+    'zh-tw': '獲取實用的中國旅遊資訊：政策變化、新指南、工具更新和季節性提示。無垃圾郵件，隨時可取消訂閱。',
+    ja: '実用的な中国旅行情報をお届けします：政策変更、新ガイド、ツール更新、季節のヒント。スパムはなし、いつでも購読解除可能。',
+    ko: '실용적인 중국 여행 정보를 받아보세요: 정책 변경, 새 가이드, 도구 업데이트, 계절별 팁. 스팸 없음, 언제든지 구독 해지 가능.',
+    ru: 'Получайте практические обновления о поездках в Китай: изменения в политике, новые руководства, обновления инструментов и сезонные советы. Без спама, отписка в любое время.',
+    fr: 'Recevez des mises à jour pratiques sur les voyages en Chine : changements de politique, nouveaux guides, mises à jour d\'outils et conseils saisonniers. Pas de spam, désabonnez-vous à tout moment.',
+    de: 'Erhalten Sie praktische China-Reise-Updates: Richtlinienänderungen, neue Guides, Tool-Updates und saisonale Tipps. Kein Spam, jederzeit abbestellbar.',
+    es: 'Reciba actualizaciones prácticas sobre viajes a China: cambios de políticas, nuevas guías, actualizaciones de herramientas y consejos de temporada. Sin spam, cancele la suscripción cuando quiera.',
+  },
+  subscribe: {
+    en: 'Subscribe',
+    'zh-tw': '訂閱',
+    ja: '購読する',
+    ko: '구독하기',
+    ru: 'Подписаться',
+    fr: "S'abonner",
+    de: 'Abonnieren',
+    es: 'Suscribirse',
+  },
+  powered: {
+    en: 'Free, unsubscribe anytime',
+    'zh-tw': '免費，隨時可取消訂閱',
+    ja: '無料、いつでも購読解除可能',
+    ko: '무료, 언제든지 구독 해지 가능',
+    ru: 'Бесплатно, отписка в любое время',
+    fr: 'Gratuit, désabonnez-vous à tout moment',
+    de: 'Kostenlos, jederzeit kündbar',
+    es: 'Gratis, cancele cuando quiera',
+  },
+};
+
+const t = (key: string) => UI[key]?.[locale] || UI[key]?.['en'] || '';
 ---
 
 <div class="rounded-xl border border-brand-100 bg-brand-50 p-6">
   <div class="max-w-lg">
-    <h3 class="text-lg font-bold text-gray-950">China Travel Tips — Weekly Newsletter</h3>
+    <h3 class="text-lg font-bold text-gray-950">{t('title')}</h3>
     <p class="mt-1.5 text-sm leading-6 text-gray-600">
-      Get practical China travel updates: policy changes, new guides, tool updates, and seasonal tips. No spam, unsubscribe anytime.
+      {t('desc')}
     </p>
     <form
       action={actionUrl}
@@ -35,11 +82,11 @@ const isMailchimp = !!MAILCHIMP_URL;
         type="submit"
         class="shrink-0 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
       >
-        Subscribe
+        {t('subscribe')}
       </button>
     </form>
     <p class="mt-2 text-xs text-gray-500">
-      {isMailchimp ? 'Powered by Mailchimp' : 'Powered by Formspree'} &middot; Free, unsubscribe anytime
+      {isMailchimp ? 'Powered by Mailchimp' : `Powered by Formspree`} &middot; {t('powered')}
     </p>
   </div>
 </div>
