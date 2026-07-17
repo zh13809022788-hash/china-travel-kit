@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-de'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Food of China — A Foreigner\'s Culinary Journey';
-const description = 'Explore Chinese food culture as a foreign traveler: eight great cuisines, regional hot pot, street food safety, dim sum, breakfast, vegetarian options, and the dishes worth crossing a city for.';
+const title = 'Essen in China — Eine kulinarische Reise für Ausländer';
+const description = 'Erkunde die chinesische Esskultur als ausländischer Reisender: acht große Küchen, regionaler Hotpot, Streetfood-Sicherheit, Dim Sum, Frühstück, vegetarische Optionen und Gerichte, für die sich ein Stadtausflug lohnt.';
 
 const relatedTools = [
-  { href: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Order food without Chinese', desc: 'Meituan & Ele.me setup for foreigners' },
-  { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Alipay, WeChat Pay, and cash for dining' },
-  { href: '/de/food/', title: 'Essen und Restaurants guides', desc: 'All food-related articles on ChinaTripBox' },
+  { href: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Essen ohne Chinesisch bestellen', desc: 'Meituan- & Ele.me-Einrichtung für Ausländer' },
+  { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'In China bezahlen', desc: 'Alipay, WeChat Pay und Bargeld für Restaurantbesuche' },
+  { href: '/de/food/', title: 'Essen- und Restaurant-Leitfäden', desc: 'Alle essensbezogenen Artikel auf ChinaTripBox' },
 ];
 
 const relatedCities = [
-  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Sichuan food capital' },
-  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Peking duck and northern cuisine' },
-  { href: '/de/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Soup dumplings and fusion' },
+  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Hauptstadt der Sichuan-Küche' },
+  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Peking', desc: 'Pekingente und nordchinesische Küche' },
+  { href: '/de/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Suppenknödel und Fusion-Küche' },
 ];
 
 const otherSeries = [
-  { href: '/de/series/history-of-china/', title: 'History of China' },
-  { href: '/de/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/de/series/modern-china/', title: 'Modern China' },
+  { href: '/de/series/history-of-china/', title: 'Geschichte Chinas' },
+  { href: '/de/series/culture-of-china/', title: 'Kultur Chinas' },
+  { href: '/de/series/modern-china/', title: 'Modernes China' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
