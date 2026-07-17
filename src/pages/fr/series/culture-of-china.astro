@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-fr'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Culture of China — Traditions & Customs for Travelers';
-const description = 'Explore Chinese culture as a foreign traveler: tea ceremony, Spring Festival, face and guanxi, calligraphy, kung fu, the zodiac, and the traditions that shape daily life in China.';
+const title = 'Culture de Chine — traditions et coutumes pour les voyageurs';
+const description = 'Explorez la culture chinoise en tant que voyageur étranger : cérémonie du thé, Fête du Printemps, notion de face et guanxi, calligraphie, kung-fu, zodiaque et les traditions qui façonnent la vie quotidienne en Chine.';
 
 const relatedTools = [
-  { href: '/fr/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Tipping & etiquette', desc: 'When to tip, when not to, and why' },
-  { href: '/fr/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing for festivals', desc: 'What to bring during holiday seasons' },
-  { href: '/fr/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Paiements during festival season' },
+  { href: '/fr/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Pourboires et étiquette', desc: 'Quand donner un pourboire, quand ne pas le faire, et pourquoi' },
+  { href: '/fr/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Préparer ses bagages pour les festivals', desc: 'Quoi emporter pendant les saisons de fêtes' },
+  { href: '/fr/posts/how-to-pay-in-china-tourist-guide/', title: 'Comment payer en Chine', desc: 'Paiements pendant la saison des festivals' },
 ];
 
 const relatedCities = [
-  { href: '/fr/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Imperial culture and hutong life' },
-  { href: '/fr/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Tea culture and West Lake heritage' },
-  { href: '/fr/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Teahouse culture and slow living' },
+  { href: '/fr/posts/beijing-city-guide-for-foreigners/', title: 'Pékin', desc: 'Culture impériale et vie des hutongs' },
+  { href: '/fr/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Culture du thé et patrimoine du lac de l’Ouest' },
+  { href: '/fr/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Culture des maisons de thé et art de vivre' },
 ];
 
 const otherSeries = [
-  { href: '/fr/series/food-of-china/', title: 'Food of China' },
-  { href: '/fr/series/history-of-china/', title: 'History of China' },
-  { href: '/fr/series/modern-china/', title: 'Modern China' },
+  { href: '/fr/series/food-of-china/', title: 'La cuisine de Chine' },
+  { href: '/fr/series/history-of-china/', title: 'Histoire de Chine' },
+  { href: '/fr/series/modern-china/', title: 'Chine moderne' },
 ];
 ---
 
@@ -36,7 +36,7 @@ const otherSeries = [
   <Header locale="fr" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content Series</p>
+      <p class="section-kicker">Série de contenu</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -48,7 +48,7 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">Articles</p>
-            <h2>Culture of China series</h2>
+            <h2>Série Culture de Chine</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -62,14 +62,14 @@ const otherSeries = [
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Articles in this series are being prepared. Check back soon.</p>
+          <p class="mt-6 text-gray-500">Les articles de cette série sont en préparation. Revenez bientôt.</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Practical tools</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Travel with cultural awareness</h2>
+          <p class="section-kicker">Outils pratiques</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Voyager avec une conscience culturelle</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -81,8 +81,8 @@ const otherSeries = [
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">City guides</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Cultural cities</h2>
+          <p class="section-kicker">Guides de villes</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Villes culturelles</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -94,7 +94,7 @@ const otherSeries = [
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">More series</p>
+          <p class="section-kicker">Autres séries</p>
           <div class="mt-3 grid gap-2">
             {otherSeries.map((s) => (
               <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
