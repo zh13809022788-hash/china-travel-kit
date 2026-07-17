@@ -1,75 +1,75 @@
-﻿---
+---
 import GuideLayout from '../../../../layouts/GuideLayout.astro';
 
-const title = "AI One-Person Company in China: A Foreigner's Guide (2026)";
+const title = '在中國經營 AI 個人公司：外國人指南（2026）';
 const description =
-  'Can foreigners run an AI one-person business while living in China? This guide covers visa rules, compliance, infrastructure, payment tools, and setup tips.';
+  '外國人可以在中國居住期間經營 AI 一人公司嗎？本指南涵蓋簽證規則、合規、基礎設施、支付工具和設定建議。';
 const url = '/digital-nomads/ai-opc/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
-  { label: 'Digital Nomads', href: '/zh-tw/digital-nomads/' },
-  { label: 'AI One-Person Company' },
+  { label: '首頁', href: '/' },
+  { label: '數位遊牧', href: '/zh-tw/digital-nomads/' },
+  { label: 'AI 個人公司' },
 ];
 
 const toc = [
-  { id: 'bottom-line', label: 'The Bottom Line' },
-  { id: 'compliance', label: 'Compliance & Visa Requirements' },
-  { id: 'infrastructure', label: 'Core Infrastructure' },
-  { id: 'niches', label: 'Suitable Cross-Border Niches' },
-  { id: 'cities', label: 'Best Cities for AI Founders' },
-  { id: 'mistakes', label: 'Common Compliance Mistakes' },
-  { id: 'faq', label: 'FAQ' },
+  { id: 'bottom-line', label: '基本結論' },
+  { id: 'compliance', label: '合規與簽證要求' },
+  { id: 'infrastructure', label: '核心基礎設施' },
+  { id: 'niches', label: '適合的跨境利基' },
+  { id: 'cities', label: '最適合 AI 創業者的城市' },
+  { id: 'mistakes', label: '常見合規錯誤' },
+  { id: 'faq', label: '常見問題' },
 ];
 
 const faqs = [
   {
-    question: 'Can a foreigner run an AI business while living in China without registering a Chinese company?',
+    question: '外國人可以在不註冊中國公司的情況下，在中國居住期間經營 AI 業務嗎？',
     answer:
-      'Yes, if the business is genuinely cross-border: registered abroad, serving overseas customers, with no Chinese clients and no local employees. You are then operating a foreign business that you happen to run from within China, not a Chinese company. The moment you take local clients or hire locally, you need a registered Chinese entity and the right work authorization.',
+      '可以，前提是業務真正跨境：在海外註冊、服務海外客戶、沒有中國客戶、沒有本地員工。在這種情況下，你只是在實際身處中國時經營你的外國公司，而非中國公司。一旦你接本地客戶或在本地僱人，就需要註冊的中國實體和正確的工作授權。',
   },
   {
-    question: 'Do I need to pay tax in China on my overseas AI income?',
+    question: '海外 AI 收入需要在中國繳稅嗎？',
     answer:
-      'It depends on your residency status and time in the country. Short stays on tourist or business visas generally do not create Chinese tax residency, but spending long enough in China across a year can. Chinese tax rules on foreign-sourced income are nuanced and change, so anyone staying long-term should get advice from a qualified cross-border tax professional rather than relying on general guidance.',
+      '取決於你的稅務居民身分和在國內停留的時間。持旅遊或商務簽證的短期停留通常不會產生中國稅務居民身分，但在一年中在中國停留足夠長的時間則可能產生。中國對海外來源收入的稅務規則複雜且會變化，因此任何長期停留者都應諮詢合格的跨境稅務專業人士，而非依賴一般性指導。',
   },
   {
-    question: 'Can I operate my business on a tourist or business visa?',
+    question: '可以在旅遊或商務簽證上經營業務嗎？',
     answer:
-      'Running an overseas-registered business remotely from China on a tourist (L) or business (M) visa sits in a gray area rather than being explicitly permitted, and is generally tolerated only when the work is purely cross-border. Taking local Chinese clients, earning local income, or doing local work is not allowed on these visas and requires proper work authorization and an entity.',
+      '持旅遊簽證（L）或商務簽證（M）在中國遠端經營海外註冊的公司屬於灰色地帶，而非明確允許，只有在工作純粹跨境時才通常被容忍。在這些簽證上從事本地工作、服務本地客戶或賺取本地收入是不允許的，需要正確的工作授權和實體。',
   },
   {
-    question: 'How do I receive payments from overseas customers while in China?',
+    question: '在中國期間如何接收海外客戶的付款？',
     answer:
-      'Keep your money flow outside the domestic Chinese system: use your foreign business bank account and international payment processors to collect revenue, and only bring across what you need for living costs via your foreign card topped into Alipay or WeChat Pay. Do not route foreign business revenue through domestic resident-oriented channels.',
+      '讓資金流保持在國內中國系統之外：使用你的外國商業銀行帳戶和國際支付處理器收取收入，只透過外國卡充值支付寶或微信支付來帶入你需要的生活費。不要將外國商業收入路由到面向居民的國內管道。',
   },
   {
-    question: 'Do I need a Chinese business address or registration for a cross-border one-person company?',
+    question: '跨境一人公司需要中國商業地址或註冊嗎？',
     answer:
-      'No, if you are not operating a Chinese entity. Your business remains registered in its home jurisdiction with whatever address it uses there. A Chinese registered address and license are only required if you formally establish a company in China, which brings employment, tax, and reporting obligations that rarely make sense for a solo cross-border operator.',
+      '不需要，如果你沒有在經營中國實體。你的公司保持在所在地區管轄區註冊，使用當地的地址。中國註冊地址和牌照只有在正式在中國設立公司時才需要，這會帶來就業、稅務和報告義務，對於一人跨境經營者來說幾乎從不合理。',
   },
   {
-    question: 'Is the internet in China reliable enough to run an AI business?',
+    question: '中國的網路足夠穩定以經營 AI 業務嗎？',
     answer:
-      'Domestic connectivity is fast and stable, but many international AI platforms, cloud consoles, and developer tools are blocked or slow to reach from a domestic connection. A solo AI founder must plan compliant, reliable access to overseas services before arriving, and test the full toolchain early, since your entire operation depends on it.',
+      '國內連接快速且穩定，但許多國際 AI 平台、雲端控制台和開發者工具在國內連接上被封鎖或速度很慢。一人 AI 創業者必須在抵達前安排合規、可靠的海外服務存取，並及早測試完整的工具鏈，因為你的整個業務都依賴於此。',
   },
 ];
 
 const related = [
   {
-    title: 'The Complete China Digital Nomad Guide',
-    description: 'Visas, payments, internet, and best cities — the foundation for basing yourself in China.',
+    title: '中國數位遊牧完整指南',
+    description: '簽證、支付、網路和最佳城市——在中國定居的基礎。',
     href: '/zh-tw/digital-nomads/',
   },
   {
-    title: 'China Visa for Digital Nomads (2026)',
-    description: 'The legal stay options that determine what business activity is permitted.',
+    title: '數位遊牧中國簽證（2026）',
+    description: '決定允許什麼商業活動的合法停留選項。',
     href: '/zh-tw/digital-nomads/visa/',
   },
   {
-    title: 'How to Pay for Things in China as a Foreigner',
-    description: 'Daily payments plus the cross-border money setup a solo founder needs.',
+    title: '外國人在中國如何付款',
+    description: '日常支付以及一人創業者需要的跨境資金設定。',
     href: '/zh-tw/digital-nomads/payment/',
   },
 ];
@@ -85,144 +85,94 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-ai-opc"
-  coverAlt="A modern Chinese city skyline representing tech and business"
+  coverAlt="代表科技與商業的中國現代城市天際線"
 >
   <p>
-    A new kind of remote worker is basing themselves in China: the solo operator running a lean,
-    AI-powered, cross-border business entirely from a laptop. Low overhead, no employees, customers
-    all overseas — the setup that makes a one-person company viable also makes it portable. This
-    guide is strictly about doing that <strong>as a foreigner living in China</strong>: the
-    compliance boundaries, the infrastructure you need, and the setup choices that keep you on the
-    right side of the rules. It is not generic startup advice, and everything here is framed for the
-    in-China context.
+    一種新型遠端工作者正在中國定居：經營精簡、AI 驅動、跨境業務的獨立運營者，完全從筆記型電腦上運作。低開銷、無員工、客戶全在海外——讓一人公司可行的設定也讓它可攜帶。這份指南嚴格關於<strong>作為居住在中國的外國人</strong>來做這件事：合規邊界、你需要的基礎設施，以及讓你保持在規則正確一側的設定選擇。這不是通用的創業建議，這裡的一切都是針對在中國境內的情境而設計的。
   </p>
 
-  <h2 id="bottom-line">The Bottom Line</h2>
+  <h2 id="bottom-line">基本結論</h2>
   <p>
-    Here is the direct answer: <strong>you do not need to register a Chinese company to run a
-    cross-border AI one-person business from within China</strong> — provided your business is
-    foreign-registered, serves only overseas customers, has no Chinese clients, and employs no one
-    locally. In that configuration you are simply running your existing foreign business while
-    physically present in China. The compliance risk appears the moment any part of the operation
-    becomes local: a Chinese client, locally earned income, or a local hire. Stay fully cross-border
-    and the model is clean; blur that line and you enter territory that requires a registered entity
-    and proper work authorization.
+    直接答案是：<strong>你不需要註冊中國公司就可以從中國境內經營跨境 AI 一人業務</strong>——前提是你的公司在海外註冊、只服務海外客戶、沒有中國客戶、不在本地僱人。在這種配置下，你只是在實際身處中國時經營你現有的外國公司。合規風險出現在運營的任何部分變成本地的那一刻：中國客戶、本地收入或本地僱用。保持完全跨境，這個模式就乾淨；模糊那條線，你就進入了需要註冊實體和正確工作授權的領域。
   </p>
 
-  <h2 id="compliance">Compliance &amp; Visa Requirements</h2>
+  <h2 id="compliance">合規與簽證要求</h2>
   <p>
-    Three questions decide whether your setup is sound: what your visa permits, whether you owe
-    Chinese tax, and whether you must register a local entity.
+    三個問題決定你的設定是否穩固：你的簽證允許什麼、你是否欠中國稅、以及你是否必須註冊本地實體。
   </p>
-  <h3>What each visa permits</h3>
+  <h3>每種簽證允許什麼</h3>
   <p>
-    On a tourist (L) or business (M) visa, running an overseas-registered business remotely is a
-    tolerated gray area, not an explicit permission — acceptable in practice only when the work is
-    purely cross-border. Neither visa allows local work, local clients, or local income. There is no
-    visa that lets a foreigner freelance for the Chinese domestic market without a sponsoring
-    employer and work permit. Read the <a href="/zh-tw/digital-nomads/visa/">full visa guide</a> for how
-    each option works and how long you can stay.
+    持旅遊簽證（L）或商務簽證（M）遠端經營海外註冊的公司是可容忍的灰色地帶，不是明確許可——只有在工作純粹跨境時才在實踐中可接受。兩種簽證都不允許本地工作、本地客戶或本地收入。沒有一種簽證允許外國人在沒有擔保雇主和工作許可的情況下為中國國內市場自由工作。閱讀<a href="/zh-tw/digital-nomads/visa/">完整簽證指南</a>了解每個選項的運作方式和停留時間。
   </p>
-  <h3>Tax basics</h3>
+  <h3>稅務基礎</h3>
   <p>
-    Chinese tax exposure hinges on how much time you spend in the country and your residency status.
-    Brief stays generally do not create tax residency; extended presence across a tax year can, and
-    the rules on foreign-sourced income are genuinely complex. This is the one area where you should
-    not improvise — a solo founder planning a long stay should consult a qualified cross-border tax
-    adviser rather than rely on forum wisdom.
+    中國稅務風險取決於你在國內停留的時間和你的稅務居民身分。短期停留通常不會產生稅務居民身分；跨稅務年度的長期停留則可能產生，而且海外來源收入的規則確實複雜。這是你不應該即興發揮的領域——計劃長期停留的一人創業者應諮詢合格的跨境稅務顧問，而非依賴論壇智慧。
   </p>
-  <h3>Why no Chinese entity is needed (when you stay cross-border)</h3>
+  <h3>為什麼不需要中國實體（當你保持跨境時）</h3>
   <p>
-    Registering a Chinese company triggers local employment, tax, and reporting duties that almost
-    never make sense for a one-person cross-border operation. As long as your business is registered
-    abroad, bills overseas customers, has no Chinese customers, and has no local staff, there is no
-    requirement to establish a local entity. Keeping the operation entirely foreign-facing is both
-    simpler and the compliant path.
+    註冊中國公司會觸發本地就業、稅務和報告義務，這對一人跨境業務來說幾乎從不合理。只要你的公司在海外註冊、向海外客戶收費、沒有中國客戶、沒有本地員工，就沒有必要設立本地實體。保持運營完全面向海外既更簡單又是合規之路。
   </p>
 
-  <h2 id="infrastructure">Core Infrastructure</h2>
-  <p>Three systems make or break a solo AI operation run from China.</p>
-  <h3>Cross-border payment collection</h3>
+  <h2 id="infrastructure">核心基礎設施</h2>
+  <p>三個系統決定了一人 AI 業務能否從中國順利運轉。</p>
+  <h3>跨境收款</h3>
   <p>
-    Collect revenue through your foreign business bank account and international payment processors,
-    not the domestic Chinese system. Bring across only living expenses by topping up Alipay or
-    WeChat Pay from your foreign card, as covered in the
-    <a href="/zh-tw/digital-nomads/payment/">payment guide</a>. A low-fee multi-currency business account
-    is usually the backbone of this flow.
+    透過你的外國商業銀行帳戶和國際支付處理器收取收入，而非國內中國系統。只從外國卡充值支付寶或微信支付帶入生活費，如
+    <a href="/zh-tw/digital-nomads/payment/">付款指南</a>所述。低手續費的多幣種商業帳戶通常是這個流程的骨幹。
   </p>
-  <h3>Reliable access to overseas tools</h3>
+  <h3>可靠的海外工具存取</h3>
   <p>
-    Your entire toolchain — AI platforms, cloud consoles, code repositories, communication tools —
-    often lives on services that are blocked or slow from a domestic Chinese connection. Arrange
-    compliant, dependable access before you arrive and test every critical tool in your first day.
-    For a business that exists on international platforms, this is not a nice-to-have; it is the
-    foundation.
+    你的整個工具鏈——AI 平台、雲端控制台、程式碼庫、溝通工具——通常依賴在中國國內連接上被封鎖或速度很慢的服務。在抵達前安排合規、可靠的存取，並在第一天測試每個關鍵工具。對於一個存在於國際平台上的業務來說，這不是可有可無的；這是基礎。
   </p>
-  <h3>Office &amp; address options</h3>
+  <h3>辦公室與地址選項</h3>
   <p>
-    For a foreign-registered solo business you keep using your home-jurisdiction registered address;
-    no Chinese address is required. For your working space, coworking memberships in major cities
-    provide a stable environment and fast local connectivity. If you ever genuinely need a China
-    presence, virtual-address and cross-border incorporation services exist — but for a pure
-    cross-border operator they are usually unnecessary overhead.
+    對於海外註冃的一人業務，你繼續使用你所在地區管轄區的註冊地址；不需要中國地址。對於工作空間，大城市的共用辦公會員提供穩定的環境和快速的本地連接。如果你確實需要中國實體存在，虛擬地址和跨境註冊服務是存在的——但對於純跨境經營者來說通常是多餘的開銷。
   </p>
 
-  <h2 id="niches">Suitable Cross-Border AI Niches</h2>
+  <h2 id="niches">適合的跨境 AI 利基</h2>
   <p>
-    The businesses that fit this model best are asset-light, serve overseas customers, and need no
-    local footprint:
+    最適合這個模式的業務是輕資產、服務海外客戶、不需要本地足跡的：
   </p>
   <ul>
-    <li><strong>AI-assisted content and localization services</strong> for international clients.</li>
-    <li><strong>Niche SaaS or micro-tools</strong> built and sold to a global audience.</li>
-    <li><strong>Productized AI consulting or automation</strong> delivered remotely to overseas businesses.</li>
-    <li><strong>Digital products</strong> — templates, courses, datasets — sold through international platforms.</li>
+    <li><strong>AI 輔助內容和在地化服務</strong>，面向國際客戶。</li>
+    <li><strong>利基 SaaS 或微型工具</strong>，面向全球受眾開發和銷售。</li>
+    <li><strong>產品化 AI 顧問或自動化</strong>，遠端交付給海外企業。</li>
+    <li><strong>數位產品</strong>——模板、課程、資料集——透過國際平台銷售。</li>
   </ul>
   <p>
-    The common thread and the compliance guardrail: customers and revenue stay overseas. Avoid
-    anything that pulls you into the Chinese domestic market — local clients, local advertising sales,
-    or services aimed at Chinese consumers — because that crosses from cross-border into local
-    business and changes your legal obligations entirely.
+    共同主線和合規護欄是：客戶和收入留在海外。避免任何把你拉入中國國內市場的事情——本地客戶、本地廣告銷售或針對中國消費者的服務——因為這從跨境業務跨越到了本地業務，完全改變了你的法律義務。
   </p>
 
-  <h2 id="cities">Best Cities for AI Founders</h2>
-  <p>Three cities stand out for a cross-border solo founder, each for different reasons.</p>
-  <h3>Shanghai</h3>
+  <h2 id="cities">最適合 AI 創業者的城市</h2>
+  <p>三個城市在跨境一人創業者中脫穎而出，各有不同的原因。</p>
+  <h3>上海</h3>
   <p>
-    The most international city, with the best English coverage, the deepest professional services,
-    the most coworking options, and strong international connectivity — ideal if you value ease of
-    operation and access to advisers. See the
-    <a href="/zh-tw/posts/shanghai-city-guide-for-foreigners/">Shanghai city guide</a>.
+    最國際化的城市，英語覆蓋最好、專業服務最深、共用辦公選擇最多、國際連接性強——如果你重視運營便利和接觸顧問，這裡最理想。查看
+    <a href="/zh-tw/posts/shanghai-city-guide-for-foreigners/">上海城市指南</a>。
   </p>
-  <h3>Shenzhen</h3>
+  <h3>深圳</h3>
   <p>
-    China's hardware and tech capital, right next to Hong Kong — convenient for frequent border
-    crossings and for anyone whose work touches the tech and product ecosystem. A pragmatic base for
-    founders who value proximity to Hong Kong's financial infrastructure.
+    中國的硬體和科技之都，緊鄰香港——對於需要頻繁跨境的人和工作涉及科技與產品生態系統的人來說非常方便。對於重視靠近香港金融基礎設施的創業者來說是務實的基地。
   </p>
-  <h3>Hangzhou</h3>
+  <h3>杭州</h3>
   <p>
-    A major tech and e-commerce hub with a strong software culture and a calmer pace than Shanghai,
-    plus lower costs. A comfortable, productive base for a solo builder who wants tech energy without
-    first-tier prices. See the
-    <a href="/zh-tw/posts/hangzhou-city-guide-for-foreigners/">Hangzhou city guide</a>.
+    主要的科技和電商科技和電商樞紐，擁有強大的軟體文化和比上海更悠閒的節奏，加上更低的成本。對於想要科技活力但不想付一線城市價格的獨立開發者來說，是舒適且高效的基地。查看
+    <a href="/zh-tw/posts/hangzhou-city-guide-for-foreigners/">杭州城市指南</a>。
   </p>
 
-  <h2 id="mistakes">Common Compliance Mistakes</h2>
+  <h2 id="mistakes">常見合規錯誤</h2>
   <ul>
-    <li><strong>Taking local clients on a tourist visa.</strong> The fastest way to turn a tolerated setup into an illegal one. Keep every client overseas.</li>
-    <li><strong>Hiring locally without an entity.</strong> Engaging Chinese workers requires a registered company and proper contracts; informal local hiring is non-compliant.</li>
-    <li><strong>Ignoring tax residency.</strong> Assuming foreign income is automatically untaxed while spending most of the year in China. Get professional advice.</li>
-    <li><strong>Routing business revenue through domestic channels.</strong> Keep foreign revenue in foreign accounts; the domestic system is built for residents and local business.</li>
-    <li><strong>Overstaying or misusing visas.</strong> Your right to be in the country underpins everything; a visa problem ends the business too. Follow the <a href="/zh-tw/digital-nomads/visa/">visa rules</a> precisely.</li>
-    <li><strong>Assuming your tools will just work.</strong> Failing to arrange reliable overseas access before arrival can halt operations on day one.</li>
+    <li><strong>持旅遊簽證接本地客戶。</strong>把可容忍的設定變成非法的最快方式。保持每個客戶都在海外。</li>
+    <li><strong>沒有實體就在本地僱人。</strong>僱用中國員工需要註冊公司和正確合約；非正式的本地僱用是不合規的。</li>
+    <li><strong>忽視稅務居民身分。</strong>假設外國收入在一年大部分時間在中國度過時自動免稅。請尋求專業建議。</li>
+    <li><strong>透過國內管道路由商業收入。</strong>將外國收入保留在外國帳戶中；國內系統是為居民和本地業務設計的。</li>
+    <li><strong>逾期或濫用簽證。</strong>你在這個國家的權利支撐著一切；簽證問題也會終結業務。嚴格遵守<a href="/zh-tw/digital-nomads/visa/">簽證規則</a>。</li>
+    <li><strong>假設你的工具會直接可用。</strong>未能提前安排可靠的海外存取可能在第一天就讓運營停擺。</li>
   </ul>
 
-  <h2 id="next">Start With the Fundamentals</h2>
+  <h2 id="next">從基礎開始</h2>
   <p>
-    Before optimizing the business, get the basics of living in China right — the visa that permits
-    your stay, payments, connectivity, and city choice. Return to the
-    <a href="/zh-tw/digital-nomads/">complete China digital nomad guide</a> to make sure your foundation is
-    solid, then build the one-person operation on top of it.
+    在最佳化業務之前，先把在中國生活的基礎做好——允許你停留的簽證、支付、連接性和城市選擇。回到
+    <a href="/zh-tw/digital-nomads/">中國數位遊牧完整指南</a>確保你的基礎穩固，然後在此之上建立一人業務。
   </p>
 </GuideLayout>
