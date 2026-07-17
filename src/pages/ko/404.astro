@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 const title = '페이지를 찾을 수 없습니다';
-const description = '페이지를 찾을 수 없습니다 - ChinaTripBox';
+const description = '요청하신 페이지를 찾을 수 없습니다 - ChinaTripBox';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
@@ -13,11 +13,14 @@ const description = '페이지를 찾을 수 없습니다 - ChinaTripBox';
     <section class="mx-auto max-w-2xl">
       <p class="section-kicker">404</p>
       <h1 class="mt-2 text-4xl font-bold text-gray-950">페이지를 찾을 수 없습니다</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">요청하신 페이지가 이동되었거나 주소가 올바르지 않습니다。</p>
+      <p class="mt-4 text-lg leading-8 text-gray-600">
+        주소가 바뀌었거나 삭제되었을 수 있습니다. 아래 링크에서 홈이나 주요 가이드 페이지로
+        이동해 보세요.
+      </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="/ko/" class="btn-primary">홈으로</a>
-        <a href="/ko/resources/" class="btn-outline">시작하기</a>
-        <a href="/ko/tools/" class="btn-outline">도구 열기</a>
+        <a href="/ko/resources/" class="btn-outline">자료 모음</a>
+        <a href="/ko/tools/" class="btn-outline">도구 보기</a>
       </div>
     </section>
   </main>
