@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -12,7 +12,7 @@ const needOptions = [
   { value: 'payment', label: 'Zahlung einrichten' },
   { value: 'esim', label: 'eSIM und Internet' },
   { value: 'transport', label: 'Flughafen und Züge' },
-  { value: 'hotel', label: 'Logik der Hotelgegend' },
+  { value: 'hotel', label: 'Hotelgegend verstehen' },
   { value: 'apps', label: 'Apps und Übersetzung' },
   { value: 'cash', label: 'Bargeldreserve' },
   { value: 'visa', label: 'Visafreie Einreise' },
@@ -37,7 +37,7 @@ const needOptions = [
           <div class="mt-7 flex flex-wrap gap-3">
             <a href="#planner" class="btn-primary">Planung starten</a>
             <a href="/de/travel-help/" class="btn-outline">Reisehilfe anfragen</a>
-            <a href="/de/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Erstreise-Guide lesen</a>
+            <a href="/de/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Erstreise-Leitfaden lesen</a>
           </div>
         </div>
 
@@ -204,7 +204,7 @@ const needOptions = [
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
         <p class="section-kicker">Vor der Nutzung des Planers</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">Lies die Einrichtungs-Guides, wenn dies deine erste China-Reise ist</h2>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">Lies die Einrichtungs-Leitfäden, wenn dies deine erste China-Reise ist</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
           <a href="/de/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
             <h3 class="font-bold text-gray-950">China-Reiseplaner für Erstbesucher</h3>
@@ -270,7 +270,7 @@ const needOptions = [
       payment: 'Zahlung einrichten',
       esim: 'eSIM und Internet',
       transport: 'Flughafen und Züge',
-      hotel: 'Logik der Hotelgegend',
+      hotel: 'Hotelgegend verstehen',
       apps: 'Apps und Übersetzung',
       cash: 'Bargeldreserve',
       visa: 'Visafreie Einreise',
@@ -282,7 +282,7 @@ const needOptions = [
     const preDeparture = [
       `Installiere Alipay, WeChat, DiDi, eine Übersetzungs-App und eine Offline-Karte, bevor du ${escapeHtml(home)} verlässt.`,
       needs.includes('payment')
-        ? 'Verknüpfe eine ausländische Visa oder Mastercard mit Alipay und versuche vor der Abreise eine kleine Verifizierung.'
+        ? 'Verknüpfe eine ausländische Visa- oder Mastercard mit Alipay und versuche vor der Abreise eine kleine Verifizierung.'
         : 'Halte die Zahlungseinrichtung einfach: eine mobile Wallet, eine physische Karte und etwas RMB-Bargeld.',
       needs.includes('esim')
         ? 'Kaufe und aktiviere vor dem Flug eine eSIM oder einen Roaming-Tarif und halte den QR-Code offline bereit.'
@@ -292,7 +292,7 @@ const needOptions = [
 
     const payment = [
       'Primäre Einrichtung: Alipay mit einer ausländischen Karte, weil dies für Besucher meist die praktischste erste Wallet ist.',
-      'Ersatzlösung: WeChat Pay, falls deine Karte erfolgreich verknüpft wird, plus eine physische Visa oder Mastercard.',
+      'Ersatzlösung: WeChat Pay, falls deine Karte erfolgreich verknüpft wird, plus eine physische Visa- oder Mastercard.',
       budget === 'Sparsam'
         ? 'Bargeldreserve: Nimm einen kleinen RMB-Betrag für Stände, Kautionen oder Karten-/Wallet-Probleme mit.'
         : 'Bargeldreserve: Halte genug RMB für Taxi, Snacks und eine einfache Mahlzeit bereit, falls mobile Zahlung ausfällt.',
@@ -301,7 +301,7 @@ const needOptions = [
 
     const internet = [
       'Für kurze Reisen ist eine Reise-eSIM meist die einfachste Einrichtung, wenn dein Telefon eSIM unterstützt.',
-      'Für längere Aufenthalte oder intensive Datennutzung vergleiche vor der Ankunft Roaming, eSIM, Pocket-WiFi und lokale SIM-Optionen.',
+      'Für längere Aufenthalte oder intensive Datennutzung vergleiche vor der Ankunft Roaming, eSIM, Pocket-Wi-Fi und lokale SIM-Optionen.',
       'Teste mobile Daten, bevor du den Flughafen verlässt, denn Zahlungs-Apps, Fahrdienste, Übersetzung und Karten hängen davon ab.',
       'Speichere Hotel- und Verkehrsinformationen offline, falls deine erste Verbindung instabil ist.',
     ];
