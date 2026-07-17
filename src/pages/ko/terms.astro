@@ -1,12 +1,12 @@
-﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 const title = '이용약관';
 const description =
-  'Terms for using ChinaTripBox, including informational use, external links, advertising, and limitations of liability.';
-const lastUpdated = 'July 10, 2026';
+  'ChinaTripBox 이용에 적용되는 조건과 책임 범위, 외부 링크, 광고 및 제휴 관련 안내입니다.';
+const lastUpdated = '2026년 7월 10일';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
@@ -14,86 +14,82 @@ const lastUpdated = 'July 10, 2026';
   <main class="container-page py-12">
     <article class="prose-content article-body">
       <h1 class="text-3xl font-bold text-gray-900">이용약관</h1>
-      <p class="mt-2 text-sm text-gray-500">Last updated: {lastUpdated}</p>
+      <p class="mt-2 text-sm text-gray-500">최종 업데이트: {lastUpdated}</p>
 
       <p class="mt-4">
-        By using ChinaTripBox, you agree to these 이용약관. If you do not agree, please do not
-        use this website.
+        ChinaTripBox를 이용하면 본 이용약관에 동의한 것으로 봅니다. 동의하지 않는 경우 이
+        웹사이트 이용을 중단해 주세요.
       </p>
 
-      <h2>Informational Purpose</h2>
+      <h2>정보 제공 목적</h2>
       <p>
-        ChinaTripBox provides general travel information for foreign visitors to China. We work to
-        keep our guides accurate and useful, but information about apps, prices, routes, policies,
-        entry rules, and service availability can change without notice.
+        ChinaTripBox는 중국을 방문하는 해외 여행자를 위한 일반 여행 정보를 제공합니다.
+        가이드의 정확성과 실용성을 유지하려고 노력하지만, 앱 지원 여부, 가격, 노선, 정책,
+        입국 규정, 서비스 운영 상황은 예고 없이 바뀔 수 있습니다.
       </p>
 
-      <h2>No Professional Advice</h2>
+      <h2>전문적 조언 아님</h2>
       <p>
-        Content on this site is not legal, immigration, financial, medical, tax, security, or
-        emergency advice. You are responsible for confirming official requirements and making your
-        own travel decisions.
+        본 사이트의 콘텐츠는 법률, 출입국, 금융, 의료, 세무, 보안, 응급 상황에 대한
+        전문 조언이 아닙니다. 공식 요건 확인과 최종 여행 결정은 이용자 본인의 책임입니다.
       </p>
 
-      <h2>AI and Travel Help Features</h2>
+      <h2>AI 및 여행 도움 기능</h2>
       <p>
-        ChinaTripBox may offer AI-assisted or human-backed travel help for practical questions.
-        These features are for general travel support only. AI responses may be inaccurate or
-        incomplete, and human helpers are not official representatives, legal advisors, immigration
-        advisors, medical professionals, financial advisors, banks, telecom providers, airlines, or
-        payment platforms.
+        ChinaTripBox는 실용적인 질문에 대해 AI 지원 또는 사람 검토 기반의 여행 도움 기능을
+        제공할 수 있습니다. 이 기능은 일반적인 여행 지원용이며, AI 답변은 부정확하거나
+        불완전할 수 있습니다. 사람 검토 역시 공식 기관, 법률 자문, 의료진, 금융기관,
+        항공사, 통신사, 결제 플랫폼을 대리하지 않습니다.
       </p>
       <p>
-        Do not submit passport photos, bank card numbers, passwords, PINs, one-time verification
-        codes, or other sensitive information. We may refuse, remove, or ignore requests that appear
-        unsafe, unlawful, abusive, or outside the scope of practical travel assistance.
-      </p>
-
-      <h2>External Links</h2>
-      <p>
-        We link to third-party websites, tools, apps, products, and services. We do not control
-        those third parties and are not responsible for their content, pricing, privacy practices,
-        availability, or decisions.
+        여권 사진, 카드 번호 전체, 비밀번호, PIN, 1회용 인증 코드 등 민감한 정보는 보내지
+        마세요. 위험하거나 불법적이거나, 범위를 벗어나거나, 악의적이라고 판단되는 요청은
+        거절하거나 삭제하거나 응답하지 않을 수 있습니다.
       </p>
 
-      <h2>Advertising and Affiliate Relationships</h2>
+      <h2>외부 링크</h2>
       <p>
-        ChinaTripBox may display advertisements and may use affiliate links. We may receive
-        compensation if you click an affiliate link or make a purchase through one of those links.
-        This does not increase your cost.
+        사이트에는 제3자 웹사이트, 앱, 상품, 서비스 링크가 포함될 수 있습니다. 해당 외부
+        서비스의 콘텐츠, 가격, 개인정보 처리, 가용성, 결정에 대해서는 책임지지 않습니다.
       </p>
 
-      <h2>Tips and Paid Help</h2>
+      <h2>광고 및 제휴 관계</h2>
       <p>
-        If optional tips, paid requests, or one-on-one help are introduced, payment terms, refund
-        rules, platform fees, and helper responsibilities will be shown before payment. Tips are
-        voluntary unless a paid service is clearly offered and accepted.
+        ChinaTripBox는 광고를 게재하거나 제휴 링크를 사용할 수 있습니다. 이용자가 제휴
+        링크를 클릭하거나 구매를 진행하면 일정 수익을 받을 수 있지만, 이용자 부담 비용이
+        추가되는 것은 아닙니다.
       </p>
 
-      <h2>Acceptable Use</h2>
+      <h2>팁 및 유료 지원</h2>
       <p>
-        You may use this site for personal, non-commercial travel planning. You may not misuse the
-        site, attempt to disrupt it, scrape it at scale, or republish substantial portions of our
-        content without permission.
+        향후 팁, 유료 요청, 1:1 지원이 도입되면 결제 전에 이용 조건, 환불 규정, 플랫폼
+        수수료, 제공 범위를 명확히 안내합니다. 별도 유료 서비스가 명시적으로 제공되지 않은
+        한 팁은 자율적입니다.
       </p>
 
-      <h2>Limitation of Liability</h2>
+      <h2>허용되는 이용 방식</h2>
       <p>
-        ChinaTripBox is provided on an "as is" and "as available" basis. To the fullest extent
-        permitted by law, we are not liable for losses or damages arising from your use of the site,
-        reliance on information, travel disruption, service changes, or third-party actions.
+        이 사이트는 개인적이고 비상업적인 여행 준비 용도로 이용할 수 있습니다. 사이트
+        운영을 방해하거나, 대규모로 스크래핑하거나, 허가 없이 핵심 콘텐츠를 재배포하는
+        행위는 허용되지 않습니다.
       </p>
 
-      <h2>Changes to These Terms</h2>
+      <h2>책임의 제한</h2>
       <p>
-        We may update these 이용약관 from time to time. Continued use of the site after changes
-        are posted means you accept the updated terms.
+        ChinaTripBox는 "있는 그대로", "제공 가능한 범위 내에서" 제공됩니다. 관련 법령이
+        허용하는 최대 범위에서, 사이트 이용, 정보 신뢰, 여행 차질, 서비스 변경, 제3자
+        행위로 인해 발생한 손실이나 피해에 대해 책임지지 않습니다.
       </p>
 
-      <h2>Contact</h2>
+      <h2>약관 변경</h2>
       <p>
-        If you have questions about these terms, please contact us through our
-        <a href="/ko/contact/">contact page</a>.
+        본 이용약관은 수시로 업데이트될 수 있습니다. 변경 사항 게시 후에도 사이트를 계속
+        이용하면 개정된 약관에 동의한 것으로 봅니다.
+      </p>
+
+      <h2>문의</h2>
+      <p>
+        약관 관련 문의는 <a href="/ko/contact/">문의 페이지</a>를 이용해 주세요.
       </p>
     </article>
   </main>
