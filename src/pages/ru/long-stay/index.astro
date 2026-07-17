@@ -1,84 +1,84 @@
-﻿---
+---
 import GuideLayout from '../../../layouts/GuideLayout.astro';
 
-const title = "Long-Term Stay in China: A Foreigner's Complete Guide (2026)";
+const title = "Длительное пребывание в Китае: полный гид для иностранца (2026)";
 const description =
-  'Planning to stay in China for 1-6 months? Our guide covers long-term accommodation, visa rules, monthly costs, and daily life tips for slow travelers and expats.';
+  'Планируете пробыть в Китае 1–6 месяцев? Наш гид охватывает долгосрочное жильё, правила виз, ежемесячные расходы и советы по повседневной жизни для медленных путешественников и экспатов.';
 const url = '/long-stay/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
-  { label: 'Long Stay' },
+  { label: 'Главная', href: '/' },
+  { label: 'Длительное пребывание' },
 ];
 
 const toc = [
-  { id: 'short-vs-long', label: 'Short Trip vs. Long Stay' },
-  { id: 'legal-stay', label: 'Staying Legally for 1-6 Months' },
-  { id: 'accommodation', label: 'Long-Term Accommodation' },
-  { id: 'monthly-cost', label: 'Monthly Cost of Living' },
-  { id: 'daily-life', label: 'Daily Life Essentials' },
-  { id: 'cities', label: 'Popular Cities for Long Stays' },
+  { id: 'short-vs-long', label: 'Короткая поездка vs. длительное пребывание' },
+  { id: 'legal-stay', label: 'Легальное пребывание 1–6 месяцев' },
+  { id: 'accommodation', label: 'Долгосрочное жильё' },
+  { id: 'monthly-cost', label: 'Ежемесячная стоимость жизни' },
+  { id: 'daily-life', label: 'Повседневные необходимости' },
+  { id: 'cities', label: 'Популярные города для длительного пребывания' },
   { id: 'faq', label: 'FAQ' },
 ];
 
 const faqs = [
   {
-    question: 'How long can a foreigner legally stay in China without a residence permit?',
+    question: 'Сколько иностранец может легально находиться в Китае без вида на жительство?',
     answer:
-      'It depends on your visa. A tourist (L) visa is usually issued for a 30, 60, or 90-day stay per entry, and some nationalities can extend once at the local exit-entry bureau. A business (M) visa can allow 90 to 180 days per entry over a multi-year validity. Anything beyond roughly six months of continuous living, or any local work, requires a residence permit tied to a work or family visa.',
+      'Зависит от вашей визы. Туристическая виза (L) обычно выдаётся на 30, 60 или 90 дней пребывания на въезд, и некоторые национальности могут продлить её один раз в местном отделении въезда-выезда. Деловая виза (M) может допускать от 90 до 180 дней на въезд при многолетней действительности. Всё, что превышает примерно шесть месяцев непрерывного проживания или любую местную работу, требует вида на жительство, привязанного к рабочей или семейной визе.',
   },
   {
-    question: 'Can foreigners rent a normal apartment in China for a few months?',
+    question: 'Могут ли иностранцы снять обычную квартиру в Китае на несколько месяцев?',
     answer:
-      'Yes. Foreigners can rent private apartments, though landlords often prefer 6 or 12-month leases. For 1 to 3 months, serviced apartments and monthly hotel rates are easier because they handle the paperwork. Whatever you rent, you must register your address with the local police within 24 hours of moving in.',
+      'Да. Иностранцы могут снимать частные квартиры, хотя арендодатели часто предпочитают договоры на 6 или 12 месяцев. На 1–3 месяца проще найти сервисные квартиры и месячные тарифы отелей, так как они берут на себя документы. Что бы вы ни сняли, вы должны зарегистрировать свой адрес в местной полиции в течение 24 часов после заселения.',
   },
   {
-    question: 'Do I need to register with the police if I rent privately?',
+    question: 'Нужно ли регистрироваться в полиции при частной аренде?',
     answer:
-      'Yes. Hotels register you automatically, but if you stay in a private apartment or with friends you must register at the local police station within 24 hours of arrival, and again each time you re-enter the country. Bring your passport and the lease or host details. Skipping this can lead to fines.',
+      'Да. Отели регистрируют вас автоматически, но если вы живёте в частной квартире или у друзей, вы должны зарегистрироваться в местном полицейском участке в течение 24 часов после прибытия и повторно при каждом повторном въезде в страну. Возьмите паспорт и договор аренды или данные хозяина. Пропуск регистрации может привести к штрафам.',
   },
   {
-    question: 'How much does it cost to live in China for a month as a foreigner?',
+    question: 'Сколько стоит жить в Китае месяц иностранцу?',
     answer:
-      'A comfortable single-person budget ranges from about 6,000 RMB per month in a small city like Dali to 15,000 RMB or more in central Shanghai. Rent is the biggest variable. Food, transport, and mobile data are inexpensive compared with Western cities, so most of your budget goes to accommodation.',
+      'Комфортный бюджет на одного человека составляет от примерно 6 000 юаней в месяц в небольшом городе вроде Даля до 15 000 юаней и более в центре Шанхая. Аренда — главная переменная. Еда, транспорт и мобильный интернет недорогие по сравнению с западными городами, поэтому большая часть бюджета уходит на жильё.',
   },
   {
-    question: 'Is there a language barrier for longer stays?',
+    question: 'Есть ли языковой барьер при длительном пребывании?',
     answer:
-      'Outside major international districts, English is limited. Translation apps, offline maps, and Alipay or WeChat mini-programs cover most daily situations. Learning a handful of Mandarin phrases and how to read a few characters makes a long stay far smoother, but it is not a prerequisite.',
+      'За пределами крупных международных районов английский мало распространён. Приложения-переводчики, офлайн-карты и мини-программы Alipay или WeChat покрывают большинство повседневных ситуаций. Знание нескольких фраз на мандаринском и умение прочитать несколько иероглифов делает длительное пребывание намного проще, но не является обязательным условием.',
   },
   {
-    question: 'Can I use my home health insurance, and do I need local coverage?',
+    question: 'Можно ли использовать домашнюю медстраховку и нужна ли местная?',
     answer:
-      'China does not require visitors to hold local health insurance, but public hospitals expect upfront payment and most home policies do not pay Chinese providers directly. For a multi-month stay, international travel-medical or expat insurance that covers China is strongly recommended, ideally including private international clinics in big cities.',
+      'Китай не требует от посетителей наличия местной медицинской страховки, но государственные больницы ожидают предоплаты, и большинство домашних полисов не платят китайским поставщикам напрямую. Для многомесячного пребывания настоятельно рекомендуется международная туристическая или экспатская страховка, покрывающая Китай, в идеале включая частные международные клиники в больших городах.',
   },
   {
-    question: 'Can I open a Chinese bank account for a long stay?',
+    question: 'Можно ли открыть китайский банковский счёт для длительного пребывания?',
     answer:
-      'It is possible but increasingly paperwork-heavy for non-residents. Many long-stay travelers skip it entirely because Alipay and WeChat Pay now accept major foreign cards for everyday spending. A local account mainly helps if you need to receive RMB locally or pay certain landlords by bank transfer.',
+      'Возможно, но для нерезидентов это всё более бюрократически сложно. Многие долгосрочные путешественники полностью обходятся без него, потому что Alipay и WeChat Pay теперь принимают основные иностранные карты для повседневных трат. Местный счёт в основном нужен, если вы должны получать юани на месте или платить определённым арендодателям банковским переводом.',
   },
   {
-    question: 'What happens if I want to stay longer than my visa allows?',
+    question: 'Что делать, если я хочу остаться дольше, чем позволяет виза?',
     answer:
-      'Apply for an extension at the local Public Security Bureau exit-entry office before your current stay expires, or leave and re-enter on a fresh entry if your visa has multiple entries. Overstaying carries a daily fine and can affect future visa applications, so plan your exit or extension well ahead of the expiry date.',
+      'Подайте заявление на продление в местном отделении въезда-выезда Управления общественной безопасности до истечения текущего срока пребывания или выезжайте и въезжайте повторно, если у визы многократный въезд. Просрочка пребывания влечёт ежедневный штраф и может повлиять на будущие визовые заявления, поэтому планируйте выезд или продление задолго до даты истечения.',
   },
 ];
 
 const related = [
   {
-    title: 'The Complete China Digital Nomad Guide (2026)',
-    description: 'Living in China while working remotely: visas, payment, best cities, and internet access.',
+    title: 'Полный гид по цифровым кочевникам в Китае (2026)',
+    description: 'Жизнь в Китае при удалённой работе: визы, оплата, лучшие города и доступ в интернет.',
     href: '/ru/digital-nomads/',
   },
   {
-    title: 'China Visa for Digital Nomads (2026)',
-    description: 'Every legal option for staying longer: tourist visas, business visas, transit rules, and border runs.',
+    title: 'Виза в Китай для цифровых кочевников (2026)',
+    description: 'Все легальные варианты для длительного пребывания: туристические визы, деловые визы, транзитные правила и визаран.',
     href: '/ru/digital-nomads/visa/',
   },
   {
-    title: 'How to Pay for Things in China as a Foreigner',
-    description: 'Set up Alipay and WeChat Pay, understand cash needs, and use foreign cards day to day.',
+    title: 'Как платить в Китае иностранцу',
+    description: 'Настройте Alipay и WeChat Pay, разберитесь с наличными и используйте иностранные карты изо дня в день.',
     href: '/ru/digital-nomads/payment/',
   },
 ];
@@ -94,206 +94,205 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-long-stay"
-  coverAlt="A foreigner settling into long-term life in a Chinese city"
+  coverAlt="Иностранец, обустраивающийся для длительной жизни в китайском городе"
  locale="ru">
   <p>
-    Staying in China for a month or more is a completely different experience from a one-week
-    tour. You stop optimizing every day for sightseeing and start living: cooking some of your own
-    meals, finding a neighborhood coffee shop, learning which metro exit is closest to home. This
-    guide is for slow travelers, sabbatical-takers, remote workers, and would-be expats who plan to
-    settle somewhere in China for anywhere from one to six months. It walks through how to stay
-    legally, where to live, what it costs, and how to handle the everyday logistics that a short
-    tourist visit never forces you to think about.
+    Пребывание в Китае месяц или более — совершенно иной опыт, чем недельный
+    тур. Вы перестаёте оптимизировать каждый день под достопримечательности и начинаете жить: готовите часть
+    еды сами, находите районную кофейню, узнаёте, какой выход метро ближе всего к дому. Этот
+    гид — для медленных путешественников, тех, кто в отпуске, удалённых работников и будущих экспатов, которые планируют
+    обосноваться где-то в Китае на срок от одного до шести месяцев. Он проходит через то, как оставаться
+    на легальном положении, где жить, сколько это стоит и как справляться с повседневной логистикой, о которой короткая
+    туристическая поездка никогда не заставляет задуматься.
   </p>
 
-  <h2 id="short-vs-long">Short Trip vs. Long Stay: What Actually Changes</h2>
+  <h2 id="short-vs-long">Короткая поездка vs. длительное пребывание: что реально меняется</h2>
   <p>
-    On a short trip, a hotel absorbs almost every logistical problem for you: it registers you with
-    the police, cleans your room, and sits near the sights. For a long stay, those conveniences
-    either disappear or get expensive, so you trade them for lower daily costs and a real routine.
-    The three things that change most are <strong>your legal status</strong> (a single tourist
-    entry may not cover the whole period), <strong>your housing</strong> (nightly hotel rates stop
-    making sense past a few weeks), and <strong>your relationship with bureaucracy</strong> (address
-    registration, possible visa extensions, and longer-term insurance all become your
-    responsibility). Get those three right and the rest of long-stay life in China is remarkably
-    smooth.
+    В короткой поездке отель берёт на себя почти все логистические проблемы: регистрирует вас в
+    полиции, убирает номер и находится рядом с достопримечательностями. При длительном пребывании эти удобства
+    либо исчезают, либо становятся дорогими, поэтому вы обмениваете их на более низкие ежедневные расходы и настоящий распорядок.
+    Три вещи, которые меняются сильнее всего — <strong>ваш правовой статус</strong> (однократного туристического
+    въезда может не хватить на весь период), <strong>ваше жильё</strong> (ночные тарифы отеля перестают
+    иметь смысл после нескольких недель) и <strong>ваши отношения с бюрократией</strong> (регистрация
+    адреса, возможное продление визы и долгосрочная страховка становятся вашей
+    ответственностью). Если правильно настроите эти три аспекта, остальная часть длительной жизни в Китае
+    проходит на удивление гладко.
   </p>
 
-  <h2 id="legal-stay">Staying Legally for 1-6 Months</h2>
+  <h2 id="legal-stay">Легальное пребывание 1–6 месяцев</h2>
   <p>
-    There is no single "long-stay visa" for casual living in China, so most people combine or
-    extend the standard options. Your choice depends on how long you want to stay and whether you
-    have any business reason to be there.
+    Единой «визы для длительного пребывания» для неформального проживания в Китае нет, поэтому большинство людей комбинирует или
+    продлевает стандартные варианты. Ваш выбор зависит от того, сколько вы хотите пробыть и есть ли у вас
+    деловая причина там находиться.
   </p>
-  <h3>Tourist visa (L) and extensions</h3>
+  <h3>Туристическая виза (L) и продления</h3>
   <p>
-    The L visa is the default for leisure stays. Depending on your nationality it is issued for 30,
-    60, or 90 days per entry. If you need a little longer, you can usually apply once for a 30-day
-    extension at the local exit-entry bureau, provided you apply before your current stay expires
-    and can show funds and a place to stay. This comfortably covers stays up to two or three months
-    for many travelers.
+    Виза L — стандарт для туристических поездок. В зависимости от гражданства она выдаётся на 30,
+    60 или 90 дней пребывания на въезд. Если нужно немного дольше, обычно можно один раз подать заявление на 30-дневное
+    продление в местном отделении въезда-выезда, при условии что вы подадите до истечения текущего срока пребывания
+    и сможете подтвердить средства и место проживания. Это удобно покрывает пребывание до двух-трёх месяцев
+    для многих путешественников.
   </p>
-  <h3>Business visa (M) for 3-6 months</h3>
+  <h3>Деловая виза (M) на 3–6 месяцев</h3>
   <p>
-    If you have any legitimate business connection — meetings, supplier visits, conferences — an M
-    visa is the better fit for longer periods. It is commonly issued with multi-year validity and
-    per-entry stays of 90 to 180 days, which makes multi-month living far less stressful than
-    stacking tourist extensions. It requires an invitation letter from a Chinese company or trade
-    body.
+    Если у вас есть легальная деловая связь — встречи, визиты к поставщикам, конференции — виза M
+    лучше подходит для более длительных периодов. Она обычно выдаётся с многолетней действительностью и
+    сроком пребывания на въезд от 90 до 180 дней, что делает многомесячное проживание гораздо менее напряжённым,
+    чем наслаивание туристических продлений. Требуется пригласительное письмо от китайской компании или торговой
+    организации.
   </p>
-  <h3>Visa-free transit for short stints</h3>
+  <h3>Безвизовый транзит для коротких визитов</h3>
   <p>
-    Many nationalities qualify for 240-hour (10-day) visa-free transit when passing through
-    designated cities en route to a third country. This is not a living solution, but it is useful
-    for scouting a city before committing to a longer visa. Check our
-    <a href="/ru/tools/visa-free-checker/">visa-free and transit checker</a> to see what your passport
-    allows.
+    Многие национальности подходят для 240-часового (10-дневного) безвизового транзита при проезде через
+    определённые города по пути в третью страну. Это не решение для проживания, но удобно
+    для разведки города перед оформлением более длительной визы. Проверьте наш
+    <a href="/ru/tools/visa-free-checker/">инструмент проверки безвизового и транзитного режима</a>, чтобы узнать, что позволяет ваш паспорт.
   </p>
   <p>
-    Whatever route you take, the golden rule is to plan your exit or extension well before your
-    permitted stay ends. Overstaying carries daily fines and can jeopardize future entries.
+    Каким бы путём вы ни пошли, главное правило — планируйте выезд или продление задолго до
+    окончания разрешённого срока пребывания. Просрочка влечёт ежедневные штрафы и может поставить под угрозу будущие въезды.
   </p>
 
-  <h2 id="accommodation">Long-Term Accommodation</h2>
+  <h2 id="accommodation">Долгосрочное жильё</h2>
   <p>
-    Where you sleep is the single biggest decision — and cost — of a long stay. There are three
-    realistic options, each with a clear trade-off between price, flexibility, and paperwork.
+    Где спать — главное решение и главная статья расходов при длительном пребывании. Есть три
+    реалистичных варианта, каждый с чётким компромиссом между ценой, гибкостью и документами.
   </p>
-  <h3>Serviced apartments</h3>
+  <h3>Сервисные квартиры</h3>
   <p>
-    Purpose-built for medium stays, serviced apartments come furnished, include cleaning and
-    utilities, and handle police registration for you. Expect to pay a premium over a bare private
-    rental, but for a one to three-month stay the convenience usually wins. They cluster in
-    business districts of big cities and typically quote monthly rates.
+    Созданные для средних по длительности пребываний, сервисные квартиры сдаются с мебелью, уборкой и
+    коммунальными услугами и берут на себя регистрацию в полиции. Ожидайте наценку по сравнению с обычной частной
+    арендой, но для пребывания на один-три месяца удобство обычно побеждает. Они сосредоточены в
+    деловых районах крупных городов и обычно указывают месячные тарифы.
   </p>
-  <h3>Monthly hotel rates</h3>
+  <h3>Месячные тарифы отелей</h3>
   <p>
-    Many mid-range hotels quietly offer sharply discounted monthly rates, especially outside peak
-    season. You get automatic police registration, daily or weekly housekeeping, and zero lease
-    commitment, at the cost of a smaller space and no kitchen. This is the lowest-friction option
-    if you value flexibility over square meters.
+    Многие отели среднего уровня негласно предлагают существенно сниженные месячные тарифы, особенно вне пикового
+    сезона. Вы получаете автоматическую регистрацию в полиции, ежедневную или еженедельную уборку и нулевые обязательства по аренде
+    ценой меньшего пространства и отсутствия кухни. Это вариант с наименьшими хлопотами,
+    если вы цените гибкость больше квадратных метров.
   </p>
-  <h3>Private apartment rentals</h3>
+  <h3>Аренда частной квартиры</h3>
   <p>
-    The cheapest per-month option, and the most "local," is renting a private apartment through
-    agents or platforms popular with residents. Landlords usually prefer 6 or 12-month leases and a
-    deposit, and you become responsible for registering your own address at the police station
-    within 24 hours. Best for stays approaching or exceeding six months, or for anyone who wants a
-    kitchen and a real neighborhood.
+    Самый дешёвый помесячный вариант и самый «местный» — аренда частной квартиры через
+    агентов или платформы, популярные у жителей. Арендодатели обычно предпочитают договоры на 6 или 12 месяцев и
+    депозит, и вы сами несёте ответственность за регистрацию своего адреса в полицейском участке
+    в течение 24 часов. Лучше всего для пребывания, близкого к шести месяцам или превышающего его, или для тех, кто хочет
+    кухню и настоящий район.
   </p>
   <blockquote>
-    Wherever you land, register your address with the local police within 24 hours of moving in.
-    Hotels and serviced apartments do this automatically; with a private lease it is on you.
+    Где бы вы ни остановились, зарегистрируйте свой адрес в местной полиции в течение 24 часов после заселения.
+    Отели и сервисные квартиры делают это автоматически; при частной аренде это ваша забота.
   </blockquote>
 
-  <h2 id="monthly-cost">Monthly Cost of Living</h2>
+  <h2 id="monthly-cost">Ежемесячная стоимость жизни</h2>
   <p>
-    China's cost of living varies enormously by city tier. Below are realistic single-person
-    monthly budgets covering rent, food, local transport, and mobile data, assuming a comfortable
-    but not luxurious lifestyle.
+    Стоимость жизни в Китае сильно зависит от уровня города. Ниже — реалистичные месячные бюджеты на одного человека,
+    включающие аренду, еду, местный транспорт и мобильный интернет при комфортном,
+    но не роскошном образе жизни.
   </p>
   <table>
     <thead>
       <tr>
-        <th>City tier</th>
-        <th>Example cities</th>
-        <th>Rent (1BR)</th>
-        <th>Total monthly budget</th>
+        <th>Уровень города</th>
+        <th>Примеры городов</th>
+        <th>Аренда (1-комн.)</th>
+        <th>Общий месячный бюджет</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>First tier</td>
-        <td>Shanghai, Shenzhen</td>
-        <td>7,000-12,000 RMB</td>
-        <td>12,000-18,000 RMB</td>
+        <td>Первый уровень</td>
+        <td>Шанхай, Шэньчжэнь</td>
+        <td>7 000–12 000 юаней</td>
+        <td>12 000–18 000 юаней</td>
       </tr>
       <tr>
-        <td>New first tier</td>
-        <td>Chengdu, Hangzhou</td>
-        <td>3,500-6,000 RMB</td>
-        <td>7,000-11,000 RMB</td>
+        <td>Новый первый уровень</td>
+        <td>Чэнду, Ханчжоу</td>
+        <td>3 500–6 000 юаней</td>
+        <td>7 000–11 000 юаней</td>
       </tr>
       <tr>
-        <td>Smaller / resort</td>
-        <td>Dali, Sanya</td>
-        <td>2,000-4,000 RMB</td>
-        <td>5,500-8,500 RMB</td>
+        <td>Меньшие / курортные</td>
+        <td>Дали, Санья</td>
+        <td>2 000–4 000 юаней</td>
+        <td>5 500–8 500 юаней</td>
       </tr>
     </tbody>
   </table>
   <p>
-    The pattern is consistent: rent drives everything. Food, whether you cook or eat at local
-    restaurants, is inexpensive across the board, and local transport rarely exceeds a few hundred
-    RMB a month even with daily metro and ride-hailing use. Budget extra if you rely on imported
-    groceries, international schools, or frequent domestic flights.
+    Закономерность постоянна: аренда определяет всё. Еда, готовите ли вы сами или едите в местных
+    ресторанах, недорогая повсеместно, а местный транспорт редко превышает несколько сотен
+    юаней в месяц даже при ежедневном метро и такси. Заложите больше, если полагаетесь на импортные
+    продукты, международные школы или частые внутренние перелёты.
   </p>
 
-  <h2 id="daily-life">Daily Life Essentials</h2>
+  <h2 id="daily-life">Повседневные необходимости</h2>
   <p>
-    Four systems cover almost everything you will touch day to day. Set them up in your first week
-    and the rest of your stay runs on autopilot.
+    Четыре системы покрывают почти всё, с чем вы столкнётесь ежедневно. Настройте их в первую неделю,
+    и остальная часть пребывания будет работать на автопилоте.
   </p>
   <ul>
     <li>
-      <strong>Оплатаs.</strong> Alipay and WeChat Pay run daily life, and both now let foreigners
-      link major overseas cards. Set them up before you arrive. Our
-      <a href="/ru/digital-nomads/payment/">payment guide</a> covers the full setup and limits.
+      <strong>Оплата.</strong> Alipay и WeChat Pay управляют повседневной жизнью, и оба теперь позволяют иностранцам
+      привязывать основные зарубежные карты. Настройте их до прибытия. Наш
+      <a href="/ru/digital-nomads/payment/">гид по оплате</a> описывает полную настройку и лимиты.
     </li>
     <li>
-      <strong>Connectivity.</strong> An eSIM gets you online the moment you land; for a multi-month
-      stay you may switch to a local SIM for a domestic number. See the
-      <a href="/ru/esim/">eSIM guides</a> for options.
+      <strong>Связь.</strong> eSIM подключит вас к сети в момент прилёта; для многомесячного
+      пребывания можно перейти на местную SIM для местного номера. См.
+      <a href="/ru/esim/">гиды по eSIM</a> для вариантов.
     </li>
     <li>
-      <strong>Транспорт.</strong> Metros in big cities are cheap, fast, and signposted in English,
-      and ride-hailing through DiDi works with a foreign card. Add the local transit QR code to
-      your payment app for tap-and-go.
+      <strong>Транспорт.</strong> Метро в крупных городах дешёвое, быстрое и с английскими указателями,
+      а вызов такси через DiDi работает с иностранной картой. Добавьте местный транспортный QR-код в
+      платёжное приложение для оплаты касанием.
     </li>
     <li>
-      <strong>Basic healthcare.</strong> Big cities have private international clinics with
-      English-speaking staff; public hospitals are cheaper but expect upfront payment and Mandarin.
-      Carry insurance that covers China and keep a small stock of any prescription medication.
+      <strong>Базовое здравоохранение.</strong> В крупных городах есть частные международные клиники с
+      англоговорящим персоналом; государственные больницы дешевле, но ожидают предоплату и общения на мандаринском.
+      Имейте страховку, покрывающую Китай, и небольшой запас рецептурных препаратов.
     </li>
   </ul>
 
-  <h2 id="cities">Popular Cities for Long Stays</h2>
+  <h2 id="cities">Популярные города для длительного пребывания</h2>
   <p>
-    Four cities consistently attract long-stay foreigners, each with a distinct character. Each
-    links to our full city guide for the on-the-ground detail.
+    Четыре города неизменно привлекают долгосрочных иностранцев, каждый со своим характером. Каждый
+    ведёт к нашему полному гиду по городу для деталей на месте.
   </p>
-  <h3>Shanghai</h3>
+  <h3>Шанхай</h3>
   <p>
-    China's most international city: the widest English coverage, the deepest expat community, and
-    the most services aimed at foreigners — balanced by the highest rents in the country. Ideal if
-    you want convenience and an easy landing. See the
-    <a href="/ru/posts/shanghai-city-guide-for-foreigners/">Shanghai city guide</a>.
+    Самый международный город Китая: самое широкое английское покрытие, самое глубокое экспатское сообщество и
+    больше всего сервисов для иностранцев — при самых высоких арендных ставках в стране. Идеально,
+    если хотите удобство и лёгкий старт. См.
+    <a href="/ru/posts/shanghai-city-guide-for-foreigners/">гид по Шанхаю</a>.
   </p>
-  <h3>Chengdu</h3>
+  <h3>Чэнду</h3>
   <p>
-    A relaxed, affordable base in the southwest famous for food, teahouses, and a slower pace, with
-    a growing foreign community and good transport links. See the
-    <a href="/ru/posts/chengdu-city-guide-for-foreigners/">Chengdu city guide</a>.
+    Расслабленная, доступная база на юго-западе, известная едой, чайными и неспешным ритмом, с
+    растущим иностранным сообществом и хорошими транспортными связями. См.
+    <a href="/ru/posts/chengdu-city-guide-for-foreigners/">гид по Чэнду</a>.
   </p>
-  <h3>Dali</h3>
+  <h3>Дали</h3>
   <p>
-    A small lakeside town in Yunnan that has become a magnet for long-stay travelers seeking very
-    low costs, mild weather, and an established community of remote workers and creatives. Best for
-    those who prioritize lifestyle and budget over big-city amenities.
+    Небольшой городок у озера в Юньнани, ставший магнитом для долгосрочных путешественников благодаря очень
+    низким ценам, мягкому климату и сложившемуся сообществу удалённых работников и творческих людей. Лучше всего
+    для тех, кто ставит образ жизни и бюджет выше городских удобств.
   </p>
-  <h3>Sanya</h3>
+  <h3>Санья</h3>
   <p>
-    China's tropical beach destination on Hainan island, popular for winter stays thanks to warm
-    weather when the rest of the country is cold. Summers are hot and humid. See the
-    <a href="/ru/posts/sanya-city-guide-for-foreigners/">Sanya city guide</a>.
+    Тропический пляжный курорт Китая на острове Хайнань, популярный для зимнего пребывания благодаря тёплой
+    погоде, когда в остальной стране холодно. Летом жарко и влажно. См.
+    <a href="/ru/posts/sanya-city-guide-for-foreigners/">гид по Санье</a>.
   </p>
 
-  <h2 id="next">Planning to Work While You Stay?</h2>
+  <h2 id="next">Планируете работать во время пребывания?</h2>
   <p>
-    If your long stay doubles as remote work, the logistics shift again — you will care about
-    internet reliability, time zones, coworking space, and the fine print of what each visa lets you
-    do. Our <a href="/ru/digital-nomads/">complete China digital nomad guide</a> picks up exactly where
-    this one leaves off, covering visas, payments, connectivity, and the best cities to base
-    yourself as a remote worker.
+    Если ваше длительное пребывание совмещается с удалённой работой, логистика меняется вновь — вам важны
+    надёжность интернета, часовые пояса, коворкинги и тонкости того, что позволяет каждая виза. Наш
+    <a href="/ru/digital-nomads/">полный гид по цифровым кочевникам в Китае</a> продолжает ровно там,
+    где заканчивается этот, охватывая визы, платежи, связь и лучшие города для базирования
+    удалённому работнику.
   </p>
 </GuideLayout>
