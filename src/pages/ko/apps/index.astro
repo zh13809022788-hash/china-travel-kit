@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -6,179 +6,179 @@ import CoverImage from '../../../components/CoverImage.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
 const title = '외국인 여행자를 위한 중국 필수 앱: 다운로드 링크와 웹 대안';
-const description = 'A complete directory of apps you need in China — WeChat, Alipay, DiDi, Baidu Maps, Meituan, 12306, VPN and more. Every app includes App Store / Google Play download links and H5 web versions that work without installing.';
+const description = '중국에서 필요한 앱의 완전한 디렉토리 — WeChat, Alipay, DiDi, Baidu Maps, Meituan, 12306, VPN 등. 모든 앱에 App Store / Google Play 다운로드 링크와 설치 없이 작동하는 H5 웹 버전을 포함합니다.';
 
 const appGroups = [
   {
-    category: '결제 & Wallet',
+    category: '결제 & 지갑',
     apps: [
       {
         name: 'Alipay',
-        desc: 'The most accepted mobile wallet in China. Link a foreign Visa or Mastercard, pay by QR code at shops, restaurants, taxis, and street vendors.',
+        desc: '중국에서 가장 널리 받아들여지는 모바일 지갑. 외국 Visa 또는 Mastercard를 연결하고 상점, 레스토랑, 택시, 노점상에서 QR 코드로 결제하세요.',
         android: 'https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone',
         ios: 'https://apps.apple.com/app/alipay/id333206289',
         h5: null,
-        note: 'Setup takes 10-15 min. Need passport for verification.',
+        note: '설정에 10-15분 소요. 인증을 위해 여권이 필요합니다.',
         guide: '/ko/posts/alipay-foreign-credit-card-step-by-step/',
       },
       {
         name: 'WeChat',
-        desc: 'China\'s super app. Use it for messaging, calls, Moments (social feed), and WeChat Pay. Most Chinese people use this daily for everything.',
+        desc: '중국의 슈퍼 앱. 메시징, 통화, 모멘트(소셜 피드), WeChat Pay에 사용됩니다. 대부분의 중국인이 일상의 모든 용도로 매일 사용합니다.',
         android: 'https://play.google.com/store/apps/details?id=com.tencent.mm',
         ios: 'https://apps.apple.com/app/wechat/id414478124',
         h5: 'https://web.wechat.com/',
-        note: 'WeChat Pay needs a linked card. WeChat itself works for messaging without setup.',
+        note: 'WeChat Pay는 연결된 카드가 필요합니다. WeChat 자체는 설정 없이 메시징에 사용 가능합니다.',
         guide: '/ko/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/',
       },
     ],
   },
   {
-    category: '교통 & Ride-Hailing',
+    category: '교통 & 차량 호출',
     apps: [
       {
         name: 'DiDi',
-        desc: 'China\'s Uber. Book taxis and private cars. Supports English interface. Can pay with Alipay or WeChat Pay.',
+        desc: '중국의 Uber. 택시와 개인 차량을 예약. 영어 인터페이스 지원. Alipay 또는 WeChat Pay로 결제 가능.',
         android: 'https://play.google.com/store/apps/details?id=com.didi.sdk',
         ios: 'https://apps.apple.com/app/didi/id1164272094',
         h5: 'https://m.didiglobal.com/',
-        note: 'H5 version works in browser or WeChat mini-program. No app needed for occasional rides.',
+        note: 'H5 버전은 브라우저나 WeChat 미니 프로그램에서 작동. 가끔 탑승 시 앱이 필요 없습니다.',
         guide: '/ko/posts/didi-china-foreign-tourists-guide/',
       },
       {
-        name: 'Alipay 교통 Mini-Program',
-        desc: 'Within Alipay, use the transport mini-program to scan QR codes for city metro and buses in most major cities.',
+        name: 'Alipay 교통 미니 프로그램',
+        desc: 'Alipay 내에서 교통 미니 프로그램을 사용해 대부분의 주요 도시에서 지하철과 버스 QR 코드를 스캔하세요.',
         android: null,
         ios: null,
         h5: null,
-        note: 'Open Alipay → "교통" icon. No separate install needed.',
+        note: 'Alipay 열기 → "교통" 아이콘. 별도 설치 불필요.',
         guide: '/ko/transport/',
       },
       {
         name: '12306',
-        desc: 'Official China Railway app for booking train tickets. Chinese-only interface, needs verification. Alternative: use Trip.com.',
+        desc: '기차표 예약을 위한 공식 중국 철도 앱. 중국어 전용 인터페이스, 인증 필요. 대안: Trip.com 사용.',
         android: 'https://play.google.com/store/apps/details?id=com.cars.blaili',
         ios: 'https://apps.apple.com/app/12306/id564757494',
         h5: 'https://www.12306.cn/',
-        note: 'Tricky for foreigners. Use Trip.com (English, no verification hassle).',
+        note: '외국인에게 까다로움. Trip.com 사용 권장 (영어, 인증 번거로움 없음).',
         guide: '/ko/posts/book-china-train-tickets-12306-foreigners/',
       },
       {
         name: 'Trip.com (Ctrip)',
-        desc: 'English-friendly app for booking trains, flights, and hotels. Accepts foreign cards directly.',
+        desc: '기차, 항공편, 호텔 예약을 위한 영어 친화적 앱. 외국 카드를 직접 받습니다.',
         android: 'https://play.google.com/store/apps/details?id=com.ctrip',
         ios: 'https://apps.apple.com/app/trip-com/id1612956441',
         h5: 'https://www.trip.com/',
-        note: 'Best alternative to 12306 for train tickets. Higher service fee but much easier.',
+        note: '기차표를 위한 12306의 최적 대안. 서비스 수수료가 높지만 훨씬 쉽습니다.',
         guide: null,
       },
     ],
   },
   {
-    category: 'Navigation & Maps',
+    category: '내비게이션 & 지도',
     apps: [
       {
         name: 'Baidu Maps',
-        desc: 'Most detailed China map. Turn-by-turn navigation, public transit routing, restaurant search. Chinese-only but usable with gestures.',
+        desc: '가장 상세한 중국 지도. 턴바이턴 내비게이션, 대중교통 노선, 음식점 검색. 중국어 전용이지만 제스처로 사용 가능.',
         android: 'https://play.google.com/store/apps/details?id=com.baidu.BaiduMap',
         ios: 'https://apps.apple.com/app/baidu-maps/id452186370',
         h5: 'https://map.baidu.com/',
-        note: 'Google Maps is blocked in China. Need Baidu or Amap for navigation.',
+        note: 'Google Maps는 중국에서 차단됩니다. 내비게이션을 위해 Baidu 또는 Amap이 필요합니다.',
         guide: null,
       },
       {
         name: 'Amap (Gaode)',
-        desc: 'Alternative to Baidu Maps. Many locals prefer Amap. Better for taxi navigation, live traffic, and restaurant reviews.',
+        desc: 'Baidu Maps의 대안. 많은 현지인이 Amap을 선호합니다. 택시 내비게이션, 실시간 교통, 음식점 리뷰에 더 적합.',
         android: 'https://play.google.com/store/apps/details?id=com.autonavi.minimap',
         ios: 'https://apps.apple.com/app/amap/id461703208',
         h5: 'https://ditu.amap.com/',
-        note: 'Both Baidu and Amap work. Pick one. Amap tends to be more accurate for taxi hailing.',
+        note: 'Baidu와 Amap 모두 작동합니다. 하나를 선택하세요. 택시 호출에는 Amap이 더 정확한 경향이 있습니다.',
         guide: null,
       },
       {
         name: 'Google Maps',
-        desc: 'Works partially in China for browsing but navigation and real-time traffic are unreliable. Good for pre-trip planning.',
+        desc: '중국에서 탐색은 부분적으로 작동하지만 내비게이션과 실시간 교통은 불안정합니다. 여행 전 계획에 적합.',
         android: null,
         ios: null,
         h5: 'https://maps.google.com/',
-        note: 'Will not work for turn-by-turn navigation in China without VPN.',
+        note: 'VPN 없이는 중국에서 턴바이턴 내비게이션이 작동하지 않습니다.',
         guide: '/ko/posts/do-you-need-a-vpn-in-china-2026/',
       },
     ],
   },
   {
-    category: 'Food & Dining',
+    category: '음식 & 다이닝',
     apps: [
       {
         name: 'Meituan',
-        desc: 'Food delivery, restaurant booking, movie tickets, hotel booking. Chinese-only. Use inside Alipay mini-program for English help.',
+        desc: '음식 배달, 레스토랑 예약, 영화 티켓, 호텔 예약. 중국어 전용. 영어 도움을 위해 Alipay 미니 프로그램 내에서 사용.',
         android: 'https://play.google.com/store/apps/details?id=com.sankuai.meituan',
         ios: 'https://apps.apple.com/app/meituan/id423924287',
         h5: 'https://waimai.meituan.com/',
-        note: 'H5 food delivery works in browser. Pay with Alipay at delivery.',
+        note: 'H5 음식 배달은 브라우저에서 작동. 배달 시 Alipay로 결제.',
         guide: '/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Ele.me',
-        desc: 'Food delivery app (owned by Alibaba). Similar to Meituan. Can order food with Alipay.',
+        desc: '음식 배달 앱 (Alibaba 소유). Meituan과 유사. Alipay로 음식 주문 가능.',
         android: 'https://play.google.com/store/apps/details?id=me.ele',
         ios: 'https://apps.apple.com/app/ele-me/id532785356',
         h5: 'https://www.ele.me/',
-        note: 'Both Meituan and Ele.me work. Try both for best restaurant coverage.',
+        note: 'Meituan과 Ele.me 모두 작동. 최적의 음식점 범위를 위해 둘 다 시도.',
         guide: '/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Dianping',
-        desc: 'Yelp of China. Restaurant reviews, ratings, photos. Helps find good local eateries. Chinese-only.',
+        desc: '중국의 Yelp. 음식점 리뷰, 평점, 사진. 좋은 현지 식당을 찾는 데 도움. 중국어 전용.',
         android: 'https://play.google.com/store/apps/details?id=com.dianping.v1',
         ios: 'https://apps.apple.com/app/dianping/id416896465',
         h5: 'https://www.dianping.com/',
-        note: 'Use the photo search feature — see what dishes look like before ordering.',
+        note: '사진 검색 기능 사용 — 주문 전 요리가 어떤 모습인지 확인.',
         guide: '/ko/food/',
       },
     ],
   },
   {
-    category: 'Communication & VPN',
+    category: '커뮤니케이션 & VPN',
     apps: [
       {
-        name: 'VPN (choose one before travel)',
-        desc: 'Install a VPN BEFORE you leave. ExpressVPN, NordVPN, and Astrill work in China. Free VPNs mostly blocked.',
+        name: 'VPN (여행 전 선택)',
+        desc: '출발 전에 VPN을 설치하세요. ExpressVPN, NordVPN, Astrill이 중국에서 작동합니다. 무료 VPN은 대부분 차단됩니다.',
         android: null,
         ios: null,
         h5: null,
-        note: 'ESSENTIAL: Install and test before arriving. Activate when you land.',
+        note: '필수: 도착 전에 설치하고 테스트. 착륙 시 활성화.',
         guide: '/ko/posts/do-you-need-a-vpn-in-china-2026/',
       },
       {
         name: 'Google Translate',
-        desc: 'Camera translation for menus, signs, and documents. Download Chinese(Simplified) offline pack.',
+        desc: '메뉴, 표지판, 문서를 위한 카메라 번역. 중국어(간체) 오프라인 팩을 다운로드하세요.',
         android: 'https://play.google.com/store/apps/details?id=com.google.android.apps.translate',
         ios: 'https://apps.apple.com/app/google-translate/id414706506',
         h5: 'https://translate.google.com/',
-        note: 'Best translation tool. Download offline pack before trip.',
+        note: '최고의 번역 도구. 여행 전 오프라인 팩 다운로드.',
         guide: '/ko/tools/survival-kit/',
       },
     ],
   },
   {
-    category: 'Travel Booking',
+    category: '여행 예약',
     apps: [
       {
-        name: 'Trip.com (Hotels)',
-        desc: 'Best for booking hotels with foreign cards. Wide coverage. English interface.',
+        name: 'Trip.com (호텔)',
+        desc: '외국 카드로 호텔 예약에 최적. 넓은 범위. 영어 인터페이스.',
         android: null,
         ios: null,
         h5: 'https://www.trip.com/hotels/',
-        note: 'Also works for flights and trains. One-stop shop.',
+        note: '항공편과 기차에도 작동. 원스톱 쇼핑.',
         guide: null,
       },
       {
         name: 'Fliggy (Alitrip)',
-        desc: 'Alibaba\'s travel booking platform. Inside Alipay app. Good for domestic flights.',
+        desc: 'Alibaba의 여행 예약 플랫폼. Alipay 앱 내부. 국내 항공편에 적합.',
         android: null,
         ios: null,
         h5: 'https://www.fliggy.com/',
-        note: 'Can pay with Alipay. No separate download needed.',
+        note: 'Alipay로 결제 가능. 별도 다운로드 불필요.',
         guide: null,
       },
     ],
@@ -190,15 +190,15 @@ const appGroups = [
   <Header locale="ko" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Mobile apps</p>
+      <p class="section-kicker">모바일 앱</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">중국 필수 앱</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-internet-apps" alt="Smartphone with essential China travel apps icons" loading="eager" />
+    <CoverImage name="topic-internet-apps" alt="중국 여행 필수 앱 아이콘이 있는 스마트폰" loading="eager" />
 
     <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-900">
-      <strong>Before you go:</strong> Install these apps on WiFi before departure. Some app stores are slow or blocked from within China. Download offline translation packs and VPN apps at home.
+      <strong>출발 전:</strong> 출발 전 WiFi에서 이 앱들을 설치하세요. 일부 앱 스토어는 중국 내부에서 느리거나 차단됩니다. 집에서 오프라인 번역 팩과 VPN 앱을 다운로드하세요.
     </div>
 
     <AdSlot format="banner" />
@@ -228,16 +228,16 @@ const appGroups = [
                 {app.h5 && (
                   <a href={app.h5} target="_blank" rel="noopener" class="inline-flex items-center gap-1 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 transition-colors hover:bg-gray-50">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    Open Web Version
+                    웹 버전 열기
                   </a>
                 )}
               </div>
 
               {app.note && (
-                <p class="mt-3 text-xs leading-5 text-gray-500"><span class="font-semibold">Tip:</span> {app.note}</p>
+                <p class="mt-3 text-xs leading-5 text-gray-500"><span class="font-semibold">팁:</span> {app.note}</p>
               )}
               {app.guide && (
-                <a href={app.guide} class="mt-2 inline-block text-xs font-semibold text-brand-700 hover:text-brand-800">Read setup guide &rarr;</a>
+                <a href={app.guide} class="mt-2 inline-block text-xs font-semibold text-brand-700 hover:text-brand-800">설정 가이드 읽기 &rarr;</a>
               )}
             </article>
           ))}
@@ -246,25 +246,25 @@ const appGroups = [
     ))}
 
     <section class="mt-12 rounded-lg border border-gray-200 p-6">
-      <h2 class="text-xl font-bold text-gray-950">H5 Web Apps — No Download Needed</h2>
+      <h2 class="text-xl font-bold text-gray-950">H5 웹 앱 — 다운로드 불필요</h2>
       <p class="mt-2 text-sm leading-6 text-gray-600">
-        Many China services have <strong>web-based (H5) versions</strong> that work directly in your phone browser or inside WeChat/Alipay mini-programs. These are great for short-term travelers who don't want to clutter their phone with 10+ apps. Key ones:
+        많은 중국 서비스에는 휴대폰 브라우저나 WeChat/Alipay 미니 프로그램 내에서 직접 작동하는 <strong>웹 기반(H5) 버전</strong>이 있습니다. 10개 이상의 앱으로 휴대폰을 복잡하게 만들고 싶지 않은 단기 여행자에게 적합합니다. 주요 앱:
       </p>
       <div class="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">m.didiglobal.com (English available)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Baidu Maps</strong> — <span class="text-gray-600">map.baidu.com (Chinese only)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">WeChat Web</strong> — <span class="text-gray-600">web.wechat.com (messaging only)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Meituan</strong> — <span class="text-gray-600">waimai.meituan.com (food delivery)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Dianping</strong> — <span class="text-gray-600">dianping.com (restaurant search)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay Mini-Programs</strong> — <span class="text-gray-600">Everything inside Alipay (no extra install)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">m.didiglobal.com (영어 지원)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Baidu Maps</strong> — <span class="text-gray-600">map.baidu.com (중국어 전용)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">WeChat Web</strong> — <span class="text-gray-600">web.wechat.com (메시징 전용)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Meituan</strong> — <span class="text-gray-600">waimai.meituan.com (음식 배달)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Dianping</strong> — <span class="text-gray-600">dianping.com (음식점 검색)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay 미니 프로그램</strong> — <span class="text-gray-600">Alipay 내 모든 것 (추가 설치 불필요)</span></div>
       </div>
       <p class="mt-4 text-xs text-gray-500">
-        <strong>Web versions work without a VPN</strong> in most cases. For app downloads, install before arrival on home WiFi.
+        <strong>웹 버전은 대부분의 경우 VPN 없이 작동</strong>합니다. 앱 다운로드의 경우, 도착 전 자택 WiFi에서 설치하세요.
       </p>
     </section>
 
     <section class="mt-10 text-center">
-      <p class="text-sm text-gray-500">App store links open official pages. Prices and availability subject to regional restrictions.</p>
+      <p class="text-sm text-gray-500">앱 스토어 링크는 공식 페이지를 엽니다. 가격과 이용 가능 여부는 지역 제한의 적용을 받습니다.</p>
     </section>
   </main>
   <Footer />
