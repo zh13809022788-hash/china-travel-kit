@@ -36,8 +36,8 @@ export default defineConfig({
       filter: (page) => {
         const url = new URL(page);
         const path = url.pathname;
-        // Keep only English pages; exclude non-English locales and low-value cluster pages
-        const excludedPrefixes = ['/zh-tw/', '/ja/', '/ko/', '/ru/', '/fr/', '/de/', '/es/', '/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
+        // Keep only English pages; exclude non-English locales and pages not ready for indexing
+        const excludedPrefixes = ['/zh-tw/', '/ja/', '/ko/', '/ru/', '/fr/', '/de/', '/es/', '/authors/'];
         if (excludedPrefixes.some((prefix) => path.startsWith(prefix))) return false;
         if (path === '/404' || path === '/404/') return false;
         return true;
