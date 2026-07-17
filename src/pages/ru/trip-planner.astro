@@ -4,9 +4,9 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 
-const title = 'Бесплатный планировщик поездки в China';
+const title = 'Бесплатный планировщик поездки в Китай';
 const description =
-  'Составьте практичный план первой поездки в China с рекомендациями по оплате, eSIM, транспорту, настройке приложений, наличным и чек-листу первого дня.';
+  'Составьте практичный план первой поездки в Китай с рекомендациями по оплате, eSIM, транспорту, настройке приложений, наличным и чек-листу первого дня.';
 
 const needOptions = [
   { value: 'payment', label: 'Настройка оплаты' },
@@ -28,7 +28,7 @@ const needOptions = [
         <div>
           <p class="section-kicker">Бесплатный инструмент планирования</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            Составьте практичный план прибытия в China до вылета
+            Составьте практичный план прибытия в Китай до вылета
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
             Получите черновой план по оплате, eSIM-интернету, транспорту из аэропорта, настройке
@@ -73,19 +73,19 @@ const needOptions = [
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               Город прибытия
               <select id="arrival-city" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>Shanghai</option>
-                <option>Beijing</option>
-                <option>Guangzhou</option>
-                <option>Shenzhen</option>
-                <option>Chengdu</option>
-                <option>Hangzhou</option>
-                <option value="Other city">Другой город</option>
+                <option>Шанхай</option>
+                <option>Пекин</option>
+                <option>Гуанчжоу</option>
+                <option>Шэньчжэнь</option>
+                <option>Чэнду</option>
+                <option>Ханчжоу</option>
+                <option value="Другой город">Другой город</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800 md:col-span-2">
               Города назначения
-              <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="Shanghai, Hangzhou, Beijing" />
+              <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="Шанхай, Ханчжоу, Пекин" />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
@@ -103,33 +103,33 @@ const needOptions = [
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               Цель поездки
               <select id="trip-purpose" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option value="Tourism">Туризм</option>
-                <option value="Business">Бизнес</option>
-                <option value="Long stay">Длительное пребывание</option>
-                <option value="Digital nomad">Digital nomad</option>
-                <option value="Family visit">Семейный визит</option>
-                <option value="Transit">Транзит</option>
+                <option value="Туризм">Туризм</option>
+                <option value="Бизнес">Бизнес</option>
+                <option value="Длительное пребывание">Длительное пребывание</option>
+                <option value="Цифровое кочевничество">Цифровое кочевничество</option>
+                <option value="Семейный визит">Семейный визит</option>
+                <option value="Транзит">Транзит</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               Бюджет
               <select id="budget-range" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option value="Budget">Бюджетно</option>
-                <option value="Comfort" selected>Комфорт</option>
-                <option value="Premium">Премиум</option>
+                <option value="Бюджетно">Бюджетно</option>
+                <option value="Комфорт" selected>Комфорт</option>
+                <option value="Премиум">Премиум</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               Стиль поездки
               <select id="travel-style" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option value="Efficient">Эффективно</option>
-                <option value="Budget">Бюджетно</option>
-                <option value="Comfort" selected>Комфорт</option>
-                <option value="Family">Семейно</option>
-                <option value="Business">Бизнес</option>
-                <option value="Food-focused">С акцентом на еду</option>
+                <option value="Эффективно">Эффективно</option>
+                <option value="Бюджетно">Бюджетно</option>
+                <option value="Комфорт" selected>Комфорт</option>
+                <option value="Семейно">Семейно</option>
+                <option value="Бизнес">Бизнес</option>
+                <option value="С акцентом на еду">С акцентом на еду</option>
               </select>
             </label>
           </div>
@@ -180,7 +180,7 @@ const needOptions = [
       <section id="plan-output" class="mt-10 hidden rounded-lg border border-brand-100 bg-brand-50 p-5 md:p-6" aria-live="polite">
         <div class="border-b border-brand-100 pb-4">
           <p class="section-kicker">Созданный план</p>
-          <h2 class="mt-2 text-2xl font-bold text-gray-950">Черновик подготовки поездки в China</h2>
+          <h2 class="mt-2 text-2xl font-bold text-gray-950">Черновик подготовки поездки в Китай</h2>
         </div>
         <div id="plan-content" class="mt-5 grid gap-5"></div>
       </section>
@@ -205,14 +205,14 @@ const needOptions = [
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
         <p class="section-kicker">Перед использованием планировщика</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">Прочитайте руководства по настройке, если это первая поездка в China</h2>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">Прочитайте руководства по настройке, если это первая поездка в Китай</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
           <a href="/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">Планировщик поездки в China для первой поездки</h3>
+            <h3 class="font-bold text-gray-950">Планировщик поездки в Китай для первой поездки</h3>
             <p class="mt-2 text-sm leading-6 text-gray-600">Используйте тот же порядок планирования, что и в этом инструменте: интернет, оплата, маршрут из аэропорта, приложения, порядок городов и чек-лист первого дня.</p>
           </a>
           <a href="/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">Что настроить перед поездкой в China</h3>
+            <h3 class="font-bold text-gray-950">Что настроить перед поездкой в Китай</h3>
             <p class="mt-2 text-sm leading-6 text-gray-600">Практический чек-лист перед выездом для Alipay, WeChat Pay, eSIM, DiDi, билетов на поезд, карт и запаса наличных.</p>
           </a>
         </div>
@@ -260,12 +260,12 @@ const needOptions = [
 
   const buildPlan = () => {
     const home = getValue('home-country') || 'ваша страна отправления';
-    const arrival = getValue('arrival-city') || 'Shanghai';
+    const arrival = getValue('arrival-city') || 'Шанхай';
     const cities = splitCities(getValue('destination-cities'), arrival);
     const days = Number(getValue('trip-length') || '7');
-    const purpose = getValue('trip-purpose') || 'Tourism';
-    const budget = getValue('budget-range') || 'Comfort';
-    const style = getValue('travel-style') || 'Comfort';
+    const purpose = getValue('trip-purpose') || 'Туризм';
+    const budget = getValue('budget-range') || 'Комфорт';
+    const style = getValue('travel-style') || 'Комфорт';
     const needs = selectedNeeds();
     const perCity = Math.max(1, Math.floor(days / Math.max(1, cities.length)));
 
@@ -283,10 +283,10 @@ const needOptions = [
     const payment = [
       'Основная настройка: Alipay с иностранной картой, потому что для посетителей это обычно самый практичный первый кошелёк.',
       'Запасной вариант: WeChat Pay, если карта успешно привяжется, плюс одна физическая Visa или Mastercard.',
-      budget === 'Budget'
+      budget === 'Бюджетно'
         ? 'Запас наличных: возьмите небольшую сумму RMB для ларьков, депозитов или проблем с картой/кошельком.'
         : 'Запас наличных: держите достаточно RMB для такси, перекуса и одного простого приёма пищи на случай сбоя мобильной оплаты.',
-      'Не полагайтесь на Apple Pay или Google Pay как основной способ оплаты в материковом China.',
+      'Не полагайтесь на Apple Pay или Google Pay как основной способ оплаты в материковом Китае.',
     ];
 
     const internet = [
@@ -315,10 +315,10 @@ const needOptions = [
       'Не ждите прибытия, чтобы настроить все приложения, карты и интернет.',
       'Не планируйте плотный день осмотра достопримечательностей сразу после дальнего перелёта.',
       'Не полагайтесь только на один способ оплаты.',
-      purpose === 'Business'
+      purpose === 'Бизнес'
         ? 'Для деловой поездки закладывайте дополнительное время на пробки, проверки безопасности, счета и доступ в здания.'
         : 'Для туристической поездки оставляйте один гибкий блок каждые два-три дня на погоду, очереди или усталость.',
-      style === 'Food-focused'
+      style === 'С акцентом на еду'
         ? 'Для поездок с акцентом на еду сохраняйте названия ресторанов на китайском и проверяйте часы работы перед поездкой через город.'
         : 'Держите простой запасной план питания рядом с отелем.',
     ];
@@ -344,7 +344,7 @@ const needOptions = [
       `Стиль: ${style}`,
       `Нужна помощь: ${needs.join(', ') || 'не указано'}`,
       '',
-      'Пожалуйста, проверьте мою подготовку поездки в China по оплате, eSIM, транспорту, таймингу и ошибкам первого дня.',
+      'Пожалуйста, проверьте мою подготовку поездки в Китай по оплате, eSIM, транспорту, таймингу и ошибкам первого дня.',
     ].join('\n');
 
     if (emailLink) {
