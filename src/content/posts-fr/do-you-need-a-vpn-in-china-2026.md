@@ -44,7 +44,7 @@ Ne partez pas du principe que votre téléphone se comportera comme chez vous. L
 - outils d'IA ou services professionnels ;
 - sauvegardes de billets et confirmations stockées seulement en ligne.
 
-Pour un voyage, les priorités sont très concrètes : payer, trouver l'hôtel, traduire une phrase, appeler un VTC, montrer une adresse en chinois et contacter quelqu'un si le plan change. Testez ces usages avant le départ avec le [vérificateur de disponibilité des applications](/tools/app-availability-checker/) et le [guide d'accès Internet](/posts/internet-access-china-apps-that-work-2026/).
+Pour un voyage, les priorités sont très concrètes : payer, trouver l'hôtel, traduire une phrase, appeler un VTC, montrer une adresse en chinois et contacter quelqu'un si le plan change. Testez ces usages avant le départ avec le [vérificateur de disponibilité des applications](/fr/tools/app-availability-checker/) et le [guide d'accès Internet](/fr/posts/internet-access-china-apps-that-work-2026/).
 
 ## eSIM, roaming, SIM locale et VPN
 
@@ -54,7 +54,7 @@ Une **eSIM** ou le **roaming** fournit des données mobiles. Une **SIM locale** 
 
 Certaines eSIM de voyage pour la Chine routent le trafic via Hong Kong ou une passerelle internationale. Dans ce cas, des applications étrangères peuvent fonctionner plus facilement qu'avec une SIM locale. D'autres forfaits utilisent un routage plus proche d'un réseau domestique chinois. Lisez les détails du forfait : les mentions comme "no VPN needed" ou "works with Google" doivent être vérifiées avec des avis récents.
 
-Pour comparer les coûts et usages, consultez [China eSIM vs roaming](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/) et le [comparateur de forfaits eSIM](/tools/esim-comparison/).
+Pour comparer les coûts et usages, consultez [China eSIM vs roaming](/fr/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/) et le [comparateur de forfaits eSIM](/fr/tools/esim-comparison/).
 
 ## Si vous choisissez d'utiliser un VPN
 
@@ -86,14 +86,14 @@ Avant de partir :
 - décidez quelle application de messagerie utiliser si votre app habituelle échoue ;
 - emportez une batterie externe.
 
-La [checklist des premières 24 heures en Chine](/posts/first-24-hours-in-china-arrival-checklist/) suit cette logique : connecter le téléphone, payer, rejoindre l'hôtel, puis seulement optimiser le reste.
+La [checklist des premières 24 heures en Chine](/fr/posts/first-24-hours-in-china-arrival-checklist/) suit cette logique : connecter le téléphone, payer, rejoindre l'hôtel, puis seulement optimiser le reste.
 
 ## À lire ensuite
 
-- [Accès Internet en Chine : les applications qui fonctionnent](/posts/internet-access-china-apps-that-work-2026/)
-- [Coût eSIM vs roaming en Chine](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [Vérificateur de disponibilité des applications](/tools/app-availability-checker/)
-- [Ce qu'il faut configurer avant de voyager en Chine](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+- [Accès Internet en Chine : les applications qui fonctionnent](/fr/posts/internet-access-china-apps-that-work-2026/)
+- [Coût eSIM vs roaming en Chine](/fr/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [Vérificateur de disponibilité des applications](/fr/tools/app-availability-checker/)
+- [Ce qu'il faut configurer avant de voyager en Chine](/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 
 ## Résumé
 

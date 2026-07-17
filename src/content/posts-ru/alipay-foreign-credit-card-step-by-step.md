@@ -56,9 +56,9 @@ Alipay - самый удобный способ платить в Китае, е
 
 ## Что читать дальше
 
-- [как платить в Китае туристу](/posts/how-to-pay-in-china-tourist-guide/)
-- [настройка WeChat Pay](/posts/wechat-pay-foreign-visitors-guide/)
-- [сколько наличных брать в Китай](/posts/how-much-cash-to-bring-to-china/)
+- [как платить в Китае туристу](/ru/posts/how-to-pay-in-china-tourist-guide/)
+- [настройка WeChat Pay](/ru/posts/wechat-pay-foreign-visitors-guide/)
+- [сколько наличных брать в Китай](/ru/posts/how-much-cash-to-bring-to-china/)
 
 ## Итог
 

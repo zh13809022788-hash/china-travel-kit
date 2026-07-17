@@ -94,9 +94,9 @@ La diferencia puede acercarse a 200 USD en un solo viaje.
 
 ## Leer Después
 
-- [best eSIM for China travel](/posts/best-esim-for-china-travel-2026/)
-- [Pocket WiFi vs eSIM vs SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
-- [internet access in China](/posts/internet-access-china-apps-that-work-2026/)
+- [best eSIM for China travel](/es/posts/best-esim-for-china-travel-2026/)
+- [Pocket WiFi vs eSIM vs SIM](/es/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [internet access in China](/es/posts/internet-access-china-apps-that-work-2026/)
 
 ## Resumen
 

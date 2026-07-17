@@ -66,9 +66,9 @@ faqs:
 若你確定符合免簽，仍要保存機票、飯店、行程與保險資訊。入境時可能會被問到停留地址與離境安排。若行程複雜、涉及多次入境或工作性質活動，直接向使領館確認會更穩。
 
 ## 延伸閱讀
-- [What to set up before traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
-- [First-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [China airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [What to set up before traveling to China](/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+- [First-time China trip planner](/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [China airport transport guide](/zh-tw/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 
 ## 總結
 2026 年去中國是否需要簽證，取決於你的護照與行程。30 天單方面免簽適合符合資格的普通入境旅行；240 小時過境免簽適合前往第三國或地區的中轉停留。不要只看一篇文章下結論，請在訂票前用官方來源和航空公司確認。

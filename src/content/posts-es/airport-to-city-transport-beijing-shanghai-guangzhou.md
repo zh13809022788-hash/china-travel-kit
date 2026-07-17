@@ -55,9 +55,9 @@ Usa tren o metro si quieres ahorrar, evitar trafico y no llevas demasiado equipa
 
 ## Leer Tambien
 
-- [Guia del aeropuerto Daxing de Pekin](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [Guia del metro de Shanghai para extranjeros](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [Guia de DiDi en China](/posts/didi-china-foreign-tourists-guide/)
+- [Guia del aeropuerto Daxing de Pekin](/es/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [Guia del metro de Shanghai para extranjeros](/es/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [Guia de DiDi en China](/es/posts/didi-china-foreign-tourists-guide/)
 
 ## Resumen
 

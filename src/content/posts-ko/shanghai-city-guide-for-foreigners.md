@@ -83,9 +83,9 @@ coverAlt: "해 질 무렵 와이탄과 상하이 스카이라인"
 
 ## 다음 글
 
-- [Shanghai metro guide](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
+- [Shanghai metro guide](/ko/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [airport transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Hangzhou city guide](/ko/posts/hangzhou-city-guide-for-foreigners/)
 
 ## 요약
 

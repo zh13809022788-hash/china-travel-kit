@@ -46,7 +46,7 @@ No memorices una lista cerrada de apps: cambia por red, ciudad, proveedor, dispo
 - documentos, billetes y reservas;
 - ocio, vídeo y redes sociales.
 
-Para sobrevivir al viaje, pago, transporte, mapas y traducción importan más que el entretenimiento. Revisa el [app availability checker](/tools/app-availability-checker/) y la guía de [internet access in China](/posts/internet-access-china-apps-that-work-2026/) antes de despegar.
+Para sobrevivir al viaje, pago, transporte, mapas y traducción importan más que el entretenimiento. Revisa el [app availability checker](/es/tools/app-availability-checker/) y la guía de [internet access in China](/es/posts/internet-access-china-apps-that-work-2026/) antes de despegar.
 
 ## eSIM, Roaming, SIM Local Y VPN No Son Lo Mismo
 
@@ -54,7 +54,7 @@ Una eSIM o el roaming te dan datos. Una VPN cambia la ruta de parte del tráfico
 
 Muchas eSIM de viaje para China enrutan por Hong Kong u otro punto internacional, lo que puede permitir que apps extranjeras funcionen sin VPN. Otras no. Lee la letra pequeña: si un plan dice "Google works" o "no VPN needed", busca reseñas recientes y ten una segunda opción.
 
-Para comparar costes y planes, mira [China eSIM vs roaming](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/) y el [eSIM plan comparator](/tools/esim-comparison/).
+Para comparar costes y planes, mira [China eSIM vs roaming](/es/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/) y el [eSIM plan comparator](/es/tools/esim-comparison/).
 
 ## Si Decides Usar VPN
 
@@ -84,7 +84,7 @@ El problema práctico es la fiabilidad. Algo puede funcionar en el Wi-Fi de un h
 - Acuerda con familia o colegas qué app usar si falla la habitual.
 - Lleva batería externa.
 
-Si solo haces una cosa, asegúrate de poder pagar y llegar al hotel sin tus apps extranjeras normales. La [first 24 hours in China checklist](/posts/first-24-hours-in-china-arrival-checklist/) sigue ese orden.
+Si solo haces una cosa, asegúrate de poder pagar y llegar al hotel sin tus apps extranjeras normales. La [first 24 hours in China checklist](/es/posts/first-24-hours-in-china-arrival-checklist/) sigue ese orden.
 
 ## Errores Frecuentes
 
@@ -94,10 +94,10 @@ También recuerda que hotel Wi-Fi, aeropuerto, SIM local, roaming y eSIM pueden 
 
 ## Leer Después
 
-- [Internet access in China: apps that work](/posts/internet-access-china-apps-that-work-2026/)
-- [China eSIM vs roaming cost](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [App availability checker](/tools/app-availability-checker/)
-- [What to set up before traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+- [Internet access in China: apps that work](/es/posts/internet-access-china-apps-that-work-2026/)
+- [China eSIM vs roaming cost](/es/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [App availability checker](/es/tools/app-availability-checker/)
+- [What to set up before traveling to China](/es/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 
 ## Resumen
 

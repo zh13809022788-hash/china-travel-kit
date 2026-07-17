@@ -42,7 +42,7 @@ Für die meisten Besucher ist eine Reise-eSIM die einfachste Lösung. Kaufen und
 
 Wenn Ihr Handy keine eSIM kann, ist Roaming der bequemste erste Tages-Backup, auch wenn es teuer ist. Eine lokale SIM lohnt eher für längere Aufenthalte.
 
-Mehr dazu: [Best eSIM for China Travel in 2026](/posts/best-esim-for-china-travel-2026/).
+Mehr dazu: [Best eSIM for China Travel in 2026](/de/posts/best-esim-for-china-travel-2026/).
 
 ## 2. Zahlung vor Abflug einrichten
 
@@ -52,15 +52,15 @@ Richten Sie mindestens eine App ein, besser beide. Registrieren Sie sich mit Ihr
 
 Nützliche Guides:
 
-- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [How to Pay in China as a Tourist](/de/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay Foreign Credit Card Step by Step](/de/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay Foreign Visitors Guide](/de/posts/wechat-pay-foreign-visitors-guide/)
 
 ## 3. Den ersten Transfer einfach halten
 
 Der erste Weg vom Flughafen ist nicht der Moment für Experimente. Speichern Sie Flughafen, Terminal, Hotelname auf Englisch und Chinesisch, chinesische Adresse, nächste Metrostation, Telefonnummer und ungefähre Fahrzeit.
 
-Airport Express oder Metro sind in großen Städten oft effizient. Bei später Ankunft, Kindern, viel Gepäck oder Jetlag ist Taxi oder DiDi den Aufpreis wert. Mit dem [Show to Driver tool](/tools/show-to-driver/) erstellen Sie eine große chinesische Zielanzeige für Fahrer oder Personal.
+Airport Express oder Metro sind in großen Städten oft effizient. Bei später Ankunft, Kindern, viel Gepäck oder Jetlag ist Taxi oder DiDi den Aufpreis wert. Mit dem [Show to Driver tool](/de/tools/show-to-driver/) erstellen Sie eine große chinesische Zielanzeige für Fahrer oder Personal.
 
 ## 4. Nur die wirklich nötigen Apps
 
@@ -106,7 +106,7 @@ Verlassen Sie sich nicht nur auf ausländische Karten. Erwarten Sie nicht, dass 
 
 ## Tools
 
-Für einen strukturierten ersten Plan nutzen Sie den [China Trip Planner](/trip-planner/). Für schnelle Fragen gibt es [China Travel Help](/travel-help/) und den [ChinaTripBox Tool Center](/tools/).
+Für einen strukturierten ersten Plan nutzen Sie den [China Trip Planner](/de/trip-planner/). Für schnelle Fragen gibt es [China Travel Help](/de/travel-help/) und den [ChinaTripBox Tool Center](/de/tools/).
 
 ## Fazit
 

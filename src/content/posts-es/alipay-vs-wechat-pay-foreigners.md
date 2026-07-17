@@ -53,10 +53,10 @@ No esperes al aeropuerto para registrarte. No supongas que una tarjeta vinculada
 
 ## Leer Tambien
 
-- [Como pagar en China como turista](/posts/how-to-pay-in-china-tourist-guide/)
-- [Configurar Alipay con tarjeta extranjera](/posts/alipay-foreign-credit-card-step-by-step/)
-- [Configurar WeChat Pay](/posts/wechat-pay-foreign-visitors-guide/)
-- [Comprobador de tarjetas de pago](/tools/payment-checker/)
+- [Como pagar en China como turista](/es/posts/how-to-pay-in-china-tourist-guide/)
+- [Configurar Alipay con tarjeta extranjera](/es/posts/alipay-foreign-credit-card-step-by-step/)
+- [Configurar WeChat Pay](/es/posts/wechat-pay-foreign-visitors-guide/)
+- [Comprobador de tarjetas de pago](/es/tools/payment-checker/)
 
 ## Resumen
 

@@ -86,9 +86,9 @@ coverAlt: "전통 정자와 함께 보이는 항저우 서호 풍경"
 
 ## Read Next
 
-- [Shanghai city guide](/posts/shanghai-city-guide-for-foreigners/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
-- [book China train tickets on 12306](/posts/book-china-train-tickets-12306-foreigners/)
+- [Shanghai city guide](/ko/posts/shanghai-city-guide-for-foreigners/)
+- [China high-speed rail guide](/ko/posts/china-high-speed-rail-guide-foreigners/)
+- [book China train tickets on 12306](/ko/posts/book-china-train-tickets-12306-foreigners/)
 
 ## Summary
 

@@ -57,7 +57,7 @@ faqs:
 - 설치 방법과 QR 코드, 고객센터 정보를 오프라인으로 저장합니다.
 - 공항 와이파이는 보조 수단으로만 생각합니다.
 
-관련 가이드: [2026년 중국 여행용 eSIM 추천 가이드](/posts/best-esim-for-china-travel-2026/).
+관련 가이드: [2026년 중국 여행용 eSIM 추천 가이드](/ko/posts/best-esim-for-china-travel-2026/).
 
 ## 2. 출발 전에 결제 수단 설정하기
 
@@ -83,9 +83,9 @@ faqs:
 
 관련 가이드:
 
-- [여행자를 위한 중국 결제 가이드](/posts/how-to-pay-in-china-tourist-guide/)
-- [해외 카드로 알리페이 설정하기](/posts/alipay-foreign-credit-card-step-by-step/)
-- [외국인 방문객을 위한 WeChat Pay 가이드](/posts/wechat-pay-foreign-visitors-guide/)
+- [여행자를 위한 중국 결제 가이드](/ko/posts/how-to-pay-in-china-tourist-guide/)
+- [해외 카드로 알리페이 설정하기](/ko/posts/alipay-foreign-credit-card-step-by-step/)
+- [외국인 방문객을 위한 WeChat Pay 가이드](/ko/posts/wechat-pay-foreign-visitors-guide/)
 
 ## 3. 첫 공항 이동 계획하기
 
@@ -102,7 +102,7 @@ faqs:
 
 베이징, 상하이, 광저우, 선전 같은 대도시는 공항철도나 지하철이 잘 되어 있습니다. 호텔이 역 근처라면 한국에서 공항철도를 타는 감각으로 이동할 수 있습니다. 반대로 밤늦게 도착하거나, 가족 여행이거나, 캐리어가 많거나, 중국이 처음이라면 택시나 DiDi 같은 차량 호출 서비스가 추가 비용만큼의 값을 합니다.
 
-호텔명, 픽업 장소, 목적지를 중국어 큰 글씨로 보여줘야 할 때는 [기사에게 보여주기 도구](/tools/show-to-driver/)을 이용하면 편합니다.
+호텔명, 픽업 장소, 목적지를 중국어 큰 글씨로 보여줘야 할 때는 [기사에게 보여주기 도구](/ko/tools/show-to-driver/)을 이용하면 편합니다.
 
 ## 4. 필수 앱 설치하기
 
@@ -141,8 +141,8 @@ faqs:
 
 관련 가이드:
 
-- [외국인을 위한 중국 고속철 가이드](/posts/china-high-speed-rail-guide-foreigners/)
-- [외국인 12306 중국 기차표 예매 가이드](/posts/book-china-train-tickets-12306-foreigners/)
+- [외국인을 위한 중국 고속철 가이드](/ko/posts/china-high-speed-rail-guide-foreigners/)
+- [외국인 12306 중국 기차표 예매 가이드](/ko/posts/book-china-train-tickets-12306-foreigners/)
 
 ## 6. 첫날 체크리스트 만들기
 
@@ -185,9 +185,9 @@ faqs:
 
 ## 무료 여행 플래너 사용하기
 
-처음 큰 틀을 잡고 싶다면 무료 [중국 여행 플래너](/trip-planner/)를 이용해 보세요. 방문 도시, 여행 기간, 예산, 여행 스타일, 준비 상태를 입력하면 결제, eSIM, 교통, 앱, 흔한 실수까지 포함한 실전 체크리스트를 만들어 줍니다.
+처음 큰 틀을 잡고 싶다면 무료 [중국 여행 플래너](/ko/trip-planner/)를 이용해 보세요. 방문 도시, 여행 기간, 예산, 여행 스타일, 준비 상태를 입력하면 결제, eSIM, 교통, 앱, 흔한 실수까지 포함한 실전 체크리스트를 만들어 줍니다.
 
-짧은 실무 질문은 [중국 여행 도움말](/travel-help/)에서 확인할 수 있고, 목적지 표시나 여행 도구가 필요하다면 [ChinaTripBox 도구 센터](/tools/)에서 시작하면 됩니다.
+짧은 실무 질문은 [중국 여행 도움말](/ko/travel-help/)에서 확인할 수 있고, 목적지 표시나 여행 도구가 필요하다면 [ChinaTripBox 도구 센터](/ko/tools/)에서 시작하면 됩니다.
 
 ## 최종 정리
 

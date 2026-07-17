@@ -91,9 +91,9 @@ Si el QR no instala, revisa que el teléfono esté desbloqueado, que tengas Wi-F
 
 ## Leer Después
 
-- [eSIM vs roaming cost breakdown](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [Pocket WiFi vs eSIM vs local SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
-- [internet access and apps that work in China](/posts/internet-access-china-apps-that-work-2026/)
+- [eSIM vs roaming cost breakdown](/es/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [Pocket WiFi vs eSIM vs local SIM](/es/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [internet access and apps that work in China](/es/posts/internet-access-china-apps-that-work-2026/)
 
 ## Resumen
 

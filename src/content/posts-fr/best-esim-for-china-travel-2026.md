@@ -94,9 +94,9 @@ L'itinérance des données doit être activée sur la ligne eSIM, même si cela 
 
 ## À lire ensuite
 
-- [eSIM vs roaming cost breakdown](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [Pocket WiFi vs eSIM vs local SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
-- [internet access and apps that work in China](/posts/internet-access-china-apps-that-work-2026/)
+- [eSIM vs roaming cost breakdown](/fr/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [Pocket WiFi vs eSIM vs local SIM](/fr/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [internet access and apps that work in China](/fr/posts/internet-access-china-apps-that-work-2026/)
 
 ## Résumé
 

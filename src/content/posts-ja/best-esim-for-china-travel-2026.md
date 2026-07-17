@@ -93,9 +93,9 @@ faqs:
 プロファイルがインストールできない場合は、Wi-Fi接続、端末のSIMロック解除、QRコードが一回限りで未使用かを確認します。多くの旅行eSIM事業者はチャットで24時間サポートしています。
 
 ## 関連記事
-- [eSIM vs roaming cost breakdown](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [Pocket WiFi vs eSIM vs local SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
-- [internet access and apps that work in China](/posts/internet-access-china-apps-that-work-2026/)
+- [eSIM vs roaming cost breakdown](/ja/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [Pocket WiFi vs eSIM vs local SIM](/ja/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [internet access and apps that work in China](/ja/posts/internet-access-china-apps-that-work-2026/)
 
 ## まとめ
 

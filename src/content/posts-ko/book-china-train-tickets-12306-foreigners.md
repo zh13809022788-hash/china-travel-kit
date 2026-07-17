@@ -106,9 +106,9 @@ faqs:
 
 ## 다음에 읽기
 
-- [중국 고속철 가이드](/posts/china-high-speed-rail-guide-foreigners/)
-- [처음 가는 중국 여행 준비 가이드](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [공항에서 도심 이동 가이드](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [중국 고속철 가이드](/ko/posts/china-high-speed-rail-guide-foreigners/)
+- [처음 가는 중국 여행 준비 가이드](/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [공항에서 도심 이동 가이드](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 
 ## 요약
 

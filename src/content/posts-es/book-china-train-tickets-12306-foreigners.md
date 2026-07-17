@@ -49,9 +49,9 @@ Trip.com y China Highlights cobran comision, pero simplifican la interfaz y el s
 
 ## Leer Tambien
 
-- [Guia del tren de alta velocidad en China](/posts/china-high-speed-rail-guide-foreigners/)
-- [Que preparar antes de viajar a China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
-- [Como pagar en China](/posts/how-to-pay-in-china-tourist-guide/)
+- [Guia del tren de alta velocidad en China](/es/posts/china-high-speed-rail-guide-foreigners/)
+- [Que preparar antes de viajar a China](/es/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+- [Como pagar en China](/es/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Resumen
 

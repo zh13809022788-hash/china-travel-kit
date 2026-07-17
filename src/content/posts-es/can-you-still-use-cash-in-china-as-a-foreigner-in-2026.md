@@ -47,5 +47,5 @@ Usa pago movil como metodo normal y efectivo como respaldo. Lleva poco, en denom
 
 ## Leer Tambien
 
-- [Cuanto efectivo llevar a China](/posts/how-much-cash-to-bring-to-china/)
-- [Como pagar en China](/posts/how-to-pay-in-china-tourist-guide/)
+- [Cuanto efectivo llevar a China](/es/posts/how-much-cash-to-bring-to-china/)
+- [Como pagar en China](/es/posts/how-to-pay-in-china-tourist-guide/)

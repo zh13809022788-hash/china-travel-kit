@@ -66,9 +66,9 @@ Wenn Sie in abgelegene westliche Regionen reisen, prüfen Sie das genutzte Netz.
 
 ## Weiterlesen
 
-- [best eSIM for China travel](/posts/best-esim-for-china-travel-2026/)
-- [Pocket WiFi vs eSIM vs SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
-- [internet access in China](/posts/internet-access-china-apps-that-work-2026/)
+- [best eSIM for China travel](/de/posts/best-esim-for-china-travel-2026/)
+- [Pocket WiFi vs eSIM vs SIM](/de/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [internet access in China](/de/posts/internet-access-china-apps-that-work-2026/)
 
 ## Fazit
 

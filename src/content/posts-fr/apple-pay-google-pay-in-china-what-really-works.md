@@ -52,7 +52,7 @@ Apple Pay est un bon bonus, Google Pay un secours plus fragile, mais les QR code
 
 ## À lire ensuite
 
-- [Payer en Chine comme touriste](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay ou WeChat Pay](/posts/alipay-vs-wechat-pay-foreigners/)
-- [Carte étrangère en Chine](/posts/use-foreign-credit-card-in-china-directly/)
+- [Payer en Chine comme touriste](/fr/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay ou WeChat Pay](/fr/posts/alipay-vs-wechat-pay-foreigners/)
+- [Carte étrangère en Chine](/fr/posts/use-foreign-credit-card-in-china-directly/)
 

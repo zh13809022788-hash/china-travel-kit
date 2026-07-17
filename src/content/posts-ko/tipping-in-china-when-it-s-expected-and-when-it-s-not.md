@@ -123,6 +123,6 @@ faqs:
 
 ## 다음 글
 
-- [why China does not have a tipping culture](/posts/why-china-does-not-have-a-tipping-culture/)
-- [Chengdu street food guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
-- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [why China does not have a tipping culture](/ko/posts/why-china-does-not-have-a-tipping-culture/)
+- [Chengdu street food guide](/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [first-time China trip planner](/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)

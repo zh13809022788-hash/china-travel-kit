@@ -112,4 +112,4 @@ faqs:
 
 ---
 
-**延伸閱讀：**[入境中國前 24 小時完整清單](/posts/first-24-hours-in-china-arrival-checklist/) 告訴你落地後該做的每一件事——包含要不要在機場買保險。[出發前該搞定的 App、支付和文件](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) 幫你把出發前的準備工作做好，保險有買沒買都能順利入境。
+**延伸閱讀：**[入境中國前 24 小時完整清單](/zh-tw/posts/first-24-hours-in-china-arrival-checklist/) 告訴你落地後該做的每一件事——包含要不要在機場買保險。[出發前該搞定的 App、支付和文件](/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) 幫你把出發前的準備工作做好，保險有買沒買都能順利入境。

@@ -64,9 +64,9 @@ Airalo обычно интересен легким и бюджетным пут
 
 ## Что читать дальше
 
-- [eSIM против роуминга](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [Pocket WiFi, eSIM или SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
-- [интернет и приложения в Китае](/posts/internet-access-china-apps-that-work-2026/)
+- [eSIM против роуминга](/ru/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [Pocket WiFi, eSIM или SIM](/ru/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [интернет и приложения в Китае](/ru/posts/internet-access-china-apps-that-work-2026/)
 
 ## Итог
 

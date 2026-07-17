@@ -56,9 +56,9 @@ DiDi 適合點到點移動，尤其是深夜、下雨或帶行李。路邊計程
 夏季濕熱，冬季濕冷，春秋最舒服。下雨時準備美術館、商場、咖啡館與餐廳備案，比硬走戶外路線更好。
 
 ## 延伸閱讀
-- [Shanghai metro guide](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
+- [Shanghai metro guide](/zh-tw/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [airport transport guide](/zh-tw/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Hangzhou city guide](/zh-tw/posts/hangzhou-city-guide-for-foreigners/)
 
 ## 總結
 上海是第一次到中國最容易上手的城市。交通、付款、英文資訊與國際化服務都成熟，適合短旅、商務與長住。它未必是最傳統的中國城市，但很適合作為舒適基地，再延伸到杭州、蘇州或其他城市。

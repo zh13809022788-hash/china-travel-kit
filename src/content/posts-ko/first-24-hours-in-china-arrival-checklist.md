@@ -40,7 +40,7 @@ faqs:
 
 eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에 활성화하세요. 로밍을 쓸 예정이라면 공항을 벗어나기 전에 실제로 연결되는지 확인해야 합니다. 연결이 안 된다면 공항 공식 Wi-Fi를 이용하거나, 통신사 카운터에서 도움을 받는 편이 낫습니다. "시내에 가서 해결하지"라고 생각하고 나가면 택시 승강장이나 지하철역에서 더 힘들어질 수 있습니다.
 
-중국에서는 일부 해외 앱이 한국에서처럼 안정적으로 작동하지 않을 수 있습니다. 출국 전에 [China internet access guide](/posts/internet-access-china-apps-that-work-2026/)를 읽어 두고, [app availability checker](/tools/app-availability-checker/)를 북마크해 두면 첫날 판단이 쉬워집니다.
+중국에서는 일부 해외 앱이 한국에서처럼 안정적으로 작동하지 않을 수 있습니다. 출국 전에 [China internet access guide](/ko/posts/internet-access-china-apps-that-work-2026/)를 읽어 두고, [app availability checker](/ko/tools/app-availability-checker/)를 북마크해 두면 첫날 판단이 쉬워집니다.
 
 ## 2단계: 소액 결제로 결제 상태 확인하기
 
@@ -48,7 +48,7 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 
 공항에서 알리페이와 위챗페이를 모두 열어 보세요. 등록한 카드가 보이는지, 실명 인증이나 여권 인증이 완료되어 있는지, 결제 QR코드가 정상적으로 뜨는지 확인합니다. 두 앱을 모두 준비하지 못했다면 우선 알리페이부터 확실히 작동시키고, 위챗페이는 이후에 보조 수단으로 설정해도 됩니다.
 
-가능하면 공항 편의점, 호텔 근처 편의점, 체인 카페에서 생수나 작은 간식처럼 저렴한 물건을 사며 결제를 테스트하세요. 예를 들어 5~15위안 정도의 결제는 원화로 약 1,000~3,000원 수준이라 부담이 적습니다. 결제가 실패하면 다른 앱, 다른 카드, 현금을 차례로 시도하세요. 준비 상태를 점검하려면 [payment checker](/tools/payment-checker/)와 [Alipay vs WeChat Pay guide](/posts/alipay-vs-wechat-pay-foreigners/)를 참고하면 됩니다.
+가능하면 공항 편의점, 호텔 근처 편의점, 체인 카페에서 생수나 작은 간식처럼 저렴한 물건을 사며 결제를 테스트하세요. 예를 들어 5~15위안 정도의 결제는 원화로 약 1,000~3,000원 수준이라 부담이 적습니다. 결제가 실패하면 다른 앱, 다른 카드, 현금을 차례로 시도하세요. 준비 상태를 점검하려면 [payment checker](/ko/tools/payment-checker/)와 [Alipay vs WeChat Pay guide](/ko/posts/alipay-vs-wechat-pay-foreigners/)를 참고하면 됩니다.
 
 ## 3단계: 비상용 현금은 조금 준비하기
 
@@ -64,7 +64,7 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 - 택시 결제 과정이 헷갈릴 때
 - 보증금이나 긴급 상황에 대비해야 할 때
 
-얼마나 가져가면 좋은지, ATM은 어떻게 쓰면 좋은지는 [how much cash to bring to China](/posts/how-much-cash-to-bring-to-china/)에서 더 자세히 확인할 수 있습니다.
+얼마나 가져가면 좋은지, ATM은 어떻게 쓰면 좋은지는 [how much cash to bring to China](/ko/posts/how-much-cash-to-bring-to-china/)에서 더 자세히 확인할 수 있습니다.
 
 ## 4단계: 공항 이동수단은 신중하게 고르기
 
@@ -74,7 +74,7 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 
 반대로 밤늦게 도착했거나, 아이와 함께 이동하거나, 짐이 많다면 공식 택시 승강장이나 사전 예약 픽업이 더 편할 수 있습니다. 디디 같은 호출차량은 편리하지만 앱 로그인, 결제, 픽업 위치, 중국어 목적지 주소가 모두 준비되어 있을 때 가장 잘 작동합니다.
 
-차에 타기 전에는 호텔 이름과 주소를 중국어로 저장해 두세요. 예약 사이트의 영어 주소나 잘린 스크린샷만으로는 부족할 수 있습니다. 큰 글씨의 중국어 주소 카드가 필요하면 [airport-to-city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)와 [show-to-driver tool](/tools/show-to-driver/)을 활용하세요.
+차에 타기 전에는 호텔 이름과 주소를 중국어로 저장해 두세요. 예약 사이트의 영어 주소나 잘린 스크린샷만으로는 부족할 수 있습니다. 큰 글씨의 중국어 주소 카드가 필요하면 [airport-to-city transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)와 [show-to-driver tool](/ko/tools/show-to-driver/)을 활용하세요.
 
 ## 5단계: 체크인 후 거점부터 안정시키기
 
@@ -94,7 +94,7 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 
 음식 배달은 편리해 보이지만, 메이퇀이나 어러머는 중국어 화면과 현지 앱 절차 때문에 첫날에는 까다로울 수 있습니다. 호텔 직원이 도와주는 경우가 아니라면 일단 직접 가서 주문하는 식사가 더 쉽습니다. 메뉴판을 번역 앱으로 비추고, 사진이 있는 메뉴를 고르고, 결제 테스트까지 마치는 정도면 첫날 식사로 충분합니다.
 
-중국 음식 주문에 익숙해지는 내용은 [food and dining hub](/food/)와 [ordering food without Chinese guide](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)를 참고하세요. 다만 이 자료들은 도착 두 시간째보다 둘째 날에 보는 편이 더 여유롭습니다.
+중국 음식 주문에 익숙해지는 내용은 [food and dining hub](/ko/food/)와 [ordering food without Chinese guide](/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)를 참고하세요. 다만 이 자료들은 도착 두 시간째보다 둘째 날에 보는 편이 더 여유롭습니다.
 
 ## 7단계: 잠들기 전에 내일 첫 동선 정리하기
 
@@ -102,7 +102,7 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 
 한국 여행지처럼 현장에서 바로 표를 사면 되는 곳도 있지만, 중국의 인기 박물관이나 명소는 사전 예약과 실명 확인이 중요한 경우가 있습니다. 다음 날 아침 첫 동선만 정리해 두어도 여행 리듬이 안정됩니다.
 
-전체 일정을 다시 잡고 싶다면 [resource hub](/resources/)를 확인하고, 준비 항목을 순서대로 보고 싶다면 [China trip planner](/trip-planner/)를 활용하세요.
+전체 일정을 다시 잡고 싶다면 [resource hub](/resources/)를 확인하고, 준비 항목을 순서대로 보고 싶다면 [China trip planner](/ko/trip-planner/)를 활용하세요.
 
 ## 첫날 흔한 실수
 
@@ -116,9 +116,9 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 
 ## 다음에 읽기
 
-- [What to set up before traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
-- [Payment checker](/tools/payment-checker/)
-- [Airport to city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [What to set up before traveling to China](/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+- [Payment checker](/ko/tools/payment-checker/)
+- [Airport to city transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [China travel resources](/resources/)
 
 ## 요약

@@ -112,4 +112,4 @@ faqs:
 
 ---
 
-**続けて読む：**[中国到着後24時間の完全チェックリスト](/posts/first-24-hours-in-china-arrival-checklist/) では、空港で保険を買うべきかを含め、着陸直後にやるべきことをカバーしています。[中国渡航前に準備すべきこと](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) では、保険があってもなくてもスムーズに入国するための出発前チェックリストを解説。
+**続けて読む：**[中国到着後24時間の完全チェックリスト](/ja/posts/first-24-hours-in-china-arrival-checklist/) では、空港で保険を買うべきかを含め、着陸直後にやるべきことをカバーしています。[中国渡航前に準備すべきこと](/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) では、保険があってもなくてもスムーズに入国するための出発前チェックリストを解説。

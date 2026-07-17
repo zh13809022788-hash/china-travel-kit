@@ -112,4 +112,4 @@ faqs:
 
 ---
 
-**延伸閱讀：**[中國免簽與過境指南 2026](/posts/china-visa-free-entry-transit-guide-2026/) 說明補辦文件後的簽證規定和如何避免逾期滯留。[入境中國前 24 小時完整清單](/posts/first-24-hours-in-china-arrival-checklist/) 涵蓋防止緊急狀況的實用作法——包含入住飯店當下就先影印護照備用。
+**延伸閱讀：**[中國免簽與過境指南 2026](/zh-tw/posts/china-visa-free-entry-transit-guide-2026/) 說明補辦文件後的簽證規定和如何避免逾期滯留。[入境中國前 24 小時完整清單](/zh-tw/posts/first-24-hours-in-china-arrival-checklist/) 涵蓋防止緊急狀況的實用作法——包含入住飯店當下就先影印護照備用。

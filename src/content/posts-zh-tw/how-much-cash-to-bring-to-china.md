@@ -60,9 +60,9 @@ faqs:
 中國出入境現金有申報門檻：外幣等值超過 USD 5,000，或人民幣超過 20,000 RMB，需要申報。一般旅客通常不會接近，但若你因特殊原因攜帶大量現金，請保留換匯憑證並遵守申報規定。
 
 ## 延伸閱讀
-- [cash in China for foreigners](/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [foreign credit card acceptance in China](/posts/use-foreign-credit-card-in-china-directly/)
+- [cash in China for foreigners](/zh-tw/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/)
+- [how to pay in China as a tourist](/zh-tw/posts/how-to-pay-in-china-tourist-guide/)
+- [foreign credit card acceptance in China](/zh-tw/posts/use-foreign-credit-card-in-china-directly/)
 
 ## 總結
 在中國，現金是備援，不是主錢包。一週旅行準備 1,000 到 2,000 RMB 小鈔與中面額鈔票，通常足以應付小商家、寺廟、偶爾的計程車與付款 App 失效。日常消費以 Alipay 或 WeChat Pay 為主，需要時從大型銀行 ATM 補現金即可。

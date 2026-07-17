@@ -94,9 +94,9 @@ coverAlt: "베이징 자금성의 역사적인 궁궐 건축"
 
 ## Read Next
 
-- [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [Daxing airport to city guide](/ko/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [airport transport comparison](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China high-speed rail guide](/ko/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Summary
 

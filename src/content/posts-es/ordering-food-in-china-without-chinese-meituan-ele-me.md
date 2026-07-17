@@ -90,9 +90,9 @@ Si no llegas al pedido mínimo, añade bebida o guarnición. El mínimo aparece 
 
 ## Leer Después
 
-- [Chengdu street food guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
-- [Chengdu city guide](/posts/chengdu-city-guide-for-foreigners/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [Chengdu street food guide](/es/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [Chengdu city guide](/es/posts/chengdu-city-guide-for-foreigners/)
+- [how to pay in China as a tourist](/es/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Resumen
 

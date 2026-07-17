@@ -102,9 +102,9 @@ Gardez tout de même une solution de secours : un peu d'espèces en RMB et une c
 
 ## À lire ensuite
 
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
-- [cash backup guide for China](/posts/how-much-cash-to-bring-to-china/)
+- [how to pay in China as a tourist](/fr/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay setup guide](/fr/posts/wechat-pay-foreign-visitors-guide/)
+- [cash backup guide for China](/fr/posts/how-much-cash-to-bring-to-china/)
 
 ## Résumé
 

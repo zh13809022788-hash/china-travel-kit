@@ -77,9 +77,9 @@ Lässt sich das Profil nicht installieren, prüfen Sie WLAN, Gerätesperre und o
 
 ## Weiterlesen
 
-- [eSIM vs roaming cost breakdown](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [Pocket WiFi vs eSIM vs local SIM](/posts/pocket-wifi-vs-esim-vs-sim-china/)
-- [internet access and apps that work in China](/posts/internet-access-china-apps-that-work-2026/)
+- [eSIM vs roaming cost breakdown](/de/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [Pocket WiFi vs eSIM vs local SIM](/de/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [internet access and apps that work in China](/de/posts/internet-access-china-apps-that-work-2026/)
 
 ## Fazit
 

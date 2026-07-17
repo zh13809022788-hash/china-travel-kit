@@ -76,9 +76,9 @@ Frühling und Herbst sind am angenehmsten. Sommer ist heiß und feucht, Winter k
 
 ## Weiterlesen
 
-- [Shanghai metro guide](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
+- [Shanghai metro guide](/de/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [airport transport guide](/de/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Hangzhou city guide](/de/posts/hangzhou-city-guide-for-foreigners/)
 
 ## Fazit
 

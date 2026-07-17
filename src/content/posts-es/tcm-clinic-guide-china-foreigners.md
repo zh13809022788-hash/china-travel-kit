@@ -44,8 +44,8 @@ Elige un hospital publico o clinica bien valorada, registra tu pasaporte, paga l
 
 ## Leer Tambien
 
-- [Primeras 24 horas en China](/posts/first-24-hours-in-china-arrival-checklist/)
-- [Como pagar en China](/posts/how-to-pay-in-china-tourist-guide/)
+- [Primeras 24 horas en China](/es/posts/first-24-hours-in-china-arrival-checklist/)
+- [Como pagar en China](/es/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Resumen
 

@@ -53,6 +53,6 @@ Apple Pay funciona en China, pero no como sistema principal. Google Pay debe tra
 
 ## Leer Tambien
 
-- [Guia de pago movil para turistas](/posts/how-to-pay-in-china-tourist-guide/)
-- [Vincular una tarjeta extranjera a Alipay](/posts/alipay-foreign-credit-card-step-by-step/)
-- [Donde funcionan las tarjetas extranjeras](/posts/use-foreign-credit-card-in-china-directly/)
+- [Guia de pago movil para turistas](/es/posts/how-to-pay-in-china-tourist-guide/)
+- [Vincular una tarjeta extranjera a Alipay](/es/posts/alipay-foreign-credit-card-step-by-step/)
+- [Donde funcionan las tarjetas extranjeras](/es/posts/use-foreign-credit-card-in-china-directly/)

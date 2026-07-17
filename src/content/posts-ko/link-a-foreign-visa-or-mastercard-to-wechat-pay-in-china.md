@@ -91,6 +91,6 @@ faqs:
 
 ## 다음 글
 
-- [WeChat Pay guide for foreign visitors](/posts/wechat-pay-foreign-visitors-guide/)
-- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay guide for foreign visitors](/ko/posts/wechat-pay-foreign-visitors-guide/)
+- [Alipay setup guide](/ko/posts/alipay-foreign-credit-card-step-by-step/)
+- [how to pay in China as a tourist](/ko/posts/how-to-pay-in-china-tourist-guide/)

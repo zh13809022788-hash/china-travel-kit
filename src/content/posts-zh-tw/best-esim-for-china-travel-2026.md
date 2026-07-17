@@ -64,9 +64,9 @@ faqs:
 不要抵達後才發現手機不支援 eSIM；不要忘記開數據漫遊；不要買沒有說明路由方式的超便宜方案；也不要把 QR Code 只存在雲端，萬一沒網路就打不開。
 
 ## 延伸閱讀
-- [Pocket WiFi vs eSIM vs SIM for China](/posts/pocket-wifi-vs-esim-vs-sim-china/)
-- [Internet access in China](/posts/internet-access-china-apps-that-work-2026/)
-- [What to set up before traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+- [Pocket WiFi vs eSIM vs SIM for China](/zh-tw/posts/pocket-wifi-vs-esim-vs-sim-china/)
+- [Internet access in China](/zh-tw/posts/internet-access-china-apps-that-work-2026/)
+- [What to set up before traveling to China](/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 
 ## 總結
 中國旅行 eSIM 最重要的是三件事：手機支援且已解鎖、方案能讓常用 App 正常使用、流量與天數符合行程。出發前買好並安裝設定檔，抵達後開啟 eSIM、數據漫遊與預設行動數據，通常就能順利上網。

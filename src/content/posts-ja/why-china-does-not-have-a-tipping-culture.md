@@ -153,6 +153,6 @@ QRコード決済の普及も、この感覚を強めました。中国では支
 
 ## Read Next
 
-- [when tipping is expected in China](/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
-- [ordering food in China without Chinese](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
-- [China trip planner for first-time visitors](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [when tipping is expected in China](/ja/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
+- [ordering food in China without Chinese](/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+- [China trip planner for first-time visitors](/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)

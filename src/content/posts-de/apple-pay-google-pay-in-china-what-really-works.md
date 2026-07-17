@@ -54,9 +54,9 @@ Viele Besucher glauben, kontaktlose Karte bedeute kontaktlose Akzeptanz. In Chin
 
 ## Weiterlesen
 
-- [Zahlungs-Guide fuer China](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay mit auslaendischer Karte](/posts/alipay-foreign-credit-card-step-by-step/)
-- [Auslaendische Kreditkarte direkt nutzen](/posts/use-foreign-credit-card-in-china-directly/)
+- [Zahlungs-Guide fuer China](/de/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay mit auslaendischer Karte](/de/posts/alipay-foreign-credit-card-step-by-step/)
+- [Auslaendische Kreditkarte direkt nutzen](/de/posts/use-foreign-credit-card-in-china-directly/)
 
 ## Fazit
 

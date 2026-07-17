@@ -119,9 +119,9 @@ graph TD
 
 ## 다음에 읽을 글
 
-- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
-- [how much cash to bring](/posts/how-much-cash-to-bring-to-china/)
+- [Alipay setup guide](/ko/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay setup guide](/ko/posts/wechat-pay-foreign-visitors-guide/)
+- [how much cash to bring](/ko/posts/how-much-cash-to-bring-to-china/)
 
 ## 요약
 

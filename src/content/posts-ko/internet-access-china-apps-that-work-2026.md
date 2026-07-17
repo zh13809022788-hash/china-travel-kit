@@ -95,9 +95,9 @@ faqs:
 
 ## 함께 읽으면 좋은 글
 
-- [중국 여행용 eSIM 추천 가이드](/posts/best-esim-for-china-travel-2026/)
-- [eSIM vs 로밍 비용 비교 가이드](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [중국 여행 전 준비할 것](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+- [중국 여행용 eSIM 추천 가이드](/ko/posts/best-esim-for-china-travel-2026/)
+- [eSIM vs 로밍 비용 비교 가이드](/ko/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [중국 여행 전 준비할 것](/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 
 ## 요약
 

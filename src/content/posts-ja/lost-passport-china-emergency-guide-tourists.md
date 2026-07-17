@@ -114,4 +114,4 @@ faqs:
 
 ---
 
-**続けて読む：**[中国ビザ免除・トランジットガイド2026](/posts/china-visa-free-entry-transit-guide-2026/) では、新しい書類取得後のビザルールとオーバーステイ防止策を解説。[中国到着後24時間の完全チェックリスト](/posts/first-24-hours-in-china-arrival-checklist/) では、ホテルチェックイン時にパスポートのコピーを取るなど、緊急事態を未然に防ぐ実践的手順を紹介しています。
+**続けて読む：**[中国ビザ免除・トランジットガイド2026](/ja/posts/china-visa-free-entry-transit-guide-2026/) では、新しい書類取得後のビザルールとオーバーステイ防止策を解説。[中国到着後24時間の完全チェックリスト](/ja/posts/first-24-hours-in-china-arrival-checklist/) では、ホテルチェックイン時にパスポートのコピーを取るなど、緊急事態を未然に防ぐ実践的手順を紹介しています。

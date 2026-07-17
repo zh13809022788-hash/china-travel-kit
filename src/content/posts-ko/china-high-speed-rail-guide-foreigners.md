@@ -86,9 +86,9 @@ faqs:
 
 ## 다음에 읽기
 
-- [booking China train tickets on 12306](/posts/book-china-train-tickets-12306-foreigners/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
-- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [booking China train tickets on 12306](/ko/posts/book-china-train-tickets-12306-foreigners/)
+- [Hangzhou city guide](/ko/posts/hangzhou-city-guide-for-foreigners/)
+- [first-time China trip planner](/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## 요약
 

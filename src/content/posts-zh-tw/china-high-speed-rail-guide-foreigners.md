@@ -67,9 +67,9 @@ faqs:
 長途可考慮一等座，但不用覺得非升級不可；二等座已經足夠舒適。也別忘了預留到車站的路程時間，部分高鐵站離市中心較遠。
 
 ## 延伸閱讀
-- [booking China train tickets on 12306](/posts/book-china-train-tickets-12306-foreigners/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
-- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [booking China train tickets on 12306](/zh-tw/posts/book-china-train-tickets-12306-foreigners/)
+- [Hangzhou city guide](/zh-tw/posts/hangzhou-city-guide-for-foreigners/)
+- [first-time China trip planner](/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## 總結
 中國高鐵快速、舒適，對外國旅客也比以前容易許多。想省服務費可用 12306 英文版，想要更熟悉的介面可用 Trip.com。訂票時護照資料必須完全正確，進站通常直接掃護照。二等座適合大多數人，一等座與商務座提供更多空間。提早 30 到 60 分鐘到站，帶好護照，高鐵會是看中國最舒服的移動方式之一。

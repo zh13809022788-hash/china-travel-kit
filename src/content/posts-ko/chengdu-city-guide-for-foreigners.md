@@ -92,9 +92,9 @@ coverAlt: "청두 자이언트판다 번식연구기지의 판다들"
 
 ## Read Next
 
-- [청두 길거리 음식 가이드](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
-- [중국어 없이 음식 주문하기](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
-- [중국 고속철도 이용 가이드](/posts/china-high-speed-rail-guide-foreigners/)
+- [청두 길거리 음식 가이드](/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [중국어 없이 음식 주문하기](/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+- [중국 고속철도 이용 가이드](/ko/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Summary
 

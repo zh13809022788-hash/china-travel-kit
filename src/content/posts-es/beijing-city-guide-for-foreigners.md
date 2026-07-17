@@ -72,9 +72,9 @@ Reserva pronto la Ciudad Prohibida y traslados a la Gran Muralla. Revisa la cali
 
 ## Leer Después
 
-- [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [Daxing airport to city guide](/es/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [airport transport comparison](/es/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China high-speed rail guide](/es/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Resumen
 

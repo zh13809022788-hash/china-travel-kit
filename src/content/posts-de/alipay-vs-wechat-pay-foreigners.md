@@ -52,9 +52,9 @@ Im Laden gibt es zwei Standardablaeufe: Entweder Sie scannen den QR-Code des Hae
 
 ## Weiterlesen
 
-- [Zahlen in China als Tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay mit auslaendischer Karte einrichten](/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay fuer Besucher](/posts/wechat-pay-foreign-visitors-guide/)
+- [Zahlen in China als Tourist](/de/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay mit auslaendischer Karte einrichten](/de/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay fuer Besucher](/de/posts/wechat-pay-foreign-visitors-guide/)
 
 ## Fazit
 

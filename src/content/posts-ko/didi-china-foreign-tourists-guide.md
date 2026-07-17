@@ -134,9 +134,9 @@ faqs:
 
 ## 다음에 읽기
 
-- [airport to city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Show to Driver tool](/tools/show-to-driver/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [airport to city transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Show to Driver tool](/ko/tools/show-to-driver/)
+- [how to pay in China as a tourist](/ko/posts/how-to-pay-in-china-tourist-guide/)
 
 ## 요약
 

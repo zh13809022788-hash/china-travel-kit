@@ -74,9 +74,9 @@ Beijing ist saisonal. Herbst ist meist die beste Kombination aus Temperatur und 
 
 ## Weiterlesen
 
-- [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [Daxing airport to city guide](/de/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [airport transport comparison](/de/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China high-speed rail guide](/de/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Fazit
 

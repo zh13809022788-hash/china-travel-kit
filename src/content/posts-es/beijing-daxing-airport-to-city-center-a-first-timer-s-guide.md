@@ -52,6 +52,6 @@ De dia, Daxing Airport Express a Caoqiao por 35 RMB es el camino mas limpio. Si 
 
 ## Leer Tambien
 
-- [Guia de Pekin](/posts/beijing-city-guide-for-foreigners/)
-- [Transporte desde aeropuertos en China](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Guia de DiDi](/posts/didi-china-foreign-tourists-guide/)
+- [Guia de Pekin](/es/posts/beijing-city-guide-for-foreigners/)
+- [Transporte desde aeropuertos en China](/es/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Guia de DiDi](/es/posts/didi-china-foreign-tourists-guide/)

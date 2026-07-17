@@ -94,9 +94,9 @@ Lleva siempre una alternativa: algo de efectivo en RMB y una Visa o Mastercard f
 
 ## Leer Después
 
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
-- [cash backup guide for China](/posts/how-much-cash-to-bring-to-china/)
+- [how to pay in China as a tourist](/es/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay setup guide](/es/posts/wechat-pay-foreign-visitors-guide/)
+- [cash backup guide for China](/es/posts/how-much-cash-to-bring-to-china/)
 
 ## Resumen
 

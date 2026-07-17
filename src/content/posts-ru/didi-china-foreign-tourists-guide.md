@@ -46,9 +46,9 @@ DiDi помогает иностранцу решить язык и оплату
 
 ## Что читать дальше
 
-- [Как платить в Китае туристу](/posts/how-to-pay-in-china-tourist-guide/)
-- [Интернет и приложения в Китае](/posts/internet-access-china-apps-that-work-2026/)
-- [Первые 24 часа в Китае](/posts/first-24-hours-in-china-arrival-checklist/)
+- [Как платить в Китае туристу](/ru/posts/how-to-pay-in-china-tourist-guide/)
+- [Интернет и приложения в Китае](/ru/posts/internet-access-china-apps-that-work-2026/)
+- [Первые 24 часа в Китае](/ru/posts/first-24-hours-in-china-arrival-checklist/)
 
 ## Итог
 

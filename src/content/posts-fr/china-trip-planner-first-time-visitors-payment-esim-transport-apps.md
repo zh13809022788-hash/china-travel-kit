@@ -49,7 +49,7 @@ Avant de partir :
 - sauvegardez les instructions du fournisseur hors ligne ;
 - gardez le Wi-Fi d'aéroport comme secours, pas comme plan principal.
 
-Guide lié : [Best eSIM for China Travel in 2026](/posts/best-esim-for-china-travel-2026/).
+Guide lié : [Best eSIM for China Travel in 2026](/fr/posts/best-esim-for-china-travel-2026/).
 
 ## 2. Préparer le paiement
 
@@ -71,9 +71,9 @@ Faites-le avant le départ :
 
 Guides utiles :
 
-- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [How to Pay in China as a Tourist](/fr/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay Foreign Credit Card Step by Step](/fr/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay Foreign Visitors Guide](/fr/posts/wechat-pay-foreign-visitors-guide/)
 
 ## 3. Planifier le premier transfert
 
@@ -86,7 +86,7 @@ Le premier trajet ne doit pas être le moment où vous découvrez les transports
 - instruction taxi de secours ;
 - durée ou prix approximatif.
 
-Le métro ou le train aéroportuaire est souvent efficace si l'hôtel est bien placé. Pour une arrivée tardive, une famille ou beaucoup de bagages, DiDi ou un taxi peut valoir le coût. Le [Show to Driver tool](/tools/show-to-driver/) permet de créer un message chinois lisible pour un chauffeur.
+Le métro ou le train aéroportuaire est souvent efficace si l'hôtel est bien placé. Pour une arrivée tardive, une famille ou beaucoup de bagages, DiDi ou un taxi peut valoir le coût. Le [Show to Driver tool](/fr/tools/show-to-driver/) permet de créer un message chinois lisible pour un chauffeur.
 
 ## 4. Installer les applications vraiment utiles
 
@@ -116,8 +116,8 @@ Utilisez le train pour Beijing-Shanghai, Shanghai-Hangzhou, Chengdu-Chongqing et
 
 Guides liés :
 
-- [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
-- [Book China Train Tickets on 12306 as a Foreigner](/posts/book-china-train-tickets-12306-foreigners/)
+- [China High-Speed Rail Guide for Foreigners](/fr/posts/china-high-speed-rail-guide-foreigners/)
+- [Book China Train Tickets on 12306 as a Foreigner](/fr/posts/book-china-train-tickets-12306-foreigners/)
 
 ## 6. Première journée : vérifier le système
 
@@ -148,7 +148,7 @@ Une fois ces étapes validées, vous avez le contrôle.
 
 ## Outils utiles
 
-Pour créer une première structure, utilisez le [China Trip Planner](/trip-planner/). Pour des questions rapides, essayez [China Travel Help](/travel-help/). Les outils pratiques sont regroupés dans le [ChinaTripBox Tool Center](/tools/).
+Pour créer une première structure, utilisez le [China Trip Planner](/fr/trip-planner/). Pour des questions rapides, essayez [China Travel Help](/fr/travel-help/). Les outils pratiques sont regroupés dans le [ChinaTripBox Tool Center](/fr/tools/).
 
 ## Résumé
 

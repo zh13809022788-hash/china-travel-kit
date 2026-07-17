@@ -36,7 +36,7 @@ Die robuste Lösung ist ein Schichtenmodell: mobile Daten, lokale Apps, Offline-
 
 Denken Sie nicht in einer festen Liste einzelner Apps. Verfügbarkeit hängt von Stadt, Netz, Anbieter, App-Version und Zeitpunkt ab. Planen Sie lieber nach Funktionen: Wie erreichen Sie Familie oder Kollegen? Wie navigieren Sie? Wie übersetzen Sie Speisekarten? Wie bezahlen Sie? Wo liegen Flug-, Hotel- und Zugbestätigungen?
 
-Für eine Reise sind Zahlung, Transport, Karten und Übersetzung wichtiger als Unterhaltung. Prüfen Sie vor Abflug den [app availability checker](/tools/app-availability-checker/) und den Guide zu [internet access in China](/posts/internet-access-china-apps-that-work-2026/).
+Für eine Reise sind Zahlung, Transport, Karten und Übersetzung wichtiger als Unterhaltung. Prüfen Sie vor Abflug den [app availability checker](/de/tools/app-availability-checker/) und den Guide zu [internet access in China](/de/posts/internet-access-china-apps-that-work-2026/).
 
 ## eSIM, Roaming, lokale SIM und VPN
 
@@ -73,10 +73,10 @@ Speichern Sie Hotelname, Adresse und Telefonnummer auf Chinesisch offline. Laden
 
 ## Weiterlesen
 
-- [Internet access in China: apps that work](/posts/internet-access-china-apps-that-work-2026/)
-- [China eSIM vs roaming cost](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [App availability checker](/tools/app-availability-checker/)
-- [What to set up before traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+- [Internet access in China: apps that work](/de/posts/internet-access-china-apps-that-work-2026/)
+- [China eSIM vs roaming cost](/de/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [App availability checker](/de/tools/app-availability-checker/)
+- [What to set up before traveling to China](/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 
 ## Fazit
 

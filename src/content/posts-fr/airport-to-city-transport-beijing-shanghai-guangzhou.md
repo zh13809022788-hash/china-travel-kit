@@ -58,9 +58,9 @@ Voyageur seul et léger : rail. Groupe de trois ou quatre : DiDi peut devenir co
 
 ## À lire ensuite
 
-- [Guide de l'aéroport Daxing vers Pékin](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [Métro de Shanghai pour visiteurs étrangers](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [Guide DiDi en Chine](/posts/didi-china-foreign-tourists-guide/)
+- [Guide de l'aéroport Daxing vers Pékin](/fr/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [Métro de Shanghai pour visiteurs étrangers](/fr/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [Guide DiDi en Chine](/fr/posts/didi-china-foreign-tourists-guide/)
 
 ## Résumé
 

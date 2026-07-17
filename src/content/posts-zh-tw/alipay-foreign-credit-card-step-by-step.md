@@ -77,9 +77,9 @@ faqs:
 若綁卡失敗，先確認銀行允許海外與線上交易，姓名是否與護照一致，臉部驗證是否完成。若大額付款失敗，可能是平台或銀行限額，拆成兩筆通常更容易成功。
 
 ## 延伸閱讀
-- [How to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [WeChat Pay foreign visitors guide](/posts/wechat-pay-foreign-visitors-guide/)
-- [How much cash to bring](/posts/how-much-cash-to-bring-to-china/)
+- [How to pay in China as a tourist](/zh-tw/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay foreign visitors guide](/zh-tw/posts/wechat-pay-foreign-visitors-guide/)
+- [How much cash to bring](/zh-tw/posts/how-much-cash-to-bring-to-china/)
 
 ## 總結
 Alipay 對外國旅客已經相當實用。出發前下載、用本國號碼註冊、綁定海外卡、完成護照與臉部驗證，落地後做一筆小額測試。把它設好後，你在中國多數日常場景都能用 QR Code 順利付款。

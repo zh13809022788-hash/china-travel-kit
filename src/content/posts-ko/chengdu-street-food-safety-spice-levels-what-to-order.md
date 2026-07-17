@@ -126,6 +126,6 @@ faqs:
 
 ## 다음에 읽기
 
-- [청두 도시 가이드](/posts/chengdu-city-guide-for-foreigners/)
-- [중국어 없이 중국에서 음식 주문하기](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
-- [중국 팁 문화 가이드](/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
+- [청두 도시 가이드](/ko/posts/chengdu-city-guide-for-foreigners/)
+- [중국어 없이 중국에서 음식 주문하기](/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+- [중국 팁 문화 가이드](/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)

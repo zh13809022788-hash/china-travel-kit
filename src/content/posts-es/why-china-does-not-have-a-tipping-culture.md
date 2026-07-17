@@ -37,8 +37,8 @@ Guias privados, conductores privados y hoteles internacionales de lujo pueden en
 
 ## Leer Tambien
 
-- [Cuando se espera propina en China](/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
-- [Planificador de viaje a China](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [Cuando se espera propina en China](/es/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
+- [Planificador de viaje a China](/es/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## Resumen
 

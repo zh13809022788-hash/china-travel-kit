@@ -81,9 +81,9 @@ La ville est très sûre, mais les foules autour du Bund, de Nanjing Road ou de 
 
 ## À lire ensuite
 
-- [Shanghai metro guide](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
+- [Shanghai metro guide](/fr/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [airport transport guide](/fr/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Hangzhou city guide](/fr/posts/hangzhou-city-guide-for-foreigners/)
 
 ## Résumé
 

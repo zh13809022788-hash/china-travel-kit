@@ -90,4 +90,4 @@ Guarda el número de póliza y la línea de emergencia en un lugar accesible sin
 
 ---
 
-**Leer después:** [Primeras 24 horas en China: lista de llegada](/posts/first-24-hours-in-china-arrival-checklist/) cubre qué hacer al aterrizar. [Qué configurar antes de viajar a China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) repasa la lista de preparación previa al viaje.
+**Leer después:** [Primeras 24 horas en China: lista de llegada](/es/posts/first-24-hours-in-china-arrival-checklist/) cubre qué hacer al aterrizar. [Qué configurar antes de viajar a China](/es/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) repasa la lista de preparación previa al viaje.

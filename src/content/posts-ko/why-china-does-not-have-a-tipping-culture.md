@@ -153,6 +153,6 @@ faqs:
 
 ## 함께 읽으면 좋은 글
 
-- [중국에서 팁이 필요한 경우](/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
-- [중국어 없이 중국에서 음식 주문하기](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
-- [첫 중국 여행자를 위한 여행 플래너](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [중국에서 팁이 필요한 경우](/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/)
+- [중국어 없이 중국에서 음식 주문하기](/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+- [첫 중국 여행자를 위한 여행 플래너](/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)

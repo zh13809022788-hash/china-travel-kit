@@ -74,9 +74,9 @@ Côté saison, l'automne est le plus confortable. L'été est chaud, humide et t
 
 ## À lire ensuite
 
-- [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [Daxing airport to city guide](/fr/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [airport transport comparison](/fr/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China high-speed rail guide](/fr/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Résumé
 

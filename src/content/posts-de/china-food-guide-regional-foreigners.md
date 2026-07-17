@@ -56,5 +56,5 @@ Essen ist einer der besten Gruende fuer eine China-Reise. Probieren Sie regional
 
 ## Weiterlesen
 
-- [Chengdu Street Food Guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
-- [Essen bestellen in China](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+- [Chengdu Street Food Guide](/de/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [Essen bestellen in China](/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)

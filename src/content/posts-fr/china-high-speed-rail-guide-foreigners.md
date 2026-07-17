@@ -84,9 +84,9 @@ Achetez eau et snacks avant d'embarquer si vous avez des préférences. Il exist
 
 ## À lire ensuite
 
-- [booking China train tickets on 12306](/posts/book-china-train-tickets-12306-foreigners/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
-- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [booking China train tickets on 12306](/fr/posts/book-china-train-tickets-12306-foreigners/)
+- [Hangzhou city guide](/fr/posts/hangzhou-city-guide-for-foreigners/)
+- [first-time China trip planner](/fr/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## Résumé
 

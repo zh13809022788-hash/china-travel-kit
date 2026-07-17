@@ -53,7 +53,7 @@ Antes de salir:
 - guarda instrucciones offline;
 - trata el Wi-Fi del aeropuerto como respaldo, no como plan principal.
 
-Guía relacionada: [Best eSIM for China Travel in 2026](/posts/best-esim-for-china-travel-2026/).
+Guía relacionada: [Best eSIM for China Travel in 2026](/es/posts/best-esim-for-china-travel-2026/).
 
 ## 2. Pagos Antes De Salir De Casa
 
@@ -70,9 +70,9 @@ No esperes al hall de llegadas: los SMS, avisos antifraude y verificaciones son 
 
 Guías relacionadas:
 
-- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [How to Pay in China as a Tourist](/es/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay Foreign Credit Card Step by Step](/es/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay Foreign Visitors Guide](/es/posts/wechat-pay-foreign-visitors-guide/)
 
 ## 3. Planifica El Primer Traslado
 
@@ -89,7 +89,7 @@ Guarda antes de aterrizar:
 
 En grandes ciudades, metro o tren aeropuerto pueden ser eficientes. Para llegadas nocturnas, familias o mucho equipaje, DiDi o taxi pueden compensar.
 
-Usa la herramienta [Show to Driver](/tools/show-to-driver/) para generar un mensaje grande en chino con tu destino.
+Usa la herramienta [Show to Driver](/es/tools/show-to-driver/) para generar un mensaje grande en chino con tu destino.
 
 ## 4. Apps Esenciales
 
@@ -120,8 +120,8 @@ Usa tren rápido para Beijing-Shanghai, Shanghai-Hangzhou, Chengdu-Chongqing y c
 
 Guías relacionadas:
 
-- [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
-- [Book China Train Tickets on 12306 as a Foreigner](/posts/book-china-train-tickets-12306-foreigners/)
+- [China High-Speed Rail Guide for Foreigners](/es/posts/china-high-speed-rail-guide-foreigners/)
+- [Book China Train Tickets on 12306 as a Foreigner](/es/posts/book-china-train-tickets-12306-foreigners/)
 
 ## 6. Primer Día: Que Todo Funcione
 
@@ -146,7 +146,7 @@ No intentes verlo todo el día uno. El objetivo es validar el sistema:
 
 ## Usa Las Herramientas
 
-Para un primer borrador estructurado, prueba el [China Trip Planner](/trip-planner/). Para dudas rápidas, usa [China Travel Help](/travel-help/). Y para utilidades concretas, empieza por el [ChinaTripBox Tool Center](/tools/).
+Para un primer borrador estructurado, prueba el [China Trip Planner](/es/trip-planner/). Para dudas rápidas, usa [China Travel Help](/es/travel-help/). Y para utilidades concretas, empieza por el [ChinaTripBox Tool Center](/es/tools/).
 
 ## Resumen
 

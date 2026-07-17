@@ -104,6 +104,6 @@ faqs:
 
 ## 다음 글
 
-- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [best eSIM for China travel](/posts/best-esim-for-china-travel-2026/)
-- [Sanya city guide](/posts/sanya-city-guide-for-foreigners/)
+- [first-time China trip planner](/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [best eSIM for China travel](/ko/posts/best-esim-for-china-travel-2026/)
+- [Sanya city guide](/ko/posts/sanya-city-guide-for-foreigners/)

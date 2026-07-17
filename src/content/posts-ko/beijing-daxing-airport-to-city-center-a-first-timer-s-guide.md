@@ -119,6 +119,6 @@ faqs:
 
 ## 다음 글
 
-- [베이징 여행 가이드](/posts/beijing-city-guide-for-foreigners/)
-- [중국 주요 도시 공항-시내 교통 가이드](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [디디 차량 호출 가이드](/posts/didi-china-foreign-tourists-guide/)
+- [베이징 여행 가이드](/ko/posts/beijing-city-guide-for-foreigners/)
+- [중국 주요 도시 공항-시내 교통 가이드](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [디디 차량 호출 가이드](/ko/posts/didi-china-foreign-tourists-guide/)

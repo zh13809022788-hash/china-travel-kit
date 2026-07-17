@@ -94,9 +94,9 @@ faqs:
 
 ## 다음 글
 
-- [visa-free checker tool](/tools/visa-free-checker/)
-- [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [visa-free checker tool](/ko/tools/visa-free-checker/)
+- [first-time China trip planner](/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
+- [airport transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 
 ## 요약
 

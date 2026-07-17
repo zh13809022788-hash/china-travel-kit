@@ -111,9 +111,9 @@ Même sans livraison, ces habitudes aident :
 
 ## À lire ensuite
 
-- [Chengdu street food guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
-- [Chengdu city guide](/posts/chengdu-city-guide-for-foreigners/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [Chengdu street food guide](/fr/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+- [Chengdu city guide](/fr/posts/chengdu-city-guide-for-foreigners/)
+- [how to pay in China as a tourist](/fr/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Résumé
 

@@ -62,9 +62,9 @@ Warten bis zur Landung ist der Klassiker. Dann fehlen SMS-Codes, die Bank ist na
 
 ## Weiterlesen
 
-- [WeChat Pay guide for foreign visitors](/posts/wechat-pay-foreign-visitors-guide/)
-- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay guide for foreign visitors](/de/posts/wechat-pay-foreign-visitors-guide/)
+- [Alipay setup guide](/de/posts/alipay-foreign-credit-card-step-by-step/)
+- [how to pay in China as a tourist](/de/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Fazit
 

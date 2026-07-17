@@ -59,9 +59,9 @@ DiDi 適合深夜、帶行李或前往不靠近捷運的地點。路邊計程車
 每天按區域安排。東城與西城集中歷史景點，朝陽適合餐飲購物，長城則當成獨立一天。
 
 ## 延伸閱讀
-- [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [Daxing airport to city guide](/zh-tw/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [airport transport comparison](/zh-tw/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China high-speed rail guide](/zh-tw/posts/china-high-speed-rail-guide-foreigners/)
 
 ## 總結
 北京最適合想看歷史、建築、博物館與長城的旅客。它安全、交通清楚，但景點大、安檢多、預約要求高。提前訂票、帶護照、按區域安排行程，你會更容易享受這座城市。

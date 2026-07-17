@@ -93,9 +93,9 @@ faqs:
 
 ## 함께 읽기
 
-- [best eSIM for China travel](/posts/best-esim-for-china-travel-2026/)
-- [China eSIM vs roaming cost guide](/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [internet access in China](/posts/internet-access-china-apps-that-work-2026/)
+- [best eSIM for China travel](/ko/posts/best-esim-for-china-travel-2026/)
+- [China eSIM vs roaming cost guide](/ko/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
+- [internet access in China](/ko/posts/internet-access-china-apps-that-work-2026/)
 
 ## 요약
 

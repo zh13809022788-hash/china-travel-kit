@@ -56,9 +56,9 @@ Wenn etwas nicht funktioniert, prüfen Sie zuerst die Datenverbindung. Danach ko
 
 ## Weiterlesen
 
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
-- [cash backup guide for China](/posts/how-much-cash-to-bring-to-china/)
+- [how to pay in China as a tourist](/de/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay setup guide](/de/posts/wechat-pay-foreign-visitors-guide/)
+- [cash backup guide for China](/de/posts/how-much-cash-to-bring-to-china/)
 
 ## Fazit
 
