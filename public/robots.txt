@@ -1,13 +1,9 @@
 User-agent: *
 Allow: /
 
-# Low-value cluster pages: allowed but de-prioritized for crawl budget
-Disallow: /apps/
+# Author pages: disallowed until real author profiles are built (E-E-A-T)
 Disallow: /authors/
-Disallow: /cities/
-Disallow: /series/
-Disallow: /digital-nomads/
-Disallow: /long-stay/
+# Error pages
 Disallow: /404/
 
 Sitemap: https://www.chinatripbox.com/sitemap-index.xml
