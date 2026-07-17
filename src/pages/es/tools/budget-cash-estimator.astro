@@ -38,14 +38,14 @@ const description =
         <select id="style" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           <option value="budget">Económico (hostales, comida callejera, metro)</option>
           <option value="mid" selected>Gama media (hoteles de 3–4★, restaurantes)</option>
-          <option value="comfort">Confort (hoteles de 4–5★, taxis, gastronomía)</option>
+          <option value="comfort">Comodidad (hoteles de 4–5★, taxis, comidas fuera)</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Nivel de ciudad</span>
+        <span class="mb-1 font-medium text-gray-700">Categoría de ciudad</span>
         <select id="tier" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="tier1">Nivel 1 (Beijing, Shanghai, Shenzhen)</option>
-          <option value="tier2" selected>Nivel 2 (Chengdu, Xi'an, Hangzhou)</option>
+          <option value="tier1">Categoría 1 (Beijing, Shanghai, Shenzhen)</option>
+          <option value="tier2" selected>Categoría 2 (Chengdu, Xi'an, Hangzhou)</option>
           <option value="tier3">Ciudades y pueblos más pequeños</option>
         </select>
       </label>
@@ -62,14 +62,14 @@ const description =
       </div>
       <div class="card mt-5" id="breakdown-card"></div>
       <p class="mt-3 text-xs text-gray-400">
-        Las estimaciones son aproximadas y no incluyen vuelos internacionales. Los costos reales varían según la temporada,
-        el tipo de cambio y las decisiones personales. Tipo de cambio supuesto de ~7.2 RMB por USD.
+        Las estimaciones son aproximadas y excluyen los vuelos internacionales. Los costos reales varían según la temporada,
+        el tipo de cambio y las elecciones personales. Tipo de cambio asumido en ~7.2 RMB por USD.
       </p>
 
       <AffiliateCta
-        title="Paga como local, ahorra en comisiones"
-        description="Configura un método de pago listo para viajar para que la mayor parte de tus gastos no necesite efectivo."
-        buttonText="Ver opciones de pago"
+        title="Paga como un local, ahorra en comisiones"
+        description="Configura un método de pago listo para viajar para que la mayor parte de tus gastos no requiera efectivo."
+        buttonText="Ver opciones de Pagos"
         placeholder={AFFILIATE_LINKS.payment}
       />
     </div>
@@ -90,14 +90,14 @@ const description =
     comfort: { food: 400, transport: 200, activities: 220, misc: 130 },
   };
 
-  // Alojamiento por noche en RMB (por habitación, suponiendo que se comparte entre hasta 2).
+  // Alojamiento por noche en RMB (por habitación, se asume compartida por hasta 2).
   const lodging: Record<StyleKey, number> = {
     budget: 150,
     mid: 450,
     comfort: 1100,
   };
 
-  // Multiplicador de costo por nivel de ciudad.
+  // Multiplicador de costo por categoría de ciudad.
   const tierMult: Record<TierKey, number> = {
     tier1: 1.25,
     tier2: 1.0,
@@ -137,7 +137,7 @@ const description =
     const spendTotal = perPersonDaily * travelers * nights;
     const grandTotal = spendTotal + lodgingTotal;
 
-    // Efectivo recomendado: ~10% del gasto diario, limitado a un fondo razonable.
+    // Efectivo recomendado: ~10% del gasto diario, limitado a una reserva razonable.
     const dailyCashFloat = Math.min(perPersonDaily * 0.15 * travelers, 200 * travelers);
     const cashRecommended = Math.min(dailyCashFloat * nights, 2000 + 100 * travelers);
 
@@ -156,7 +156,7 @@ const description =
       <p class="mt-2 text-3xl font-bold text-gray-900">${rmb(cashRecommended)}</p>
       <p class="text-sm text-gray-500">≈ ${usd(cashRecommended)} en RMB físico</p>
       <p class="mt-4 text-sm text-gray-600">
-        China prioriza el móvil — pagarás casi todo con Alipay o WeChat Pay vinculado a una
+        China prioriza el pago móvil — pagarás casi todo con Alipay o WeChat Pay vinculado a una
         tarjeta extranjera. Este efectivo es una red de seguridad para taxis sin lectores QR, pequeños vendedores rurales y
         máquinas que solo aceptan billetes. Lleva denominaciones pequeñas (¥10, ¥20, ¥50).
       </p>`;

@@ -45,15 +45,15 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
     <!-- Nota de advertencia sobre la temporada de viajes -->
     <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
-      <strong>Evita las multitudes:</strong> Los días festivos chinos — especialmente el Año Nuevo chino
+      <strong>Evita las multitudes:</strong> los días festivos chinos — especialmente el Año Nuevo chino
       (finales de enero/febrero), el Día del Trabajo (principios de mayo) y el Día Nacional / Semana Dorada (primera semana de octubre)
-      — generan enormes desplazamientos internos. Los trenes y hoteles se agotan y los precios se disparan. Reserva con mucha antelación o
+      — generan enormes desplazamientos nacionales. Los trenes y hoteles se agotan y los precios suben. Reserva con mucha antelación o
       planifica evitando estas fechas.
     </div>
 
     <AffiliateCta
       title="Reserva trenes y hoteles con antelación"
-      description="Las rutas populares se agotan rápido en temporada alta. Asegura tu tren de alta velocidad y tus estancias con tiempo."
+      description="Las rutas populares se agotan rápido en temporada alta. Asegura tu tren de alta velocidad y tus alojamientos con tiempo."
       buttonText="Ver opciones de reserva"
       placeholder={AFFILIATE_LINKS.transport}
     />
@@ -72,16 +72,16 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
   // Guía por ciudad y por mes (índice 0 = enero).
   const data: Record<string, MonthInfo[]> = {
     Beijing: [
-      { temp: '-8 a 2°C', rating: 'tough', weather: 'Frío, seco, despejado. Pocos turistas.', pack: 'Abrigo grueso, gorro, guantes.' },
+      { temp: '-8 a 2°C', rating: 'tough', weather: 'Frío, seco y despejado. Pocos turistas.', pack: 'Abrigo grueso, gorro, guantes.' },
       { temp: '-5 a 5°C', rating: 'tough', weather: 'Frío; posibles multitudes por el Año Nuevo chino.', pack: 'Capas cálidas de invierno.' },
       { temp: '2 a 12°C', rating: 'ok', weather: 'Fresco, ventoso, polvo ocasional.', pack: 'Chaqueta, cortavientos.' },
       { temp: '9 a 20°C', rating: 'great', weather: 'Primavera templada, flores. Ideal.', pack: 'Capas, chaqueta ligera.' },
       { temp: '15 a 26°C', rating: 'great', weather: 'Cálido y agradable. Multitudes por el Día del Trabajo a principios de mayo.', pack: 'Capas ligeras.' },
-      { temp: '20 a 31°C', rating: 'good', weather: 'Caluroso, comienzo de las lluvias.', pack: 'Ropa de verano, paraguas.' },
-      { temp: '22 a 31°C', rating: 'ok', weather: 'Caluroso y húmedo, pico de lluvias.', pack: 'Ropa ligera, equipo de lluvia.' },
+      { temp: '20 a 31°C', rating: 'good', weather: 'Caluroso, inicio de las lluvias.', pack: 'Ropa de verano, paraguas.' },
+      { temp: '22 a 31°C', rating: 'ok', weather: 'Caluroso y húmedo, máxima lluvia.', pack: 'Ropa ligera, equipo de lluvia.' },
       { temp: '21 a 30°C', rating: 'ok', weather: 'Caluroso, húmedo, multitudes de verano.', pack: 'Ropa ligera, protección solar.' },
       { temp: '15 a 26°C', rating: 'great', weather: 'Fresco, despejado, cómodo. Mejor mes.', pack: 'Capas, chaqueta ligera.' },
-      { temp: '8 a 19°C', rating: 'good', weather: 'Otoño hermoso. Multitudes por la Semana Dorada del 1 al 7 de octubre.', pack: 'Chaqueta, capas.' },
+      { temp: '8 a 19°C', rating: 'good', weather: 'Otoño precioso. Multitudes por la Semana Dorada del 1 al 7 de octubre.', pack: 'Chaqueta, capas.' },
       { temp: '0 a 10°C', rating: 'ok', weather: 'Frío, seco, tranquilo.', pack: 'Abrigo cálido.' },
       { temp: '-6 a 3°C', rating: 'tough', weather: 'Frío y seco.', pack: 'Equipo pesado de invierno.' },
     ],
@@ -91,10 +91,10 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
       { temp: '7 a 14°C', rating: 'good', weather: 'Primavera templada, algo de lluvia.', pack: 'Chaqueta, paraguas.' },
       { temp: '12 a 20°C', rating: 'great', weather: 'Primavera agradable. Ideal.', pack: 'Capas ligeras.' },
       { temp: '17 a 25°C', rating: 'great', weather: 'Cálido, encantador. Multitudes a principios de mayo.', pack: 'Ropa ligera.' },
-      { temp: '21 a 28°C', rating: 'ok', weather: 'Temporada de lluvias de ciruela, húmedo.', pack: 'Equipo de lluvia, ropa ligera.' },
-      { temp: '25 a 33°C', rating: 'tough', weather: 'Caluroso, húmedo, riesgo de tifones.', pack: 'Ropa ligera, protección para sol/lluvia.' },
+      { temp: '21 a 28°C', rating: 'ok', weather: 'Temporada de lluvias del ciruelo, húmedo.', pack: 'Equipo de lluvia, ropa ligera.' },
+      { temp: '25 a 33°C', rating: 'tough', weather: 'Caluroso, húmedo, riesgo de tifones.', pack: 'Ropa ligera, protección contra sol/lluvia.' },
       { temp: '25 a 33°C', rating: 'tough', weather: 'Muy caluroso y húmedo.', pack: 'Ropa ligera, hidratación.' },
-      { temp: '21 a 28°C', rating: 'great', weather: 'Cálido volviéndose cómodo. Excelente.', pack: 'Capas ligeras.' },
+      { temp: '21 a 28°C', rating: 'great', weather: 'Cálido, volviéndose cómodo. Excelente.', pack: 'Capas ligeras.' },
       { temp: '15 a 23°C', rating: 'great', weather: 'Templado, despejado. Multitudes por la Semana Dorada a principios de octubre.', pack: 'Capas, chaqueta ligera.' },
       { temp: '9 a 17°C', rating: 'good', weather: 'Fresco, cómodo.', pack: 'Chaqueta.' },
       { temp: '3 a 10°C', rating: 'ok', weather: 'Frío y húmedo.', pack: 'Abrigo cálido.' },
@@ -130,12 +130,12 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
     Guangzhou: [
       { temp: '10 a 18°C', rating: 'great', weather: 'Templado, seco. Muy agradable.', pack: 'Capas ligeras.' },
       { temp: '12 a 19°C', rating: 'great', weather: 'Templado; período del Año Nuevo chino.', pack: 'Capas ligeras.' },
-      { temp: '15 a 22°C', rating: 'good', weather: 'En calentamiento, húmedo.', pack: 'Ropa ligera.' },
-      { temp: '19 a 26°C', rating: 'good', weather: 'Cálido, comienzan las lluvias.', pack: 'Ropa ligera, paraguas.' },
-      { temp: '23 a 30°C', rating: 'ok', weather: 'Caluroso, húmedo, mojado.', pack: 'Ropa ligera, equipo de lluvia.' },
+      { temp: '15 a 22°C', rating: 'good', weather: 'Calentándose, húmedo.', pack: 'Ropa ligera.' },
+      { temp: '19 a 26°C', rating: 'good', weather: 'Cálido, empiezan las lluvias.', pack: 'Ropa ligera, paraguas.' },
+      { temp: '23 a 30°C', rating: 'ok', weather: 'Caluroso, húmedo, lluvioso.', pack: 'Ropa ligera, equipo de lluvia.' },
       { temp: '25 a 32°C', rating: 'tough', weather: 'Caluroso, muy lluvioso, riesgo de tifones.', pack: 'Equipo de lluvia, ropa ligera.' },
       { temp: '26 a 34°C', rating: 'tough', weather: 'Caluroso, húmedo, tormentoso.', pack: 'Ropa ligera, hidratación.' },
-      { temp: '26 a 34°C', rating: 'tough', weather: 'Muy caluroso, temporada de tifones.', pack: 'Ropa ligera, protección para sol/lluvia.' },
+      { temp: '26 a 34°C', rating: 'tough', weather: 'Muy caluroso, temporada de tifones.', pack: 'Ropa ligera, protección contra sol/lluvia.' },
       { temp: '24 a 32°C', rating: 'ok', weather: 'Caluroso, suavizándose.', pack: 'Ropa ligera.' },
       { temp: '21 a 29°C', rating: 'great', weather: 'Cálido, más seco. Excelente. Multitudes por la Semana Dorada.', pack: 'Ropa ligera.' },
       { temp: '16 a 24°C', rating: 'great', weather: 'Cálido, cómodo, seco.', pack: 'Capas ligeras.' },
@@ -148,7 +148,7 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
       { temp: '2 a 14°C', rating: 'good', weather: 'Primavera fresca.', pack: 'Chaqueta, capas.' },
       { temp: '10 a 22°C', rating: 'great', weather: 'Templado y agradable.', pack: 'Capas ligeras.' },
       { temp: '16 a 27°C', rating: 'great', weather: 'Verano cálido y cómodo.', pack: 'Ropa ligera.' },
-      { temp: '19 a 29°C', rating: 'great', weather: 'Cálido, agradable escape del calor del sur.', pack: 'Ropa ligera.' },
+      { temp: '19 a 29°C', rating: 'great', weather: 'Cálido, escapada agradable del calor del sur.', pack: 'Ropa ligera.' },
       { temp: '18 a 27°C', rating: 'great', weather: 'Cálido, cómodo.', pack: 'Capas ligeras.' },
       { temp: '11 a 21°C', rating: 'good', weather: 'Otoño fresco.', pack: 'Chaqueta.' },
       { temp: '2 a 13°C', rating: 'ok', weather: 'Frío, otoño colorido.', pack: 'Abrigo cálido.' },
@@ -160,11 +160,11 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
   const ratingStyle = {
     great: { cls: 'border-green-200 bg-green-50', badge: 'bg-green-600', label: 'Excelente época para visitar' },
     good: { cls: 'border-teal-200 bg-teal-50', badge: 'bg-teal-600', label: 'Buena época para visitar' },
-    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: 'Factible, con inconvenientes' },
+    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: 'Factible, con desventajas' },
     tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: 'Condiciones difíciles' },
   } as const;
 
-  const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const monthNames = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
   const cityEl = document.getElementById('city') as HTMLSelectElement;
   const monthEl = document.getElementById('month') as HTMLSelectElement;

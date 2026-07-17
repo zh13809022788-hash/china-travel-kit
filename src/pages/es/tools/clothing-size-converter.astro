@@ -33,9 +33,9 @@ const description =
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
             <th class="py-3 pr-4 font-semibold">China</th>
-            <th class="py-3 pr-4 font-semibold">EE. UU.</th>
-            <th class="py-3 pr-4 font-semibold">Reino Unido</th>
-            <th class="py-3 pr-4 font-semibold">UE</th>
+            <th class="py-3 pr-4 font-semibold">US</th>
+            <th class="py-3 pr-4 font-semibold">UK</th>
+            <th class="py-3 pr-4 font-semibold">EU</th>
           </tr>
         </thead>
         <tbody id="size-rows"></tbody>
@@ -49,7 +49,7 @@ const description =
 
     <AffiliateCta
       title="Compra de forma inteligente en tu viaje"
-      description="Organiza primero tus pagos y conectividad para poder comprar en cualquier tienda o aplicación en China sin complicaciones."
+      description="Organiza primero tus pagos y conectividad para que puedas comprar en cualquier tienda o aplicación en China sin fricciones."
       buttonText="Ver esenciales de viaje"
       placeholder={AFFILIATE_LINKS.transport}
     />
@@ -58,8 +58,8 @@ const description =
 </BaseLayout>
 
 <script>
-  // Tablas de conversión de referencia. La ropa china usa etiquetas en cm de altura/pecho,
-  // comúnmente simplificadas a tallas numéricas; el calzado usa tallaje en cm basado en la UE.
+  // Tablas de conversión de referencia. La ropa china usa etiquetas de altura/busto en cm,
+  // comúnmente simplificadas a tallas numéricas; el calzado usa tallas en cm basadas en la EU.
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
     'women-clothing': [
       { cn: '155/80A (XS)', us: '0–2', uk: '4–6', eu: '32–34' },
