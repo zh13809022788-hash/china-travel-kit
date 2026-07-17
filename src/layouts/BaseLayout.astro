@@ -26,12 +26,16 @@ const {
 
 // Auto noindex for non-English locales and low-value cluster pages
 const path = Astro.url.pathname;
-const nonEnglishLocales = ['zh-tw', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
+const nonEnglishLocales = ['ja', 'ko', 'ru', 'fr', 'de', 'es'];
 const isNonEnglish = nonEnglishLocales.some((loc) => path.startsWith(`/${loc}/`));
+// zh-tw: only allow 4 pages with proven traffic; keep others noindexed
+const isZhTw = path.startsWith('/zh-tw/');
+const allowedZhTwPaths = ['/zh-tw/', '/zh-tw/apps/', '/zh-tw/resources/', '/zh-tw/e-sim/'];
+const isAllowedZhTw = allowedZhTwPaths.includes(path);
 const lowValuePaths = ['/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
 const isLowValue = lowValuePaths.some((prefix) => path.startsWith(prefix));
 const is404 = path === '/404/' || path === '/404';
-const noindex = explicitNoindex || isNonEnglish || isLowValue || is404;
+const noindex = explicitNoindex || isNonEnglish || (isZhTw && !isAllowedZhTw) || isLowValue || is404;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);

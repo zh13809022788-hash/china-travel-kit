@@ -36,8 +36,14 @@ export default defineConfig({
       filter: (page) => {
         const url = new URL(page);
         const path = url.pathname;
-        // Keep only English pages; exclude non-English locales and pages not ready for indexing
-        const excludedPrefixes = ['/zh-tw/', '/ja/', '/ko/', '/ru/', '/fr/', '/de/', '/es/', '/authors/'];
+        // Allow specific zh-tw pages with proven traffic into sitemap
+        const allowedZhTw = ['/zh-tw/', '/zh-tw/apps/', '/zh-tw/resources/', '/zh-tw/e-sim/'];
+        if (path.startsWith('/zh-tw/')) {
+          if (allowedZhTw.includes(path)) return true;
+          return false;
+        }
+        // Keep only English pages; exclude other non-English locales and low-value paths
+        const excludedPrefixes = ['/ja/', '/ko/', '/ru/', '/fr/', '/de/', '/es/', '/authors/'];
         if (excludedPrefixes.some((prefix) => path.startsWith(prefix))) return false;
         if (path === '/404' || path === '/404/') return false;
         return true;
