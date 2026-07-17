@@ -1,87 +1,87 @@
-﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 const title = 'Ресурсы для поездки в Китай';
 const description =
-  'A practical resource hub for foreign visitors to China: payments, eSIMs, trains, visas, city guides, tools, and first-trip planning links.';
+  'Практичный центр материалов для иностранных путешественников по Китаю: оплата, eSIM, поезда, визы, гиды по городам, полезные инструменты и ссылки для подготовки первой поездки.';
 
 const resourceGroups = [
   {
-    title: 'If you only have 30 minutes',
-    description: 'A short reading path for travelers who need a workable China setup fast.',
+    title: 'Если у вас есть только 30 минут',
+    description: 'Короткий маршрут чтения для тех, кому нужно быстро подготовиться к поездке в Китай.',
     links: [
-      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Pre-departure setup checklist' },
-      { href: '/ru/tools/survival-kit/', title: 'China survival kit cards and checklists' },
-      { href: '/ru/tools/payment-checker/', title: 'Check your payment fallback plan' },
-      { href: '/ru/tools/visa-free-checker/', title: 'Check visa-free entry or transit' },
-      { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'Understand train booking and station entry' },
+      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Чек-лист подготовки перед вылетом' },
+      { href: '/ru/tools/survival-kit/', title: 'Карточки и чек-листы для выживания в Китае' },
+      { href: '/ru/tools/payment-checker/', title: 'Проверить запасной план по оплате' },
+      { href: '/ru/tools/visa-free-checker/', title: 'Проверить безвизовый въезд или транзит' },
+      { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'Как бронировать поезда и проходить на вокзал' },
     ],
   },
   {
-    title: 'Start here: first-trip setup',
-    description: 'The shortest path from "I am going to China" to a workable arrival plan.',
+    title: 'Начните отсюда: подготовка к первой поездке',
+    description: 'Самый короткий путь от мысли "я еду в Китай" до понятного плана на день прилёта.',
     links: [
-      { href: '/ru/trip-planner/', title: 'Free China trip planner' },
-      { href: '/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'China trip planner for first-time visitors' },
-      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'What to set up before traveling to China' },
-      { href: '/ru/posts/china-visa-free-entry-transit-guide-2026/', title: 'China visa-free entry and transit guide' },
-      { href: '/ru/tools/best-time-to-visit/', title: 'Best time to visit China' },
-      { href: '/ru/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'What to pack for China' },
+      { href: '/ru/trip-planner/', title: 'Бесплатный планировщик поездки в Китай' },
+      { href: '/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'Планировщик поездки в Китай для новичков' },
+      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Что настроить перед поездкой в Китай' },
+      { href: '/ru/posts/china-visa-free-entry-transit-guide-2026/', title: 'Гид по безвизовому въезду и транзиту' },
+      { href: '/ru/tools/best-time-to-visit/', title: 'Когда лучше ехать в Китай' },
+      { href: '/ru/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Что взять с собой в Китай' },
     ],
   },
   {
-    title: 'Оплатаs and money',
-    description: 'Mobile payments, cash backup, cards, and everyday checkout problems.',
+    title: 'Оплата и деньги',
+    description: 'Мобильные платежи, наличные на всякий случай, банковские карты и типичные проблемы на кассе.',
     links: [
-      { href: '/ru/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China as a tourist' },
-      { href: '/ru/posts/alipay-foreign-credit-card-step-by-step/', title: 'Set up Alipay with a foreign card' },
-      { href: '/ru/posts/wechat-pay-foreign-visitors-guide/', title: 'WeChat Pay guide for foreign visitors' },
-      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Pre-departure payment and app checklist' },
-      { href: '/ru/tools/payment-checker/', title: 'Оплата compatibility checker' },
+      { href: '/ru/posts/how-to-pay-in-china-tourist-guide/', title: 'Как туристу платить в Китае' },
+      { href: '/ru/posts/alipay-foreign-credit-card-step-by-step/', title: 'Как настроить Alipay с иностранной картой' },
+      { href: '/ru/posts/wechat-pay-foreign-visitors-guide/', title: 'Гид по WeChat Pay для иностранных гостей' },
+      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Чек-лист по оплате и приложениям перед выездом' },
+      { href: '/ru/tools/payment-checker/', title: 'Проверка совместимости способов оплаты' },
     ],
   },
   {
-    title: 'Internet and apps',
-    description: 'Stay online, choose an eSIM, and know which apps work before arrival.',
+    title: 'Интернет и приложения',
+    description: 'Как оставаться онлайн, выбрать eSIM и заранее понять, какие приложения будут работать.',
     links: [
-      { href: '/ru/posts/best-esim-for-china-travel-2026/', title: 'Best eSIM for China travel' },
-      { href: '/ru/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'China eSIM vs roaming cost' },
-      { href: '/ru/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access and apps in China' },
-      { href: '/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'First-time trip planning with eSIM and apps' },
-      { href: '/ru/tools/app-availability-checker/', title: 'Will my apps work in China?' },
+      { href: '/ru/posts/best-esim-for-china-travel-2026/', title: 'Лучшая eSIM для поездки в Китай' },
+      { href: '/ru/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'Сравнение eSIM и роуминга по стоимости' },
+      { href: '/ru/posts/internet-access-china-apps-that-work-2026/', title: 'Интернет и приложения в Китае' },
+      { href: '/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'Планирование первой поездки: eSIM и приложения' },
+      { href: '/ru/tools/app-availability-checker/', title: 'Будут ли мои приложения работать в Китае?' },
     ],
   },
   {
-    title: 'Транспорт and city guides',
-    description: 'Trains, metro, airports, ride-hailing, and practical city planning.',
+    title: 'Транспорт и гиды по городам',
+    description: 'Поезда, метро, аэропорты, такси через приложения и практическая логистика по городам.',
     links: [
-      { href: '/ru/cities/', title: 'China city guide hub' },
-      { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'China high-speed rail guide for foreigners' },
-      { href: '/ru/posts/book-china-train-tickets-12306-foreigners/', title: 'Book China train tickets on 12306' },
-      { href: '/ru/posts/didi-china-foreign-tourists-guide/', title: 'Use DiDi as a foreign tourist' },
-      { href: '/ru/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Airport to city transport guide' },
+      { href: '/ru/cities/', title: 'Центр гидов по городам Китая' },
+      { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'Гид по скоростным поездам Китая для иностранцев' },
+      { href: '/ru/posts/book-china-train-tickets-12306-foreigners/', title: 'Как купить билеты на поезд через 12306' },
+      { href: '/ru/posts/didi-china-foreign-tourists-guide/', title: 'Как пользоваться DiDi иностранному туристу' },
+      { href: '/ru/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Как добраться из аэропорта в город' },
     ],
   },
   {
-    title: 'Food, etiquette, and everyday life',
-    description: 'Dining, tipping, delivery apps, street food, and practical habits that reduce friction on the ground.',
+    title: 'Еда, этикет и повседневная жизнь',
+    description: 'Рестораны, чаевые, доставка еды, уличная еда и бытовые привычки, которые помогают избежать лишних сложностей.',
     links: [
-      { href: '/ru/food/', title: 'China food and dining hub' },
-      { href: '/ru/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Order food without Chinese' },
-      { href: '/ru/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: 'Chengdu street-food safety and spice guide' },
-      { href: '/ru/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Tipping in China: when it is expected' },
+      { href: '/ru/food/', title: 'Раздел о еде и ресторанах в Китае' },
+      { href: '/ru/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Как заказывать еду без знания китайского' },
+      { href: '/ru/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: 'Безопасность уличной еды в Чэнду и уровень остроты' },
+      { href: '/ru/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Чаевые в Китае: когда они уместны' },
     ],
   },
   {
-    title: 'Longer stays and remote work',
-    description: 'For trips measured in weeks or months, start with legality, housing, payment, and work-tool reliability.',
+    title: 'Долгие поездки и удалённая работа',
+    description: 'Для поездок на недели и месяцы: легальность, жильё, оплата и надёжность рабочих инструментов.',
     links: [
-      { href: '/ru/long-stay/', title: 'Long-term stay in China guide' },
-      { href: '/ru/digital-nomads/', title: 'Digital nomad guide to China' },
-      { href: '/ru/digital-nomads/visa/', title: 'China visa guide for digital nomads' },
-      { href: '/ru/digital-nomads/payment/', title: 'Оплата setup for long stays' },
+      { href: '/ru/long-stay/', title: 'Гид по длительному пребыванию в Китае' },
+      { href: '/ru/digital-nomads/', title: 'Гид по Китаю для цифровых кочевников' },
+      { href: '/ru/digital-nomads/visa/', title: 'Визовый гид для цифровых кочевников' },
+      { href: '/ru/digital-nomads/payment/', title: 'Настройка оплаты для долгого пребывания' },
     ],
   },
 ];
