@@ -4,19 +4,19 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 
-const title = '무료 중국 여행 플래너';
+const title = '맞춤 중국 여행 플래너';
 const description =
-  '결제, eSIM, 교통, 앱 설정, 현금, 첫날 체크리스트 추천으로 실용적인 첫 중국 여행 계획을 세우세요.';
+  '결제, eSIM, 교통, 앱, 현금, 비자, 음식까지 필요한 항목을 골라서 중국 여행 준비 체크리스트를 바로 만들어 보세요.';
 
 const needOptions = [
-  { value: 'payment', label: '결제 설정' },
-  { value: 'esim', label: 'eSIM 및 인터넷' },
-  { value: 'transport', label: '공항 및 기차' },
-  { value: 'hotel', label: '호텔 지역 논리' },
-  { value: 'apps', label: '앱 및 번역' },
-  { value: 'cash', label: '현금 백업' },
-  { value: 'visa', label: '비자 면제 입국' },
-  { value: 'food', label: '음식 및 배달' },
+  { value: 'payment', label: '결제 준비' },
+  { value: 'esim', label: 'eSIM 또는 통신' },
+  { value: 'transport', label: '공항 이동 또는 기차' },
+  { value: 'hotel', label: '숙소 예약 확인' },
+  { value: 'apps', label: '앱과 번역' },
+  { value: 'cash', label: '현금 준비' },
+  { value: 'visa', label: '비자 또는 무비자 확인' },
+  { value: 'food', label: '음식과 배달' },
 ];
 ---
 
@@ -26,28 +26,28 @@ const needOptions = [
     <section class="border-b border-gray-200 bg-white">
       <div class="container-page grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
         <div>
-          <p class="section-kicker">무료 계획 도구</p>
+          <p class="section-kicker">맞춤 준비 도구</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            비행 전 실용적인 중국 도착 계획 세우기
+            한 번에 정리하는 중국 여행 준비 체크리스트
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            결제, eSIM 데이터, 공항 교통, 앱 설정, 현금 백업, 일일 일정에 대한 1차 계획을 받으세요. 브라우저에서 실행되며 답변을 저장하지 않습니다.
+            결제, eSIM 같은 통신, 공항 이동과 교통, 앱 설치, 현금 준비까지 여행 전에 필요한 항목을 한 화면에서 정리할 수 있어요. 간단한 선택만 하면 바로 맞춤형 준비 리스트를 만들어 드립니다.
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#planner" class="btn-primary">계획 시작</a>
-            <a href="/ko/travel-help/" class="btn-outline">여행 도움 요청</a>
-            <a href="/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">첫 방문자 가이드 읽기</a>
+            <a href="#planner" class="btn-primary">플래너 시작</a>
+            <a href="/ko/travel-help/" class="btn-outline">여행 도움 받기</a>
+            <a href="/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">처음 가는 분용 가이드 보기</a>
           </div>
         </div>
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
-          <p class="section-kicker">적합 대상</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">첫 방문자 설정</h2>
+          <p class="section-kicker">이런 분께</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">처음 가는 여행자 준비용</h2>
           <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-            <li>도착 전 결제 준비</li>
-            <li>eSIM, 로밍, 앱 접근 결정</li>
-            <li>공항에서 시내까지 첫 단계 계획</li>
-            <li>도시별 간단한 여행 프레임워크</li>
+            <li>중국 여행 전에 무엇부터 해야 할지 막막한 분</li>
+            <li>eSIM, 데이터, 앱 설치가 헷갈리는 분</li>
+            <li>공항 이동과 도시간 교통을 미리 정리하고 싶은 분</li>
+            <li>도시별 비용과 준비 난이도를 빨리 보고 싶은 분</li>
           </ul>
         </aside>
       </div>
@@ -59,14 +59,14 @@ const needOptions = [
       <section id="planner" class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <form id="trip-planner-form" class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm md:p-6">
           <div class="border-b border-gray-200 pb-5">
-            <p class="section-kicker">여행 세부 정보</p>
-            <h2 class="mt-2 text-2xl font-bold text-gray-950">아는 것을 알려주세요</h2>
+            <p class="section-kicker">여행 정보 입력</p>
+            <h2 class="mt-2 text-2xl font-bold text-gray-950">내 일정에 맞는 준비를 골라 보세요</h2>
           </div>
 
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               출발 국가 또는 지역
-              <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="미국, 영국, 싱가포르..." />
+              <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="한국, 일본, 미국..." />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
@@ -75,15 +75,15 @@ const needOptions = [
                 <option>상하이</option>
                 <option>베이징</option>
                 <option>광저우</option>
-                <option>선전</option>
                 <option>청두</option>
+                <option>시안</option>
                 <option>항저우</option>
-                <option>기타 도시</option>
+                <option>다른 도시</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800 md:col-span-2">
-              목적지 도시
+              가고 싶은 도시
               <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="상하이, 항저우, 베이징" />
             </label>
 
@@ -103,38 +103,38 @@ const needOptions = [
               여행 목적
               <select id="trip-purpose" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
                 <option>관광</option>
-                <option>비즈니스</option>
-                <option>장기 체류</option>
+                <option>출장</option>
+                <option>장기체류</option>
                 <option>디지털 노마드</option>
                 <option>가족 방문</option>
-                <option>환승</option>
+                <option>경유</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              예산 범위
+              예산 수준
               <select id="budget-range" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>저예산</option>
-                <option selected>컴포트</option>
-                <option>프리미엄</option>
+                <option>절약형</option>
+                <option selected>중간 예산</option>
+                <option>여유형</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               여행 스타일
               <select id="travel-style" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>효율적</option>
-                <option>저예산</option>
-                <option selected>컴포트</option>
-                <option>가족</option>
-                <option>비즈니스</option>
-                <option>음식 중심</option>
+                <option>빠르게 이동</option>
+                <option>절약형</option>
+                <option selected>균형형</option>
+                <option>휴식형</option>
+                <option>출장형</option>
+                <option>미식 중심</option>
               </select>
             </label>
           </div>
 
           <fieldset class="mt-6">
-            <legend class="text-sm font-semibold text-gray-800">무엇에 도움이 필요하신가요?</legend>
+            <legend class="text-sm font-semibold text-gray-800">특히 더 챙기고 싶은 항목이 있나요?</legend>
             <div class="mt-3 grid gap-3 sm:grid-cols-2">
               {needOptions.map((option) => (
                 <label class="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700">
@@ -146,28 +146,28 @@ const needOptions = [
           </fieldset>
 
           <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p id="planner-status" class="text-sm text-gray-500">계정이나 민감한 데이터 불필요.</p>
-            <button class="btn-primary" type="submit">계획 생성</button>
+            <p id="planner-status" class="text-sm text-gray-500">선택을 바꾸면 결과도 바로 달라집니다.</p>
+            <button class="btn-primary" type="submit">플랜 만들기</button>
           </div>
         </form>
 
         <aside class="space-y-6">
           <section class="rounded-lg border border-gray-200 bg-white p-5">
-            <p class="section-kicker">업그레이드 경로</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">사람의 검토가 필요하세요?</h2>
+            <p class="section-kicker">추가 검토 요청</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">직접 검토도 받을 수 있어요</h2>
             <p class="mt-3 text-sm leading-6 text-gray-600">
-              동선, 시기, 결제 설정, 또는 첫날이 위험하게 느껴지면, 생성된 계획을 이메일로 보내 사람이 검토한 수정 목록을 요청하세요.
+              일정, 도시 조합, 결제 준비, 교통 동선, 숙소 위치까지 한 번 더 확인받고 싶다면 이메일로 요청해 보세요.
             </p>
             <a id="planner-email-link" class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 hover:border-brand-600 hover:text-brand-600 hover:no-underline" href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Trip%20Review%20Request">
-              검토 이메일 준비
+              검토 요청 보내기
             </a>
           </section>
 
           <section class="rounded-lg border border-amber-200 bg-amber-50 p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">한도</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">계획 도움말로 사용</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">참고</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">플래너 결과는 준비용 요약입니다</h2>
             <p class="mt-3 text-sm leading-6 text-gray-700">
-              이 도구는 법률, 출입국, 의료, 은행, 또는 비상 조언이 아닙니다. 중요한 입국, 항공, 호텔, 카드, 통신, 앱 규정은 공식 출처에서 확인하세요.
+              이 도구는 비자, 결제, 숙소, 기차표, 앱, 번역, 현금 같은 기본 준비 항목을 빠르게 정리해 주는 용도예요.
             </p>
           </section>
         </aside>
@@ -175,8 +175,8 @@ const needOptions = [
 
       <section id="plan-output" class="mt-10 hidden rounded-lg border border-brand-100 bg-brand-50 p-5 md:p-6" aria-live="polite">
         <div class="border-b border-brand-100 pb-4">
-          <p class="section-kicker">생성된 계획</p>
-          <h2 class="mt-2 text-2xl font-bold text-gray-950">중국 여행 설정 초안</h2>
+          <p class="section-kicker">생성된 플랜</p>
+          <h2 class="mt-2 text-2xl font-bold text-gray-950">중국 여행 맞춤 체크리스트</h2>
         </div>
         <div id="plan-content" class="mt-5 grid gap-5"></div>
       </section>
@@ -185,31 +185,31 @@ const needOptions = [
         <a href="/ko/payment/" class="card block hover:no-underline">
           <p class="section-kicker">결제</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">Alipay와 WeChat Pay 준비</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">도착 전 최소 하나의 지갑과 하나의 백업 결제 수단을 설정하세요.</p>
+          <p class="mt-3 text-sm leading-6 text-gray-600">중국 도착 전에 어떤 순서로 설정해야 하는지, 현금은 얼마나 필요한지 함께 확인해 보세요.</p>
         </a>
         <a href="/ko/esim/" class="card block hover:no-underline">
-          <p class="section-kicker">인터넷</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">eSIM 또는 로밍 설정 선택</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">첫날 지도 로드, 번역, 메시지, 차량 호출이 가능한지 확인하세요.</p>
+          <p class="section-kicker">통신</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">eSIM과 현지 통신 비교</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">데이터, 번역 앱, 지도, 택시 호출까지 연결되는 통신 준비를 한 번에 정리할 수 있어요.</p>
         </a>
         <a href="/ko/transport/" class="card block hover:no-underline">
           <p class="section-kicker">교통</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">첫 동선 계획</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">공항에서 호텔까지 동선과 지하철, 택시, DiDi, 기차 사용 시기를 알으세요.</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">이동 준비 가이드</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">공항 이동, 지하철, DiDi, 기차 이용까지 실제 동선에 맞춰 확인해 보세요.</p>
         </a>
       </section>
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
-        <p class="section-kicker">플래너 사용 전</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">첫 중국 여행이라면 설정 가이드를 읽으세요</h2>
+        <p class="section-kicker">함께 보면 좋은 글</p>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">처음 중국 여행을 준비할 때 읽으면 좋은 가이드</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
           <a href="/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">첫 방문자를 위한 중국 여행 플래너</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">이 도구와 같은 계획 순서 사용: 인터넷, 결제, 공항 동선, 앱, 도시 순서, 첫날 체크리스트.</p>
+            <h3 class="font-bold text-gray-950">처음 가는 분을 위한 중국 여행 준비 가이드</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">결제, eSIM, 교통, 앱, 도시 선택, 음식 준비까지 핵심만 빠르게 정리한 글이에요.</p>
           </a>
           <a href="/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">중국 여행 전 설정할 것</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Alipay, WeChat Pay, eSIM, DiDi, 기차표, 지도, 현금 백업을 위한 실용적인 출발 전 체크리스트.</p>
+            <h3 class="font-bold text-gray-950">출발 전에 꼭 설정해야 할 것들</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Alipay, WeChat Pay, eSIM, DiDi, 기차표까지 여행 전 준비 순서를 확인할 수 있어요.</p>
           </a>
         </div>
       </section>
@@ -260,72 +260,72 @@ const needOptions = [
     const cities = splitCities(getValue('destination-cities'), arrival);
     const days = Number(getValue('trip-length') || '7');
     const purpose = getValue('trip-purpose') || '관광';
-    const budget = getValue('budget-range') || '컴포트';
-    const style = getValue('travel-style') || '컴포트';
+    const budget = getValue('budget-range') || '중간 예산';
+    const style = getValue('travel-style') || '균형형';
     const needs = selectedNeeds();
     const perCity = Math.max(1, Math.floor(days / Math.max(1, cities.length)));
 
     const preDeparture = [
-      `${escapeHtml(home)}을(를) 떠나기 전에 Alipay, WeChat, DiDi, 번역 앱, 오프라인 지도를 설치하세요.`,
+      `${escapeHtml(home)}에서 출발한다면 Alipay, WeChat, DiDi, 번역 앱부터 출국 전에 설치해 두는 편이 좋아요.`,
       needs.includes('payment')
-        ? 'Alipay에 외국 Visa 또는 Mastercard를 연결하고 출발 전 소액 인증을 시도하세요.'
-        : '결제 설정을 단순하게 유지: 모바일 지갑 하나, 실물 카드 하나, RMB 현금 약간.',
+        ? '결제가 중요하다면 Alipay에 외국 Visa 또는 Mastercard를 먼저 연결하고, 가능하면 WeChat Pay도 보조로 준비하세요.'
+        : '결제는 앱 중심으로 돌아가므로 외국 카드 단독 사용보다 모바일 결제 설정을 먼저 확인해 두세요.',
       needs.includes('esim')
-        ? '항공편 전에 eSIM 또는 로밍 요금제를 구매하고 활성화한 후 QR 코드를 오프라인으로 보관하세요.'
-        : '지도나 차량 호출에 의존하기 전에 도착 시 휴대폰에 데이터가 있는지 확인하세요.',
-      '호텔 주소를 영어와 중국어로 저장하고 가장 가까운 지하철역도 함께 저장하세요.',
+        ? '도착 직후 길찾기와 결제가 가능해야 하니 eSIM이나 데이터 환경을 먼저 확보해 두는 것이 좋습니다.'
+        : '통신이 핵심이 아니라도 지도, 호출 앱, 번역을 위해 기본 데이터 환경은 준비해 두세요.',
+      '숙소 예약은 외국인 체크인이 가능한지, 지하철 접근이 편한지까지 함께 확인하는 편이 안전합니다.',
     ];
 
     const payment = [
-      '주 설정: 외국 카드가 연결된 Alipay, 방문객에게 보통 가장 실용적인 첫 지갑이기 때문입니다.',
-      '백업 설정: 카드가 성공적으로 연결되면 WeChat Pay, 그리고 실물 Visa 또는 Mastercard 하나.',
-      budget === '저예산'
-        ? '현금 백업: 노점, 보증금, 또는 카드/지갑 문제를 위해 소량의 RMB를 휴대하세요.'
-        : '현금 백업: 모바일 결제 실패에 대비해 택시, 간식, 간단한 식사 비용의 RMB를 충분히 보관하세요.',
-      '중국 본국에서 Apple Pay 또는 Google Pay를 주 결제 수단으로 의존하지 마세요.',
+      '기본 결제 루틴은 Alipay 먼저, 그다음 WeChat Pay 보조 준비가 가장 무난해요.',
+      '현금은 QR 결제가 막히는 상황을 대비해 소액 RMB만 챙겨 두면 충분한 경우가 많습니다.',
+      budget === '절약형'
+        ? '절약형 일정이라면 소규모 가게와 대중교통 중심이 많아지므로 현금과 모바일 결제를 같이 준비하세요.'
+        : '중간 이상 예산이라면 호텔, 체인 매장, 교통 앱 결제가 많아져서 모바일 결제 설정이 더 중요해집니다.',
+      '외국 카드 직접 결제는 일부 장소에서만 잘 되므로, 카드 자체보다 앱 연결 여부를 먼저 점검하세요.',
     ];
 
     const internet = [
-      '단기 여행의 경우, 휴대폰이 eSIM을 지원하면 여행 eSIM이 보통 가장 쉬운 설정입니다.',
-      '더 긴 체류나 대용량 데이터 사용의 경우, 도착 전에 로밍, eSIM, 포켓 WiFi, 현지 SIM 옵션을 비교하세요.',
-      '결제 앱, 차량 호출, 번역, 지도가 모두 의존하므로 공항을 떠나기 전에 모바일 데이터를 테스트하세요.',
-      '첫 연결이 불안정할 경우를 대비해 호텔과 교통 정보를 오프라인으로 저장하세요.',
+      '짧은 여행이라면 eSIM이 가장 편하고, 길거나 목적이 분명한 체류라면 현지 SIM이나 추가 데이터 옵션도 비교해 볼 만합니다.',
+      '지도, 결제, 번역, 택시 호출 앱은 모두 데이터에 의존하므로 도착 직후 바로 연결되는 방식이 유리해요.',
+      '숙소 WiFi는 편차가 있으니 업무나 장시간 이동이 있으면 모바일 데이터 백업을 유지해 두세요.',
+      '출국 전에 로그인과 인증이 필요한 앱은 한 번씩 실제로 열어 보는 편이 안전합니다.',
     ];
 
     const transport = [
-      `첫 동선: 착륙 전에 ${escapeHtml(arrival)} 공항 또는 역에서 호텔까지 계획하세요.`,
-      '예측 가능한 시내 동선에는 지하철, 문 앞까지 이동에는 DiDi, 도시 간 이동에는 고속철도를 사용하세요.',
+      `도착 도시는 ${escapeHtml(arrival)} 기준으로 공항 이동 동선을 먼저 확인해 두세요.`,
+      '도시 안에서는 지하철, DiDi, 도시간 이동은 기차나 항공편을 조합하는 방식이 가장 흔합니다.',
       needs.includes('transport')
-        ? '기차 여행일에는 가능하면 일찍 예약하고 여권 정보를 티켓 플랫폼과 일치시키세요.'
-        : '국제 항공편과 장거리 기차 간의 빠듯한 당일 환승을 피하세요.',
-      '택시나 호텔 프런트를 위해 중국어 주소 카드를 준비하세요.',
+        ? '교통이 중요하다면 공항 이동, 지하철 QR, 기차 예매 흐름까지 미리 익혀 두세요.'
+        : '교통 비중이 크지 않아도 최소한 공항 이동과 주요 이동 수단 정도는 확인해 두는 편이 좋습니다.',
+      '늦은 밤 도착이나 짐이 많은 일정이라면 첫날은 DiDi 이용을 염두에 두는 것이 편합니다.',
     ];
 
     const dayPlan = cities.map((city, index) => {
       const start = index * perCity + 1;
       const end = index === cities.length - 1 ? days : Math.min(days, start + perCity - 1);
-      return `${start}-${end}일차: ${escapeHtml(city)} - 첫 반나절은 가볍게, 결제/데이터 확인 후 지역별로 명소를 묶으세요.`;
+      return `${start}-${end}일: ${escapeHtml(city)} 중심으로 이동 동선, 결제 준비, 숙소 체크를 묶어서 계획해 보세요.`;
     });
 
     const mistakes = [
-      '도착할 때까지 모든 앱, 카드, 데이터 요금제 설정을 미루지 마세요.',
-      '장거리 항공편 직후 빽빽한 관광 일정을 잡지 마세요.',
-      '하나의 결제 수단에만 의존하지 마세요.',
-      purpose === '비즈니스'
-        ? '비즈니스 여행의 경우 교통, 보안 검색, 청구서, 건물 출입을 위한 여유 시간을 두세요.'
-        : '레저 여행의 경우 날씨, 인파, 피로를 위해 2-3일마다 유연한 시간 블록을 하나 남겨두세요.',
-      style === '음식 중심'
-        ? '음식 중심 여행의 경우 식당 이름을 중국어로 저장하고 도시를 횡단하기 전에 영업시간을 확인하세요.'
-        : '호텔 근처 식사를 위한 간단한 백업 계획을 유지하세요.',
+      '출국 전에 결제 앱, 데이터, 카드 연결 테스트를 하지 않는 것',
+      '도시 이동 시간이 생각보다 길 수 있다는 점을 일정에 반영하지 않는 것',
+      '숙소 위치보다 가격만 보고 예약하는 것',
+      purpose === '출장'
+        ? '출장 일정인데 공항 이동과 업무용 통신 백업을 따로 준비하지 않는 것'
+        : '관광 일정인데 도시 수를 너무 많이 넣어서 이동만 많아지는 것',
+      style === '미식 중심'
+        ? '미식 중심 여행인데 음식 주문 앱과 결제 연결을 미리 보지 않는 것'
+        : '현금과 보조 결제 수단을 전혀 준비하지 않는 것',
     ];
 
     const html = [
       panel('출발 전 체크리스트', preDeparture),
-      panel('결제 및 현금 설정', payment),
-      panel('인터넷 및 앱 설정', internet),
-      panel('교통 및 첫날', transport),
-      panel('간단한 일일 프레임워크', dayPlan),
-      panel('일반적 실수 경고', mistakes),
+      panel('결제 & 현금 준비', payment),
+      panel('통신 & 앱 준비', internet),
+      panel('교통 & 이동 계획', transport),
+      panel('도시별 일정 배분', dayPlan),
+      panel('자주 놓치는 실수', mistakes),
     ].join('');
 
     const emailBody = [
@@ -333,14 +333,14 @@ const needOptions = [
       '',
       `출발 국가 또는 지역: ${home}`,
       `도착 도시: ${arrival}`,
-      `목적지 도시: ${cities.join(', ')}`,
+      `가고 싶은 도시: ${cities.join(', ')}`,
       `여행 기간: ${days}일`,
-      `목적: ${purpose}`,
-      `예산: ${budget}`,
-      `스타일: ${style}`,
-      `필요: ${needs.join(', ') || '지정되지 않음'}`,
+      `여행 목적: ${purpose}`,
+      `예산 수준: ${budget}`,
+      `여행 스타일: ${style}`,
+      `중요 항목: ${needs.join(', ') || '없음'}`,
       '',
-      '결제, eSIM, 교통, 시기, 첫날 실수에 대해 중국 여행 설정을 검토해 주세요.',
+      '결제, eSIM, 교통, 앱, 숙소, 비자, 음식 준비까지 함께 검토 부탁드립니다.',
     ].join('\n');
 
     if (emailLink) {
@@ -358,6 +358,6 @@ const needOptions = [
     content.innerHTML = buildPlan();
     output.classList.remove('hidden');
     output.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (status) status.textContent = '계획이 생성되었습니다. 답변을 조정하고 언제든 다시 생성하세요.';
+    if (status) status.textContent = '플랜이 생성되었습니다. 필요하면 아래 결과를 바탕으로 추가 검토도 요청해 보세요.';
   });
 </script>
