@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-de'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Culture of China — Traditions & Customs for Travelers';
-const description = 'Explore Chinese culture as a foreign traveler: tea ceremony, Spring Festival, face and guanxi, calligraphy, kung fu, the zodiac, and the traditions that shape daily life in China.';
+const title = 'Kultur Chinas — Traditionen & Bräuche für Reisende';
+const description = 'Erkunde die chinesische Kultur als ausländischer Reisender: Teezeremonie, Frühlingsfest, Gesicht und Guanxi, Kalligrafie, Kung Fu, Tierkreiszeichen und die Traditionen, die das tägliche Leben in China prägen.';
 
 const relatedTools = [
-  { href: '/de/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Tipping & etiquette', desc: 'When to tip, when not to, and why' },
-  { href: '/de/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing for festivals', desc: 'What to bring during holiday seasons' },
-  { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Bezahlungs during festival season' },
+  { href: '/de/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Trinkgeld & Etikette', desc: 'Wann man Trinkgeld gibt, wann nicht und warum' },
+  { href: '/de/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packen für Feste', desc: 'Was du während der Feiertagssaison mitbringen solltest' },
+  { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'In China bezahlen', desc: 'Bezahlen während der Festtagssaison' },
 ];
 
 const relatedCities = [
-  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Imperial culture and hutong life' },
-  { href: '/de/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Tea culture and West Lake heritage' },
-  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Teahouse culture and slow living' },
+  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Peking', desc: 'Kaiserliche Kultur und Hutong-Leben' },
+  { href: '/de/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Teekultur und Westsee-Erbe' },
+  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Teehaus-Kultur und entspanntes Leben' },
 ];
 
 const otherSeries = [
-  { href: '/de/series/food-of-china/', title: 'Food of China' },
-  { href: '/de/series/history-of-china/', title: 'History of China' },
-  { href: '/de/series/modern-china/', title: 'Modern China' },
+  { href: '/de/series/food-of-china/', title: 'Essen in China' },
+  { href: '/de/series/history-of-china/', title: 'Geschichte Chinas' },
+  { href: '/de/series/modern-china/', title: 'Modernes China' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
