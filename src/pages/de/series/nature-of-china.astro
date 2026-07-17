@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-de'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Nature of China — Landscapes & Wild Places';
-const description = 'Explore China\'s natural wonders as a foreign traveler: Zhangjiajie\'s Avatar mountains, Jiuzhaigou\'s fairy-tale lakes, Huangshan\'s sea of clouds, Guilin\'s karst peaks, and the Tibetan plateau.';
+const title = 'Natur Chinas — Landschaften & wilde Orte';
+const description = 'Erkunde Chinas Naturwunder als ausländischer Reisender: Zhangjiajies Avatar-Berge, Jiuzhaigous märchenhafte Seen, Huangshans Wolkenmeer, Guilins Karstspitzen und das tibetische Hochplateau.';
 
 const relatedTools = [
-  { href: '/de/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing checklist', desc: 'Season-by-season gear for outdoor trips' },
-  { href: '/de/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Permits and entry rules for remote regions' },
-  { href: '/de/trip-planner/', title: 'Trip planner', desc: 'Build your China nature itinerary' },
+  { href: '/de/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Pack-Checkliste', desc: 'Ausrüstung für Outdoor-Trips nach Saison' },
+  { href: '/de/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa- und Einreiseleitfaden', desc: 'Genehmigungen und Einreiseregeln für abgelegene Regionen' },
+  { href: '/de/trip-planner/', title: 'Reiseplaner', desc: 'Erstelle deine China-Natur-Reiseroute' },
 ];
 
 const relatedCities = [
-  { href: '/de/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Tropical beaches and rainforest' },
-  { href: '/de/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'West Lake and tea hills' },
-  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Gateway to western mountains and pandas' },
+  { href: '/de/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Tropische Strände und Regenwald' },
+  { href: '/de/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Westsee und Teehügel' },
+  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Tor zu westlichen Bergen und Pandas' },
 ];
 
 const otherSeries = [
-  { href: '/de/series/history-of-china/', title: 'History of China' },
-  { href: '/de/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/de/series/food-of-china/', title: 'Food of China' },
+  { href: '/de/series/history-of-china/', title: 'Geschichte Chinas' },
+  { href: '/de/series/culture-of-china/', title: 'Kultur Chinas' },
+  { href: '/de/series/food-of-china/', title: 'Essen in China' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
