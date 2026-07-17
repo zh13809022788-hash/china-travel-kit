@@ -6,20 +6,20 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'eSIM Plan Comparator for China Travel';
+const title = 'Comparador de planes eSIM para viajar a China';
 const description =
-  'Compare the top China travel eSIM plans by data, validity, price, and network. Filter and sort to find the best plan for your trip.';
+  'Compara los mejores planes eSIM para viajar a China por datos, validez, precio y red. Filtra y ordena para encontrar el mejor plan para tu viaje.';
 
-// 8 preset China travel eSIM products (representative sample data)
+// 8 productos eSIM representativos para viajar a China (datos de muestra representativos)
 const plans = [
-  { id: 1, name: 'China Explorer 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: 'Bypasses local app restrictions' },
-  { id: 2, name: 'China Explorer 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: 'Bypasses local app restrictions' },
-  { id: 3, name: 'Mainland Lite 3GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: 'Local network, no VPN routing' },
-  { id: 4, name: 'Greater China 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Covers CN, HK, MO, TW' },
-  { id: 5, name: 'Unlimited Daily', data: 9999, dataLabel: 'Unlimited*', days: 10, price: 29, network: 'China Unicom', note: 'Fair-use cap after 2GB/day' },
-  { id: 6, name: 'Business 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Bypasses local app restrictions' },
-  { id: 7, name: 'Short Trip 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Best for quick layovers' },
-  { id: 8, name: 'Family 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Shareable via hotspot' },
+  { id: 1, name: 'China Explorer 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: 'Evita las restricciones de apps locales' },
+  { id: 2, name: 'China Explorer 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: 'Evita las restricciones de apps locales' },
+  { id: 3, name: 'Mainland Lite 3GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: 'Red local, sin enrutamiento VPN' },
+  { id: 4, name: 'Greater China 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Cubre CN, HK, MO, TW' },
+  { id: 5, name: 'Unlimited Daily', data: 9999, dataLabel: 'Unlimited*', days: 10, price: 29, network: 'China Unicom', note: 'Límite de uso justo tras 2 GB/día' },
+  { id: 6, name: 'Business 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Evita las restricciones de apps locales' },
+  { id: 7, name: 'Short Trip 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Ideal para escalas cortas' },
+  { id: 8, name: 'Family 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Compartible mediante hotspot' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
