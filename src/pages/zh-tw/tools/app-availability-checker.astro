@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Will My Apps Work in China? App Availability Checker';
+const title = '我的 App 在中國能用嗎？App 可用性檢查器';
 const description =
-  'Check whether Google, WhatsApp, Instagram, and other apps work in China without a VPN — and see the local alternative for each blocked service.';
+  '檢查 Google、WhatsApp、Instagram 和其他 App 在沒有 VPN 的情況下是否能在中國使用，並查看每個受限服務的在地替代方案。';
 
 interface AppInfo {
   name: string;
@@ -19,25 +19,25 @@ interface AppInfo {
 }
 
 const apps: AppInfo[] = [
-  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Blocked without a VPN.', alt: 'Bing (works) or Baidu' },
-  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Loads but data is inaccurate/offset in mainland China.', alt: 'Apple Maps, Amap, or Baidu Maps' },
-  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Blocked without a VPN.', alt: 'Outlook / a non-Google email' },
-  { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Blocked without a VPN.', alt: 'Bilibili (local)' },
-  { name: 'WhatsApp', category: 'Messaging', status: 'blocked', note: 'Blocked without a VPN.', alt: 'WeChat' },
-  { name: 'Facebook', category: 'Social', status: 'blocked', note: 'Blocked without a VPN.', alt: 'WeChat Moments / RED' },
-  { name: 'Instagram', category: 'Social', status: 'blocked', note: 'Blocked without a VPN.', alt: 'RED (Xiaohongshu)' },
-  { name: 'X (Twitter)', category: 'Social', status: 'blocked', note: 'Blocked without a VPN.', alt: 'Weibo' },
-  { name: 'Telegram', category: 'Messaging', status: 'blocked', note: 'Blocked without a VPN.', alt: 'WeChat' },
-  { name: 'WeChat', category: 'Messaging', status: 'works', note: 'Works fully — the default in China.' },
-  { name: 'Apple services (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Works normally.' },
-  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: 'Works normally.' },
-  { name: 'Booking.com', category: 'Travel', status: 'works', note: 'Works normally.' },
-  { name: 'Airbnb', category: 'Travel', status: 'works', note: 'Works normally.' },
-  { name: 'Trip.com', category: 'Travel', status: 'works', note: 'Works fully — great for trains and hotels.' },
-  { name: 'Alipay', category: '付款', status: 'works', note: 'Works fully — supports foreign cards.' },
-  { name: 'Uber', category: '交通', status: 'blocked', note: 'Not operational in mainland China.', alt: 'DiDi' },
-  { name: 'Netflix', category: 'Media', status: 'blocked', note: 'Not available in mainland China.', alt: 'Local streaming or download beforehand' },
-  { name: 'Spotify', category: 'Media', status: 'blocked', note: 'Not available in mainland China.', alt: 'QQ Music / download offline first' },
+  { name: 'Google Search', category: 'Google', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'Bing（可用）或 Baidu' },
+  { name: 'Google Maps', category: 'Google', status: 'partial', note: '可以載入，但在中國大陸資料不準確或有座標偏移。', alt: 'Apple Maps、Amap 或 Baidu Maps' },
+  { name: 'Gmail', category: 'Google', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'Outlook 或非 Google 信箱' },
+  { name: 'YouTube', category: 'Google', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'Bilibili（在地平台）' },
+  { name: 'WhatsApp', category: '通訊', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'WeChat' },
+  { name: 'Facebook', category: '社群', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'WeChat Moments / RED' },
+  { name: 'Instagram', category: '社群', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'RED（Xiaohongshu）' },
+  { name: 'X (Twitter)', category: '社群', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'Weibo' },
+  { name: 'Telegram', category: '通訊', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'WeChat' },
+  { name: 'WeChat', category: '通訊', status: 'works', note: '完整可用，是中國最常用的預設通訊工具。' },
+  { name: 'Apple services (iMessage, App Store)', category: 'Apple', status: 'works', note: '通常可正常使用。' },
+  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: '通常可正常使用。' },
+  { name: 'Booking.com', category: '旅遊', status: 'works', note: '通常可正常使用。' },
+  { name: 'Airbnb', category: '旅遊', status: 'works', note: '通常可正常使用。' },
+  { name: 'Trip.com', category: '旅遊', status: 'works', note: '完整可用，很適合訂火車票與酒店。' },
+  { name: 'Alipay', category: '付款', status: 'works', note: '完整可用，支援海外銀行卡。' },
+  { name: 'Uber', category: '交通', status: 'blocked', note: '在中國大陸不營運。', alt: 'DiDi' },
+  { name: 'Netflix', category: '媒體', status: 'blocked', note: '中國大陸無法使用。', alt: '在地串流平台，或出發前先下載內容' },
+  { name: 'Spotify', category: '媒體', status: 'blocked', note: '中國大陸無法使用。', alt: 'QQ Music，或先下載離線音樂' },
 ];
 ---
 
@@ -45,8 +45,8 @@ const apps: AppInfo[] = [
   <Header locale="zh-TW" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Will My Apps Work in China?</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">我的 App 在中國能用嗎？</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -54,25 +54,25 @@ const apps: AppInfo[] = [
 
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-4">
       <label class="flex flex-col text-sm sm:max-w-sm">
-        <span class="mb-1 font-medium text-gray-700">Search or filter apps</span>
+        <span class="mb-1 font-medium text-gray-700">搜尋或篩選 App</span>
         <input id="search" type="text" placeholder="e.g. WhatsApp, Google, Netflix"
           class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
       </label>
       <div class="mt-3 flex flex-wrap gap-2 text-sm">
-        <button data-status="all" class="status-filter btn-primary px-3 py-1">All</button>
-        <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Works</button>
-        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Partial</button>
-        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Blocked</button>
+        <button data-status="all" class="status-filter btn-primary px-3 py-1">全部</button>
+        <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ 可用</button>
+        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ 部分可用</button>
+        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 無法使用</button>
       </div>
     </div>
 
     <div id="app-list" class="mt-6 grid gap-3 sm:grid-cols-2"></div>
-    <p id="no-results" class="hidden py-8 text-center text-gray-500">No apps match your search.</p>
+    <p id="no-results" class="hidden py-8 text-center text-gray-500">沒有符合搜尋條件的 App。</p>
 
     <AffiliateCta
-      title="Keep Your Apps Working with a Travel eSIM"
-      description="A China travel eSIM that routes around local restrictions keeps your usual apps online — no separate VPN setup needed."
-      buttonText="See eSIM Options"
+      title="用旅行 eSIM 讓常用 App 保持連線"
+      description="選擇能繞過在地限制的中國旅行 eSIM，可讓常用 App 持續上線，通常不需要另外設定 VPN。"
+      buttonText="查看 eSIM 選項"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -87,9 +87,9 @@ const apps: AppInfo[] = [
   let activeStatus = 'all';
 
   const badge = {
-    works: { cls: 'bg-green-100 text-green-800', label: '✅ Works' },
-    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Partial' },
-    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Blocked' },
+    works: { cls: 'bg-green-100 text-green-800', label: '✅ 可用' },
+    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ 部分可用' },
+    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 無法使用' },
   };
 
   function render() {
@@ -111,7 +111,7 @@ const apps: AppInfo[] = [
             <span class="whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ${badge[a.status].cls}">${badge[a.status].label}</span>
           </div>
           <p class="mt-2 text-sm text-gray-600">${a.note}</p>
-          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">Use instead:</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
+          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">可改用：</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
         </div>`)
       .join('');
 

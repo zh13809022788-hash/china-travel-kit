@@ -6,27 +6,27 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'China Clothing & Shoe Size Converter';
+const title = 'China 衣類・靴サイズ換算ツール';
 const description =
-  'Convert US, UK, and EU clothing and shoe sizes to Chinese sizes so you can shop with confidence in China. Covers men\'s and women\'s apparel and footwear.';
+  'US、UK、EUの衣類・靴サイズを中国サイズに換算し、Chinaで安心して買い物できるようにします。メンズ・レディースのアパレルとフットウェアに対応しています。';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Clothing & Shoe Size Converter</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">衣類・靴サイズ換算ツール</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm">
-      <button data-tab="women-clothing" class="size-tab btn-primary px-3 py-1.5">Women's Clothing</button>
-      <button data-tab="men-clothing" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Men's Clothing</button>
-      <button data-tab="women-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Women's Shoes</button>
-      <button data-tab="men-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Men's Shoes</button>
+      <button data-tab="women-clothing" class="size-tab btn-primary px-3 py-1.5">レディース衣類</button>
+      <button data-tab="men-clothing" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">メンズ衣類</button>
+      <button data-tab="women-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">レディース靴</button>
+      <button data-tab="men-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">メンズ靴</button>
     </div>
 
     <div class="mt-6 overflow-x-auto">
@@ -44,14 +44,14 @@ const description =
     </div>
 
     <p class="mt-4 text-xs text-gray-400">
-      Sizing varies by brand and fit. Chinese clothing often runs smaller than Western equivalents —
-      when in doubt, size up or try before you buy. These are general reference charts.
+      サイズ感はブランドやフィット感によって異なります。中国の衣類は欧米の同等サイズより小さめに作られていることが多いため、
+      迷った場合はワンサイズ上げるか、購入前に試着してください。これは一般的な参考表です。
     </p>
 
     <AffiliateCta
-      title="Shop Smart on Your Trip"
-      description="Sort your payments and connectivity first so you can buy from any shop or app in China without friction."
-      buttonText="See Travel Essentials"
+      title="旅行中の買い物をスマートに"
+      description="まず決済手段と通信環境を整えておけば、Chinaのどのお店やアプリでもスムーズに購入できます。"
+      buttonText="旅行必需品を見る"
       placeholder={AFFILIATE_LINKS.transport}
     />
   </main>
@@ -59,8 +59,8 @@ const description =
 </BaseLayout>
 
 <script>
-  // Reference conversion charts. China clothing uses height/bust cm labels,
-  // commonly simplified to numeric sizes; shoes use EU-based cm sizing.
+  // 参考換算表。中国の衣類は身長/バストのcm表記を使用し、
+  // 一般的には数字サイズに簡略化されます。靴はEUベースのcmサイズを使用します。
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
     'women-clothing': [
       { cn: '155/80A (XS)', us: '0–2', uk: '4–6', eu: '32–34' },

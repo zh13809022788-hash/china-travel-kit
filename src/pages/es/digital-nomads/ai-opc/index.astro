@@ -1,75 +1,75 @@
 ﻿---
 import GuideLayout from '../../../../layouts/GuideLayout.astro';
 
-const title = "AI One-Person Company in China: A Foreigner's Guide (2026)";
+const title = 'Empresa unipersonal de IA en China: guía para extranjeros (2026)';
 const description =
-  'Can foreigners run an AI one-person business while living in China? This guide covers visa rules, compliance, infrastructure, payment tools, and setup tips.';
+  '¿Pueden los extranjeros gestionar un negocio unipersonal de IA mientras viven en China? Esta guía cubre normas de visado, cumplimiento, infraestructura, herramientas de pago y consejos de configuración.';
 const url = '/digital-nomads/ai-opc/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
-  { label: 'Digital Nomads', href: '/es/digital-nomads/' },
-  { label: 'AI One-Person Company' },
+  { label: 'Inicio', href: '/' },
+  { label: 'Nómadas digitales', href: '/es/digital-nomads/' },
+  { label: 'Empresa unipersonal de IA' },
 ];
 
 const toc = [
-  { id: 'bottom-line', label: 'The Bottom Line' },
-  { id: 'compliance', label: 'Compliance & Visa Requirements' },
-  { id: 'infrastructure', label: 'Core Infrastructure' },
-  { id: 'niches', label: 'Suitable Cross-Border Niches' },
-  { id: 'cities', label: 'Best Cities for AI Founders' },
-  { id: 'mistakes', label: 'Common Compliance Mistakes' },
-  { id: 'faq', label: 'FAQ' },
+  { id: 'bottom-line', label: 'Lo esencial' },
+  { id: 'compliance', label: 'Cumplimiento y requisitos de visado' },
+  { id: 'infrastructure', label: 'Infraestructura esencial' },
+  { id: 'niches', label: 'Nichos transfronterizos adecuados' },
+  { id: 'cities', label: 'Mejores ciudades para fundadores de IA' },
+  { id: 'mistakes', label: 'Errores comunes de cumplimiento' },
+  { id: 'faq', label: 'Preguntas frecuentes' },
 ];
 
 const faqs = [
   {
-    question: 'Can a foreigner run an AI business while living in China without registering a Chinese company?',
+    question: '¿Puede un extranjero gestionar un negocio de IA mientras vive en China sin registrar una empresa china?',
     answer:
-      'Yes, if the business is genuinely cross-border: registered abroad, serving overseas customers, with no Chinese clients and no local employees. You are then operating a foreign business that you happen to run from within China, not a Chinese company. The moment you take local clients or hire locally, you need a registered Chinese entity and the right work authorization.',
+      'Sí, si el negocio es realmente transfronterizo: registrado en el extranjero, atiende a clientes del exterior, sin clientes chinos y sin empleados locales. En ese caso estás operando un negocio extranjero que gestionas desde China, no una empresa china. En el momento en que aceptes clientes locales o contrates localmente, necesitas una entidad china registrada y la autorización de trabajo adecuada.',
   },
   {
-    question: 'Do I need to pay tax in China on my overseas AI income?',
+    question: '¿Tengo que pagar impuestos en China por mis ingresos de IA del extranjero?',
     answer:
-      'It depends on your residency status and time in the country. Short stays on tourist or business visas generally do not create Chinese tax residency, but spending long enough in China across a year can. Chinese tax rules on foreign-sourced income are nuanced and change, so anyone staying long-term should get advice from a qualified cross-border tax professional rather than relying on general guidance.',
+      'Depende de tu condición de residencia y del tiempo que pases en el país. Las estancias cortas con visado turístico o de negocios generalmente no crean residencia fiscal china, pero pasar suficiente tiempo en China durante un año puede hacerlo. Las normas fiscales chinas sobre ingresos de fuente extranjera son matizadas y cambian, así que cualquier persona que se quede a largo plazo debería consultar a un profesional fiscal transfronterizo cualificado en lugar de basarse en orientaciones generales.',
   },
   {
-    question: 'Can I operate my business on a tourist or business visa?',
+    question: '¿Puedo operar mi negocio con un visado turístico o de negocios?',
     answer:
-      'Running an overseas-registered business remotely from China on a tourist (L) or business (M) visa sits in a gray area rather than being explicitly permitted, and is generally tolerated only when the work is purely cross-border. Taking local Chinese clients, earning local income, or doing local work is not allowed on these visas and requires proper work authorization and an entity.',
+      'Gestionar de forma remota desde China un negocio registrado en el extranjero con un visado turístico (L) o de negocios (M) se encuentra en una zona gris, no en un permiso explícito, y por lo general solo se tolera cuando el trabajo es puramente transfronterizo. Aceptar clientes chinos locales, obtener ingresos locales o realizar trabajo local no está permitido con estos visados y requiere la autorización de trabajo y la entidad adecuadas.',
   },
   {
-    question: 'How do I receive payments from overseas customers while in China?',
+    question: '¿Cómo recibo pagos de clientes extranjeros mientras estoy en China?',
     answer:
-      'Keep your money flow outside the domestic Chinese system: use your foreign business bank account and international payment processors to collect revenue, and only bring across what you need for living costs via your foreign card topped into Alipay or WeChat Pay. Do not route foreign business revenue through domestic resident-oriented channels.',
+      'Mantén el flujo de dinero fuera del sistema nacional chino: usa tu cuenta bancaria empresarial extranjera y procesadores de pago internacionales para cobrar ingresos, y transfiere solo lo que necesites para gastos de vida mediante tu tarjeta extranjera vinculada a Alipay o WeChat Pay. No canalices ingresos empresariales extranjeros a través de canales nacionales orientados a residentes.',
   },
   {
-    question: 'Do I need a Chinese business address or registration for a cross-border one-person company?',
+    question: '¿Necesito una dirección comercial china o registro para una empresa unipersonal transfronteriza?',
     answer:
-      'No, if you are not operating a Chinese entity. Your business remains registered in its home jurisdiction with whatever address it uses there. A Chinese registered address and license are only required if you formally establish a company in China, which brings employment, tax, and reporting obligations that rarely make sense for a solo cross-border operator.',
+      'No, si no estás operando una entidad china. Tu negocio permanece registrado en su jurisdicción de origen con la dirección que utilice allí. Una dirección registrada china y una licencia solo son necesarias si constituyes formalmente una empresa en China, lo que implica obligaciones laborales, fiscales y de información que rara vez tienen sentido para un operador transfronterizo en solitario.',
   },
   {
-    question: 'Is the internet in China reliable enough to run an AI business?',
+    question: '¿Es internet en China lo bastante fiable para gestionar un negocio de IA?',
     answer:
-      'Domestic connectivity is fast and stable, but many international AI platforms, cloud consoles, and developer tools are blocked or slow to reach from a domestic connection. A solo AI founder must plan compliant, reliable access to overseas services before arriving, and test the full toolchain early, since your entire operation depends on it.',
+      'La conectividad nacional es rápida y estable, pero muchas plataformas internacionales de IA, consolas en la nube y herramientas de desarrollo están bloqueadas o son lentas desde una conexión nacional. Un fundador de IA en solitario debe planificar antes de llegar un acceso conforme y fiable a servicios extranjeros, y probar pronto toda la cadena de herramientas, porque toda la operación depende de ello.',
   },
 ];
 
 const related = [
   {
-    title: 'The Complete China Digital Nomad Guide',
-    description: 'Visas, payments, internet, and best cities — the foundation for basing yourself in China.',
+    title: 'La guía completa para nómadas digitales en China',
+    description: 'Visados, pagos, internet y mejores ciudades: la base para establecerte en China.',
     href: '/es/digital-nomads/',
   },
   {
-    title: 'China Visa for Digital Nomads (2026)',
-    description: 'The legal stay options that determine what business activity is permitted.',
+    title: 'Visado para China para nómadas digitales (2026)',
+    description: 'Las opciones legales de estancia que determinan qué actividad empresarial está permitida.',
     href: '/es/digital-nomads/visa/',
   },
   {
-    title: 'How to Pay for Things in China as a Foreigner',
-    description: 'Daily payments plus the cross-border money setup a solo founder needs.',
+    title: 'Cómo pagar cosas en China siendo extranjero',
+    description: 'Pagos diarios y la configuración monetaria transfronteriza que necesita un fundador en solitario.',
     href: '/es/digital-nomads/payment/',
   },
 ];
@@ -85,144 +85,150 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-ai-opc"
-  coverAlt="A modern Chinese city skyline representing tech and business"
+  coverAlt="Un horizonte urbano chino moderno que representa tecnología y negocios"
 >
   <p>
-    A new kind of remote worker is basing themselves in China: the solo operator running a lean,
-    AI-powered, cross-border business entirely from a laptop. Low overhead, no employees, customers
-    all overseas — the setup that makes a one-person company viable also makes it portable. This
-    guide is strictly about doing that <strong>as a foreigner living in China</strong>: the
-    compliance boundaries, the infrastructure you need, and the setup choices that keep you on the
-    right side of the rules. It is not generic startup advice, and everything here is framed for the
-    in-China context.
+    Un nuevo tipo de trabajador remoto está estableciéndose en China: el operador en solitario que
+    gestiona un negocio transfronterizo, ligero e impulsado por IA, completamente desde un portátil.
+    Bajos gastos generales, sin empleados y clientes todos en el extranjero: la configuración que
+    hace viable una empresa unipersonal también la hace portátil. Esta guía trata estrictamente de
+    hacerlo <strong>como extranjero que vive en China</strong>: los límites de cumplimiento, la
+    infraestructura que necesitas y las decisiones de configuración que te mantienen del lado
+    correcto de las normas. No es asesoramiento genérico para startups, y todo aquí está planteado
+    para el contexto de estar en China.
   </p>
 
-  <h2 id="bottom-line">The Bottom Line</h2>
+  <h2 id="bottom-line">Lo esencial</h2>
   <p>
-    Here is the direct answer: <strong>you do not need to register a Chinese company to run a
-    cross-border AI one-person business from within China</strong> — provided your business is
-    foreign-registered, serves only overseas customers, has no Chinese clients, and employs no one
-    locally. In that configuration you are simply running your existing foreign business while
-    physically present in China. The compliance risk appears the moment any part of the operation
-    becomes local: a Chinese client, locally earned income, or a local hire. Stay fully cross-border
-    and the model is clean; blur that line and you enter territory that requires a registered entity
-    and proper work authorization.
+    Esta es la respuesta directa: <strong>no necesitas registrar una empresa china para gestionar
+    desde China un negocio transfronterizo unipersonal de IA</strong>, siempre que tu negocio esté
+    registrado en el extranjero, atienda solo a clientes extranjeros, no tenga clientes chinos y no
+    emplee a nadie localmente. En esa configuracion simplemente gestionas tu negocio extranjero ya
+    existente mientras estás físicamente en China. El riesgo de cumplimiento aparece en cuanto
+    cualquier parte de la operación se vuelve local: un cliente chino, ingresos generados localmente
+    o una contratación local. Mantente completamente transfronterizo y el modelo es claro; difumina
+    esa línea y entras en un terreno que requiere una entidad registrada y la autorización de trabajo
+    adecuada.
   </p>
 
-  <h2 id="compliance">Compliance &amp; Visa Requirements</h2>
+  <h2 id="compliance">Cumplimiento y requisitos de visado</h2>
   <p>
-    Three questions decide whether your setup is sound: what your visa permits, whether you owe
-    Chinese tax, and whether you must register a local entity.
+    Tres preguntas determinan si tu configuración es sólida: qué permite tu visado, si debes pagar
+    impuestos chinos y si tienes que registrar una entidad local.
   </p>
-  <h3>What each visa permits</h3>
+  <h3>Qué permite cada visado</h3>
   <p>
-    On a tourist (L) or business (M) visa, running an overseas-registered business remotely is a
-    tolerated gray area, not an explicit permission — acceptable in practice only when the work is
-    purely cross-border. Neither visa allows local work, local clients, or local income. There is no
-    visa that lets a foreigner freelance for the Chinese domestic market without a sponsoring
-    employer and work permit. Read the <a href="/es/digital-nomads/visa/">full visa guide</a> for how
-    each option works and how long you can stay.
+    Con un visado turístico (L) o de negocios (M), gestionar de forma remota un negocio registrado
+    en el extranjero es una zona gris tolerada, no un permiso explícito; en la práctica solo es
+    aceptable cuando el trabajo es puramente transfronterizo. Ninguno de estos visados permite
+    trabajo local, clientes locales ni ingresos locales. No existe un visado que permita a un
+    extranjero trabajar como autónomo para el mercado nacional chino sin un empleador patrocinador
+    y un permiso de trabajo. Lee la <a href="/es/digital-nomads/visa/">guía completa de visados</a>
+    para saber cómo funciona cada opción y cuánto tiempo puedes quedarte.
   </p>
-  <h3>Tax basics</h3>
+  <h3>Conceptos básicos de impuestos</h3>
   <p>
-    Chinese tax exposure hinges on how much time you spend in the country and your residency status.
-    Brief stays generally do not create tax residency; extended presence across a tax year can, and
-    the rules on foreign-sourced income are genuinely complex. This is the one area where you should
-    not improvise — a solo founder planning a long stay should consult a qualified cross-border tax
-    adviser rather than rely on forum wisdom.
+    La exposición fiscal china depende de cuánto tiempo pases en el país y de tu condición de
+    residencia. Las estancias breves generalmente no crean residencia fiscal; una presencia
+    prolongada durante un año fiscal sí puede hacerlo, y las normas sobre ingresos de fuente
+    extranjera son realmente complejas. Esta es un área en la que no deberías improvisar: un
+    fundador en solitario que planee una estancia larga debería consultar a un asesor fiscal
+    transfronterizo cualificado en lugar de confiar en consejos de foros.
   </p>
-  <h3>Why no Chinese entity is needed (when you stay cross-border)</h3>
+  <h3>Por qué no se necesita una entidad china (si te mantienes transfronterizo)</h3>
   <p>
-    Registering a Chinese company triggers local employment, tax, and reporting duties that almost
-    never make sense for a one-person cross-border operation. As long as your business is registered
-    abroad, bills overseas customers, has no Chinese customers, and has no local staff, there is no
-    requirement to establish a local entity. Keeping the operation entirely foreign-facing is both
-    simpler and the compliant path.
-  </p>
-
-  <h2 id="infrastructure">Core Infrastructure</h2>
-  <p>Three systems make or break a solo AI operation run from China.</p>
-  <h3>Cross-border payment collection</h3>
-  <p>
-    Collect revenue through your foreign business bank account and international payment processors,
-    not the domestic Chinese system. Bring across only living expenses by topping up Alipay or
-    WeChat Pay from your foreign card, as covered in the
-    <a href="/es/digital-nomads/payment/">payment guide</a>. A low-fee multi-currency business account
-    is usually the backbone of this flow.
-  </p>
-  <h3>Reliable access to overseas tools</h3>
-  <p>
-    Your entire toolchain — AI platforms, cloud consoles, code repositories, communication tools —
-    often lives on services that are blocked or slow from a domestic Chinese connection. Arrange
-    compliant, dependable access before you arrive and test every critical tool in your first day.
-    For a business that exists on international platforms, this is not a nice-to-have; it is the
-    foundation.
-  </p>
-  <h3>Office &amp; address options</h3>
-  <p>
-    For a foreign-registered solo business you keep using your home-jurisdiction registered address;
-    no Chinese address is required. For your working space, coworking memberships in major cities
-    provide a stable environment and fast local connectivity. If you ever genuinely need a China
-    presence, virtual-address and cross-border incorporation services exist — but for a pure
-    cross-border operator they are usually unnecessary overhead.
+    Registrar una empresa china activa obligaciones locales laborales, fiscales y de información que
+    casi nunca tienen sentido para una operación transfronteriza unipersonal. Mientras tu negocio
+    esté registrado en el extranjero, facture a clientes extranjeros, no tenga clientes chinos y no
+    tenga personal local, no hay obligación de establecer una entidad local. Mantener la operación
+    totalmente orientada al extranjero es más simple y también la vía conforme.
   </p>
 
-  <h2 id="niches">Suitable Cross-Border AI Niches</h2>
+  <h2 id="infrastructure">Infraestructura esencial</h2>
+  <p>Tres sistemas determinan el éxito o fracaso de una operación de IA en solitario desde China.</p>
+  <h3>Cobro de pagos transfronterizos</h3>
   <p>
-    The businesses that fit this model best are asset-light, serve overseas customers, and need no
-    local footprint:
+    Cobra ingresos a través de tu cuenta bancaria empresarial extranjera y procesadores de pago
+    internacionales, no mediante el sistema nacional chino. Transfiere solo los gastos de vida
+    recargando Alipay o WeChat Pay desde tu tarjeta extranjera, como se explica en la
+    <a href="/es/digital-nomads/payment/">guía de pagos</a>. Una cuenta empresarial multidivisa de
+    bajas comisiones suele ser la columna vertebral de este flujo.
+  </p>
+  <h3>Acceso fiable a herramientas extranjeras</h3>
+  <p>
+    Toda tu cadena de herramientas, desde plataformas de IA, consolas en la nube y repositorios de
+    código hasta herramientas de comunicación, a menudo vive en servicios bloqueados o lentos desde
+    una conexión nacional china. Organiza antes de llegar un acceso conforme y fiable, y prueba cada
+    herramienta crítica durante tu primer día. Para un negocio que existe en plataformas
+    internacionales, esto no es algo opcional; es la base.
+  </p>
+  <h3>Opciones de oficina y dirección</h3>
+  <p>
+    Para un negocio en solitario registrado en el extranjero, sigues usando la dirección registrada
+    de tu jurisdicción de origen; no se requiere una dirección china. Para tu espacio de trabajo,
+    las membresías de coworking en grandes ciudades ofrecen un entorno estable y conectividad local
+    rápida. Si alguna vez necesitas de verdad presencia en China, existen servicios de dirección
+    virtual e incorporación transfronteriza, pero para un operador puramente transfronterizo suelen
+    ser un coste innecesario.
+  </p>
+
+  <h2 id="niches">Nichos transfronterizos de IA adecuados</h2>
+  <p>
+    Los negocios que mejor encajan con este modelo tienen pocos activos, atienden a clientes
+    extranjeros y no necesitan presencia local:
   </p>
   <ul>
-    <li><strong>AI-assisted content and localization services</strong> for international clients.</li>
-    <li><strong>Niche SaaS or micro-tools</strong> built and sold to a global audience.</li>
-    <li><strong>Productized AI consulting or automation</strong> delivered remotely to overseas businesses.</li>
-    <li><strong>Digital products</strong> — templates, courses, datasets — sold through international platforms.</li>
+    <li><strong>Servicios de contenido y localización asistidos por IA</strong> para clientes internacionales.</li>
+    <li><strong>SaaS de nicho o microherramientas</strong> creadas y vendidas a una audiencia global.</li>
+    <li><strong>Consultoría o automatización de IA productizada</strong> entregada de forma remota a empresas extranjeras.</li>
+    <li><strong>Productos digitales</strong>: plantillas, cursos y conjuntos de datos vendidos a través de plataformas internacionales.</li>
   </ul>
   <p>
-    The common thread and the compliance guardrail: customers and revenue stay overseas. Avoid
-    anything that pulls you into the Chinese domestic market — local clients, local advertising sales,
-    or services aimed at Chinese consumers — because that crosses from cross-border into local
-    business and changes your legal obligations entirely.
+    El hilo común y la barrera de cumplimiento: los clientes y los ingresos permanecen en el
+    extranjero. Evita cualquier cosa que te arrastre al mercado nacional chino, como clientes
+    locales, ventas de publicidad local o servicios dirigidos a consumidores chinos, porque eso pasa
+    de ser transfronterizo a ser negocio local y cambia por completo tus obligaciones legales.
   </p>
 
-  <h2 id="cities">Best Cities for AI Founders</h2>
-  <p>Three cities stand out for a cross-border solo founder, each for different reasons.</p>
+  <h2 id="cities">Mejores ciudades para fundadores de IA</h2>
+  <p>Tres ciudades destacan para un fundador transfronterizo en solitario, cada una por razones distintas.</p>
   <h3>Shanghai</h3>
   <p>
-    The most international city, with the best English coverage, the deepest professional services,
-    the most coworking options, and strong international connectivity — ideal if you value ease of
-    operation and access to advisers. See the
-    <a href="/es/posts/shanghai-city-guide-for-foreigners/">Shanghai city guide</a>.
+    La ciudad más internacional, con la mejor cobertura en inglés, los servicios profesionales más
+    profundos, más opciones de coworking y una sólida conectividad internacional; ideal si valoras
+    la facilidad operativa y el acceso a asesores. Consulta la
+    <a href="/es/posts/shanghai-city-guide-for-foreigners/">guía de la ciudad de Shanghai</a>.
   </p>
   <h3>Shenzhen</h3>
   <p>
-    China's hardware and tech capital, right next to Hong Kong — convenient for frequent border
-    crossings and for anyone whose work touches the tech and product ecosystem. A pragmatic base for
-    founders who value proximity to Hong Kong's financial infrastructure.
+    La capital del hardware y la tecnología de China, justo al lado de Hong Kong; conveniente para
+    cruces fronterizos frecuentes y para cualquier persona cuyo trabajo toque el ecosistema
+    tecnológico y de producto. Una base pragmática para fundadores que valoran la proximidad a la
+    infraestructura financiera de Hong Kong.
   </p>
   <h3>Hangzhou</h3>
   <p>
-    A major tech and e-commerce hub with a strong software culture and a calmer pace than Shanghai,
-    plus lower costs. A comfortable, productive base for a solo builder who wants tech energy without
-    first-tier prices. See the
-    <a href="/es/posts/hangzhou-city-guide-for-foreigners/">Hangzhou city guide</a>.
+    Un importante centro tecnológico y de comercio electrónico con una fuerte cultura de software y
+    un ritmo más tranquilo que Shanghai, además de costes más bajos. Una base cómoda y productiva
+    para un constructor en solitario que quiere energía tecnológica sin precios de primer nivel.
+    Consulta la <a href="/es/posts/hangzhou-city-guide-for-foreigners/">guía de la ciudad de Hangzhou</a>.
   </p>
 
-  <h2 id="mistakes">Common Compliance Mistakes</h2>
+  <h2 id="mistakes">Errores comunes de cumplimiento</h2>
   <ul>
-    <li><strong>Taking local clients on a tourist visa.</strong> The fastest way to turn a tolerated setup into an illegal one. Keep every client overseas.</li>
-    <li><strong>Hiring locally without an entity.</strong> Engaging Chinese workers requires a registered company and proper contracts; informal local hiring is non-compliant.</li>
-    <li><strong>Ignoring tax residency.</strong> Assuming foreign income is automatically untaxed while spending most of the year in China. Get professional advice.</li>
-    <li><strong>Routing business revenue through domestic channels.</strong> Keep foreign revenue in foreign accounts; the domestic system is built for residents and local business.</li>
-    <li><strong>Overstaying or misusing visas.</strong> Your right to be in the country underpins everything; a visa problem ends the business too. Follow the <a href="/es/digital-nomads/visa/">visa rules</a> precisely.</li>
-    <li><strong>Assuming your tools will just work.</strong> Failing to arrange reliable overseas access before arrival can halt operations on day one.</li>
+    <li><strong>Aceptar clientes locales con un visado turístico.</strong> La forma más rápida de convertir una configuración tolerada en una ilegal. Mantén todos los clientes en el extranjero.</li>
+    <li><strong>Contratar localmente sin una entidad.</strong> Contratar trabajadores chinos requiere una empresa registrada y contratos adecuados; la contratación local informal no cumple las normas.</li>
+    <li><strong>Ignorar la residencia fiscal.</strong> Suponer que los ingresos extranjeros no tributan automáticamente mientras pasas la mayor parte del año en China. Busca asesoramiento profesional.</li>
+    <li><strong>Canalizar ingresos empresariales por canales nacionales.</strong> Mantén los ingresos extranjeros en cuentas extranjeras; el sistema nacional está pensado para residentes y negocios locales.</li>
+    <li><strong>Exceder la estancia permitida o usar mal los visados.</strong> Tu derecho a estar en el país sostiene todo lo demás; un problema de visado también acaba con el negocio. Sigue con precisión las <a href="/es/digital-nomads/visa/">normas de visado</a>.</li>
+    <li><strong>Suponer que tus herramientas simplemente funcionarán.</strong> No organizar acceso extranjero fiable antes de llegar puede detener las operaciones el primer día.</li>
   </ul>
 
-  <h2 id="next">Start With the Fundamentals</h2>
+  <h2 id="next">Empieza por los fundamentos</h2>
   <p>
-    Before optimizing the business, get the basics of living in China right — the visa that permits
-    your stay, payments, connectivity, and city choice. Return to the
-    <a href="/es/digital-nomads/">complete China digital nomad guide</a> to make sure your foundation is
-    solid, then build the one-person operation on top of it.
+    Antes de optimizar el negocio, asegura bien los fundamentos de vivir en China: el visado que
+    permite tu estancia, los pagos, la conectividad y la elección de ciudad. Vuelve a la
+    <a href="/es/digital-nomads/">guía completa para nómadas digitales en China</a> para confirmar que
+    tu base es sólida, y luego construye encima la operación unipersonal.
   </p>
 </GuideLayout>

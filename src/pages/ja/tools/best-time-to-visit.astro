@@ -6,20 +6,20 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Best Time to Visit China — City & Month Planner';
+const title = 'China旅行のベストシーズン - 都市・月別プランナー';
 const description =
-  'See the weather, crowds, and what to pack for major Chinese cities by month. Plan the best time to visit Beijing, Shanghai, Xi\'an, Chengdu, Guangzhou, and Harbin.';
+  '中国主要都市の天気、混雑状況、持ち物を月別に確認できます。北京、上海、西安、成都、広州、ハルビンを訪れるベストシーズンを計画しましょう。';
 
-const cities = ['Beijing', 'Shanghai', "Xi'an", 'Chengdu', 'Guangzhou', 'Harbin'];
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const cities = ['北京', '上海', '西安', '成都', '広州', 'ハルビン'];
+const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Best Time to Visit China</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">China旅行のベストシーズン</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -27,13 +27,13 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
     <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">City</span>
+        <span class="mb-1 font-medium text-gray-700">都市</span>
         <select id="city" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {cities.map((c) => <option value={c}>{c}</option>)}
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Month of travel</span>
+        <span class="mb-1 font-medium text-gray-700">旅行月</span>
         <select id="month" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {months.map((m, i) => <option value={i}>{m}</option>)}
         </select>
@@ -44,18 +44,18 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
       <div class="card" id="result-card"></div>
     </div>
 
-    <!-- Travel-season warning note -->
+    <!-- 旅行シーズンの注意書き -->
     <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
-      <strong>Avoid the crowds:</strong> Chinese public holidays — especially Chinese New Year
-      (late Jan/Feb), Labour Day (early May), and National Day / Golden Week (first week of October)
-      — bring huge domestic travel. Trains and hotels sell out and prices spike. Book far ahead or
-      plan around these dates.
+      <strong>混雑を避ける:</strong> 中国の祝日、特に春節
+      (1月下旬から2月)、労働節(5月上旬)、国慶節・ゴールデンウィーク(10月第1週)
+      は国内旅行者が大きく増えます。列車やホテルは売り切れやすく、料金も急上昇します。早めに予約するか、
+      これらの日程を避けて計画しましょう。
     </div>
 
     <AffiliateCta
-      title="Book Trains & Hotels Early"
-      description="Popular routes sell out fast in peak season. Lock in your high-speed rail and stays ahead of time."
-      buttonText="See Booking Options"
+      title="列車とホテルは早めに予約"
+      description="ピークシーズンは人気路線がすぐに売り切れます。高速鉄道と宿泊先は早めに確保しましょう。"
+      buttonText="予約オプションを見る"
       placeholder={AFFILIATE_LINKS.transport}
     />
   </main>
@@ -70,102 +70,102 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
     pack: string;
   }
 
-  // Per-city, per-month guidance (index 0 = January).
+  // 都市別・月別の目安(インデックス0 = 1月)。
   const data: Record<string, MonthInfo[]> = {
-    Beijing: [
-      { temp: '-8 to 2°C', rating: 'tough', weather: 'Cold, dry, clear. Few tourists.', pack: 'Heavy coat, hat, gloves.' },
-      { temp: '-5 to 5°C', rating: 'tough', weather: 'Cold; CNY crowds possible.', pack: 'Warm winter layers.' },
-      { temp: '2 to 12°C', rating: 'ok', weather: 'Cool, windy, occasional dust.', pack: 'Jacket, windbreaker.' },
-      { temp: '9 to 20°C', rating: 'great', weather: 'Mild spring, blossoms. Ideal.', pack: 'Layers, light jacket.' },
-      { temp: '15 to 26°C', rating: 'great', weather: 'Warm and pleasant. Labour Day crowds early May.', pack: 'Light layers.' },
-      { temp: '20 to 31°C', rating: 'good', weather: 'Hot, start of rains.', pack: 'Summer clothes, umbrella.' },
-      { temp: '22 to 31°C', rating: 'ok', weather: 'Hot and humid, peak rainfall.', pack: 'Light clothes, rain gear.' },
-      { temp: '21 to 30°C', rating: 'ok', weather: 'Hot, humid, summer crowds.', pack: 'Light clothes, sun protection.' },
-      { temp: '15 to 26°C', rating: 'great', weather: 'Crisp, clear, comfortable. Best month.', pack: 'Layers, light jacket.' },
-      { temp: '8 to 19°C', rating: 'good', weather: 'Beautiful autumn. Golden Week crowds Oct 1–7.', pack: 'Jacket, layers.' },
-      { temp: '0 to 10°C', rating: 'ok', weather: 'Cold, dry, quiet.', pack: 'Warm coat.' },
-      { temp: '-6 to 3°C', rating: 'tough', weather: 'Cold and dry.', pack: 'Heavy winter gear.' },
+    北京: [
+      { temp: '-8～2°C', rating: 'tough', weather: '寒く乾燥し、晴れる日が多い。観光客は少なめ。', pack: '厚手のコート、帽子、手袋。' },
+      { temp: '-5～5°C', rating: 'tough', weather: '寒い。春節の混雑に注意。', pack: '暖かい冬用の重ね着。' },
+      { temp: '2～12°C', rating: 'ok', weather: '涼しく風が強い。砂ぼこりが舞う日もある。', pack: 'ジャケット、ウインドブレーカー。' },
+      { temp: '9～20°C', rating: 'great', weather: '穏やかな春で花も楽しめる。理想的。', pack: '重ね着、薄手のジャケット。' },
+      { temp: '15～26°C', rating: 'great', weather: '暖かく快適。5月上旬は労働節の混雑あり。', pack: '薄手の重ね着。' },
+      { temp: '20～31°C', rating: 'good', weather: '暑く、雨の季節が始まる。', pack: '夏服、傘。' },
+      { temp: '22～31°C', rating: 'ok', weather: '暑く湿度が高く、降雨のピーク。', pack: '薄手の服、雨具。' },
+      { temp: '21～30°C', rating: 'ok', weather: '暑く蒸し暑い。夏休みの混雑あり。', pack: '薄手の服、日よけ対策。' },
+      { temp: '15～26°C', rating: 'great', weather: '爽やかで晴れやすく快適。最もおすすめの月。', pack: '重ね着、薄手のジャケット。' },
+      { temp: '8～19°C', rating: 'good', weather: '美しい秋。10月1日からのゴールデンウィークは混雑。', pack: 'ジャケット、重ね着。' },
+      { temp: '0～10°C', rating: 'ok', weather: '寒く乾燥し、静か。', pack: '暖かいコート。' },
+      { temp: '-6～3°C', rating: 'tough', weather: '寒く乾燥している。', pack: '厚手の冬装備。' },
     ],
-    Shanghai: [
-      { temp: '1 to 8°C', rating: 'ok', weather: 'Cold, damp, grey.', pack: 'Warm waterproof coat.' },
-      { temp: '3 to 10°C', rating: 'ok', weather: 'Chilly; CNY period.', pack: 'Layers, umbrella.' },
-      { temp: '7 to 14°C', rating: 'good', weather: 'Mild spring, some rain.', pack: 'Jacket, umbrella.' },
-      { temp: '12 to 20°C', rating: 'great', weather: 'Pleasant spring. Ideal.', pack: 'Light layers.' },
-      { temp: '17 to 25°C', rating: 'great', weather: 'Warm, lovely. Early-May crowds.', pack: 'Light clothes.' },
-      { temp: '21 to 28°C', rating: 'ok', weather: 'Plum-rain season, humid.', pack: 'Rain gear, light clothes.' },
-      { temp: '25 to 33°C', rating: 'tough', weather: 'Hot, humid, typhoon risk.', pack: 'Light clothes, sun/rain gear.' },
-      { temp: '25 to 33°C', rating: 'tough', weather: 'Very hot and humid.', pack: 'Light clothes, hydration.' },
-      { temp: '21 to 28°C', rating: 'great', weather: 'Warm easing to comfortable. Great.', pack: 'Light layers.' },
-      { temp: '15 to 23°C', rating: 'great', weather: 'Mild, clear. Golden Week crowds early Oct.', pack: 'Layers, light jacket.' },
-      { temp: '9 to 17°C', rating: 'good', weather: 'Cool, comfortable.', pack: 'Jacket.' },
-      { temp: '3 to 10°C', rating: 'ok', weather: 'Cold and damp.', pack: 'Warm coat.' },
+    上海: [
+      { temp: '1～8°C', rating: 'ok', weather: '寒く湿っぽく、曇りがち。', pack: '暖かい防水コート。' },
+      { temp: '3～10°C', rating: 'ok', weather: '肌寒い。春節期間。', pack: '重ね着、傘。' },
+      { temp: '7～14°C', rating: 'good', weather: '穏やかな春で雨の日もある。', pack: 'ジャケット、傘。' },
+      { temp: '12～20°C', rating: 'great', weather: '快適な春。理想的。', pack: '薄手の重ね着。' },
+      { temp: '17～25°C', rating: 'great', weather: '暖かく過ごしやすい。5月上旬は混雑。', pack: '薄手の服。' },
+      { temp: '21～28°C', rating: 'ok', weather: '梅雨で湿度が高い。', pack: '雨具、薄手の服。' },
+      { temp: '25～33°C', rating: 'tough', weather: '暑く蒸し暑い。台風のリスクあり。', pack: '薄手の服、日よけ・雨具。' },
+      { temp: '25～33°C', rating: 'tough', weather: '非常に暑く湿度が高い。', pack: '薄手の服、水分補給。' },
+      { temp: '21～28°C', rating: 'great', weather: '暑さが和らぎ快適に。とても良い時期。', pack: '薄手の重ね着。' },
+      { temp: '15～23°C', rating: 'great', weather: '穏やかで晴れやすい。10月上旬はゴールデンウィークの混雑。', pack: '重ね着、薄手のジャケット。' },
+      { temp: '9～17°C', rating: 'good', weather: '涼しく快適。', pack: 'ジャケット。' },
+      { temp: '3～10°C', rating: 'ok', weather: '寒く湿っぽい。', pack: '暖かいコート。' },
     ],
-    "Xi'an": [
-      { temp: '-4 to 5°C', rating: 'tough', weather: 'Cold, dry.', pack: 'Heavy coat.' },
-      { temp: '-1 to 8°C', rating: 'ok', weather: 'Cold; CNY period.', pack: 'Winter layers.' },
-      { temp: '4 to 14°C', rating: 'good', weather: 'Cool spring.', pack: 'Jacket.' },
-      { temp: '10 to 20°C', rating: 'great', weather: 'Pleasant. Great for sightseeing.', pack: 'Light layers.' },
-      { temp: '15 to 26°C', rating: 'great', weather: 'Warm and comfortable.', pack: 'Light clothes.' },
-      { temp: '20 to 32°C', rating: 'good', weather: 'Hot, dry.', pack: 'Summer clothes, sun hat.' },
-      { temp: '23 to 33°C', rating: 'ok', weather: 'Hot, some rain.', pack: 'Light clothes, umbrella.' },
-      { temp: '22 to 31°C', rating: 'ok', weather: 'Hot, humid.', pack: 'Light clothes.' },
-      { temp: '16 to 26°C', rating: 'great', weather: 'Mild, clear. Ideal.', pack: 'Layers.' },
-      { temp: '9 to 19°C', rating: 'good', weather: 'Cool autumn. Golden Week crowds.', pack: 'Jacket.' },
-      { temp: '2 to 11°C', rating: 'ok', weather: 'Cold, dry.', pack: 'Warm coat.' },
-      { temp: '-3 to 5°C', rating: 'tough', weather: 'Cold.', pack: 'Heavy winter gear.' },
+    西安: [
+      { temp: '-4～5°C', rating: 'tough', weather: '寒く乾燥している。', pack: '厚手のコート。' },
+      { temp: '-1～8°C', rating: 'ok', weather: '寒い。春節期間。', pack: '冬用の重ね着。' },
+      { temp: '4～14°C', rating: 'good', weather: '涼しい春。', pack: 'ジャケット。' },
+      { temp: '10～20°C', rating: 'great', weather: '快適。観光にとても良い。', pack: '薄手の重ね着。' },
+      { temp: '15～26°C', rating: 'great', weather: '暖かく快適。', pack: '薄手の服。' },
+      { temp: '20～32°C', rating: 'good', weather: '暑く乾燥している。', pack: '夏服、日よけ帽子。' },
+      { temp: '23～33°C', rating: 'ok', weather: '暑く、雨の日もある。', pack: '薄手の服、傘。' },
+      { temp: '22～31°C', rating: 'ok', weather: '暑く湿度が高い。', pack: '薄手の服。' },
+      { temp: '16～26°C', rating: 'great', weather: '穏やかで晴れやすい。理想的。', pack: '重ね着。' },
+      { temp: '9～19°C', rating: 'good', weather: '涼しい秋。ゴールデンウィークは混雑。', pack: 'ジャケット。' },
+      { temp: '2～11°C', rating: 'ok', weather: '寒く乾燥している。', pack: '暖かいコート。' },
+      { temp: '-3～5°C', rating: 'tough', weather: '寒い。', pack: '厚手の冬装備。' },
     ],
-    Chengdu: [
-      { temp: '3 to 9°C', rating: 'ok', weather: 'Cool, damp, overcast.', pack: 'Warm layers, umbrella.' },
-      { temp: '5 to 11°C', rating: 'ok', weather: 'Mild, grey; CNY period.', pack: 'Layers.' },
-      { temp: '9 to 16°C', rating: 'good', weather: 'Mild spring.', pack: 'Jacket, umbrella.' },
-      { temp: '13 to 22°C', rating: 'great', weather: 'Pleasant. Good for pandas.', pack: 'Light layers.' },
-      { temp: '17 to 26°C', rating: 'great', weather: 'Warm, comfortable.', pack: 'Light clothes.' },
-      { temp: '20 to 28°C', rating: 'good', weather: 'Warm, rainy.', pack: 'Rain gear.' },
-      { temp: '22 to 30°C', rating: 'ok', weather: 'Hot, humid, wettest month.', pack: 'Light clothes, umbrella.' },
-      { temp: '22 to 30°C', rating: 'ok', weather: 'Hot, humid.', pack: 'Light clothes.' },
-      { temp: '19 to 26°C', rating: 'great', weather: 'Warm, easing. Good.', pack: 'Light layers.' },
-      { temp: '15 to 21°C', rating: 'great', weather: 'Mild autumn. Golden Week crowds.', pack: 'Jacket.' },
-      { temp: '9 to 16°C', rating: 'good', weather: 'Cool, comfortable.', pack: 'Jacket.' },
-      { temp: '4 to 10°C', rating: 'ok', weather: 'Cool, damp.', pack: 'Warm layers.' },
+    成都: [
+      { temp: '3～9°C', rating: 'ok', weather: '涼しく湿っぽく、曇りがち。', pack: '暖かい重ね着、傘。' },
+      { temp: '5～11°C', rating: 'ok', weather: '穏やかで曇りがち。春節期間。', pack: '重ね着。' },
+      { temp: '9～16°C', rating: 'good', weather: '穏やかな春。', pack: 'ジャケット、傘。' },
+      { temp: '13～22°C', rating: 'great', weather: '快適。パンダ観光にも良い。', pack: '薄手の重ね着。' },
+      { temp: '17～26°C', rating: 'great', weather: '暖かく快適。', pack: '薄手の服。' },
+      { temp: '20～28°C', rating: 'good', weather: '暖かく雨が多い。', pack: '雨具。' },
+      { temp: '22～30°C', rating: 'ok', weather: '暑く湿度が高く、最も雨が多い月。', pack: '薄手の服、傘。' },
+      { temp: '22～30°C', rating: 'ok', weather: '暑く湿度が高い。', pack: '薄手の服。' },
+      { temp: '19～26°C', rating: 'great', weather: '暖かさが和らぐ。良い時期。', pack: '薄手の重ね着。' },
+      { temp: '15～21°C', rating: 'great', weather: '穏やかな秋。ゴールデンウィークは混雑。', pack: 'ジャケット。' },
+      { temp: '9～16°C', rating: 'good', weather: '涼しく快適。', pack: 'ジャケット。' },
+      { temp: '4～10°C', rating: 'ok', weather: '涼しく湿っぽい。', pack: '暖かい重ね着。' },
     ],
-    Guangzhou: [
-      { temp: '10 to 18°C', rating: 'great', weather: 'Mild, dry. Very pleasant.', pack: 'Light layers.' },
-      { temp: '12 to 19°C', rating: 'great', weather: 'Mild; CNY period.', pack: 'Light layers.' },
-      { temp: '15 to 22°C', rating: 'good', weather: 'Warming, humid.', pack: 'Light clothes.' },
-      { temp: '19 to 26°C', rating: 'good', weather: 'Warm, rain begins.', pack: 'Light clothes, umbrella.' },
-      { temp: '23 to 30°C', rating: 'ok', weather: 'Hot, humid, wet.', pack: 'Light clothes, rain gear.' },
-      { temp: '25 to 32°C', rating: 'tough', weather: 'Hot, very wet, typhoon risk.', pack: 'Rain gear, light clothes.' },
-      { temp: '26 to 34°C', rating: 'tough', weather: 'Hot, humid, stormy.', pack: 'Light clothes, hydration.' },
-      { temp: '26 to 34°C', rating: 'tough', weather: 'Very hot, typhoon season.', pack: 'Light clothes, sun/rain gear.' },
-      { temp: '24 to 32°C', rating: 'ok', weather: 'Hot, easing.', pack: 'Light clothes.' },
-      { temp: '21 to 29°C', rating: 'great', weather: 'Warm, drier. Great. Golden Week crowds.', pack: 'Light clothes.' },
-      { temp: '16 to 24°C', rating: 'great', weather: 'Warm, comfortable, dry.', pack: 'Light layers.' },
-      { temp: '11 to 19°C', rating: 'great', weather: 'Mild and dry.', pack: 'Light layers.' },
+    広州: [
+      { temp: '10～18°C', rating: 'great', weather: '穏やかで乾燥している。とても快適。', pack: '薄手の重ね着。' },
+      { temp: '12～19°C', rating: 'great', weather: '穏やか。春節期間。', pack: '薄手の重ね着。' },
+      { temp: '15～22°C', rating: 'good', weather: '暖かくなり、湿度が上がる。', pack: '薄手の服。' },
+      { temp: '19～26°C', rating: 'good', weather: '暖かく、雨が降り始める。', pack: '薄手の服、傘。' },
+      { temp: '23～30°C', rating: 'ok', weather: '暑く湿度が高く、雨が多い。', pack: '薄手の服、雨具。' },
+      { temp: '25～32°C', rating: 'tough', weather: '暑く雨が非常に多い。台風のリスクあり。', pack: '雨具、薄手の服。' },
+      { temp: '26～34°C', rating: 'tough', weather: '暑く湿度が高く、雷雨が多い。', pack: '薄手の服、水分補給。' },
+      { temp: '26～34°C', rating: 'tough', weather: '非常に暑く、台風シーズン。', pack: '薄手の服、日よけ・雨具。' },
+      { temp: '24～32°C', rating: 'ok', weather: '暑さが和らぎ始める。', pack: '薄手の服。' },
+      { temp: '21～29°C', rating: 'great', weather: '暖かく、乾燥してくる。とても良い時期。ゴールデンウィークは混雑。', pack: '薄手の服。' },
+      { temp: '16～24°C', rating: 'great', weather: '暖かく快適で乾燥している。', pack: '薄手の重ね着。' },
+      { temp: '11～19°C', rating: 'great', weather: '穏やかで乾燥している。', pack: '薄手の重ね着。' },
     ],
-    Harbin: [
-      { temp: '-24 to -12°C', rating: 'good', weather: 'Bitterly cold — Ice & Snow Festival! Magical if you dress for it.', pack: 'Extreme cold-weather gear.' },
-      { temp: '-20 to -6°C', rating: 'good', weather: 'Very cold; Ice Festival continues.', pack: 'Extreme winter gear.' },
-      { temp: '-9 to 4°C', rating: 'ok', weather: 'Cold, thawing.', pack: 'Heavy coat.' },
-      { temp: '2 to 14°C', rating: 'good', weather: 'Cool spring.', pack: 'Jacket, layers.' },
-      { temp: '10 to 22°C', rating: 'great', weather: 'Mild and pleasant.', pack: 'Light layers.' },
-      { temp: '16 to 27°C', rating: 'great', weather: 'Warm, comfortable summer.', pack: 'Light clothes.' },
-      { temp: '19 to 29°C', rating: 'great', weather: 'Warm, pleasant escape from southern heat.', pack: 'Light clothes.' },
-      { temp: '18 to 27°C', rating: 'great', weather: 'Warm, comfortable.', pack: 'Light layers.' },
-      { temp: '11 to 21°C', rating: 'good', weather: 'Cool autumn.', pack: 'Jacket.' },
-      { temp: '2 to 13°C', rating: 'ok', weather: 'Cold, colourful autumn.', pack: 'Warm coat.' },
-      { temp: '-11 to 0°C', rating: 'ok', weather: 'Cold, first snows.', pack: 'Heavy winter gear.' },
-      { temp: '-20 to -9°C', rating: 'good', weather: 'Very cold; Ice Festival begins late Dec.', pack: 'Extreme cold-weather gear.' },
+    ハルビン: [
+      { temp: '-24～-12°C', rating: 'good', weather: '厳寒。氷雪祭りの季節。防寒を徹底すれば幻想的。', pack: '極寒用の防寒装備。' },
+      { temp: '-20～-6°C', rating: 'good', weather: '非常に寒い。氷雪祭りは継続中。', pack: '本格的な冬装備。' },
+      { temp: '-9～4°C', rating: 'ok', weather: '寒く、雪解けが始まる。', pack: '厚手のコート。' },
+      { temp: '2～14°C', rating: 'good', weather: '涼しい春。', pack: 'ジャケット、重ね着。' },
+      { temp: '10～22°C', rating: 'great', weather: '穏やかで快適。', pack: '薄手の重ね着。' },
+      { temp: '16～27°C', rating: 'great', weather: '暖かく快適な夏。', pack: '薄手の服。' },
+      { temp: '19～29°C', rating: 'great', weather: '暖かく、南方の暑さを避けるのに快適。', pack: '薄手の服。' },
+      { temp: '18～27°C', rating: 'great', weather: '暖かく快適。', pack: '薄手の重ね着。' },
+      { temp: '11～21°C', rating: 'good', weather: '涼しい秋。', pack: 'ジャケット。' },
+      { temp: '2～13°C', rating: 'ok', weather: '寒く、色づく秋。', pack: '暖かいコート。' },
+      { temp: '-11～0°C', rating: 'ok', weather: '寒く、初雪の時期。', pack: '厚手の冬装備。' },
+      { temp: '-20～-9°C', rating: 'good', weather: '非常に寒い。12月下旬から氷雪祭りが始まる。', pack: '極寒用の防寒装備。' },
     ],
   };
 
   const ratingStyle = {
-    great: { cls: 'border-green-200 bg-green-50', badge: 'bg-green-600', label: 'Great time to visit' },
-    good: { cls: 'border-teal-200 bg-teal-50', badge: 'bg-teal-600', label: 'Good time to visit' },
-    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: 'Doable, with trade-offs' },
-    tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: 'Challenging conditions' },
+    great: { cls: 'border-green-200 bg-green-50', badge: 'bg-green-600', label: '訪問に最適な時期' },
+    good: { cls: 'border-teal-200 bg-teal-50', badge: 'bg-teal-600', label: '訪問に良い時期' },
+    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: '工夫すれば旅行可能' },
+    tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: '条件が厳しい時期' },
   } as const;
 
-  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
 
   const cityEl = document.getElementById('city') as HTMLSelectElement;
   const monthEl = document.getElementById('month') as HTMLSelectElement;
@@ -181,13 +181,13 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
     card.className = `card border ${style.cls}`;
     card.innerHTML = `
       <div class="flex items-center justify-between gap-3">
-        <h2 class="text-xl font-bold text-gray-900">${city} in ${monthNames[m]}</h2>
+        <h2 class="text-xl font-bold text-gray-900">${monthNames[m]}の${city}</h2>
         <span class="whitespace-nowrap rounded-full px-3 py-0.5 text-xs font-semibold text-white ${style.badge}">${style.label}</span>
       </div>
       <dl class="mt-4 space-y-3 text-sm">
-        <div><dt class="text-gray-500">Typical temperature</dt><dd class="text-lg font-semibold text-gray-900">${info.temp}</dd></div>
-        <div><dt class="text-gray-500">Weather & crowds</dt><dd class="text-gray-700">${info.weather}</dd></div>
-        <div><dt class="text-gray-500">What to pack</dt><dd class="text-gray-700">${info.pack}</dd></div>
+        <div><dt class="text-gray-500">平均的な気温</dt><dd class="text-lg font-semibold text-gray-900">${info.temp}</dd></div>
+        <div><dt class="text-gray-500">天気と混雑</dt><dd class="text-gray-700">${info.weather}</dd></div>
+        <div><dt class="text-gray-500">持ち物</dt><dd class="text-gray-700">${info.pack}</dd></div>
       </dl>`;
   }
 

@@ -3,39 +3,39 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-const title = 'China Travel Content Series';
-const description = 'Explore China through five themed series: food, history, modern life, nature, and culture — each designed to inspire and inform foreign travelers.';
+const title = 'China-Reise-Inhaltsreihen';
+const description = 'Entdecke China in fünf Themenreihen: Essen, Geschichte, modernes Leben, Natur und Kultur - jede davon soll ausländische Reisende inspirieren und informieren.';
 
 const seriesList = [
   {
     href: '/de/series/food-of-china/',
-    title: 'Food of China',
-    desc: 'From street stalls to banquet halls — a foreigner\'s culinary journey through eight great cuisines, regional breakfasts, hot pot styles, and the dishes worth crossing a city for.',
-    icon: 'Food & Drink',
+    title: 'Essen in China',
+    desc: 'Von Straßenständen bis zu Bankettsälen - eine kulinarische Reise für Ausländer durch acht große Küchen, regionale Frühstücke, Hotpot-Stile und Gerichte, für die sich der Weg ans andere Ende der Stadt lohnt.',
+    icon: 'Essen & Trinken',
   },
   {
     href: '/de/series/history-of-china/',
-    title: 'History of China',
-    desc: 'Ancient sites decoded for travelers — the Great Wall, Terracotta Army, Forbidden City, Silk Road, and the stories behind what you\'re actually looking at.',
-    icon: 'History',
+    title: 'Geschichte Chinas',
+    desc: 'Antike Stätten für Reisende verständlich erklärt - die Große Mauer, die Terrakotta-Armee, die Verbotene Stadt, die Seidenstraße und die Geschichten hinter dem, was du wirklich vor dir siehst.',
+    icon: 'Geschichte',
   },
   {
     href: '/de/series/modern-china/',
-    title: 'Modern China',
-    desc: 'What surprises foreigners most — cashless streets, the world\'s fastest trains, megacity scale, super apps, and the everyday tech that defines life in China today.',
-    icon: 'Modern Life',
+    title: 'Modernes China',
+    desc: 'Was Ausländer am meisten überrascht - bargeldlose Straßen, die schnellsten Züge der Welt, Megacity-Dimensionen, Super-Apps und die Alltagstechnologie, die das Leben in China heute prägt.',
+    icon: 'Modernes Leben',
   },
   {
     href: '/de/series/nature-of-china/',
-    title: 'Nature of China',
-    desc: 'Avatar mountains, fairy-tale lakes, karst landscapes, and the Tibetan plateau — China\'s most spectacular natural sites with practical guides for foreign visitors.',
-    icon: 'Nature',
+    title: 'Natur in China',
+    desc: 'Avatar-Berge, märchenhafte Seen, Karstlandschaften und das tibetische Hochplateau - Chinas spektakulärste Naturorte mit praktischen Reiseführern für ausländische Besucher.',
+    icon: 'Natur',
   },
   {
     href: '/de/series/culture-of-china/',
-    title: 'Culture of China',
-    desc: 'Tea ceremony, Spring Festival, face and guanxi, calligraphy, kung fu, and the zodiac — cultural traditions explained for travelers who want to go beyond surface tourism.',
-    icon: 'Culture',
+    title: 'Kultur in China',
+    desc: 'Teezeremonie, Frühlingsfest, Gesicht und Guanxi, Kalligrafie, Kung Fu und Tierkreiszeichen - kulturelle Traditionen erklärt für Reisende, die über oberflächlichen Tourismus hinausgehen möchten.',
+    icon: 'Kultur',
   },
 ];
 ---
@@ -44,7 +44,7 @@ const seriesList = [
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content Series</p>
+      <p class="section-kicker">Inhaltsreihen</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -55,7 +55,7 @@ const seriesList = [
           <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{s.icon}</span>
           <h2 class="mt-2 text-xl font-bold text-gray-950">{s.title}</h2>
           <p class="mt-2 text-sm leading-6 text-gray-600">{s.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Explore series</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Reihe entdecken</span>
         </a>
       ))}
     </section>

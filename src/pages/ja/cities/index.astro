@@ -15,147 +15,155 @@ const cityPosts = allPosts
 
 const title = '外国人旅行者向け中国都市ガイド';
 const description =
-  'Plan practical city stops in China with guides for Beijing, Shanghai, Guangzhou, Chengdu, Xi\'an, Hangzhou, Chongqing, and Sanya, plus airport, metro, food, and transport next steps.';
+  '北京、上海、広州、成都、西安、杭州、重慶、三亜のガイドを使って、China 旅行の現実的な都市滞在を計画しましょう。空港、地下鉄、食事、交通の次の準備も確認できます。';
 
 const mapCities = [
-  { name: 'Beijing', x: 470, y: 80, href: '#beijing' },
-  { name: 'Xi\'an', x: 340, y: 155, href: '#xian' },
-  { name: 'Nanjing', x: 490, y: 180, href: '' },
-  { name: 'Shanghai', x: 540, y: 200, href: '#shanghai' },
-  { name: 'Chengdu', x: 250, y: 220, href: '#chengdu' },
-  { name: 'Hangzhou', x: 520, y: 205, href: '#hangzhou' },
-  { name: 'Chongqing', x: 310, y: 260, href: '#chongqing' },
-  { name: 'Guilin', x: 370, y: 300, href: '' },
-  { name: 'Kunming', x: 210, y: 335, href: '' },
-  { name: 'Guangzhou', x: 400, y: 370, href: '#guangzhou' },
-  { name: 'Shenzhen', x: 430, y: 390, href: '' },
-  { name: 'Sanya', x: 360, y: 440, href: '#sanya' },
+  { name: '北京', x: 470, y: 80, href: '#beijing' },
+  { name: '西安', x: 340, y: 155, href: '#xian' },
+  { name: '南京', x: 490, y: 180, href: '' },
+  { name: '上海', x: 540, y: 200, href: '#shanghai' },
+  { name: '成都', x: 250, y: 220, href: '#chengdu' },
+  { name: '杭州', x: 520, y: 205, href: '#hangzhou' },
+  { name: '重慶', x: 310, y: 260, href: '#chongqing' },
+  { name: '桂林', x: 370, y: 300, href: '' },
+  { name: '昆明', x: 210, y: 335, href: '' },
+  { name: '広州', x: 400, y: 370, href: '#guangzhou' },
+  { name: '深圳', x: 430, y: 390, href: '' },
+  { name: '三亜', x: 360, y: 440, href: '#sanya' },
 ];
 
 const cities = [
   {
-    name: 'Beijing',
+    id: 'beijing',
+    name: '北京',
     href: '/ja/posts/beijing-city-guide-for-foreigners/',
-    desc: 'Best for history, hutongs, the Great Wall, and first-time classic sightseeing.',
-    days: '4-5 days',
-    bestSeason: 'September-October',
-    difficulty: 'Medium',
-    whyGo: 'Imperial history, museums, and the easiest Great Wall access.',
+    desc: '歴史、胡同、万里の長城、初めての定番観光に最適です。',
+    days: '4〜5日',
+    bestSeason: '9月〜10月',
+    difficulty: '普通',
+    whyGo: '皇帝時代の歴史、博物館、そして万里の長城へ最も行きやすい拠点です。',
     next: '/ja/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
-    nextLabel: 'Daxing airport transfer guide',
+    nextLabel: '大興空港アクセスガイド',
   },
   {
-    name: 'Shanghai',
+    id: 'shanghai',
+    name: '上海',
     href: '/ja/posts/shanghai-city-guide-for-foreigners/',
-    desc: 'Best for an easy landing, international food, skyline walks, and strong metro coverage.',
-    days: '3-4 days',
-    bestSeason: 'March-May, October-November',
-    difficulty: 'Easy',
-    whyGo: 'The smoothest first stop for metro, airports, food, and English-friendly services.',
+    desc: '到着後の動きやすさ、多国籍な食事、スカイライン散策、地下鉄の使いやすさを重視する人に最適です。',
+    days: '3〜4日',
+    bestSeason: '3月〜5月、10月〜11月',
+    difficulty: '簡単',
+    whyGo: '地下鉄、空港、食事、英語対応サービスの面で、最初の滞在地として最もスムーズです。',
     next: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
-    nextLabel: 'Shanghai metro guide',
+    nextLabel: '上海地下鉄ガイド',
   },
   {
-    name: 'Chengdu',
+    id: 'chengdu',
+    name: '成都',
     href: '/ja/posts/chengdu-city-guide-for-foreigners/',
-    desc: 'Best for Sichuan food, teahouse pace, pandas, and a softer big-city rhythm.',
-    days: '3-5 days',
-    bestSeason: 'March-June, September-November',
-    difficulty: 'Medium',
-    whyGo: 'Pandas, Sichuan food, teahouses, lower costs, and western China side trips.',
+    desc: '四川料理、茶館のゆったりした空気、パンダ、穏やかな大都市のリズムを楽しむ人に最適です。',
+    days: '3〜5日',
+    bestSeason: '3月〜6月、9月〜11月',
+    difficulty: '普通',
+    whyGo: 'パンダ、四川料理、茶館、比較的低い費用、China 西部への小旅行が魅力です。',
     next: '/ja/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
-    nextLabel: 'Chengdu street-food guide',
+    nextLabel: '成都屋台グルメガイド',
   },
   {
-    name: 'Xi\'an',
+    id: 'xian',
+    name: '西安',
     href: '/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
-    desc: 'Best for ancient history, the Terracotta Warriors, old city walls, and hands-on Chinese heritage.',
-    days: '3-4 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Medium',
-    whyGo: 'Terracotta Warriors, ancient city wall, Muslim Quarter food street, and a deep sense of Chinese history.',
+    desc: '古代史、兵馬俑、古い城壁、中国文化を体感する旅に最適です。',
+    days: '3〜4日',
+    bestSeason: '3月〜5月、9月〜11月',
+    difficulty: '普通',
+    whyGo: '兵馬俑、古城壁、回民街のグルメ、そして中国史の奥深さを感じられます。',
     next: '/ja/posts/china-high-speed-rail-guide-foreigners/',
-    nextLabel: 'High-speed rail to Xi\'an',
+    nextLabel: '西安行き高速鉄道',
   },
   {
-    name: 'Guangzhou',
+    id: 'guangzhou',
+    name: '広州',
     href: '/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
-    desc: 'Best for Cantonese food, trade city energy, southern gateway, and easy Hong Kong access.',
-    days: '3-4 days',
-    bestSeason: 'October-December, March-April',
-    difficulty: 'Medium',
-    whyGo: 'Cantonese dim sum, Chen Clan Academy, Canton Tower, and a warmer southern alternative to Beijing and Shanghai.',
+    desc: '広東料理、商業都市の活気、南部への玄関口、香港へのアクセスを重視する人に最適です。',
+    days: '3〜4日',
+    bestSeason: '10月〜12月、3月〜4月',
+    difficulty: '普通',
+    whyGo: '広東点心、陳氏書院、広州塔、そして北京や上海とは違う温暖な南方都市を楽しめます。',
     next: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    nextLabel: 'Cantonese food guide',
+    nextLabel: '広東料理ガイド',
   },
   {
-    name: 'Chongqing',
+    id: 'chongqing',
+    name: '重慶',
     href: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    desc: 'Best for Sichuan hotpot, futuristic skyline, mountain-city terrain, and Yangtze River cruises.',
-    days: '3-4 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Hard',
-    whyGo: 'Chongqing hotpot, Hongya Cave, night skyline, Yangtze cable car, and a uniquely vertical city layout.',
+    desc: '四川火鍋、近未来的な夜景、山城らしい地形、長江クルーズを楽しむ人に最適です。',
+    days: '3〜4日',
+    bestSeason: '3月〜5月、9月〜11月',
+    difficulty: '難しい',
+    whyGo: '重慶火鍋、洪崖洞、夜景、長江ロープウェイ、独特の立体的な都市構造が魅力です。',
     next: '/ja/food/',
-    nextLabel: 'Chongqing food guide',
+    nextLabel: '重慶グルメガイド',
   },
   {
-    name: 'Hangzhou',
+    id: 'hangzhou',
+    name: '杭州',
     href: '/ja/posts/hangzhou-city-guide-for-foreigners/',
-    desc: 'Best for West Lake, green scenery, weekend pacing, and a polished city break.',
-    days: '2-3 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Easy-medium',
-    whyGo: 'West Lake, tea villages, temples, and a calm high-speed rail add-on from Shanghai.',
+    desc: '西湖、緑豊かな景色、週末向きのペース、洗練された都市滞在に最適です。',
+    days: '2〜3日',
+    bestSeason: '3月〜5月、9月〜11月',
+    difficulty: '簡単〜普通',
+    whyGo: '西湖、茶村、寺院、上海から高速鉄道で追加しやすい落ち着いた滞在先です。',
     next: '/ja/transport/',
-    nextLabel: 'Plan trains and local transport',
+    nextLabel: '鉄道と市内交通を計画する',
   },
   {
-    name: 'Sanya',
+    id: 'sanya',
+    name: '三亜',
     href: '/ja/posts/sanya-city-guide-for-foreigners/',
-    desc: 'Best for warm winter weather, resort stays, beach time, and Hainan side trips.',
-    days: '3-7 days',
-    bestSeason: 'November-April',
-    difficulty: 'Medium',
-    whyGo: 'China beach time, winter sun, seafood, resorts, and longer seasonal stays.',
+    desc: '暖かい冬、リゾート滞在、ビーチ時間、海南島内の小旅行に最適です。',
+    days: '3〜7日',
+    bestSeason: '11月〜4月',
+    difficulty: '普通',
+    whyGo: 'China のビーチ、冬の日差し、海鮮、リゾート、季節限定の長めの滞在を楽しめます。',
     next: '/ja/posts/what-to-pack-for-china-a-season-by-season-checklist/',
-    nextLabel: 'Seasonal packing guide',
+    nextLabel: '季節別パッキングガイド',
   },
 ];
 
 const routes = [
   {
-    name: 'First China trip, 8-10 days',
-    plan: 'Shanghai 3 days, Hangzhou 2 days, Beijing 4 days',
-    fit: 'Best balance of easy arrival, classic scenery, and headline history.',
+    name: '初めての China 旅行、8〜10日',
+    plan: '上海3日、杭州2日、北京4日',
+    fit: '到着後の動きやすさ、定番の景色、代表的な歴史をバランスよく組み合わせられます。',
   },
   {
-    name: 'Food and relaxed pace, 7-9 days',
-    plan: 'Chengdu 4 days, Beijing or Shanghai 3-4 days',
-    fit: 'Good for travelers who want pandas, teahouses, hotpot, and one major gateway city.',
+    name: '食事とゆったり旅、7〜9日',
+    plan: '成都4日、北京または上海3〜4日',
+    fit: 'パンダ、茶館、火鍋、主要な玄関口都市を組み合わせたい旅行者に向いています。',
   },
   {
-    name: 'Winter escape, 6-10 days',
-    plan: 'Sanya 4-6 days, Shanghai 2-3 days',
-    fit: 'Best when northern China is cold and you want a simple beach-and-city pairing.',
+    name: '冬の避寒旅、6〜10日',
+    plan: '三亜4〜6日、上海2〜3日',
+    fit: 'China 北部が寒い時期に、ビーチと都市をシンプルに組み合わせたい場合に最適です。',
   },
 ];
 
 const faqItems = [
   {
-    question: 'Which China city is easiest for first-time foreign visitors?',
+    question: '初めての外国人旅行者にとって、最も行きやすい China の都市はどこですか？',
     answer:
-      'Shanghai is usually the easiest first city because airports, metro signs, hotels, restaurants, and international services are the most foreigner-friendly. Beijing is still very manageable, but it requires more advance booking and more careful daily routing.',
+      '上海は、空港、地下鉄の表示、ホテル、レストラン、国際的なサービスが外国人旅行者に最も使いやすいため、最初の都市として選びやすいです。北京も十分に旅行しやすいですが、事前予約と毎日の移動計画をより丁寧に立てる必要があります。',
   },
   {
-    question: 'How many Chinese cities should I visit in one trip?',
+    question: '1回の旅行で China の都市はいくつ回るべきですか？',
     answer:
-      'For a first 8-10 day trip, two or three cities is enough. China is large, and airport transfers, train stations, security checks, and hotel changes can consume more time than expected. Choose one gateway city, one cultural or scenic stop, and one optional extension.',
+      '初めての8〜10日間の旅行なら、2〜3都市で十分です。China は広く、空港移動、鉄道駅、保安検査、ホテル移動には予想以上に時間がかかります。玄関口となる都市を1つ、文化または景色を楽しむ滞在先を1つ、必要に応じて追加先を1つ選びましょう。',
   },
   {
-    question: 'Which city is best for a longer stay in China?',
+    question: 'China で長めに滞在するなら、どの都市が向いていますか？',
     answer:
-      'Shanghai is the easiest long-stay base for services and English coverage, Chengdu is stronger for lower costs and relaxed living, and Hangzhou offers a middle ground with scenery and a strong tech economy. Sanya works well for winter stays rather than year-round city life.',
+      'サービス面と英語対応では上海が長期滞在の拠点として最も使いやすく、成都は費用を抑えた落ち着いた生活に向いています。杭州は景色と強いテック経済を備えた中間的な選択肢です。三亜は通年の都市生活というより、冬の滞在に向いています。',
   },
 ];
 
@@ -182,34 +190,34 @@ const faqJsonLd = {
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="city-shanghai" alt="Shanghai skyline and the Bund at dusk representing China city travel" loading="eager" />
+    <CoverImage name="city-shanghai" alt="China の都市旅行を表す夕暮れの上海スカイラインと外灘" loading="eager" />
 
     <ChinaMap cities={mapCities} />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
-      <h2 id="city-shortcuts" class="sr-only">City shortcuts</h2>
+      <h2 id="city-shortcuts" class="sr-only">都市ショートカット</h2>
       {cities.map((city) => (
-        <article class="card" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
+        <article class="card" id={city.id}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Suggested stay</dt>
+              <dt class="font-semibold text-gray-900">おすすめ滞在日数</dt>
               <dd class="text-right">{city.days}</dd>
             </div>
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Best season</dt>
+              <dt class="font-semibold text-gray-900">ベストシーズン</dt>
               <dd class="text-right">{city.bestSeason}</dd>
             </div>
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Ease for visitors</dt>
+              <dt class="font-semibold text-gray-900">旅行しやすさ</dt>
               <dd class="text-right">{city.difficulty}</dd>
             </div>
           </dl>
           <div class="mt-5 grid gap-2 text-sm font-semibold">
-            <a href={city.href} class="text-brand-700 hover:text-brand-800">Open city guide</a>
+            <a href={city.href} class="text-brand-700 hover:text-brand-800">都市ガイドを開く</a>
             <a href={city.next} class="text-gray-700 hover:text-brand-700">{city.nextLabel}</a>
           </div>
         </article>
@@ -219,19 +227,19 @@ const faqJsonLd = {
     <section class="mt-12" aria-labelledby="compare-cities">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">City comparison</p>
-          <h2 id="compare-cities">Which China city should you choose?</h2>
+          <p class="section-kicker">都市比較</p>
+          <h2 id="compare-cities">どの China の都市を選ぶべき？</h2>
         </div>
       </div>
       <div class="mt-6 overflow-hidden rounded-lg border border-gray-200">
         <table class="min-w-full divide-y divide-gray-200 text-left text-sm">
           <thead class="bg-gray-50 text-xs font-semibold uppercase tracking-wide text-gray-600">
             <tr>
-              <th class="px-4 py-3">City</th>
-              <th class="px-4 py-3">Why go</th>
-              <th class="px-4 py-3">Suggested stay</th>
-              <th class="px-4 py-3">Best season</th>
-              <th class="px-4 py-3">Ease</th>
+              <th class="px-4 py-3">都市</th>
+              <th class="px-4 py-3">行く理由</th>
+              <th class="px-4 py-3">おすすめ滞在日数</th>
+              <th class="px-4 py-3">ベストシーズン</th>
+              <th class="px-4 py-3">難易度</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100 bg-white">
@@ -253,12 +261,12 @@ const faqJsonLd = {
 
     <section class="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]" aria-labelledby="route-ideas">
       <div>
-        <p class="section-kicker">Route planning</p>
-        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">Practical city combinations</h2>
+        <p class="section-kicker">ルート計画</p>
+        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">現実的な都市の組み合わせ</h2>
         <p class="mt-3 leading-7 text-gray-600">
-          A strong China itinerary usually works better when cities have different jobs. Use Shanghai as an easy
-          arrival point, Beijing for history, Hangzhou for scenery, Chengdu for food and western China access, and
-          Sanya for a warm-weather break. Avoid adding too many flights or train station transfers to a short trip.
+          よい China 旅行の行程は、都市ごとに役割を分けると組みやすくなります。上海は到着しやすい玄関口、
+          北京は歴史、杭州は景色、成都は食事と China 西部へのアクセス、三亜は暖かい休暇に向いています。
+          短い旅行では、フライトや鉄道駅での乗り換えを詰め込みすぎないようにしましょう。
         </p>
       </div>
       <div class="grid gap-4">
@@ -276,8 +284,8 @@ const faqJsonLd = {
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">All city-related guides</p>
-            <h2>City articles and local transport</h2>
+            <p class="section-kicker">都市関連ガイド一覧</p>
+            <h2>都市記事と市内交通</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
@@ -292,13 +300,13 @@ const faqJsonLd = {
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <p class="section-kicker">Before choosing a city</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">Check the logistics stack</h2>
+        <p class="section-kicker">都市を選ぶ前に</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">旅行インフラを確認</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-          <li><a href="/ja/payment/" class="font-semibold text-brand-700">決済s:</a> set up Alipay, WeChat Pay, and cash backup before smaller-city travel.</li>
-          <li><a href="/ja/esim/" class="font-semibold text-brand-700">Internet:</a> choose eSIM, roaming, or local SIM before relying on maps and translation.</li>
-          <li><a href="/ja/transport/" class="font-semibold text-brand-700">交通:</a> compare trains, airport transfers, DiDi, and metro QR codes.</li>
-          <li><a href="/ja/tools/best-time-to-visit/" class="font-semibold text-brand-700">Timing:</a> check weather, holidays, and crowd pressure by month.</li>
+          <li><a href="/ja/payment/" class="font-semibold text-brand-700">決済:</a> 小都市へ行く前に Alipay、WeChat Pay、現金の予備を準備しましょう。</li>
+          <li><a href="/ja/esim/" class="font-semibold text-brand-700">インターネット:</a> 地図や翻訳に頼る前に、eSIM、ローミング、現地SIMのどれを使うか選びましょう。</li>
+          <li><a href="/ja/transport/" class="font-semibold text-brand-700">交通:</a> 鉄道、空港アクセス、DiDi、地下鉄QRコードを比較しましょう。</li>
+          <li><a href="/ja/tools/best-time-to-visit/" class="font-semibold text-brand-700">時期:</a> 月ごとの天気、祝日、混雑度を確認しましょう。</li>
         </ul>
       </aside>
     </section>
@@ -306,8 +314,8 @@ const faqJsonLd = {
     <section class="mt-12" aria-labelledby="city-faq">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">City FAQ</p>
-          <h2 id="city-faq">Common China city planning questions</h2>
+          <p class="section-kicker">都市FAQ</p>
+          <h2 id="city-faq">China の都市計画でよくある質問</h2>
         </div>
       </div>
       <div class="mt-6 grid gap-4 md:grid-cols-3">

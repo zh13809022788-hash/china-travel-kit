@@ -6,15 +6,15 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'China Power Plug & Voltage Checker';
+const title = 'Проверка вилки и напряжения в China';
 const description =
-  'Find out if you need a plug adapter or voltage converter for China based on your home country. China uses 220V and plug types A, C, and I.';
+  'Узнайте, нужен ли вам переходник для вилки или преобразователь напряжения для China в зависимости от вашей страны. В China используется 220V и типы вилок A, C и I.';
 
 const countries = [
-  'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
-  'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
-  'Singapore', 'India', 'Brazil', 'New Zealand', 'Switzerland',
-  'South Africa', 'United Arab Emirates', 'Other',
+  'Соединенные Штаты', 'Великобритания', 'Канада', 'Австралия', 'Германия',
+  'Франция', 'Италия', 'Испания', 'Нидерланды', 'Япония', 'Южная Корея',
+  'Сингапур', 'Индия', 'Бразилия', 'Новая Зеландия', 'Швейцария',
+  'Южная Африка', 'Объединенные Арабские Эмираты', 'Другое',
 ];
 ---
 
@@ -22,8 +22,8 @@ const countries = [
   <Header locale="ru" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Power Plug & Voltage Checker</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Инструмент</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Проверка вилки и напряжения</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -31,29 +31,29 @@ const countries = [
 
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
       <label class="flex flex-col text-sm sm:max-w-sm">
-        <span class="mb-1 font-medium text-gray-700">Traveling from</span>
+        <span class="mb-1 font-medium text-gray-700">Вы едете из</span>
         <select id="country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {countries.map((c) => <option value={c}>{c}</option>)}
         </select>
       </label>
-      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Check What I Need</button>
+      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Проверить, что мне нужно</button>
     </div>
 
-    <!-- Reference: China's own standard -->
+    <!-- Справка: собственный стандарт China -->
     <div class="mt-6 grid gap-4 sm:grid-cols-3">
-      <div class="card"><dt class="text-sm text-gray-500">Voltage</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
-      <div class="card"><dt class="text-sm text-gray-500">Frequency</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
-      <div class="card"><dt class="text-sm text-gray-500">Plug types</dt><dd class="text-2xl font-bold text-gray-900">A · C · I</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">Напряжение</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">Частота</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">Типы вилок</dt><dd class="text-2xl font-bold text-gray-900">A, C и I</dd></div>
     </div>
 
-    <!-- Result -->
+    <!-- Результат -->
     <div id="result" class="mt-6 hidden">
       <div class="card" id="result-card"></div>
 
       <AffiliateCta
-        title="Get a Universal China Adapter"
-        description="A compact all-in-one travel adapter that fits China's sockets and charges multiple devices at once."
-        buttonText="View Recommended Adapter"
+        title="Получите универсальный адаптер для China"
+        description="Компактный универсальный адаптер для поездок, который подходит к розеткам China и позволяет заряжать несколько устройств одновременно."
+        buttonText="Посмотреть рекомендуемый адаптер"
         placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
@@ -62,30 +62,30 @@ const countries = [
 </BaseLayout>
 
 <script>
-  // Each country's domestic voltage and the plug types it uses.
+  // Сетевое напряжение каждой страны и используемые типы вилок.
   const data: Record<string, { volts: number; plugs: string[] }> = {
-    'United States': { volts: 120, plugs: ['A', 'B'] },
-    'Canada': { volts: 120, plugs: ['A', 'B'] },
-    'Japan': { volts: 100, plugs: ['A', 'B'] },
-    'Brazil': { volts: 127, plugs: ['C', 'N'] },
-    'United Kingdom': { volts: 230, plugs: ['G'] },
-    'Australia': { volts: 230, plugs: ['I'] },
-    'New Zealand': { volts: 230, plugs: ['I'] },
-    'Germany': { volts: 230, plugs: ['C', 'F'] },
-    'France': { volts: 230, plugs: ['C', 'E'] },
-    'Italy': { volts: 230, plugs: ['C', 'F', 'L'] },
-    'Spain': { volts: 230, plugs: ['C', 'F'] },
-    'Netherlands': { volts: 230, plugs: ['C', 'F'] },
-    'Switzerland': { volts: 230, plugs: ['C', 'J'] },
-    'South Korea': { volts: 220, plugs: ['C', 'F'] },
-    'Singapore': { volts: 230, plugs: ['G'] },
-    'India': { volts: 230, plugs: ['C', 'D', 'M'] },
-    'South Africa': { volts: 230, plugs: ['C', 'D', 'M', 'N'] },
-    'United Arab Emirates': { volts: 230, plugs: ['C', 'D', 'G'] },
-    'Other': { volts: 0, plugs: [] },
+    'Соединенные Штаты': { volts: 120, plugs: ['A', 'B'] },
+    'Канада': { volts: 120, plugs: ['A', 'B'] },
+    'Япония': { volts: 100, plugs: ['A', 'B'] },
+    'Бразилия': { volts: 127, plugs: ['C', 'N'] },
+    'Великобритания': { volts: 230, plugs: ['G'] },
+    'Австралия': { volts: 230, plugs: ['I'] },
+    'Новая Зеландия': { volts: 230, plugs: ['I'] },
+    'Германия': { volts: 230, plugs: ['C', 'F'] },
+    'Франция': { volts: 230, plugs: ['C', 'E'] },
+    'Италия': { volts: 230, plugs: ['C', 'F', 'L'] },
+    'Испания': { volts: 230, plugs: ['C', 'F'] },
+    'Нидерланды': { volts: 230, plugs: ['C', 'F'] },
+    'Швейцария': { volts: 230, plugs: ['C', 'J'] },
+    'Южная Корея': { volts: 220, plugs: ['C', 'F'] },
+    'Сингапур': { volts: 230, plugs: ['G'] },
+    'Индия': { volts: 230, plugs: ['C', 'D', 'M'] },
+    'Южная Африка': { volts: 230, plugs: ['C', 'D', 'M', 'N'] },
+    'Объединенные Арабские Эмираты': { volts: 230, plugs: ['C', 'D', 'G'] },
+    'Другое': { volts: 0, plugs: [] },
   };
 
-  // China accepts plug types A, C, and I.
+  // China принимает вилки типов A, C и I.
   const CHINA_PLUGS = ['A', 'C', 'I'];
   const CHINA_VOLTS = 220;
 
@@ -104,37 +104,37 @@ const countries = [
 
     if (!info || info.volts === 0) {
       tone = 'info';
-      heading = 'Check your specific plug and voltage';
-      body = 'We don\'t have data for your selection. Look at the label on your charger — if it reads "100–240V", you only need a plug adapter for China\'s type A, C, or I sockets.';
-      points.push('China uses 220V, 50Hz with plug types A, C, and I.');
-      points.push('Most phone and laptop chargers are dual-voltage (100–240V) and just need a plug adapter.');
+      heading = 'Проверьте свою вилку и напряжение';
+      body = 'У нас нет данных для выбранного варианта. Посмотрите на маркировку зарядного устройства: если там указано "100–240V", вам нужен только переходник для розеток China типа A, C или I.';
+      points.push('В China используется 220V, 50Hz и вилки типов A, C и I.');
+      points.push('Большинство зарядных устройств для телефонов и ноутбуков двухвольтные (100–240V) и требуют только переходник.');
     } else {
       const plugMatch = info.plugs.some((p) => CHINA_PLUGS.includes(p));
       const voltMatch = Math.abs(info.volts - CHINA_VOLTS) <= 20;
 
       if (plugMatch && voltMatch) {
         tone = 'good';
-        heading = 'You probably don\'t need an adapter';
-        body = `${country} uses compatible plug types (${info.plugs.join(', ')}) and a similar voltage (${info.volts}V). Your plugs should fit China's sockets directly.`;
-        points.push('Double-check each plug — bring one adapter just in case a socket is a tight fit.');
+        heading = 'Скорее всего, переходник не нужен';
+        body = `${country} использует совместимые типы вилок (${info.plugs.join(', ')}) и близкое напряжение (${info.volts}V). Ваши вилки должны подходить к розеткам China напрямую.`;
+        points.push('Еще раз проверьте каждую вилку: на всякий случай возьмите один переходник, если розетка окажется тугой.');
       } else if (!plugMatch && voltMatch) {
         tone = 'warn';
-        heading = 'You need a plug adapter (but not a voltage converter)';
-        body = `${country} runs on a similar voltage (${info.volts}V), so your devices are safe. But your plug type (${info.plugs.join(', ')}) doesn't fit China's sockets — pack a plug adapter.`;
-        points.push('A simple, cheap plug adapter for type A/C/I is all you need.');
-        points.push('No bulky voltage converter required.');
+        heading = 'Нужен переходник для вилки, но не преобразователь напряжения';
+        body = `${country} использует близкое напряжение (${info.volts}V), поэтому ваши устройства в безопасности. Но тип вилки (${info.plugs.join(', ')}) не подходит к розеткам China, так что возьмите переходник.`;
+        points.push('Достаточно простого и недорогого переходника для типов A/C/I.');
+        points.push('Громоздкий преобразователь напряжения не нужен.');
       } else if (plugMatch && !voltMatch) {
         tone = 'warn';
-        heading = 'Watch your voltage on single-voltage devices';
-        body = `Your plugs (${info.plugs.join(', ')}) may fit, but ${country}'s voltage (${info.volts}V) differs from China's 220V.`;
-        points.push('Phones, laptops, and cameras labeled 100–240V are fine anywhere.');
-        points.push('Single-voltage items (some hair dryers, straighteners) need a voltage converter or should be left at home.');
+        heading = 'Следите за напряжением у однонапряжных устройств';
+        body = `Ваши вилки (${info.plugs.join(', ')}) могут подойти, но напряжение в стране ${country} (${info.volts}V) отличается от 220V в China.`;
+        points.push('Телефоны, ноутбуки и камеры с маркировкой 100–240V подходят везде.');
+        points.push('Однонапряжные устройства (некоторые фены и утюжки) требуют преобразователь напряжения или их лучше оставить дома.');
       } else {
         tone = 'warn';
-        heading = 'You need a plug adapter — and check voltage';
-        body = `${country} uses different plugs (${info.plugs.join(', ')}) and a different voltage (${info.volts}V) than China's 220V. Bring a plug adapter for type A/C/I.`;
-        points.push('Dual-voltage chargers (100–240V) only need the plug adapter.');
-        points.push('Single-voltage high-wattage devices also need a voltage converter — or buy a local equivalent instead.');
+        heading = 'Нужен переходник и проверка напряжения';
+        body = `${country} использует другие вилки (${info.plugs.join(', ')}) и другое напряжение (${info.volts}V), чем 220V в China. Возьмите переходник для типов A/C/I.`;
+        points.push('Двухвольтным зарядным устройствам (100–240V) нужен только переходник.');
+        points.push('Однонапряжным мощным устройствам также нужен преобразователь напряжения, либо лучше купить местный аналог.');
       }
     }
 
@@ -148,7 +148,7 @@ const countries = [
       warn: 'bg-amber-500 text-white',
       info: 'bg-blue-600 text-white',
     } as const;
-    const toneLabel = { good: 'No adapter needed', warn: 'Adapter needed', info: 'Check your charger' } as const;
+    const toneLabel = { good: 'Переходник не нужен', warn: 'Нужен переходник', info: 'Проверьте зарядное устройство' } as const;
 
     card.className = `card border ${toneStyles[tone]}`;
     card.innerHTML = `

@@ -13,27 +13,27 @@ const posts = (await getCollection('posts-ja'))
 
 const title = '中国 eSIM・通信ガイド：到着後すぐに接続';
 const description =
-  'Compare and set up the best eSIM data plans for travel in China. Get connected the moment you land, no physical SIM swap required.';
+  '中国旅行に最適なeSIMデータプランを比較して設定しましょう。到着した瞬間から接続でき、物理SIMの差し替えは不要です。';
 
 const connectionChoices = [
   {
     title: 'eSIM',
-    desc: 'Best for most short trips when your phone supports eSIM and you want data ready before landing.',
+    desc: 'スマートフォンがeSIMに対応していて、到着前に通信を用意しておきたい短期旅行に最適です。',
   },
   {
-    title: 'Roaming',
-    desc: 'Useful as a backup for banking SMS and first-hour connectivity, but often more expensive for heavy data.',
+    title: 'ローミング',
+    desc: '銀行SMSや到着直後の接続確保用の予備として便利ですが、大容量通信では割高になることが多いです。',
   },
   {
-    title: 'Pocket Wi-Fi or local SIM',
-    desc: 'Worth considering for groups, longer stays, or phones that cannot install travel eSIMs.',
+    title: 'ポケットWi-Fiまたは現地SIM',
+    desc: 'グループ旅行、長期滞在、または旅行用eSIMを入れられない端末では、検討する価値があります。',
   },
 ];
 
 const internetTools = [
-  { href: '/ja/tools/esim-comparison/', title: 'eSIM plan comparator', desc: 'Compare travel data plans, validity, and expected use cases.' },
-  { href: '/ja/tools/app-availability-checker/', title: 'App availability checker', desc: 'Check whether common apps work in China and what alternatives to prepare.' },
-  { href: '/ja/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access guide', desc: 'Understand app access, VPN expectations, and practical setup before arrival.' },
+  { href: '/ja/tools/esim-comparison/', title: 'eSIMプラン比較', desc: '旅行向けデータプラン、利用期間、想定用途を比較できます。' },
+  { href: '/ja/tools/app-availability-checker/', title: 'アプリ利用可否チェッカー', desc: '中国でよく使うアプリが使えるか、代替案は何かを確認できます。' },
+  { href: '/ja/posts/internet-access-china-apps-that-work-2026/', title: 'インターネット接続ガイド', desc: 'アプリの利用可否、VPNの前提、到着前に必要な設定を理解できます。' },
 ];
 ---
 
@@ -42,39 +42,39 @@ const internetTools = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">eSIM</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM &amp; Data Guides</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM・データガイド</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="hub-esim" alt="Mobile network and data connectivity options for China travel" loading="lazy" />
+    <CoverImage name="hub-esim" alt="中国旅行向けのモバイル通信とデータ接続の選択肢" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-esim">
       <h2 id="featured-esim" class="sr-only">注目の通信ガイド</h2>
       <a href="/ja/posts/best-esim-for-china-travel-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Best eSIM 2026</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Compare Airalo, Holafly, Nomad for China travel</p>
+        <span class="font-semibold text-gray-950">2026年版 ベストeSIM</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">中国旅行向けにAiralo、Holafly、Nomadを比較</p>
       </a>
       <a href="/ja/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">eSIM vs Roaming</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Real 10-day cost comparison for tourists</p>
+        <span class="font-semibold text-gray-950">eSIM vs ローミング</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">旅行者向けの実際の10日間コスト比較</p>
       </a>
       <a href="/ja/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">VPN Guide 2026</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Do tourists still need a VPN in China?</p>
+        <span class="font-semibold text-gray-950">2026年版 VPNガイド</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">中国で旅行者はまだVPNが必要ですか？</p>
       </a>
       <a href="/ja/posts/pocket-wifi-vs-esim-vs-sim-china/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Pocket WiFi vs eSIM</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Compare all connectivity options</p>
+        <span class="font-semibold text-gray-950">ポケットWi-Fi vs eSIM</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">あらゆる通信手段を比較</p>
       </a>
     </section>
 
     <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Choose your China internet setup</h2>
+        <h2 class="text-2xl font-bold text-gray-900">中国でのインターネット環境を選ぶ</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          The safest setup for visitors is usually one primary data option plus a fallback for banking, maps, translation, and ride-hailing during the first day.
+          訪問者にとって最も安心なのは、主回線となる通信手段に加えて、銀行、地図、翻訳、配車アプリ用の予備手段を1つ用意しておく構成です。
         </p>
         <div class="mt-5 grid gap-3">
           {connectionChoices.map((choice) => (
@@ -87,7 +87,7 @@ const internetTools = [
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">Internet tools</h2>
+        <h2 class="text-lg font-bold text-gray-900">インターネット用ツール</h2>
         <div class="mt-4 grid gap-3">
           {internetTools.map((tool) => (
             <a href={tool.href} class="rounded-lg border border-brand-100 bg-white p-4 hover:border-brand-200 hover:no-underline">

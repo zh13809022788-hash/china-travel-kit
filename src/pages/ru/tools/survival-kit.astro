@@ -7,39 +7,39 @@ import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
 import ContextAiBubble from '../../../components/ContextAiBubble.astro';
 import survivalKits from '../../../data/survival-kits.json';
 
-const title = 'China Survival Kit: Translation Cards and Trip Checklists';
+const title = 'Набор выживания для China: карточки перевода и чек-листы поездки';
 const description =
-  'Interactive China survival kits for foreign visitors: full-screen translation cards, arrival setup checklists, food allergy cards, and local communication tools.';
+  'Интерактивные наборы выживания для China для иностранных гостей: полноэкранные карточки перевода, чек-листы подготовки к прибытию, карточки пищевых аллергий и инструменты для общения на месте.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
   <Header locale="ru" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Survival kit</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">China Survival Kit</h1>
+      <p class="section-kicker">Набор выживания</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">Набор выживания для China</h1>
       <p class="mt-3 text-lg leading-8 text-gray-600">
-        Use full-screen translation cards and saved checklists for the moments when reading a long guide is too slow:
-        airport arrival, hotel check-in, taxis, restaurants, allergies, and first-day setup.
+        Используйте полноэкранные карточки перевода и сохраненные чек-листы в ситуациях, когда читать длинный гид слишком медленно:
+        прибытие в аэропорт, регистрация в отеле, такси, рестораны, аллергии и подготовка в первый день.
       </p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="#arrival" class="btn-primary">Start with arrival</a>
-        <a href="#food" class="btn-outline">Open food cards</a>
+        <a href="#arrival" class="btn-primary">Начать с прибытия</a>
+        <a href="#food" class="btn-outline">Открыть карточки для еды</a>
       </div>
     </header>
 
     <section class="mt-8 grid gap-4 md:grid-cols-3">
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Full-screen cards</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Tap a card and show large Chinese text to a driver, hotel desk, or restaurant staff.</p>
+        <h2 class="text-lg font-bold text-gray-950">Полноэкранные карточки</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Нажмите на карточку и покажите крупный китайский текст водителю, сотруднику стойки отеля или персоналу ресторана.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Saved checklists</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Checklist progress is stored in your browser so you can close and return later.</p>
+        <h2 class="text-lg font-bold text-gray-950">Сохраненные чек-листы</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Прогресс чек-листа сохраняется в вашем браузере, поэтому вы можете закрыть страницу и вернуться позже.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Context AI entry</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Use the floating helper to open ChinaTripBox travel help with a topic-aware prompt.</p>
+        <h2 class="text-lg font-bold text-gray-950">Вход в контекстный ИИ</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Используйте плавающего помощника, чтобы открыть справку ChinaTripBox по путешествию с запросом, учитывающим тему.</p>
       </div>
     </section>
 
@@ -47,13 +47,13 @@ const description =
       {survivalKits.map((kit) => (
         <section id={kit.slug} class="grid gap-5 rounded-xl border border-gray-200 bg-gray-50 p-5">
           <div class="max-w-3xl">
-            <p class="section-kicker">{kit.slug} kit</p>
+            <p class="section-kicker">{kit.slug} набор</p>
             <h2 class="mt-1 text-2xl font-bold text-gray-950">{kit.title}</h2>
             <p class="mt-2 text-sm leading-6 text-gray-600">{kit.description}</p>
             <div class="mt-3 flex flex-wrap gap-2">
               {kit.related_paths.map((path) => (
                 <a href={path} class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-brand-700 hover:border-brand-300 hover:no-underline">
-                  Related guide
+                  Связанный гид
                 </a>
               ))}
             </div>
@@ -66,6 +66,6 @@ const description =
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="Help me use the China survival kit for arrival, restaurants, translation cards, and checklist preparation." />
+  <ContextAiBubble defaultPrompt="Помогите мне использовать набор выживания для China: прибытие, рестораны, карточки перевода и подготовка чек-листа." />
   <Footer />
 </BaseLayout>

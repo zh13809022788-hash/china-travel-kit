@@ -3,9 +3,9 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-const title = 'ChinaTripBox Editorial Team';
+const title = 'Équipe éditoriale ChinaTripBox';
 const description =
-  'About the ChinaTripBox editorial team, how we research practical China travel guides, and how readers can request corrections.';
+  'À propos de l’équipe éditoriale ChinaTripBox, de notre méthode de recherche pour les guides pratiques sur la Chine et de la façon dont les lecteurs peuvent demander des corrections.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -19,11 +19,11 @@ const jsonLd = {
     url: new URL('/', Astro.site).toString(),
   },
   knowsAbout: [
-    'China travel planning',
-    'mobile payments in China',
-    'China eSIM and internet access',
-    'China high-speed rail',
-    'foreign visitor logistics in China',
+    'préparation d’un voyage en Chine',
+    'paiements mobiles en Chine',
+    'eSIM et accès internet en Chine',
+    'train à grande vitesse en Chine',
+    'logistique des visiteurs étrangers en Chine',
   ],
 };
 ---
@@ -32,36 +32,40 @@ const jsonLd = {
   <Header locale="fr" />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <p class="section-kicker">Author</p>
+      <p class="section-kicker">Auteur</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
 
-      <h2>Editorial Focus</h2>
+      <h2>Priorités éditoriales</h2>
       <p>
-        The ChinaTripBox editorial team writes practical guides for foreign visitors to China, with
-        a focus on payment setup, eSIM and internet access, high-speed rail, ride-hailing, airport
-        transfers, city planning, food ordering, and common first-trip problems.
+        L’équipe éditoriale ChinaTripBox rédige des guides pratiques pour les visiteurs étrangers en
+        Chine, avec un accent sur la configuration des paiements, les eSIM et l’accès internet, le
+        train à grande vitesse, les VTC, les transferts aéroport, la planification des villes, les
+        commandes de repas et les problèmes fréquents lors d’un premier voyage.
       </p>
 
-      <h2>How We Build Guides</h2>
+      <h2>Comment nous construisons nos guides</h2>
       <p>
-        We combine official sources, provider documentation, app help materials, reader questions,
-        traveler reports, and hands-on checks where possible. For fast-changing topics such as
-        visa-free entry, payment limits, app availability, and transport rules, we treat official
-        government or provider pages as the final source.
+        Nous croisons les sources officielles, la documentation des fournisseurs, les supports d’aide
+        des applications, les questions des lecteurs, les retours de voyageurs et, lorsque c’est
+        possible, des vérifications pratiques. Pour les sujets qui changent vite, comme l’entrée sans
+        visa, les limites de paiement, la disponibilité des applications et les règles de transport,
+        nous considérons les pages officielles des administrations ou des fournisseurs comme la source
+        de référence.
       </p>
 
       <h2>Corrections</h2>
       <p>
-        China travel logistics change quickly. If you find an outdated step, changed policy, broken
-        link, or missing caveat, please send the page URL through our <a href="/fr/contact/">contact page</a>.
-        We review corrections and update affected guides when the evidence is clear.
+        La logistique de voyage en Chine évolue rapidement. Si vous trouvez une étape obsolète, une
+        règle modifiée, un lien cassé ou une réserve manquante, envoyez l’URL de la page via notre
+        <a href="/fr/contact/">page de contact</a>. Nous examinons les corrections et mettons à jour
+        les guides concernés lorsque les éléments sont clairs.
       </p>
 
       <h2>Politique éditoriale</h2>
       <p>
-        Read our <a href="/fr/editorial-policy/">editorial policy</a> for details on research,
-        updates, affiliate disclosure, independence, and limitations.
+        Lisez notre <a href="/fr/editorial-policy/">politique éditoriale</a> pour en savoir plus sur
+        la recherche, les mises à jour, la divulgation d’affiliation, l’indépendance et les limites.
       </p>
 
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

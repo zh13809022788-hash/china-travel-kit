@@ -4,19 +4,19 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 
-const title = 'Free China Trip Planner';
+const title = '無料China旅行プランナー';
 const description =
-  'Build a practical first China trip plan with payment, eSIM, transport, app setup, cash, and first-day checklist recommendations.';
+  '決済、eSIM、交通、アプリ設定、現金、初日チェックリストのおすすめを含む、初めてのChina旅行向け実用プランを作成できます。';
 
 const needOptions = [
-  { value: 'payment', label: '決済 setup' },
-  { value: 'esim', label: 'eSIM and internet' },
-  { value: 'transport', label: 'Airport and trains' },
-  { value: 'hotel', label: 'Hotel area logic' },
-  { value: 'apps', label: 'Apps and translation' },
-  { value: 'cash', label: 'Cash backup' },
-  { value: 'visa', label: 'Visa-free entry' },
-  { value: 'food', label: 'Food and delivery' },
+  { value: 'payment', label: '決済設定' },
+  { value: 'esim', label: 'eSIMとインターネット' },
+  { value: 'transport', label: '空港と鉄道' },
+  { value: 'hotel', label: 'ホテルエリアの考え方' },
+  { value: 'apps', label: 'アプリと翻訳' },
+  { value: 'cash', label: '現金の予備' },
+  { value: 'visa', label: 'ビザなし入国' },
+  { value: 'food', label: '食事とデリバリー' },
 ];
 ---
 
@@ -26,29 +26,28 @@ const needOptions = [
     <section class="border-b border-gray-200 bg-white">
       <div class="container-page grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
         <div>
-          <p class="section-kicker">Free planning tool</p>
+          <p class="section-kicker">無料プランニングツール</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            Build a practical China arrival plan before you fly
+            出発前に実用的なChina到着プランを作る
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            Get a first-pass plan for payments, eSIM data, airport transport, app setup,
-            cash backup, and daily pacing. It runs in your browser and does not save your answers.
+            決済、eSIMデータ、空港交通、アプリ設定、現金の予備、日々のペース配分について、最初の計画案を作成します。ブラウザ内で動作し、回答は保存されません。
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#planner" class="btn-primary">Start planning</a>
-            <a href="/ja/travel-help/" class="btn-outline">Ask travel help</a>
-            <a href="/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Read first-time guide</a>
+            <a href="#planner" class="btn-primary">計画を始める</a>
+            <a href="/ja/travel-help/" class="btn-outline">旅行ヘルプに相談</a>
+            <a href="/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">初回向けガイドを読む</a>
           </div>
         </div>
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
-          <p class="section-kicker">Best for</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">First-time visitor setup</h2>
+          <p class="section-kicker">おすすめ用途</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">初めて訪れる人の準備</h2>
           <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-            <li>決済 readiness before arrival</li>
-            <li>eSIM, roaming, and app access decisions</li>
-            <li>Airport-to-city first step planning</li>
-            <li>Simple city-by-city trip framework</li>
+            <li>到着前の決済準備</li>
+            <li>eSIM、ローミング、アプリアクセスの判断</li>
+            <li>空港から市内への最初の移動計画</li>
+            <li>都市ごとのシンプルな旅行枠組み</li>
           </ul>
         </aside>
       </div>
@@ -60,18 +59,18 @@ const needOptions = [
       <section id="planner" class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <form id="trip-planner-form" class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm md:p-6">
           <div class="border-b border-gray-200 pb-5">
-            <p class="section-kicker">Trip details</p>
-            <h2 class="mt-2 text-2xl font-bold text-gray-950">Tell us what you know</h2>
+            <p class="section-kicker">旅行詳細</p>
+            <h2 class="mt-2 text-2xl font-bold text-gray-950">わかっていることを入力してください</h2>
           </div>
 
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Home country or region
-              <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="United States, UK, Singapore..." />
+              出発国・地域
+              <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="米国、英国、シンガポール..." />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Arrival city
+              到着都市
               <select id="arrival-city" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
                 <option>Shanghai</option>
                 <option>Beijing</option>
@@ -79,63 +78,63 @@ const needOptions = [
                 <option>Shenzhen</option>
                 <option>Chengdu</option>
                 <option>Hangzhou</option>
-                <option>Other city</option>
+                <option>その他の都市</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800 md:col-span-2">
-              Destination cities
+              目的地の都市
               <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="Shanghai, Hangzhou, Beijing" />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Trip length
+              旅行日数
               <select id="trip-length" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option value="3">3 days</option>
-                <option value="5">5 days</option>
-                <option value="7" selected>7 days</option>
-                <option value="10">10 days</option>
-                <option value="14">14 days</option>
-                <option value="21">21 days or more</option>
+                <option value="3">3日</option>
+                <option value="5">5日</option>
+                <option value="7" selected>7日</option>
+                <option value="10">10日</option>
+                <option value="14">14日</option>
+                <option value="21">21日以上</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Travel purpose
+              旅行目的
               <select id="trip-purpose" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>Tourism</option>
-                <option>Business</option>
-                <option>Long stay</option>
-                <option>Digital nomad</option>
-                <option>Family visit</option>
-                <option>Transit</option>
+                <option>観光</option>
+                <option>ビジネス</option>
+                <option>長期滞在</option>
+                <option>デジタルノマド</option>
+                <option>親族訪問</option>
+                <option>トランジット</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Budget range
+              予算帯
               <select id="budget-range" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>Budget</option>
-                <option selected>Comfort</option>
-                <option>Premium</option>
+                <option>節約</option>
+                <option selected>快適</option>
+                <option>プレミアム</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Travel style
+              旅行スタイル
               <select id="travel-style" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>Efficient</option>
-                <option>Budget</option>
-                <option selected>Comfort</option>
-                <option>Family</option>
-                <option>Business</option>
-                <option>Food-focused</option>
+                <option>効率重視</option>
+                <option>節約</option>
+                <option selected>快適</option>
+                <option>家族旅行</option>
+                <option>ビジネス</option>
+                <option>食事重視</option>
               </select>
             </label>
           </div>
 
           <fieldset class="mt-6">
-            <legend class="text-sm font-semibold text-gray-800">What do you need help with?</legend>
+            <legend class="text-sm font-semibold text-gray-800">何についてサポートが必要ですか？</legend>
             <div class="mt-3 grid gap-3 sm:grid-cols-2">
               {needOptions.map((option) => (
                 <label class="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700">
@@ -147,30 +146,28 @@ const needOptions = [
           </fieldset>
 
           <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p id="planner-status" class="text-sm text-gray-500">No account or sensitive data needed.</p>
-            <button class="btn-primary" type="submit">Generate plan</button>
+            <p id="planner-status" class="text-sm text-gray-500">アカウント情報や機微情報は不要です。</p>
+            <button class="btn-primary" type="submit">プランを生成</button>
           </div>
         </form>
 
         <aside class="space-y-6">
           <section class="rounded-lg border border-gray-200 bg-white p-5">
-            <p class="section-kicker">Upgrade path</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">Need human review?</h2>
+            <p class="section-kicker">アップグレード</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">人による確認が必要ですか？</h2>
             <p class="mt-3 text-sm leading-6 text-gray-600">
-              If your route, timing, payment setup, or first day feels risky, send the generated
-              plan by email and ask for a human-reviewed correction list.
+              ルート、時間配分、決済設定、初日の動きに不安がある場合は、生成されたプランをメールで送り、人による修正リストを依頼できます。
             </p>
             <a id="planner-email-link" class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 hover:border-brand-600 hover:text-brand-600 hover:no-underline" href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Trip%20Review%20Request">
-              Prepare review email
+              確認依頼メールを作成
             </a>
           </section>
 
           <section class="rounded-lg border border-amber-200 bg-amber-50 p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">Limits</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">Use this as planning help</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">制限</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">計画補助として使ってください</h2>
             <p class="mt-3 text-sm leading-6 text-gray-700">
-              This tool is not legal, immigration, medical, banking, or emergency advice. Verify
-              important entry, airline, hotel, card, telecom, and app rules with official sources.
+              このツールは法律、入国管理、医療、銀行、緊急時対応の助言ではありません。重要な入国、航空会社、ホテル、カード、通信、アプリのルールは公式情報で確認してください。
             </p>
           </section>
         </aside>
@@ -178,8 +175,8 @@ const needOptions = [
 
       <section id="plan-output" class="mt-10 hidden rounded-lg border border-brand-100 bg-brand-50 p-5 md:p-6" aria-live="polite">
         <div class="border-b border-brand-100 pb-4">
-          <p class="section-kicker">Generated plan</p>
-          <h2 class="mt-2 text-2xl font-bold text-gray-950">Your China trip setup draft</h2>
+          <p class="section-kicker">生成されたプラン</p>
+          <h2 class="mt-2 text-2xl font-bold text-gray-950">China旅行準備の下書き</h2>
         </div>
         <div id="plan-content" class="mt-5 grid gap-5"></div>
       </section>
@@ -187,32 +184,32 @@ const needOptions = [
       <section class="mt-12 grid gap-5 md:grid-cols-3">
         <a href="/ja/payment/" class="card block hover:no-underline">
           <p class="section-kicker">決済</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Prepare Alipay and WeChat Pay</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Set up at least one wallet and one backup payment method before arrival.</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">AlipayとWeChat Payを準備</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">到着前に、少なくとも1つのウォレットと1つの予備決済手段を設定しましょう。</p>
         </a>
         <a href="/ja/esim/" class="card block hover:no-underline">
-          <p class="section-kicker">Internet</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Choose an eSIM or roaming setup</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Make sure you can load maps, translate, message, and call a ride on day one.</p>
+          <p class="section-kicker">インターネット</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">eSIMまたはローミングを選ぶ</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">初日に地図、翻訳、メッセージ、配車が使えるようにしておきましょう。</p>
         </a>
         <a href="/ja/transport/" class="card block hover:no-underline">
           <p class="section-kicker">交通</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Plan your first route</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Know your airport-to-hotel route and when to use metro, taxi, DiDi, or train.</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">最初の移動ルートを計画</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">空港からホテルまでのルートと、地下鉄、タクシー、DiDi、鉄道の使い分けを把握しましょう。</p>
         </a>
       </section>
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
-        <p class="section-kicker">Before using the planner</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">Read the setup guides if this is your first China trip</h2>
+        <p class="section-kicker">プランナーを使う前に</p>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">初めてのChina旅行なら設定ガイドを読んでください</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
           <a href="/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">China trip planner for first-time visitors</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Use the same planning order as this tool: internet, payment, airport route, apps, city order, and first-day checklist.</p>
+            <h3 class="font-bold text-gray-950">初めての人向けChina旅行プランナー</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">このツールと同じ順番で、インターネット、決済、空港ルート、アプリ、都市順、初日チェックリストを整理します。</p>
           </a>
           <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">What to set up before traveling to China</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">A practical pre-departure checklist for Alipay, WeChat Pay, eSIM, DiDi, train tickets, maps, and cash backup.</p>
+            <h3 class="font-bold text-gray-950">China旅行前に設定すべきこと</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Alipay、WeChat Pay、eSIM、DiDi、鉄道チケット、地図、現金の予備を確認する実用的な出発前チェックリストです。</p>
           </a>
         </div>
       </section>
@@ -258,97 +255,97 @@ const needOptions = [
   `;
 
   const buildPlan = () => {
-    const home = getValue('home-country') || 'your home country';
+    const home = getValue('home-country') || '出発国';
     const arrival = getValue('arrival-city') || 'Shanghai';
     const cities = splitCities(getValue('destination-cities'), arrival);
     const days = Number(getValue('trip-length') || '7');
-    const purpose = getValue('trip-purpose') || 'Tourism';
-    const budget = getValue('budget-range') || 'Comfort';
-    const style = getValue('travel-style') || 'Comfort';
+    const purpose = getValue('trip-purpose') || '観光';
+    const budget = getValue('budget-range') || '快適';
+    const style = getValue('travel-style') || '快適';
     const needs = selectedNeeds();
     const perCity = Math.max(1, Math.floor(days / Math.max(1, cities.length)));
 
     const preDeparture = [
-      `Install Alipay, WeChat, DiDi, a translation app, and an offline map before leaving ${escapeHtml(home)}.`,
+      `${escapeHtml(home)}を出発する前に、Alipay、WeChat、DiDi、翻訳アプリ、オフライン地図をインストールします。`,
       needs.includes('payment')
-        ? 'Link one foreign Visa or Mastercard to Alipay and try a small verification before departure.'
-        : 'Keep payment setup simple: one mobile wallet, one physical card, and some RMB cash.',
+        ? '海外発行のVisaまたはMastercardをAlipayに1枚連携し、出発前に小さな認証を試します。'
+        : '決済設定はシンプルに保ちます。モバイルウォレット1つ、物理カード1枚、少額RMB現金を用意します。',
       needs.includes('esim')
-        ? 'Buy and activate an eSIM or roaming plan before the flight, then keep the QR code available offline.'
-        : 'Confirm your phone will have data on arrival before depending on maps or ride-hailing.',
-      'Save your hotel address in English and Chinese, plus the nearest metro station.',
+        ? 'フライト前にeSIMまたはローミングプランを購入・有効化し、QRコードをオフラインでも見られるように保存します。'
+        : '地図や配車に頼る前に、到着時にスマホでデータ通信できることを確認します。',
+      'ホテル住所を英語と中国語で保存し、最寄りの地下鉄駅も控えます。',
     ];
 
     const payment = [
-      'Primary setup: Alipay with a foreign card, because it is usually the most practical first wallet for visitors.',
-      'Backup setup: WeChat Pay if your card links successfully, plus one physical Visa or Mastercard.',
-      budget === 'Budget'
-        ? 'Cash backup: carry a small amount of RMB for stalls, deposits, or card/wallet issues.'
-        : 'Cash backup: keep enough RMB for taxi, snacks, and one simple meal in case mobile payment fails.',
-      'Do not rely on Apple Pay or Google Pay as your main payment method in mainland China.',
+      'メイン設定: 旅行者にとって最初のウォレットとして最も実用的なことが多いため、海外カードを連携したAlipayを用意します。',
+      '予備設定: カード連携に成功するならWeChat Payも設定し、物理VisaまたはMastercardも1枚持ちます。',
+      budget === '節約'
+        ? '現金の予備: 屋台、デポジット、カードやウォレットの問題に備えて少額RMBを持ちます。'
+        : '現金の予備: モバイル決済が失敗した場合に備え、タクシー、軽食、簡単な食事1回分のRMBを持ちます。',
+      '中国本土ではApple PayやGoogle Payをメイン決済手段として頼らないでください。',
     ];
 
     const internet = [
-      'For short trips, a travel eSIM is usually the easiest setup if your phone supports eSIM.',
-      'For longer stays or heavy data use, compare roaming, eSIM, pocket WiFi, and local SIM options before arrival.',
-      'Test mobile data before leaving the airport, because payment apps, ride-hailing, translation, and maps all depend on it.',
-      'Save hotel and transport information offline in case your first connection is unstable.',
+      '短期旅行では、スマホがeSIM対応なら旅行用eSIMが通常最も簡単です。',
+      '長期滞在や大量通信では、到着前にローミング、eSIM、ポケットWiFi、現地SIMを比較します。',
+      '決済アプリ、配車、翻訳、地図はすべて通信に依存するため、空港を出る前にモバイルデータをテストします。',
+      '最初の接続が不安定な場合に備えて、ホテルと交通情報をオフライン保存します。',
     ];
 
     const transport = [
-      `First route: plan ${escapeHtml(arrival)} airport or station to hotel before landing.`,
-      'Use metro for predictable city routes, DiDi for door-to-door trips, and high-speed rail for city-to-city travel.',
+      `最初のルート: 到着前に${escapeHtml(arrival)}の空港または駅からホテルまでの移動を計画します。`,
+      '市内の読みやすい移動には地下鉄、ドアツードアにはDiDi、都市間移動には高速鉄道を使います。',
       needs.includes('transport')
-        ? 'For train days, book earlier when possible and keep passport details consistent with the ticket platform.'
-        : 'Avoid tight same-day transfers between international flights and long-distance trains.',
-      'Keep a Chinese address card ready for taxis or hotel front desks.',
+        ? '鉄道移動日は可能な限り早めに予約し、チケットプラットフォームのパスポート情報を一致させます。'
+        : '国際線と長距離列車を同日に無理に乗り継ぐ計画は避けます。',
+      'タクシーやホテルフロント用に、中国語住所カードを用意しておきます。',
     ];
 
     const dayPlan = cities.map((city, index) => {
       const start = index * perCity + 1;
       const end = index === cities.length - 1 ? days : Math.min(days, start + perCity - 1);
-      return `Days ${start}-${end}: ${escapeHtml(city)} - keep the first half-day lighter, confirm payment/data, then group sights by district.`;
+      return `${start}〜${end}日目: ${escapeHtml(city)} - 最初の半日は軽めにし、決済と通信を確認してから、観光地を地区ごとにまとめます。`;
     });
 
     const mistakes = [
-      'Do not wait until arrival to set up every app, card, and data plan.',
-      'Do not schedule a packed sightseeing day immediately after a long-haul flight.',
-      'Do not depend on one payment method only.',
-      purpose === 'Business'
-        ? 'For business travel, keep extra time for traffic, security checks, invoices, and building access.'
-        : 'For leisure travel, leave one flexible block every two or three days for weather, crowds, or fatigue.',
-      style === 'Food-focused'
-        ? 'For food-focused trips, save restaurant names in Chinese and confirm opening hours before crossing town.'
-        : 'Keep a simple backup plan for meals near your hotel.',
+      'すべてのアプリ、カード、通信プランの設定を到着後まで待たないでください。',
+      '長距離フライト直後に詰め込みすぎた観光日を入れないでください。',
+      '支払い方法を1つだけに依存しないでください。',
+      purpose === 'ビジネス'
+        ? 'ビジネス旅行では、交通、セキュリティチェック、請求書、建物入館に余裕を持たせます。'
+        : '観光旅行では、天候、混雑、疲労に備えて2〜3日に1回は柔軟な時間枠を残します。',
+      style === '食事重視'
+        ? '食事重視の旅では、レストラン名を中国語で保存し、遠くへ移動する前に営業時間を確認します。'
+        : 'ホテル周辺で食事できる簡単な予備案を用意します。',
     ];
 
     const html = [
-      panel('Pre-departure checklist', preDeparture),
-      panel('決済 and cash setup', payment),
-      panel('Internet and app setup', internet),
-      panel('交通 and first day', transport),
-      panel('Simple day-by-day framework', dayPlan),
-      panel('Common mistake warnings', mistakes),
+      panel('出発前チェックリスト', preDeparture),
+      panel('決済と現金の設定', payment),
+      panel('インターネットとアプリ設定', internet),
+      panel('交通と初日', transport),
+      panel('シンプルな日別フレーム', dayPlan),
+      panel('よくある失敗への注意', mistakes),
     ].join('');
 
     const emailBody = [
-      'ChinaTripBox Trip Review Request',
+      'ChinaTripBox 旅行プラン確認依頼',
       '',
-      `Home country or region: ${home}`,
-      `Arrival city: ${arrival}`,
-      `Destination cities: ${cities.join(', ')}`,
-      `Trip length: ${days} days`,
-      `Purpose: ${purpose}`,
-      `Budget: ${budget}`,
-      `Style: ${style}`,
-      `Needs: ${needs.join(', ') || 'not specified'}`,
+      `出発国・地域: ${home}`,
+      `到着都市: ${arrival}`,
+      `目的地の都市: ${cities.join(', ')}`,
+      `旅行日数: ${days}日`,
+      `目的: ${purpose}`,
+      `予算: ${budget}`,
+      `スタイル: ${style}`,
+      `必要なサポート: ${needs.join(', ') || '未指定'}`,
       '',
-      'Please review my China trip setup for payment, eSIM, transport, timing, and first-day mistakes.',
+      '決済、eSIM、交通、時間配分、初日の失敗リスクについて、China旅行準備を確認してください。',
     ].join('\n');
 
     if (emailLink) {
       emailLink.href = `mailto:zh13809022788@gmail.com?subject=${encodeURIComponent(
-        'ChinaTripBox Trip Review Request',
+        'ChinaTripBox 旅行プラン確認依頼',
       )}&body=${encodeURIComponent(emailBody)}`;
     }
 
@@ -361,6 +358,6 @@ const needOptions = [
     content.innerHTML = buildPlan();
     output.classList.remove('hidden');
     output.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (status) status.textContent = 'Plan generated. Adjust your answers and regenerate any time.';
+    if (status) status.textContent = 'プランを生成しました。回答を調整していつでも再生成できます。';
   });
 </script>

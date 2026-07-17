@@ -15,147 +15,155 @@ const cityPosts = allPosts
 
 const title = '外國旅客中國城市指南';
 const description =
-  'Plan practical city stops in China with guides for Beijing, Shanghai, Guangzhou, Chengdu, Xi\'an, Hangzhou, Chongqing, and Sanya, plus airport, metro, food, and transport next steps.';
+  '透過北京、上海、廣州、成都、西安、杭州、重慶和三亞指南，規劃實用的 China 城市停留，並掌握機場、地鐵、美食和交通的下一步安排。';
 
 const mapCities = [
-  { name: 'Beijing', x: 470, y: 80, href: '#beijing' },
-  { name: 'Xi\'an', x: 340, y: 155, href: '#xian' },
-  { name: 'Nanjing', x: 490, y: 180, href: '' },
-  { name: 'Shanghai', x: 540, y: 200, href: '#shanghai' },
-  { name: 'Chengdu', x: 250, y: 220, href: '#chengdu' },
-  { name: 'Hangzhou', x: 520, y: 205, href: '#hangzhou' },
-  { name: 'Chongqing', x: 310, y: 260, href: '#chongqing' },
-  { name: 'Guilin', x: 370, y: 300, href: '' },
-  { name: 'Kunming', x: 210, y: 335, href: '' },
-  { name: 'Guangzhou', x: 400, y: 370, href: '#guangzhou' },
-  { name: 'Shenzhen', x: 430, y: 390, href: '' },
-  { name: 'Sanya', x: 360, y: 440, href: '#sanya' },
+  { name: '北京', x: 470, y: 80, href: '#beijing' },
+  { name: '西安', x: 340, y: 155, href: '#xian' },
+  { name: '南京', x: 490, y: 180, href: '' },
+  { name: '上海', x: 540, y: 200, href: '#shanghai' },
+  { name: '成都', x: 250, y: 220, href: '#chengdu' },
+  { name: '杭州', x: 520, y: 205, href: '#hangzhou' },
+  { name: '重慶', x: 310, y: 260, href: '#chongqing' },
+  { name: '桂林', x: 370, y: 300, href: '' },
+  { name: '昆明', x: 210, y: 335, href: '' },
+  { name: '廣州', x: 400, y: 370, href: '#guangzhou' },
+  { name: '深圳', x: 430, y: 390, href: '' },
+  { name: '三亞', x: 360, y: 440, href: '#sanya' },
 ];
 
 const cities = [
   {
-    name: 'Beijing',
+    id: 'beijing',
+    name: '北京',
     href: '/zh-tw/posts/beijing-city-guide-for-foreigners/',
-    desc: 'Best for history, hutongs, the Great Wall, and first-time classic sightseeing.',
-    days: '4-5 days',
-    bestSeason: 'September-October',
-    difficulty: 'Medium',
-    whyGo: 'Imperial history, museums, and the easiest Great Wall access.',
+    desc: '最適合歷史、胡同、長城，以及第一次造訪時的經典觀光。',
+    days: '4-5 天',
+    bestSeason: '9 月至 10 月',
+    difficulty: '中等',
+    whyGo: '帝王歷史、博物館，以及最容易前往長城的選擇。',
     next: '/zh-tw/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
-    nextLabel: 'Daxing airport transfer guide',
+    nextLabel: '大興機場交通指南',
   },
   {
-    name: 'Shanghai',
+    id: 'shanghai',
+    name: '上海',
     href: '/zh-tw/posts/shanghai-city-guide-for-foreigners/',
-    desc: 'Best for an easy landing, international food, skyline walks, and strong metro coverage.',
-    days: '3-4 days',
-    bestSeason: 'March-May, October-November',
-    difficulty: 'Easy',
-    whyGo: 'The smoothest first stop for metro, airports, food, and English-friendly services.',
+    desc: '最適合輕鬆抵達、國際美食、天際線散步，以及覆蓋完善的地鐵。',
+    days: '3-4 天',
+    bestSeason: '3 月至 5 月、10 月至 11 月',
+    difficulty: '容易',
+    whyGo: '在地鐵、機場、美食和英語友善服務方面，最順手的第一站。',
     next: '/zh-tw/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
-    nextLabel: 'Shanghai metro guide',
+    nextLabel: '上海地鐵指南',
   },
   {
-    name: 'Chengdu',
+    id: 'chengdu',
+    name: '成都',
     href: '/zh-tw/posts/chengdu-city-guide-for-foreigners/',
-    desc: 'Best for Sichuan food, teahouse pace, pandas, and a softer big-city rhythm.',
-    days: '3-5 days',
-    bestSeason: 'March-June, September-November',
-    difficulty: 'Medium',
-    whyGo: 'Pandas, Sichuan food, teahouses, lower costs, and western China side trips.',
+    desc: '最適合川菜、茶館節奏、熊貓，以及較柔和的大城市步調。',
+    days: '3-5 天',
+    bestSeason: '3 月至 6 月、9 月至 11 月',
+    difficulty: '中等',
+    whyGo: '熊貓、川菜、茶館、較低花費，以及前往 China 西部的延伸行程。',
     next: '/zh-tw/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
-    nextLabel: 'Chengdu street-food guide',
+    nextLabel: '成都街頭美食指南',
   },
   {
-    name: 'Xi\'an',
+    id: 'xian',
+    name: '西安',
     href: '/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
-    desc: 'Best for ancient history, the Terracotta Warriors, old city walls, and hands-on Chinese heritage.',
-    days: '3-4 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Medium',
-    whyGo: 'Terracotta Warriors, ancient city wall, Muslim Quarter food street, and a deep sense of Chinese history.',
+    desc: '最適合古代歷史、兵馬俑、古城牆，以及親身感受中華文化遺產。',
+    days: '3-4 天',
+    bestSeason: '3 月至 5 月、9 月至 11 月',
+    difficulty: '中等',
+    whyGo: '兵馬俑、古城牆、回民街美食，以及濃厚的中國歷史感。',
     next: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/',
-    nextLabel: 'High-speed rail to Xi\'an',
+    nextLabel: '前往西安的高鐵指南',
   },
   {
-    name: 'Guangzhou',
+    id: 'guangzhou',
+    name: '廣州',
     href: '/zh-tw/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
-    desc: 'Best for Cantonese food, trade city energy, southern gateway, and easy Hong Kong access.',
-    days: '3-4 days',
-    bestSeason: 'October-December, March-April',
-    difficulty: 'Medium',
-    whyGo: 'Cantonese dim sum, Chen Clan Academy, Canton Tower, and a warmer southern alternative to Beijing and Shanghai.',
+    desc: '最適合粵菜、貿易城市活力、南方門戶，以及便利前往香港。',
+    days: '3-4 天',
+    bestSeason: '10 月至 12 月、3 月至 4 月',
+    difficulty: '中等',
+    whyGo: '粵式點心、陳家祠、廣州塔，以及比北京和上海更溫暖的南方選擇。',
     next: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    nextLabel: 'Cantonese food guide',
+    nextLabel: '粵菜指南',
   },
   {
-    name: 'Chongqing',
+    id: 'chongqing',
+    name: '重慶',
     href: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    desc: 'Best for Sichuan hotpot, futuristic skyline, mountain-city terrain, and Yangtze River cruises.',
-    days: '3-4 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Hard',
-    whyGo: 'Chongqing hotpot, Hongya Cave, night skyline, Yangtze cable car, and a uniquely vertical city layout.',
+    desc: '最適合麻辣火鍋、未來感天際線、山城地形，以及長江遊船。',
+    days: '3-4 天',
+    bestSeason: '3 月至 5 月、9 月至 11 月',
+    difficulty: '較難',
+    whyGo: '重慶火鍋、洪崖洞、夜間天際線、長江索道，以及獨特的立體城市格局。',
     next: '/zh-tw/food/',
-    nextLabel: 'Chongqing food guide',
+    nextLabel: '重慶美食指南',
   },
   {
-    name: 'Hangzhou',
+    id: 'hangzhou',
+    name: '杭州',
     href: '/zh-tw/posts/hangzhou-city-guide-for-foreigners/',
-    desc: 'Best for West Lake, green scenery, weekend pacing, and a polished city break.',
-    days: '2-3 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Easy-medium',
-    whyGo: 'West Lake, tea villages, temples, and a calm high-speed rail add-on from Shanghai.',
+    desc: '最適合西湖、綠意風景、週末步調，以及精緻的城市小旅行。',
+    days: '2-3 天',
+    bestSeason: '3 月至 5 月、9 月至 11 月',
+    difficulty: '容易至中等',
+    whyGo: '西湖、茶村、寺廟，以及從上海搭高鐵延伸的悠閒行程。',
     next: '/zh-tw/transport/',
-    nextLabel: 'Plan trains and local transport',
+    nextLabel: '規劃火車與當地交通',
   },
   {
-    name: 'Sanya',
+    id: 'sanya',
+    name: '三亞',
     href: '/zh-tw/posts/sanya-city-guide-for-foreigners/',
-    desc: 'Best for warm winter weather, resort stays, beach time, and Hainan side trips.',
-    days: '3-7 days',
-    bestSeason: 'November-April',
-    difficulty: 'Medium',
-    whyGo: 'China beach time, winter sun, seafood, resorts, and longer seasonal stays.',
+    desc: '最適合溫暖冬季、度假村住宿、海灘時光，以及海南延伸行程。',
+    days: '3-7 天',
+    bestSeason: '11 月至 4 月',
+    difficulty: '中等',
+    whyGo: 'China 海灘時光、冬日陽光、海鮮、度假村，以及較長的季節性停留。',
     next: '/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/',
-    nextLabel: 'Seasonal packing guide',
+    nextLabel: '季節打包指南',
   },
 ];
 
 const routes = [
   {
-    name: 'First China trip, 8-10 days',
-    plan: 'Shanghai 3 days, Hangzhou 2 days, Beijing 4 days',
-    fit: 'Best balance of easy arrival, classic scenery, and headline history.',
+    name: '第一次 China 旅行，8-10 天',
+    plan: '上海 3 天、杭州 2 天、北京 4 天',
+    fit: '在輕鬆抵達、經典風景和重點歷史之間取得最佳平衡。',
   },
   {
-    name: 'Food and relaxed pace, 7-9 days',
-    plan: 'Chengdu 4 days, Beijing or Shanghai 3-4 days',
-    fit: 'Good for travelers who want pandas, teahouses, hotpot, and one major gateway city.',
+    name: '美食與放鬆步調，7-9 天',
+    plan: '成都 4 天、北京或上海 3-4 天',
+    fit: '適合想要熊貓、茶館、火鍋，以及一座主要門戶城市的旅客。',
   },
   {
-    name: 'Winter escape, 6-10 days',
-    plan: 'Sanya 4-6 days, Shanghai 2-3 days',
-    fit: 'Best when northern China is cold and you want a simple beach-and-city pairing.',
+    name: '冬季避寒，6-10 天',
+    plan: '三亞 4-6 天、上海 2-3 天',
+    fit: '當 China 北方寒冷，而你想要簡單的海灘加城市組合時最合適。',
   },
 ];
 
 const faqItems = [
   {
-    question: 'Which China city is easiest for first-time foreign visitors?',
+    question: '哪座 China 城市最適合第一次來訪的外國旅客？',
     answer:
-      'Shanghai is usually the easiest first city because airports, metro signs, hotels, restaurants, and international services are the most foreigner-friendly. Beijing is still very manageable, but it requires more advance booking and more careful daily routing.',
+      '上海通常是最容易上手的第一座城市，因為機場、地鐵標示、飯店、餐廳和國際化服務對外國旅客最友善。北京仍然很容易安排，但需要更多提前預訂，也要更仔細規劃每日路線。',
   },
   {
-    question: 'How many Chinese cities should I visit in one trip?',
+    question: '一次旅行應該造訪幾座中國城市？',
     answer:
-      'For a first 8-10 day trip, two or three cities is enough. China is large, and airport transfers, train stations, security checks, and hotel changes can consume more time than expected. Choose one gateway city, one cultural or scenic stop, and one optional extension.',
+      '第一次 8-10 天旅行，兩到三座城市就足夠。China 幅員遼闊，機場交通、火車站、安檢和換飯店都可能比預期花更多時間。選一座門戶城市、一個文化或風景停留點，再加上一個可選延伸點即可。',
   },
   {
-    question: 'Which city is best for a longer stay in China?',
+    question: '哪座城市最適合在 China 長住？',
     answer:
-      'Shanghai is the easiest long-stay base for services and English coverage, Chengdu is stronger for lower costs and relaxed living, and Hangzhou offers a middle ground with scenery and a strong tech economy. Sanya works well for winter stays rather than year-round city life.',
+      '上海在服務和英語覆蓋方面最適合作為長住基地；成都在較低成本和悠閒生活方面更有優勢；杭州則兼具風景和成熟科技產業，位於兩者之間。三亞更適合冬季停留，而不是全年城市生活。',
   },
 ];
 
@@ -182,34 +190,34 @@ const faqJsonLd = {
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="city-shanghai" alt="Shanghai skyline and the Bund at dusk representing China city travel" loading="eager" />
+    <CoverImage name="city-shanghai" alt="上海天際線與黃昏時的外灘，代表 China 城市旅行" loading="eager" />
 
     <ChinaMap cities={mapCities} />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
-      <h2 id="city-shortcuts" class="sr-only">City shortcuts</h2>
+      <h2 id="city-shortcuts" class="sr-only">城市快速連結</h2>
       {cities.map((city) => (
-        <article class="card" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
+        <article class="card" id={city.id}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Suggested stay</dt>
+              <dt class="font-semibold text-gray-900">建議停留</dt>
               <dd class="text-right">{city.days}</dd>
             </div>
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Best season</dt>
+              <dt class="font-semibold text-gray-900">最佳季節</dt>
               <dd class="text-right">{city.bestSeason}</dd>
             </div>
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Ease for visitors</dt>
+              <dt class="font-semibold text-gray-900">旅客友善度</dt>
               <dd class="text-right">{city.difficulty}</dd>
             </div>
           </dl>
           <div class="mt-5 grid gap-2 text-sm font-semibold">
-            <a href={city.href} class="text-brand-700 hover:text-brand-800">Open city guide</a>
+            <a href={city.href} class="text-brand-700 hover:text-brand-800">開啟城市指南</a>
             <a href={city.next} class="text-gray-700 hover:text-brand-700">{city.nextLabel}</a>
           </div>
         </article>
@@ -219,19 +227,19 @@ const faqJsonLd = {
     <section class="mt-12" aria-labelledby="compare-cities">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">City comparison</p>
-          <h2 id="compare-cities">Which China city should you choose?</h2>
+          <p class="section-kicker">城市比較</p>
+          <h2 id="compare-cities">你該選哪座 China 城市？</h2>
         </div>
       </div>
       <div class="mt-6 overflow-hidden rounded-lg border border-gray-200">
         <table class="min-w-full divide-y divide-gray-200 text-left text-sm">
           <thead class="bg-gray-50 text-xs font-semibold uppercase tracking-wide text-gray-600">
             <tr>
-              <th class="px-4 py-3">City</th>
-              <th class="px-4 py-3">Why go</th>
-              <th class="px-4 py-3">Suggested stay</th>
-              <th class="px-4 py-3">Best season</th>
-              <th class="px-4 py-3">Ease</th>
+              <th class="px-4 py-3">城市</th>
+              <th class="px-4 py-3">為什麼去</th>
+              <th class="px-4 py-3">建議停留</th>
+              <th class="px-4 py-3">最佳季節</th>
+              <th class="px-4 py-3">難易度</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100 bg-white">
@@ -253,12 +261,11 @@ const faqJsonLd = {
 
     <section class="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]" aria-labelledby="route-ideas">
       <div>
-        <p class="section-kicker">Route planning</p>
-        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">Practical city combinations</h2>
+        <p class="section-kicker">路線規劃</p>
+        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">實用城市組合</h2>
         <p class="mt-3 leading-7 text-gray-600">
-          A strong China itinerary usually works better when cities have different jobs. Use Shanghai as an easy
-          arrival point, Beijing for history, Hangzhou for scenery, Chengdu for food and western China access, and
-          Sanya for a warm-weather break. Avoid adding too many flights or train station transfers to a short trip.
+          好用的 China 行程通常會讓不同城市扮演不同角色。以上海作為輕鬆抵達點，北京負責歷史，杭州負責風景，成都負責美食與前往 China 西部的入口，
+          三亞則負責暖天氣休假。短途旅行應避免加入太多航班或火車站轉乘。
         </p>
       </div>
       <div class="grid gap-4">
@@ -276,8 +283,8 @@ const faqJsonLd = {
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">All city-related guides</p>
-            <h2>City articles and local transport</h2>
+            <p class="section-kicker">所有城市相關指南</p>
+            <h2>城市文章與當地交通</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
@@ -292,13 +299,13 @@ const faqJsonLd = {
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <p class="section-kicker">Before choosing a city</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">Check the logistics stack</h2>
+        <p class="section-kicker">選擇城市之前</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">檢查行程後勤配置</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-          <li><a href="/zh-tw/payment/" class="font-semibold text-brand-700">付款s:</a> set up Alipay, WeChat Pay, and cash backup before smaller-city travel.</li>
-          <li><a href="/zh-tw/esim/" class="font-semibold text-brand-700">Internet:</a> choose eSIM, roaming, or local SIM before relying on maps and translation.</li>
-          <li><a href="/zh-tw/transport/" class="font-semibold text-brand-700">交通:</a> compare trains, airport transfers, DiDi, and metro QR codes.</li>
-          <li><a href="/zh-tw/tools/best-time-to-visit/" class="font-semibold text-brand-700">Timing:</a> check weather, holidays, and crowd pressure by month.</li>
+          <li><a href="/zh-tw/payment/" class="font-semibold text-brand-700">付款：</a>前往較小城市前，先設定 Alipay、WeChat Pay，並準備現金備用。</li>
+          <li><a href="/zh-tw/esim/" class="font-semibold text-brand-700">網路：</a>在依賴地圖和翻譯之前，先選好 eSIM、漫遊或本地 SIM。</li>
+          <li><a href="/zh-tw/transport/" class="font-semibold text-brand-700">交通：</a>比較火車、機場接送、DiDi 和地鐵 QR 碼。</li>
+          <li><a href="/zh-tw/tools/best-time-to-visit/" class="font-semibold text-brand-700">時機：</a>按月份查看天氣、假期與人潮壓力。</li>
         </ul>
       </aside>
     </section>
@@ -306,8 +313,8 @@ const faqJsonLd = {
     <section class="mt-12" aria-labelledby="city-faq">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">City FAQ</p>
-          <h2 id="city-faq">Common China city planning questions</h2>
+          <p class="section-kicker">城市常見問題</p>
+          <h2 id="city-faq">常見 China 城市規劃問題</h2>
         </div>
       </div>
       <div class="mt-6 grid gap-4 md:grid-cols-3">

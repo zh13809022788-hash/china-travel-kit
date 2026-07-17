@@ -3,9 +3,9 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-const title = 'ChinaTripBox Editorial Team';
+const title = 'ChinaTripBox 編輯團隊';
 const description =
-  'About the ChinaTripBox editorial team, how we research practical China travel guides, and how readers can request corrections.';
+  '介紹 ChinaTripBox 編輯團隊、我們如何研究實用中國旅遊指南，以及讀者如何提出更正。';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -19,11 +19,11 @@ const jsonLd = {
     url: new URL('/', Astro.site).toString(),
   },
   knowsAbout: [
-    'China travel planning',
-    'mobile payments in China',
-    'China eSIM and internet access',
-    'China high-speed rail',
-    'foreign visitor logistics in China',
+    '中國旅遊規劃',
+    '中國行動支付',
+    '中國 eSIM 與網路連線',
+    '中國高鐵',
+    '外國旅客在中國的旅行安排',
   ],
 };
 ---
@@ -32,36 +32,28 @@ const jsonLd = {
   <Header locale="zh-TW" />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <p class="section-kicker">Author</p>
+      <p class="section-kicker">作者</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
 
-      <h2>Editorial Focus</h2>
+      <h2>編輯重點</h2>
       <p>
-        The ChinaTripBox editorial team writes practical guides for foreign visitors to China, with
-        a focus on payment setup, eSIM and internet access, high-speed rail, ride-hailing, airport
-        transfers, city planning, food ordering, and common first-trip problems.
+        ChinaTripBox 編輯團隊為前往中國的外國旅客撰寫實用指南，重點涵蓋付款設定、eSIM 與網路連線、高鐵、叫車、機場接送、城市規劃、點餐，以及首次旅行常見問題。
       </p>
 
-      <h2>How We Build Guides</h2>
+      <h2>我們如何製作指南</h2>
       <p>
-        We combine official sources, provider documentation, app help materials, reader questions,
-        traveler reports, and hands-on checks where possible. For fast-changing topics such as
-        visa-free entry, payment limits, app availability, and transport rules, we treat official
-        government or provider pages as the final source.
+        我們結合官方來源、服務商文件、App 說明資料、讀者問題、旅客回報，並在可行情況下進行實測。對於免簽入境、付款限額、App 可用性與交通規則等快速變動的主題，我們以政府或服務商官方頁面作為最終依據。
       </p>
 
-      <h2>Corrections</h2>
+      <h2>更正</h2>
       <p>
-        China travel logistics change quickly. If you find an outdated step, changed policy, broken
-        link, or missing caveat, please send the page URL through our <a href="/zh-tw/contact/">contact page</a>.
-        We review corrections and update affected guides when the evidence is clear.
+        中國旅行安排變動很快。如果你發現過時步驟、政策變更、失效連結或缺少提醒，請透過我們的 <a href="/zh-tw/contact/">聯絡頁面</a> 傳送頁面 URL。證據明確時，我們會審查更正並更新受影響的指南。
       </p>
 
       <h2>編輯政策</h2>
       <p>
-        Read our <a href="/zh-tw/editorial-policy/">editorial policy</a> for details on research,
-        updates, affiliate disclosure, independence, and limitations.
+        請閱讀我們的 <a href="/zh-tw/editorial-policy/">編輯政策</a>，了解研究、更新、聯盟揭露、獨立性與限制的詳細說明。
       </p>
 
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

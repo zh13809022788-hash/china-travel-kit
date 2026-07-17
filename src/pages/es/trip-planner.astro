@@ -1,22 +1,22 @@
-﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 
-const title = 'Free China Trip Planner';
+const title = 'Planificador gratuito de viaje a China';
 const description =
-  'Build a practical first China trip plan with payment, eSIM, transport, app setup, cash, and first-day checklist recommendations.';
+  'Crea un primer plan práctico para viajar a China con recomendaciones de pagos, eSIM, transporte, apps, efectivo y lista del primer día.';
 
 const needOptions = [
-  { value: 'payment', label: 'Pagos setup' },
-  { value: 'esim', label: 'eSIM and internet' },
-  { value: 'transport', label: 'Airport and trains' },
-  { value: 'hotel', label: 'Hotel area logic' },
-  { value: 'apps', label: 'Apps and translation' },
-  { value: 'cash', label: 'Cash backup' },
-  { value: 'visa', label: 'Visa-free entry' },
-  { value: 'food', label: 'Food and delivery' },
+  { value: 'payment', label: 'Configuración de pagos' },
+  { value: 'esim', label: 'eSIM e internet' },
+  { value: 'transport', label: 'Aeropuerto y trenes' },
+  { value: 'hotel', label: 'Elección de zona de hotel' },
+  { value: 'apps', label: 'Apps y traducción' },
+  { value: 'cash', label: 'Efectivo de respaldo' },
+  { value: 'visa', label: 'Entrada sin visa' },
+  { value: 'food', label: 'Comida y entrega' },
 ];
 ---
 
@@ -26,29 +26,29 @@ const needOptions = [
     <section class="border-b border-gray-200 bg-white">
       <div class="container-page grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
         <div>
-          <p class="section-kicker">Free planning tool</p>
+          <p class="section-kicker">Herramienta gratuita de planificación</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            Build a practical China arrival plan before you fly
+            Crea un plan práctico de llegada a China antes de volar
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            Get a first-pass plan for payments, eSIM data, airport transport, app setup,
-            cash backup, and daily pacing. It runs in your browser and does not save your answers.
+            Obtén un primer plan para pagos, datos eSIM, transporte desde el aeropuerto, configuración de apps,
+            efectivo de respaldo y ritmo diario. Funciona en tu navegador y no guarda tus respuestas.
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#planner" class="btn-primary">Start planning</a>
-            <a href="/es/travel-help/" class="btn-outline">Ask travel help</a>
-            <a href="/es/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Read first-time guide</a>
+            <a href="#planner" class="btn-primary">Empezar planificación</a>
+            <a href="/es/travel-help/" class="btn-outline">Pedir ayuda de viaje</a>
+            <a href="/es/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Leer guía para primera visita</a>
           </div>
         </div>
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
-          <p class="section-kicker">Best for</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">First-time visitor setup</h2>
+          <p class="section-kicker">Ideal para</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Preparación para primera visita</h2>
           <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-            <li>Pagos readiness before arrival</li>
-            <li>eSIM, roaming, and app access decisions</li>
-            <li>Airport-to-city first step planning</li>
-            <li>Simple city-by-city trip framework</li>
+            <li>Pagos listos antes de llegar</li>
+            <li>Decisiones de eSIM, roaming y acceso a apps</li>
+            <li>Primer paso del aeropuerto a la ciudad</li>
+            <li>Marco simple por ciudad</li>
           </ul>
         </aside>
       </div>
@@ -60,18 +60,18 @@ const needOptions = [
       <section id="planner" class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <form id="trip-planner-form" class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm md:p-6">
           <div class="border-b border-gray-200 pb-5">
-            <p class="section-kicker">Trip details</p>
-            <h2 class="mt-2 text-2xl font-bold text-gray-950">Tell us what you know</h2>
+            <p class="section-kicker">Detalles del viaje</p>
+            <h2 class="mt-2 text-2xl font-bold text-gray-950">Cuéntanos lo que sabes</h2>
           </div>
 
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Home country or region
+              País o región de origen
               <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="United States, UK, Singapore..." />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Arrival city
+              Ciudad de llegada
               <select id="arrival-city" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
                 <option>Shanghai</option>
                 <option>Beijing</option>
@@ -79,63 +79,63 @@ const needOptions = [
                 <option>Shenzhen</option>
                 <option>Chengdu</option>
                 <option>Hangzhou</option>
-                <option>Other city</option>
+                <option>Otra ciudad</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800 md:col-span-2">
-              Destination cities
+              Ciudades de destino
               <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="Shanghai, Hangzhou, Beijing" />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Trip length
+              Duración del viaje
               <select id="trip-length" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option value="3">3 days</option>
-                <option value="5">5 days</option>
-                <option value="7" selected>7 days</option>
-                <option value="10">10 days</option>
-                <option value="14">14 days</option>
-                <option value="21">21 days or more</option>
+                <option value="3">3 días</option>
+                <option value="5">5 días</option>
+                <option value="7" selected>7 días</option>
+                <option value="10">10 días</option>
+                <option value="14">14 días</option>
+                <option value="21">21 días o más</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Travel purpose
+              Motivo del viaje
               <select id="trip-purpose" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>Tourism</option>
-                <option>Business</option>
-                <option>Long stay</option>
-                <option>Digital nomad</option>
-                <option>Family visit</option>
-                <option>Transit</option>
+                <option>Turismo</option>
+                <option>Negocios</option>
+                <option>Estancia larga</option>
+                <option>Nómada digital</option>
+                <option>Visita familiar</option>
+                <option>Tránsito</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Budget range
+              Rango de presupuesto
               <select id="budget-range" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>Budget</option>
-                <option selected>Comfort</option>
+                <option>Económico</option>
+                <option selected>Cómodo</option>
                 <option>Premium</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Travel style
+              Estilo de viaje
               <select id="travel-style" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>Efficient</option>
-                <option>Budget</option>
-                <option selected>Comfort</option>
-                <option>Family</option>
-                <option>Business</option>
-                <option>Food-focused</option>
+                <option>Eficiente</option>
+                <option>Económico</option>
+                <option selected>Cómodo</option>
+                <option>Familia</option>
+                <option>Negocios</option>
+                <option>Centrado en comida</option>
               </select>
             </label>
           </div>
 
           <fieldset class="mt-6">
-            <legend class="text-sm font-semibold text-gray-800">What do you need help with?</legend>
+            <legend class="text-sm font-semibold text-gray-800">¿Con qué necesitas ayuda?</legend>
             <div class="mt-3 grid gap-3 sm:grid-cols-2">
               {needOptions.map((option) => (
                 <label class="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700">
@@ -147,30 +147,30 @@ const needOptions = [
           </fieldset>
 
           <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p id="planner-status" class="text-sm text-gray-500">No account or sensitive data needed.</p>
-            <button class="btn-primary" type="submit">Generate plan</button>
+            <p id="planner-status" class="text-sm text-gray-500">No necesitas cuenta ni datos sensibles.</p>
+            <button class="btn-primary" type="submit">Generar plan</button>
           </div>
         </form>
 
         <aside class="space-y-6">
           <section class="rounded-lg border border-gray-200 bg-white p-5">
-            <p class="section-kicker">Upgrade path</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">Need human review?</h2>
+            <p class="section-kicker">Vía de mejora</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">¿Necesitas revisión humana?</h2>
             <p class="mt-3 text-sm leading-6 text-gray-600">
-              If your route, timing, payment setup, or first day feels risky, send the generated
-              plan by email and ask for a human-reviewed correction list.
+              Si tu ruta, tiempos, pagos o primer día parecen arriesgados, envía el plan generado
+              por email y pide una lista de correcciones revisada por una persona.
             </p>
             <a id="planner-email-link" class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 hover:border-brand-600 hover:text-brand-600 hover:no-underline" href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Trip%20Review%20Request">
-              Prepare review email
+              Preparar email de revisión
             </a>
           </section>
 
           <section class="rounded-lg border border-amber-200 bg-amber-50 p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">Limits</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">Use this as planning help</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">Límites</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">Úsalo como ayuda de planificación</h2>
             <p class="mt-3 text-sm leading-6 text-gray-700">
-              This tool is not legal, immigration, medical, banking, or emergency advice. Verify
-              important entry, airline, hotel, card, telecom, and app rules with official sources.
+              Esta herramienta no es asesoramiento legal, migratorio, médico, bancario ni de emergencia. Verifica
+              normas importantes de entrada, aerolínea, hotel, tarjeta, telecomunicaciones y apps con fuentes oficiales.
             </p>
           </section>
         </aside>
@@ -178,8 +178,8 @@ const needOptions = [
 
       <section id="plan-output" class="mt-10 hidden rounded-lg border border-brand-100 bg-brand-50 p-5 md:p-6" aria-live="polite">
         <div class="border-b border-brand-100 pb-4">
-          <p class="section-kicker">Generated plan</p>
-          <h2 class="mt-2 text-2xl font-bold text-gray-950">Your China trip setup draft</h2>
+          <p class="section-kicker">Plan generado</p>
+          <h2 class="mt-2 text-2xl font-bold text-gray-950">Borrador de preparación para tu viaje a China</h2>
         </div>
         <div id="plan-content" class="mt-5 grid gap-5"></div>
       </section>
@@ -187,32 +187,32 @@ const needOptions = [
       <section class="mt-12 grid gap-5 md:grid-cols-3">
         <a href="/es/payment/" class="card block hover:no-underline">
           <p class="section-kicker">Pagos</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Prepare Alipay and WeChat Pay</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Set up at least one wallet and one backup payment method before arrival.</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Prepara Alipay y WeChat Pay</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Configura al menos una billetera y un método de pago de respaldo antes de llegar.</p>
         </a>
         <a href="/es/esim/" class="card block hover:no-underline">
           <p class="section-kicker">Internet</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Choose an eSIM or roaming setup</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Make sure you can load maps, translate, message, and call a ride on day one.</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Elige eSIM o roaming</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Asegúrate de poder cargar mapas, traducir, enviar mensajes y pedir transporte el primer día.</p>
         </a>
         <a href="/es/transport/" class="card block hover:no-underline">
           <p class="section-kicker">Transporte</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Plan your first route</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Know your airport-to-hotel route and when to use metro, taxi, DiDi, or train.</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Planifica tu primera ruta</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Conoce tu ruta del aeropuerto al hotel y cuándo usar metro, taxi, DiDi o tren.</p>
         </a>
       </section>
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
-        <p class="section-kicker">Before using the planner</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">Read the setup guides if this is your first China trip</h2>
+        <p class="section-kicker">Antes de usar el planificador</p>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">Lee las guías de preparación si es tu primer viaje a China</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
           <a href="/es/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">China trip planner for first-time visitors</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Use the same planning order as this tool: internet, payment, airport route, apps, city order, and first-day checklist.</p>
+            <h3 class="font-bold text-gray-950">Planificador de viaje a China para primera visita</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Usa el mismo orden que esta herramienta: internet, pagos, ruta desde el aeropuerto, apps, orden de ciudades y lista del primer día.</p>
           </a>
           <a href="/es/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">What to set up before traveling to China</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">A practical pre-departure checklist for Alipay, WeChat Pay, eSIM, DiDi, train tickets, maps, and cash backup.</p>
+            <h3 class="font-bold text-gray-950">Qué configurar antes de viajar a China</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Lista práctica previa a la salida para Alipay, WeChat Pay, eSIM, DiDi, billetes de tren, mapas y efectivo.</p>
           </a>
         </div>
       </section>
@@ -258,97 +258,97 @@ const needOptions = [
   `;
 
   const buildPlan = () => {
-    const home = getValue('home-country') || 'your home country';
+    const home = getValue('home-country') || 'tu país de origen';
     const arrival = getValue('arrival-city') || 'Shanghai';
     const cities = splitCities(getValue('destination-cities'), arrival);
     const days = Number(getValue('trip-length') || '7');
-    const purpose = getValue('trip-purpose') || 'Tourism';
-    const budget = getValue('budget-range') || 'Comfort';
-    const style = getValue('travel-style') || 'Comfort';
+    const purpose = getValue('trip-purpose') || 'Turismo';
+    const budget = getValue('budget-range') || 'Cómodo';
+    const style = getValue('travel-style') || 'Cómodo';
     const needs = selectedNeeds();
     const perCity = Math.max(1, Math.floor(days / Math.max(1, cities.length)));
 
     const preDeparture = [
       `Install Alipay, WeChat, DiDi, a translation app, and an offline map before leaving ${escapeHtml(home)}.`,
       needs.includes('payment')
-        ? 'Link one foreign Visa or Mastercard to Alipay and try a small verification before departure.'
-        : 'Keep payment setup simple: one mobile wallet, one physical card, and some RMB cash.',
+        ? 'Vincula una Visa o Mastercard extranjera a Alipay y prueba una verificación pequeña antes de salir.'
+        : 'Mantén los pagos simples: una billetera móvil, una tarjeta física y algo de efectivo en RMB.',
       needs.includes('esim')
-        ? 'Buy and activate an eSIM or roaming plan before the flight, then keep the QR code available offline.'
-        : 'Confirm your phone will have data on arrival before depending on maps or ride-hailing.',
-      'Save your hotel address in English and Chinese, plus the nearest metro station.',
+        ? 'Compra y activa una eSIM o plan de roaming antes del vuelo, y guarda el código QR offline.'
+        : 'Confirma que tu teléfono tendrá datos al llegar antes de depender de mapas o transporte.',
+      'Guarda la dirección de tu hotel en inglés y chino, además de la estación de metro más cercana.',
     ];
 
     const payment = [
-      'Primary setup: Alipay with a foreign card, because it is usually the most practical first wallet for visitors.',
-      'Backup setup: WeChat Pay if your card links successfully, plus one physical Visa or Mastercard.',
-      budget === 'Budget'
-        ? 'Cash backup: carry a small amount of RMB for stalls, deposits, or card/wallet issues.'
-        : 'Cash backup: keep enough RMB for taxi, snacks, and one simple meal in case mobile payment fails.',
-      'Do not rely on Apple Pay or Google Pay as your main payment method in mainland China.',
+      'Configuración principal: Alipay con tarjeta extranjera, porque suele ser la primera billetera más práctica para visitantes.',
+      'Respaldo: WeChat Pay si tu tarjeta se vincula correctamente, más una Visa o Mastercard física.',
+      budget === 'Económico'
+        ? 'Efectivo de respaldo: carry a small amount of RMB for stalls, deposits, or card/wallet issues.'
+        : 'Efectivo de respaldo: keep enough RMB for taxi, snacks, and one simple meal in case mobile payment fails.',
+      'No dependas de Apple Pay o Google Pay como método principal en China continental.',
     ];
 
     const internet = [
-      'For short trips, a travel eSIM is usually the easiest setup if your phone supports eSIM.',
-      'For longer stays or heavy data use, compare roaming, eSIM, pocket WiFi, and local SIM options before arrival.',
-      'Test mobile data before leaving the airport, because payment apps, ride-hailing, translation, and maps all depend on it.',
-      'Save hotel and transport information offline in case your first connection is unstable.',
+      'Para viajes cortos, una eSIM de viaje suele ser lo más fácil si tu teléfono la admite.',
+      'Para estancias largas o mucho uso de datos, compara roaming, eSIM, pocket WiFi y SIM local antes de llegar.',
+      'Prueba los datos móviles antes de salir del aeropuerto, porque pagos, transporte, traducción y mapas dependen de ellos.',
+      'Guarda información de hotel y transporte offline por si la primera conexión es inestable.',
     ];
 
     const transport = [
       `First route: plan ${escapeHtml(arrival)} airport or station to hotel before landing.`,
-      'Use metro for predictable city routes, DiDi for door-to-door trips, and high-speed rail for city-to-city travel.',
+      'Usa metro para rutas urbanas predecibles, DiDi para puerta a puerta y tren de alta velocidad entre ciudades.',
       needs.includes('transport')
-        ? 'For train days, book earlier when possible and keep passport details consistent with the ticket platform.'
-        : 'Avoid tight same-day transfers between international flights and long-distance trains.',
-      'Keep a Chinese address card ready for taxis or hotel front desks.',
+        ? 'Para días de tren, reserva con antelación cuando sea posible y mantén los datos del pasaporte iguales en la plataforma.'
+        : 'Evita conexiones ajustadas el mismo día entre vuelos internacionales y trenes de larga distancia.',
+      'Ten preparada una tarjeta de dirección en chino para taxis o recepciones de hotel.',
     ];
 
     const dayPlan = cities.map((city, index) => {
       const start = index * perCity + 1;
       const end = index === cities.length - 1 ? days : Math.min(days, start + perCity - 1);
-      return `Days ${start}-${end}: ${escapeHtml(city)} - keep the first half-day lighter, confirm payment/data, then group sights by district.`;
+      return `Days ${start}-${end}: ${escapeHtml(city)} - mantén ligera la primera media jornada, confirma pagos/datos y agrupa visitas por distrito.`;
     });
 
     const mistakes = [
-      'Do not wait until arrival to set up every app, card, and data plan.',
-      'Do not schedule a packed sightseeing day immediately after a long-haul flight.',
-      'Do not depend on one payment method only.',
-      purpose === 'Business'
-        ? 'For business travel, keep extra time for traffic, security checks, invoices, and building access.'
-        : 'For leisure travel, leave one flexible block every two or three days for weather, crowds, or fatigue.',
-      style === 'Food-focused'
-        ? 'For food-focused trips, save restaurant names in Chinese and confirm opening hours before crossing town.'
-        : 'Keep a simple backup plan for meals near your hotel.',
+      'No esperes a llegar para configurar todas las apps, tarjetas y datos.',
+      'No programes un día de visitas intenso justo después de un vuelo largo.',
+      'No dependas de un solo método de pago.',
+      purpose === 'Negocios'
+        ? 'Para viajes de negocios, deja tiempo extra para tráfico, controles de seguridad, facturas y acceso a edificios.'
+        : 'Para ocio, deja un bloque flexible cada dos o tres días por clima, multitudes o cansancio.',
+      style === 'Centrado en comida'
+        ? 'Para viajes centrados en comida, guarda nombres de restaurantes en chino y confirma horarios antes de cruzar la ciudad.'
+        : 'Ten un plan simple de comidas cerca del hotel.',
     ];
 
     const html = [
-      panel('Pre-departure checklist', preDeparture),
-      panel('Pagos and cash setup', payment),
-      panel('Internet and app setup', internet),
-      panel('Transporte and first day', transport),
-      panel('Simple day-by-day framework', dayPlan),
-      panel('Common mistake warnings', mistakes),
+      panel('Lista previa a la salida', preDeparture),
+      panel('Configuración de pagos y efectivo', payment),
+      panel('Configuración de internet y apps', internet),
+      panel('Transporte y primer día', transport),
+      panel('Marco simple día a día', dayPlan),
+      panel('Avisos de errores comunes', mistakes),
     ].join('');
 
     const emailBody = [
-      'ChinaTripBox Trip Review Request',
+      'Solicitud de revisión de viaje ChinaTripBox',
       '',
-      `Home country or region: ${home}`,
-      `Arrival city: ${arrival}`,
-      `Destination cities: ${cities.join(', ')}`,
-      `Trip length: ${days} days`,
-      `Purpose: ${purpose}`,
-      `Budget: ${budget}`,
-      `Style: ${style}`,
-      `Needs: ${needs.join(', ') || 'not specified'}`,
+      `País o región de origen: ${home}`,
+      `Ciudad de llegada: ${arrival}`,
+      `Ciudades de destino: ${cities.join(', ')}`,
+      `Duración del viaje: ${days} days`,
+      `Motivo: ${purpose}`,
+      `Económico: ${budget}`,
+      `Estilo: ${style}`,
+      `Necesidades: ${needs.join(', ') || 'no especificado'}`,
       '',
-      'Please review my China trip setup for payment, eSIM, transport, timing, and first-day mistakes.',
+      'Por favor revisa mi preparación de viaje a China para pagos, eSIM, transporte, tiempos y errores del primer día.',
     ].join('\n');
 
     if (emailLink) {
       emailLink.href = `mailto:zh13809022788@gmail.com?subject=${encodeURIComponent(
-        'ChinaTripBox Trip Review Request',
+        'Solicitud de revisión de viaje ChinaTripBox',
       )}&body=${encodeURIComponent(emailBody)}`;
     }
 
@@ -361,6 +361,6 @@ const needOptions = [
     content.innerHTML = buildPlan();
     output.classList.remove('hidden');
     output.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (status) status.textContent = 'Plan generated. Adjust your answers and regenerate any time.';
+    if (status) status.textContent = 'Plan generado. Ajusta tus respuestas y vuelve a generarlo cuando quieras.';
   });
 </script>

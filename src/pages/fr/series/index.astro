@@ -3,38 +3,38 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-const title = 'China Travel Content Series';
-const description = 'Explore China through five themed series: food, history, modern life, nature, and culture — each designed to inspire and inform foreign travelers.';
+const title = 'Séries de contenus sur le voyage en Chine';
+const description = 'Explorez la Chine à travers cinq séries thématiques : cuisine, histoire, vie moderne, nature et culture, chacune conçue pour inspirer et informer les voyageurs étrangers.';
 
 const seriesList = [
   {
     href: '/fr/series/food-of-china/',
-    title: 'Food of China',
-    desc: 'From street stalls to banquet halls — a foreigner\'s culinary journey through eight great cuisines, regional breakfasts, hot pot styles, and the dishes worth crossing a city for.',
-    icon: 'Food & Drink',
+    title: 'Cuisine de Chine',
+    desc: 'Des stands de rue aux salles de banquet : un voyage culinaire pour visiteurs étrangers à travers les huit grandes cuisines, les petits-déjeuners régionaux, les styles de fondue et les plats qui valent de traverser la ville.',
+    icon: 'Cuisine et boissons',
   },
   {
     href: '/fr/series/history-of-china/',
-    title: 'History of China',
-    desc: 'Ancient sites decoded for travelers — the Great Wall, Terracotta Army, Forbidden City, Silk Road, and the stories behind what you\'re actually looking at.',
-    icon: 'History',
+    title: 'Histoire de la Chine',
+    desc: 'Les sites anciens expliqués aux voyageurs : Grande Muraille, armée de terre cuite, Cité interdite, route de la soie et récits derrière ce que vous avez réellement sous les yeux.',
+    icon: 'Histoire',
   },
   {
     href: '/fr/series/modern-china/',
-    title: 'Modern China',
-    desc: 'What surprises foreigners most — cashless streets, the world\'s fastest trains, megacity scale, super apps, and the everyday tech that defines life in China today.',
-    icon: 'Modern Life',
+    title: 'Chine moderne',
+    desc: 'Ce qui surprend le plus les étrangers : rues sans espèces, trains parmi les plus rapides du monde, mégapoles immenses, super apps et technologies du quotidien qui définissent la vie en Chine aujourd’hui.',
+    icon: 'Vie moderne',
   },
   {
     href: '/fr/series/nature-of-china/',
-    title: 'Nature of China',
-    desc: 'Avatar mountains, fairy-tale lakes, karst landscapes, and the Tibetan plateau — China\'s most spectacular natural sites with practical guides for foreign visitors.',
+    title: 'Nature de Chine',
+    desc: 'Montagnes d’Avatar, lacs de conte de fées, paysages karstiques et plateau tibétain : les sites naturels les plus spectaculaires de Chine avec des guides pratiques pour visiteurs étrangers.',
     icon: 'Nature',
   },
   {
     href: '/fr/series/culture-of-china/',
-    title: 'Culture of China',
-    desc: 'Tea ceremony, Spring Festival, face and guanxi, calligraphy, kung fu, and the zodiac — cultural traditions explained for travelers who want to go beyond surface tourism.',
+    title: 'Culture chinoise',
+    desc: 'Cérémonie du thé, fête du Printemps, face et guanxi, calligraphie, kung-fu et zodiaque : des traditions culturelles expliquées aux voyageurs qui veulent dépasser le tourisme de surface.',
     icon: 'Culture',
   },
 ];
@@ -44,7 +44,7 @@ const seriesList = [
   <Header locale="fr" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content Series</p>
+      <p class="section-kicker">Séries thématiques</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -55,7 +55,7 @@ const seriesList = [
           <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{s.icon}</span>
           <h2 class="mt-2 text-xl font-bold text-gray-950">{s.title}</h2>
           <p class="mt-2 text-sm leading-6 text-gray-600">{s.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Explore series</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Explorer la série</span>
         </a>
       ))}
     </section>

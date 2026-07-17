@@ -4,20 +4,20 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const title = 'Show to Driver: Chinese Address Card';
+const title = 'Показать водителю: карточка адреса на китайском';
 const description =
-  'Create a large Chinese message card on your phone for taxi drivers, hotel staff, and asking directions in China. No login, no app install, no personal data saved.';
+  'Создайте на телефоне крупную карточку с китайским текстом для водителей такси, сотрудников отеля и вопросов о маршруте в China. Без входа, установки приложения и сохранения личных данных.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
   <Header locale="ru" />
   <main class="container-page py-8 md:py-10">
     <header class="max-w-3xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Show to Driver</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Инструмент</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Показать водителю</h1>
       <p class="mt-3 text-lg text-gray-600">
-        Generate a large Chinese card for taxis, ride-hailing pickups, hotel front desks, and asking
-        for directions. Everything runs in your browser.
+        Создайте крупную карточку на китайском для такси, посадки в машине через приложение, стойки
+        регистрации отеля и вопросов о направлении. Всё работает в вашем браузере.
       </p>
     </header>
 
@@ -27,53 +27,53 @@ const description =
       <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
         <div class="grid gap-4">
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Chinese address or place name</span>
+            <span class="mb-1 font-medium text-gray-700">Китайский адрес или название места</span>
             <textarea
               id="destination"
               rows="4"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Paste the Chinese address from Amap, Trip.com, your hotel booking, or a friend."
+              placeholder="Вставьте китайский адрес из Amap, Trip.com, бронирования отеля или сообщения друга."
             ></textarea>
             <span class="mt-1 text-xs text-gray-500">
-              Best result: paste the Chinese name/address. English-only place names may be hard for a
-              local driver to identify.
+              Лучший результат: вставьте китайское название или адрес. Названия только на английском
+              местному водителю может быть трудно распознать.
             </span>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Optional note</span>
+            <span class="mb-1 font-medium text-gray-700">Необязательная заметка</span>
             <select id="note" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-              <option value="route">Please follow navigation and take me to this address.</option>
-              <option value="pickup">I am waiting here. Please call or message me in the app.</option>
-              <option value="hotel">Please help me get to this hotel or contact the front desk.</option>
-              <option value="stop">Please stop here if it is safe and legal.</option>
-              <option value="receipt">Please give me a receipt if possible.</option>
+              <option value="route">Пожалуйста, следуйте навигации и отвезите меня по этому адресу.</option>
+              <option value="pickup">Я жду здесь. Пожалуйста, позвоните или напишите мне в приложении.</option>
+              <option value="hotel">Пожалуйста, помогите мне добраться до этого отеля или свяжитесь со стойкой регистрации.</option>
+              <option value="stop">Пожалуйста, остановитесь здесь, если это безопасно и законно.</option>
+              <option value="receipt">Пожалуйста, дайте мне чек, если возможно.</option>
             </select>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Extra details for the driver</span>
+            <span class="mb-1 font-medium text-gray-700">Дополнительные детали для водителя</span>
             <input
               id="extra"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Gate number, hotel lobby, pickup point, luggage, etc."
+              placeholder="Номер выхода, лобби отеля, точка посадки, багаж и т. д."
             />
           </label>
 
           <div class="grid gap-3 sm:grid-cols-2">
-            <button id="generate-btn" class="btn-primary">Generate Card</button>
+            <button id="generate-btn" class="btn-primary">Создать карточку</button>
             <button
               id="clear-btn"
               class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400"
             >
-              Clear
+              Очистить
             </button>
           </div>
         </div>
 
         <div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-          This tool does not book rides or contact drivers. For emergencies, contact local emergency
-          services or your hotel first.
+          Этот инструмент не бронирует поездки и не связывается с водителями. В экстренной ситуации
+          сначала обратитесь в местные службы экстренной помощи или в ваш отель.
         </div>
       </div>
 
@@ -81,11 +81,11 @@ const description =
         <div id="driver-card" class="rounded-xl border border-gray-900 bg-white p-5 shadow-sm">
           <div class="flex items-center justify-between gap-3 border-b border-gray-200 pb-3">
             <div>
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Show this screen</p>
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Покажите этот экран</p>
               <h2 class="text-lg font-bold text-gray-900">给司机看的中文小条</h2>
             </div>
             <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
-              Offline
+              Офлайн
             </span>
           </div>
 
@@ -107,29 +107,29 @@ const description =
 
           <div class="grid gap-3 border-t border-gray-200 pt-4 sm:grid-cols-3">
             <button id="copy-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
-              Copy Text
+              Скопировать текст
             </button>
             <button id="fullscreen-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
-              Full Screen
+              На весь экран
             </button>
             <a href="/ru/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
-              Ask AI Help
+              Спросить AI
             </a>
           </div>
         </div>
 
         <div class="mt-5 grid gap-3 sm:grid-cols-2">
           <button data-quick="请问这个地址怎么走？谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Ask for directions
+            Спросить дорогу
           </button>
           <button data-quick="我不会说中文，请用翻译软件和我沟通，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            I do not speak Chinese
+            Я не говорю по-китайски
           </button>
           <button data-quick="请在安全合法的地方停车，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Stop safely
+            Остановиться безопасно
           </button>
           <button data-quick="如果找不到我，请在打车软件里发消息。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Message me in the app
+            Напишите мне в приложении
           </button>
         </div>
       </section>
@@ -215,12 +215,12 @@ const description =
   copyBtn?.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(cardText());
-      copyBtn.textContent = 'Copied';
+      copyBtn.textContent = 'Скопировано';
       window.setTimeout(() => {
-        copyBtn.textContent = 'Copy Text';
+        copyBtn.textContent = 'Скопировать текст';
       }, 1400);
     } catch {
-      copyBtn.textContent = 'Copy failed';
+      copyBtn.textContent = 'Не удалось скопировать';
     }
   });
 
@@ -228,16 +228,16 @@ const description =
     if (!card) return;
     if (!document.fullscreenElement) {
       await card.requestFullscreen?.();
-      fullscreenBtn.textContent = 'Exit Full Screen';
+      fullscreenBtn.textContent = 'Выйти из полноэкранного режима';
     } else {
       await document.exitFullscreen?.();
-      fullscreenBtn.textContent = 'Full Screen';
+      fullscreenBtn.textContent = 'На весь экран';
     }
   });
 
   document.addEventListener('fullscreenchange', () => {
     if (!fullscreenBtn) return;
-    fullscreenBtn.textContent = document.fullscreenElement ? 'Exit Full Screen' : 'Full Screen';
+    fullscreenBtn.textContent = document.fullscreenElement ? 'Выйти из полноэкранного режима' : 'На весь экран';
   });
 
   quickButtons.forEach((button) => {

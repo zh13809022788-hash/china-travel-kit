@@ -4,20 +4,20 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const title = 'Show to Driver: Chinese Address Card';
+const title = 'ドライバーに見せる：中国語住所カード';
 const description =
-  'Create a large Chinese message card on your phone for taxi drivers, hotel staff, and asking directions in China. No login, no app install, no personal data saved.';
+  'Chinaでタクシードライバー、ホテルスタッフ、道案内を頼む相手に見せる大きな中国語メッセージカードをスマートフォンで作成できます。ログイン不要、アプリのインストール不要、個人データは保存されません。';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />
   <main class="container-page py-8 md:py-10">
     <header class="max-w-3xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Show to Driver</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">ドライバーに見せる</h1>
       <p class="mt-3 text-lg text-gray-600">
-        Generate a large Chinese card for taxis, ride-hailing pickups, hotel front desks, and asking
-        for directions. Everything runs in your browser.
+        タクシー、配車サービスの乗車地点、ホテルのフロント、道案内を頼む場面で使える大きな中国語カードを作成します。
+        すべてブラウザ内で動作します。
       </p>
     </header>
 
@@ -27,53 +27,52 @@ const description =
       <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
         <div class="grid gap-4">
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Chinese address or place name</span>
+            <span class="mb-1 font-medium text-gray-700">中国語の住所または場所名</span>
             <textarea
               id="destination"
               rows="4"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Paste the Chinese address from Amap, Trip.com, your hotel booking, or a friend."
+              placeholder="Amap、Trip.com、ホテル予約、友人から受け取った中国語住所を貼り付けてください。"
             ></textarea>
             <span class="mt-1 text-xs text-gray-500">
-              Best result: paste the Chinese name/address. English-only place names may be hard for a
-              local driver to identify.
+              最適な結果を得るには、中国語の名称または住所を貼り付けてください。英語だけの場所名は、
+              現地のドライバーが特定しにくい場合があります。
             </span>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Optional note</span>
+            <span class="mb-1 font-medium text-gray-700">任意のメモ</span>
             <select id="note" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-              <option value="route">Please follow navigation and take me to this address.</option>
-              <option value="pickup">I am waiting here. Please call or message me in the app.</option>
-              <option value="hotel">Please help me get to this hotel or contact the front desk.</option>
-              <option value="stop">Please stop here if it is safe and legal.</option>
-              <option value="receipt">Please give me a receipt if possible.</option>
+              <option value="route">ナビに従って、この住所まで連れて行ってください。</option>
+              <option value="pickup">ここで待っています。アプリで電話またはメッセージをください。</option>
+              <option value="hotel">このホテルまで行けるよう手伝うか、フロントに連絡してください。</option>
+              <option value="stop">安全かつ合法であれば、ここで停車してください。</option>
+              <option value="receipt">可能であれば領収書をください。</option>
             </select>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Extra details for the driver</span>
+            <span class="mb-1 font-medium text-gray-700">ドライバー向けの追加情報</span>
             <input
               id="extra"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Gate number, hotel lobby, pickup point, luggage, etc."
+              placeholder="ゲート番号、ホテルロビー、乗車地点、荷物など"
             />
           </label>
 
           <div class="grid gap-3 sm:grid-cols-2">
-            <button id="generate-btn" class="btn-primary">Generate Card</button>
+            <button id="generate-btn" class="btn-primary">カードを作成</button>
             <button
               id="clear-btn"
               class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400"
             >
-              Clear
+              クリア
             </button>
           </div>
         </div>
 
         <div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-          This tool does not book rides or contact drivers. For emergencies, contact local emergency
-          services or your hotel first.
+          このツールは配車予約やドライバーへの連絡を行いません。緊急時は、まず現地の緊急サービスまたはホテルに連絡してください。
         </div>
       </div>
 
@@ -81,11 +80,11 @@ const description =
         <div id="driver-card" class="rounded-xl border border-gray-900 bg-white p-5 shadow-sm">
           <div class="flex items-center justify-between gap-3 border-b border-gray-200 pb-3">
             <div>
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Show this screen</p>
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">この画面を見せてください</p>
               <h2 class="text-lg font-bold text-gray-900">给司机看的中文小条</h2>
             </div>
             <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
-              Offline
+              オフライン
             </span>
           </div>
 
@@ -107,29 +106,29 @@ const description =
 
           <div class="grid gap-3 border-t border-gray-200 pt-4 sm:grid-cols-3">
             <button id="copy-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
-              Copy Text
+              テキストをコピー
             </button>
             <button id="fullscreen-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
-              Full Screen
+              全画面表示
             </button>
             <a href="/ja/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
-              Ask AI Help
+              AIに相談
             </a>
           </div>
         </div>
 
         <div class="mt-5 grid gap-3 sm:grid-cols-2">
           <button data-quick="请问这个地址怎么走？谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Ask for directions
+            道を尋ねる
           </button>
           <button data-quick="我不会说中文，请用翻译软件和我沟通，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            I do not speak Chinese
+            中国語を話せません
           </button>
           <button data-quick="请在安全合法的地方停车，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Stop safely
+            安全に停車
           </button>
           <button data-quick="如果找不到我，请在打车软件里发消息。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Message me in the app
+            アプリでメッセージ
           </button>
         </div>
       </section>
@@ -215,12 +214,12 @@ const description =
   copyBtn?.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(cardText());
-      copyBtn.textContent = 'Copied';
+      copyBtn.textContent = 'コピーしました';
       window.setTimeout(() => {
-        copyBtn.textContent = 'Copy Text';
+        copyBtn.textContent = 'テキストをコピー';
       }, 1400);
     } catch {
-      copyBtn.textContent = 'Copy failed';
+      copyBtn.textContent = 'コピーに失敗しました';
     }
   });
 
@@ -228,16 +227,16 @@ const description =
     if (!card) return;
     if (!document.fullscreenElement) {
       await card.requestFullscreen?.();
-      fullscreenBtn.textContent = 'Exit Full Screen';
+      fullscreenBtn.textContent = '全画面表示を終了';
     } else {
       await document.exitFullscreen?.();
-      fullscreenBtn.textContent = 'Full Screen';
+      fullscreenBtn.textContent = '全画面表示';
     }
   });
 
   document.addEventListener('fullscreenchange', () => {
     if (!fullscreenBtn) return;
-    fullscreenBtn.textContent = document.fullscreenElement ? 'Exit Full Screen' : 'Full Screen';
+    fullscreenBtn.textContent = document.fullscreenElement ? '全画面表示を終了' : '全画面表示';
   });
 
   quickButtons.forEach((button) => {

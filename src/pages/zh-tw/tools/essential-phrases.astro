@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Essential Chinese Phrases for Travelers';
+const title = '旅客必備中文常用語';
 const description =
-  'A handy, printable list of essential Mandarin Chinese phrases for tourists in China — with pinyin and English. Covers greetings, payment, transport, food, and emergencies.';
+  '一份方便列印的中國旅遊必備普通話常用語清單，附拼音與繁體中文說明。涵蓋問候、付款、交通、餐飲與緊急情況。';
 
 interface Phrase {
   en: string;
@@ -24,60 +24,60 @@ interface Group {
 
 const groups: Group[] = [
   {
-    id: 'basics', label: 'Greetings & Basics', icon: '👋',
+    id: 'basics', label: '問候與基本用語', icon: '👋',
     phrases: [
-      { en: 'Hello', zh: '你好', pinyin: 'nǐ hǎo' },
-      { en: 'Thank you', zh: '谢谢', pinyin: 'xièxie' },
-      { en: "You're welcome", zh: '不客气', pinyin: 'bú kèqi' },
-      { en: 'Sorry / Excuse me', zh: '对不起', pinyin: 'duìbuqǐ' },
-      { en: 'Yes / Correct', zh: '对', pinyin: 'duì' },
-      { en: 'No / Not', zh: '不是', pinyin: 'bú shì' },
-      { en: 'I don\'t understand', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
-      { en: 'Do you speak English?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
+      { en: '你好', zh: '你好', pinyin: 'nǐ hǎo' },
+      { en: '謝謝', zh: '谢谢', pinyin: 'xièxie' },
+      { en: '不客氣', zh: '不客气', pinyin: 'bú kèqi' },
+      { en: '對不起／不好意思', zh: '对不起', pinyin: 'duìbuqǐ' },
+      { en: '是／對', zh: '对', pinyin: 'duì' },
+      { en: '不是／不', zh: '不是', pinyin: 'bú shì' },
+      { en: '我聽不懂', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
+      { en: '你會說英語嗎？', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
     ],
   },
   {
-    id: 'payment', label: 'Money & 付款', icon: '💳',
+    id: 'payment', label: '金錢與付款', icon: '💳',
     phrases: [
-      { en: 'How much is it?', zh: '多少钱？', pinyin: 'duōshao qián?' },
-      { en: 'Can I use Alipay?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
-      { en: 'Can I use WeChat Pay?', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng wēixìn zhīfù ma?' },
-      { en: 'Too expensive', zh: '太贵了', pinyin: 'tài guì le' },
-      { en: 'Can I pay by card?', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
-      { en: 'I\'ll scan your code', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
+      { en: '多少錢？', zh: '多少钱？', pinyin: 'duōshao qián?' },
+      { en: '可以用 Alipay 嗎？', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
+      { en: '可以用 WeChat Pay 嗎？', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng wēixìn zhīfù ma?' },
+      { en: '太貴了', zh: '太贵了', pinyin: 'tài guì le' },
+      { en: '可以刷卡嗎？', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
+      { en: '我掃你的碼', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
     ],
   },
   {
-    id: 'transport', label: 'Getting Around', icon: '🚕',
+    id: 'transport', label: '交通移動', icon: '🚕',
     phrases: [
-      { en: 'Where is the subway?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
-      { en: 'Please take me to this address', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
-      { en: 'Stop here, please', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
-      { en: 'Train station', zh: '火车站', pinyin: 'huǒchē zhàn' },
-      { en: 'Airport', zh: '机场', pinyin: 'jīchǎng' },
-      { en: 'How do I get to...?', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
+      { en: '地鐵站在哪裡？', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
+      { en: '請帶我去這個地址', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
+      { en: '請在這裡停', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
+      { en: '火車站', zh: '火车站', pinyin: 'huǒchē zhàn' },
+      { en: '機場', zh: '机场', pinyin: 'jīchǎng' },
+      { en: '怎麼去……？', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
     ],
   },
   {
-    id: 'food', label: 'Food & Dining', icon: '🍜',
+    id: 'food', label: '餐飲', icon: '🍜',
     phrases: [
-      { en: 'The menu, please', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
-      { en: 'I am vegetarian', zh: '我吃素', pinyin: 'wǒ chī sù' },
-      { en: 'Not spicy, please', zh: '请不要辣', pinyin: 'qǐng búyào là' },
-      { en: 'Water, please', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
-      { en: 'The bill, please', zh: '买单', pinyin: 'mǎidān' },
-      { en: 'It\'s delicious', zh: '很好吃', pinyin: 'hěn hǎochī' },
+      { en: '請給我菜單', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
+      { en: '我吃素', zh: '我吃素', pinyin: 'wǒ chī sù' },
+      { en: '請不要辣', zh: '请不要辣', pinyin: 'qǐng búyào là' },
+      { en: '請給我水', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
+      { en: '買單', zh: '买单', pinyin: 'mǎidān' },
+      { en: '很好吃', zh: '很好吃', pinyin: 'hěn hǎochī' },
     ],
   },
   {
-    id: 'help', label: 'Help & Emergencies', icon: '🆘',
+    id: 'help', label: '求助與緊急情況', icon: '🆘',
     phrases: [
-      { en: 'Help!', zh: '救命！', pinyin: 'jiùmìng!' },
-      { en: 'Where is the toilet?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
-      { en: 'I need a doctor', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
-      { en: 'Call the police', zh: '请报警', pinyin: 'qǐng bàojǐng' },
-      { en: 'I am lost', zh: '我迷路了', pinyin: 'wǒ mílù le' },
-      { en: 'Please write it down', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
+      { en: '救命！', zh: '救命！', pinyin: 'jiùmìng!' },
+      { en: '洗手間在哪裡？', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
+      { en: '我需要看醫生', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
+      { en: '請報警', zh: '请报警', pinyin: 'qǐng bàojǐng' },
+      { en: '我迷路了', zh: '我迷路了', pinyin: 'wǒ mílù le' },
+      { en: '請寫下來', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
     ],
   },
 ];
@@ -87,27 +87,27 @@ const groups: Group[] = [
   <Header locale="zh-TW" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Essential Chinese Phrases</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">中文常用語</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- Controls -->
+    <!-- 控制項 -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
-      <button data-filter="all" class="phrase-filter btn-primary text-sm">All</button>
+      <button data-filter="all" class="phrase-filter btn-primary text-sm">全部</button>
       {groups.map((g) => (
         <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
           {g.icon} {g.label}
         </button>
       ))}
       <button id="print-btn" class="ml-auto rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
-        🖨️ Print / Save PDF
+        🖨️ 列印／儲存 PDF
       </button>
     </div>
 
-    <!-- Phrase groups -->
+    <!-- 常用語分組 -->
     <div class="mt-6 space-y-8">
       {groups.map((g) => (
         <section class="phrase-group" data-group={g.id}>
@@ -126,9 +126,9 @@ const groups: Group[] = [
     </div>
 
     <AffiliateCta
-      title="Stay Online to Translate on the Go"
-      description="A China travel eSIM keeps translation apps and maps working the moment you land."
-      buttonText="Get Connected"
+      title="保持連線，隨時翻譯"
+      description="中國旅行 eSIM 可讓你落地後立刻使用翻譯 App 與地圖。"
+      buttonText="立即連線"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>

@@ -3,9 +3,9 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-const title = 'ChinaTripBox Editorial Team';
+const title = 'ChinaTripBox 編集チーム';
 const description =
-  'About the ChinaTripBox editorial team, how we research practical China travel guides, and how readers can request corrections.';
+  'ChinaTripBox 編集チームについて、実用的なChina旅行ガイドの調査方法、読者からの訂正依頼の方法をご案内します。';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -19,11 +19,11 @@ const jsonLd = {
     url: new URL('/', Astro.site).toString(),
   },
   knowsAbout: [
-    'China travel planning',
-    'mobile payments in China',
-    'China eSIM and internet access',
-    'China high-speed rail',
-    'foreign visitor logistics in China',
+    'China旅行計画',
+    'Chinaでのモバイル決済',
+    'China eSIMとインターネット接続',
+    'China高速鉄道',
+    'Chinaを訪れる外国人旅行者向けの実務情報',
   ],
 };
 ---
@@ -32,36 +32,36 @@ const jsonLd = {
   <Header locale="ja" />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <p class="section-kicker">Author</p>
+      <p class="section-kicker">著者</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
 
-      <h2>Editorial Focus</h2>
+      <h2>編集の重点分野</h2>
       <p>
-        The ChinaTripBox editorial team writes practical guides for foreign visitors to China, with
-        a focus on payment setup, eSIM and internet access, high-speed rail, ride-hailing, airport
-        transfers, city planning, food ordering, and common first-trip problems.
+        ChinaTripBox 編集チームは、Chinaを訪れる外国人旅行者向けに実用的なガイドを作成しています。
+        決済設定、eSIMとインターネット接続、高速鉄道、配車サービス、空港送迎、都市ごとの計画、
+        フードデリバリー、初めての旅行でよく起こる問題に重点を置いています。
       </p>
 
-      <h2>How We Build Guides</h2>
+      <h2>ガイドの作成方法</h2>
       <p>
-        We combine official sources, provider documentation, app help materials, reader questions,
-        traveler reports, and hands-on checks where possible. For fast-changing topics such as
-        visa-free entry, payment limits, app availability, and transport rules, we treat official
-        government or provider pages as the final source.
+        公式情報、事業者のドキュメント、アプリのヘルプ資料、読者からの質問、旅行者の報告、
+        可能な範囲での実地確認を組み合わせています。ビザ免除入国、決済上限、アプリの利用可否、
+        交通ルールなど変化の速いテーマでは、政府または事業者の公式ページを最終的な情報源としています。
       </p>
 
-      <h2>Corrections</h2>
+      <h2>訂正について</h2>
       <p>
-        China travel logistics change quickly. If you find an outdated step, changed policy, broken
-        link, or missing caveat, please send the page URL through our <a href="/ja/contact/">contact page</a>.
-        We review corrections and update affected guides when the evidence is clear.
+        China旅行の実務情報は急速に変化します。古くなった手順、変更された方針、リンク切れ、
+        追記すべき注意点を見つけた場合は、該当ページのURLを
+        <a href="/ja/contact/">お問い合わせページ</a>からお送りください。
+        訂正内容を確認し、根拠が明確な場合は該当するガイドを更新します。
       </p>
 
       <h2>編集方針</h2>
       <p>
-        Read our <a href="/ja/editorial-policy/">editorial policy</a> for details on research,
-        updates, affiliate disclosure, independence, and limitations.
+        調査、更新、アフィリエイト開示、独立性、制限事項について詳しくは、
+        <a href="/ja/editorial-policy/">編集方針</a>をご覧ください。
       </p>
 
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

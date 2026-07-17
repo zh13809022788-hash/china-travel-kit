@@ -6,15 +6,15 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'China Power Plug & Voltage Checker';
+const title = 'China 電源プラグ・電圧チェッカー';
 const description =
-  'Find out if you need a plug adapter or voltage converter for China based on your home country. China uses 220V and plug types A, C, and I.';
+  '出発国をもとに、China 旅行で変換プラグや変圧器が必要か確認できます。China では 220V、プラグタイプ A、C、I が使われています。';
 
 const countries = [
-  'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
-  'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
-  'Singapore', 'India', 'Brazil', 'New Zealand', 'Switzerland',
-  'South Africa', 'United Arab Emirates', 'Other',
+  'アメリカ', 'イギリス', 'カナダ', 'オーストラリア', 'ドイツ',
+  'フランス', 'イタリア', 'スペイン', 'オランダ', '日本', '韓国',
+  'シンガポール', 'インド', 'ブラジル', 'ニュージーランド', 'スイス',
+  '南アフリカ', 'アラブ首長国連邦', 'その他',
 ];
 ---
 
@@ -22,8 +22,8 @@ const countries = [
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Power Plug & Voltage Checker</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">電源プラグ・電圧チェッカー</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -31,29 +31,29 @@ const countries = [
 
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
       <label class="flex flex-col text-sm sm:max-w-sm">
-        <span class="mb-1 font-medium text-gray-700">Traveling from</span>
+        <span class="mb-1 font-medium text-gray-700">出発国</span>
         <select id="country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {countries.map((c) => <option value={c}>{c}</option>)}
         </select>
       </label>
-      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Check What I Need</button>
+      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">必要なものを確認</button>
     </div>
 
-    <!-- Reference: China's own standard -->
+    <!-- 参考: China の標準 -->
     <div class="mt-6 grid gap-4 sm:grid-cols-3">
-      <div class="card"><dt class="text-sm text-gray-500">Voltage</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
-      <div class="card"><dt class="text-sm text-gray-500">Frequency</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
-      <div class="card"><dt class="text-sm text-gray-500">Plug types</dt><dd class="text-2xl font-bold text-gray-900">A · C · I</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">電圧</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">周波数</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">プラグタイプ</dt><dd class="text-2xl font-bold text-gray-900">A・C・I</dd></div>
     </div>
 
-    <!-- Result -->
+    <!-- 結果 -->
     <div id="result" class="mt-6 hidden">
       <div class="card" id="result-card"></div>
 
       <AffiliateCta
-        title="Get a Universal China Adapter"
-        description="A compact all-in-one travel adapter that fits China's sockets and charges multiple devices at once."
-        buttonText="View Recommended Adapter"
+        title="China 対応のユニバーサル変換プラグを用意"
+        description="China のコンセントに対応し、複数のデバイスを同時に充電できるコンパクトな一体型トラベルアダプターです。"
+        buttonText="おすすめの変換プラグを見る"
         placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
@@ -62,30 +62,30 @@ const countries = [
 </BaseLayout>
 
 <script>
-  // Each country's domestic voltage and the plug types it uses.
+  // 各国の家庭用電圧と使用されているプラグタイプ。
   const data: Record<string, { volts: number; plugs: string[] }> = {
-    'United States': { volts: 120, plugs: ['A', 'B'] },
-    'Canada': { volts: 120, plugs: ['A', 'B'] },
-    'Japan': { volts: 100, plugs: ['A', 'B'] },
-    'Brazil': { volts: 127, plugs: ['C', 'N'] },
-    'United Kingdom': { volts: 230, plugs: ['G'] },
-    'Australia': { volts: 230, plugs: ['I'] },
-    'New Zealand': { volts: 230, plugs: ['I'] },
-    'Germany': { volts: 230, plugs: ['C', 'F'] },
-    'France': { volts: 230, plugs: ['C', 'E'] },
-    'Italy': { volts: 230, plugs: ['C', 'F', 'L'] },
-    'Spain': { volts: 230, plugs: ['C', 'F'] },
-    'Netherlands': { volts: 230, plugs: ['C', 'F'] },
-    'Switzerland': { volts: 230, plugs: ['C', 'J'] },
-    'South Korea': { volts: 220, plugs: ['C', 'F'] },
-    'Singapore': { volts: 230, plugs: ['G'] },
-    'India': { volts: 230, plugs: ['C', 'D', 'M'] },
-    'South Africa': { volts: 230, plugs: ['C', 'D', 'M', 'N'] },
-    'United Arab Emirates': { volts: 230, plugs: ['C', 'D', 'G'] },
-    'Other': { volts: 0, plugs: [] },
+    'アメリカ': { volts: 120, plugs: ['A', 'B'] },
+    'カナダ': { volts: 120, plugs: ['A', 'B'] },
+    '日本': { volts: 100, plugs: ['A', 'B'] },
+    'ブラジル': { volts: 127, plugs: ['C', 'N'] },
+    'イギリス': { volts: 230, plugs: ['G'] },
+    'オーストラリア': { volts: 230, plugs: ['I'] },
+    'ニュージーランド': { volts: 230, plugs: ['I'] },
+    'ドイツ': { volts: 230, plugs: ['C', 'F'] },
+    'フランス': { volts: 230, plugs: ['C', 'E'] },
+    'イタリア': { volts: 230, plugs: ['C', 'F', 'L'] },
+    'スペイン': { volts: 230, plugs: ['C', 'F'] },
+    'オランダ': { volts: 230, plugs: ['C', 'F'] },
+    'スイス': { volts: 230, plugs: ['C', 'J'] },
+    '韓国': { volts: 220, plugs: ['C', 'F'] },
+    'シンガポール': { volts: 230, plugs: ['G'] },
+    'インド': { volts: 230, plugs: ['C', 'D', 'M'] },
+    '南アフリカ': { volts: 230, plugs: ['C', 'D', 'M', 'N'] },
+    'アラブ首長国連邦': { volts: 230, plugs: ['C', 'D', 'G'] },
+    'その他': { volts: 0, plugs: [] },
   };
 
-  // China accepts plug types A, C, and I.
+  // China ではプラグタイプ A、C、I を使用できます。
   const CHINA_PLUGS = ['A', 'C', 'I'];
   const CHINA_VOLTS = 220;
 
@@ -104,37 +104,37 @@ const countries = [
 
     if (!info || info.volts === 0) {
       tone = 'info';
-      heading = 'Check your specific plug and voltage';
-      body = 'We don\'t have data for your selection. Look at the label on your charger — if it reads "100–240V", you only need a plug adapter for China\'s type A, C, or I sockets.';
-      points.push('China uses 220V, 50Hz with plug types A, C, and I.');
-      points.push('Most phone and laptop chargers are dual-voltage (100–240V) and just need a plug adapter.');
+      heading = 'お使いのプラグと電圧を確認してください';
+      body = '選択された国のデータがありません。充電器のラベルを確認し、「100-240V」と記載されていれば、China のタイプ A、C、I コンセント向けの変換プラグだけで対応できます。';
+      points.push('China では 220V、50Hz、プラグタイプ A、C、I が使われています。');
+      points.push('ほとんどのスマートフォンやノートパソコンの充電器はデュアルボルテージ（100-240V）対応で、変換プラグだけで使えます。');
     } else {
       const plugMatch = info.plugs.some((p) => CHINA_PLUGS.includes(p));
       const voltMatch = Math.abs(info.volts - CHINA_VOLTS) <= 20;
 
       if (plugMatch && voltMatch) {
         tone = 'good';
-        heading = 'You probably don\'t need an adapter';
-        body = `${country} uses compatible plug types (${info.plugs.join(', ')}) and a similar voltage (${info.volts}V). Your plugs should fit China's sockets directly.`;
-        points.push('Double-check each plug — bring one adapter just in case a socket is a tight fit.');
+        heading = '変換プラグはおそらく不要です';
+        body = `${country} は互換性のあるプラグタイプ（${info.plugs.join(', ')}）と近い電圧（${info.volts}V）を使用しています。お使いのプラグは China のコンセントにそのまま差し込める可能性があります。`;
+        points.push('念のため各プラグを確認し、コンセントの差し込みが固い場合に備えて変換プラグを 1 つ持参すると安心です。');
       } else if (!plugMatch && voltMatch) {
         tone = 'warn';
-        heading = 'You need a plug adapter (but not a voltage converter)';
-        body = `${country} runs on a similar voltage (${info.volts}V), so your devices are safe. But your plug type (${info.plugs.join(', ')}) doesn't fit China's sockets — pack a plug adapter.`;
-        points.push('A simple, cheap plug adapter for type A/C/I is all you need.');
-        points.push('No bulky voltage converter required.');
+        heading = '変換プラグが必要です（変圧器は不要）';
+        body = `${country} は近い電圧（${info.volts}V）なので、デバイスは安全に使えます。ただしプラグタイプ（${info.plugs.join(', ')}）は China のコンセントに合わないため、変換プラグを持参してください。`;
+        points.push('タイプ A/C/I 対応のシンプルで安価な変換プラグがあれば十分です。');
+        points.push('かさばる変圧器は必要ありません。');
       } else if (plugMatch && !voltMatch) {
         tone = 'warn';
-        heading = 'Watch your voltage on single-voltage devices';
-        body = `Your plugs (${info.plugs.join(', ')}) may fit, but ${country}'s voltage (${info.volts}V) differs from China's 220V.`;
-        points.push('Phones, laptops, and cameras labeled 100–240V are fine anywhere.');
-        points.push('Single-voltage items (some hair dryers, straighteners) need a voltage converter or should be left at home.');
+        heading = '単一電圧の機器は電圧に注意してください';
+        body = `プラグ（${info.plugs.join(', ')}）は合う可能性がありますが、${country} の電圧（${info.volts}V）は China の 220V と異なります。`;
+        points.push('100-240V と表示されたスマートフォン、ノートパソコン、カメラはどこでも問題なく使えます。');
+        points.push('単一電圧の製品（一部のヘアドライヤーやヘアアイロンなど）は、変圧器が必要です。持参しない選択も検討してください。');
       } else {
         tone = 'warn';
-        heading = 'You need a plug adapter — and check voltage';
-        body = `${country} uses different plugs (${info.plugs.join(', ')}) and a different voltage (${info.volts}V) than China's 220V. Bring a plug adapter for type A/C/I.`;
-        points.push('Dual-voltage chargers (100–240V) only need the plug adapter.');
-        points.push('Single-voltage high-wattage devices also need a voltage converter — or buy a local equivalent instead.');
+        heading = '変換プラグが必要です。電圧も確認してください';
+        body = `${country} は China の 220V と異なるプラグ（${info.plugs.join(', ')}）および電圧（${info.volts}V）を使用しています。タイプ A/C/I 対応の変換プラグを持参してください。`;
+        points.push('デュアルボルテージ対応充電器（100-240V）は変換プラグだけで使えます。');
+        points.push('単一電圧の高ワット機器は変圧器も必要です。現地で同等品を購入する方法もあります。');
       }
     }
 
@@ -148,7 +148,7 @@ const countries = [
       warn: 'bg-amber-500 text-white',
       info: 'bg-blue-600 text-white',
     } as const;
-    const toneLabel = { good: 'No adapter needed', warn: 'Adapter needed', info: 'Check your charger' } as const;
+    const toneLabel = { good: '変換プラグ不要', warn: '変換プラグが必要', info: '充電器を確認' } as const;
 
     card.className = `card border ${toneStyles[tone]}`;
     card.innerHTML = `
