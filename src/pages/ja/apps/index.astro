@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -14,7 +14,7 @@ const appGroups = [
     apps: [
       {
         name: 'Alipay',
-        desc: '中国で最も広く使われているモバイルウォレット。海外発行のVisaまたはMastercardを連携し、ショップ、レストラン、タクシー、屋台でQRコード決済ができます。',
+        desc: 'The most accepted mobile wallet in China. Link a foreign Visa or Mastercard, pay by QR code at shops, restaurants, taxis, and street vendors.',
         android: 'https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone',
         ios: 'https://apps.apple.com/app/alipay/id333206289',
         h5: null,
@@ -23,7 +23,7 @@ const appGroups = [
       },
       {
         name: 'WeChat',
-        desc: '中国's super app. Use it for messaging, calls, Moments (social feed), and WeChat Pay. Most Chinese people use this daily for everything.',
+        desc: 'China\'s super app. Use it for messaging, calls, Moments (social feed), and WeChat Pay. Most Chinese people use this daily for everything.',
         android: 'https://play.google.com/store/apps/details?id=com.tencent.mm',
         ios: 'https://apps.apple.com/app/wechat/id414478124',
         h5: 'https://web.wechat.com/',
@@ -37,7 +37,7 @@ const appGroups = [
     apps: [
       {
         name: 'DiDi',
-        desc: '中国's Uber. Book taxis and private cars. Supports English interface. Can pay with Alipay or WeChat Pay.',
+        desc: 'China\'s Uber. Book taxis and private cars. Supports English interface. Can pay with Alipay or WeChat Pay.',
         android: 'https://play.google.com/store/apps/details?id=com.didi.sdk',
         ios: 'https://apps.apple.com/app/didi/id1164272094',
         h5: 'https://m.didiglobal.com/',
@@ -46,7 +46,7 @@ const appGroups = [
       },
       {
         name: 'Alipay 交通 Mini-Program',
-        desc: 'Alipay内では、交通ミニプログラムを使って、ほとんどの主要都市で地下鉄やバスのQRコードを読み取れます。',
+        desc: 'Within Alipay, use the transport mini-program to scan QR codes for city metro and buses in most major cities.',
         android: null,
         ios: null,
         h5: null,
@@ -55,7 +55,7 @@ const appGroups = [
       },
       {
         name: '12306',
-        desc: '鉄道チケット予約用の中国鉄道公式アプリ。インターフェースは中国語のみで、本人確認が必要です。代替手段：Trip.comを利用。',
+        desc: 'Official China Railway app for booking train tickets. Chinese-only interface, needs verification. Alternative: use Trip.com.',
         android: 'https://play.google.com/store/apps/details?id=com.cars.blaili',
         ios: 'https://apps.apple.com/app/12306/id564757494',
         h5: 'https://www.12306.cn/',
@@ -64,7 +64,7 @@ const appGroups = [
       },
       {
         name: 'Trip.com (Ctrip)',
-        desc: '電車・航空券・ホテルを英語で予約できるアプリ。海外発行カードで直接支払い可能。',
+        desc: 'English-friendly app for booking trains, flights, and hotels. Accepts foreign cards directly.',
         android: 'https://play.google.com/store/apps/details?id=com.ctrip',
         ios: 'https://apps.apple.com/app/trip-com/id1612956441',
         h5: 'https://www.trip.com/',
@@ -78,7 +78,7 @@ const appGroups = [
     apps: [
       {
         name: 'Baidu Maps',
-        desc: '最も詳細な中国地図。ターンバイターンのナビ、公共交通機関の経路検索、レストラン検索に対応。中国語のみだが、ジェスチャーで使える。',
+        desc: 'Most detailed China map. Turn-by-turn navigation, public transit routing, restaurant search. Chinese-only but usable with gestures.',
         android: 'https://play.google.com/store/apps/details?id=com.baidu.BaiduMap',
         ios: 'https://apps.apple.com/app/baidu-maps/id452186370',
         h5: 'https://map.baidu.com/',
@@ -87,7 +87,7 @@ const appGroups = [
       },
       {
         name: 'Amap (Gaode)',
-        desc: 'Baidu Mapsの代替。現地の人にはAmapを好む人が多いです。タクシーのナビ、リアルタイム交通情報、レストランレビューに便利です。',
+        desc: 'Alternative to Baidu Maps. Many locals prefer Amap. Better for taxi navigation, live traffic, and restaurant reviews.',
         android: 'https://play.google.com/store/apps/details?id=com.autonavi.minimap',
         ios: 'https://apps.apple.com/app/amap/id461703208',
         h5: 'https://ditu.amap.com/',
@@ -96,7 +96,7 @@ const appGroups = [
       },
       {
         name: 'Google Maps',
-        desc: '中国でのブラウジングには一部対応していますが、ナビゲーションやリアルタイム交通情報は信頼性に欠けます。旅行前の計画には便利です。',
+        desc: 'Works partially in China for browsing but navigation and real-time traffic are unreliable. Good for pre-trip planning.',
         android: null,
         ios: null,
         h5: 'https://maps.google.com/',
@@ -110,7 +110,7 @@ const appGroups = [
     apps: [
       {
         name: 'Meituan',
-        desc: 'フードデリバリー、レストラン予約、映画チケット、ホテル予約。中国語のみ。英語サポートはAlipayミニプログラム内で利用できます。',
+        desc: 'Food delivery, restaurant booking, movie tickets, hotel booking. Chinese-only. Use inside Alipay mini-program for English help.',
         android: 'https://play.google.com/store/apps/details?id=com.sankuai.meituan',
         ios: 'https://apps.apple.com/app/meituan/id423924287',
         h5: 'https://waimai.meituan.com/',
@@ -119,7 +119,7 @@ const appGroups = [
       },
       {
         name: 'Ele.me',
-        desc: 'フードデリバリーアプリ（Alibaba傘下）。Meituanに似ています。Alipayで料理を注文できます。',
+        desc: 'Food delivery app (owned by Alibaba). Similar to Meituan. Can order food with Alipay.',
         android: 'https://play.google.com/store/apps/details?id=me.ele',
         ios: 'https://apps.apple.com/app/ele-me/id532785356',
         h5: 'https://www.ele.me/',
@@ -128,7 +128,7 @@ const appGroups = [
       },
       {
         name: 'Dianping',
-        desc: '中国版Yelp。レストランのレビュー、評価、写真。地元の良い飲食店探しに役立つ。中国語のみ。',
+        desc: 'Yelp of China. Restaurant reviews, ratings, photos. Helps find good local eateries. Chinese-only.',
         android: 'https://play.google.com/store/apps/details?id=com.dianping.v1',
         ios: 'https://apps.apple.com/app/dianping/id416896465',
         h5: 'https://www.dianping.com/',
@@ -142,7 +142,7 @@ const appGroups = [
     apps: [
       {
         name: 'VPN (choose one before travel)',
-        desc: '出発前にVPNをインストールしてください。ExpressVPN、NordVPN、Astrillは中国で使えます。無料VPNはほとんどブロックされています。',
+        desc: 'Install a VPN BEFORE you leave. ExpressVPN, NordVPN, and Astrill work in China. Free VPNs mostly blocked.',
         android: null,
         ios: null,
         h5: null,
@@ -151,7 +151,7 @@ const appGroups = [
       },
       {
         name: 'Google Translate',
-        desc: 'メニュー、看板、書類をカメラで翻訳。中国語（簡体字）のオフラインパックをダウンロード。',
+        desc: 'Camera translation for menus, signs, and documents. Download Chinese(Simplified) offline pack.',
         android: 'https://play.google.com/store/apps/details?id=com.google.android.apps.translate',
         ios: 'https://apps.apple.com/app/google-translate/id414706506',
         h5: 'https://translate.google.com/',
@@ -165,7 +165,7 @@ const appGroups = [
     apps: [
       {
         name: 'Trip.com (Hotels)',
-        desc: '海外カードでホテルを予約するのに最適。幅広く対応。英語インターフェース。',
+        desc: 'Best for booking hotels with foreign cards. Wide coverage. English interface.',
         android: null,
         ios: null,
         h5: 'https://www.trip.com/hotels/',
@@ -174,7 +174,7 @@ const appGroups = [
       },
       {
         name: 'Fliggy (Alitrip)',
-        desc: 'Alibaba's travel booking platform. Inside Alipay app. Good for domestic flights.',
+        desc: 'Alibaba\'s travel booking platform. Inside Alipay app. Good for domestic flights.',
         android: null,
         ios: null,
         h5: 'https://www.fliggy.com/',
