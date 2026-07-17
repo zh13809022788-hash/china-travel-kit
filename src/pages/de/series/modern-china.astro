@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-de'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Modern China — What Surprises Foreigners Most';
-const description = 'Discover modern China as a foreign traveler: cashless society, the world\'s fastest trains, megacity navigation, super apps, overnight trains, and the tech that defines everyday life.';
+const title = 'Modernes China — Was Ausländer am meisten überrascht';
+const description = 'Entdecke das moderne China als ausländischer Reisender: bargeldlose Gesellschaft, die schnellsten Züge der Welt, Navigation in Megacitys, Super-Apps, Nachtzüge und die Technik, die den Alltag prägt.';
 
 const relatedTools = [
-  { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: 'Mobile payment setup for tourists' },
-  { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'High-speed rail guide', desc: 'Riding China\'s bullet trains' },
-  { href: '/de/posts/best-esim-for-china-travel-2026/', title: 'Best eSIM for China', desc: 'Stay connected on arrival' },
+  { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'In China bezahlen', desc: 'Einrichtung mobiler Zahlung für Touristen' },
+  { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'Hochgeschwindigkeitszug-Leitfaden', desc: 'Mit Chinas Hochgeschwindigkeitszügen reisen' },
+  { href: '/de/posts/best-esim-for-china-travel-2026/', title: 'Beste eSIM für China', desc: 'Bleibe bei der Ankunft verbunden' },
 ];
 
 const relatedCities = [
-  { href: '/de/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'China\'s financial megacity' },
-  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Ancient capital meets modern hub' },
-  { href: '/de/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Shanghai metro', desc: 'Navigating a mega transit system' },
+  { href: '/de/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Chinas finanzielle Megastadt' },
+  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Peking', desc: 'Antike Hauptstadt trifft modernen Knotenpunkt' },
+  { href: '/de/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Shanghai U-Bahn', desc: 'Navigation in einem Mega-Transitsystem' },
 ];
 
 const otherSeries = [
-  { href: '/de/series/food-of-china/', title: 'Food of China' },
-  { href: '/de/series/history-of-china/', title: 'History of China' },
-  { href: '/de/series/culture-of-china/', title: 'Culture of China' },
+  { href: '/de/series/food-of-china/', title: 'Essen in China' },
+  { href: '/de/series/history-of-china/', title: 'Geschichte Chinas' },
+  { href: '/de/series/culture-of-china/', title: 'Kultur Chinas' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
