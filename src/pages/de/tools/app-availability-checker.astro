@@ -44,7 +44,7 @@ const apps: AppInfo[] = [
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Funktionieren meine Apps in China?</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
@@ -60,17 +60,17 @@ const apps: AppInfo[] = [
       <div class="mt-3 flex flex-wrap gap-2 text-sm">
         <button data-status="all" class="status-filter btn-primary px-3 py-1">Alle</button>
         <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Funktioniert</button>
-        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Eingeschränkt</button>
-        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Blockiert</button>
+        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Teilweise</button>
+        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Gesperrt</button>
       </div>
     </div>
 
     <div id="app-list" class="mt-6 grid gap-3 sm:grid-cols-2"></div>
-    <p id="no-results" class="hidden py-8 text-center text-gray-500">Keine Apps entsprechen deiner Suche.</p>
+    <p id="no-results" class="hidden py-8 text-center text-gray-500">Keine Apps entsprechen Ihrer Suche.</p>
 
     <AffiliateCta
-      title="Halte deine Apps mit einer Reise-eSIM funktionsfähig"
-      description="Eine China-Reise-eSIM, die lokale Einschränkungen umgeht, hält deine gewohnten Apps online — kein separates VPN-Setup erforderlich."
+      title="Halten Sie Ihre Apps mit einer Reise-eSIM funktionsfähig"
+      description="Eine China-Reise-eSIM, die lokale Einschränkungen umgeht, hält Ihre gewohnten Apps online — keine separate VPN-Einrichtung erforderlich."
       buttonText="eSIM-Optionen ansehen"
       placeholder={AFFILIATE_LINKS.esim}
     />
@@ -87,8 +87,8 @@ const apps: AppInfo[] = [
 
   const badge = {
     works: { cls: 'bg-green-100 text-green-800', label: '✅ Funktioniert' },
-    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Eingeschränkt' },
-    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Blockiert' },
+    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Teilweise' },
+    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Gesperrt' },
   };
 
   function render() {

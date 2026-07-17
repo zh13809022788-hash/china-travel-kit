@@ -36,45 +36,44 @@ const internetTools = [
   { href: '/de/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access guide', desc: 'Understand app access, VPN expectations, and practical setup before arrival.' },
 ];
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">eSIM</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM &amp; Data Guides</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM &amp; Datenguides</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="hub-esim" alt="Mobile network and data connectivity options for China travel" loading="lazy" />
+    <CoverImage name="hub-esim" alt="Mobilfunknetz und Datenverbindungsoptionen für Chinareisen" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-esim">
       <h2 id="featured-esim" class="sr-only">Empfohlene Internetguides</h2>
       <a href="/de/posts/best-esim-for-china-travel-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Best eSIM 2026</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Compare Airalo, Holafly, Nomad for China travel</p>
+        <span class="font-semibold text-gray-950">Beste eSIM 2026</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Vergleiche Airalo, Holafly, Nomad für Chinareisen</p>
       </a>
       <a href="/de/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">eSIM vs Roaming</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Real 10-day cost comparison for tourists</p>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Echter 10-Tage-Kostenvergleich für Touristen</p>
       </a>
       <a href="/de/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">VPN Guide 2026</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Do tourists still need a VPN in China?</p>
+        <span class="font-semibold text-gray-950">VPN-Guide 2026</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Brauchen Touristen in China noch ein VPN?</p>
       </a>
       <a href="/de/posts/pocket-wifi-vs-esim-vs-sim-china/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">Pocket WiFi vs eSIM</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Compare all connectivity options</p>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Vergleiche alle Verbindungsoptionen</p>
       </a>
     </section>
 
     <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Choose your China internet setup</h2>
+        <h2 class="text-2xl font-bold text-gray-900">Wähle deine Internet-Einrichtung für China</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          The safest setup for visitors is usually one primary data option plus a fallback for banking, maps, translation, and ride-hailing during the first day.
+          Die sicherste Einrichtung für Besucher ist in der Regel eine primäre Datenoption plus eine Ausweichlösung für Banking, Karten, Übersetzung und Ride-Hailing am ersten Tag.
         </p>
         <div class="mt-5 grid gap-3">
           {connectionChoices.map((choice) => (
@@ -87,7 +86,7 @@ const internetTools = [
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">Internet tools</h2>
+        <h2 class="text-lg font-bold text-gray-900">Internet-Tools</h2>
         <div class="mt-4 grid gap-3">
           {internetTools.map((tool) => (
             <a href={tool.href} class="rounded-lg border border-brand-100 bg-white p-4 hover:border-brand-200 hover:no-underline">

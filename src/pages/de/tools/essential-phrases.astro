@@ -82,32 +82,31 @@ const groups: Group[] = [
   },
 ];
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Essential Chinese Phrases</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Wichtige chinesische Redewendungen</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- Controls -->
+    <!-- Steuerelemente -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
-      <button data-filter="all" class="phrase-filter btn-primary text-sm">All</button>
+      <button data-filter="all" class="phrase-filter btn-primary text-sm">Alle</button>
       {groups.map((g) => (
         <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
           {g.icon} {g.label}
         </button>
       ))}
       <button id="print-btn" class="ml-auto rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
-        🖨️ Print / Save PDF
+        🖨️ Drucken / PDF speichern
       </button>
     </div>
 
-    <!-- Phrase groups -->
+    <!-- Redewendungsgruppen -->
     <div class="mt-6 space-y-8">
       {groups.map((g) => (
         <section class="phrase-group" data-group={g.id}>
@@ -126,9 +125,9 @@ const groups: Group[] = [
     </div>
 
     <AffiliateCta
-      title="Stay Online to Translate on the Go"
-      description="A China travel eSIM keeps translation apps and maps working the moment you land."
-      buttonText="Get Connected"
+      title="Bleiben Sie online, um unterwegs zu übersetzen"
+      description="Eine China-Reise-eSIM sorgt dafür, dass Übersetzungs-Apps und Karten funktionieren, sobald Sie landen."
+      buttonText="Verbindung herstellen"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
