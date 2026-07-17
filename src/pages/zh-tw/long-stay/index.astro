@@ -1,84 +1,84 @@
-﻿---
+---
 import GuideLayout from '../../../layouts/GuideLayout.astro';
 
-const title = "Long-Term Stay in China: A Foreigner's Complete Guide (2026)";
+const title = '在中國長期居留：外國人完整指南（2026）';
 const description =
-  'Planning to stay in China for 1-6 months? Our guide covers long-term accommodation, visa rules, monthly costs, and daily life tips for slow travelers and expats.';
+  '計劃在中國停留 1-6 個月？我們的指南涵蓋長期住宿、簽證規則、每月生活費和日常生活建議，適合慢旅行者和外籍人士。';
 const url = '/long-stay/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
-  { label: 'Long Stay' },
+  { label: '首頁', href: '/' },
+  { label: '長期居留' },
 ];
 
 const toc = [
-  { id: 'short-vs-long', label: 'Short Trip vs. Long Stay' },
-  { id: 'legal-stay', label: 'Staying Legally for 1-6 Months' },
-  { id: 'accommodation', label: 'Long-Term Accommodation' },
-  { id: 'monthly-cost', label: 'Monthly Cost of Living' },
-  { id: 'daily-life', label: 'Daily Life Essentials' },
-  { id: 'cities', label: 'Popular Cities for Long Stays' },
-  { id: 'faq', label: 'FAQ' },
+  { id: 'short-vs-long', label: '短途旅行 vs. 長期居留' },
+  { id: 'legal-stay', label: '合法停留 1-6 個月' },
+  { id: 'accommodation', label: '長期住宿' },
+  { id: 'monthly-cost', label: '每月生活費' },
+  { id: 'daily-life', label: '日常生活須知' },
+  { id: 'cities', label: '適合長居的熱門城市' },
+  { id: 'faq', label: '常見問題' },
 ];
 
 const faqs = [
   {
-    question: 'How long can a foreigner legally stay in China without a residence permit?',
+    question: '外國人在沒有居留許可的情況下可以合法在中國停留多久？',
     answer:
-      'It depends on your visa. A tourist (L) visa is usually issued for a 30, 60, or 90-day stay per entry, and some nationalities can extend once at the local exit-entry bureau. A business (M) visa can allow 90 to 180 days per entry over a multi-year validity. Anything beyond roughly six months of continuous living, or any local work, requires a residence permit tied to a work or family visa.',
+      '取決於你的簽證類型。旅遊簽證（L）通常每次入境可停留 30、60 或 90 天，部分國籍可在當地出入境管理局申請一次延期。商務簽證（M）在多年有效期內每次入境可停留 90 至 180 天。超過約六個月的連續居住或任何本地工作，都需要與工作或家庭簽證綁定的居留許可。',
   },
   {
-    question: 'Can foreigners rent a normal apartment in China for a few months?',
+    question: '外國人可以在中國租幾個月的普通公寓嗎？',
     answer:
-      'Yes. Foreigners can rent private apartments, though landlords often prefer 6 or 12-month leases. For 1 to 3 months, serviced apartments and monthly hotel rates are easier because they handle the paperwork. Whatever you rent, you must register your address with the local police within 24 hours of moving in.',
+      '可以。外國人可以租私人公寓，但房東通常更喜歡 6 或 12 個月的租約。對於 1 到 3 個月的短期居住，服務式公寓和酒店月租更容易，因為它們會處理登記手續。無論租什麼，你都必須在入住後 24 小時內向當地警察局登記你的地址。',
   },
   {
-    question: 'Do I need to register with the police if I rent privately?',
+    question: '如果租私人公寓，需要向警察登記嗎？',
     answer:
-      'Yes. Hotels register you automatically, but if you stay in a private apartment or with friends you must register at the local police station within 24 hours of arrival, and again each time you re-enter the country. Bring your passport and the lease or host details. Skipping this can lead to fines.',
+      '需要。酒店會自動為你登記，但如果你住在私人公寓或朋友家，必須在抵達後 24 小時內到當地警察局登記，每次重新入境後也需要再次登記。帶上護照和租約或房東資訊。不登記可能會被罰款。',
   },
   {
-    question: 'How much does it cost to live in China for a month as a foreigner?',
+    question: '外國人在中國生活一個月需要多少錢？',
     answer:
-      'A comfortable single-person budget ranges from about 6,000 RMB per month in a small city like Dali to 15,000 RMB or more in central Shanghai. Rent is the biggest variable. Food, transport, and mobile data are inexpensive compared with Western cities, so most of your budget goes to accommodation.',
+      '舒適的單人預算從小城市如大理每月約 6,000 人民幣，到上海市中心 15,000 人民幣或更多不等。租金是最大的變數。與西方城市相比，食物、交通和手機流量都很便宜，所以預算的大部分都花在住宿上。',
   },
   {
-    question: 'Is there a language barrier for longer stays?',
+    question: '長期居留會有語言障礙嗎？',
     answer:
-      'Outside major international districts, English is limited. Translation apps, offline maps, and Alipay or WeChat mini-programs cover most daily situations. Learning a handful of Mandarin phrases and how to read a few characters makes a long stay far smoother, but it is not a prerequisite.',
+      '在主要國際社區之外，英語普及度有限。翻譯應用程式、離線地圖和支付寶或微信小程式可以應付大部分日常情況。學幾句普通話和認識一些漢字會讓長期居留順利得多，但這不是必要條件。',
   },
   {
-    question: 'Can I use my home health insurance, and do I need local coverage?',
+    question: '可以使用本國醫療保險嗎？需要購買本地保險嗎？',
     answer:
-      'China does not require visitors to hold local health insurance, but public hospitals expect upfront payment and most home policies do not pay Chinese providers directly. For a multi-month stay, international travel-medical or expat insurance that covers China is strongly recommended, ideally including private international clinics in big cities.',
+      '中國不要求訪客持有本地醫療保險，但公立醫院要求預付費用，而且大多數本國保險不會直接向中國醫療機構付款。對於多月的居留，強烈建議購買涵蓋中國的國際旅行醫療或外籍人士保險，最好包括大城市中的私立國際診所。',
   },
   {
-    question: 'Can I open a Chinese bank account for a long stay?',
+    question: '長期居留可以開立中國銀行帳戶嗎？',
     answer:
-      'It is possible but increasingly paperwork-heavy for non-residents. Many long-stay travelers skip it entirely because Alipay and WeChat Pay now accept major foreign cards for everyday spending. A local account mainly helps if you need to receive RMB locally or pay certain landlords by bank transfer.',
+      '可以，但對非居民來說越來越繁瑣。許多長期居留者完全跳過這一步，因為支付寶和微信支付現在已接受主要外國卡用於日常消費。本地帳戶主要在你需要在本地接收人民幣或用銀行轉帳支付某些房東時才有用。',
   },
   {
-    question: 'What happens if I want to stay longer than my visa allows?',
+    question: '如果想停留超過簽證允許的時間怎麼辦？',
     answer:
-      'Apply for an extension at the local Public Security Bureau exit-entry office before your current stay expires, or leave and re-enter on a fresh entry if your visa has multiple entries. Overstaying carries a daily fine and can affect future visa applications, so plan your exit or extension well ahead of the expiry date.',
+      '在當前停留到期前，到當地公安局出入境辦公室申請延期，或者如果簽證有多次入境，可以離境後重新入境。逾期停留會被按日罰款，並可能影響未來的簽證申請，所以要在到期日之前提前規劃離境或延期。',
   },
 ];
 
 const related = [
   {
-    title: 'The Complete China Digital Nomad Guide (2026)',
-    description: 'Living in China while working remotely: visas, payment, best cities, and internet access.',
+    title: '中國數位遊牧完整指南（2026）',
+    description: '在中國遠端工作：簽證、支付、最佳城市和網路存取。',
     href: '/zh-tw/digital-nomads/',
   },
   {
-    title: 'China Visa for Digital Nomads (2026)',
-    description: 'Every legal option for staying longer: tourist visas, business visas, transit rules, and border runs.',
+    title: '數位遊牧中國簽證（2026）',
+    description: '所有合法停留方式：旅遊簽證、商務簽證、過境規則和跨境簽證。',
     href: '/zh-tw/digital-nomads/visa/',
   },
   {
-    title: 'How to Pay for Things in China as a Foreigner',
-    description: 'Set up Alipay and WeChat Pay, understand cash needs, and use foreign cards day to day.',
+    title: '外國人在中國如何付款',
+    description: '設定支付寶和微信支付，了解現金需求和日常使用外國卡。',
     href: '/zh-tw/digital-nomads/payment/',
   },
 ];
@@ -94,206 +94,143 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-long-stay"
-  coverAlt="A foreigner settling into long-term life in a Chinese city"
+  coverAlt="外國人融入中國城市長期生活的場景"
  locale="zh-TW">
   <p>
-    Staying in China for a month or more is a completely different experience from a one-week
-    tour. You stop optimizing every day for sightseeing and start living: cooking some of your own
-    meals, finding a neighborhood coffee shop, learning which metro exit is closest to home. This
-    guide is for slow travelers, sabbatical-takers, remote workers, and would-be expats who plan to
-    settle somewhere in China for anywhere from one to six months. It walks through how to stay
-    legally, where to live, what it costs, and how to handle the everyday logistics that a short
-    tourist visit never forces you to think about.
+    在中國停留一個月或更久，與一週的旅行是完全不同的體驗。你不再每天為觀光而忙碌，而是開始真正生活：自己做飯、找到社區裡的咖啡店、搞清楚哪個地鐵出口離家最近。這份指南適合慢旅行者、休假者、遠端工作者和打算在中國定居一到六個月的外籍人士。它詳細說明了如何合法停留、住哪裡、花費多少，以及如何處理短期旅遊不曾需要考慮的日常事務。
   </p>
 
-  <h2 id="short-vs-long">Short Trip vs. Long Stay: What Actually Changes</h2>
+  <h2 id="short-vs-long">短途旅行 vs. 長期居留：到底有什麼不同</h2>
   <p>
-    On a short trip, a hotel absorbs almost every logistical problem for you: it registers you with
-    the police, cleans your room, and sits near the sights. For a long stay, those conveniences
-    either disappear or get expensive, so you trade them for lower daily costs and a real routine.
-    The three things that change most are <strong>your legal status</strong> (a single tourist
-    entry may not cover the whole period), <strong>your housing</strong> (nightly hotel rates stop
-    making sense past a few weeks), and <strong>your relationship with bureaucracy</strong> (address
-    registration, possible visa extensions, and longer-term insurance all become your
-    responsibility). Get those three right and the rest of long-stay life in China is remarkably
-    smooth.
+    短途旅行時，酒店幾乎為你解決了所有後勤問題：代你向警察登記、打掃房間、位置靠近景點。長期居留時，這些便利要么消失要么變得昂貴，你用更低的日常成本和真正的日常規律來換取它們。變化最大的三件事是<strong>你的合法身分</strong>（單次旅遊入境可能無法涵蓋整個停留期）、<strong>你的住房</strong>（每晚酒店房價在幾週後就不再合理），以及<strong>你與行政體系的關係</strong>（地址登記、可能的簽證延期和長期保險都成為你的責任）。搞定這三件事，在中國的長期生活就會非常順暢。
   </p>
 
-  <h2 id="legal-stay">Staying Legally for 1-6 Months</h2>
+  <h2 id="legal-stay">合法停留 1-6 個月</h2>
   <p>
-    There is no single "long-stay visa" for casual living in China, so most people combine or
-    extend the standard options. Your choice depends on how long you want to stay and whether you
-    have any business reason to be there.
+    中國沒有專門用於休閒居住的「長期居留簽證」，所以大多數人會組合或延長標準選項。你的選擇取決於想停留多久以及是否有商務理由。
   </p>
-  <h3>Tourist visa (L) and extensions</h3>
+  <h3>旅遊簽證（L）和延期</h3>
   <p>
-    The L visa is the default for leisure stays. Depending on your nationality it is issued for 30,
-    60, or 90 days per entry. If you need a little longer, you can usually apply once for a 30-day
-    extension at the local exit-entry bureau, provided you apply before your current stay expires
-    and can show funds and a place to stay. This comfortably covers stays up to two or three months
-    for many travelers.
+    L 簽證是休閒停留的預設選項。根據你的國籍，每次入境可停留 30、60 或 90 天。如果需要再長一些，通常可以在當地出入境管理局申請一次 30 天的延期，前提是在當前停留到期前申請，並能證明有資金和住所。這對許多旅行者來說可以舒適地覆蓋兩到三個月的停留。
   </p>
-  <h3>Business visa (M) for 3-6 months</h3>
+  <h3>商務簽證（M）適用於 3-6 個月</h3>
   <p>
-    If you have any legitimate business connection — meetings, supplier visits, conferences — an M
-    visa is the better fit for longer periods. It is commonly issued with multi-year validity and
-    per-entry stays of 90 to 180 days, which makes multi-month living far less stressful than
-    stacking tourist extensions. It requires an invitation letter from a Chinese company or trade
-    body.
+    如果你有任何正當的商務聯繫——會議、供應商訪問、展會——M 簽證更適合較長期的停留。它通常具有多年有效期和每次入境 90 至 180 天的停留期，這讓多月居住比疊加旅遊簽證延期輕鬆得多。它需要中國公司或貿易機構的邀請函。
   </p>
-  <h3>Visa-free transit for short stints</h3>
+  <h3>過境免簽用於短期停留</h3>
   <p>
-    Many nationalities qualify for 240-hour (10-day) visa-free transit when passing through
-    designated cities en route to a third country. This is not a living solution, but it is useful
-    for scouting a city before committing to a longer visa. Check our
-    <a href="/zh-tw/tools/visa-free-checker/">visa-free and transit checker</a> to see what your passport
-    allows.
+    許多國籍在經由指定城市前往第三國時，可享有 240 小時（10 天）的過境免簽。這不是居住方案，但非常適合在申請長期簽證前先考察一個城市。查看我們的
+    <a href="/zh-tw/tools/visa-free-checker/">免簽和過境查詢工具</a>，了解你的護照適用什麼。
   </p>
   <p>
-    Whatever route you take, the golden rule is to plan your exit or extension well before your
-    permitted stay ends. Overstaying carries daily fines and can jeopardize future entries.
+    無論選擇哪條路，黃金法則是在允許停留結束前提前規劃離境或延期。逾期停留會被按日罰款，並可能影響未來入境。
   </p>
 
-  <h2 id="accommodation">Long-Term Accommodation</h2>
+  <h2 id="accommodation">長期住宿</h2>
   <p>
-    Where you sleep is the single biggest decision — and cost — of a long stay. There are three
-    realistic options, each with a clear trade-off between price, flexibility, and paperwork.
+    住哪裡是長期居留中最大的決定——也是最大的開支。有三個現實選項，每個在價格、靈活性和手續之間都有明確的取捨。
   </p>
-  <h3>Serviced apartments</h3>
+  <h3>服務式公寓</h3>
   <p>
-    Purpose-built for medium stays, serviced apartments come furnished, include cleaning and
-    utilities, and handle police registration for you. Expect to pay a premium over a bare private
-    rental, but for a one to three-month stay the convenience usually wins. They cluster in
-    business districts of big cities and typically quote monthly rates.
+    專為中期停留設計，服務式公寓配有家具、包含清潔和水電費，並代你處理警察登記。價格高於普通私人租賃，但對於一到三個月的停留，便利性通常值得。它們集中在大城市的商務區，通常按月報價。
   </p>
-  <h3>Monthly hotel rates</h3>
+  <h3>酒店月租</h3>
   <p>
-    Many mid-range hotels quietly offer sharply discounted monthly rates, especially outside peak
-    season. You get automatic police registration, daily or weekly housekeeping, and zero lease
-    commitment, at the cost of a smaller space and no kitchen. This is the lowest-friction option
-    if you value flexibility over square meters.
+    許多中檔酒店悄悄提供大幅折扣的月租價，特別是在淡季。你得到自動警察登記、每日或每週客房服務，以及零租約承諾，代價是較小的空間和沒有廚房。如果你重視靈活性勝過空間面積，這是最低門檻的選項。
   </p>
-  <h3>Private apartment rentals</h3>
+  <h3>私人公寓租賃</h3>
   <p>
-    The cheapest per-month option, and the most "local," is renting a private apartment through
-    agents or platforms popular with residents. Landlords usually prefer 6 or 12-month leases and a
-    deposit, and you become responsible for registering your own address at the police station
-    within 24 hours. Best for stays approaching or exceeding six months, or for anyone who wants a
-    kitchen and a real neighborhood.
+    最便宜的月租選項，也是最「本地化」的，是透過仲介或居民常用的平台租賃私人公寓。房東通常偏好 6 或 12 個月的租約和押金，你需要在 24 小時內自行到警察局登記地址。最適合接近或超過六個月的停留，或任何想要廚房和真正社區生活的人。
   </p>
   <blockquote>
-    Wherever you land, register your address with the local police within 24 hours of moving in.
-    Hotels and serviced apartments do this automatically; with a private lease it is on you.
+    無論你住哪裡，都必須在入住後 24 小時內向當地警察登記地址。酒店和服務式公寓會自動辦理；私人租賃則需要你自己處理。
   </blockquote>
 
-  <h2 id="monthly-cost">Monthly Cost of Living</h2>
+  <h2 id="monthly-cost">每月生活費</h2>
   <p>
-    China's cost of living varies enormously by city tier. Below are realistic single-person
-    monthly budgets covering rent, food, local transport, and mobile data, assuming a comfortable
-    but not luxurious lifestyle.
+    中國的生活費因城市等級而差異巨大。以下是涵蓋租金、食物、本地交通和手機流量的實際單人月度預算，假設為舒適但非奢侈的生活方式。
   </p>
   <table>
     <thead>
       <tr>
-        <th>City tier</th>
-        <th>Example cities</th>
-        <th>Rent (1BR)</th>
-        <th>Total monthly budget</th>
+        <th>城市等級</th>
+        <th>代表城市</th>
+        <th>租金（一房）</th>
+        <th>每月總預算</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>First tier</td>
-        <td>Shanghai, Shenzhen</td>
-        <td>7,000-12,000 RMB</td>
-        <td>12,000-18,000 RMB</td>
+        <td>一線城市</td>
+        <td>上海、深圳</td>
+        <td>7,000-12,000 人民幣</td>
+        <td>12,000-18,000 人民幣</td>
       </tr>
       <tr>
-        <td>New first tier</td>
-        <td>Chengdu, Hangzhou</td>
-        <td>3,500-6,000 RMB</td>
-        <td>7,000-11,000 RMB</td>
+        <td>新一線城市</td>
+        <td>成都、杭州</td>
+        <td>3,500-6,000 人民幣</td>
+        <td>7,000-11,000 人民幣</td>
       </tr>
       <tr>
-        <td>Smaller / resort</td>
-        <td>Dali, Sanya</td>
-        <td>2,000-4,000 RMB</td>
-        <td>5,500-8,500 RMB</td>
+        <td>較小/度假城市</td>
+        <td>大理、三亞</td>
+        <td>2,000-4,000 人民幣</td>
+        <td>5,500-8,500 人民幣</td>
       </tr>
     </tbody>
   </table>
   <p>
-    The pattern is consistent: rent drives everything. Food, whether you cook or eat at local
-    restaurants, is inexpensive across the board, and local transport rarely exceeds a few hundred
-    RMB a month even with daily metro and ride-hailing use. Budget extra if you rely on imported
-    groceries, international schools, or frequent domestic flights.
+    規律是一致的：租金決定一切。無論自己做飯還是在本地餐廳吃，食物都很便宜，本地交通即使每天搭地鐵和叫車也很少超過每月幾百人民幣。如果你依賴進口食品、國際學校或經常搭國內航班，則需要額外預算。
   </p>
 
-  <h2 id="daily-life">Daily Life Essentials</h2>
+  <h2 id="daily-life">日常生活須知</h2>
   <p>
-    Four systems cover almost everything you will touch day to day. Set them up in your first week
-    and the rest of your stay runs on autopilot.
+    四個系統幾乎涵蓋了你日常會接觸的一切。在第一週設定好它們，剩下的時間就能自動運轉。
   </p>
   <ul>
     <li>
-      <strong>付款s.</strong> Alipay and WeChat Pay run daily life, and both now let foreigners
-      link major overseas cards. Set them up before you arrive. Our
-      <a href="/zh-tw/digital-nomads/payment/">payment guide</a> covers the full setup and limits.
+      <strong>付款。</strong>支付寶和微信支付主導日常生活，兩者現在都允許外國人綁定主要的海外卡。在抵達前就設定好。我們的
+      <a href="/zh-tw/digital-nomads/payment/">付款指南</a>涵蓋了完整的設定和限額。
     </li>
     <li>
-      <strong>Connectivity.</strong> An eSIM gets you online the moment you land; for a multi-month
-      stay you may switch to a local SIM for a domestic number. See the
-      <a href="/zh-tw/esim/">eSIM guides</a> for options.
+      <strong>網路連接。</strong>eSIM 讓你落地即可上網；對於多月停留，你可能需要換成本地 SIM 卡以獲得國內號碼。查看
+      <a href="/zh-tw/esim/">eSIM 指南</a>了解選項。
     </li>
     <li>
-      <strong>交通.</strong> Metros in big cities are cheap, fast, and signposted in English,
-      and ride-hailing through DiDi works with a foreign card. Add the local transit QR code to
-      your payment app for tap-and-go.
+      <strong>交通。</strong>大城市地鐵便宜、快速且有英文標示，透過滴滴叫車可用外國卡付款。將本地交通 QR 碼加入你的支付應用程式即可嗶卡進站。
     </li>
     <li>
-      <strong>Basic healthcare.</strong> Big cities have private international clinics with
-      English-speaking staff; public hospitals are cheaper but expect upfront payment and Mandarin.
-      Carry insurance that covers China and keep a small stock of any prescription medication.
+      <strong>基本醫療。</strong>大城市有提供英語服務的私立國際診所；公立醫院較便宜但需要預付費用和普通話溝通。攜帶涵蓋中國的保險，並備好處方藥物的小庫存。
     </li>
   </ul>
 
-  <h2 id="cities">Popular Cities for Long Stays</h2>
+  <h2 id="cities">適合長居的熱門城市</h2>
   <p>
-    Four cities consistently attract long-stay foreigners, each with a distinct character. Each
-    links to our full city guide for the on-the-ground detail.
+    四個城市持續吸引長期居留的外國人，每個都有獨特的性格。每個都連結到我們的完整城市指南以獲取更多細節。
   </p>
-  <h3>Shanghai</h3>
+  <h3>上海</h3>
   <p>
-    China's most international city: the widest English coverage, the deepest expat community, and
-    the most services aimed at foreigners — balanced by the highest rents in the country. Ideal if
-    you want convenience and an easy landing. See the
-    <a href="/zh-tw/posts/shanghai-city-guide-for-foreigners/">Shanghai city guide</a>.
+    中國最國際化的城市：英語普及度最高、外籍人士社群最深、面向外國人的服務最多——代價是全國最高的租金。如果你想要便利和輕鬆落地，這裡最理想。查看
+    <a href="/zh-tw/posts/shanghai-city-guide-for-foreigners/">上海城市指南</a>。
   </p>
-  <h3>Chengdu</h3>
+  <h3>成都</h3>
   <p>
-    A relaxed, affordable base in the southwest famous for food, teahouses, and a slower pace, with
-    a growing foreign community and good transport links. See the
-    <a href="/zh-tw/posts/chengdu-city-guide-for-foreigners/">Chengdu city guide</a>.
+    西南地區悠閒且實惠的基地，以美食、茶館和慢節奏聞名，擁有不斷增長的外籍社群和良好的交通連接。查看
+    <a href="/zh-tw/posts/chengdu-city-guide-for-foreigners/">成都城市指南</a>。
   </p>
-  <h3>Dali</h3>
+  <h3>大理</h3>
   <p>
-    A small lakeside town in Yunnan that has become a magnet for long-stay travelers seeking very
-    low costs, mild weather, and an established community of remote workers and creatives. Best for
-    those who prioritize lifestyle and budget over big-city amenities.
+    雲南的一個湖畔小鎮，已成為長期居留旅行者的磁石，尋求極低的成本、溫和的氣候和已建立的遠端工作者及創作者社群。最適合將生活方式和預算置於大城市設施之上的人。
   </p>
-  <h3>Sanya</h3>
+  <h3>三亞</h3>
   <p>
-    China's tropical beach destination on Hainan island, popular for winter stays thanks to warm
-    weather when the rest of the country is cold. Summers are hot and humid. See the
-    <a href="/zh-tw/posts/sanya-city-guide-for-foreigners/">Sanya city guide</a>.
+    中國的熱帶海灘目的地，位於海南島，因其餘地區寒冷時的溫暖天氣而受冬季居留歡迎。夏天炎熱潮濕。查看
+    <a href="/zh-tw/posts/sanya-city-guide-for-foreigners/">三亞城市指南</a>。
   </p>
 
-  <h2 id="next">Planning to Work While You Stay?</h2>
+  <h2 id="next">停留期間打算工作？</h2>
   <p>
-    If your long stay doubles as remote work, the logistics shift again — you will care about
-    internet reliability, time zones, coworking space, and the fine print of what each visa lets you
-    do. Our <a href="/zh-tw/digital-nomads/">complete China digital nomad guide</a> picks up exactly where
-    this one leaves off, covering visas, payments, connectivity, and the best cities to base
-    yourself as a remote worker.
+    如果你的長期居留同時也是遠端工作，後勤問題又會有所不同——你會關心網路穩定性、時區、共用辦公空間，以及每種簽證允許你做什麼的細則。我們的<a href="/zh-tw/digital-nomads/">中國數位遊牧完整指南</a>恰好從這裡接續，涵蓋簽證、支付、連接性和最適合遠端工作者的城市。
   </p>
 </GuideLayout>
