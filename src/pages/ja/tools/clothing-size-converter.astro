@@ -8,14 +8,14 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 const title = '中国の衣類・靴サイズ換算ツール';
 const description =
-  '米国・英国・EUの衣類・靴サイズを中国サイズに換算できるため、中国でも安心して買い物ができます。メンズ・レディースの衣類と靴に対応しています。';
+  '米国・英国・EUの衣類・靴サイズを中国サイズに換算できます。中国で買い物をするときの目安として、メンズ・レディースの衣類と靴に対応しています。';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">サイズ換算</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">衣類・靴サイズ換算ツール</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
@@ -33,10 +33,10 @@ const description =
       <table class="w-full min-w-[560px] border-collapse text-sm">
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
-            <th class="py-3 pr-4 font-semibold">中国</th>
-            <th class="py-3 pr-4 font-semibold">米国</th>
-            <th class="py-3 pr-4 font-semibold">英国</th>
-            <th class="py-3 pr-4 font-semibold">欧州</th>
+            <th class="py-3 pr-4 font-semibold">中国サイズ</th>
+            <th class="py-3 pr-4 font-semibold">米国サイズ</th>
+            <th class="py-3 pr-4 font-semibold">英国サイズ</th>
+            <th class="py-3 pr-4 font-semibold">EUサイズ</th>
           </tr>
         </thead>
         <tbody id="size-rows"></tbody>
@@ -45,12 +45,12 @@ const description =
 
     <p class="mt-4 text-xs text-gray-400">
       サイズ感はブランドやシルエットによって異なります。中国の衣類は欧米の同等サイズより小さめに作られていることが多いため、
-      迷った場合はワンサイズ上にするか、購入前に試着することをおすすめします。こちらは一般的な目安表です。
+      迷ったときはワンサイズ上を選ぶか、購入前に試着することをおすすめします。こちらの表は一般的な目安としてご利用ください。
     </p>
 
     <AffiliateCta
-      title="旅行中のお買い物をもっとスマートにできます"
-      description="先に決済手段と通信環境を整えておけば、中国のどのお店やアプリでもスムーズに購入しやすくなります。"
+      title="旅行中のお買い物を、もっとスムーズにできます"
+      description="決済手段と通信環境をあらかじめ整えておくと、中国の店舗やアプリでも購入しやすくなります。"
       buttonText="旅行の必需品を見る"
       placeholder={AFFILIATE_LINKS.transport}
     />
@@ -59,22 +59,22 @@ const description =
 </BaseLayout>
 
 <script>
-  // 参考換算表です。中国の衣類は身長やバストをcmで表記し、
+  // 参考用の換算表です。中国の衣類は身長やバストをcmで表記し、
   // 一般的には数字サイズへ簡略化されることがあります。靴はEUベースのcmサイズを使用します。
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
     レディース衣類: [
-      { cn: '155/80A (XS)', us: '0〜2', uk: '4〜6', eu: '32〜34' },
-      { cn: '160/84A (S)', us: '4', uk: '8', eu: '36' },
-      { cn: '165/88A (M)', us: '6〜8', uk: '10〜12', eu: '38〜40' },
-      { cn: '170/92A (L)', us: '10〜12', uk: '14〜16', eu: '42〜44' },
-      { cn: '175/96A (XL)', us: '14', uk: '18', eu: '46' },
+      { cn: '155/80A（XS）', us: '0〜2', uk: '4〜6', eu: '32〜34' },
+      { cn: '160/84A（S）', us: '4', uk: '8', eu: '36' },
+      { cn: '165/88A（M）', us: '6〜8', uk: '10〜12', eu: '38〜40' },
+      { cn: '170/92A（L）', us: '10〜12', uk: '14〜16', eu: '42〜44' },
+      { cn: '175/96A（XL）', us: '14', uk: '18', eu: '46' },
     ],
     メンズ衣類: [
-      { cn: '165/88A (S)', us: '34〜36', uk: '34〜36', eu: '44〜46' },
-      { cn: '170/92A (M)', us: '38', uk: '38', eu: '48' },
-      { cn: '175/96A (L)', us: '40', uk: '40', eu: '50' },
-      { cn: '180/100A (XL)', us: '42〜44', uk: '42〜44', eu: '52〜54' },
-      { cn: '185/104A (XXL)', us: '46', uk: '46', eu: '56' },
+      { cn: '165/88A（S）', us: '34〜36', uk: '34〜36', eu: '44〜46' },
+      { cn: '170/92A（M）', us: '38', uk: '38', eu: '48' },
+      { cn: '175/96A（L）', us: '40', uk: '40', eu: '50' },
+      { cn: '180/100A（XL）', us: '42〜44', uk: '42〜44', eu: '52〜54' },
+      { cn: '185/104A（XXL）', us: '46', uk: '46', eu: '56' },
     ],
     レディース靴: [
       { cn: '35', us: '5', uk: '2.5', eu: '35' },
