@@ -1,5 +1,252 @@
-He reescrito el archivo completo en español en [show-to-driver.astro](C:\Users\Administrator\WorkBuddy\2026-07-17-18-58-48\ChinaTripBox\es_fixes\tools\show-to-driver.astro).
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
 
-Cambié el título, descripción, textos HTML, placeholders, botones y todos los textos de datos dentro del `script` que seguían en chino/mixtos, manteniendo imports, estructura, IDs, clases, URLs y la marca `ChinaTripBox`. No hice cambios de lógica.
+const title = 'Mostrar al conductor: tarjeta de direcci贸n';
+const description =
+  'Crea en tu tel茅fono una tarjeta grande para mostrar al conductor, al personal del hotel o a cualquier persona que te ayude con indicaciones. Sin iniciar sesi贸n, sin instalar apps y sin guardar datos personales.';
+---
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
+  <Header locale="es" />
+  <main class="container-page py-8 md:py-10">
+    <header class="max-w-3xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Mostrar al conductor</h1>
+      <p class="mt-3 text-lg text-gray-600">
+        Genera una tarjeta grande y legible para taxis, recogidas de DiDi, recepciones de hotel y para pedir
+        indicaciones. Todo funciona en tu navegador.
+      </p>
+    </header>
 
-No levanté la app ni ejecuté una validación de build; solo verifiqué el contenido del archivo tras la edición.
+    <AdSlot format="banner" />
+
+    <section class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+      <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
+        <div class="grid gap-4">
+          <label class="flex flex-col text-sm">
+            <span class="mb-1 font-medium text-gray-700">Direcci贸n o nombre del lugar</span>
+            <textarea
+              id="destination"
+              rows="4"
+              class="rounded-lg border border-gray-300 px-3 py-2 text-base"
+              placeholder="Pega la direcci贸n, el nombre del lugar o los datos de tu reserva."
+            ></textarea>
+            <span class="mt-1 text-xs text-gray-500">
+              Mejor resultado: pega el nombre exacto del lugar o la direcci贸n completa tal como aparece en tu reserva o
+              en el mapa.
+            </span>
+          </label>
+
+          <label class="flex flex-col text-sm">
+            <span class="mb-1 font-medium text-gray-700">Nota opcional</span>
+            <select id="note" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+              <option value="route">Por favor, siga la navegaci贸n y ll茅veme a esta direcci贸n.</option>
+              <option value="pickup">Estoy esperando aqu铆. Por favor, ll谩meme o escr铆bame en la aplicaci贸n.</option>
+              <option value="hotel">Por favor, ay煤deme a llegar a este hotel o contacte con la recepci贸n.</option>
+              <option value="stop">Por favor, pare aqu铆 si es seguro y legal.</option>
+              <option value="receipt">Por favor, deme un recibo si es posible.</option>
+            </select>
+          </label>
+
+          <label class="flex flex-col text-sm">
+            <span class="mb-1 font-medium text-gray-700">Detalles adicionales para el conductor</span>
+            <input
+              id="extra"
+              class="rounded-lg border border-gray-300 px-3 py-2 text-base"
+              placeholder="Puerta, vest铆bulo, punto de recogida, equipaje u otra referencia."
+            />
+          </label>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <button id="generate-btn" class="btn-primary">Generar tarjeta</button>
+            <button
+              id="clear-btn"
+              class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400"
+            >
+              Borrar
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+          Esta herramienta no reserva viajes ni contacta con conductores. En emergencias, contacta primero con los
+          servicios locales de emergencia o con tu hotel.
+        </div>
+      </div>
+
+      <section class="min-w-0">
+        <div id="driver-card" class="rounded-xl border border-gray-900 bg-white p-5 shadow-sm">
+          <div class="flex items-center justify-between gap-3 border-b border-gray-200 pb-3">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Muestra esta pantalla</p>
+              <h2 class="text-lg font-bold text-gray-900">Tarjeta para ense帽ar al conductor</h2>
+            </div>
+            <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
+              Sin conexi贸n
+            </span>
+          </div>
+
+          <div class="py-5">
+            <p id="main-line" class="text-center text-2xl font-black leading-tight text-gray-950 sm:text-4xl">
+              Por favor, ll茅veme a esta direcci贸n:
+            </p>
+            <p
+              id="address-line"
+              class="mt-5 whitespace-pre-wrap break-words text-center text-4xl font-black leading-tight text-gray-950 sm:text-6xl"
+            >
+              Introduce la direcci贸n a la izquierda
+            </p>
+            <p id="note-line" class="mt-5 text-center text-2xl font-bold leading-snug text-gray-900 sm:text-3xl">
+              Por favor, siga la navegaci贸n. Gracias.
+            </p>
+            <p id="extra-line" class="mt-4 hidden whitespace-pre-wrap break-words text-center text-xl font-semibold text-gray-800 sm:text-2xl"></p>
+          </div>
+
+          <div class="grid gap-3 border-t border-gray-200 pt-4 sm:grid-cols-3">
+            <button id="copy-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
+              Copiar texto
+            </button>
+            <button id="fullscreen-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
+              Pantalla completa
+            </button>
+            <a href="/es/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
+              Pedir ayuda de IA
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-5 grid gap-3 sm:grid-cols-2">
+          <button data-quick="Por favor, ind铆queme c贸mo llegar a esta direcci贸n. Gracias." class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
+            Pedir indicaciones
+          </button>
+          <button data-quick="No hablo chino. Por favor, comun铆quese conmigo con una app de traducci贸n. Gracias." class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
+            No hablo chino
+          </button>
+          <button data-quick="Por favor, pare en un lugar seguro y legal. Gracias." class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
+            Parar con seguridad
+          </button>
+          <button data-quick="Si no puede encontrarme, env铆eme un mensaje en la aplicaci贸n." class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
+            Escr铆beme en la aplicaci贸n
+          </button>
+        </div>
+      </section>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  #driver-card:fullscreen {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0;
+    border: 0;
+    padding: 6vw;
+  }
+</style>
+
+<script>
+  const noteMap: Record<string, string> = {
+    route: 'Por favor, siga la navegaci贸n. Gracias.',
+    pickup: 'Estoy esperando aqu铆. Por favor, cont谩cteme en la aplicaci贸n.',
+    hotel: 'Por favor, ay煤deme a llegar a este hotel y contacte con la recepci贸n si hace falta.',
+    stop: 'Por favor, pare en un lugar seguro y legal. Gracias.',
+    receipt: 'Si es posible, por favor deme una factura o un recibo. Gracias.',
+  };
+
+  const destination = document.getElementById('destination') as HTMLTextAreaElement | null;
+  const note = document.getElementById('note') as HTMLSelectElement | null;
+  const extra = document.getElementById('extra') as HTMLInputElement | null;
+  const mainLine = document.getElementById('main-line');
+  const addressLine = document.getElementById('address-line');
+  const noteLine = document.getElementById('note-line');
+  const extraLine = document.getElementById('extra-line');
+  const card = document.getElementById('driver-card');
+  const copyBtn = document.getElementById('copy-btn');
+  const fullscreenBtn = document.getElementById('fullscreen-btn');
+  const generateBtn = document.getElementById('generate-btn');
+  const clearBtn = document.getElementById('clear-btn');
+  const quickButtons = document.querySelectorAll<HTMLButtonElement>('.quick');
+
+  function cardText() {
+    const address = destination?.value.trim() || 'Introduce la direcci贸n a la izquierda';
+    const noteText = noteMap[note?.value || 'route'];
+    const extraText = extra?.value.trim();
+    return [
+      'Por favor, ll茅veme a esta direcci贸n:',
+      address,
+      noteText,
+      extraText ? `Detalles adicionales: ${extraText}` : '',
+    ].filter(Boolean).join('\n');
+  }
+
+  function render() {
+    const address = destination?.value.trim();
+    const extraText = extra?.value.trim();
+    if (mainLine) mainLine.textContent = 'Por favor, ll茅veme a esta direcci贸n:';
+    if (addressLine) addressLine.textContent = address || 'Introduce la direcci贸n a la izquierda';
+    if (noteLine) noteLine.textContent = noteMap[note?.value || 'route'];
+    if (extraLine) {
+      extraLine.textContent = extraText ? `Detalles adicionales: ${extraText}` : '';
+      extraLine.classList.toggle('hidden', !extraText);
+    }
+  }
+
+  generateBtn?.addEventListener('click', () => {
+    render();
+    card?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  [destination, note, extra].forEach((el) => el?.addEventListener('input', render));
+
+  clearBtn?.addEventListener('click', () => {
+    if (destination) destination.value = '';
+    if (extra) extra.value = '';
+    if (note) note.value = 'route';
+    render();
+  });
+
+  copyBtn?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(cardText());
+      copyBtn.textContent = 'Copiado';
+      window.setTimeout(() => {
+        copyBtn.textContent = 'Copiar texto';
+      }, 1400);
+    } catch {
+      copyBtn.textContent = 'Error al copiar';
+    }
+  });
+
+  fullscreenBtn?.addEventListener('click', async () => {
+    if (!card) return;
+    if (!document.fullscreenElement) {
+      await card.requestFullscreen?.();
+      fullscreenBtn.textContent = 'Salir de pantalla completa';
+    } else {
+      await document.exitFullscreen?.();
+      fullscreenBtn.textContent = 'Pantalla completa';
+    }
+  });
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!fullscreenBtn) return;
+    fullscreenBtn.textContent = document.fullscreenElement ? 'Salir de pantalla completa' : 'Pantalla completa';
+  });
+
+  quickButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!extra) return;
+      extra.value = button.dataset.quick || '';
+      render();
+      card?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  render();
+</script>
