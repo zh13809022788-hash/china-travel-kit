@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = '旅行者のための必須中国語フレーズ';
+const title = '旅行者向け中国語必須フレーズ集';
 const description =
-  'Chinaを訪れる旅行者向けに、必須の中国語フレーズをピンインと日本語付きでまとめた、印刷しやすい便利な一覧です。あいさつ、決済、交通、食事、緊急時をカバーしています。';
+  '中国を訪れる旅行者向けに、必須の中国語フレーズをピンインと日本語付きでまとめた、印刷しやすい便利な一覧です。あいさつ、決済、交通、食事、緊急時をカバーしています。';
 
 interface Phrase {
   en: string;
@@ -24,7 +24,7 @@ interface Group {
 
 const groups: Group[] = [
   {
-    id: 'basics', label: 'あいさつ・基本', icon: '👋',
+    id: 'basics', label: 'あいさつ・基本表現', icon: '👋',
     phrases: [
       { en: 'こんにちは', zh: '你好', pinyin: 'nǐ hǎo' },
       { en: 'ありがとうございます', zh: '谢谢', pinyin: 'xièxie' },
@@ -37,7 +37,7 @@ const groups: Group[] = [
     ],
   },
   {
-    id: 'payment', label: 'お金・決済', icon: '💳',
+    id: 'payment', label: 'お金・支払い', icon: '💳',
     phrases: [
       { en: 'いくらですか？', zh: '多少钱？', pinyin: 'duōshao qián?' },
       { en: 'Alipayは使えますか？', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
@@ -48,14 +48,14 @@ const groups: Group[] = [
     ],
   },
   {
-    id: 'transport', label: '移動', icon: '🚕',
+    id: 'transport', label: '移動・交通', icon: '🚕',
     phrases: [
       { en: '地下鉄はどこですか？', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
       { en: 'この住所までお願いします', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
       { en: 'ここで止めてください', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
       { en: '駅', zh: '火车站', pinyin: 'huǒchē zhàn' },
       { en: '空港', zh: '机场', pinyin: 'jīchǎng' },
-      { en: '...へはどう行けばいいですか？', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
+      { en: '…へはどう行けばいいですか？', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
     ],
   },
   {
@@ -70,7 +70,7 @@ const groups: Group[] = [
     ],
   },
   {
-    id: 'help', label: '助け・緊急時', icon: '🆘',
+    id: 'help', label: '困ったとき・緊急時', icon: '🆘',
     phrases: [
       { en: '助けて！', zh: '救命！', pinyin: 'jiùmìng!' },
       { en: 'トイレはどこですか？', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
@@ -88,7 +88,7 @@ const groups: Group[] = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">必須中国語フレーズ</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">旅行者向け中国語必須フレーズ集</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -96,14 +96,14 @@ const groups: Group[] = [
 
     <!-- コントロール -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
-      <button data-filter="all" class="phrase-filter btn-primary text-sm">すべて</button>
+      <button data-filter="all" class="phrase-filter btn-primary text-sm">すべて表示</button>
       {groups.map((g) => (
         <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
           {g.icon} {g.label}
         </button>
       ))}
       <button id="print-btn" class="ml-auto rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
-        🖨️ 印刷 / PDF保存
+        🖨️ 印刷する / PDFとして保存する
       </button>
     </div>
 
@@ -126,9 +126,9 @@ const groups: Group[] = [
     </div>
 
     <AffiliateCta
-      title="移動中もオンラインで翻訳"
-      description="China旅行用eSIMがあれば、到着した瞬間から翻訳アプリと地図を使えます。"
-      buttonText="接続を準備する"
+      title="移動中でもオンラインで翻訳できます"
+      description="中国旅行向けのeSIMがあれば、到着したその瞬間から翻訳アプリや地図を使えます。"
+      buttonText="通信の準備をする"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
