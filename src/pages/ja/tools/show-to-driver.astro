@@ -1,12 +1,12 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const title = 'ドライバーに見せる：中国語住所カード';
+const title = '運転手に見せる中国語住所カード';
 const description =
-  'Chinaでタクシードライバー、ホテルスタッフ、道案内を頼む相手に見せる大きな中国語メッセージカードをスマートフォンで作成できます。ログイン不要、アプリのインストール不要、個人データは保存されません。';
+  '中国でタクシー運転手、ホテルスタッフ、道案内をお願いする相手に見せる大きな中国語メッセージカードを、スマートフォンで作成できます。ログイン不要、アプリのインストール不要、個人データは保存されません。';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
@@ -14,9 +14,9 @@ const description =
   <main class="container-page py-8 md:py-10">
     <header class="max-w-3xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">ドライバーに見せる</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">運転手に見せる中国語カード</h1>
       <p class="mt-3 text-lg text-gray-600">
-        タクシー、配車サービスの乗車地点、ホテルのフロント、道案内を頼む場面で使える大きな中国語カードを作成します。
+        タクシーや配車サービスの乗車時、ホテルのフロント、道を尋ねる場面で使える大きな中国語カードを作成できます。
         すべてブラウザ内で動作します。
       </p>
     </header>
@@ -32,47 +32,47 @@ const description =
               id="destination"
               rows="4"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Amap、Trip.com、ホテル予約、友人から受け取った中国語住所を貼り付けてください。"
+              placeholder="Amap、Trip.com、ホテル予約、友人から受け取った中国語の住所を貼り付けてください。"
             ></textarea>
             <span class="mt-1 text-xs text-gray-500">
-              最適な結果を得るには、中国語の名称または住所を貼り付けてください。英語だけの場所名は、
-              現地のドライバーが特定しにくい場合があります。
+              より正確に伝えるには、中国語の施設名または住所を貼り付けてください。英語だけの場所名では、
+              現地の運転手が特定しにくい場合があります。
             </span>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">任意のメモ</span>
+            <span class="mb-1 font-medium text-gray-700">補足メッセージ</span>
             <select id="note" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-              <option value="route">ナビに従って、この住所まで連れて行ってください。</option>
-              <option value="pickup">ここで待っています。アプリで電話またはメッセージをください。</option>
-              <option value="hotel">このホテルまで行けるよう手伝うか、フロントに連絡してください。</option>
-              <option value="stop">安全かつ合法であれば、ここで停車してください。</option>
-              <option value="receipt">可能であれば領収書をください。</option>
+              <option value="route">ナビに従って、この住所までお願いします。</option>
+              <option value="pickup">ここでお待ちしています。アプリで電話またはメッセージをお願いします。</option>
+              <option value="hotel">このホテルまで行けるように手伝っていただくか、フロントへご連絡ください。</option>
+              <option value="stop">安全かつ合法に停車できる場所で降ろしてください。</option>
+              <option value="receipt">可能であれば領収書をお願いします。</option>
             </select>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">ドライバー向けの追加情報</span>
+            <span class="mb-1 font-medium text-gray-700">運転手への追加情報</span>
             <input
               id="extra"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="ゲート番号、ホテルロビー、乗車地点、荷物など"
+              placeholder="ゲート番号、ホテルのロビー、乗車場所、荷物の情報など"
             />
           </label>
 
           <div class="grid gap-3 sm:grid-cols-2">
-            <button id="generate-btn" class="btn-primary">カードを作成</button>
+            <button id="generate-btn" class="btn-primary">カードを作成する</button>
             <button
               id="clear-btn"
               class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400"
             >
-              クリア
+              入力をクリア
             </button>
           </div>
         </div>
 
         <div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-          このツールは配車予約やドライバーへの連絡を行いません。緊急時は、まず現地の緊急サービスまたはホテルに連絡してください。
+          このツールから配車を予約したり、運転手に直接連絡したりはできません。緊急時は、まず現地の緊急サービスまたはホテルへ連絡してください。
         </div>
       </div>
 
@@ -80,11 +80,11 @@ const description =
         <div id="driver-card" class="rounded-xl border border-gray-900 bg-white p-5 shadow-sm">
           <div class="flex items-center justify-between gap-3 border-b border-gray-200 pb-3">
             <div>
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">この画面を見せてください</p>
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">この画面をそのまま見せてください</p>
               <h2 class="text-lg font-bold text-gray-900">给司机看的中文小条</h2>
             </div>
             <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
-              オフライン
+              オフラインで使えます
             </span>
           </div>
 
@@ -96,7 +96,7 @@ const description =
               id="address-line"
               class="mt-5 whitespace-pre-wrap break-words text-center text-4xl font-black leading-tight text-gray-950 sm:text-6xl"
             >
-              在左侧输入地址
+              左側に住所を入力してください
             </p>
             <p id="note-line" class="mt-5 text-center text-2xl font-bold leading-snug text-gray-900 sm:text-3xl">
               请按照导航路线行驶，谢谢。
@@ -106,29 +106,29 @@ const description =
 
           <div class="grid gap-3 border-t border-gray-200 pt-4 sm:grid-cols-3">
             <button id="copy-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
-              テキストをコピー
+              テキストをコピーする
             </button>
             <button id="fullscreen-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
-              全画面表示
+              全画面で表示する
             </button>
             <a href="/ja/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
-              AIに相談
+              AIに相談する
             </a>
           </div>
         </div>
 
         <div class="mt-5 grid gap-3 sm:grid-cols-2">
           <button data-quick="请问这个地址怎么走？谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            道を尋ねる
+            道を尋ねるとき
           </button>
           <button data-quick="我不会说中文，请用翻译软件和我沟通，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            中国語を話せません
+            中国語が話せないと伝える
           </button>
           <button data-quick="请在安全合法的地方停车，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            安全に停車
+            安全な場所で停車してもらう
           </button>
           <button data-quick="如果找不到我，请在打车软件里发消息。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            アプリでメッセージ
+            アプリで連絡してもらう
           </button>
         </div>
       </section>
@@ -174,7 +174,7 @@ const description =
   const quickButtons = document.querySelectorAll<HTMLButtonElement>('.quick');
 
   function cardText() {
-    const address = destination?.value.trim() || '在左侧输入地址';
+    const address = destination?.value.trim() || '左側に住所を入力してください';
     const noteText = noteMap[note?.value || 'route'];
     const extraText = extra?.value.trim();
     return [
@@ -189,7 +189,7 @@ const description =
     const address = destination?.value.trim();
     const extraText = extra?.value.trim();
     if (mainLine) mainLine.textContent = '请帮我去这个地址：';
-    if (addressLine) addressLine.textContent = address || '在左侧输入地址';
+    if (addressLine) addressLine.textContent = address || '左側に住所を入力してください';
     if (noteLine) noteLine.textContent = noteMap[note?.value || 'route'];
     if (extraLine) {
       extraLine.textContent = extraText ? `补充说明：${extraText}` : '';
@@ -216,10 +216,10 @@ const description =
       await navigator.clipboard.writeText(cardText());
       copyBtn.textContent = 'コピーしました';
       window.setTimeout(() => {
-        copyBtn.textContent = 'テキストをコピー';
+        copyBtn.textContent = 'テキストをコピーする';
       }, 1400);
     } catch {
-      copyBtn.textContent = 'コピーに失敗しました';
+      copyBtn.textContent = 'コピーできませんでした';
     }
   });
 
@@ -227,16 +227,16 @@ const description =
     if (!card) return;
     if (!document.fullscreenElement) {
       await card.requestFullscreen?.();
-      fullscreenBtn.textContent = '全画面表示を終了';
+      fullscreenBtn.textContent = '全画面表示を終了する';
     } else {
       await document.exitFullscreen?.();
-      fullscreenBtn.textContent = '全画面表示';
+      fullscreenBtn.textContent = '全画面で表示する';
     }
   });
 
   document.addEventListener('fullscreenchange', () => {
     if (!fullscreenBtn) return;
-    fullscreenBtn.textContent = document.fullscreenElement ? '全画面表示を終了' : '全画面表示';
+    fullscreenBtn.textContent = document.fullscreenElement ? '全画面表示を終了する' : '全画面で表示する';
   });
 
   quickButtons.forEach((button) => {
