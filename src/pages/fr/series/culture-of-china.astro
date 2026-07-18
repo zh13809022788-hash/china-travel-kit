@@ -1,4 +1,5 @@
 ---
+---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -10,25 +11,25 @@ const posts = (await getCollection('posts-fr'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Culture de Chine — traditions et coutumes pour les voyageurs';
-const description = 'Explorez la culture chinoise en tant que voyageur étranger : cérémonie du thé, Fête du Printemps, notion de face et guanxi, calligraphie, kung-fu, zodiaque et les traditions qui façonnent la vie quotidienne en Chine.';
+const title = 'Culture de la Chine — traditions et coutumes pour les voyageurs';
+const description = 'Explorez la culture chinoise en tant que voyageur étranger : cérémonie du thé, Fête du Printemps, notion de face et guanxi, calligraphie, kung-fu, zodiaque et traditions qui façonnent la vie quotidienne en Chine.';
 
 const relatedTools = [
-  { href: '/fr/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Pourboires et étiquette', desc: 'Quand donner un pourboire, quand ne pas le faire, et pourquoi' },
+  { href: '/fr/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Pourboires et étiquette', desc: 'Quand laisser un pourboire, quand s’abstenir, et pourquoi' },
   { href: '/fr/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Préparer ses bagages pour les festivals', desc: 'Quoi emporter pendant les saisons de fêtes' },
-  { href: '/fr/posts/how-to-pay-in-china-tourist-guide/', title: 'Comment payer en Chine', desc: 'Paiements pendant la saison des festivals' },
+  { href: '/fr/posts/how-to-pay-in-china-tourist-guide/', title: 'Comment payer en Chine', desc: 'Les paiements pendant la saison des festivals' },
 ];
 
 const relatedCities = [
-  { href: '/fr/posts/beijing-city-guide-for-foreigners/', title: 'Pékin', desc: 'Culture impériale et vie des hutongs' },
+  { href: '/fr/posts/beijing-city-guide-for-foreigners/', title: 'Pékin', desc: 'Culture impériale et vie dans les hutongs' },
   { href: '/fr/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Culture du thé et patrimoine du lac de l’Ouest' },
   { href: '/fr/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Culture des maisons de thé et art de vivre' },
 ];
 
 const otherSeries = [
   { href: '/fr/series/food-of-china/', title: 'La cuisine de Chine' },
-  { href: '/fr/series/history-of-china/', title: 'Histoire de Chine' },
-  { href: '/fr/series/modern-china/', title: 'Chine moderne' },
+  { href: '/fr/series/history-of-china/', title: 'Histoire de la Chine' },
+  { href: '/fr/series/modern-china/', title: 'La Chine moderne' },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
 const locale = 'fr';
@@ -38,7 +39,7 @@ const locale = 'fr';
   <Header locale="fr" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Série de contenu</p>
+      <p class="section-kicker">Série de contenus</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -50,7 +51,7 @@ const locale = 'fr';
         <div class="section-heading">
           <div>
             <p class="section-kicker">Articles</p>
-            <h2>Série Culture de Chine</h2>
+            <h2>Série Culture de la Chine</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -71,7 +72,7 @@ const locale = 'fr';
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">Outils pratiques</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Voyager avec une conscience culturelle</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Voyager avec une sensibilité culturelle</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -108,3 +109,5 @@ const locale = 'fr';
   </main>
   <Footer />
 </BaseLayout>
+
+---
