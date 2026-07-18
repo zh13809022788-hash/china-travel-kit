@@ -1,72 +1,72 @@
----
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-
-const title = 'Редакционная команда ChinaTripBox';
-const description =
-  'О редакционной команде ChinaTripBox, нашем подходе к практическим гидам по Китаю и способе отправить исправление.';
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': new URL('/authors/chinatripbox-editorial-team/#person', Astro.site).toString(),
-  name: title,
-  url: new URL('/authors/chinatripbox-editorial-team/', Astro.site).toString(),
-  affiliation: {
-    '@type': 'Organization',
-    name: 'ChinaTripBox',
-    url: new URL('/', Astro.site).toString(),
-  },
-  knowsAbout: [
-    'планирование поездки в Китай',
-    'мобильные платежи в Китае',
-    'eSIM и интернет в Китае',
-    'скоростные поезда Китая',
-    'практическая логистика для иностранных путешественников в Китае',
-  ],
-};
----
-
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
-  <main class="container-page py-12">
-    <article class="prose-content article-body">
-      <p class="section-kicker">Автор</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
-
-      <h2>Редакционный фокус</h2>
-      <p>
-        Редакционная команда ChinaTripBox готовит практические гиды для иностранных путешественников
-        по Китаю. Основные темы — настройка оплаты, eSIM и интернет, скоростные поезда, DiDi,
-        трансферы из аэропорта, планирование по городам, заказ еды и типичные проблемы первой поездки.
-      </p>
-
-      <h2>Как мы создаём материалы</h2>
-      <p>
-        Мы совмещаем официальные источники, документацию сервисов, справочные материалы приложений,
-        вопросы читателей, отчёты путешественников и собственные проверки, когда это возможно. Для
-        быстро меняющихся тем — безвизовый въезд, лимиты по оплате, доступность приложений и правила
-        транспорта — окончательным ориентиром считаем официальные страницы государства или провайдера.
-      </p>
-
-      <h2>Исправления</h2>
-      <p>
-        Логистика поездок по Китаю меняется быстро. Если вы нашли устаревший шаг, изменившееся
-        правило, битую ссылку или недостающее уточнение, отправьте URL страницы через нашу
-        <a href="/ru/contact/">страницу контактов</a>. Мы проверяем такие сообщения и обновляем
-        материалы, если подтверждение достаточно надёжно.
-      </p>
-
-      <h2>Редакционная политика</h2>
-      <p>
-        Подробности о нашем подходе к исследованию, обновлениям, партнёрским ссылкам, независимости
-        и ограничениям собраны в <a href="/ru/editorial-policy/">редакционной политике</a>.
-      </p>
-
-      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    </article>
-  </main>
-  <Footer />
-</BaseLayout>
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'Редакционная команда ChinaTripBox';
+const description =
+  'О редакционной команде ChinaTripBox, нашем подходе к практическим гидам по Китаю и способе отправить исправление.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': new URL('/authors/chinatripbox-editorial-team/#person', Astro.site).toString(),
+  name: title,
+  url: new URL('/authors/chinatripbox-editorial-team/', Astro.site).toString(),
+  affiliation: {
+    '@type': 'Organization',
+    name: 'ChinaTripBox',
+    url: new URL('/', Astro.site).toString(),
+  },
+  knowsAbout: [
+    'планирование поездки в Китай',
+    'мобильные платежи в Китае',
+    'eSIM и интернет в Китае',
+    'скоростные поезда Китая',
+    'практическая логистика для иностранных путешественников в Китае',
+  ],
+};
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
+  <Header locale="ru" />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <p class="section-kicker">Автор</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+
+      <h2>Редакционный фокус</h2>
+      <p>
+        Редакционная команда ChinaTripBox готовит практические гиды для иностранных путешественников
+        по Китаю. Основные темы — настройка оплаты, eSIM и интернет, скоростные поезда, DiDi,
+        трансферы из аэропорта, планирование по городам, заказ еды и типичные проблемы первой поездки.
+      </p>
+
+      <h2>Как мы создаём материалы</h2>
+      <p>
+        Мы совмещаем официальные источники, документацию сервисов, справочные материалы приложений,
+        вопросы читателей, отчёты путешественников и собственные проверки, когда это возможно. Для
+        быстро меняющихся тем — безвизовый въезд, лимиты по оплате, доступность приложений и правила
+        транспорта — окончательным ориентиром считаем официальные страницы государства или провайдера.
+      </p>
+
+      <h2>Исправления</h2>
+      <p>
+        Логистика поездок по Китаю меняется быстро. Если вы нашли устаревший шаг, изменившееся
+        правило, битую ссылку или недостающее уточнение, отправьте URL страницы через нашу
+        <a href="/ru/contact/">страницу контактов</a>. Мы проверяем такие сообщения и обновляем
+        материалы, если подтверждение достаточно надёжно.
+      </p>
+
+      <h2>Редакционная политика</h2>
+      <p>
+        Подробности о нашем подходе к исследованию, обновлениям, партнёрским ссылкам, независимости
+        и ограничениям собраны в <a href="/ru/editorial-policy/">редакционной политике</a>.
+      </p>
+
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

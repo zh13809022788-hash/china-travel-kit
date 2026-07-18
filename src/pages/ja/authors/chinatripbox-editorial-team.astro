@@ -1,72 +1,72 @@
----
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-
-const title = 'ChinaTripBox編集部';
-const description =
-  'ChinaTripBox編集部について、実用的な中国旅行ガイドの調査方法や、読者の皆さまからの訂正依頼の方法をご案内します。';
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': new URL('/authors/chinatripbox-editorial-team/#person', Astro.site).toString(),
-  name: title,
-  url: new URL('/authors/chinatripbox-editorial-team/', Astro.site).toString(),
-  affiliation: {
-    '@type': 'Organization',
-    name: 'ChinaTripBox',
-    url: new URL('/', Astro.site).toString(),
-  },
-  knowsAbout: [
-    '中国旅行の計画',
-    '中国でのモバイル決済',
-    '中国向けeSIMとインターネット接続',
-    '中国の高速鉄道',
-    '中国を訪れる外国人旅行者向けの実務情報',
-  ],
-};
----
-
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
-  <Header locale="ja" />
-  <main class="container-page py-12">
-    <article class="prose-content article-body">
-      <p class="section-kicker">著者情報</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
-
-      <h2>主な編集分野</h2>
-      <p>
-        ChinaTripBox編集部では、中国を訪れる外国人旅行者の方向けに、実用的なガイドを制作しています。
-        決済の設定、eSIMとインターネット接続、高速鉄道、配車サービス、空港送迎、都市別の旅行計画、
-        フードデリバリー、初めての中国旅行で起こりやすいトラブルを重点的に扱っています。
-      </p>
-
-      <h2>ガイドの作成方法</h2>
-      <p>
-        公式情報、事業者のドキュメント、アプリのヘルプ資料、読者からのご質問、旅行者の体験報告、
-        可能な範囲での現地確認を組み合わせて記事を作成しています。査証免除での入国、決済上限、
-        アプリの利用可否、交通ルールなど、変化の速いテーマについては、政府機関または事業者の公式ページを
-        最終的な情報源としています。
-      </p>
-
-      <h2>訂正のご連絡について</h2>
-      <p>
-        中国旅行に関する実務情報は、短期間で変わることがあります。古くなった手順、変更された方針、
-        リンク切れ、追記が必要な注意点を見つけられた場合は、該当ページのURLを
-        <a href="/ja/contact/">お問い合わせページ</a>からお送りください。
-        内容を確認のうえ、根拠が明確に確認できた場合は、該当ガイドを更新いたします。
-      </p>
-
-      <h2>編集方針</h2>
-      <p>
-        調査方法、更新方針、アフィリエイトに関する開示、独立性、掲載内容の制限事項について詳しくは、
-        <a href="/ja/editorial-policy/">編集方針</a>をご覧ください。
-      </p>
-
-      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    </article>
-  </main>
-  <Footer />
-</BaseLayout>
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'ChinaTripBox編集部';
+const description =
+  'ChinaTripBox編集部について、実用的な中国旅行ガイドの調査方法や、読者の皆さまからの訂正依頼の方法をご案内します。';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': new URL('/authors/chinatripbox-editorial-team/#person', Astro.site).toString(),
+  name: title,
+  url: new URL('/authors/chinatripbox-editorial-team/', Astro.site).toString(),
+  affiliation: {
+    '@type': 'Organization',
+    name: 'ChinaTripBox',
+    url: new URL('/', Astro.site).toString(),
+  },
+  knowsAbout: [
+    '中国旅行の計画',
+    '中国でのモバイル決済',
+    '中国向けeSIMとインターネット接続',
+    '中国の高速鉄道',
+    '中国を訪れる外国人旅行者向けの実務情報',
+  ],
+};
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
+  <Header locale="ja" />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <p class="section-kicker">著者情報</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+
+      <h2>主な編集分野</h2>
+      <p>
+        ChinaTripBox編集部では、中国を訪れる外国人旅行者の方向けに、実用的なガイドを制作しています。
+        決済の設定、eSIMとインターネット接続、高速鉄道、配車サービス、空港送迎、都市別の旅行計画、
+        フードデリバリー、初めての中国旅行で起こりやすいトラブルを重点的に扱っています。
+      </p>
+
+      <h2>ガイドの作成方法</h2>
+      <p>
+        公式情報、事業者のドキュメント、アプリのヘルプ資料、読者からのご質問、旅行者の体験報告、
+        可能な範囲での現地確認を組み合わせて記事を作成しています。査証免除での入国、決済上限、
+        アプリの利用可否、交通ルールなど、変化の速いテーマについては、政府機関または事業者の公式ページを
+        最終的な情報源としています。
+      </p>
+
+      <h2>訂正のご連絡について</h2>
+      <p>
+        中国旅行に関する実務情報は、短期間で変わることがあります。古くなった手順、変更された方針、
+        リンク切れ、追記が必要な注意点を見つけられた場合は、該当ページのURLを
+        <a href="/ja/contact/">お問い合わせページ</a>からお送りください。
+        内容を確認のうえ、根拠が明確に確認できた場合は、該当ガイドを更新いたします。
+      </p>
+
+      <h2>編集方針</h2>
+      <p>
+        調査方法、更新方針、アフィリエイトに関する開示、独立性、掲載内容の制限事項について詳しくは、
+        <a href="/ja/editorial-policy/">編集方針</a>をご覧ください。
+      </p>
+
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
