@@ -122,6 +122,12 @@ const faqJsonLd =
       }
     : null;
 
+function localeContact(lc: string): string {
+  if (lc === 'en') return '/contact/';
+  const map: Record<string, string> = { 'zh-TW':'zh-tw', ja:'ja', ko:'ko', ru:'ru', fr:'fr', de:'de', es:'es' };
+  return `/${map[lc] ?? ''}/contact/`;
+}
+
 const jsonLd = faqJsonLd ? [articleJsonLd, faqJsonLd] : articleJsonLd;
 
 const dateLocaleMap: Record<string, string> = { en:'en-US', 'zh-TW':'zh-TW', ja:'ja-JP', ko:'ko-KR', ru:'ru-RU', fr:'fr-FR', de:'de-DE', es:'es-ES' };
@@ -208,7 +214,7 @@ const homeLabel = ui.home[locale] ?? 'Home';
 
       <p class="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-600">
         {ui.correctionPrefix[locale] ?? 'Found something outdated or incorrect? Please '}
-        <a href="/contact/" class="font-semibold">{ui.correctionLink[locale] ?? 'send a correction'}</a>
+        <a href={localeContact(locale)} class="font-semibold">{ui.correctionLink[locale] ?? 'send a correction'}</a>
         {ui.correctionSuffix[locale] ?? ' with the page URL so we can review it.'}
       </p>
 
