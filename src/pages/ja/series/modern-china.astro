@@ -11,24 +11,24 @@ const posts = (await getCollection('posts-ja'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = '現代中国で外国人旅行者が特に驚くことをご紹介します';
-const description = '外国人旅行者の視点から現代中国をご紹介します。キャッシュレス社会、世界最速クラスの高速鉄道、巨大都市での移動、スーパーアプリ、寝台列車、そして日常生活を形づくるテクノロジーまで幅広く取り上げます。';
+const description = '外国人旅行者の視点から現代中国をご紹介します。キャッシュレス社会、世界最速クラスの高速鉄道、巨大都市での移動、スーパーアプリ、寝台列車、そして日常生活を形づくるテクノロジーまで幅広くご案内します。';
 
 const relatedTools = [
-  { href: '/ja/posts/how-to-pay-in-china-tourist-guide/', title: '中国での支払い方法をご案内します', desc: '旅行者向けのモバイル決済設定をご紹介します' },
-  { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '高速鉄道の利用ガイドです', desc: '中国の高速鉄道の乗り方をご説明します' },
-  { href: '/ja/posts/best-esim-for-china-travel-2026/', title: '中国旅行におすすめのeSIMをご紹介します', desc: '到着後すぐに通信を使えるようにします' },
+  { href: '/ja/posts/how-to-pay-in-china-tourist-guide/', title: '中国での支払い方法をご案内します', desc: '旅行者向けのモバイル決済の設定方法をご紹介します' },
+  { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '高速鉄道の利用方法をご案内します', desc: '中国の高速鉄道の乗り方をわかりやすくご説明します' },
+  { href: '/ja/posts/best-esim-for-china-travel-2026/', title: '中国旅行におすすめのeSIMをご紹介します', desc: '到着後すぐに通信を使えるように準備できます' },
 ];
 
 const relatedCities = [
-  { href: '/ja/posts/shanghai-city-guide-for-foreigners/', title: '上海をご案内します', desc: '中国を代表する金融メガシティです' },
-  { href: '/ja/posts/beijing-city-guide-for-foreigners/', title: '北京をご案内します', desc: '古都の魅力と現代的な都市機能が共存しています' },
-  { href: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '上海地下鉄の利用ガイドです', desc: '巨大な交通ネットワークの使い方をご紹介します' },
+  { href: '/ja/posts/shanghai-city-guide-for-foreigners/', title: '上海の見どころをご案内します', desc: '中国を代表する国際的なメガシティをご紹介します' },
+  { href: '/ja/posts/beijing-city-guide-for-foreigners/', title: '北京の魅力をご案内します', desc: '古都の魅力と現代的な都市機能が共存する街です' },
+  { href: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '上海地下鉄の利用方法をご案内します', desc: '巨大な交通ネットワークの使い方をご紹介します' },
 ];
 
 const otherSeries = [
-  { href: '/ja/series/food-of-china/', title: '中国の食文化シリーズです' },
-  { href: '/ja/series/history-of-china/', title: '中国の歴史シリーズです' },
-  { href: '/ja/series/culture-of-china/', title: '中国の文化シリーズです' },
+  { href: '/ja/series/food-of-china/', title: '中国の食文化シリーズをご覧いただけます' },
+  { href: '/ja/series/history-of-china/', title: '中国の歴史シリーズをご覧いただけます' },
+  { href: '/ja/series/culture-of-china/', title: '中国の文化シリーズをご覧いただけます' },
 ];
 ---
 
@@ -36,7 +36,7 @@ const otherSeries = [
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">特集シリーズです</p>
+      <p class="section-kicker">特集シリーズのご案内です</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -47,8 +47,8 @@ const otherSeries = [
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">記事一覧です</p>
-            <h2>現代中国シリーズです</h2>
+            <p class="section-kicker">記事一覧をご案内します</p>
+            <h2>現代中国シリーズの記事一覧です</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -62,14 +62,14 @@ const otherSeries = [
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">このシリーズの記事は現在準備中です。しばらくしてからもう一度ご確認ください。</p>
+          <p class="mt-6 text-gray-500">このシリーズの記事は現在準備中です。恐れ入りますが、しばらくしてからあらためてご確認ください。</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">実用ツールです</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">現代中国をスムーズに移動するための情報です</h2>
+          <p class="section-kicker">便利な情報をご案内します</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">現代中国をスムーズに移動するための実用情報です</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -81,8 +81,8 @@ const otherSeries = [
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">都市ガイドです</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">巨大都市をご紹介します</h2>
+          <p class="section-kicker">都市ガイドをご案内します</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">中国の巨大都市をご紹介します</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -94,7 +94,7 @@ const otherSeries = [
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">ほかのシリーズです</p>
+          <p class="section-kicker">ほかのシリーズもご覧いただけます</p>
           <div class="mt-3 grid gap-2">
             {otherSeries.map((s) => (
               <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
