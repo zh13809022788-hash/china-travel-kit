@@ -7,9 +7,9 @@ import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 import FaqSection from '../../../components/FaqSection.astro';
 
-const title = '中国の決済カード対応チェッカー';
+const title = '中国で使える決済カード対応チェッカー';
 const description =
-  'お使いのクレジットカードが中国でAlipayやWeChat Payに対応しているか確認できます。国籍とカードブランドごとに、対応状況、利用上限、手数料、設定方法を確認しましょう。';
+  'お使いのクレジットカードが中国でAlipayやWeChat Payに対応しているかを確認できます。国籍とカードブランドごとに、対応状況、利用上限、手数料、設定方法を確認しましょう。';
 
 const nationalities = [
   'アメリカ',
@@ -40,10 +40,10 @@ const faqItems = [
   {
     question: '旅行者はAlipayとWeChat Payの両方を設定したほうがよいですか？',
     answer:
-      '可能であれば、両方設定しておくことをおすすめします。Alipayは旅行者でも設定しやすいことが多く、WeChat Payはミニプログラム、飲食店、現地サービスで便利です。両方使えるようにしておくと、店頭で支払えず困る可能性を減らせます。',
+      '可能であれば、両方を設定しておくことをおすすめします。Alipayは旅行者でも設定しやすいことが多く、WeChat Payはミニプログラム、飲食店、現地サービスで便利です。両方使えるようにしておくと、店頭で支払えず困る可能性を減らせます。',
   },
   {
-    question: 'モバイル決済が使えるなら、現金はどれくらい持っていけばよいですか？',
+    question: 'モバイル決済が使える場合でも、現金はどれくらい持っていけばよいですか？',
     answer:
       '空港からの移動、食事の予備、小さなお店での支払いに使える程度の少額紙幣を持っていくと安心です。ただし、現金だけに頼るのはおすすめしません。多くの場所ではQR決済が主流で、スタッフがお釣りを十分に用意していないこともあります。',
   },
@@ -62,7 +62,7 @@ const faqItems = [
     <section class="mt-6 grid gap-4 md:grid-cols-3" aria-label="この決済チェッカーで確認できる内容です">
       <div class="rounded-lg border border-gray-200 bg-white p-4">
         <h2 class="text-base font-bold text-gray-900">ウォレット対応状況を確認できます</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">お使いのカードブランドがAlipayやWeChat Payで使いやすいか確認できます。</p>
+        <p class="mt-2 text-sm leading-6 text-gray-600">お使いのカードブランドがAlipayやWeChat Payで使いやすいかを確認できます。</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-4">
         <h2 class="text-base font-bold text-gray-900">上限を見込んで準備できます</h2>
@@ -189,16 +189,16 @@ const faqItems = [
     wechat: { status: string; single: string; daily: string; fee: string; how: string };
   }> = {
     Visa: {
-      alipay: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'Alipay Walletでカードを追加し、パスポート認証を行ってください' },
-      wechat: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'WeChat Walletでカードを追加し、パスポート認証を行ってください' },
+      alipay: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'Alipayでカードを追加し、パスポート認証を行ってください' },
+      wechat: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'WeChat Payでカードを追加し、パスポート認証を行ってください' },
     },
     Mastercard: {
-      alipay: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'Alipay Walletでカードを追加し、パスポート認証を行ってください' },
-      wechat: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'WeChat Walletでカードを追加し、パスポート認証を行ってください' },
+      alipay: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'Alipayでカードを追加し、パスポート認証を行ってください' },
+      wechat: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'WeChat Payでカードを追加し、パスポート認証を行ってください' },
     },
     Amex: {
       alipay: { status: '一部対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'Alipayで使えることが多いですが、VisaまたはMastercardも予備としてご用意ください' },
-      wechat: { status: '対応は限定的です', single: '変動します', daily: '変動します', fee: '200 RMBを超えると約3%', how: '対応状況は安定していません。WeChatではVisaまたはMastercardを優先してください' },
+      wechat: { status: '対応は限定的です', single: '変動します', daily: '変動します', fee: '200 RMBを超えると約3%', how: '対応状況は安定していません。WeChat PayではVisaまたはMastercardを優先してください' },
     },
     Discover: {
       alipay: { status: '対応は限定的です', single: '変動します', daily: '変動します', fee: '変動します', how: '使える場面は限られます。VisaまたはMastercardを強くおすすめします' },
