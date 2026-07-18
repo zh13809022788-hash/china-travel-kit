@@ -9,7 +9,7 @@ import survivalKits from '../../../data/survival-kits.json';
 
 const title = 'Kit de survie pour la Chine : cartes de traduction et listes de voyage';
 const description =
-  'Kits de survie interactifs pour les visiteurs étrangers en Chine : cartes de traduction en plein écran, listes d’arrivée, cartes pour les allergies alimentaires et outils de communication sur place.';
+  'Kits de survie interactifs pour les voyageurs étrangers en Chine : cartes de traduction en plein écran, listes d’arrivée, cartes pour les allergies alimentaires et outils pour mieux communiquer sur place.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
@@ -19,13 +19,13 @@ const description =
       <p class="section-kicker">Kit de survie</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">Kit de survie pour la Chine</h1>
       <p class="mt-3 text-lg leading-8 text-gray-600">
-        Utilisez des cartes de traduction en plein écran et des listes enregistrées quand vous
-        n’avez pas le temps de lire un long guide : arrivée à l’aéroport, enregistrement à l’hôtel,
-        taxis, restaurants, allergies et préparation du premier jour.
+        Utilisez des cartes de traduction en plein écran et des listes sauvegardées quand vous
+        n’avez pas le temps de parcourir un long guide : arrivée à l’aéroport, enregistrement à
+        l’hôtel, taxis, restaurants, allergies et préparation du premier jour.
       </p>
       <div class="mt-5 flex flex-wrap gap-3">
         <a href="#arrival" class="btn-primary">Commencer par l’arrivée</a>
-        <a href="#food" class="btn-outline">Ouvrir les cartes repas</a>
+        <a href="#food" class="btn-outline">Ouvrir les cartes pour les repas</a>
       </div>
     </header>
 
@@ -33,21 +33,21 @@ const description =
       <div class="rounded-lg border border-gray-200 bg-white p-5">
         <h2 class="text-lg font-bold text-gray-950">Cartes en plein écran</h2>
         <p class="mt-2 text-sm leading-6 text-gray-600">
-          Touchez une carte pour afficher un grand texte en chinois à montrer à un chauffeur, à la
-          réception d’un hôtel ou au personnel d’un restaurant.
+          Touchez une carte pour afficher un texte en grand en chinois à montrer à un chauffeur, à
+          la réception de l’hôtel ou au personnel du restaurant.
         </p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Listes enregistrées</h2>
+        <h2 class="text-lg font-bold text-gray-950">Listes sauvegardées</h2>
         <p class="mt-2 text-sm leading-6 text-gray-600">
-          Votre progression est enregistrée dans le navigateur pour que vous puissiez fermer la page
+          Votre progression est enregistrée dans le navigateur afin que vous puissiez fermer la page
           et revenir plus tard.
         </p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
         <h2 class="text-lg font-bold text-gray-950">Aide IA contextuelle</h2>
         <p class="mt-2 text-sm leading-6 text-gray-600">
-          Utilisez l’assistant flottant pour ouvrir l’aide voyage ChinaTripBox avec une question
+          Utilisez l’assistant flottant pour ouvrir l’aide au voyage ChinaTripBox avec une question
           adaptée au sujet affiché.
         </p>
       </div>
@@ -63,7 +63,7 @@ const description =
             <div class="mt-3 flex flex-wrap gap-2">
               {kit.related_paths.map((path) => (
                 <a href={path} class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-brand-700 hover:border-brand-300 hover:no-underline">
-                  Guide associé
+                  Guide correspondant
                 </a>
               ))}
             </div>
