@@ -7,9 +7,9 @@ import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
 import ContextAiBubble from '../../../components/ContextAiBubble.astro';
 import survivalKits from '../../../data/survival-kits.json';
 
-const title = 'Kit de supervivencia para China: tarjetas de traducción y listas de viaje';
+const title = 'Kit de supervivencia para China: tarjetas de traducción y listas para el viaje';
 const description =
-  'Kits interactivos de supervivencia para China para visitantes extranjeros: tarjetas de traducción a pantalla completa, listas de configuración al llegar, tarjetas de alergias alimentarias y herramientas de comunicación local.';
+  'Kits interactivos de supervivencia para China pensados para viajeros internacionales: tarjetas de traducción a pantalla completa, listas de preparación al llegar, tarjetas sobre alergias alimentarias y herramientas para comunicarte mejor en el entorno local.';
 
 const kitLabels: Record<string, string> = {
   arrival: 'llegada',
@@ -34,27 +34,27 @@ const getKitLabel = (slug: string) => kitLabels[slug] ?? slug.replace(/-/g, ' ')
       <p class="section-kicker">Kit de supervivencia</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">Kit de supervivencia para China</h1>
       <p class="mt-3 text-lg leading-8 text-gray-600">
-        Usa tarjetas de traducción en pantalla completa y listas guardadas para esos momentos en los que leer una guía larga es demasiado lento:
-        llegada al aeropuerto, registro en el hotel, taxis, restaurantes, alergias y configuración del primer día.
+        Usa tarjetas de traducción a pantalla completa y listas guardadas para esos momentos en los que ponerse a leer una guía larga no es práctico:
+        llegada al aeropuerto, check-in en el hotel, taxis, restaurantes, alergias y preparación del primer día.
       </p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="#arrival" class="btn-primary">Empezar por la llegada</a>
+        <a href="#arrival" class="btn-primary">Empezar con la llegada</a>
         <a href="#food" class="btn-outline">Abrir tarjetas de comida</a>
       </div>
     </header>
 
     <section class="mt-8 grid gap-4 md:grid-cols-3">
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Tarjetas en pantalla completa</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Toca una tarjeta y muestra texto chino grande a un conductor, recepción de hotel o personal de restaurante.</p>
+        <h2 class="text-lg font-bold text-gray-950">Tarjetas a pantalla completa</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Toca una tarjeta para mostrar texto grande en chino a un conductor, al personal del hotel o a alguien del restaurante.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
         <h2 class="text-lg font-bold text-gray-950">Listas guardadas</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">El progreso de la lista se guarda en tu navegador para que puedas cerrar y volver más tarde.</p>
+        <p class="mt-2 text-sm leading-6 text-gray-600">El progreso de cada lista se guarda en tu navegador para que puedas cerrarla y retomarla más tarde.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Acceso a IA contextual</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Usa el asistente flotante para abrir la ayuda de viaje de ChinaTripBox con un mensaje adaptado al tema.</p>
+        <h2 class="text-lg font-bold text-gray-950">Acceso contextual a la IA</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Usa el asistente flotante para abrir la ayuda de viaje de ChinaTripBox con un mensaje adaptado al tema que estés viendo.</p>
       </div>
     </section>
 
@@ -81,6 +81,6 @@ const getKitLabel = (slug: string) => kitLabels[slug] ?? slug.replace(/-/g, ' ')
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="Ayúdame a usar el kit de supervivencia para China para la llegada, restaurantes, tarjetas de traducción y preparación de listas." />
+  <ContextAiBubble defaultPrompt="Ayúdame a usar el kit de supervivencia para China para la llegada, los restaurantes, las tarjetas de traducción y la preparación de las listas." />
   <Footer />
 </BaseLayout>
