@@ -52,6 +52,13 @@ const formattedDate = new Date(datePublished).toLocaleDateString('en-US', {
   month: 'long',
   day: 'numeric',
 });
+
+const ui = {
+  relatedTitle: { en:'Related Reading', 'zh-TW':'相關閱讀', ja:'関連記事', ko:'관련 읽을거리', ru:'Рекомендуемые', fr:'Lecture connexe', de:'Weiterführende Lektüre', es:'Lectura relacionada' },
+  readMore: { en:'Read more →', 'zh-TW':'閱讀更多 →', ja:'続きを読む →', ko:'더 읽기 →', ru:'Читать далее →', fr:'Lire la suite →', de:'Weiterlesen →', es:'Seguir leyendo →' },
+};
+const relatedTitle = ui.relatedTitle[locale] ?? 'Related Reading';
+const readMore = ui.readMore[locale] ?? 'Read more →';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} type="article" image={image} locale={locale}>

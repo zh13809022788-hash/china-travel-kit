@@ -191,7 +191,7 @@ const faqJsonLd = {
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
       <h2 id="city-shortcuts" class="sr-only">City shortcuts</h2>
       {cities.map((city) => (
-        <article class="card" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
+        <a href={city.href} class="card block hover:no-underline" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">
@@ -208,11 +208,8 @@ const faqJsonLd = {
               <dd class="text-right">{city.difficulty}</dd>
             </div>
           </dl>
-          <div class="mt-5 grid gap-2 text-sm font-semibold">
-            <a href={city.href} class="text-brand-700 hover:text-brand-800">Open city guide</a>
-            <a href={city.next} class="text-gray-700 hover:text-brand-700">{city.nextLabel}</a>
-          </div>
-        </article>
+          <span class="mt-3 inline-block text-sm font-semibold text-brand-700">Open city guide →</span>
+        </a>
       ))}
     </section>
 
