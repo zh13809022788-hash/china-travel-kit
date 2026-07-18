@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-ja'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Nature of China — Landscapes & Wild Places';
-const description = 'Explore China\'s natural wonders as a foreign traveler: Zhangjiajie\'s Avatar mountains, Jiuzhaigou\'s fairy-tale lakes, Huangshan\'s sea of clouds, Guilin\'s karst peaks, and the Tibetan plateau.';
+const title = '中国の自然 — 絶景と手つかずの大地';
+const description = '外国人旅行者向けに、中国の壮大な自然を紹介します。張家界の「アバター」のような奇峰、九寨溝のおとぎ話のような湖、黄山の雲海、桂林のカルスト峰、そしてチベット高原まで幅広くご案内します。';
 
 const relatedTools = [
-  { href: '/ja/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing checklist', desc: 'Season-by-season gear for outdoor trips' },
-  { href: '/ja/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Permits and entry rules for remote regions' },
-  { href: '/ja/trip-planner/', title: 'Trip planner', desc: 'Build your China nature itinerary' },
+  { href: '/ja/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '持ち物チェックリスト', desc: '季節ごとのアウトドア旅行に必要な装備を確認できます。' },
+  { href: '/ja/posts/china-visa-free-entry-transit-guide-2026/', title: 'ビザ・入国ガイド', desc: '遠隔地を訪れる際の許可証や入域ルールを確認できます。' },
+  { href: '/ja/trip-planner/', title: '旅行プランナー', desc: '中国の自然を巡る旅程を作成できます。' },
 ];
 
 const relatedCities = [
-  { href: '/ja/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Tropical beaches and rainforest' },
-  { href: '/ja/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'West Lake and tea hills' },
-  { href: '/ja/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Gateway to western mountains and pandas' },
+  { href: '/ja/posts/sanya-city-guide-for-foreigners/', title: '三亜', desc: '南国のビーチと熱帯雨林を楽しめます。' },
+  { href: '/ja/posts/hangzhou-city-guide-for-foreigners/', title: '杭州', desc: '西湖と茶畑の風景が魅力です。' },
+  { href: '/ja/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '西部の山岳地帯やパンダ観光の玄関口です。' },
 ];
 
 const otherSeries = [
-  { href: '/ja/series/history-of-china/', title: 'History of China' },
-  { href: '/ja/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/ja/series/food-of-china/', title: 'Food of China' },
+  { href: '/ja/series/history-of-china/', title: '中国の歴史' },
+  { href: '/ja/series/culture-of-china/', title: '中国の文化' },
+  { href: '/ja/series/food-of-china/', title: '中国の食' },
 ];
 ---
 
@@ -36,7 +36,7 @@ const otherSeries = [
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content Series</p>
+      <p class="section-kicker">コンテンツシリーズ</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -47,8 +47,8 @@ const otherSeries = [
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Articles</p>
-            <h2>Nature of China series</h2>
+            <p class="section-kicker">記事一覧</p>
+            <h2>「中国の自然」シリーズ</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -62,14 +62,14 @@ const otherSeries = [
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Articles in this series are being prepared. Check back soon.</p>
+          <p class="mt-6 text-gray-500">このシリーズの記事は現在準備中です。公開までもうしばらくお待ちください。</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Practical tools</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Plan your trip</h2>
+          <p class="section-kicker">便利なツール</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">旅行計画を立てる</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -81,8 +81,8 @@ const otherSeries = [
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">City guides</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Gateway cities</h2>
+          <p class="section-kicker">都市ガイド</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">自然観光の玄関都市</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -94,7 +94,7 @@ const otherSeries = [
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">More series</p>
+          <p class="section-kicker">ほかのシリーズ</p>
           <div class="mt-3 grid gap-2">
             {otherSeries.map((s) => (
               <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
