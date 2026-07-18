@@ -3,8 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'ページが見つかりません';
-const description = 'ページが見つかりません - ChinaTripBox';
+const title = 'ページが見つかりませんでした';
+const description = 'お探しのページが見つかりませんでした - ChinaTripBox';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
@@ -12,12 +12,12 @@ const description = 'ページが見つかりません - ChinaTripBox';
   <main class="container-page py-16">
     <section class="mx-auto max-w-2xl">
       <p class="section-kicker">404</p>
-      <h1 class="mt-2 text-4xl font-bold text-gray-950">ページが見つかりません</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">お探しのページは移動したか、URLが正しくない可能性があります。</p>
+      <h1 class="mt-2 text-4xl font-bold text-gray-950">ページが見つかりませんでした</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">お探しのページは移動されたか、URLが正しくない可能性があります。</p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="/ja/" class="btn-primary">ホームへ</a>
-        <a href="/ja/resources/" class="btn-outline">はじめに</a>
-        <a href="/ja/tools/" class="btn-outline">ツールを見る</a>
+        <a href="/ja/" class="btn-primary">ホームに戻る</a>
+        <a href="/ja/resources/" class="btn-outline">初めての方はこちら</a>
+        <a href="/ja/tools/" class="btn-outline">ツール一覧を見る</a>
       </div>
     </section>
   </main>
