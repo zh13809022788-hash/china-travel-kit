@@ -5,7 +5,7 @@ import Footer from '../../../components/Footer.astro';
 import ShowToLocal from '../../../components/ShowToLocal.astro';
 import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
 import ContextAiBubble from '../../../components/ContextAiBubble.astro';
-import survivalKits from '../../../data/survival-kits.json';
+import survivalKits from '../../../data/survival-kits-ko.json';
 
 const title = '중국 여행 생존 키트: 번역 카드와 여행 체크리스트';
 const description =
@@ -59,8 +59,8 @@ const description =
             </div>
           </div>
           <div class="grid gap-5 lg:grid-cols-[1fr_0.85fr]">
-            <ShowToLocal themeId={kit.theme_id} tools={kit.tools} />
-            <SurvivalChecklist themeId={kit.theme_id} steps={kit.checklist_steps} />
+            <ShowToLocal themeId={kit.theme_id} tools={kit.tools} locale="ko" />
+            <SurvivalChecklist themeId={kit.theme_id} steps={kit.checklist_steps} locale="ko" />
           </div>
         </section>
       ))}
