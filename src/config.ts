@@ -17,6 +17,10 @@ export const ADSENSE_SLOTS: Record<string, string> = {
 // Microsoft Clarity project ID. Leave empty to disable Clarity tracking.
 export const CLARITY_PROJECT_ID = 'xl5po1by2u';
 
+// Google Analytics 4 Measurement ID (format: G-XXXXXXXXXX).
+// Leave empty to disable GA4 tracking.
+export const GA4_MEASUREMENT_ID = 'G-546101068';
+
 // 填入真实联盟 https 链接后，全站对应 CTA 自动生效；留空则 CTA 隐藏
 // （AffiliateCta 组件已处理 placeholder 非真链接时隐藏）。
 export const AFFILIATE_LINKS: Record<string, string> = {
