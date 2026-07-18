@@ -1,58 +1,25 @@
-﻿---
-title: "Como comprar billetes de tren en China con 12306 siendo extranjero en 2026"
-description: "Guia paso a paso para reservar trenes chinos con pasaporte extranjero en 12306: registro, verificacion, pago, e-ticket, estaciones y alternativas."
-pubDate: 2026-07-04
+---
+title: "Cómo reservar billetes de tren en China 2026: guía para extranjeros en 12306"
+description: "Guía paso a paso para comprar billetes de tren en China siendo extranjero: usar 12306 en inglés, verificación de pasaporte, métodos de pago y consejos prácticos."
+pubDate: 2026-07-18
 category: transport
-tags: ["12306", "billetes de tren", "alta velocidad", "transporte"]
-cover: "topic-12306-train"
-coverAlt: "China train ticket booking app on smartphone with railway station background"
-
+tags: ["tren", "12306", "billetes", "alta velocidad"]
 featured: false
 faqs:
-  - question: "Necesito DNI chino o cuenta bancaria china para reservar en 12306?"
-    answer: "No. El servicio internacional oficial de 12306 permite registrarse y reservar con pasaporte, y acepta las principales tarjetas Visa y Mastercard extranjeras, ademas de Alipay y WeChat Pay vinculados a una tarjeta extranjera. No necesitas documento nacional chino ni cuenta bancaria local."
-  - question: "La app 12306 esta disponible en ingles?"
-    answer: "Si. Existe una version internacional oficial en ingles de la app y web 12306, operada por China Railway, pensada para pasajeros extranjeros. Admite registro con pasaporte, nombres de estaciones en ingles y metodos de pago extranjeros. Asegurate de descargar la app oficial y no una imitacion."
-  - question: "Con cuanta antelacion puedo comprar billetes de tren en China?"
-    answer: "En 2026, los billetes normalmente salen a la venta hasta 15 dias antes de la salida. Las rutas populares y los viajes durante Ano Nuevo Chino, mayo u octubre se agotan rapido, asi que reserva en cuanto se abra la ventana."
-  - question: "Necesito imprimir el billete o recogerlo en una maquina?"
-    answer: "Para la mayoria de trenes de alta velocidad y trenes regulares, China usa e-tickets vinculados al pasaporte. Simplemente presentas el pasaporte en la puerta para entrar y embarcar. Solo necesitas billete en papel si lo quieres para reembolso, y se obtiene en ventanilla con personal, no en maquinas automaticas que suelen leer documentos chinos."
-  - question: "Que pasa si mi pasaporte no escanea en la puerta de la estacion?"
-    answer: "A veces los pasaportes extranjeros no se leen en las puertas automaticas. Es normal. Ve al carril manual o a la puerta con personal, muestra tu pasaporte y la confirmacion de reserva, y el personal lo verificara manualmente. Llegar temprano te da margen."
-  - question: "Puedo cambiar o reembolsar mi billete?"
-    answer: "Si. Puedes cambiar o reembolsar billetes desde la misma app 12306 antes de la salida, con una comision escalonada que aumenta cuanto mas cerca este la hora del tren. El reembolso vuelve al metodo de pago original. Cambiar a otro tren depende de la disponibilidad."
-  - question: "Son seguros los sitios de reserva de terceros?"
-    answer: "Plataformas conocidas como Trip.com y China Highlights son muy usadas por viajeros extranjeros y suelen ser seguras. Cobran una pequena comision de servicio por billete a cambio de una interfaz en ingles y soporte, pero emiten el mismo billete oficial de China Railway vinculado a tu pasaporte."
+  - question: "¿Puedo comprar billetes de tren sin verificar mi pasaporte?"
+    answer: "No. La verificación de pasaporte es obligatoria para extranjeros. Puedes hacerla en la web de 12306 o en la ventanilla de cualquier estación de tren. Lleva tu pasaporte físico."
+  - question: "¿Aceptan tarjetas extranjeras en 12306?"
+    answer: "12306 acepta Visa y Mastercard internacionales para la compra online. También puedes pagar con Alipay o WeChat Pay si los tienes configurados."
+  - question: "¿Necesito imprimir el billete?"
+    answer: "No. Con el código QR en tu móvil es suficiente para acceder al andén. Guarda también el número de confirmación."
 ---
 
-El tren de alta velocidad es una de las mejores formas de viajar por China. En 2026, reservar como extranjero es mucho mas facil que antes: 12306 acepta pasaporte, tiene version internacional y permite pagos con tarjeta extranjera o monedero movil.
+Comprar billetes de tren en China siendo extranjero es más fácil de lo que parece.
 
-## Antes de reservar
+**Paso 1:** Descarga la app 12306 (versión inglesa) o usa la web oficial.
+**Paso 2:** Regístrate con tu pasaporte. Necesitarás el número de pasaporte, nombre exacto y fecha de nacimiento.
+**Paso 3:** Verifica tu identidad. Puede tardar de 5 minutos a 24 horas.
+**Paso 4:** Busca trenes. Las rutas principales (Pekín-Shanghái, Pekín-Xián) tienen trenes cada 15-30 minutos.
+**Paso 5:** Paga con tarjeta extranjera o Alipay.
 
-Ten a mano pasaporte, telefono capaz de recibir SMS, una Visa o Mastercard, y una conexion estable. Escribe tu nombre exactamente como aparece en el pasaporte. En trenes G, D y C, segunda clase es suficiente para la mayoria; primera clase da mas espacio; business class es cara pero comoda en trayectos largos.
-
-## Paso a paso en 12306
-
-Descarga la app oficial China Railway 12306 o usa la web internacional. Registra la cuenta con tu pasaporte, sube la pagina de datos si te piden verificacion y no lo dejes para el dia del viaje. Busca ciudad, fecha y hora; revisa bien la estacion, porque muchas ciudades tienen varias. Elige clase, anade pasajeros y paga antes de que termine el temporizador.
-
-Al confirmar, el billete queda ligado a tu pasaporte. Haz captura con numero de tren, fecha, hora, vagon y asiento.
-
-## En la estacion
-
-Llega 30 a 45 minutos antes en dias normales, mas en festivos. Primero pasas seguridad; despues vas a la puerta de embarque. Si el pasaporte no abre la puerta automatica, usa el carril manual. No es un fallo grave, es habitual con documentos extranjeros.
-
-> ⚠️ **No vayas a la estacion equivocada:** Beijing South, Beijing West y Beijing Chaoyang no son intercambiables. Lo mismo ocurre en Shanghai, Guangzhou y Chengdu.
-
-## Alternativas
-
-Trip.com y China Highlights cobran comision, pero simplifican la interfaz y el soporte en ingles. Para un viaje puntual puede merecer la pena; para varias rutas, 12306 suele salir mas barato.
-
-## Leer Tambien
-
-- [Guia del tren de alta velocidad en China](/es/posts/china-high-speed-rail-guide-foreigners/)
-- [Que preparar antes de viajar a China](/es/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
-- [Como pagar en China](/es/posts/how-to-pay-in-china-tourist-guide/)
-
-## Resumen
-
-Reserva en 12306 con pasaporte, verifica la identidad con antelacion, paga con tarjeta o app movil y usa el pasaporte como billete. Llega temprano y busca el carril manual si la puerta automatica no lee tu documento.
+El tren de alta velocidad en China es puntual, cómodo y las estaciones son modernas. Merece la pena.
