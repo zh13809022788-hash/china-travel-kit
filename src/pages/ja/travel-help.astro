@@ -3,9 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = '中国旅行サポート';
+const title = '中国旅行の個別サポート';
 const description =
-  '決済、eSIM、交通、アプリ、初日の準備について、AIによる一次整理と必要に応じた人によるサポートを通じて、中国旅行に関する個別の質問ができます。';
+  '決済、eSIM、交通、アプリ、初日の準備について、AIによる一次整理と必要に応じた人によるサポートを通じて、中国旅行に関する個別のご質問をお受けしています。';
 
 const quickPrompts = [
   'Alipay または WeChat Pay にカードを連携できません。',
@@ -42,12 +42,12 @@ const safetyRules = [
             中国旅行で困る前に相談できます
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            中国旅行で発生しやすい実務的な悩みは、まず無料の AI サポートから始められます。人の判断、スクリーンショットの確認、複数回のやり取りを通じた状況整理が必要な場合は、人による確認依頼へ切り替えられます。
+            中国旅行で起こりやすい実務的なお悩みは、まず無料の AI サポートでご相談いただけます。人の判断、スクリーンショットの確認、複数回のやり取りを通じた状況整理が必要な場合は、人による確認依頼へ切り替えられます。
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
             <a href="#travel-help-chat" class="btn-primary">相談を始める</a>
             <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">出発前チェックリストを見る</a>
-            <a href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Travel%20Help%20Request" class="btn-outline">
+            <a href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20%E6%97%85%E8%A1%8C%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E4%BE%9D%E9%A0%BC" class="btn-outline">
               メールで直接連絡する
             </a>
           </div>
@@ -81,7 +81,7 @@ const safetyRules = [
       <section id="travel-help-chat" class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <div class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <div class="border-b border-gray-200 bg-gray-50 px-5 py-4">
-          <p class="section-kicker">無料 AI 旅行サポート</p>
+            <p class="section-kicker">無料 AI 旅行サポート</p>
             <h2 class="mt-1 text-2xl font-bold text-gray-950">旅行サポート窓口</h2>
           </div>
 
@@ -165,7 +165,7 @@ const safetyRules = [
 
               <a
                 id="email-request-link"
-                href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Travel%20Help%20Request"
+                href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20%E6%97%85%E8%A1%8C%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E4%BE%9D%E9%A0%BC"
                 class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 hover:border-brand-600 hover:text-brand-600 hover:no-underline"
               >
                 依頼メールを作成する
@@ -291,7 +291,7 @@ const safetyRules = [
     ].join('\n');
 
     emailLink.href = `mailto:zh13809022788@gmail.com?subject=${encodeURIComponent(
-      `旅行サポート: ${selectedTopic}`,
+      `旅行サポート依頼: ${selectedTopic}`,
     )}&body=${encodeURIComponent(body)}`;
   };
 
@@ -367,7 +367,7 @@ const safetyRules = [
 
     const data = await response.json() as { answer?: string; error?: string };
     if (!response.ok || !data.answer) {
-      throw new Error(data.error || 'AI サポートを現在利用できません。');
+      throw new Error(data.error || '現在、AI 旅行サポートをご利用いただけません。');
     }
     return data.answer;
   };
@@ -380,7 +380,7 @@ const safetyRules = [
       return;
     }
     addBubble(escapeHtml(question), true);
-    const thinking = addBubble('AI が旅行に関するご質問を確認しています...');
+    const thinking = addBubble('AI がご旅行に関する質問内容を確認しています...');
     if (status) status.textContent = 'AI 旅行サポートに質問を送信しています...';
     if (submitButton) submitButton.disabled = true;
 
