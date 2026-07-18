@@ -14,9 +14,15 @@ const sizeClasses: Record<string, string> = {
   sidebar: 'min-h-[600px] w-full max-w-[300px]',
 };
 
+const imgSizeMap: Record<string, string> = {
+  banner: 'ad-placeholder-banner.svg',
+  'in-article': 'ad-placeholder-inarticle.svg',
+  sidebar: 'ad-placeholder-sidebar.svg',
+};
+
 // Show a real AdSense unit only when both the publisher ID and this format's
-// slot ID are configured in src/config.ts. Otherwise fall back to the dashed
-// placeholder, which is the correct state before AdSense approval.
+// slot ID are configured in src/config.ts. Otherwise fall back to a beautiful
+// placeholder image that keeps the layout clean during review.
 const slotId = ADSENSE_SLOTS[format];
 const showRealAd = Boolean(ADSENSE_PUBLISHER_ID && slotId);
 ---
@@ -39,15 +45,18 @@ const showRealAd = Boolean(ADSENSE_PUBLISHER_ID && slotId);
   ) : (
     <aside
       class:list={[
-        'my-6 flex items-center justify-center rounded-lg border border-dashed border-gray-300 bg-gray-50 text-xs uppercase tracking-wide text-gray-400',
+        'my-6 flex items-center justify-center overflow-hidden rounded-lg',
         sizeClasses[format],
       ]}
       data-ad-slot={format}
       aria-label={label}
     >
-      <span>
-        {label} ({format})
-      </span>
+      <img
+        src="/images/ad-placeholder.svg"
+        alt={label}
+        class="h-full w-full object-contain"
+        loading="lazy"
+      />
     </aside>
   )
 }
