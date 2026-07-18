@@ -17,7 +17,7 @@ const plans = [
   { id: 4, name: 'Großchina 8 GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Deckt Festlandchina, Hongkong, Macau und Taiwan ab' },
   { id: 5, name: 'Täglich unbegrenzt', data: 9999, dataLabel: 'Unbegrenzt*', days: 10, price: 29, network: 'China Unicom', note: 'Drosselung nach Fair Use ab 2 GB pro Tag' },
   { id: 6, name: 'Geschäftsreise 20 GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Umgeht typische lokale App-Einschränkungen' },
-  { id: 7, name: 'Kurzreise 1 GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Praktisch für kurze Zwischenstopps' },
+  { id: 7, name: 'Kurzreise 1 GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Ideal für kurze Zwischenstopps' },
   { id: 8, name: 'Familie 30 GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Per Hotspot mit mehreren Geräten nutzbar' },
 ];
 ---
@@ -25,7 +25,7 @@ const plans = [
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Vergleichstool</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM-Tarifvergleich</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
@@ -36,10 +36,10 @@ const plans = [
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Sortieren nach</span>
         <select id="sort-by" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="price-asc">Preis: aufsteigend</option>
-          <option value="price-desc">Preis: absteigend</option>
-          <option value="data-desc">Datenvolumen: viel zu wenig</option>
-          <option value="days-desc">Laufzeit: lang zu kurz</option>
+          <option value="price-asc">Preis: günstig zuerst</option>
+          <option value="price-desc">Preis: teuer zuerst</option>
+          <option value="data-desc">Datenvolumen: am meisten zuerst</option>
+          <option value="days-desc">Laufzeit: am längsten zuerst</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
@@ -54,9 +54,9 @@ const plans = [
         <span class="mb-1 font-medium text-gray-700">Mindest-Datenvolumen</span>
         <select id="filter-data" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           <option value="0">Beliebig</option>
-          <option value="5">ab 5 GB</option>
-          <option value="10">ab 10 GB</option>
-          <option value="20">ab 20 GB</option>
+          <option value="5">Ab 5 GB</option>
+          <option value="10">Ab 10 GB</option>
+          <option value="20">Ab 20 GB</option>
         </select>
       </label>
     </div>
