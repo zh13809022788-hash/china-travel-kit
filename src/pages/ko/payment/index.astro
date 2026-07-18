@@ -13,18 +13,18 @@ const posts = (await getCollection('posts-ko'))
 
 const title = '중국 결제 가이드: Alipay, WeChat Pay, 해외 카드';
 const description =
-  '외국인 여행자를 위한 중국 결제 가이드입니다. Alipay와 WeChat Pay 설정, 해외 카드 연결, 흔한 문제 예방 방법을 안내합니다.';
+  '외국인 여행자를 위한 중국 결제 가이드예요. Alipay와 WeChat Pay 설정 방법, 해외 카드 연결 방법, 자주 생기는 문제를 예방하는 방법을 안내해드려요.';
 
 const prioritySteps = [
-  'Install Alipay and WeChat before departure, then verify identity while you still have access to your home bank and phone number.',
-  'Link at least one Visa or Mastercard, then keep a second card from another issuer as a backup.',
-  'Carry a small amount of RMB cash for taxis, small shops, and moments when wallet verification or card authorization fails.',
+  '출국 전에 Alipay와 WeChat을 설치하시고, 본인 인증은 자국 은행 계좌와 휴대전화 번호에 아직 접근할 수 있을 때 미리 완료해두세요.',
+  'Visa 또는 Mastercard를 최소 1장 연결하시고, 다른 카드사에서 발급한 카드 1장은 예비용으로 따로 준비해두세요.',
+  '택시, 소규모 상점, 또는 지갑 인증이나 카드 승인에 문제가 생길 때를 대비해 소액의 위안화 현금을 가지고 다니세요.',
 ];
 
 const paymentTools = [
-  { href: '/ko/tools/payment-checker/', title: '결제 compatibility checker', desc: 'Check card support, typical limits, and fees for Alipay and WeChat Pay.' },
-  { href: '/ko/tools/budget-cash-estimator/', title: 'Budget and cash estimator', desc: 'Estimate trip spending and how much backup cash to carry.' },
-  { href: '/ko/tools/currency-converter/', title: 'RMB currency converter', desc: 'Convert prices to yuan and understand everyday costs.' },
+  { href: '/ko/tools/payment-checker/', title: '결제 호환성 확인기', desc: 'Alipay와 WeChat Pay에서 지원하는 카드 종류, 일반적인 한도, 수수료를 확인해보세요.' },
+  { href: '/ko/tools/budget-cash-estimator/', title: '예산 및 현금 계산기', desc: '여행 경비와 비상용으로 가져갈 현금 규모를 예상해보세요.' },
+  { href: '/ko/tools/currency-converter/', title: '위안화 환율 변환기', desc: '가격을 위안화 기준으로 환산하고 일상적인 물가 수준을 파악해보세요.' },
 ];
 ---
 
@@ -37,35 +37,35 @@ const paymentTools = [
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-how-to-pay" alt="Mobile payment setup with smartphone showing payment methods for China travel" loading="lazy" />
+    <CoverImage name="topic-how-to-pay" alt="중국 여행을 위한 결제 수단이 표시된 스마트폰으로 모바일 결제를 설정하는 모습" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-payment">
       <h2 id="featured-payment" class="sr-only">추천 결제 가이드</h2>
       <a href="/ko/posts/alipay-foreign-credit-card-step-by-step/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Alipay Setup</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Step-by-step guide to installing Alipay and linking a foreign credit card</p>
+        <span class="font-semibold text-gray-950">Alipay 설정</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Alipay 설치부터 해외 신용카드 연결까지 단계별로 안내해드려요.</p>
       </a>
       <a href="/ko/posts/wechat-pay-foreign-visitors-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">WeChat Pay</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Complete setup and usage guide for foreign visitors</p>
+        <p class="mt-1 text-xs leading-5 text-gray-600">외국인 방문자를 위한 설정 및 사용법을 한 번에 정리해드려요.</p>
       </a>
       <a href="/ko/posts/alipay-vs-wechat-pay-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Alipay vs WeChat Pay</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Which payment app should you use in 2026?</p>
+        <span class="font-semibold text-gray-950">Alipay와 WeChat Pay 비교</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">2026년에는 어떤 결제 앱을 쓰는 것이 좋을까요?</p>
       </a>
       <a href="/ko/posts/how-to-pay-in-china-tourist-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Complete 결제 Guide</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Everything you need to know about paying in China as a tourist</p>
+        <span class="font-semibold text-gray-950">종합 결제 가이드</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">관광객으로서 중국에서 결제할 때 알아두셔야 할 내용을 모두 정리해드려요.</p>
       </a>
     </section>
 
     <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Start with a reliable payment setup</h2>
+        <h2 class="text-2xl font-bold text-gray-900">믿을 수 있는 결제 구성을 먼저 준비하세요</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          China is mostly QR-payment first. A tourist-friendly setup usually means one primary wallet, one backup wallet, two card options, and a small amount of cash for exceptions.
+          중국은 대부분 QR 결제가 중심이에요. 여행자에게 적합한 구성은 보통 주 결제용 지갑 1개, 예비용 지갑 1개, 카드 2가지, 그리고 예외 상황에 대비한 소액 현금이에요.
         </p>
         <ol class="mt-5 space-y-3 text-sm leading-6 text-gray-600">
           {prioritySteps.map((step, index) => (
@@ -78,7 +78,7 @@ const paymentTools = [
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">결제 tools</h2>
+        <h2 class="text-lg font-bold text-gray-900">결제 도구</h2>
         <div class="mt-4 grid gap-3">
           {paymentTools.map((tool) => (
             <a href={tool.href} class="rounded-lg border border-brand-100 bg-white p-4 hover:border-brand-200 hover:no-underline">
@@ -104,7 +104,7 @@ const paymentTools = [
           {(i + 1) % 3 === 0 && <div class="md:col-span-2"><AdSlot format="in-article" /></div>}
         </>
       ))}
-      {posts.length === 0 && <p class="text-gray-500">가이드가 곧 공개됩니다.</p>}
+      {posts.length === 0 && <p class="text-gray-500">가이드가 곧 공개될 예정이에요.</p>}
     </section>
   </main>
   <Footer />
