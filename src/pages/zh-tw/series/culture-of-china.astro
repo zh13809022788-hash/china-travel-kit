@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-zh-tw'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'China 文化：旅客須知的傳統與習俗';
-const description = '以外國旅客的角度探索中華文化：茶道、春節、面子與關係、書法、功夫、生肖，以及塑造 China 日常生活的傳統。';
+const title = '中國文化：旅客須知的傳統與習俗';
+const description = '以外國旅客的角度探索中華文化：茶道、春節、面子與關係、書法、功夫、生肖，以及形塑中國日常生活的傳統。';
 
 const relatedTools = [
-  { href: '/zh-tw/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '小費與禮儀', desc: '何時該給小費、何時不用，以及背後原因' },
-  { href: '/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '節慶行李準備', desc: '假期季節應攜帶的物品' },
-  { href: '/zh-tw/posts/how-to-pay-in-china-tourist-guide/', title: '在 China 如何付款', desc: '節慶期間的付款方式' },
+  { href: '/zh-tw/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '小費與禮儀', desc: '什麼時候該給小費、什麼時候不用，以及背後的原因' },
+  { href: '/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '節慶行李準備', desc: '假期期間應攜帶的物品' },
+  { href: '/zh-tw/posts/how-to-pay-in-china-tourist-guide/', title: '在中國如何付款', desc: '節慶期間的付款方式' },
 ];
 
 const relatedCities = [
   { href: '/zh-tw/posts/beijing-city-guide-for-foreigners/', title: '北京', desc: '皇家文化與胡同生活' },
   { href: '/zh-tw/posts/hangzhou-city-guide-for-foreigners/', title: '杭州', desc: '茶文化與西湖遺產' },
-  { href: '/zh-tw/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '茶館文化與慢活節奏' },
+  { href: '/zh-tw/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '茶館文化與慢活步調' },
 ];
 
 const otherSeries = [
-  { href: '/zh-tw/series/food-of-china/', title: 'China 美食' },
-  { href: '/zh-tw/series/history-of-china/', title: 'China 歷史' },
-  { href: '/zh-tw/series/modern-china/', title: '現代 China' },
+  { href: '/zh-tw/series/food-of-china/', title: '中國美食' },
+  { href: '/zh-tw/series/history-of-china/', title: '中國歷史' },
+  { href: '/zh-tw/series/modern-china/', title: '現代中國' },
 ];
 ---
 
@@ -48,7 +48,7 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">文章</p>
-            <h2>China 文化系列</h2>
+            <h2>中國文化系列</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -69,7 +69,7 @@ const otherSeries = [
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">實用工具</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">帶著文化理解旅行</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">帶著文化理解去旅行</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -82,7 +82,7 @@ const otherSeries = [
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">城市指南</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">文化城市</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">文化名城</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
