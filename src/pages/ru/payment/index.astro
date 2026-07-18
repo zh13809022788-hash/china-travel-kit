@@ -16,15 +16,15 @@ const description =
   'Пошаговые гиды по оплате в Китае для иностранных гостей: настройка Alipay и WeChat Pay, привязка карт и частые ошибки.';
 
 const prioritySteps = [
-  'Install Alipay and WeChat before departure, then verify identity while you still have access to your home bank and phone number.',
-  'Link at least one Visa or Mastercard, then keep a second card from another issuer as a backup.',
-  'Carry a small amount of RMB cash for taxis, small shops, and moments when wallet verification or card authorization fails.',
+  'Установите Alipay и WeChat ещё до вылета, а затем пройдите проверку личности, пока у вас есть доступ к вашему банку и номеру телефона в своей стране.',
+  'Привяжите как минимум одну карту Visa или Mastercard, а вторую карту другого банка держите как запасной вариант.',
+  'Носите с собой немного наличных в юанях для такси, маленьких магазинов и случаев, когда не проходит проверка кошелька или авторизация карты.',
 ];
 
 const paymentTools = [
-  { href: '/ru/tools/payment-checker/', title: 'Оплата compatibility checker', desc: 'Check card support, typical limits, and fees for Alipay and WeChat Pay.' },
-  { href: '/ru/tools/budget-cash-estimator/', title: 'Budget and cash estimator', desc: 'Estimate trip spending and how much backup cash to carry.' },
-  { href: '/ru/tools/currency-converter/', title: 'RMB currency converter', desc: 'Convert prices to yuan and understand everyday costs.' },
+  { href: '/ru/tools/payment-checker/', title: 'Проверка совместимости способов оплаты', desc: 'Проверьте поддержку карт, типичные лимиты и комиссии для Alipay и WeChat Pay.' },
+  { href: '/ru/tools/budget-cash-estimator/', title: 'Калькулятор бюджета и наличных', desc: 'Оцените расходы в поездке и сколько наличных стоит взять про запас.' },
+  { href: '/ru/tools/currency-converter/', title: 'Конвертер валют в юани', desc: 'Переводите цены в юани и лучше понимайте повседневные расходы.' },
 ];
 ---
 
@@ -37,35 +37,35 @@ const paymentTools = [
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-how-to-pay" alt="Mobile payment setup with smartphone showing payment methods for China travel" loading="lazy" />
+    <CoverImage name="topic-how-to-pay" alt="Настройка мобильной оплаты: смартфон с платёжными способами для поездки в Китай" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-payment">
       <h2 id="featured-payment" class="sr-only">Рекомендуемые гиды по оплате</h2>
       <a href="/ru/posts/alipay-foreign-credit-card-step-by-step/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Alipay Setup</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Step-by-step guide to installing Alipay and linking a foreign credit card</p>
+        <span class="font-semibold text-gray-950">Настройка Alipay</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Пошаговое руководство по установке Alipay и привязке иностранной банковской карты</p>
       </a>
       <a href="/ru/posts/wechat-pay-foreign-visitors-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">WeChat Pay</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Complete setup and usage guide for foreign visitors</p>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Полное руководство по настройке и использованию для иностранных гостей</p>
       </a>
       <a href="/ru/posts/alipay-vs-wechat-pay-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Alipay vs WeChat Pay</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Which payment app should you use in 2026?</p>
+        <span class="font-semibold text-gray-950">Alipay или WeChat Pay</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Какое платёжное приложение выбрать в 2026 году?</p>
       </a>
       <a href="/ru/posts/how-to-pay-in-china-tourist-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Complete Оплата Guide</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Everything you need to know about paying in China as a tourist</p>
+        <span class="font-semibold text-gray-950">Полный гид по оплате</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Всё, что нужно знать туристу об оплате в Китае</p>
       </a>
     </section>
 
     <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Start with a reliable payment setup</h2>
+        <h2 class="text-2xl font-bold text-gray-900">Начните с надёжной платёжной схемы</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          China is mostly QR-payment first. A tourist-friendly setup usually means one primary wallet, one backup wallet, two card options, and a small amount of cash for exceptions.
+          В Китае почти везде в приоритете оплата по QR-коду. Удобная схема для туриста обычно включает один основной кошелёк, один запасной кошелёк, две карты и немного наличных на исключительные случаи.
         </p>
         <ol class="mt-5 space-y-3 text-sm leading-6 text-gray-600">
           {prioritySteps.map((step, index) => (
@@ -78,7 +78,7 @@ const paymentTools = [
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">Оплата tools</h2>
+        <h2 class="text-lg font-bold text-gray-900">Инструменты по оплате</h2>
         <div class="mt-4 grid gap-3">
           {paymentTools.map((tool) => (
             <a href={tool.href} class="rounded-lg border border-brand-100 bg-white p-4 hover:border-brand-200 hover:no-underline">
