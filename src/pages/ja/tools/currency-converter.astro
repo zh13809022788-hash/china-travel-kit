@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'China旅行者向けRMB通貨換算ツール';
+const title = '中国旅行者向け人民元（RMB）通貨換算ツール';
 const description =
-  '自国通貨を中国人民元（RMB）に、またはRMBを自国通貨に換算し、Chinaで日用品やサービスがどれくらいかかるかを確認して、その場で価格チェックできます。';
+  'お使いの通貨と中国人民元（RMB）を相互に換算し、中国での日用品やサービスのおおよその価格をその場で確認できるツールです。';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
@@ -16,7 +16,7 @@ const description =
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">RMB通貨換算ツール</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">人民元（RMB）通貨換算ツール</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -26,7 +26,7 @@ const description =
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
       <div class="grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-end">
         <label class="flex flex-col text-sm">
-          <span class="mb-1 font-medium text-gray-700">あなたの通貨</span>
+          <span class="mb-1 font-medium text-gray-700">お使いの通貨</span>
           <div class="flex gap-2">
             <select id="currency" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
               <option value="USD">USD ($)</option>
@@ -37,35 +37,46 @@ const description =
               <option value="JPY">JPY (¥)</option>
               <option value="SGD">SGD (S$)</option>
             </select>
-            <input id="foreign-amount" type="number" min="0" value="100"
-              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+            <input
+              id="foreign-amount"
+              type="number"
+              min="0"
+              value="100"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            />
           </div>
         </label>
         <div class="hidden pb-2 text-center text-gray-400 sm:block">⇄</div>
         <label class="flex flex-col text-sm">
           <span class="mb-1 font-medium text-gray-700">中国人民元（RMB）</span>
-          <input id="rmb-amount" type="number" min="0"
-            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+          <input
+            id="rmb-amount"
+            type="number"
+            min="0"
+            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          />
         </label>
       </div>
       <p id="rate-line" class="mt-3 text-sm text-gray-500"></p>
       <p class="mt-1 text-xs text-gray-400">
-        レートは旅行計画用の目安であり、リアルタイムの市場レートではありません。取引時の正確なレートは、
-        利用する銀行またはライブ換算ツールで確認してください。
+        為替レートは旅行計画の目安であり、リアルタイムの市場レートではありません。実際に両替または決済する際は、
+        ご利用の銀行や最新の換算ツールで正確なレートをご確認ください。
       </p>
     </div>
 
     <!-- 物価の目安 -->
     <section class="mt-8">
-      <h2 class="text-xl font-bold text-gray-900">Chinaの物価目安</h2>
-      <p class="mt-1 text-sm text-gray-500">RMBでの一般的な価格と、参考用にあなたの通貨での換算額を表示します。</p>
+      <h2 class="text-xl font-bold text-gray-900">中国の物価の目安</h2>
+      <p class="mt-1 text-sm text-gray-500">
+        一般的な価格を人民元（RMB）で表示し、参考としてお使いの通貨での換算額もあわせてご案内します。
+      </p>
       <div id="cost-grid" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
     </section>
 
     <AffiliateCta
-      title="両替カウンターを使わない"
-      description="海外事務手数料のないカードをAlipayまたはWeChat Payに連携すれば、現金両替の上乗せなしで実勢レートに近い価格で支払えます。"
-      buttonText="決済設定を見る"
+      title="両替カウンターを使わずに支払いたい方へ"
+      description="海外事務手数料のかからないカードをAlipayやWeChat Payに連携すると、現金両替の上乗せを抑えながら、実勢レートに近い金額で支払いやすくなります。"
+      buttonText="支払い設定を確認する"
       placeholder={AFFILIATE_LINKS.payment}
     />
   </main>
@@ -73,7 +84,7 @@ const description =
 </BaseLayout>
 
 <script>
-  // 参考レートの目安: 各通貨1単位 = X RMB。
+  // 参考用の為替レートです。各通貨1単位 = X RMB で換算します。
   const ratesToRmb: Record<string, number> = {
     USD: 7.2,
     EUR: 7.8,
@@ -89,14 +100,14 @@ const description =
 
   const commonCosts: { label: string; rmb: number }[] = [
     { label: 'ミネラルウォーター', rmb: 2 },
-    { label: '地下鉄1回乗車', rmb: 4 },
+    { label: '地下鉄1回分の運賃', rmb: 4 },
     { label: '屋台の軽食', rmb: 10 },
-    { label: 'コーヒー（カフェ）', rmb: 30 },
-    { label: 'カジュアルなレストランの食事', rmb: 45 },
-    { label: '短距離のDiDi / タクシー', rmb: 25 },
-    { label: '高速鉄道（1から2時間）', rmb: 250 },
-    { label: '博物館 / 観光施設のチケット', rmb: 60 },
-    { label: '中価格帯ホテル / 1泊', rmb: 450 },
+    { label: 'カフェのコーヒー', rmb: 30 },
+    { label: 'カジュアルなレストランでの食事', rmb: 45 },
+    { label: '近距離のDiDi / タクシー', rmb: 25 },
+    { label: '高速鉄道（1〜2時間程度）', rmb: 250 },
+    { label: '博物館 / 観光施設の入場券', rmb: 60 },
+    { label: '中価格帯ホテル1泊分', rmb: 450 },
   ];
 
   const currencyEl = document.getElementById('currency') as HTMLSelectElement;
@@ -125,7 +136,7 @@ const description =
 
   function updateMeta() {
     if (rateLine) {
-      rateLine.textContent = `参考レート: 1 ${currencyEl.value} ≈ ¥${rate().toFixed(2)} RMB`;
+      rateLine.textContent = `参考レート：1 ${currencyEl.value} は約 ¥${rate().toFixed(2)} RMB です`;
     }
     if (costGrid) {
       costGrid.innerHTML = commonCosts
@@ -134,7 +145,7 @@ const description =
             <span class="text-sm text-gray-500">${c.label}</span>
             <div class="mt-1 flex items-baseline gap-2">
               <span class="text-xl font-bold text-gray-900">¥${c.rmb}</span>
-              <span class="text-sm text-brand-600">≈ ${sym()}${(c.rmb / rate()).toFixed(2)}</span>
+              <span class="text-sm text-brand-600">約 ${sym()}${(c.rmb / rate()).toFixed(2)}</span>
             </div>
           </div>`)
         .join('');
