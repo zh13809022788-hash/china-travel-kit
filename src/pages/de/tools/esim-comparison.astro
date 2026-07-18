@@ -11,21 +11,21 @@ const description =
   'Vergleiche gängige eSIM-Tarife für China nach Datenvolumen, Laufzeit, Preis und Netz. Mit Filtern findest du schneller den passenden Tarif für deine Reise.';
 
 const plans = [
-  { id: 1, name: 'China Explorer 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: 'Umgeht übliche lokale App-Einschränkungen' },
-  { id: 2, name: 'China Explorer 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: 'Umgeht übliche lokale App-Einschränkungen' },
-  { id: 3, name: 'Mainland Lite 3GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: 'Lokales Netz ohne VPN-Weiterleitung' },
-  { id: 4, name: 'Greater China 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Deckt Festlandchina, Hongkong, Macau und Taiwan ab' },
-  { id: 5, name: 'Unlimited Daily', data: 9999, dataLabel: 'Unbegrenzt*', days: 10, price: 29, network: 'China Unicom', note: 'Fair-Use-Drosselung nach 2 GB pro Tag' },
-  { id: 6, name: 'Business 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Umgeht übliche lokale App-Einschränkungen' },
-  { id: 7, name: 'Short Trip 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Sinnvoll für kurze Stopovers' },
-  { id: 8, name: 'Family 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Per Hotspot mit mehreren Geräten nutzbar' },
+  { id: 1, name: 'China-Entdecker 5 GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: 'Umgeht übliche lokale App-Einschränkungen' },
+  { id: 2, name: 'China-Entdecker 10 GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: 'Umgeht übliche lokale App-Einschränkungen' },
+  { id: 3, name: 'Festland Leicht 3 GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: 'Lokales Netz ohne VPN-Weiterleitung' },
+  { id: 4, name: 'Großchina 8 GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Deckt Festlandchina, Hongkong, Macau und Taiwan ab' },
+  { id: 5, name: 'Täglich Unbegrenzt', data: 9999, dataLabel: 'Unbegrenzt*', days: 10, price: 29, network: 'China Unicom', note: 'Fair-Use-Drosselung nach 2 GB pro Tag' },
+  { id: 6, name: 'Geschäftsreise 20 GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Umgeht übliche lokale App-Einschränkungen' },
+  { id: 7, name: 'Kurztrip 1 GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Sinnvoll für kurze Zwischenstopps' },
+  { id: 8, name: 'Familie 30 GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Per Hotspot mit mehreren Geräten nutzbar' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM-Tarifvergleich</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
