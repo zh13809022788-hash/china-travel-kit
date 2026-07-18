@@ -38,12 +38,13 @@ const credit = credits[name];
       <Image
         src={img}
         alt={alt}
+        width={img.width}
+        height={img.height}
         widths={[480, 800]}
         sizes="(max-width: 768px) 100vw, 768px"
         quality={65}
         loading={loading}
         class="w-full rounded-xl object-cover"
-        style="aspect-ratio: 16 / 9;"
       />
       {credit?.photographer && (
         <figcaption class="mt-1.5 text-xs text-gray-400">

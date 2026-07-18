@@ -133,6 +133,8 @@ const jsonLd = {
     <link rel="alternate" type="application/rss+xml" title="ChinaTripBox Travel Guides" href="/rss.xml" />
     <meta name="generator" content={Astro.generator} />
     <meta name="google-site-verification" content="4IazPod-9BT1hQUHHWC0xb6GO0esJ2o3oZB9Iq_d_lA" />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+    <link rel="preconnect" href="https://www.clarity.ms" />
     {ADSENSE_PUBLISHER_ID && <meta name="google-adsense-account" content={ADSENSE_PUBLISHER_ID} />}
     {
       ADSENSE_PUBLISHER_ID && (
@@ -201,32 +203,29 @@ const jsonLd = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <script is:inline set:html={`(function(){
-      // Redirect bare domain to www for canonical consistency
       if(window.location.hostname==='chinatripbox.com'){
         window.location.replace('https://www.chinatripbox.com'+window.location.pathname+window.location.search);
         return;
       }
+    })();`} />
+
+    <slot name="head" />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <script is:inline set:html={`(function(){
       var PREF_KEY='ctb-lang-pref';
       var LOCALE_PREFIXES=['zh-tw','ja','ko','ru','fr','de','es'];
-      var pref=null,locales=null;
+      var pref=null;
       try{pref=localStorage.getItem(PREF_KEY);}catch(e){}
-
-      // Helper: check if current path already has a locale prefix
       function hasLocalePrefix(p){
-        var parts=p.replace(/\\/$/,'').split('/');
+        var parts=p.replace(/\/$/,'').split('/');
         if(parts.length<2)return null;
         var first=parts[1].toLowerCase();
-        for(var k=0;k<LOCALE_PREFIXES.length;k++){if(first===LOCALE_PREFIXES[k])return LOCALE_PREFIXES[k];}
+        for(var k=0;k<LOCALE_PREFIXES.length;k++){if(first===LOCALE_PREFIXES[k])return first;}
         return null;
       }
-
-      // Helper: normalize locale to path prefix (Astro uses lowercase paths)
       function localePath(locale){return locale.toLowerCase();}
-
-      // Helper: redirect to a URL
       function goTo(url){if(url&&window.location.href!==url){window.location.replace(url);}}
-
-      // Helper: find hreflang alternate href for a locale code
       function findAlt(locale){
         var alts=document.querySelectorAll('link[rel="alternate"][hreflang]');
         for(var j=0;j<alts.length;j++){
@@ -236,33 +235,21 @@ const jsonLd = {
         }
         return null;
       }
-
-      // --- Stage 1: User has a language preference ---
       if(pref==='en'){return;}
       if(pref&&pref!=='en'){
         var currentLocale=hasLocalePrefix(window.location.pathname);
-        // If we're already on a page in the preferred locale, do nothing
         if(currentLocale&&currentLocale===localePath(pref)){return;}
-        // If we're on a non-preferred locale page, redirect to preferred version of same page
-        // (e.g. on /de/posts/x/ with pref=fr → try /fr/posts/x/)
         if(currentLocale){
           var swappedPath=window.location.pathname.replace(new RegExp('^/'+currentLocale+'/','i'),'/'+localePath(pref)+'/');
-          goTo(swappedPath);
-          return;
+          goTo(swappedPath);return;
         }
-        // We're on an English page — try hreflang alternate for preferred locale
         var altHref=findAlt(pref);
         if(altHref){
           try{var tp=new URL(altHref).pathname;}catch(e){tp=null;}
           if(tp&&window.location.pathname!==tp){goTo(altHref);return;}
         }
-        // No alternate exists → redirect to preferred locale homepage
-        // (nav links point to English pages, this keeps user in their language)
-        goTo(window.location.origin+'/'+localePath(pref)+'/');
-        return;
+        goTo(window.location.origin+'/'+localePath(pref)+'/');return;
       }
-
-      // --- Stage 2: No preference — auto-detect from browser language ---
       var langs=navigator.languages||[navigator.language]||[];
       var detected=null;
       for(var i=0;i<langs.length;i++){
@@ -275,10 +262,8 @@ const jsonLd = {
         if(lang.startsWith('de')){detected='de';break;}
         if(lang.startsWith('es')){detected='es';break;}
         if(lang.startsWith('en')){detected='en';break;}
-        // zh-CN/zh-Hans -> no auto-redirect, let user manually choose language
       }
       if(!detected||detected==='en')return;
-      // Check we're not already on a locale page
       if(hasLocalePrefix(window.location.pathname))return;
       var alt=findAlt(detected);
       if(alt){
@@ -286,10 +271,5 @@ const jsonLd = {
         if(tp2&&window.location.pathname!==tp2){goTo(alt);}
       }
     })();`} />
-
-    <slot name="head" />
-  </head>
-  <body class="flex min-h-screen flex-col">
-    <slot />
   </body>
 </html>
