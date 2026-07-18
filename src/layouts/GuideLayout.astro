@@ -76,7 +76,7 @@ const formattedDate = new Date(datePublished).toLocaleDateString('en-US', {
         <slot />
       </div>
 
-      <FaqSection items={faqs} />
+      <FaqSection items={faqs} locale={locale} />
 
       <RelatedReading items={related} />
 

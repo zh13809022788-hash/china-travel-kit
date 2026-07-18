@@ -202,7 +202,7 @@ const homeLabel = ui.home[locale] ?? 'Home';
       </div>
 
       <AdSlot format="in-article" />
-      <FaqSection items={faqs} />
+      <FaqSection items={faqs} locale={locale} />
       <RelatedReading items={related} title={ui.relatedTitle[locale] ?? 'Recommended next steps'} />
 
       <p class="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-600">

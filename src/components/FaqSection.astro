@@ -7,9 +7,23 @@ export interface FaqItem {
 export interface Props {
   items: FaqItem[];
   title?: string;
+  locale?: string;
 }
 
-const { items = [], title = 'Frequently Asked Questions' } = Astro.props;
+const { items = [], title: propTitle, locale = 'en' } = Astro.props;
+
+const FAQ_TITLES: Record<string, string> = {
+  en: 'Frequently Asked Questions',
+  'zh-tw': '常見問題',
+  ja: 'よくある質問',
+  ko: '자주 묻는 질문',
+  ru: 'Часто задаваемые вопросы',
+  fr: 'Questions fréquemment posées',
+  de: 'Häufig gestellte Fragen',
+  es: 'Preguntas frecuentes',
+};
+
+const title = propTitle || (FAQ_TITLES[locale] ?? FAQ_TITLES['en']);
 ---
 
 {items.length > 0 && (
