@@ -3,39 +3,39 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-const title = 'China Travel Content Series';
-const description = 'Explore China through five themed series: food, history, modern life, nature, and culture — each designed to inspire and inform foreign travelers.';
+const title = '중국 여행 콘텐츠 시리즈';
+const description = '음식, 역사, 현대 생활, 자연, 문화까지 다섯 가지 테마 시리즈로 중국을 만나보세요. 외국인 여행자에게 영감과 실용 정보를 전하도록 구성했습니다.';
 
 const seriesList = [
   {
     href: '/ko/series/food-of-china/',
-    title: 'Food of China',
-    desc: 'From street stalls to banquet halls — a foreigner\'s culinary journey through eight great cuisines, regional breakfasts, hot pot styles, and the dishes worth crossing a city for.',
-    icon: 'Food & Drink',
+    title: '중국 음식',
+    desc: '거리 노점부터 연회장까지, 팔대 요리와 지역별 아침 식사, 훠궈 스타일, 그리고 일부러 도시를 건너가서라도 먹을 만한 요리를 따라가는 외국인 미식 여행.',
+    icon: '음식 & 음료',
   },
   {
     href: '/ko/series/history-of-china/',
-    title: 'History of China',
-    desc: 'Ancient sites decoded for travelers — the Great Wall, Terracotta Army, Forbidden City, Silk Road, and the stories behind what you\'re actually looking at.',
-    icon: 'History',
+    title: '중국 역사',
+    desc: '여행자를 위한 고대 유적 해설. 만리장성, 병마용, 자금성, 실크로드, 그리고 지금 보고 있는 것의 배경에 숨은 이야기까지.',
+    icon: '역사',
   },
   {
     href: '/ko/series/modern-china/',
-    title: 'Modern China',
-    desc: 'What surprises foreigners most — cashless streets, the world\'s fastest trains, megacity scale, super apps, and the everyday tech that defines life in China today.',
-    icon: 'Modern Life',
+    title: '중국 현대 생활',
+    desc: '외국인이 가장 놀라는 것들. 현금 없는 거리, 세계에서 가장 빠른 열차, 거대한 도시 규모, 슈퍼앱, 그리고 오늘날 중국의 일상을 규정하는 생활 속 기술.',
+    icon: '현대 생활',
   },
   {
     href: '/ko/series/nature-of-china/',
-    title: 'Nature of China',
-    desc: 'Avatar mountains, fairy-tale lakes, karst landscapes, and the Tibetan plateau — China\'s most spectacular natural sites with practical guides for foreign visitors.',
-    icon: 'Nature',
+    title: '중국의 자연',
+    desc: '아바타의 산, 동화 같은 호수, 카르스트 지형, 티베트 고원까지. 외국인 방문객을 위한 실용 가이드와 함께 중국의 가장 장대한 자연 명소를 소개합니다.',
+    icon: '자연',
   },
   {
     href: '/ko/series/culture-of-china/',
-    title: 'Culture of China',
-    desc: 'Tea ceremony, Spring Festival, face and guanxi, calligraphy, kung fu, and the zodiac — cultural traditions explained for travelers who want to go beyond surface tourism.',
-    icon: 'Culture',
+    title: '중국 문화',
+    desc: '다도, 춘절, 체면과 관계, 서예, 쿵푸, 십이지까지. 겉핥기 여행을 넘어 더 깊이 알고 싶은 여행자를 위한 문화 전통 해설.',
+    icon: '문화',
   },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
@@ -46,7 +46,7 @@ const locale = 'ko';
   <Header locale="ko" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content Series</p>
+      <p class="section-kicker">콘텐츠 시리즈</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -57,7 +57,7 @@ const locale = 'ko';
           <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{s.icon}</span>
           <h2 class="mt-2 text-xl font-bold text-gray-950">{s.title}</h2>
           <p class="mt-2 text-sm leading-6 text-gray-600">{s.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Explore series</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">시리즈 보기</span>
         </a>
       ))}
     </section>
