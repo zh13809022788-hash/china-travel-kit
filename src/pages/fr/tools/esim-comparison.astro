@@ -8,18 +8,18 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 const titre = 'Comparateur de forfaits eSIM pour voyager en Chine';
 const description =
-  'Comparez les meilleurs forfaits eSIM pour la Chine selon le volume de donnees, la duree de validite, le prix et le reseau. Filtrez et triez les offres pour trouver celle qui convient le mieux a votre voyage.';
+  'Comparez les meilleurs forfaits eSIM pour la Chine selon le volume de données, la durée de validité, le prix et le réseau. Filtrez et triez les offres pour trouver celle qui convient le mieux à votre voyage.';
 
-// 8 forfaits eSIM predefinis pour voyager en Chine (donnees d'exemple representatives)
+// 8 forfaits eSIM prédéfinis pour voyager en Chine (données d'exemple représentatives)
 const forfaits = [
   { id: 1, name: 'Explorateur Chine 5 Go', data: 5, dataLabel: '5 Go', days: 7, price: 9.5, network: 'China Unicom', note: 'Permet d acceder aux applications habituellement restreintes' },
   { id: 2, name: 'Explorateur Chine 10 Go', data: 10, dataLabel: '10 Go', days: 15, price: 16, network: 'China Unicom', note: 'Permet d acceder aux applications habituellement restreintes' },
-  { id: 3, name: 'Chine continentale Essentiel 3 Go', data: 3, dataLabel: '3 Go', days: 7, price: 6.5, network: 'China Mobile', note: 'Reseau local, sans routage via VPN' },
+  { id: 3, name: 'Chine continentale Essentiel 3 Go', data: 3, dataLabel: '3 Go', days: 7, price: 6.5, network: 'China Mobile', note: 'Réseau local, sans routage via VPN' },
   { id: 4, name: 'Grande Chine 8 Go', data: 8, dataLabel: '8 Go', days: 30, price: 18.9, network: 'China Unicom', note: 'Couvre la Chine, Hong Kong, Macao et Taiwan' },
-  { id: 5, name: 'Illimite quotidien', data: 9999, dataLabel: 'Illimite*', days: 10, price: 29, network: 'China Unicom', note: 'Usage raisonnable applique apres 2 Go par jour' },
+  { id: 5, name: 'Illimité quotidien', data: 9999, dataLabel: 'Illimité*', days: 10, price: 29, network: 'China Unicom', note: 'Usage raisonnable appliqué après 2 Go par jour' },
   { id: 6, name: 'Pro 20 Go', data: 20, dataLabel: '20 Go', days: 30, price: 32, network: 'China Unicom', note: 'Permet d acceder aux applications habituellement restreintes' },
-  { id: 7, name: 'Court sejour 1 Go', data: 1, dataLabel: '1 Go', days: 3, price: 3.2, network: 'China Mobile', note: 'Ideal pour les escales rapides' },
-  { id: 8, name: 'Famille 30 Go', data: 30, dataLabel: '30 Go', days: 30, price: 45, network: 'China Unicom', note: 'Partage de connexion autorise' },
+  { id: 7, name: 'Court séjour 1 Go', data: 1, dataLabel: '1 Go', days: 3, price: 3.2, network: 'China Mobile', note: 'Idéal pour les escales rapides' },
+  { id: 8, name: 'Famille 30 Go', data: 30, dataLabel: '30 Go', days: 30, price: 45, network: 'China Unicom', note: 'Partage de connexion autorisé' },
 ];
 ---
 
@@ -34,29 +34,29 @@ const forfaits = [
 
     <AdSlot format="banner" />
 
-    <!-- Controles -->
+    <!-- Contrôles -->
     <div class="mt-6 flex flex-wrap items-end gap-4 rounded-xl border border-gray-200 bg-gray-50 p-4">
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Trier par</span>
         <select id="tri" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           <option value="prix-croissant">Prix : du moins cher au plus cher</option>
           <option value="prix-decroissant">Prix : du plus cher au moins cher</option>
-          <option value="donnees-decroissant">Donnees : du volume le plus eleve au plus faible</option>
-          <option value="validite-decroissant">Validite : de la plus longue a la plus courte</option>
+          <option value="donnees-decroissant">Données : du volume le plus élevé au plus faible</option>
+          <option value="validite-decroissant">Validité : de la plus longue à la plus courte</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Reseau</span>
+        <span class="mb-1 font-medium text-gray-700">Réseau</span>
         <select id="filtre-reseau" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="tous">Tous les reseaux</option>
+          <option value="tous">Tous les réseaux</option>
           <option value="China Unicom">China Unicom</option>
           <option value="China Mobile">China Mobile</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Donnees min. (Go)</span>
+        <span class="mb-1 font-medium text-gray-700">Données min. (Go)</span>
         <select id="filtre-donnees" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="0">Sans preference</option>
+          <option value="0">Sans préférence</option>
           <option value="5">5 Go et plus</option>
           <option value="10">10 Go et plus</option>
           <option value="20">20 Go et plus</option>
@@ -70,21 +70,21 @@ const forfaits = [
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
             <th class="py-3 pr-4 font-semibold">Forfait</th>
-            <th class="py-3 pr-4 font-semibold">Donnees</th>
-            <th class="py-3 pr-4 font-semibold">Validite</th>
+            <th class="py-3 pr-4 font-semibold">Données</th>
+            <th class="py-3 pr-4 font-semibold">Validité</th>
             <th class="py-3 pr-4 font-semibold">Prix (USD)</th>
-            <th class="py-3 pr-4 font-semibold">Reseau</th>
+            <th class="py-3 pr-4 font-semibold">Réseau</th>
             <th class="py-3 pr-4 font-semibold">Remarques</th>
           </tr>
         </thead>
         <tbody id="lignes-forfaits"></tbody>
       </table>
-      <p id="aucun-resultat" class="hidden py-8 text-center text-gray-500">Aucun forfait ne correspond a vos filtres.</p>
+      <p id="aucun-resultat" class="hidden py-8 text-center text-gray-500">Aucun forfait ne correspond à vos filtres.</p>
     </div>
 
     <AffiliateCta
-      title="Pret a rester connecte ?"
-      description="Activez une eSIM recommandee pour la Chine et profitez d une connexion des votre arrivee."
+      title="Prêt à rester connecté ?"
+      description="Activez une eSIM recommandée pour la Chine et profitez d une connexion des votre arrivée."
       buttonText="Obtenir votre eSIM"
       placeholder={AFFILIATE_LINKS.esim}
     />
