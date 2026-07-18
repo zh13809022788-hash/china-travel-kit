@@ -8,18 +8,18 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 const title = '中国旅行向けeSIMプラン比較';
 const description =
-  '中国旅行向けの主要なeSIMプランを、データ容量、有効期間、価格、ネットワークで比較できます。フィルターと並べ替えを使って、旅程に合った最適なプランを見つけましょう。';
+  '中国旅行で使える主要なeSIMプランを、データ容量、有効期間、料金、対応ネットワークで比較できます。絞り込みや並べ替えを使って、旅程に合った最適なプランを見つけましょう。';
 
 // 中国旅行向けeSIM商品のプリセット8件（代表的なサンプルデータ）
 const plans = [
-  { id: 1, name: '中国周遊 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: '現地アプリの制限を回避できます。' },
-  { id: 2, name: '中国周遊 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: '現地アプリの制限を回避できます。' },
-  { id: 3, name: '中国本土ライト 3GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: '現地ネットワークを利用し、VPN経由ではありません。' },
-  { id: 4, name: 'グレーター・チャイナ 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: '中国本土、香港、マカオ、台湾で利用できます。' },
-  { id: 5, name: '1日使い放題', data: 9999, dataLabel: '無制限*', days: 10, price: 29, network: 'China Unicom', note: '1日2GBを超えると、公平利用ポリシーによる速度制限があります。' },
-  { id: 6, name: 'ビジネス 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: '現地アプリの制限を回避できます。' },
-  { id: 7, name: '短期滞在 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: '短時間の乗り継ぎに向いています。' },
-  { id: 8, name: 'ファミリー 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'テザリングで共有できます。' },
+  { id: 1, name: '中国周遊 5GB', data: 5, dataLabel: '5GB', days: 7, price: 9.5, network: 'China Unicom', note: '現地アプリの制限を回避しやすいプランです。' },
+  { id: 2, name: '中国周遊 10GB', data: 10, dataLabel: '10GB', days: 15, price: 16, network: 'China Unicom', note: '現地アプリの制限を回避しやすいプランです。' },
+  { id: 3, name: '中国本土ライト 3GB', data: 3, dataLabel: '3GB', days: 7, price: 6.5, network: 'China Mobile', note: '現地ネットワークを利用するタイプで、VPN経由ではありません。' },
+  { id: 4, name: 'グレーター・チャイナ 8GB', data: 8, dataLabel: '8GB', days: 30, price: 18.9, network: 'China Unicom', note: '中国本土、香港、マカオ、台湾で利用できます。' },
+  { id: 5, name: '1日使い放題', data: 9999, dataLabel: '無制限*', days: 10, price: 29, network: 'China Unicom', note: '1日あたり2GBを超えると、公平利用ポリシーにより速度制限がかかります。' },
+  { id: 6, name: 'ビジネス 20GB', data: 20, dataLabel: '20GB', days: 30, price: 32, network: 'China Unicom', note: '現地アプリの制限を回避しやすいプランです。' },
+  { id: 7, name: '短期滞在 1GB', data: 1, dataLabel: '1GB', days: 3, price: 3.2, network: 'China Mobile', note: '短時間の乗り継ぎや短期滞在に向いています。' },
+  { id: 8, name: 'ファミリー 30GB', data: 30, dataLabel: '30GB', days: 30, price: 45, network: 'China Unicom', note: 'テザリングで家族や同行者と共有できます。' },
 ];
 ---
 
@@ -39,24 +39,24 @@ const plans = [
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">並べ替え</span>
         <select id="sort-by" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="price-asc">価格が安い順</option>
-          <option value="price-desc">価格が高い順</option>
+          <option value="price-asc">料金が安い順</option>
+          <option value="price-desc">料金が高い順</option>
           <option value="data-desc">データ容量が多い順</option>
           <option value="days-desc">利用期間が長い順</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">ネットワーク</span>
+        <span class="mb-1 font-medium text-gray-700">対応ネットワーク</span>
         <select id="filter-network" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="all">すべてのネットワーク</option>
+          <option value="all">すべて表示</option>
           <option value="China Unicom">China Unicom</option>
           <option value="China Mobile">China Mobile</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">最小データ容量（GB）</span>
+        <span class="mb-1 font-medium text-gray-700">最低データ容量（GB）</span>
         <select id="filter-data" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="0">指定しません</option>
+          <option value="0">指定なし</option>
           <option value="5">5GB以上</option>
           <option value="10">10GB以上</option>
           <option value="20">20GB以上</option>
@@ -69,23 +69,23 @@ const plans = [
       <table class="w-full min-w-[720px] border-collapse text-sm">
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
-            <th class="py-3 pr-4 font-semibold">プラン</th>
+            <th class="py-3 pr-4 font-semibold">プラン名</th>
             <th class="py-3 pr-4 font-semibold">データ容量</th>
             <th class="py-3 pr-4 font-semibold">利用期間</th>
-            <th class="py-3 pr-4 font-semibold">価格（USD）</th>
-            <th class="py-3 pr-4 font-semibold">ネットワーク</th>
-            <th class="py-3 pr-4 font-semibold">備考</th>
+            <th class="py-3 pr-4 font-semibold">料金（米ドル）</th>
+            <th class="py-3 pr-4 font-semibold">対応ネットワーク</th>
+            <th class="py-3 pr-4 font-semibold">補足</th>
           </tr>
         </thead>
         <tbody id="plan-rows"></tbody>
       </table>
-      <p id="no-results" class="hidden py-8 text-center text-gray-500">条件に合うプランはありません。</p>
+      <p id="no-results" class="hidden py-8 text-center text-gray-500">条件に合うプランは見つかりませんでした。</p>
     </div>
 
     <AffiliateCta
-      title="すぐに接続できるよう準備しませんか？"
-      description="おすすめの中国向けeSIMを有効化して、到着した瞬間からオンラインになりましょう。"
-      buttonText="eSIMを入手する"
+      title="到着後すぐに接続できるよう、今のうちに準備しませんか？"
+      description="おすすめの中国向けeSIMを事前に有効化して、到着したその瞬間からオンラインで行動できるようにしておきましょう。"
+      buttonText="eSIMを確認する"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -121,7 +121,7 @@ const plans = [
         <td class="py-3 pr-4 font-semibold text-gray-900">${p.name}</td>
         <td class="py-3 pr-4">${p.dataLabel}</td>
         <td class="py-3 pr-4">${p.days}日間</td>
-        <td class="py-3 pr-4 font-semibold">USD ${p.price.toFixed(2)}</td>
+        <td class="py-3 pr-4 font-semibold">米ドル ${p.price.toFixed(2)}</td>
         <td class="py-3 pr-4">${p.network}</td>
         <td class="py-3 pr-4 text-gray-500">${p.note}</td>
       </tr>`
