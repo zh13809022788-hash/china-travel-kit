@@ -10,34 +10,34 @@ const title = 'Frases esenciales en chino para viajeros';
 const description =
   'Una lista práctica e imprimible de frases esenciales en chino mandarín para turistas en China, con pinyin y español. Incluye saludos, pagos, transporte, comida y emergencias.';
 
-interface Phrase {
+interface Frase {
   es: string;
   zh: string;
   pinyin: string;
 }
-interface Group {
+interface Grupo {
   id: string;
   label: string;
   icon: string;
-  phrases: Phrase[];
+  phrases: Frase[];
 }
 
-const groups: Group[] = [
+const groups: Grupo[] = [
   {
-    id: 'basicos', label: 'Saludos y frases básicas', icon: '👋',
+    id: 'basics', label: 'Saludos y frases básicas', icon: '👋',
     phrases: [
       { es: 'Hola', zh: '你好', pinyin: 'nǐ hǎo' },
       { es: 'Gracias', zh: '谢谢', pinyin: 'xièxie' },
       { es: 'De nada', zh: '不客气', pinyin: 'bú kèqi' },
       { es: 'Perdón / Disculpe', zh: '对不起', pinyin: 'duìbuqǐ' },
       { es: 'Sí / Correcto', zh: '对', pinyin: 'duì' },
-      { es: 'No / Negación', zh: '不是', pinyin: 'bú shì' },
+      { es: 'No', zh: '不是', pinyin: 'bú shì' },
       { es: 'No entiendo', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
       { es: '¿Habla inglés?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
     ],
   },
   {
-    id: 'pagos', label: 'Dinero y pagos', icon: '💳',
+    id: 'payment', label: 'Dinero y pagos', icon: '💳',
     phrases: [
       { es: '¿Cuánto cuesta?', zh: '多少钱？', pinyin: 'duōshao qián?' },
       { es: '¿Puedo usar Alipay?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
@@ -48,7 +48,7 @@ const groups: Group[] = [
     ],
   },
   {
-    id: 'transporte', label: 'Transporte y desplazamientos', icon: '🚕',
+    id: 'transport', label: 'Transporte y desplazamientos', icon: '🚕',
     phrases: [
       { es: '¿Dónde está el metro?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
       { es: 'Por favor, lléveme a esta dirección', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
@@ -59,7 +59,7 @@ const groups: Group[] = [
     ],
   },
   {
-    id: 'comida', label: 'Comida y restaurantes', icon: '🍜',
+    id: 'food', label: 'Comida y restaurantes', icon: '🍜',
     phrases: [
       { es: 'El menú, por favor', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
       { es: 'Soy vegetariano/a', zh: '我吃素', pinyin: 'wǒ chī sù' },
@@ -70,7 +70,7 @@ const groups: Group[] = [
     ],
   },
   {
-    id: 'ayuda', label: 'Ayuda y emergencias', icon: '🆘',
+    id: 'help', label: 'Ayuda y emergencias', icon: '🆘',
     phrases: [
       { es: '¡Ayuda!', zh: '救命！', pinyin: 'jiùmìng!' },
       { es: '¿Dónde está el baño?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
@@ -95,7 +95,7 @@ const groups: Group[] = [
 
     <!-- Controles -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
-      <button data-filter="todos" class="phrase-filter btn-primary text-sm">Todas</button>
+      <button data-filter="all" class="phrase-filter btn-primary text-sm">Todas</button>
       {groups.map((g) => (
         <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
           {g.icon} {g.label}
@@ -125,9 +125,9 @@ const groups: Group[] = [
     </div>
 
     <AffiliateCta
-      title="Mantente conectado para traducir sobre la marcha"
+      title="Mantente conectado para traducir mientras te desplazas"
       description="Una eSIM de viaje para China mantiene funcionando las aplicaciones de traducción y los mapas desde el momento en que aterrizas."
-      buttonText="Conectarme"
+      buttonText="Conéctate"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -135,26 +135,25 @@ const groups: Group[] = [
 </BaseLayout>
 
 <script>
-  const buttons = document.querySelectorAll<HTMLButtonElement>('.phrase-filter');
-  const sections = document.querySelectorAll<HTMLElement>('.phrase-group');
-  const printBtn = document.getElementById('print-btn');
+  const botones = document.querySelectorAll<HTMLButtonElement>('.phrase-filter');
+  const secciones = document.querySelectorAll<HTMLElement>('.phrase-group');
+  const botonImprimir = document.getElementById('print-btn');
 
-  const activeCls = ['btn-primary'];
-  const idleCls = ['rounded-lg', 'border', 'border-gray-300', 'px-3', 'py-1.5', 'text-sm', 'font-medium', 'text-gray-700', 'hover:border-brand-400'];
+  const clasesInactivas = ['rounded-lg', 'border', 'border-gray-300', 'px-3', 'py-1.5', 'text-sm', 'font-medium', 'text-gray-700', 'hover:border-brand-400'];
 
-  buttons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-      sections.forEach((s) => {
-        s.classList.toggle('hidden', filter !== 'todos' && s.dataset.group !== filter);
+  botones.forEach((boton) => {
+    boton.addEventListener('click', () => {
+      const filtro = boton.dataset.filter;
+      secciones.forEach((seccion) => {
+        seccion.classList.toggle('hidden', filtro !== 'all' && seccion.dataset.group !== filtro);
       });
-      buttons.forEach((b) => {
-        const on = b === btn;
-        b.classList.toggle('btn-primary', on);
-        idleCls.forEach((c) => b.classList.toggle(c, !on));
+      botones.forEach((b) => {
+        const estaActivo = b === boton;
+        b.classList.toggle('btn-primary', estaActivo);
+        clasesInactivas.forEach((clase) => b.classList.toggle(clase, !estaActivo));
       });
     });
   });
 
-  printBtn?.addEventListener('click', () => window.print());
+  botonImprimir?.addEventListener('click', () => window.print());
 </script>
