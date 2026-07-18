@@ -11,23 +11,23 @@ const posts = (await getCollection('posts-zh-tw'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '中國美食、用餐與禮儀指南';
-const description = '給外國旅客的中國實用飲食指南：外送點餐、街頭小吃安全、辣度、給小費、餐廳禮儀與飲食文化。';
+const title = '中國美食、用餐與餐桌禮儀指南';
+const description = '為外國旅客整理的中國實用飲食指南：外送點餐、街頭小吃安全、辣度、是否給小費、餐廳禮儀與飲食文化。';
 
 const pathways = [
   {
-    title: 'Order without Chinese',
-    desc: 'Set up delivery apps, save hotel addresses, and avoid courier-call confusion.',
+    title: '不會中文也能點餐',
+    desc: '先設定好外送 App、儲存飯店地址，避免外送員來電時溝通混亂。',
     href: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
-    title: 'Eat street food safely',
-    desc: 'Use turnover, visible heat, water habits, and spice phrases to choose better stalls.',
+    title: '安心吃街頭小吃',
+    desc: '從攤位翻桌率、是否現場加熱、用水習慣與辣度說法，判斷哪些攤位更值得選。',
     href: '/zh-tw/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: 'Handle dining etiquette',
-    desc: 'Know when not to tip, when service charges matter, and how local restaurant norms work.',
+    title: '掌握用餐禮儀',
+    desc: '了解什麼情況不用給小費、服務費何時重要，以及當地餐廳的常見規矩。',
     href: '/zh-tw/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
@@ -36,12 +36,12 @@ const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
     title: 'Baijiu 101',
-    desc: 'Useful background if a banquet or hosted dinner includes China\'s national spirit.',
+    desc: '如果宴席或主人招待的晚餐出現中國白酒，這些背景資訊會很實用。',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: 'How to drink baijiu politely',
-    desc: 'A deeper companion guide for toasts, small pours, and pacing yourself at formal meals.',
+    title: '如何有禮貌地喝白酒',
+    desc: '這篇延伸指南更深入介紹正式餐敘中的敬酒、小杯斟酒與飲酒節奏。',
   },
 ];
 ---
@@ -56,17 +56,17 @@ const cultureLinks = [
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chengdu-food" alt="Spicy Sichuan street food dishes at a night market in China" loading="lazy" />
+    <CoverImage name="topic-chengdu-food" alt="中國夜市裡香辣的四川街頭小吃" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">Food planning pathways</h2>
+      <h2 id="food-pathways" class="sr-only">美食規劃導覽</h2>
       {pathways.map((item) => (
         <a href={item.href} class="card block hover:no-underline">
           <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Read guide</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">閱讀指南</span>
         </a>
       ))}
     </section>
@@ -75,8 +75,8 @@ const cultureLinks = [
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Guides</p>
-            <h2>Food and etiquette articles</h2>
+            <p class="section-kicker">指南文章</p>
+            <h2>美食與用餐禮儀文章</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
@@ -91,12 +91,12 @@ const cultureLinks = [
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">Culture companion</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">When baijiu appears</h2>
+        <p class="section-kicker">文化延伸閱讀</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">遇到白酒時</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Most tourist meals do not require alcohol knowledge, but hosted banquets, business dinners,
-          and rural family meals sometimes include baijiu toasts. These companion resources go deeper
-          while ChinaTripBox stays focused on travel logistics.
+          多數觀光客的日常用餐不需要懂酒，但在招待宴、商務餐敘，
+          或鄉村家庭聚餐中，有時會出現白酒敬酒。這些延伸資源提供更深入的說明，
+          而 ChinaTripBox 仍專注於旅行實務與行程安排。
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
