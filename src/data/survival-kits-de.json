@@ -1,0 +1,86 @@
+[
+  {
+    "theme_id": "arrival_setup",
+    "slug": "arrival",
+    "title": "Überlebenskit für die Ankunft",
+    "description": "Karten und Checkliste für den ersten Tag: Ankunft am Flughafen, Hotel-Check-in, Zahlungstest und Transport.",
+    "related_paths": [
+      "/posts/first-24-hours-in-china-arrival-checklist/",
+      "/posts/airport-to-city-transport-beijing-shanghai-guangzhou/",
+      "/tools/show-to-driver/"
+    ],
+    "tools": [
+      {
+        "name": "Hilfe mit der Hoteladresse",
+        "text_cn": "请帮我去这家酒店。这个是酒店地址。",
+        "text_en": "Please help me get to this hotel. This is the hotel address.",
+        "category": "hotel"
+      },
+      {
+        "name": "Ich spreche kein Chinesisch",
+        "text_cn": "我不会说中文，请用翻译软件和我沟通。",
+        "text_en": "I do not speak Chinese. Please use a translation app to communicate with me.",
+        "category": "communication"
+      },
+      {
+        "name": "Sicherer Taxi-Stopp",
+        "text_cn": "请在安全合法的地方停车，谢谢。",
+        "text_en": "Please stop somewhere safe and legal. Thank you.",
+        "category": "transport"
+      }
+    ],
+    "checklist_steps": [
+      "eSIM oder Roaming vor dem Verlassen des Flughafens aktivieren",
+      "Eine kleine Testzahlung mit Alipay oder WeChat Pay machen",
+      "Hotelname und -adresse auf Chinesisch speichern",
+      "Zwischen Metro, offiziellem Taxi, Ride-Hailing oder Transfer wählen",
+      "Telefon und Powerbank vor dem Schlafen aufladen"
+    ],
+    "ai_prompt": "Help me with my first 24 hours after arriving in China."
+  },
+  {
+    "theme_id": "food_exploration",
+    "slug": "food",
+    "title": "Überlebenskit für Essen & Restaurants",
+    "description": "Bestellen im Restaurant, Allergiekarten, Schärfegrad, Zahlungsformeln und Vorbereitung für Essenslieferungen.",
+    "related_paths": [
+      "/food/",
+      "/posts/ordering-food-in-china-without-chinese-meituan-ele-me/",
+      "/posts/chengdu-street-food-safety-spice-levels-what-to-order/"
+    ],
+    "tools": [
+      {
+        "name": "Kein Koriander",
+        "text_cn": "我不吃香菜，谢谢。",
+        "text_en": "No cilantro, please.",
+        "category": "food_preference"
+      },
+      {
+        "name": "Erdnussallergie",
+        "text_cn": "我对花生过敏，请不要放花生或花生酱。",
+        "text_en": "I am allergic to peanuts. Please do not add peanuts or peanut sauce.",
+        "category": "allergy"
+      },
+      {
+        "name": "Weniger scharf",
+        "text_cn": "请做微辣，少放辣椒。",
+        "text_en": "Please make it mildly spicy and use less chili.",
+        "category": "spice"
+      },
+      {
+        "name": "Ich möchte bezahlen",
+        "text_cn": "您好，请帮我结账。",
+        "text_en": "Hello, could I have the bill please?",
+        "category": "payment"
+      }
+    ],
+    "checklist_steps": [
+      "Karten für Allergien oder Essensrestriktionen vorbereiten",
+      "Alipay oder WeChat Pay vor der Bestellung einrichten",
+      "Eine Übersetzungs-App für Menüs speichern",
+      "Lernen, wie man milde Schärfe verlangt",
+      "Die Hoteladresse für Essenslieferungen griffbereit halten"
+    ],
+    "ai_prompt": "Help me order food in China and explain dietary restrictions."
+  }
+]
