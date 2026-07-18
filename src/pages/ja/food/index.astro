@@ -11,23 +11,23 @@ const posts = (await getCollection('posts-ja'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '中国グルメ・食事・マナーガイド';
-const description = '外国人旅行者向け中国グルメ実用ガイド：デリバリー注文、屋台料理の安全性、辛さの目安、チップ、レストランマナー、食文化。';
+const title = '中国グルメ・食事・マナーのご案内';
+const description = '外国人旅行者向けに、中国グルメを安心して楽しむための実用情報をご案内します。デリバリーの注文方法、屋台料理の安全性、辛さの目安、チップ、レストランでのマナー、食文化まで幅広く解説します。';
 
 const pathways = [
   {
-    title: '中国語ができなくても注文できます',
-    desc: 'デリバリーアプリの設定、ホテル住所の保存、配達員からの電話への戸惑いを減らすコツを押さえます。',
+    title: '中国語がわからなくても注文できます',
+    desc: 'デリバリーアプリの設定方法、ホテル住所の保存方法、配達員からの電話に落ち着いて対応するコツをご案内します。',
     href: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
-    title: '屋台料理を安心して楽しむ',
-    desc: '回転の良さ、しっかり加熱されているか、水の扱い、辛さを伝える表現を目安に、より安心できる店を選びます。',
+    title: '屋台料理を安心して楽しめます',
+    desc: '回転の良さ、十分に加熱されているか、水の扱い、辛さを伝える表現を目安に、より安心して利用しやすいお店の選び方をご紹介します。',
     href: '/ja/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: '食事のマナーを押さえる',
-    desc: 'チップが不要な場面、サービス料を確認すべき場面、現地のレストランでの基本的なふるまいを理解できます。',
+    title: '食事のマナーを確認できます',
+    desc: 'チップが不要な場面、サービス料を確認したい場面、現地のレストランでの基本的なふるまいについてわかりやすく説明します。',
     href: '/ja/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
@@ -35,13 +35,13 @@ const pathways = [
 const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
-    title: 'Baijiuの基礎知識',
-    desc: '会食や招待された夕食で中国を代表する蒸留酒が出る場合に役立つ基礎情報です。',
+    title: 'Baijiuの基本を知る',
+    desc: '会食や招待された夕食で、中国を代表する蒸留酒に触れる場面に備えておきたい基礎知識を紹介しています。',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: 'Baijiuを失礼なく飲む方法',
-    desc: '乾杯の作法、少量ずつ注がれる酒への対応、フォーマルな食事で無理なく飲むコツをより詳しく知りたい方に向いています。',
+    title: 'Baijiuを失礼なく楽しむ方法',
+    desc: '乾杯の作法、少量ずつ注がれるお酒への対応、フォーマルな食事の場で無理なく付き合うコツを詳しく知りたい方におすすめです。',
   },
 ];
 ---
@@ -56,17 +56,17 @@ const cultureLinks = [
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chengdu-food" alt="中国のナイトマーケットに並ぶ、辛味の効いた四川の屋台料理" loading="lazy" />
+    <CoverImage name="topic-chengdu-food" alt="中国のナイトマーケットに並ぶ、辛みのある四川の屋台料理" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">食事計画のためのガイド一覧</h2>
+      <h2 id="food-pathways" class="sr-only">食事の計画に役立つガイド一覧です</h2>
       {pathways.map((item) => (
         <a href={item.href} class="card block hover:no-underline">
           <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">ガイドを読む</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">詳しく見る</span>
         </a>
       ))}
     </section>
@@ -75,8 +75,8 @@ const cultureLinks = [
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">ガイド記事</p>
-            <h2>食事とマナーに関する記事</h2>
+            <p class="section-kicker">関連ガイド</p>
+            <h2>食事とマナーに関する記事をご案内します</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
@@ -91,12 +91,12 @@ const cultureLinks = [
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">文化理解の参考</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">Baijiuが出てきたときは</h2>
+        <p class="section-kicker">食文化を知るための参考情報です</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Baijiuが出てきたときに備えましょう</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          観光中の食事ではお酒の知識が必須になることはほとんどありませんが、招待された宴席や接待の会食、
-          地方の家庭での食事では、Baijiuで乾杯する場面が出てくることがあります。以下の参考資料ではその点をより詳しく扱い、
-          ChinaTripBoxでは旅行中の実務的な情報に重点を置いています。
+          観光中の食事では、お酒の知識が必須になることはほとんどありません。ですが、招待された宴席や接待を伴う会食、
+          地方の家庭での食事では、Baijiuで乾杯する場面が出てくることがあります。以下の参考資料ではその点をより詳しく扱っており、
+          ChinaTripBoxでは旅行中に役立つ実務的な情報を中心にご案内しています。
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
