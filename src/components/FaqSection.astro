@@ -11,6 +11,7 @@ export interface Props {
 }
 
 const { items = [], title: propTitle, locale = 'en' } = Astro.props;
+const normalizedLocale = (locale as string).toLowerCase();
 
 const FAQ_TITLES: Record<string, string> = {
   en: 'Frequently Asked Questions',
@@ -23,7 +24,7 @@ const FAQ_TITLES: Record<string, string> = {
   es: 'Preguntas frecuentes',
 };
 
-const title = propTitle || (FAQ_TITLES[locale] ?? FAQ_TITLES['en']);
+const title = propTitle || (FAQ_TITLES[normalizedLocale] ?? FAQ_TITLES['en']);
 ---
 
 {items.length > 0 && (
