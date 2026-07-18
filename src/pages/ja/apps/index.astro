@@ -5,8 +5,8 @@ import Footer from '../../../components/Footer.astro';
 import CoverImage from '../../../components/CoverImage.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const title = '外国人旅行者向け中国必須アプリ完全ガイド：ダウンロードリンクとWeb版の代替手段';
-const description = '中国旅行で必要になるアプリをまとめて紹介します。WeChat、Alipay、DiDi、Baidu Maps、Meituan、12306、VPN などを網羅し、各アプリの App Store / Google Play ダウンロードリンクと、インストール不要で使える H5 Web 版も掲載しています。';
+const title = '中国旅行で必須のアプリ完全ガイド：ダウンロードリンクとWeb版の代替手段';
+const description = '中国旅行で必要になるアプリをまとめてご紹介します。WeChat、Alipay、DiDi、Baidu Maps、Meituan、12306、VPN などを網羅し、各アプリの App Store / Google Play ダウンロードリンクと、インストール不要で使える H5 Web 版も掲載しています。';
 
 const appGroups = [
   {
@@ -41,7 +41,7 @@ const appGroups = [
         android: 'https://play.google.com/store/apps/details?id=com.didi.sdk',
         ios: 'https://apps.apple.com/app/didi/id1164272094',
         h5: 'https://m.didiglobal.com/',
-        note: 'H5 版はブラウザや WeChat ミニプログラムから利用できます。たまに乗る程度ならアプリを入れなくても十分です。',
+        note: 'H5 版はブラウザや WeChat のミニプログラムから利用できます。たまに乗る程度であれば、アプリを入れなくても十分です。',
         guide: '/ja/posts/didi-china-foreign-tourists-guide/',
       },
       {
@@ -50,16 +50,16 @@ const appGroups = [
         android: null,
         ios: null,
         h5: null,
-        note: 'Alipay を開いて「交通」アイコンを選んでください。別途インストールは不要です。',
+        note: 'Alipay を開いて「交通」アイコンを選んでください。別途インストールする必要はありません。',
         guide: '/ja/transport/',
       },
       {
         name: '12306',
-        desc: '中国鉄路の公式列車予約アプリです。中国語表示のみで、利用には本人確認が必要です。代替としては Trip.com が便利です。',
+        desc: '中国鉄路の公式列車予約アプリです。中国語表示のみで、利用には本人確認が必要です。代替手段としては Trip.com が便利です。',
         android: 'https://play.google.com/store/apps/details?id=com.cars.blaili',
         ios: 'https://apps.apple.com/app/12306/id564757494',
         h5: 'https://www.12306.cn/',
-        note: '外国人旅行者にはやや使いにくいため、英語対応で本人確認の負担が少ない Trip.com の利用をおすすめします。',
+        note: '外国人旅行者にはやや使いにくいため、英語に対応していて本人確認の負担が少ない Trip.com の利用をおすすめします。',
         guide: '/ja/posts/book-china-train-tickets-12306-foreigners/',
       },
       {
@@ -100,7 +100,7 @@ const appGroups = [
         android: null,
         ios: null,
         h5: 'https://maps.google.com/',
-        note: '中国国内でターンバイターンの案内を使うには VPN が必要で、実用性は高くありません。',
+        note: '中国国内でターンバイターンの案内を使うには VPN が必要で、実用性はあまり高くありません。',
         guide: '/ja/posts/do-you-need-a-vpn-in-china-2026/',
       },
     ],
@@ -110,7 +110,7 @@ const appGroups = [
     apps: [
       {
         name: 'Meituan',
-        desc: 'フードデリバリー、レストラン予約、映画チケット、ホテル予約まで対応する総合生活アプリです。中国語のみですが、Alipay のミニプログラム経由なら比較的使いやすくなります。',
+        desc: 'フードデリバリー、レストラン予約、映画チケット、ホテル予約まで対応する総合生活アプリです。中国語のみですが、Alipay のミニプログラム経由であれば比較的使いやすくなります。',
         android: 'https://play.google.com/store/apps/details?id=com.sankuai.meituan',
         ios: 'https://apps.apple.com/app/meituan/id423924287',
         h5: 'https://waimai.meituan.com/',
@@ -123,12 +123,12 @@ const appGroups = [
         android: 'https://play.google.com/store/apps/details?id=me.ele',
         ios: 'https://apps.apple.com/app/ele-me/id532785356',
         h5: 'https://www.ele.me/',
-        note: 'Meituan と Ele.me はどちらも便利です。店舗の掲載状況が違うので、両方試すと選択肢が広がります。',
+        note: 'Meituan と Ele.me はどちらも便利です。掲載されている店舗が異なるため、両方試すと選択肢が広がります。',
         guide: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Dianping',
-        desc: '中国版 Yelp のような口コミアプリです。レストランの評価、レビュー、写真を確認でき、ローカルの人気店探しに役立ちます。中国語のみです。',
+        desc: '中国版 Yelp のような口コミアプリです。レストランの評価、レビュー、写真を確認でき、現地で人気のお店探しに役立ちます。中国語のみです。',
         android: 'https://play.google.com/store/apps/details?id=com.dianping.v1',
         ios: 'https://apps.apple.com/app/dianping/id416896465',
         h5: 'https://www.dianping.com/',
@@ -141,12 +141,12 @@ const appGroups = [
     category: '連絡・VPN',
     apps: [
       {
-        name: 'VPN（出発前に1つ選んでおく）',
+        name: 'VPN（出発前に1つ選んでおきましょう）',
         desc: 'VPN は必ず出発前にインストールしてください。中国では ExpressVPN、NordVPN、Astrill などが候補になります。無料 VPN の多くは利用できません。',
         android: null,
         ios: null,
         h5: null,
-        note: '必須です。到着前にインストールと動作確認を済ませ、現地到着後すぐ使えるようにしておきましょう。',
+        note: '必須です。到着前にインストールと動作確認を済ませ、現地に着いたらすぐ使えるようにしておきましょう。',
         guide: '/ja/posts/do-you-need-a-vpn-in-china-2026/',
       },
       {
@@ -165,7 +165,7 @@ const appGroups = [
     apps: [
       {
         name: 'Trip.com (Hotels)',
-        desc: '海外発行カードでホテルを予約するなら最も使いやすい選択肢です。掲載数が多く、英語表示にも対応しています。',
+        desc: '海外発行カードでホテルを予約するなら、最も使いやすい選択肢です。掲載数が多く、英語表示にも対応しています。',
         android: null,
         ios: null,
         h5: 'https://www.trip.com/hotels/',
@@ -198,7 +198,7 @@ const appGroups = [
     <CoverImage name="topic-internet-apps" alt="中国旅行で役立つ必須アプリのアイコンが表示されたスマートフォン" loading="eager" />
 
     <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-900">
-      <strong>出発前の準備：</strong>これらのアプリは、出発前に WiFi 環境で入れておくのがおすすめです。中国国内ではアプリストアの表示やダウンロードが遅かったり、利用しづらかったりすることがあります。翻訳のオフラインパックや VPN アプリも自宅で事前に準備しておきましょう。
+      <strong>出発前の準備：</strong>これらのアプリは、出発前に WiFi 環境で入れておくことをおすすめします。中国国内ではアプリストアの表示やダウンロードが遅かったり、使いにくかったりする場合があります。翻訳のオフラインパックや VPN アプリも、自宅で事前に準備しておきましょう。
     </div>
 
     <AdSlot format="banner" />
@@ -216,13 +216,13 @@ const appGroups = [
                 {app.ios && (
                   <a href={app.ios} target="_blank" rel="noopener" class="inline-flex items-center gap-1 rounded-md bg-gray-900 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-gray-700">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-                    App Store
+                    App Storeを開く
                   </a>
                 )}
                 {app.android && (
                   <a href={app.android} target="_blank" rel="noopener" class="inline-flex items-center gap-1 rounded-md bg-green-700 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-green-600">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.33 8.7c-.55-.96-1.1-1.91-1.66-2.86l.32-.32c.18-.18.36-.36.54-.54.77-.77.77-1.53 0-2.3-.74-.74-1.52-.74-2.26 0-.36.36-.72.72-1.08 1.08l-.1.1A7.83 7.83 0 0 0 12 3.5c-1.1 0-2.15.2-3.12.61l-.1-.1c-.36-.36-.72-.72-1.08-1.08-.74-.74-1.52-.74-2.26 0-.77.77-.77 1.53 0 2.3.18.18.36.36.54.54l.32.32C5.2 6.8 4.64 7.75 4.08 8.7c-.55.95-1.09 1.9-1.64 2.86h15.53c-.55-.96-1.1-1.91-1.64-2.86M7.75 5.75c-.4 0-.72-.33-.72-.72s.32-.72.72-.72c.4 0 .72.33.72.72s-.32.72-.72.72m8.2 0c-.4 0-.72-.33-.72-.72s.32-.72.72-.72c.4 0 .72.33.72.72s-.32.72-.72.72M6.3 13.36v4.58c0 .66.53 1.2 1.2 1.2h.7c.66 0 1.2-.54 1.2-1.2v-4.58c0-.66-.54-1.2-1.2-1.2h-.7c-.67 0-1.2.54-1.2 1.2m8.72 0v4.58c0 .66.53 1.2 1.2 1.2h.7c.66 0 1.2-.54 1.2-1.2v-4.58c0-.66-.54-1.2-1.2-1.2h-.7c-.67 0-1.2.54-1.2 1.2"/></svg>
-                    Google Play
+                    Google Playを開く
                   </a>
                 )}
                 {app.h5 && (
@@ -251,15 +251,15 @@ const appGroups = [
         中国の多くのサービスには、<strong>ブラウザで使える Web 版（H5）</strong>があります。スマートフォンのブラウザや WeChat / Alipay のミニプログラム内で直接使えるため、10個以上のアプリを端末に入れたくない短期旅行者には特に便利です。代表的なものは次のとおりです。
       </p>
       <div class="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">m.didiglobal.com（英語対応あり）</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Baidu Maps</strong> — <span class="text-gray-600">map.baidu.com（中国語のみ）</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">WeChat Web</strong> — <span class="text-gray-600">web.wechat.com（メッセージ機能のみ）</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Meituan</strong> — <span class="text-gray-600">waimai.meituan.com（フードデリバリー）</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Dianping</strong> — <span class="text-gray-600">dianping.com（レストラン検索）</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay Mini-Programs</strong> — <span class="text-gray-600">Alipay 内で完結します（追加インストール不要）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">m.didiglobal.com（英語表示に対応しています）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Baidu Maps</strong> — <span class="text-gray-600">map.baidu.com（中国語のみです）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">WeChat Web</strong> — <span class="text-gray-600">web.wechat.com（メッセージ機能のみ使えます）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Meituan</strong> — <span class="text-gray-600">waimai.meituan.com（フードデリバリーに対応しています）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Dianping</strong> — <span class="text-gray-600">dianping.com（レストランを探せます）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay Mini-Programs</strong> — <span class="text-gray-600">Alipay 内で完結します（追加インストールは不要です）</span></div>
       </div>
       <p class="mt-4 text-xs text-gray-500">
-        <strong>多くの場合、Web 版は VPN なしでも利用できます。</strong>アプリ本体のダウンロードは、出発前に自宅の WiFi で済ませておくのが安心です。
+        <strong>多くの場合、Web 版は VPN なしでも利用できます。</strong>アプリ本体のダウンロードは、出発前に自宅の WiFi で済ませておくと安心です。
       </p>
     </section>
 
