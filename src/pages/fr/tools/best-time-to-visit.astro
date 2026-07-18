@@ -1,3 +1,197 @@
-Le fichier complet a été réécrit en français dans [fr_fixes/tools__best-time-to-visit.astro](C:/Users/Administrator/WorkBuddy/2026-07-17-18-58-48/ChinaTripBox/fr_fixes/tools__best-time-to-visit.astro).
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import AffiliateCta from '../../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../../config';
 
-J’ai traduit `title`, `description`, tous les textes HTML, les libellés, le CTA, la note d’avertissement, les mois affichés, les intitulés du rendu JS et toutes les chaînes de données par ville/mois, en conservant le code, les imports, les URL, `ChinaTripBox` et `AFFILIATE_LINKS`. Contrôle rapide fait: il ne reste plus de texte d’interface en anglais dans ce fichier.
+const title = 'Meilleure p茅riode pour visiter la Chine 鈥?Planificateur ville et mois';
+const description =
+  'Consultez la m茅t茅o, l鈥檃ffluence et les conseils de bagages pour les grandes villes chinoises selon le mois. Planifiez la meilleure p茅riode pour visiter P茅kin, Shanghai, Xi鈥檃n, Chengdu, Guangzhou et Harbin.';
+
+const cities = ['P茅kin', 'Shanghai', 'Xi鈥檃n', 'Chengdu', 'Guangzhou', 'Harbin'];
+const months = ['Janv.', 'F茅vr.', 'Mars', 'Avr.', 'Mai', 'Juin', 'Juil.', 'Ao没t', 'Sept.', 'Oct.', 'Nov.', 'D茅c.'];
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
+  <Header locale="fr" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Outil</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Meilleure p茅riode pour visiter la Chine</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">Ville</span>
+        <select id="city" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {cities.map((c) => <option value={c}>{c}</option>)}
+        </select>
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">Mois du voyage</span>
+        <select id="month" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {months.map((m, i) => <option value={i}>{m}</option>)}
+        </select>
+      </label>
+    </div>
+
+    <div id="result" class="mt-6">
+      <div class="card" id="result-card"></div>
+    </div>
+
+    <!-- Note sur les p茅riodes de forte affluence -->
+    <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
+      <strong>脡vitez la foule :</strong> les grandes f锚tes publiques chinoises, en particulier le
+      Nouvel An chinois (fin janvier/f茅vrier), la f锚te du Travail (d茅but mai) et la F锚te nationale /
+      Semaine d鈥檕r (premi猫re semaine d鈥檕ctobre), provoquent une tr猫s forte affluence int茅rieure. Les
+      trains et les h么tels se remplissent, et les prix montent. R茅servez tr猫s t么t ou 茅vitez ces dates.
+    </div>
+
+    <AffiliateCta
+      title="R茅servez trains et h么tels t么t"
+      description="Les itin茅raires populaires se remplissent vite en haute saison. Bloquez vos billets de train 脿 grande vitesse et vos h茅bergements 脿 l鈥檃vance."
+      buttonText="Voir les options de r茅servation"
+      placeholder={AFFILIATE_LINKS.transport}
+    />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  interface MonthInfo {
+    temp: string;
+    rating: 'great' | 'good' | 'ok' | 'tough';
+    weather: string;
+    pack: string;
+  }
+
+  // Conseils par ville et par mois (indice 0 = janvier).
+  const data: Record<string, MonthInfo[]> = {
+    P茅kin: [
+      { temp: '-8 脿 2掳C', rating: 'tough', weather: 'Froid, sec, ciel d茅gag茅. Peu de touristes.', pack: 'Manteau 茅pais, bonnet, gants.' },
+      { temp: '-5 脿 5掳C', rating: 'tough', weather: 'Froid ; affluence possible pendant le Nouvel An chinois.', pack: 'Couches chaudes d鈥檋iver.' },
+      { temp: '2 脿 12掳C', rating: 'ok', weather: 'Frais, venteux, poussi猫res occasionnelles.', pack: 'Veste, coupe-vent.' },
+      { temp: '9 脿 20掳C', rating: 'great', weather: 'Printemps doux, floraison. Id茅al.', pack: 'Couches, veste l茅g猫re.' },
+      { temp: '15 脿 26掳C', rating: 'great', weather: 'Doux et agr茅able. Forte affluence autour du 1er mai.', pack: 'Couches l茅g猫res.' },
+      { temp: '20 脿 31掳C', rating: 'good', weather: 'Chauds, d茅but des pluies.', pack: 'V锚tements d鈥櫭﹖茅, parapluie.' },
+      { temp: '22 脿 31掳C', rating: 'ok', weather: 'Chaud et humide, pluies au plus fort.', pack: 'V锚tements l茅gers, protection contre la pluie.' },
+      { temp: '21 脿 30掳C', rating: 'ok', weather: 'Chaud, humide, affluence estivale.', pack: 'V锚tements l茅gers, protection solaire.' },
+      { temp: '15 脿 26掳C', rating: 'great', weather: 'Net, clair, confortable. Meilleur mois.', pack: 'Couches, veste l茅g猫re.' },
+      { temp: '8 脿 19掳C', rating: 'good', weather: 'Tr猫s belle p茅riode automnale. Affluence de la Semaine d鈥檕r du 1er au 7 octobre.', pack: 'Veste, couches.' },
+      { temp: '0 脿 10掳C', rating: 'ok', weather: 'Froid, sec, calme.', pack: 'Manteau chaud.' },
+      { temp: '-6 脿 3掳C', rating: 'tough', weather: 'Froid et sec.', pack: '脡quipement d鈥檋iver 茅pais.' },
+    ],
+    Shanghai: [
+      { temp: '1 脿 8掳C', rating: 'ok', weather: 'Froid, humide, gris.', pack: 'Manteau chaud imperm茅able.' },
+      { temp: '3 脿 10掳C', rating: 'ok', weather: 'Frais ; p茅riode du Nouvel An chinois.', pack: 'Couches, parapluie.' },
+      { temp: '7 脿 14掳C', rating: 'good', weather: 'Printemps doux, quelques pluies.', pack: 'Veste, parapluie.' },
+      { temp: '12 脿 20掳C', rating: 'great', weather: 'Printemps agr茅able. Id茅al.', pack: 'Couches l茅g猫res.' },
+      { temp: '17 脿 25掳C', rating: 'great', weather: 'Doux, tr猫s agr茅able. Affluence d茅but mai.', pack: 'V锚tements l茅gers.' },
+      { temp: '21 脿 28掳C', rating: 'ok', weather: 'Saison des pluies de prunes, humide.', pack: 'Protection contre la pluie, v锚tements l茅gers.' },
+      { temp: '25 脿 33掳C', rating: 'tough', weather: 'Chaud, humide, risque de typhon.', pack: 'V锚tements l茅gers, 茅quipement pluie/soleil.' },
+      { temp: '25 脿 33掳C', rating: 'tough', weather: 'Tr猫s chaud et humide.', pack: 'V锚tements l茅gers, hydratation.' },
+      { temp: '21 脿 28掳C', rating: 'great', weather: 'Chaud puis plus confortable. Tr猫s bien.', pack: 'Couches l茅g猫res.' },
+      { temp: '15 脿 23掳C', rating: 'great', weather: 'Doux, clair. Affluence de la Semaine d鈥檕r d茅but octobre.', pack: 'Couches, veste l茅g猫re.' },
+      { temp: '9 脿 17掳C', rating: 'good', weather: 'Frais, confortable.', pack: 'Veste.' },
+      { temp: '3 脿 10掳C', rating: 'ok', weather: 'Froid et humide.', pack: 'Manteau chaud.' },
+    ],
+    'Xi鈥檃n': [
+      { temp: '-4 脿 5掳C', rating: 'tough', weather: 'Froid, sec.', pack: 'Manteau 茅pais.' },
+      { temp: '-1 脿 8掳C', rating: 'ok', weather: 'Froid ; p茅riode du Nouvel An chinois.', pack: 'Couches d鈥檋iver.' },
+      { temp: '4 脿 14掳C', rating: 'good', weather: 'Printemps frais.', pack: 'Veste.' },
+      { temp: '10 脿 20掳C', rating: 'great', weather: 'Agr茅able. Tr猫s bien pour les visites.', pack: 'Couches l茅g猫res.' },
+      { temp: '15 脿 26掳C', rating: 'great', weather: 'Doux et confortable.', pack: 'V锚tements l茅gers.' },
+      { temp: '20 脿 32掳C', rating: 'good', weather: 'Chauds, secs.', pack: 'V锚tements d鈥櫭﹖茅, chapeau de soleil.' },
+      { temp: '23 脿 33掳C', rating: 'ok', weather: 'Chaud, quelques pluies.', pack: 'V锚tements l茅gers, parapluie.' },
+      { temp: '22 脿 31掳C', rating: 'ok', weather: 'Chaud, humide.', pack: 'V锚tements l茅gers.' },
+      { temp: '16 脿 26掳C', rating: 'great', weather: 'Doux, clair. Id茅al.', pack: 'Couches.' },
+      { temp: '9 脿 19掳C', rating: 'good', weather: 'Automne frais. Affluence de la Semaine d鈥檕r.', pack: 'Veste.' },
+      { temp: '2 脿 11掳C', rating: 'ok', weather: 'Froid, sec.', pack: 'Manteau chaud.' },
+      { temp: '-3 脿 5掳C', rating: 'tough', weather: 'Froid.', pack: '脡quipement d鈥檋iver 茅pais.' },
+    ],
+    Chengdu: [
+      { temp: '3 脿 9掳C', rating: 'ok', weather: 'Frais, humide, couvert.', pack: 'Couches chaudes, parapluie.' },
+      { temp: '5 脿 11掳C', rating: 'ok', weather: 'Doux, gris ; p茅riode du Nouvel An chinois.', pack: 'Couches.' },
+      { temp: '9 脿 16掳C', rating: 'good', weather: 'Printemps doux.', pack: 'Veste, parapluie.' },
+      { temp: '13 脿 22掳C', rating: 'great', weather: 'Agr茅able. Id茅al pour voir les pandas.', pack: 'Couches l茅g猫res.' },
+      { temp: '17 脿 26掳C', rating: 'great', weather: 'Doux, confortable.', pack: 'V锚tements l茅gers.' },
+      { temp: '20 脿 28掳C', rating: 'good', weather: 'Chaud, pluvieux.', pack: 'Protection contre la pluie.' },
+      { temp: '22 脿 30掳C', rating: 'ok', weather: 'Chaud, humide, mois le plus pluvieux.', pack: 'V锚tements l茅gers, parapluie.' },
+      { temp: '22 脿 30掳C', rating: 'ok', weather: 'Chaud, humide.', pack: 'V锚tements l茅gers.' },
+      { temp: '19 脿 26掳C', rating: 'great', weather: 'Chaud, plus supportable. Bien.', pack: 'Couches l茅g猫res.' },
+      { temp: '15 脿 21掳C', rating: 'great', weather: 'Automne doux. Affluence de la Semaine d鈥檕r.', pack: 'Veste.' },
+      { temp: '9 脿 16掳C', rating: 'good', weather: 'Frais, confortable.', pack: 'Veste.' },
+      { temp: '4 脿 10掳C', rating: 'ok', weather: 'Frais, humide.', pack: 'Couches chaudes.' },
+    ],
+    Guangzhou: [
+      { temp: '10 脿 18掳C', rating: 'great', weather: 'Doux, sec. Tr猫s agr茅able.', pack: 'Couches l茅g猫res.' },
+      { temp: '12 脿 19掳C', rating: 'great', weather: 'Doux ; p茅riode du Nouvel An chinois.', pack: 'Couches l茅g猫res.' },
+      { temp: '15 脿 22掳C', rating: 'good', weather: 'Se r茅chauffe, plus humide.', pack: 'V锚tements l茅gers.' },
+      { temp: '19 脿 26掳C', rating: 'good', weather: 'Chaud, d茅but des pluies.', pack: 'V锚tements l茅gers, parapluie.' },
+      { temp: '23 脿 30掳C', rating: 'ok', weather: 'Chaud, humide, pluvieux.', pack: 'V锚tements l茅gers, protection pluie.' },
+      { temp: '25 脿 32掳C', rating: 'tough', weather: 'Chaud, tr猫s humide, risque de typhon.', pack: 'Protection pluie, v锚tements l茅gers.' },
+      { temp: '26 脿 34掳C', rating: 'tough', weather: 'Chaud, humide, orageux.', pack: 'V锚tements l茅gers, hydratation.' },
+      { temp: '26 脿 34掳C', rating: 'tough', weather: 'Tr猫s chaud, saison des typhons.', pack: 'V锚tements l茅gers, 茅quipement soleil/pluie.' },
+      { temp: '24 脿 32掳C', rating: 'ok', weather: 'Chaud, plus supportable.', pack: 'V锚tements l茅gers.' },
+      { temp: '21 脿 29掳C', rating: 'great', weather: 'Chaud, plus sec. Tr猫s bien. Affluence de la Semaine d鈥檕r.', pack: 'V锚tements l茅gers.' },
+      { temp: '16 脿 24掳C', rating: 'great', weather: 'Chaud, confortable, sec.', pack: 'Couches l茅g猫res.' },
+      { temp: '11 脿 19掳C', rating: 'great', weather: 'Doux et sec.', pack: 'Couches l茅g猫res.' },
+    ],
+    Harbin: [
+      { temp: '-24 脿 -12掳C', rating: 'good', weather: 'Froid glacial 鈥?Festival de la glace et de la neige ! Magique si vous 锚tes bien 茅quip茅.', pack: '脡quipement grand froid.' },
+      { temp: '-20 脿 -6掳C', rating: 'good', weather: 'Tr猫s froid ; le festival de glace continue.', pack: '脡quipement d鈥檋iver extr锚me.' },
+      { temp: '-9 脿 4掳C', rating: 'ok', weather: 'Froid, fonte progressive.', pack: 'Manteau 茅pais.' },
+      { temp: '2 脿 14掳C', rating: 'good', weather: 'Printemps frais.', pack: 'Veste, couches.' },
+      { temp: '10 脿 22掳C', rating: 'great', weather: 'Doux et agr茅able.', pack: 'Couches l茅g猫res.' },
+      { temp: '16 脿 27掳C', rating: 'great', weather: '脡t茅 chaud et confortable.', pack: 'V锚tements l茅gers.' },
+      { temp: '19 脿 29掳C', rating: 'great', weather: 'Chaud, agr茅able, parfait pour fuir la chaleur du sud.', pack: 'V锚tements l茅gers.' },
+      { temp: '18 脿 27掳C', rating: 'great', weather: 'Chaud, confortable.', pack: 'Couches l茅g猫res.' },
+      { temp: '11 脿 21掳C', rating: 'good', weather: 'Automne frais.', pack: 'Veste.' },
+      { temp: '2 脿 13掳C', rating: 'ok', weather: 'Froid, automne color茅.', pack: 'Manteau chaud.' },
+      { temp: '-11 脿 0掳C', rating: 'ok', weather: 'Froid, premi猫res neiges.', pack: '脡quipement d鈥檋iver 茅pais.' },
+      { temp: '-20 脿 -9掳C', rating: 'good', weather: 'Tr猫s froid ; le festival de glace commence fin d茅cembre.', pack: '脡quipement grand froid.' },
+    ],
+  };
+
+  const ratingStyle = {
+    great: { cls: 'border-green-200 bg-green-50', badge: 'bg-green-600', label: 'Tr猫s bonne p茅riode' },
+    good: { cls: 'border-teal-200 bg-teal-50', badge: 'bg-teal-600', label: 'Bonne p茅riode' },
+    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: 'Possible, avec compromis' },
+    tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: 'Conditions difficiles' },
+  } as const;
+
+  const monthNames = ['janvier', 'f茅vrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'ao没t', 'septembre', 'octobre', 'novembre', 'd茅cembre'];
+
+  const cityEl = document.getElementById('city') as HTMLSelectElement;
+  const monthEl = document.getElementById('month') as HTMLSelectElement;
+  const card = document.getElementById('result-card');
+
+  function render() {
+    if (!card) return;
+    const city = cityEl.value;
+    const m = Number(monthEl.value);
+    const info = data[city][m];
+    const style = ratingStyle[info.rating];
+
+    card.className = `card border ${style.cls}`;
+    card.innerHTML = `
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="text-xl font-bold text-gray-900">${city} en ${monthNames[m]}</h2>
+        <span class="whitespace-nowrap rounded-full px-3 py-0.5 text-xs font-semibold text-white ${style.badge}">${style.label}</span>
+      </div>
+      <dl class="mt-4 space-y-3 text-sm">
+        <div><dt class="text-gray-500">Temp茅rature habituelle</dt><dd class="text-lg font-semibold text-gray-900">${info.temp}</dd></div>
+        <div><dt class="text-gray-500">M茅t茅o et affluence</dt><dd class="text-gray-700">${info.weather}</dd></div>
+        <div><dt class="text-gray-500">脌 emporter</dt><dd class="text-gray-700">${info.pack}</dd></div>
+      </dl>`;
+  }
+
+  cityEl.addEventListener('change', render);
+  monthEl.addEventListener('change', render);
+  render();
+</script>
