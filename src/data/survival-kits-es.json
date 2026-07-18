@@ -1,0 +1,86 @@
+[
+  {
+    "theme_id": "arrival_setup",
+    "slug": "arrival",
+    "title": "Kit de supervivencia para la llegada",
+    "description": "Tarjetas y lista de verificación para el primer día: llegada al aeropuerto, registro en el hotel, prueba de pago y transporte.",
+    "related_paths": [
+      "/posts/first-24-hours-in-china-arrival-checklist/",
+      "/posts/airport-to-city-transport-beijing-shanghai-guangzhou/",
+      "/tools/show-to-driver/"
+    ],
+    "tools": [
+      {
+        "name": "Ayuda con la dirección del hotel",
+        "text_cn": "请帮我去这家酒店。这个是酒店地址。",
+        "text_en": "Please help me get to this hotel. This is the hotel address.",
+        "category": "hotel"
+      },
+      {
+        "name": "No hablo chino",
+        "text_cn": "我不会说中文，请用翻译软件和我沟通。",
+        "text_en": "I do not speak Chinese. Please use a translation app to communicate with me.",
+        "category": "communication"
+      },
+      {
+        "name": "Parada segura para taxi",
+        "text_cn": "请在安全合法的地方停车，谢谢。",
+        "text_en": "Please stop somewhere safe and legal. Thank you.",
+        "category": "transport"
+      }
+    ],
+    "checklist_steps": [
+      "Activa la eSIM o el roaming antes de salir del aeropuerto",
+      "Haz un pequeño pago de prueba con Alipay o WeChat Pay",
+      "Guarda el nombre y la dirección de tu hotel en chino",
+      "Elige metro, taxi oficial, servicio de transporte por app o traslado",
+      "Carga tu teléfono y tu batería externa antes de dormir"
+    ],
+    "ai_prompt": "Help me with my first 24 hours after arriving in China."
+  },
+  {
+    "theme_id": "food_exploration",
+    "slug": "food",
+    "title": "Kit de supervivencia para comida y restaurantes",
+    "description": "Pedidos en restaurantes, tarjetas de alergias, nivel de picante, frases de pago y preparación para entrega de comida.",
+    "related_paths": [
+      "/food/",
+      "/posts/ordering-food-in-china-without-chinese-meituan-ele-me/",
+      "/posts/chengdu-street-food-safety-spice-levels-what-to-order/"
+    ],
+    "tools": [
+      {
+        "name": "Tarjeta sin cilantro",
+        "text_cn": "我不吃香菜，谢谢。",
+        "text_en": "No cilantro, please.",
+        "category": "food_preference"
+      },
+      {
+        "name": "Alergia al maní",
+        "text_cn": "我对花生过敏，请不要放花生或花生酱。",
+        "text_en": "I am allergic to peanuts. Please do not add peanuts or peanut sauce.",
+        "category": "allergy"
+      },
+      {
+        "name": "Menos picante",
+        "text_cn": "请做微辣，少放辣椒。",
+        "text_en": "Please make it mildly spicy and use less chili.",
+        "category": "spice"
+      },
+      {
+        "name": "Necesito la cuenta",
+        "text_cn": "您好，请帮我结账。",
+        "text_en": "Hello, could I have the bill please?",
+        "category": "payment"
+      }
+    ],
+    "checklist_steps": [
+      "Prepara tarjetas de alergias o restricciones alimentarias",
+      "Configura Alipay o WeChat Pay antes de pedir",
+      "Guarda una aplicación de traducción para menús",
+      "Aprende a pedir comida con poco picante",
+      "Ten lista la dirección de tu hotel para la entrega de comida"
+    ],
+    "ai_prompt": "Help me order food in China and explain dietary restrictions."
+  }
+]
