@@ -11,17 +11,17 @@ const posts = await getCollection('posts-ja');
 const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const categoryLabels: Record<string, string> = {
-  payment: '決済',
+  payment: '支払い',
   esim: 'eSIM・通信',
-  transport: '交通',
+  transport: '移動',
   essentials: '旅行準備',
-  food: 'グルメ',
+  food: '食事',
 };
 ---
 
 <BaseLayout
-  title="ChinaTripBox 日本語ガイド | 中国旅行の決済・通信・交通"
-  description="中国を訪れる日本人旅行者向けの実用ガイド：Alipay、WeChat Pay、eSIM、高速鉄道、DiDi、ビザから到着後の準備まで。"
+  title="ChinaTripBox 日本語ガイド | 中国旅行の支払い・通信・移動をわかりやすくご案内します"
+  description="中国を訪れる日本人旅行者の方向けに、Alipay、WeChat Pay、eSIM、高速鉄道、DiDi、ビザ、到着後の準備まで、実用的な情報をわかりやすくご案内します。"
   locale="ja"
   alternates={{ en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' }}
 >
@@ -30,23 +30,23 @@ const categoryLabels: Record<string, string> = {
     <section class="border-b border-gray-200 bg-gray-50">
       <div class="container-page grid gap-8 py-12 lg:grid-cols-[1fr_360px] lg:items-center">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-wide text-brand-700">ChinaTripBox 日本語</p>
+          <p class="text-sm font-semibold uppercase tracking-wide text-brand-700">ChinaTripBox 日本語版</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            中国旅行前に決済・通信・交通・入国準備を整える
+            中国旅行の前に、支払い・通信・移動・入国準備をしっかり整えましょう
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            日本人旅行者向けの中国旅行実用ガイド。Alipay、WeChat Pay、eSIM、高速鉄道、DiDiなど、つまずきやすいポイントを事前に解決しましょう。
+            日本人旅行者の方向けに、中国旅行で本当に役立つ実用情報をご案内します。Alipay、WeChat Pay、eSIM、高速鉄道、DiDiなど、つまずきやすいポイントを出発前にまとめて解決しておきましょう。
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="/ja/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">決済ガイドを見る</a>
-            <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">出発前チェックリスト</a>
+            <a href="/ja/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">支払いガイドを見る</a>
+            <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">出発前チェックリストを見る</a>
           </div>
         </div>
 
         <aside class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <Image
             src={heroImage}
-            alt="上海の都市スカイライン、中国旅行計画のイメージ"
+            alt="中国旅行の計画をイメージした、上海の街並みの写真です"
             widths={[360, 720]}
             sizes="(max-width: 1024px) 100vw, 360px"
             quality={65}
@@ -54,10 +54,10 @@ const categoryLabels: Record<string, string> = {
             class="h-52 w-full object-cover"
           />
           <div class="p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">おすすめの読む順番</p>
-            <h2 class="mt-2 text-lg font-bold text-gray-950">到着初日に必要なことから始める</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">おすすめの読み方</p>
+            <h2 class="mt-2 text-lg font-bold text-gray-950">まずは到着初日に必要な準備から確認しましょう</h2>
             <p class="mt-2 text-sm leading-6 text-gray-600">
-              決済、通信、タクシー、鉄道チケットの4つが、事前準備の価値が最も高い項目です。
+              支払い、通信、タクシー、鉄道チケットの4つは、事前に準備しておく価値が特に高い項目です。
             </p>
           </div>
         </aside>
@@ -70,10 +70,10 @@ const categoryLabels: Record<string, string> = {
       <section class="py-8">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">最新日本語ガイド</p>
-            <h2>中国旅行の実用記事</h2>
+            <p class="section-kicker">最新の日本語ガイド</p>
+            <h2>中国旅行に役立つ実用記事をまとめています</h2>
           </div>
-          <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">英語版へ</a>
+          <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">英語版を見る</a>
         </div>
 
         <div class="mt-6 divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white">
