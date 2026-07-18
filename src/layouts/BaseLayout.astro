@@ -35,7 +35,7 @@ const isAllowedZhTw = allowedZhTwPaths.includes(path);
 const lowValuePaths = ['/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
 const isLowValue = lowValuePaths.some((prefix) => path.startsWith(prefix));
 const is404 = path === '/404/' || path === '/404';
-const noindex = explicitNoindex || isNonEnglish || (isZhTw && !isAllowedZhTw) || isLowValue || is404;
+const noindex = explicitNoindex || (isZhTw && !isAllowedZhTw) || isLowValue || is404;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
