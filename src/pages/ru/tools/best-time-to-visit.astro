@@ -6,20 +6,20 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Best Time to Visit China — City & Month Planner';
+const title = 'Когда лучше ехать в Китай — планировщик по городам и месяцам';
 const description =
-  'See the weather, crowds, and what to pack for major Chinese cities by month. Plan the best time to visit Beijing, Shanghai, Xi\'an, Chengdu, Guangzhou, and Harbin.';
+  'Узнайте о погоде, количестве туристов и том, что взять с собой, в крупнейших городах Китая по месяцам. Выберите лучшее время для поездки в Пекин, Шанхай, Сиань, Чэнду, Гуанчжоу и Харбин.';
 
-const cities = ['Beijing', 'Shanghai', "Xi'an", 'Chengdu', 'Guangzhou', 'Harbin'];
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const cities = ['Пекин', 'Шанхай', 'Сиань', 'Чэнду', 'Гуанчжоу', 'Харбин'];
+const months = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
   <Header locale="ru" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Best Time to Visit China</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Инструмент</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Когда лучше ехать в Китай</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -27,13 +27,13 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
     <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">City</span>
+        <span class="mb-1 font-medium text-gray-700">Город</span>
         <select id="city" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {cities.map((c) => <option value={c}>{c}</option>)}
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Month of travel</span>
+        <span class="mb-1 font-medium text-gray-700">Месяц поездки</span>
         <select id="month" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {months.map((m, i) => <option value={i}>{m}</option>)}
         </select>
@@ -44,18 +44,19 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
       <div class="card" id="result-card"></div>
     </div>
 
-    <!-- Travel-season warning note -->
+    <!-- Примечание о высоком туристическом сезоне -->
     <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
-      <strong>Avoid the crowds:</strong> Chinese public holidays — especially Chinese New Year
-      (late Jan/Feb), Labour Day (early May), and National Day / Golden Week (first week of October)
-      — bring huge domestic travel. Trains and hotels sell out and prices spike. Book far ahead or
-      plan around these dates.
+      <strong>Избегайте толп:</strong> во время китайских государственных праздников, особенно Китайского
+      Нового года (конец января/февраль), Дня труда (начало мая) и Национального дня / Золотой недели
+      (первая неделя октября), по стране путешествует огромное количество людей. Билеты на поезда и
+      номера в отелях быстро заканчиваются, а цены резко растут. Бронируйте заранее или планируйте
+      поездку в другие даты.
     </div>
 
     <AffiliateCta
-      title="Book Trains & Hotels Early"
-      description="Popular routes sell out fast in peak season. Lock in your high-speed rail and stays ahead of time."
-      buttonText="See Booking Options"
+      title="Бронируйте поезда и отели заранее"
+      description="В высокий сезон популярные маршруты быстро распродаются. Заранее забронируйте скоростные поезда и проживание."
+      buttonText="Посмотреть варианты бронирования"
       placeholder={AFFILIATE_LINKS.transport}
     />
   </main>
@@ -70,102 +71,102 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
     pack: string;
   }
 
-  // Per-city, per-month guidance (index 0 = January).
+  // Рекомендации по каждому городу и месяцу (индекс 0 = январь).
   const data: Record<string, MonthInfo[]> = {
-    Beijing: [
-      { temp: '-8 to 2°C', rating: 'tough', weather: 'Cold, dry, clear. Few tourists.', pack: 'Heavy coat, hat, gloves.' },
-      { temp: '-5 to 5°C', rating: 'tough', weather: 'Cold; CNY crowds possible.', pack: 'Warm winter layers.' },
-      { temp: '2 to 12°C', rating: 'ok', weather: 'Cool, windy, occasional dust.', pack: 'Jacket, windbreaker.' },
-      { temp: '9 to 20°C', rating: 'great', weather: 'Mild spring, blossoms. Ideal.', pack: 'Layers, light jacket.' },
-      { temp: '15 to 26°C', rating: 'great', weather: 'Warm and pleasant. Labour Day crowds early May.', pack: 'Light layers.' },
-      { temp: '20 to 31°C', rating: 'good', weather: 'Hot, start of rains.', pack: 'Summer clothes, umbrella.' },
-      { temp: '22 to 31°C', rating: 'ok', weather: 'Hot and humid, peak rainfall.', pack: 'Light clothes, rain gear.' },
-      { temp: '21 to 30°C', rating: 'ok', weather: 'Hot, humid, summer crowds.', pack: 'Light clothes, sun protection.' },
-      { temp: '15 to 26°C', rating: 'great', weather: 'Crisp, clear, comfortable. Best month.', pack: 'Layers, light jacket.' },
-      { temp: '8 to 19°C', rating: 'good', weather: 'Beautiful autumn. Golden Week crowds Oct 1–7.', pack: 'Jacket, layers.' },
-      { temp: '0 to 10°C', rating: 'ok', weather: 'Cold, dry, quiet.', pack: 'Warm coat.' },
-      { temp: '-6 to 3°C', rating: 'tough', weather: 'Cold and dry.', pack: 'Heavy winter gear.' },
+    Пекин: [
+      { temp: '-8 to 2°C', rating: 'tough', weather: 'Холодно, сухо, ясно. Туристов мало.', pack: 'Тёплое пальто, шапка, перчатки.' },
+      { temp: '-5 to 5°C', rating: 'tough', weather: 'Холодно; возможны толпы на Китайский Новый год.', pack: 'Тёплая зимняя одежда слоями.' },
+      { temp: '2 to 12°C', rating: 'ok', weather: 'Прохладно, ветрено, иногда бывает пыль.', pack: 'Куртка, ветровка.' },
+      { temp: '9 to 20°C', rating: 'great', weather: 'Мягкая весна, цветение. Идеально.', pack: 'Одежда слоями, лёгкая куртка.' },
+      { temp: '15 to 26°C', rating: 'great', weather: 'Тепло и приятно. В начале мая бывают толпы из-за Дня труда.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '20 to 31°C', rating: 'good', weather: 'Жарко, начинается сезон дождей.', pack: 'Летняя одежда, зонт.' },
+      { temp: '22 to 31°C', rating: 'ok', weather: 'Жарко и влажно, пик осадков.', pack: 'Лёгкая одежда, защита от дождя.' },
+      { temp: '21 to 30°C', rating: 'ok', weather: 'Жарко, влажно, много туристов летом.', pack: 'Лёгкая одежда, защита от солнца.' },
+      { temp: '15 to 26°C', rating: 'great', weather: 'Свежо, ясно, комфортно. Лучший месяц.', pack: 'Одежда слоями, лёгкая куртка.' },
+      { temp: '8 to 19°C', rating: 'good', weather: 'Красивая осень. С 1 по 7 октября бывают толпы из-за Золотой недели.', pack: 'Куртка, одежда слоями.' },
+      { temp: '0 to 10°C', rating: 'ok', weather: 'Холодно, сухо, спокойно.', pack: 'Тёплое пальто.' },
+      { temp: '-6 to 3°C', rating: 'tough', weather: 'Холодно и сухо.', pack: 'Очень тёплая зимняя одежда.' },
     ],
-    Shanghai: [
-      { temp: '1 to 8°C', rating: 'ok', weather: 'Cold, damp, grey.', pack: 'Warm waterproof coat.' },
-      { temp: '3 to 10°C', rating: 'ok', weather: 'Chilly; CNY period.', pack: 'Layers, umbrella.' },
-      { temp: '7 to 14°C', rating: 'good', weather: 'Mild spring, some rain.', pack: 'Jacket, umbrella.' },
-      { temp: '12 to 20°C', rating: 'great', weather: 'Pleasant spring. Ideal.', pack: 'Light layers.' },
-      { temp: '17 to 25°C', rating: 'great', weather: 'Warm, lovely. Early-May crowds.', pack: 'Light clothes.' },
-      { temp: '21 to 28°C', rating: 'ok', weather: 'Plum-rain season, humid.', pack: 'Rain gear, light clothes.' },
-      { temp: '25 to 33°C', rating: 'tough', weather: 'Hot, humid, typhoon risk.', pack: 'Light clothes, sun/rain gear.' },
-      { temp: '25 to 33°C', rating: 'tough', weather: 'Very hot and humid.', pack: 'Light clothes, hydration.' },
-      { temp: '21 to 28°C', rating: 'great', weather: 'Warm easing to comfortable. Great.', pack: 'Light layers.' },
-      { temp: '15 to 23°C', rating: 'great', weather: 'Mild, clear. Golden Week crowds early Oct.', pack: 'Layers, light jacket.' },
-      { temp: '9 to 17°C', rating: 'good', weather: 'Cool, comfortable.', pack: 'Jacket.' },
-      { temp: '3 to 10°C', rating: 'ok', weather: 'Cold and damp.', pack: 'Warm coat.' },
+    Шанхай: [
+      { temp: '1 to 8°C', rating: 'ok', weather: 'Холодно, сыро, пасмурно.', pack: 'Тёплое непромокаемое пальто.' },
+      { temp: '3 to 10°C', rating: 'ok', weather: 'Прохладно; период Китайского Нового года.', pack: 'Одежда слоями, зонт.' },
+      { temp: '7 to 14°C', rating: 'good', weather: 'Мягкая весна, местами дожди.', pack: 'Куртка, зонт.' },
+      { temp: '12 to 20°C', rating: 'great', weather: 'Приятная весна. Идеально.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '17 to 25°C', rating: 'great', weather: 'Тепло, очень приятно. В начале мая многолюдно.', pack: 'Лёгкая одежда.' },
+      { temp: '21 to 28°C', rating: 'ok', weather: 'Сезон сливовых дождей, влажно.', pack: 'Защита от дождя, лёгкая одежда.' },
+      { temp: '25 to 33°C', rating: 'tough', weather: 'Жарко, влажно, есть риск тайфунов.', pack: 'Лёгкая одежда, защита от солнца и дождя.' },
+      { temp: '25 to 33°C', rating: 'tough', weather: 'Очень жарко и влажно.', pack: 'Лёгкая одежда, вода с собой.' },
+      { temp: '21 to 28°C', rating: 'great', weather: 'Тепло, затем становится комфортнее. Отличное время.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '15 to 23°C', rating: 'great', weather: 'Мягко, ясно. В начале октября бывают толпы из-за Золотой недели.', pack: 'Одежда слоями, лёгкая куртка.' },
+      { temp: '9 to 17°C', rating: 'good', weather: 'Прохладно, комфортно.', pack: 'Куртка.' },
+      { temp: '3 to 10°C', rating: 'ok', weather: 'Холодно и сыро.', pack: 'Тёплое пальто.' },
     ],
-    "Xi'an": [
-      { temp: '-4 to 5°C', rating: 'tough', weather: 'Cold, dry.', pack: 'Heavy coat.' },
-      { temp: '-1 to 8°C', rating: 'ok', weather: 'Cold; CNY period.', pack: 'Winter layers.' },
-      { temp: '4 to 14°C', rating: 'good', weather: 'Cool spring.', pack: 'Jacket.' },
-      { temp: '10 to 20°C', rating: 'great', weather: 'Pleasant. Great for sightseeing.', pack: 'Light layers.' },
-      { temp: '15 to 26°C', rating: 'great', weather: 'Warm and comfortable.', pack: 'Light clothes.' },
-      { temp: '20 to 32°C', rating: 'good', weather: 'Hot, dry.', pack: 'Summer clothes, sun hat.' },
-      { temp: '23 to 33°C', rating: 'ok', weather: 'Hot, some rain.', pack: 'Light clothes, umbrella.' },
-      { temp: '22 to 31°C', rating: 'ok', weather: 'Hot, humid.', pack: 'Light clothes.' },
-      { temp: '16 to 26°C', rating: 'great', weather: 'Mild, clear. Ideal.', pack: 'Layers.' },
-      { temp: '9 to 19°C', rating: 'good', weather: 'Cool autumn. Golden Week crowds.', pack: 'Jacket.' },
-      { temp: '2 to 11°C', rating: 'ok', weather: 'Cold, dry.', pack: 'Warm coat.' },
-      { temp: '-3 to 5°C', rating: 'tough', weather: 'Cold.', pack: 'Heavy winter gear.' },
+    Сиань: [
+      { temp: '-4 to 5°C', rating: 'tough', weather: 'Холодно, сухо.', pack: 'Тёплое пальто.' },
+      { temp: '-1 to 8°C', rating: 'ok', weather: 'Холодно; период Китайского Нового года.', pack: 'Зимняя одежда слоями.' },
+      { temp: '4 to 14°C', rating: 'good', weather: 'Прохладная весна.', pack: 'Куртка.' },
+      { temp: '10 to 20°C', rating: 'great', weather: 'Приятно. Отлично для осмотра достопримечательностей.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '15 to 26°C', rating: 'great', weather: 'Тепло и комфортно.', pack: 'Лёгкая одежда.' },
+      { temp: '20 to 32°C', rating: 'good', weather: 'Жарко, сухо.', pack: 'Летняя одежда, панама.' },
+      { temp: '23 to 33°C', rating: 'ok', weather: 'Жарко, местами дожди.', pack: 'Лёгкая одежда, зонт.' },
+      { temp: '22 to 31°C', rating: 'ok', weather: 'Жарко, влажно.', pack: 'Лёгкая одежда.' },
+      { temp: '16 to 26°C', rating: 'great', weather: 'Мягко, ясно. Идеально.', pack: 'Одежда слоями.' },
+      { temp: '9 to 19°C', rating: 'good', weather: 'Прохладная осень. Толпы во время Золотой недели.', pack: 'Куртка.' },
+      { temp: '2 to 11°C', rating: 'ok', weather: 'Холодно, сухо.', pack: 'Тёплое пальто.' },
+      { temp: '-3 to 5°C', rating: 'tough', weather: 'Холодно.', pack: 'Очень тёплая зимняя одежда.' },
     ],
-    Chengdu: [
-      { temp: '3 to 9°C', rating: 'ok', weather: 'Cool, damp, overcast.', pack: 'Warm layers, umbrella.' },
-      { temp: '5 to 11°C', rating: 'ok', weather: 'Mild, grey; CNY period.', pack: 'Layers.' },
-      { temp: '9 to 16°C', rating: 'good', weather: 'Mild spring.', pack: 'Jacket, umbrella.' },
-      { temp: '13 to 22°C', rating: 'great', weather: 'Pleasant. Good for pandas.', pack: 'Light layers.' },
-      { temp: '17 to 26°C', rating: 'great', weather: 'Warm, comfortable.', pack: 'Light clothes.' },
-      { temp: '20 to 28°C', rating: 'good', weather: 'Warm, rainy.', pack: 'Rain gear.' },
-      { temp: '22 to 30°C', rating: 'ok', weather: 'Hot, humid, wettest month.', pack: 'Light clothes, umbrella.' },
-      { temp: '22 to 30°C', rating: 'ok', weather: 'Hot, humid.', pack: 'Light clothes.' },
-      { temp: '19 to 26°C', rating: 'great', weather: 'Warm, easing. Good.', pack: 'Light layers.' },
-      { temp: '15 to 21°C', rating: 'great', weather: 'Mild autumn. Golden Week crowds.', pack: 'Jacket.' },
-      { temp: '9 to 16°C', rating: 'good', weather: 'Cool, comfortable.', pack: 'Jacket.' },
-      { temp: '4 to 10°C', rating: 'ok', weather: 'Cool, damp.', pack: 'Warm layers.' },
+    Чэнду: [
+      { temp: '3 to 9°C', rating: 'ok', weather: 'Прохладно, сыро, пасмурно.', pack: 'Тёплая одежда слоями, зонт.' },
+      { temp: '5 to 11°C', rating: 'ok', weather: 'Мягко, пасмурно; период Китайского Нового года.', pack: 'Одежда слоями.' },
+      { temp: '9 to 16°C', rating: 'good', weather: 'Мягкая весна.', pack: 'Куртка, зонт.' },
+      { temp: '13 to 22°C', rating: 'great', weather: 'Приятно. Хорошее время для посещения панд.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '17 to 26°C', rating: 'great', weather: 'Тепло, комфортно.', pack: 'Лёгкая одежда.' },
+      { temp: '20 to 28°C', rating: 'good', weather: 'Тепло, дождливо.', pack: 'Защита от дождя.' },
+      { temp: '22 to 30°C', rating: 'ok', weather: 'Жарко, влажно, самый дождливый месяц.', pack: 'Лёгкая одежда, зонт.' },
+      { temp: '22 to 30°C', rating: 'ok', weather: 'Жарко, влажно.', pack: 'Лёгкая одежда.' },
+      { temp: '19 to 26°C', rating: 'great', weather: 'Тепло, затем становится мягче. Хорошее время.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '15 to 21°C', rating: 'great', weather: 'Мягкая осень. Толпы во время Золотой недели.', pack: 'Куртка.' },
+      { temp: '9 to 16°C', rating: 'good', weather: 'Прохладно, комфортно.', pack: 'Куртка.' },
+      { temp: '4 to 10°C', rating: 'ok', weather: 'Прохладно, сыро.', pack: 'Тёплая одежда слоями.' },
     ],
-    Guangzhou: [
-      { temp: '10 to 18°C', rating: 'great', weather: 'Mild, dry. Very pleasant.', pack: 'Light layers.' },
-      { temp: '12 to 19°C', rating: 'great', weather: 'Mild; CNY period.', pack: 'Light layers.' },
-      { temp: '15 to 22°C', rating: 'good', weather: 'Warming, humid.', pack: 'Light clothes.' },
-      { temp: '19 to 26°C', rating: 'good', weather: 'Warm, rain begins.', pack: 'Light clothes, umbrella.' },
-      { temp: '23 to 30°C', rating: 'ok', weather: 'Hot, humid, wet.', pack: 'Light clothes, rain gear.' },
-      { temp: '25 to 32°C', rating: 'tough', weather: 'Hot, very wet, typhoon risk.', pack: 'Rain gear, light clothes.' },
-      { temp: '26 to 34°C', rating: 'tough', weather: 'Hot, humid, stormy.', pack: 'Light clothes, hydration.' },
-      { temp: '26 to 34°C', rating: 'tough', weather: 'Very hot, typhoon season.', pack: 'Light clothes, sun/rain gear.' },
-      { temp: '24 to 32°C', rating: 'ok', weather: 'Hot, easing.', pack: 'Light clothes.' },
-      { temp: '21 to 29°C', rating: 'great', weather: 'Warm, drier. Great. Golden Week crowds.', pack: 'Light clothes.' },
-      { temp: '16 to 24°C', rating: 'great', weather: 'Warm, comfortable, dry.', pack: 'Light layers.' },
-      { temp: '11 to 19°C', rating: 'great', weather: 'Mild and dry.', pack: 'Light layers.' },
+    Гуанчжоу: [
+      { temp: '10 to 18°C', rating: 'great', weather: 'Мягко, сухо. Очень приятно.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '12 to 19°C', rating: 'great', weather: 'Мягко; период Китайского Нового года.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '15 to 22°C', rating: 'good', weather: 'Становится теплее, влажно.', pack: 'Лёгкая одежда.' },
+      { temp: '19 to 26°C', rating: 'good', weather: 'Тепло, начинаются дожди.', pack: 'Лёгкая одежда, зонт.' },
+      { temp: '23 to 30°C', rating: 'ok', weather: 'Жарко, влажно, сыро.', pack: 'Лёгкая одежда, защита от дождя.' },
+      { temp: '25 to 32°C', rating: 'tough', weather: 'Жарко, очень сыро, есть риск тайфунов.', pack: 'Защита от дождя, лёгкая одежда.' },
+      { temp: '26 to 34°C', rating: 'tough', weather: 'Жарко, влажно, грозы.', pack: 'Лёгкая одежда, вода с собой.' },
+      { temp: '26 to 34°C', rating: 'tough', weather: 'Очень жарко, сезон тайфунов.', pack: 'Лёгкая одежда, защита от солнца и дождя.' },
+      { temp: '24 to 32°C', rating: 'ok', weather: 'Жарко, постепенно становится легче.', pack: 'Лёгкая одежда.' },
+      { temp: '21 to 29°C', rating: 'great', weather: 'Тепло, суше. Отличное время. Во время Золотой недели многолюдно.', pack: 'Лёгкая одежда.' },
+      { temp: '16 to 24°C', rating: 'great', weather: 'Тепло, комфортно, сухо.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '11 to 19°C', rating: 'great', weather: 'Мягко и сухо.', pack: 'Лёгкая одежда слоями.' },
     ],
-    Harbin: [
-      { temp: '-24 to -12°C', rating: 'good', weather: 'Bitterly cold — Ice & Snow Festival! Magical if you dress for it.', pack: 'Extreme cold-weather gear.' },
-      { temp: '-20 to -6°C', rating: 'good', weather: 'Very cold; Ice Festival continues.', pack: 'Extreme winter gear.' },
-      { temp: '-9 to 4°C', rating: 'ok', weather: 'Cold, thawing.', pack: 'Heavy coat.' },
-      { temp: '2 to 14°C', rating: 'good', weather: 'Cool spring.', pack: 'Jacket, layers.' },
-      { temp: '10 to 22°C', rating: 'great', weather: 'Mild and pleasant.', pack: 'Light layers.' },
-      { temp: '16 to 27°C', rating: 'great', weather: 'Warm, comfortable summer.', pack: 'Light clothes.' },
-      { temp: '19 to 29°C', rating: 'great', weather: 'Warm, pleasant escape from southern heat.', pack: 'Light clothes.' },
-      { temp: '18 to 27°C', rating: 'great', weather: 'Warm, comfortable.', pack: 'Light layers.' },
-      { temp: '11 to 21°C', rating: 'good', weather: 'Cool autumn.', pack: 'Jacket.' },
-      { temp: '2 to 13°C', rating: 'ok', weather: 'Cold, colourful autumn.', pack: 'Warm coat.' },
-      { temp: '-11 to 0°C', rating: 'ok', weather: 'Cold, first snows.', pack: 'Heavy winter gear.' },
-      { temp: '-20 to -9°C', rating: 'good', weather: 'Very cold; Ice Festival begins late Dec.', pack: 'Extreme cold-weather gear.' },
+    Харбин: [
+      { temp: '-24 to -12°C', rating: 'good', weather: 'Сильный мороз — Фестиваль льда и снега! Волшебно, если вы оденетесь по погоде.', pack: 'Экипировка для экстремального холода.' },
+      { temp: '-20 to -6°C', rating: 'good', weather: 'Очень холодно; Фестиваль льда продолжается.', pack: 'Экипировка для сильных морозов.' },
+      { temp: '-9 to 4°C', rating: 'ok', weather: 'Холодно, начинается оттепель.', pack: 'Тёплое пальто.' },
+      { temp: '2 to 14°C', rating: 'good', weather: 'Прохладная весна.', pack: 'Куртка, одежда слоями.' },
+      { temp: '10 to 22°C', rating: 'great', weather: 'Мягко и приятно.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '16 to 27°C', rating: 'great', weather: 'Тёплое, комфортное лето.', pack: 'Лёгкая одежда.' },
+      { temp: '19 to 29°C', rating: 'great', weather: 'Тепло, приятная передышка от южной жары.', pack: 'Лёгкая одежда.' },
+      { temp: '18 to 27°C', rating: 'great', weather: 'Тепло, комфортно.', pack: 'Лёгкая одежда слоями.' },
+      { temp: '11 to 21°C', rating: 'good', weather: 'Прохладная осень.', pack: 'Куртка.' },
+      { temp: '2 to 13°C', rating: 'ok', weather: 'Холодно, яркая осень.', pack: 'Тёплое пальто.' },
+      { temp: '-11 to 0°C', rating: 'ok', weather: 'Холодно, первый снег.', pack: 'Очень тёплая зимняя одежда.' },
+      { temp: '-20 to -9°C', rating: 'good', weather: 'Очень холодно; Фестиваль льда начинается в конце декабря.', pack: 'Экипировка для экстремального холода.' },
     ],
   };
 
   const ratingStyle = {
-    great: { cls: 'border-green-200 bg-green-50', badge: 'bg-green-600', label: 'Great time to visit' },
-    good: { cls: 'border-teal-200 bg-teal-50', badge: 'bg-teal-600', label: 'Good time to visit' },
-    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: 'Doable, with trade-offs' },
-    tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: 'Challenging conditions' },
+    great: { cls: 'border-green-200 bg-green-50', badge: 'bg-green-600', label: 'Отличное время для поездки' },
+    good: { cls: 'border-teal-200 bg-teal-50', badge: 'bg-teal-600', label: 'Хорошее время для поездки' },
+    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: 'Можно ехать, но есть нюансы' },
+    tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: 'Сложные условия' },
   } as const;
 
-  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const monthNames = ['январе', 'феврале', 'марте', 'апреле', 'мае', 'июне', 'июле', 'августе', 'сентябре', 'октябре', 'ноябре', 'декабре'];
 
   const cityEl = document.getElementById('city') as HTMLSelectElement;
   const monthEl = document.getElementById('month') as HTMLSelectElement;
@@ -181,13 +182,13 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
     card.className = `card border ${style.cls}`;
     card.innerHTML = `
       <div class="flex items-center justify-between gap-3">
-        <h2 class="text-xl font-bold text-gray-900">${city} in ${monthNames[m]}</h2>
+        <h2 class="text-xl font-bold text-gray-900">${city} в ${monthNames[m]}</h2>
         <span class="whitespace-nowrap rounded-full px-3 py-0.5 text-xs font-semibold text-white ${style.badge}">${style.label}</span>
       </div>
       <dl class="mt-4 space-y-3 text-sm">
-        <div><dt class="text-gray-500">Typical temperature</dt><dd class="text-lg font-semibold text-gray-900">${info.temp}</dd></div>
-        <div><dt class="text-gray-500">Weather & crowds</dt><dd class="text-gray-700">${info.weather}</dd></div>
-        <div><dt class="text-gray-500">What to pack</dt><dd class="text-gray-700">${info.pack}</dd></div>
+        <div><dt class="text-gray-500">Типичная температура</dt><dd class="text-lg font-semibold text-gray-900">${info.temp}</dd></div>
+        <div><dt class="text-gray-500">Погода и количество туристов</dt><dd class="text-gray-700">${info.weather}</dd></div>
+        <div><dt class="text-gray-500">Что взять с собой</dt><dd class="text-gray-700">${info.pack}</dd></div>
       </dl>`;
   }
 
