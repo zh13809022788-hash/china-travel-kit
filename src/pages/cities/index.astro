@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { getCategoryLabel } from '../../i18n/categories';
+import { CITY_GUIDES, type CityGuideEntry } from '../../data/cityGuideData';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -9,120 +10,41 @@ import ChinaMap from '../../components/ChinaMap.astro';
 import AdSlot from '../../components/AdSlot.astro';
 
 const allPosts = await getCollection('posts');
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
+
+// Find which city guides have published posts
+const postMap = new Map<string, typeof allPosts[0]>();
+for (const post of allPosts) {
+  for (const guide of CITY_GUIDES) {
+    if (post.slug === guide.slug || post.slug.includes(guide.slug)) {
+      postMap.set(guide.slug, post);
+    }
+  }
+}
+
+// Only show cities that have a published guide post
+const activeGuides = CITY_GUIDES.filter((g) => postMap.has(g.slug));
+const activeSlugs = new Set(activeGuides.map((g) => g.slug));
+
+// Map coordinates with proper href links
+const mapCities = CITY_GUIDES.map((g) => ({
+  name: g.name,
+  x: g.mapX,
+  y: g.mapY,
+  href: postMap.has(g.slug) ? `#${g.name.toLowerCase().replace(/[^a-z]/g, '')}` : '',
+}));
+
+// City cards sorted by name
+const cities = [...activeGuides].sort((a, b) => a.name.localeCompare(b.name));
+
+// All city-related posts (sorted by title)
 const cityPosts = allPosts
-  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
+  .filter((post) => activeSlugs.has(post.slug) || post.data.tags?.some((t: string) =>
+    [...activeSlugs].some((s) => s.includes(t) || t.includes(s))
+  ))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
 const title = 'China City Guides for Foreign Visitors';
-const description =
-  'Plan practical city stops in China with guides for Beijing, Shanghai, Guangzhou, Chengdu, Xi\'an, Hangzhou, Chongqing, and Sanya, plus airport, metro, food, and transport next steps.';
-
-const mapCities = [
-  { name: 'Beijing', x: 470, y: 80, href: '#beijing' },
-  { name: 'Xi\'an', x: 340, y: 155, href: '#xian' },
-  { name: 'Nanjing', x: 490, y: 180, href: '' },
-  { name: 'Shanghai', x: 540, y: 200, href: '#shanghai' },
-  { name: 'Chengdu', x: 250, y: 220, href: '#chengdu' },
-  { name: 'Hangzhou', x: 520, y: 205, href: '#hangzhou' },
-  { name: 'Chongqing', x: 310, y: 260, href: '#chongqing' },
-  { name: 'Guilin', x: 370, y: 300, href: '' },
-  { name: 'Kunming', x: 210, y: 335, href: '' },
-  { name: 'Guangzhou', x: 400, y: 370, href: '#guangzhou' },
-  { name: 'Shenzhen', x: 430, y: 390, href: '' },
-  { name: 'Sanya', x: 360, y: 440, href: '#sanya' },
-];
-
-const cities = [
-  {
-    name: 'Beijing',
-    href: '/posts/beijing-city-guide-for-foreigners/',
-    desc: 'Best for history, hutongs, the Great Wall, and first-time classic sightseeing.',
-    days: '4-5 days',
-    bestSeason: 'September-October',
-    difficulty: 'Medium',
-    whyGo: 'Imperial history, museums, and the easiest Great Wall access.',
-    next: '/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
-    nextLabel: 'Daxing airport transfer guide',
-  },
-  {
-    name: 'Shanghai',
-    href: '/posts/shanghai-city-guide-for-foreigners/',
-    desc: 'Best for an easy landing, international food, skyline walks, and strong metro coverage.',
-    days: '3-4 days',
-    bestSeason: 'March-May, October-November',
-    difficulty: 'Easy',
-    whyGo: 'The smoothest first stop for metro, airports, food, and English-friendly services.',
-    next: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
-    nextLabel: 'Shanghai metro guide',
-  },
-  {
-    name: 'Chengdu',
-    href: '/posts/chengdu-city-guide-for-foreigners/',
-    desc: 'Best for Sichuan food, teahouse pace, pandas, and a softer big-city rhythm.',
-    days: '3-5 days',
-    bestSeason: 'March-June, September-November',
-    difficulty: 'Medium',
-    whyGo: 'Pandas, Sichuan food, teahouses, lower costs, and western China side trips.',
-    next: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
-    nextLabel: 'Chengdu street-food guide',
-  },
-  {
-    name: 'Xi\'an',
-    href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
-    desc: 'Best for ancient history, the Terracotta Warriors, old city walls, and hands-on Chinese heritage.',
-    days: '3-4 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Medium',
-    whyGo: 'Terracotta Warriors, ancient city wall, Muslim Quarter food street, and a deep sense of Chinese history.',
-    next: '/posts/china-high-speed-rail-guide-foreigners/',
-    nextLabel: 'High-speed rail to Xi\'an',
-  },
-  {
-    name: 'Guangzhou',
-    href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
-    desc: 'Best for Cantonese food, trade city energy, southern gateway, and easy Hong Kong access.',
-    days: '3-4 days',
-    bestSeason: 'October-December, March-April',
-    difficulty: 'Medium',
-    whyGo: 'Cantonese dim sum, Chen Clan Academy, Canton Tower, and a warmer southern alternative to Beijing and Shanghai.',
-    next: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    nextLabel: 'Cantonese food guide',
-  },
-  {
-    name: 'Chongqing',
-    href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    desc: 'Best for Sichuan hotpot, futuristic skyline, mountain-city terrain, and Yangtze River cruises.',
-    days: '3-4 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Hard',
-    whyGo: 'Chongqing hotpot, Hongya Cave, night skyline, Yangtze cable car, and a uniquely vertical city layout.',
-    next: '/food/',
-    nextLabel: 'Chongqing food guide',
-  },
-  {
-    name: 'Hangzhou',
-    href: '/posts/hangzhou-city-guide-for-foreigners/',
-    desc: 'Best for West Lake, green scenery, weekend pacing, and a polished city break.',
-    days: '2-3 days',
-    bestSeason: 'March-May, September-November',
-    difficulty: 'Easy-medium',
-    whyGo: 'West Lake, tea villages, temples, and a calm high-speed rail add-on from Shanghai.',
-    next: '/transport/',
-    nextLabel: 'Plan trains and local transport',
-  },
-  {
-    name: 'Sanya',
-    href: '/posts/sanya-city-guide-for-foreigners/',
-    desc: 'Best for warm winter weather, resort stays, beach time, and Hainan side trips.',
-    days: '3-7 days',
-    bestSeason: 'November-April',
-    difficulty: 'Medium',
-    whyGo: 'China beach time, winter sun, seafood, resorts, and longer seasonal stays.',
-    next: '/posts/what-to-pack-for-china-a-season-by-season-checklist/',
-    nextLabel: 'Seasonal packing guide',
-  },
-];
+const description = `Plan practical city stops in China with guides for ${activeGuides.map((g) => g.name).join(', ')}.`;
 
 const routes = [
   {
@@ -139,6 +61,16 @@ const routes = [
     name: 'Winter escape, 6-10 days',
     plan: 'Sanya 4-6 days, Shanghai 2-3 days',
     fit: 'Best when northern China is cold and you want a simple beach-and-city pairing.',
+  },
+  {
+    name: 'Southern discovery, 10-12 days',
+    plan: 'Guangzhou 3 days, Guilin 3 days, Shanghai 4 days',
+    fit: 'Great for food lovers, scenic landscapes, and a relaxed pace through southern China.',
+  },
+  {
+    name: 'Ancient capitals, 10-12 days',
+    plan: 'Beijing 4 days, Xi\'an 3 days, Nanjing 2 days, Shanghai 3 days',
+    fit: 'History-focused route through China\'s imperial capitals with high-speed rail connections.',
   },
 ];
 
@@ -193,7 +125,7 @@ const locale = 'en';
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
       <h2 id="city-shortcuts" class="sr-only">City shortcuts</h2>
       {cities.map((city) => (
-        <a href={city.href} class="card block hover:no-underline" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
+        <a href={city.slug ? `/posts/${city.slug}/` : '#'} class="card block hover:no-underline" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">
@@ -237,7 +169,7 @@ const locale = 'en';
             {cities.map((city) => (
               <tr>
                 <th class="px-4 py-4 font-bold text-gray-950">
-                  <a href={city.href} class="text-brand-700 hover:text-brand-800">{city.name}</a>
+                  <a href={`/posts/${city.slug}/`} class="text-brand-700 hover:text-brand-800">{city.name}</a>
                 </th>
                 <td class="px-4 py-4 leading-6 text-gray-700">{city.whyGo}</td>
                 <td class="px-4 py-4 text-gray-700">{city.days}</td>
