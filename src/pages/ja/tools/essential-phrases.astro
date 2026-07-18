@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = '旅行者向け中国語必須フレーズ集';
+const title = '中国旅行で役立つ必須フレーズ集';
 const description =
-  '中国を訪れる旅行者向けに、必須の中国語フレーズをピンインと日本語付きでまとめた、印刷しやすい便利な一覧です。あいさつ、決済、交通、食事、緊急時をカバーしています。';
+  '中国を訪れる旅行者の方向けに、よく使う中国語フレーズをピンインと日本語付きでまとめました。印刷しやすく、あいさつ、支払い、移動、食事、緊急時まで幅広く確認できます。';
 
 interface Phrase {
   en: string;
@@ -37,7 +37,7 @@ const groups: Group[] = [
     ],
   },
   {
-    id: 'payment', label: 'お金・支払い', icon: '💳',
+    id: 'payment', label: '支払い・お金', icon: '💳',
     phrases: [
       { en: 'いくらですか？', zh: '多少钱？', pinyin: 'duōshao qián?' },
       { en: 'Alipayは使えますか？', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
@@ -72,9 +72,9 @@ const groups: Group[] = [
   {
     id: 'help', label: '困ったとき・緊急時', icon: '🆘',
     phrases: [
-      { en: '助けて！', zh: '救命！', pinyin: 'jiùmìng!' },
+      { en: '助けてください！', zh: '救命！', pinyin: 'jiùmìng!' },
       { en: 'トイレはどこですか？', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
-      { en: '医者が必要です', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
+      { en: '医者に診てもらいたいです', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
       { en: '警察を呼んでください', zh: '请报警', pinyin: 'qǐng bàojǐng' },
       { en: '道に迷いました', zh: '我迷路了', pinyin: 'wǒ mílù le' },
       { en: '書いてください', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
@@ -87,16 +87,16 @@ const groups: Group[] = [
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">旅行者向け中国語必須フレーズ集</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">便利ツール</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">中国旅行で役立つ必須フレーズ集</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- コントロール -->
+    <!-- 絞り込みボタン -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
-      <button data-filter="all" class="phrase-filter btn-primary text-sm">すべて表示</button>
+      <button data-filter="all" class="phrase-filter btn-primary text-sm">すべて表示します</button>
       {groups.map((g) => (
         <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
           {g.icon} {g.label}
@@ -107,7 +107,7 @@ const groups: Group[] = [
       </button>
     </div>
 
-    <!-- フレーズグループ -->
+    <!-- フレーズ一覧 -->
     <div class="mt-6 space-y-8">
       {groups.map((g) => (
         <section class="phrase-group" data-group={g.id}>
@@ -128,7 +128,7 @@ const groups: Group[] = [
     <AffiliateCta
       title="移動中でもオンラインで翻訳できます"
       description="中国旅行向けのeSIMがあれば、到着したその瞬間から翻訳アプリや地図を使えます。"
-      buttonText="通信の準備をする"
+      buttonText="通信の準備をします"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
