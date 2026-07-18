@@ -8,7 +8,7 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 const title = 'China 電源插頭與電壓檢查工具';
 const description =
-  '根據你的出發國家／地區，查詢前往 China 是否需要轉接插頭或變壓器。China 使用 220V 電壓，以及 A、C、I 型插頭。';
+  '根據你的出發國家／地區，查詢前往 China 是否需要轉接插頭或變壓器。中國使用 220V 電壓，以及 A、C、I 型插頭。';
 
 const countries = [
   { value: 'United States', label: '美國' },
@@ -54,7 +54,7 @@ const countries = [
       <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">檢查我需要準備什麼</button>
     </div>
 
-    <!-- 參考：China 的當地標準 -->
+    <!-- 參考：中國的當地標準 -->
     <div class="mt-6 grid gap-4 sm:grid-cols-3">
       <div class="card"><dt class="text-sm text-gray-500">電壓</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
       <div class="card"><dt class="text-sm text-gray-500">頻率</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
@@ -66,8 +66,8 @@ const countries = [
       <div class="card" id="result-card"></div>
 
       <AffiliateCta
-        title="準備一個 China 通用轉接插頭"
-        description="小巧的一體式旅行轉接插頭，可適用 China 插座，並能同時為多個裝置充電。"
+        title="準備一個中國通用轉接插頭"
+        description="小巧的一體式旅行轉接插頭，可適用中國插座，並能同時為多個裝置充電。"
         buttonText="查看推薦轉接插頭"
         placeholder={AFFILIATE_LINKS.transport}
       />
@@ -121,8 +121,8 @@ const countries = [
     if (!info || info.volts === 0) {
       tone = 'info';
       heading = '請確認你的插頭與電壓規格';
-      body = '我們沒有你所選項目的資料。請查看充電器標籤；如果標示「100–240V」，前往 China 只需要適用 A、C 或 I 型插座的轉接插頭。';
-      points.push('China 使用 220V、50Hz，插頭類型為 A、C、I。');
+      body = '我們沒有你所選項目的資料。請查看充電器標籤；如果標示「100–240V」，前往中國只需要適用 A、C 或 I 型插座的轉接插頭。';
+      points.push('中國使用 220V、50Hz，插頭類型為 A、C、I。');
       points.push('多數手機與筆電充電器支援雙電壓（100–240V），通常只需要轉接插頭。');
     } else {
       const plugMatch = info.plugs.some((p) => CHINA_PLUGS.includes(p));
@@ -131,24 +131,24 @@ const countries = [
       if (plugMatch && voltMatch) {
         tone = 'good';
         heading = '你大多不需要轉接插頭';
-        body = `${countryLabel} 使用相容的插頭類型（${info.plugs.join(', ')}）與相近電壓（${info.volts}V）。你的插頭應可直接插入 China 的插座。`;
+        body = `${countryLabel} 使用相容的插頭類型（${info.plugs.join(', ')}）與相近電壓（${info.volts}V）。你的插頭應可直接插入中國的插座。`;
         points.push('仍建議逐一確認插頭；可多帶一個轉接插頭，以防部分插座較緊。');
       } else if (!plugMatch && voltMatch) {
         tone = 'warn';
         heading = '你需要轉接插頭（但不需要變壓器）';
-        body = `${countryLabel} 使用相近電壓（${info.volts}V），因此你的裝置可安全使用。但你的插頭類型（${info.plugs.join(', ')}）不適用 China 插座，請準備轉接插頭。`;
+        body = `${countryLabel} 使用相近電壓（${info.volts}V），因此你的裝置可安全使用。但你的插頭類型（${info.plugs.join(', ')}）不適用中國插座，請準備轉接插頭。`;
         points.push('只需要簡單且便宜的 A/C/I 型轉接插頭即可。');
         points.push('不需要攜帶笨重的變壓器。');
       } else if (plugMatch && !voltMatch) {
         tone = 'warn';
         heading = '單電壓裝置請留意電壓';
-        body = `你的插頭（${info.plugs.join(', ')}）可能可用，但 ${countryLabel} 的電壓（${info.volts}V）與 China 的 220V 不同。`;
+        body = `你的插頭（${info.plugs.join(', ')}）可能可用，但 ${countryLabel} 的電壓（${info.volts}V）與中國的 220V 不同。`;
         points.push('標示 100–240V 的手機、筆電與相機充電器通常可在各地使用。');
         points.push('單電壓用品（部分吹風機、離子夾等）需要變壓器，或建議留在家中。');
       } else {
         tone = 'warn';
         heading = '你需要轉接插頭，並確認電壓';
-        body = `${countryLabel} 使用的插頭（${info.plugs.join(', ')}）與 China 不同，電壓（${info.volts}V）也不同於 China 的 220V。請攜帶 A/C/I 型轉接插頭。`;
+        body = `${countryLabel} 使用的插頭（${info.plugs.join(', ')}）與中國不同，電壓（${info.volts}V）也不同於中國的 220V。請攜帶 A/C/I 型轉接插頭。`;
         points.push('雙電壓充電器（100–240V）只需要轉接插頭。');
         points.push('單電壓高功率裝置也需要變壓器；或可改買當地適用產品。');
       }
