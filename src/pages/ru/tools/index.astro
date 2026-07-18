@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,35 +7,35 @@ import { TOOLS as tools } from '../../../config';
 
 const title = 'Бесплатные инструменты: виза, оплата, eSIM, бюджет, карточки водителю и фразы';
 const description =
-  'Free interactive tools for China travel planning: check visa-free entry, payment card compatibility, eSIM options, trip budget, cash backup, power plugs, Chinese phrases, and taxi driver address cards.';
+  'Бесплатные интерактивные инструменты для планирования поездки в Китай: проверка безвизового въезда, совместимости платёжных карт, вариантов eSIM, бюджета поездки, наличных про запас, электрических вилок, китайских фраз и карточек с адресом для таксиста.';
 
 const toolUseCases = [
   {
-    title: 'Before booking flights',
-    text: 'Use the visa-free checker, best-time planner, and budget estimator before you lock dates and cities.',
+    title: 'Перед бронированием авиабилетов',
+    text: 'Используйте проверку безвизового въезда, планировщик лучшего времени для поездки и калькулятор бюджета, прежде чем окончательно выбрать даты и города.',
     links: [
-      { href: '/ru/tools/visa-free-checker/', label: 'Visa-free checker' },
-      { href: '/ru/tools/best-time-to-visit/', label: 'Best time to visit' },
-      { href: '/ru/tools/budget-cash-estimator/', label: 'Budget estimator' },
+      { href: '/ru/tools/visa-free-checker/', label: 'Проверка безвизового въезда' },
+      { href: '/ru/tools/best-time-to-visit/', label: 'Лучшее время для поездки' },
+      { href: '/ru/tools/budget-cash-estimator/', label: 'Калькулятор бюджета' },
     ],
   },
   {
-    title: 'Before departure',
-    text: 'Use payment, eSIM, app, plug, and phrase tools while you still have time to fix setup problems at home.',
+    title: 'Перед выездом',
+    text: 'Используйте инструменты для проверки оплаты, eSIM, приложений, вилок и фраз, пока у вас ещё есть время решить проблемы с настройкой дома.',
     links: [
-      { href: '/ru/tools/payment-checker/', label: 'Оплата checker' },
-      { href: '/ru/tools/esim-comparison/', label: 'eSIM comparator' },
-      { href: '/ru/tools/app-availability-checker/', label: 'App checker' },
+      { href: '/ru/tools/payment-checker/', label: 'Проверка оплаты' },
+      { href: '/ru/tools/esim-comparison/', label: 'Сравнение eSIM' },
+      { href: '/ru/tools/app-availability-checker/', label: 'Проверка приложений' },
     ],
   },
   {
-    title: 'On the ground in China',
-    text: 'Use driver cards, currency conversion, and essential phrases when apps, taxis, menus, or front desks get confusing.',
+    title: 'Уже на месте, в Китае',
+    text: 'Используйте карточки для водителя, конвертер валют и базовые фразы, когда приложения, такси, меню или стойки регистрации начинают сбивать с толку.',
     links: [
-      { href: '/ru/tools/survival-kit/', label: 'Survival kit' },
-      { href: '/ru/tools/show-to-driver/', label: 'Show to Driver' },
-      { href: '/ru/tools/currency-converter/', label: 'RMB converter' },
-      { href: '/ru/tools/essential-phrases/', label: 'Essential phrases' },
+      { href: '/ru/tools/survival-kit/', label: 'Набор выживания' },
+      { href: '/ru/tools/show-to-driver/', label: 'Показать водителю' },
+      { href: '/ru/tools/currency-converter/', label: 'Конвертер RMB' },
+      { href: '/ru/tools/essential-phrases/', label: 'Базовые фразы' },
     ],
   },
 ];
@@ -64,8 +64,8 @@ const toolsJsonLd = {
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Бесплатные инструменты для поездки в Китай</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Use pre-trip checklist</a>
-        <a href="/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Read first-time planner</a>
+        <a href="/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Открыть чек-лист перед поездкой</a>
+        <a href="/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Прочитать гид для первой поездки</a>
       </div>
     </header>
 
@@ -73,7 +73,7 @@ const toolsJsonLd = {
 
     <section class="mt-8 grid gap-5 lg:grid-cols-3" aria-labelledby="tool-use-cases-heading">
       <div class="lg:col-span-3">
-        <h2 id="tool-use-cases-heading" class="text-2xl font-bold text-gray-950">Which tool should you use first?</h2>
+        <h2 id="tool-use-cases-heading" class="text-2xl font-bold text-gray-950">С какого инструмента начать?</h2>
       </div>
       {toolUseCases.map((useCase) => (
         <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
