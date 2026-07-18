@@ -5,18 +5,18 @@ import Footer from '../../components/Footer.astro';
 
 const title = '外国人旅行者のための中国旅行リソース集';
 const description =
-  '中国を訪れる外国人旅行者のために、実用的な情報をまとめたリソース集です。決済、eSIM、鉄道、ビザ、都市ガイド、各種ツールなど、初めての中国旅行の計画に役立つリンクをご紹介します。';
+  '中国を訪れる外国人旅行者の方向けに、実用的な情報をまとめたリソース集です。決済、eSIM、鉄道、ビザ、都市ガイド、各種ツールなど、初めての中国旅行の計画に役立つリンクをご紹介します。';
 
 const resourceGroups = [
   {
-    title: '30分で把握したい方へ',
-    description: '短時間で中国旅行の準備を整えたい方に向けた、最短で読み進められる導線です。',
+    title: '30分で全体をつかみたい方へ',
+    description: '短時間で中国旅行の準備を進めたい方向けに、最短で必要な情報を確認できる導線です。',
     links: [
       { href: '/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '出発前の準備チェックリスト' },
       { href: '/ja/tools/survival-kit/', title: '中国旅行サバイバルカードとチェックリスト' },
       { href: '/ja/tools/payment-checker/', title: '支払いの代替手段を確認する' },
       { href: '/ja/tools/visa-free-checker/', title: 'ビザ免除またはトランジット条件を確認する' },
-      { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '鉄道の予約方法と駅での乗車手順を知る' },
+      { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '鉄道の予約方法と駅での乗車手順を確認する' },
     ],
   },
   {
@@ -33,7 +33,7 @@ const resourceGroups = [
   },
   {
     title: '支払いとお金',
-    description: 'モバイル決済、現金の備え、クレジットカード、日常の支払いで起こりやすいトラブルを扱います。',
+    description: 'モバイル決済、現金の備え、クレジットカード、日常の支払いで起こりやすいトラブルをまとめています。',
     links: [
       { href: '/ja/posts/how-to-pay-in-china-tourist-guide/', title: '旅行者が中国で支払う方法' },
       { href: '/ja/posts/alipay-foreign-credit-card-step-by-step/', title: '海外発行カードでAlipayを設定する' },
@@ -44,18 +44,18 @@ const resourceGroups = [
   },
   {
     title: 'インターネットとアプリ',
-    description: '通信手段を確保し、eSIMを選び、到着前に入れておきたいアプリを把握できます。',
+    description: '通信手段を確保し、eSIMを選び、到着前に入れておきたいアプリを把握できる情報をまとめています。',
     links: [
       { href: '/ja/posts/best-esim-for-china-travel-2026/', title: '中国旅行におすすめのeSIM' },
       { href: '/ja/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: '中国向けeSIMとローミング料金を比較する' },
       { href: '/ja/posts/internet-access-china-apps-that-work-2026/', title: '中国でのインターネット接続と使えるアプリ' },
       { href: '/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'eSIMとアプリを含めた初めての旅行計画' },
-      { href: '/ja/tools/app-availability-checker/', title: 'このアプリは中国で使える？' },
+      { href: '/ja/tools/app-availability-checker/', title: 'このアプリは中国で使えるか確認する' },
     ],
   },
   {
     title: '移動手段と都市ガイド',
-    description: '鉄道、地下鉄、空港、配車アプリに加え、都市ごとの実用的な計画づくりに役立つ情報をまとめています。',
+    description: '鉄道、地下鉄、空港、配車アプリに加えて、都市ごとの実用的な計画づくりに役立つ情報をまとめています。',
     links: [
       { href: '/ja/cities/', title: '中国の都市ガイド一覧' },
       { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '外国人向け中国高速鉄道ガイド' },
@@ -66,17 +66,17 @@ const resourceGroups = [
   },
   {
     title: '食事、マナー、日常生活',
-    description: '食事、チップ、デリバリーアプリ、屋台グルメ、現地での不便を減らすための実用的な習慣を扱います。',
+    description: '食事、チップ、デリバリーアプリ、屋台グルメ、現地での不便を減らすための実用的な習慣をまとめています。',
     links: [
       { href: '/ja/food/', title: '中国の食事・グルメガイド' },
       { href: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: '中国語ができなくても料理を注文する方法' },
       { href: '/ja/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: '成都の屋台グルメ、安全性と辛さの目安ガイド' },
-      { href: '/ja/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '中国でチップが必要な場面とは' },
+      { href: '/ja/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '中国でチップが必要な場面を確認する' },
     ],
   },
   {
     title: '長期滞在とリモートワーク',
-    description: '数週間から数か月滞在する場合は、法的要件、住まい、決済、仕事で使うツールの安定性から確認しておくと安心です。',
+    description: '数週間から数か月滞在する場合は、法的要件、住まい、決済、仕事で使うツールの安定性を先に確認しておくと安心です。',
     links: [
       { href: '/ja/long-stay/', title: '中国長期滞在ガイド' },
       { href: '/ja/digital-nomads/', title: '中国デジタルノマドガイド' },
@@ -91,7 +91,7 @@ const resourceGroups = [
   <Header locale="ja" />
   <main class="container-page py-10">
     <section class="max-w-3xl">
-      <p class="section-kicker">リソースセンター</p>
+      <p class="section-kicker">ご案内</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </section>
