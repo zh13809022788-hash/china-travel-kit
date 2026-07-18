@@ -6,7 +6,7 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = '中国旅行者向け人民元（RMB）通貨換算ツール';
+const title = '中国旅行向け人民元（RMB）換算ツール';
 const description =
   'お使いの通貨と中国人民元（RMB）を相互に換算し、中国での日用品やサービスのおおよその価格をその場で確認できるツールです。';
 ---
@@ -16,7 +16,7 @@ const description =
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">人民元（RMB）通貨換算ツール</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">人民元（RMB）換算ツール</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -74,8 +74,8 @@ const description =
     </section>
 
     <AffiliateCta
-      title="両替カウンターを使わずに支払いたい方へ"
-      description="海外事務手数料のかからないカードをAlipayやWeChat Payに連携すると、現金両替の上乗せを抑えながら、実勢レートに近い金額で支払いやすくなります。"
+      title="両替所を使わずに支払いたい方へ"
+      description="海外事務手数料がかからないカードをAlipayやWeChat Payに連携すると、現金両替の上乗せを抑えながら、実勢レートに近い金額で支払いやすくなります。"
       buttonText="支払い設定を確認する"
       placeholder={AFFILIATE_LINKS.payment}
     />
@@ -103,10 +103,10 @@ const description =
     { label: '地下鉄1回分の運賃', rmb: 4 },
     { label: '屋台の軽食', rmb: 10 },
     { label: 'カフェのコーヒー', rmb: 30 },
-    { label: 'カジュアルなレストランでの食事', rmb: 45 },
+    { label: '気軽なレストランでの食事', rmb: 45 },
     { label: '近距離のDiDi / タクシー', rmb: 25 },
-    { label: '高速鉄道（1〜2時間程度）', rmb: 250 },
-    { label: '博物館 / 観光施設の入場券', rmb: 60 },
+    { label: '高速鉄道（1〜2時間ほど）', rmb: 250 },
+    { label: '博物館・観光施設の入場券', rmb: 60 },
     { label: '中価格帯ホテル1泊分', rmb: 450 },
   ];
 
@@ -136,7 +136,7 @@ const description =
 
   function updateMeta() {
     if (rateLine) {
-      rateLine.textContent = `参考レート：1 ${currencyEl.value} は約 ¥${rate().toFixed(2)} RMB です`;
+      rateLine.textContent = `参考レートでは、1 ${currencyEl.value} は約 ¥${rate().toFixed(2)} RMB です`;
     }
     if (costGrid) {
       costGrid.innerHTML = commonCosts
@@ -145,7 +145,7 @@ const description =
             <span class="text-sm text-gray-500">${c.label}</span>
             <div class="mt-1 flex items-baseline gap-2">
               <span class="text-xl font-bold text-gray-900">¥${c.rmb}</span>
-              <span class="text-sm text-brand-600">約 ${sym()}${(c.rmb / rate()).toFixed(2)}</span>
+              <span class="text-sm text-brand-600">およそ ${sym()}${(c.rmb / rate()).toFixed(2)} です</span>
             </div>
           </div>`)
         .join('');
