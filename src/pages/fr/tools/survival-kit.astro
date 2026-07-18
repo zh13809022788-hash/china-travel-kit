@@ -7,9 +7,9 @@ import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
 import ContextAiBubble from '../../../components/ContextAiBubble.astro';
 import survivalKits from '../../../data/survival-kits.json';
 
-const title = 'Kit de survie Chine : cartes de traduction et checklists de voyage';
+const title = 'Kit de survie pour la Chine : cartes de traduction et listes de voyage';
 const description =
-  'Kits de survie interactifs pour les visiteurs étrangers en Chine : cartes de traduction plein écran, checklists d’arrivée, cartes d’allergies alimentaires et outils de communication locale.';
+  'Kits de survie interactifs pour les visiteurs étrangers en Chine : cartes de traduction en plein écran, listes d’arrivée, cartes pour les allergies alimentaires et outils de communication sur place.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
@@ -17,11 +17,11 @@ const description =
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Kit de survie</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">Kit de survie Chine</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">Kit de survie pour la Chine</h1>
       <p class="mt-3 text-lg leading-8 text-gray-600">
-        Utilisez des cartes de traduction plein écran et des checklists enregistrées lorsque lire un
-        long guide prend trop de temps : arrivée à l’aéroport, enregistrement à l’hôtel, taxis,
-        restaurants, allergies et configuration du premier jour.
+        Utilisez des cartes de traduction en plein écran et des listes enregistrées quand vous
+        n’avez pas le temps de lire un long guide : arrivée à l’aéroport, enregistrement à l’hôtel,
+        taxis, restaurants, allergies et préparation du premier jour.
       </p>
       <div class="mt-5 flex flex-wrap gap-3">
         <a href="#arrival" class="btn-primary">Commencer par l’arrivée</a>
@@ -31,16 +31,25 @@ const description =
 
     <section class="mt-8 grid gap-4 md:grid-cols-3">
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Cartes plein écran</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Touchez une carte et montrez un grand texte chinois à un chauffeur, à la réception d’un hôtel ou au personnel d’un restaurant.</p>
+        <h2 class="text-lg font-bold text-gray-950">Cartes en plein écran</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">
+          Touchez une carte pour afficher un grand texte en chinois à montrer à un chauffeur, à la
+          réception d’un hôtel ou au personnel d’un restaurant.
+        </p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Checklists enregistrées</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Votre progression est enregistrée dans le navigateur afin que vous puissiez fermer la page et revenir plus tard.</p>
+        <h2 class="text-lg font-bold text-gray-950">Listes enregistrées</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">
+          Votre progression est enregistrée dans le navigateur pour que vous puissiez fermer la page
+          et revenir plus tard.
+        </p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Accès à l’aide IA contextuelle</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Utilisez l’assistant flottant pour ouvrir l’aide voyage ChinaTripBox avec une question adaptée au sujet.</p>
+        <h2 class="text-lg font-bold text-gray-950">Aide IA contextuelle</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">
+          Utilisez l’assistant flottant pour ouvrir l’aide voyage ChinaTripBox avec une question
+          adaptée au sujet affiché.
+        </p>
       </div>
     </section>
 
@@ -67,6 +76,6 @@ const description =
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="Aidez-moi à utiliser le kit de survie Chine pour l’arrivée, les restaurants, les cartes de traduction et la préparation des checklists." />
+  <ContextAiBubble defaultPrompt="Aidez-moi à utiliser le kit de survie pour la Chine concernant l’arrivée, les restaurants, les cartes de traduction et la préparation des listes." />
   <Footer />
 </BaseLayout>
