@@ -7,24 +7,24 @@ import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
 import ContextAiBubble from '../../../components/ContextAiBubble.astro';
 import survivalKits from '../../../data/survival-kits.json';
 
-const title = '中国旅行サバイバルキット：翻訳カードと旅行チェックリスト';
+const title = '中国旅行お助けキット：翻訳カードと旅行チェックリスト';
 const description =
-  '海外からの旅行者向けに、中国旅行で役立つ機能をまとめたインタラクティブなサバイバルキットです。全画面の翻訳カード、到着後の設定チェックリスト、食物アレルギーカード、現地で使えるコミュニケーションツールをご利用いただけます。';
+  '海外からお越しの旅行者向けに、中国旅行で役立つ機能をまとめたインタラクティブなお助けキットです。全画面の翻訳カード、到着後の設定チェックリスト、食物アレルギーカード、現地で使えるコミュニケーションツールをご利用いただけます。';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">サバイバルキット</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">中国旅行サバイバルキット</h1>
+      <p class="section-kicker">お助けキット</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">中国旅行お助けキット</h1>
       <p class="mt-3 text-lg leading-8 text-gray-600">
         長いガイドを読む時間がないときは、全画面の翻訳カードと保存できるチェックリストをご活用ください。
-        空港に到着したとき、ホテルでのチェックイン時、タクシーの利用時、レストランでのやり取り、アレルギーの説明、初日の設定確認に役立ちます。
+        空港に到着したとき、ホテルでチェックインするとき、タクシーを利用するとき、レストランでやり取りするとき、アレルギーについて説明したいとき、初日に設定を確認したいときに役立ちます。
       </p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="#arrival" class="btn-primary">到着後の準備から始める</a>
-        <a href="#food" class="btn-outline">食事用カードを開く</a>
+        <a href="#arrival" class="btn-primary">到着後の準備から始めます</a>
+        <a href="#food" class="btn-outline">食事用カードを開きます</a>
       </div>
     </header>
 
@@ -53,7 +53,7 @@ const description =
             <div class="mt-3 flex flex-wrap gap-2">
               {kit.related_paths.map((path) => (
                 <a href={path} class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-brand-700 hover:border-brand-300 hover:no-underline">
-                  関連ガイドを見る
+                  関連ガイドを見ます
                 </a>
               ))}
             </div>
@@ -66,6 +66,6 @@ const description =
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="到着時の準備、レストランでのやり取り、翻訳カード、チェックリストの準備に中国旅行サバイバルキットを使えるよう、お手伝いしてください。" />
+  <ContextAiBubble defaultPrompt="到着時の準備、レストランでのやり取り、翻訳カード、チェックリストの準備に中国旅行お助けキットを使えるように、サポートしてください。" />
   <Footer />
 </BaseLayout>
