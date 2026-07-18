@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-ko'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Nature of China — Landscapes & Wild Places';
-const description = 'Explore China\'s natural wonders as a foreign traveler: Zhangjiajie\'s Avatar mountains, Jiuzhaigou\'s fairy-tale lakes, Huangshan\'s sea of clouds, Guilin\'s karst peaks, and the Tibetan plateau.';
+const title = '중국의 자연 — 풍경과 야생의 공간';
+const description = '외국인 여행자의 시선으로 중국의 자연 절경을 탐험해 보세요. 장자제의 아바타 산봉우리, 주자이거우의 동화 같은 호수, 황산의 운해, 구이린의 카르스트 봉우리, 티베트 고원까지 만나볼 수 있습니다.';
 
 const relatedTools = [
-  { href: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing checklist', desc: 'Season-by-season gear for outdoor trips' },
-  { href: '/ko/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Permits and entry rules for remote regions' },
-  { href: '/ko/trip-planner/', title: 'Trip planner', desc: 'Build your China nature itinerary' },
+  { href: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '짐 꾸리기 체크리스트', desc: '계절별 아웃도어 여행 준비물 안내' },
+  { href: '/ko/posts/china-visa-free-entry-transit-guide-2026/', title: '비자 및 입국 가이드', desc: '오지 지역 여행을 위한 허가와 입국 규정' },
+  { href: '/ko/trip-planner/', title: '여행 플래너', desc: '중국 자연 여행 일정을 직접 만들어 보세요' },
 ];
 
 const relatedCities = [
-  { href: '/ko/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Tropical beaches and rainforest' },
-  { href: '/ko/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'West Lake and tea hills' },
-  { href: '/ko/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Gateway to western mountains and pandas' },
+  { href: '/ko/posts/sanya-city-guide-for-foreigners/', title: '싼야', desc: '열대 해변과 우림' },
+  { href: '/ko/posts/hangzhou-city-guide-for-foreigners/', title: '항저우', desc: '서호와 차 언덕' },
+  { href: '/ko/posts/chengdu-city-guide-for-foreigners/', title: '청두', desc: '서부 산악지대와 판다를 향하는 관문' },
 ];
 
 const otherSeries = [
-  { href: '/ko/series/history-of-china/', title: 'History of China' },
-  { href: '/ko/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/ko/series/food-of-china/', title: 'Food of China' },
+  { href: '/ko/series/history-of-china/', title: '중국의 역사' },
+  { href: '/ko/series/culture-of-china/', title: '중국의 문화' },
+  { href: '/ko/series/food-of-china/', title: '중국의 음식' },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
 const locale = 'ko';
@@ -38,7 +38,7 @@ const locale = 'ko';
   <Header locale="ko" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content Series</p>
+      <p class="section-kicker">콘텐츠 시리즈</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -49,8 +49,8 @@ const locale = 'ko';
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Articles</p>
-            <h2>Nature of China series</h2>
+            <p class="section-kicker">글 목록</p>
+            <h2>중국의 자연 시리즈</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -64,14 +64,14 @@ const locale = 'ko';
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Articles in this series are being prepared. Check back soon.</p>
+          <p class="mt-6 text-gray-500">이 시리즈의 글은 현재 준비 중입니다. 곧 다시 확인해 주세요.</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Practical tools</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Plan your trip</h2>
+          <p class="section-kicker">실용 도구</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">여행 계획 세우기</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -83,8 +83,8 @@ const locale = 'ko';
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">City guides</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Gateway cities</h2>
+          <p class="section-kicker">도시 가이드</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">관문 도시</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -96,7 +96,7 @@ const locale = 'ko';
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">More series</p>
+          <p class="section-kicker">다른 시리즈</p>
           <div class="mt-3 grid gap-2">
             {otherSeries.map((s) => (
               <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
