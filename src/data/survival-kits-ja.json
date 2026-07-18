@@ -1,0 +1,86 @@
+[
+  {
+    "theme_id": "arrival_setup",
+    "slug": "arrival",
+    "title": "到着準備サバイバルキット",
+    "description": "空港到着、ホテルのチェックイン、支払いテスト、移動手段のための初日用カードとチェックリスト。",
+    "related_paths": [
+      "/posts/first-24-hours-in-china-arrival-checklist/",
+      "/posts/airport-to-city-transport-beijing-shanghai-guangzhou/",
+      "/tools/show-to-driver/"
+    ],
+    "tools": [
+      {
+        "name": "ホテル住所サポート",
+        "text_cn": "请帮我去这家酒店。这个是酒店地址。",
+        "text_en": "Please help me get to this hotel. This is the hotel address.",
+        "category": "hotel"
+      },
+      {
+        "name": "中国語は話せません",
+        "text_cn": "我不会说中文，请用翻译软件和我沟通。",
+        "text_en": "I do not speak Chinese. Please use a translation app to communicate with me.",
+        "category": "communication"
+      },
+      {
+        "name": "安全な場所でタクシーを止める",
+        "text_cn": "请在安全合法的地方停车，谢谢。",
+        "text_en": "Please stop somewhere safe and legal. Thank you.",
+        "category": "transport"
+      }
+    ],
+    "checklist_steps": [
+      "空港を出る前にeSIMまたはローミングを有効にする",
+      "AlipayまたはWeChat Payで少額の支払いテストを1回行う",
+      "ホテル名と住所を中国語で保存する",
+      "地下鉄、正規タクシー、配車アプリ、または送迎を選ぶ",
+      "寝る前にスマートフォンとモバイルバッテリーを充電する"
+    ],
+    "ai_prompt": "Help me with my first 24 hours after arriving in China."
+  },
+  {
+    "theme_id": "food_exploration",
+    "slug": "food",
+    "title": "食事・外食サバイバルキット",
+    "description": "レストランでの注文、アレルギーカード、辛さ指定、支払いフレーズ、フードデリバリー準備。",
+    "related_paths": [
+      "/food/",
+      "/posts/ordering-food-in-china-without-chinese-meituan-ele-me/",
+      "/posts/chengdu-street-food-safety-spice-levels-what-to-order/"
+    ],
+    "tools": [
+      {
+        "name": "パクチー抜きカード",
+        "text_cn": "我不吃香菜，谢谢。",
+        "text_en": "No cilantro, please.",
+        "category": "food_preference"
+      },
+      {
+        "name": "ピーナッツアレルギー",
+        "text_cn": "我对花生过敏，请不要放花生或花生酱。",
+        "text_en": "I am allergic to peanuts. Please do not add peanuts or peanut sauce.",
+        "category": "allergy"
+      },
+      {
+        "name": "辛さ控えめ",
+        "text_cn": "请做微辣，少放辣椒。",
+        "text_en": "Please make it mildly spicy and use less chili.",
+        "category": "spice"
+      },
+      {
+        "name": "お会計をお願いします",
+        "text_cn": "您好，请帮我结账。",
+        "text_en": "Hello, could I have the bill please?",
+        "category": "payment"
+      }
+    ],
+    "checklist_steps": [
+      "アレルギーまたは食事制限のカードを準備する",
+      "注文前にAlipayまたはWeChat Payを設定する",
+      "メニュー用に翻訳アプリを1つ保存しておく",
+      "辛さ控えめの頼み方を覚える",
+      "フードデリバリー用にホテルの住所をすぐ使えるようにしておく"
+    ],
+    "ai_prompt": "Help me order food in China and explain dietary restrictions."
+  }
+]
