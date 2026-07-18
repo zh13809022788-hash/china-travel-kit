@@ -6,12 +6,12 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Best Time to Visit China — City & Month Planner';
+const title = 'Mejor época para visitar China — Planificador por ciudad y mes';
 const description =
-  'See the weather, crowds, and what to pack for major Chinese cities by month. Plan the best time to visit Beijing, Shanghai, Xi\'an, Chengdu, Guangzhou, and Harbin.';
+  'Consulta el clima, las multitudes y qué empacar para las principales ciudades chinas según el mes. Planifica la mejor época para visitar Pekín, Shanghái, Xi\'an, Chengdu, Guangzhou y Harbin.';
 
-const cities = ['Beijing', 'Shanghai', "Xi'an", 'Chengdu', 'Guangzhou', 'Harbin'];
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const cities = ['Pekín', 'Shanghái', "Xi'an", 'Chengdu', 'Guangzhou', 'Harbin'];
+const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
@@ -71,7 +71,7 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
   // Guía por ciudad y por mes (índice 0 = enero).
   const data: Record<string, MonthInfo[]> = {
-    Beijing: [
+    Pekín: [
       { temp: '-8 a 2°C', rating: 'tough', weather: 'Frío, seco y despejado. Pocos turistas.', pack: 'Abrigo grueso, gorro, guantes.' },
       { temp: '-5 a 5°C', rating: 'tough', weather: 'Frío; posibles multitudes por el Año Nuevo chino.', pack: 'Capas cálidas de invierno.' },
       { temp: '2 a 12°C', rating: 'ok', weather: 'Fresco, ventoso, polvo ocasional.', pack: 'Chaqueta, cortavientos.' },
@@ -85,7 +85,7 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
       { temp: '0 a 10°C', rating: 'ok', weather: 'Frío, seco, tranquilo.', pack: 'Abrigo cálido.' },
       { temp: '-6 a 3°C', rating: 'tough', weather: 'Frío y seco.', pack: 'Equipo pesado de invierno.' },
     ],
-    Shanghai: [
+    Shanghái: [
       { temp: '1 a 8°C', rating: 'ok', weather: 'Frío, húmedo, gris.', pack: 'Abrigo cálido impermeable.' },
       { temp: '3 a 10°C', rating: 'ok', weather: 'Frío; período del Año Nuevo chino.', pack: 'Capas, paraguas.' },
       { temp: '7 a 14°C', rating: 'good', weather: 'Primavera templada, algo de lluvia.', pack: 'Chaqueta, paraguas.' },
@@ -130,20 +130,20 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
     Guangzhou: [
       { temp: '10 a 18°C', rating: 'great', weather: 'Templado, seco. Muy agradable.', pack: 'Capas ligeras.' },
       { temp: '12 a 19°C', rating: 'great', weather: 'Templado; período del Año Nuevo chino.', pack: 'Capas ligeras.' },
-      { temp: '15 a 22°C', rating: 'good', weather: 'Calentándose, húmedo.', pack: 'Ropa ligera.' },
+      { temp: '15 a 22°C', rating: 'good', weather: 'Suben las temperaturas, húmedo.', pack: 'Ropa ligera.' },
       { temp: '19 a 26°C', rating: 'good', weather: 'Cálido, empiezan las lluvias.', pack: 'Ropa ligera, paraguas.' },
       { temp: '23 a 30°C', rating: 'ok', weather: 'Caluroso, húmedo, lluvioso.', pack: 'Ropa ligera, equipo de lluvia.' },
       { temp: '25 a 32°C', rating: 'tough', weather: 'Caluroso, muy lluvioso, riesgo de tifones.', pack: 'Equipo de lluvia, ropa ligera.' },
       { temp: '26 a 34°C', rating: 'tough', weather: 'Caluroso, húmedo, tormentoso.', pack: 'Ropa ligera, hidratación.' },
       { temp: '26 a 34°C', rating: 'tough', weather: 'Muy caluroso, temporada de tifones.', pack: 'Ropa ligera, protección contra sol/lluvia.' },
-      { temp: '24 a 32°C', rating: 'ok', weather: 'Caluroso, suavizándose.', pack: 'Ropa ligera.' },
+      { temp: '24 a 32°C', rating: 'ok', weather: 'Caluroso, empezando a suavizarse.', pack: 'Ropa ligera.' },
       { temp: '21 a 29°C', rating: 'great', weather: 'Cálido, más seco. Excelente. Multitudes por la Semana Dorada.', pack: 'Ropa ligera.' },
       { temp: '16 a 24°C', rating: 'great', weather: 'Cálido, cómodo, seco.', pack: 'Capas ligeras.' },
       { temp: '11 a 19°C', rating: 'great', weather: 'Templado y seco.', pack: 'Capas ligeras.' },
     ],
     Harbin: [
-      { temp: '-24 a -12°C', rating: 'good', weather: 'Frío intenso — ¡Festival de Hielo y Nieve! Mágico si te vistes para ello.', pack: 'Equipo para frío extremo.' },
-      { temp: '-20 a -6°C', rating: 'good', weather: 'Muy frío; continúa el Festival de Hielo.', pack: 'Equipo extremo de invierno.' },
+      { temp: '-24 a -12°C', rating: 'good', weather: 'Frío intenso: Festival de Hielo y Nieve. Mágico si te vistes para ello.', pack: 'Equipo para frío extremo.' },
+      { temp: '-20 a -6°C', rating: 'good', weather: 'Mucho frío; continúa el Festival de Hielo.', pack: 'Equipo extremo de invierno.' },
       { temp: '-9 a 4°C', rating: 'ok', weather: 'Frío, deshielo.', pack: 'Abrigo grueso.' },
       { temp: '2 a 14°C', rating: 'good', weather: 'Primavera fresca.', pack: 'Chaqueta, capas.' },
       { temp: '10 a 22°C', rating: 'great', weather: 'Templado y agradable.', pack: 'Capas ligeras.' },
@@ -153,7 +153,7 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
       { temp: '11 a 21°C', rating: 'good', weather: 'Otoño fresco.', pack: 'Chaqueta.' },
       { temp: '2 a 13°C', rating: 'ok', weather: 'Frío, otoño colorido.', pack: 'Abrigo cálido.' },
       { temp: '-11 a 0°C', rating: 'ok', weather: 'Frío, primeras nevadas.', pack: 'Equipo pesado de invierno.' },
-      { temp: '-20 a -9°C', rating: 'good', weather: 'Muy frío; el Festival de Hielo comienza a finales de diciembre.', pack: 'Equipo para frío extremo.' },
+      { temp: '-20 a -9°C', rating: 'good', weather: 'Mucho frío; el Festival de Hielo comienza a finales de diciembre.', pack: 'Equipo para frío extremo.' },
     ],
   };
 
