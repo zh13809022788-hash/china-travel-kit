@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const titel = 'Wichtige chinesische Redewendungen für Ihre Reise';
+const titel = 'Nützliche chinesische Redewendungen für Reisende';
 const beschreibung =
-  'Eine praktische, druckbare Sammlung wichtiger Mandarin-Redewendungen für Reisen in China – mit Pinyin und deutscher Bedeutung. Enthält Begrüßungen, Bezahlen, Verkehr, Essen und Notfälle.';
+  'Eine praktische, druckbare Sammlung nützlicher Mandarin-Redewendungen für Reisen in China – mit Pinyin und deutscher Bedeutung. Mit Formulierungen für Begrüßungen, Bezahlen, unterwegs sein, Essen und Notfälle.';
 
 interface Redewendung {
   de: string;
@@ -24,20 +24,20 @@ interface Gruppe {
 
 const gruppen: Gruppe[] = [
   {
-    id: 'grundlagen', bezeichnung: 'Begrüßung & Grundlagen', symbol: '👋',
+    id: 'grundlagen', bezeichnung: 'Begrüßung & Grundbegriffe', symbol: '👋',
     redewendungen: [
       { de: 'Hallo', zh: '你好', pinyin: 'nǐ hǎo' },
       { de: 'Danke', zh: '谢谢', pinyin: 'xièxie' },
       { de: 'Gern geschehen', zh: '不客气', pinyin: 'bú kèqi' },
-      { de: 'Entschuldigung / Verzeihung', zh: '对不起', pinyin: 'duìbuqǐ' },
-      { de: 'Ja / Genau', zh: '对', pinyin: 'duì' },
+      { de: 'Entschuldigung / Es tut mir leid', zh: '对不起', pinyin: 'duìbuqǐ' },
+      { de: 'Ja / Das stimmt', zh: '对', pinyin: 'duì' },
       { de: 'Nein / Nicht', zh: '不是', pinyin: 'bú shì' },
       { de: 'Ich verstehe nicht', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
       { de: 'Sprechen Sie Englisch?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
     ],
   },
   {
-    id: 'bezahlung', bezeichnung: 'Geld & Bezahlen', symbol: '💳',
+    id: 'bezahlen', bezeichnung: 'Geld & Bezahlen', symbol: '💳',
     redewendungen: [
       { de: 'Wie viel kostet das?', zh: '多少钱？', pinyin: 'duōshao qián?' },
       { de: 'Kann ich mit Alipay bezahlen?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
@@ -48,7 +48,7 @@ const gruppen: Gruppe[] = [
     ],
   },
   {
-    id: 'verkehr', bezeichnung: 'Unterwegs', symbol: '🚕',
+    id: 'unterwegs', bezeichnung: 'Unterwegs', symbol: '🚕',
     redewendungen: [
       { de: 'Wo ist die U-Bahn?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
       { de: 'Bitte bringen Sie mich zu dieser Adresse', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
@@ -62,7 +62,7 @@ const gruppen: Gruppe[] = [
     id: 'essen', bezeichnung: 'Essen & Trinken', symbol: '🍜',
     redewendungen: [
       { de: 'Die Speisekarte, bitte', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
-      { de: 'Ich lebe vegetarisch', zh: '我吃素', pinyin: 'wǒ chī sù' },
+      { de: 'Ich bin Vegetarier / Vegetarierin', zh: '我吃素', pinyin: 'wǒ chī sù' },
       { de: 'Bitte nicht scharf', zh: '请不要辣', pinyin: 'qǐng búyào là' },
       { de: 'Wasser, bitte', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
       { de: 'Die Rechnung, bitte', zh: '买单', pinyin: 'mǎidān' },
@@ -70,7 +70,7 @@ const gruppen: Gruppe[] = [
     ],
   },
   {
-    id: 'hilfe', bezeichnung: 'Hilfe & Notfälle', symbol: '🆘',
+    id: 'notfaelle', bezeichnung: 'Hilfe & Notfälle', symbol: '🆘',
     redewendungen: [
       { de: 'Hilfe!', zh: '救命！', pinyin: 'jiùmìng!' },
       { de: 'Wo ist die Toilette?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
@@ -86,14 +86,13 @@ const gruppen: Gruppe[] = [
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Wichtige chinesische Redewendungen</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Hilfsmittel</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Nützliche chinesische Redewendungen</h1>
       <p class="mt-3 text-lg text-gray-600">{beschreibung}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- Filter und Aktionen -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
       <button data-filter="alle" class="phrase-filter btn-primary text-sm">Alle Themen</button>
       {gruppen.map((gruppe) => (
@@ -106,7 +105,6 @@ const gruppen: Gruppe[] = [
       </button>
     </div>
 
-    <!-- Redewendungen nach Themen -->
     <div class="mt-6 space-y-8">
       {gruppen.map((gruppe) => (
         <section class="phrase-group" data-group={gruppe.id}>
@@ -125,9 +123,9 @@ const gruppen: Gruppe[] = [
     </div>
 
     <AffiliateCta
-      title="Bleiben Sie auch unterwegs online, um schnell übersetzen zu können"
-      description="Mit einer China-Reise-eSIM funktionieren Übersetzungs-Apps und Karten direkt ab Ihrer Ankunft."
-      buttonText="Jetzt online gehen"
+      title="Bleiben Sie online, damit Sie unterwegs übersetzen können"
+      description="Mit einer eSIM für China funktionieren Übersetzungs-Apps und Karten direkt nach der Landung."
+      buttonText="Jetzt verbinden"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
