@@ -8,7 +8,7 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 const title = 'RMB-Währungsrechner für China-Reisende';
 const description =
-  'Rechne deine Heimatwährung in chinesische Yuan (RMB) und zurück um und sieh, was alltägliche Dinge in China kosten, damit du Preise direkt vor Ort einschätzen kannst.';
+  'Rechne deine Heimatwährung in chinesische Yuan (RMB) und zurück um und sieh, was alltägliche Dinge in China kosten, damit du Preise direkt vor Ort besser einschätzen kannst.';
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
@@ -65,12 +65,12 @@ const description =
     <!-- Preise in China -->
     <section class="mt-8">
       <h2 class="text-xl font-bold text-gray-900">Was Dinge in China kosten</h2>
-      <p class="mt-1 text-sm text-gray-500">Typische Preise in RMB, mit deiner Währung zum Vergleich.</p>
+      <p class="mt-1 text-sm text-gray-500">Typische Preise in RMB, zum Vergleich auch in deiner Währung.</p>
       <div id="cost-grid" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
     </section>
 
     <AffiliateCta
-      title="Wechselstuben vermeiden"
+      title="Wechselstuben meiden"
       description="Verbinde eine Karte ohne Fremdwährungsgebühren mit Alipay oder WeChat Pay und zahle zum echten Wechselkurs, ohne Aufschlag beim Bargeldtausch."
       buttonText="Zahlungs-Setup ansehen"
       placeholder={AFFILIATE_LINKS.payment}
@@ -96,13 +96,13 @@ const description =
 
   const commonCosts: { label: string; rmb: number }[] = [
     { label: 'Flasche Wasser', rmb: 2 },
-    { label: 'Metrofahrt', rmb: 4 },
+    { label: 'Fahrt mit der Metro', rmb: 4 },
     { label: 'Streetfood-Snack', rmb: 10 },
     { label: 'Kaffee im Café', rmb: 30 },
-    { label: 'Mahlzeit in einem einfachen Restaurant', rmb: 45 },
-    { label: 'Kurze DiDi- oder Taxifahrt', rmb: 25 },
+    { label: 'Essen in einem einfachen Restaurant', rmb: 45 },
+    { label: 'Kurze Fahrt mit DiDi oder dem Taxi', rmb: 25 },
     { label: 'Hochgeschwindigkeitszug (1 bis 2 Std.)', rmb: 250 },
-    { label: 'Ticket für Museum oder Sehenswürdigkeit', rmb: 60 },
+    { label: 'Eintritt für Museum oder Sehenswürdigkeit', rmb: 60 },
     { label: 'Mittelklassehotel pro Nacht', rmb: 450 },
   ];
 
@@ -132,7 +132,7 @@ const description =
 
   function updateMeta() {
     if (rateLine) {
-      rateLine.textContent = `Referenzkurs: 1 ${currencyEl.value} entspricht etwa ¥${rate().toFixed(2)} RMB`;
+      rateLine.textContent = `Referenzkurs: 1 ${currencyEl.value} entspricht ungefähr ¥${rate().toFixed(2)} RMB`;
     }
     if (costGrid) {
       costGrid.innerHTML = commonCosts
