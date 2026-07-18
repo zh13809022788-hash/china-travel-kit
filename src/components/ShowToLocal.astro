@@ -9,22 +9,40 @@ interface ToolCard {
 interface Props {
   themeId: string;
   tools: ToolCard[];
+  locale?: string;
 }
 
-const { themeId, tools } = Astro.props;
+const { themeId, tools, locale = 'en' } = Astro.props;
+
+const UI = {
+  en: { kicker: 'Show to local', heading: 'Translation cards', desc: 'Tap a card to show a full-screen Chinese message. Add your own phrase when the preset cards are not enough.', addBtn: 'Add custom card', labelEn: 'English note', labelCn: 'Chinese text', showBtn: 'Show custom card', overlayLabel: 'Translation card', sizeBtn: 'Large type', sizeAlt: 'Normal type', themeBtn: 'Light mode', themeAlt: 'High contrast', closeBtn: 'Close', customName: 'Custom card', fallback: 'Please help me.', complete: 'complete' },
+  de: { kicker: 'Vor Ort zeigen', heading: 'Übersetzungskarten', desc: 'Tippe auf eine Karte, um eine chinesische Nachricht im Vollbild anzuzeigen. Füge einen eigenen Satz hinzu, wenn die vorgegebenen Karten nicht ausreichen.', addBtn: 'Eigene Karte', labelEn: 'Englischer Hinweis', labelCn: 'Chinesischer Text', showBtn: 'Karte anzeigen', overlayLabel: 'Übersetzungskarte', sizeBtn: 'Große Schrift', sizeAlt: 'Normale Schrift', themeBtn: 'Heller Modus', themeAlt: 'Hoher Kontrast', closeBtn: 'Schließen', customName: 'Eigene Karte', fallback: 'Bitte helfen Sie mir.', complete: 'erledigt' },
+  es: { kicker: 'Mostrar al local', heading: 'Tarjetas de traducción', desc: 'Toca una tarjeta para mostrar un mensaje en chino a pantalla completa. Añade tu propia frase si las tarjetas predefinidas no son suficientes.', addBtn: 'Añadir tarjeta', labelEn: 'Nota en inglés', labelCn: 'Texto en chino', showBtn: 'Mostrar tarjeta', overlayLabel: 'Tarjeta de traducción', sizeBtn: 'Texto grande', sizeAlt: 'Texto normal', themeBtn: 'Modo claro', themeAlt: 'Alto contraste', closeBtn: 'Cerrar', customName: 'Tarjeta personalizada', fallback: 'Por favor, ayúdeme.', complete: 'completado' },
+  fr: { kicker: 'Montrer au local', heading: 'Cartes de traduction', desc: 'Appuyez sur une carte pour afficher un message en chinois en plein écran. Ajoutez votre propre phrase si les cartes prédéfinies ne suffisent pas.', addBtn: 'Ajouter une carte', labelEn: 'Note en anglais', labelCn: 'Texte en chinois', showBtn: 'Afficher la carte', overlayLabel: 'Carte de traduction', sizeBtn: 'Grand texte', sizeAlt: 'Texte normal', themeBtn: 'Mode clair', themeAlt: 'Contraste élevé', closeBtn: 'Fermer', customName: 'Carte personnalisée', fallback: 'Aidez-moi, s\'il vous plaît.', complete: 'terminé' },
+  ru: { kicker: 'Показать местному', heading: 'Карточки перевода', desc: 'Нажмите на карточку, чтобы показать текст на китайском в полноэкранном режиме. Добавьте свою фразу, если готовых карточек недостаточно.', addBtn: 'Добавить карточку', labelEn: 'Заметка на английском', labelCn: 'Текст на китайском', showBtn: 'Показать карточку', overlayLabel: 'Карточка перевода', sizeBtn: 'Крупный шрифт', sizeAlt: 'Обычный шрифт', themeBtn: 'Светлый режим', themeAlt: 'Высокий контраст', closeBtn: 'Закрыть', customName: 'Своя карточка', fallback: 'Помогите, пожалуйста.', complete: 'завершено' },
+  ja: { kicker: '現地の人に見せる', heading: '翻訳カード', desc: 'カードをタップして中国語メッセージを全画面表示。既存のカードで足りない場合は、自分のフレーズを追加できます。', addBtn: 'カードを追加', labelEn: '英語のメモ', labelCn: '中国語のテキスト', showBtn: 'カードを表示', overlayLabel: '翻訳カード', sizeBtn: '大文字', sizeAlt: '標準文字', themeBtn: 'ライトモード', themeAlt: 'ハイコントラスト', closeBtn: '閉じる', customName: 'カスタムカード', fallback: '助けてください。', complete: '完了' },
+  ko: { kicker: '현지인에게 보여주기', heading: '번역 카드', desc: '카드를 탭하면 중국어 메시지가 전체 화면으로 표시됩니다. 준비된 카드로 부족하다면 직접 문구를 추가하세요.', addBtn: '카드 추가', labelEn: '영어 메모', labelCn: '중국어 텍스트', showBtn: '카드 보기', overlayLabel: '번역 카드', sizeBtn: '큰 글씨', sizeAlt: '보통 글씨', themeBtn: '라이트 모드', themeAlt: '고대비', closeBtn: '닫기', customName: '커스텀 카드', fallback: '도와주세요.', complete: '완료' },
+  'zh-tw': { kicker: '向當地人展示', heading: '翻譯卡片', desc: '點擊卡片即可全螢幕顯示中文訊息。如果預設卡片不夠用，可以自行新增句子。', addBtn: '新增卡片', labelEn: '英文備註', labelCn: '中文文字', showBtn: '顯示卡片', overlayLabel: '翻譯卡片', sizeBtn: '大字型', sizeAlt: '標準字型', themeBtn: '淺色模式', themeAlt: '高對比', closeBtn: '關閉', customName: '自訂卡片', fallback: '請幫我。', complete: '完成' },
+};
+const t = UI[locale] ?? UI.en;
 ---
 
-<section class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm" data-survival-theme={themeId}>
+<section class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm" data-survival-theme={themeId}
+  data-show-local-size-btn={t.sizeBtn}
+  data-show-local-size-alt={t.sizeAlt}
+  data-show-local-theme-btn={t.themeBtn}
+  data-show-local-theme-alt={t.themeAlt}
+  data-show-local-close={t.closeBtn}
+  data-show-local-complete={t.complete}
+>
   <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
     <div>
-      <p class="section-kicker">Show to local</p>
-      <h2 class="mt-1 text-2xl font-bold text-gray-950">Translation cards</h2>
-      <p class="mt-2 text-sm leading-6 text-gray-600">
-        Tap a card to show a full-screen Chinese message. Add your own phrase when the preset cards are not enough.
-      </p>
+      <p class="section-kicker">{t.kicker}</p>
+      <h2 class="mt-1 text-2xl font-bold text-gray-950">{t.heading}</h2>
+      <p class="mt-2 text-sm leading-6 text-gray-600">{t.desc}</p>
     </div>
     <button class="show-local-open-custom btn-outline" type="button" data-clarity-click="survival-custom-card">
-      Add custom card
+      {t.addBtn}
     </button>
   </div>
 
@@ -48,29 +66,32 @@ const { themeId, tools } = Astro.props;
   <div class="custom-card-panel mt-5 hidden rounded-lg border border-gray-200 bg-gray-50 p-4">
     <div class="grid gap-3 md:grid-cols-2">
       <label class="text-sm font-medium text-gray-700">
-        English note
+        {t.labelEn}
         <textarea class="custom-en mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" rows="3" placeholder="I am vegetarian. No meat or seafood, please."></textarea>
       </label>
       <label class="text-sm font-medium text-gray-700">
-        Chinese text
+        {t.labelCn}
         <textarea class="custom-cn mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" rows="3" placeholder="我是素食者，请不要放肉和海鲜。"></textarea>
       </label>
     </div>
-    <button class="custom-show btn-primary mt-3" type="button" data-clarity-click="survival-show-custom-card">Show custom card</button>
+    <button class="custom-show btn-primary mt-3" type="button" data-clarity-click="survival-show-custom-card">{t.showBtn}</button>
   </div>
 </section>
 
-<div class="show-local-overlay fixed inset-0 z-50 hidden bg-black text-white" role="dialog" aria-modal="true" aria-label="Show translation card">
+<div class="show-local-overlay fixed inset-0 z-50 hidden bg-black text-white" role="dialog" aria-modal="true" aria-label={t.overlayLabel}
+  data-size-btn={t.sizeBtn} data-size-alt={t.sizeAlt}
+  data-theme-btn={t.themeBtn} data-theme-alt={t.themeAlt}
+>
   <div class="flex min-h-screen flex-col">
     <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/20 p-4">
       <div>
-        <p class="overlay-name text-sm font-semibold uppercase tracking-wide text-white/70">Translation card</p>
+        <p class="overlay-name text-sm font-semibold uppercase tracking-wide text-white/70">{t.overlayLabel}</p>
         <p class="overlay-en text-sm text-white/80"></p>
       </div>
       <div class="flex flex-wrap gap-2">
-        <button class="overlay-size rounded-lg border border-white/30 px-3 py-2 text-sm font-semibold" type="button">Large type</button>
-        <button class="overlay-theme rounded-lg border border-white/30 px-3 py-2 text-sm font-semibold" type="button">Light mode</button>
-        <button class="overlay-close rounded-lg bg-white px-3 py-2 text-sm font-semibold text-black" type="button">Close</button>
+        <button class="overlay-size rounded-lg border border-white/30 px-3 py-2 text-sm font-semibold" type="button">{t.sizeBtn}</button>
+        <button class="overlay-theme rounded-lg border border-white/30 px-3 py-2 text-sm font-semibold" type="button">{t.themeBtn}</button>
+        <button class="overlay-close rounded-lg bg-white px-3 py-2 text-sm font-semibold text-black" type="button">{t.closeBtn}</button>
       </div>
     </div>
     <div class="flex flex-1 items-center justify-center p-6">
@@ -89,10 +110,14 @@ const { themeId, tools } = Astro.props;
   const themeBtn = overlay?.querySelector<HTMLButtonElement>('.overlay-theme');
   let large = true;
   let dark = true;
+  const jsSizeBtn = overlay?.dataset.sizeBtn ?? 'Large type';
+  const jsSizeAlt = overlay?.dataset.sizeAlt ?? 'Normal type';
+  const jsThemeBtn = overlay?.dataset.themeBtn ?? 'Light mode';
+  const jsThemeAlt = overlay?.dataset.themeAlt ?? 'High contrast';
 
-  function showCard(cn: string, en: string, name = 'Translation card') {
+  function showCard(cn: string, en: string, name = t.overlayLabel) {
     if (!overlay || !overlayCn || !overlayEn || !overlayName) return;
-    overlayCn.textContent = cn || 'Please help me.';
+    overlayCn.textContent = cn || t.fallback;
     overlayEn.textContent = en || '';
     overlayName.textContent = name;
     overlay.classList.remove('hidden');
@@ -123,7 +148,7 @@ const { themeId, tools } = Astro.props;
     });
 
     customShow?.addEventListener('click', () => {
-      showCard(customCn?.value.trim() ?? '', customEn?.value.trim() ?? '', 'Custom card');
+      showCard(customCn?.value.trim() ?? '', customEn?.value.trim() ?? '', t.customName);
     });
   });
 
@@ -141,7 +166,7 @@ const { themeId, tools } = Astro.props;
     overlayCn?.classList.toggle('sm:text-7xl', large);
     overlayCn?.classList.toggle('text-3xl', !large);
     overlayCn?.classList.toggle('sm:text-5xl', !large);
-    sizeBtn.textContent = large ? 'Normal type' : 'Large type';
+    sizeBtn.textContent = large ? jsSizeAlt : jsSizeBtn;
   });
 
   themeBtn?.addEventListener('click', () => {
@@ -151,6 +176,6 @@ const { themeId, tools } = Astro.props;
     overlay.classList.toggle('text-white', dark);
     overlay.classList.toggle('bg-white', !dark);
     overlay.classList.toggle('text-black', !dark);
-    themeBtn.textContent = dark ? 'Light mode' : 'High contrast';
+    themeBtn.textContent = dark ? jsThemeAlt : jsThemeBtn;
   });
 </script>
