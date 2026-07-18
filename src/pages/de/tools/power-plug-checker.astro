@@ -61,7 +61,7 @@ const countries = [
 </BaseLayout>
 
 <script>
-  // Inländische Spannung und verwendete Steckertypen je Land.
+  // Netzspannung und verwendete Steckertypen je Land.
   const data: Record<string, { volts: number; plugs: string[] }> = {
     'Vereinigte Staaten': { volts: 120, plugs: ['A', 'B'] },
     'Kanada': { volts: 120, plugs: ['A', 'B'] },
@@ -84,7 +84,7 @@ const countries = [
     'Andere': { volts: 0, plugs: [] },
   };
 
-  // China akzeptiert die Steckertypen A, C und I.
+  // In China werden die Steckertypen A, C und I verwendet.
   const CHINA_PLUGS = ['A', 'C', 'I'];
   const CHINA_VOLTS = 220;
 
