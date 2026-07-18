@@ -6,7 +6,7 @@ import AdSlot from '../../../components/AdSlot.astro';
 
 const title = 'Chinesische Adresskarte zum Vorzeigen';
 const description =
-  'Erstelle auf deinem Smartphone eine große chinesische Hinweiskarte für Taxifahrer, Hotelpersonal und zur Wegbeschreibung in China. Kein Login, keine App-Installation, keine Speicherung persönlicher Daten.';
+  'Erstelle auf deinem Smartphone eine gut lesbare chinesische Hinweiskarte für Taxifahrer, Hotelpersonal und zur Wegbeschreibung in China. Keine Anmeldung, keine App-Installation, keine Speicherung persönlicher Daten.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
@@ -85,13 +85,13 @@ const description =
               <h2 class="text-lg font-bold text-gray-900">给司机看的中文小条</h2>
             </div>
             <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
-              Auch ohne Internet nutzbar
+              Funktioniert auch ohne Internet
             </span>
           </div>
 
           <div class="py-5">
             <p id="main-line" class="text-center text-2xl font-black leading-tight text-gray-950 sm:text-4xl">
-              请帮我去这个地址
+              请带我去这个地址
             </p>
             <p
               id="address-line"
@@ -110,7 +110,7 @@ const description =
               Text kopieren
             </button>
             <button id="fullscreen-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
-              Vollbild anzeigen
+              Im Vollbild anzeigen
             </button>
             <a href="/de/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
               KI um Hilfe bitten
@@ -155,9 +155,9 @@ const description =
   const noteMap: Record<string, string> = {
     route: '请按照导航路线行驶，谢谢。',
     pickup: '我在这里等您，请在打车软件里联系我。',
-    hotel: '请帮我到这家酒店，必要时请联系酒店前台。',
+    hotel: '请带我去这家酒店，如有需要请联系酒店前台。',
     stop: '请在安全合法的地方停车，谢谢。',
-    receipt: '如果可以的话，请给我发票或收据，谢谢。',
+    receipt: '如果方便的话，请给我发票或收据，谢谢。',
   };
 
   const destination = document.getElementById('destination') as HTMLTextAreaElement | null;
@@ -179,7 +179,7 @@ const description =
     const noteText = noteMap[note?.value || 'route'];
     const extraText = extra?.value.trim();
     return [
-      '请帮我去这个地址：',
+      '请带我去这个地址：',
       address,
       noteText,
       extraText ? `补充说明：${extraText}` : '',
@@ -189,7 +189,7 @@ const description =
   function render() {
     const address = destination?.value.trim();
     const extraText = extra?.value.trim();
-    if (mainLine) mainLine.textContent = '请帮我去这个地址：';
+    if (mainLine) mainLine.textContent = '请带我去这个地址：';
     if (addressLine) addressLine.textContent = address || 'Gib links eine Adresse ein';
     if (noteLine) noteLine.textContent = noteMap[note?.value || 'route'];
     if (extraLine) {
@@ -231,13 +231,13 @@ const description =
       fullscreenBtn.textContent = 'Vollbild beenden';
     } else {
       await document.exitFullscreen?.();
-      fullscreenBtn.textContent = 'Vollbild anzeigen';
+      fullscreenBtn.textContent = 'Im Vollbild anzeigen';
     }
   });
 
   document.addEventListener('fullscreenchange', () => {
     if (!fullscreenBtn) return;
-    fullscreenBtn.textContent = document.fullscreenElement ? 'Vollbild beenden' : 'Vollbild anzeigen';
+    fullscreenBtn.textContent = document.fullscreenElement ? 'Vollbild beenden' : 'Im Vollbild anzeigen';
   });
 
   quickButtons.forEach((button) => {
