@@ -42,8 +42,8 @@ export default defineConfig({
           if (allowedZhTw.includes(path)) return true;
           return false;
         }
-        // Exclude low-value paths; all locales are now included in sitemap
-        const excludedPrefixes = ['/authors/'];
+        // Keep only English pages; exclude other non-English locales and low-value paths
+        const excludedPrefixes = ['/ja/', '/ko/', '/ru/', '/fr/', '/de/', '/es/', '/authors/'];
         if (excludedPrefixes.some((prefix) => path.startsWith(prefix))) return false;
         if (path === '/404' || path === '/404/') return false;
         return true;
