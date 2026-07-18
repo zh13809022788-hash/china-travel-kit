@@ -13,7 +13,7 @@ const cityPosts = allPosts
   .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-const title = '外籍旅客中國城市指南';
+const title = '外籍旅客的中國城市指南';
 const description =
   '透過北京、上海、廣州、成都、西安、杭州、重慶與三亞等城市指南，規劃更順暢的中國行程，並掌握機場、地鐵、美食與市區交通安排。';
 
@@ -41,7 +41,7 @@ const cities = [
     days: '4 到 5 天',
     bestSeason: '9 月到 10 月',
     difficulty: '中等',
-    whyGo: '能深入感受帝王歷史、博物館文化，前往長城也最方便。',
+    whyGo: '能深入感受帝王歷史與博物館文化，前往長城也最方便。',
     next: '/zh-tw/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
     nextLabel: '大興機場進城指南',
   },
@@ -49,7 +49,7 @@ const cities = [
     id: 'shanghai',
     name: '上海',
     href: '/zh-tw/posts/shanghai-city-guide-for-foreigners/',
-    desc: '適合想要交通方便、國際美食多、天際線散步舒服，還有地鐵完善的旅客。',
+    desc: '適合想要交通便利、國際美食選擇多、天際線散步舒適，且地鐵系統完善的旅客。',
     days: '3 到 4 天',
     bestSeason: '3 月到 5 月、10 月到 11 月',
     difficulty: '容易',
@@ -65,7 +65,7 @@ const cities = [
     days: '3 到 5 天',
     bestSeason: '3 月到 6 月、9 月到 11 月',
     difficulty: '中等',
-    whyGo: '有熊貓、川菜、茶館文化，花費相對親民，也方便延伸到中國西部。',
+    whyGo: '有熊貓、川菜與茶館文化，花費相對親民，也方便延伸到中國西部。',
     next: '/zh-tw/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
     nextLabel: '成都街頭美食指南',
   },
@@ -77,7 +77,7 @@ const cities = [
     days: '3 到 4 天',
     bestSeason: '3 月到 5 月、9 月到 11 月',
     difficulty: '中等',
-    whyGo: '兵馬俑、古城牆、回民街美食都很有代表性，歷史氛圍也特別濃厚。',
+    whyGo: '兵馬俑、古城牆與回民街美食都很有代表性，歷史氛圍也特別濃厚。',
     next: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/',
     nextLabel: '前往西安的高鐵指南',
   },
@@ -89,7 +89,7 @@ const cities = [
     days: '3 到 4 天',
     bestSeason: '10 月到 12 月、3 月到 4 月',
     difficulty: '中等',
-    whyGo: '可吃到道地粵式點心，也能安排陳家祠、廣州塔，氣候通常比北京和上海溫暖。',
+    whyGo: '可吃到道地粵式點心，也能安排陳家祠與廣州塔，氣候通常比北京和上海溫暖。',
     next: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     nextLabel: '粵菜點餐指南',
   },
@@ -113,9 +113,9 @@ const cities = [
     days: '2 到 3 天',
     bestSeason: '3 月到 5 月、9 月到 11 月',
     difficulty: '容易到中等',
-    whyGo: '西湖、茶村、寺廟都很值得安排，也很適合從上海搭高鐵順遊。',
+    whyGo: '西湖、茶村與寺廟都很值得安排，也很適合從上海搭高鐵順遊。',
     next: '/zh-tw/transport/',
-    nextLabel: '規劃火車與市內交通',
+    nextLabel: '規劃火車與市區交通',
   },
   {
     id: 'sanya',
@@ -135,15 +135,15 @@ const routes = [
   {
     name: '第一次中國旅行，8 到 10 天',
     plan: '上海 3 天、杭州 2 天、北京 4 天',
-    fit: '兼顧入境方便、經典風景與歷史重點，整體最平衡。',
+    fit: '兼顧入境便利、經典風景與歷史重點，整體最平衡。',
   },
   {
-    name: '美食加慢步調，7 到 9 天',
+    name: '美食與慢步調之旅，7 到 9 天',
     plan: '成都 4 天、北京或上海 3 到 4 天',
     fit: '適合想看熊貓、泡茶館、吃火鍋，同時搭配一座主要門戶城市的旅客。',
   },
   {
-    name: '冬季避寒，6 到 10 天',
+    name: '冬季避寒之旅，6 到 10 天',
     plan: '三亞 4 到 6 天、上海 2 到 3 天',
     fit: '如果中國北方太冷，想安排海灘加城市的簡單組合，這條路線很合適。',
   },
@@ -158,7 +158,7 @@ const faqItems = [
   {
     question: '第一次去中國，一趟行程安排幾個城市最剛好？',
     answer:
-      '如果是第一次去、總天數約 8 到 10 天，安排兩到三個城市通常最剛好。中國幅員很大，機場往返、火車站進出、安檢和換飯店都可能比預期花更多時間。建議選一座門戶城市、一個文化或風景重點，再加一個可有可無的延伸點就夠了。',
+      '如果是第一次去、總天數約 8 到 10 天，安排兩到三個城市通常最剛好。中國幅員遼闊，機場往返、火車站進出、安檢和換飯店都可能比預期花更多時間。建議選一座門戶城市、一個文化或風景重點，再加一個可有可無的延伸點就夠了。',
   },
   {
     question: '哪一座城市最適合在中國長住？',
@@ -264,8 +264,8 @@ const faqJsonLd = {
         <p class="section-kicker">路線規劃</p>
         <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">實用的城市搭配方式</h2>
         <p class="mt-3 leading-7 text-gray-600">
-          好安排的中國行程，通常會讓每座城市各自扮演不同角色。上海適合當作好進出的第一站，北京主打歷史，杭州偏風景，成都適合美食與延伸到中國西部，
-          三亞則是暖和放鬆的度假選擇。若天數不多，盡量不要塞進太多航班或頻繁轉車。
+          好安排的中國行程，通常會讓每座城市各自扮演不同角色。上海適合當作方便進出的第一站，北京主打歷史，杭州偏重風景，成都適合美食與延伸到中國西部，
+          三亞則是溫暖放鬆的度假選擇。若天數不多，盡量不要塞進太多航班或頻繁轉車。
         </p>
       </div>
       <div class="grid gap-4">
@@ -303,8 +303,8 @@ const faqJsonLd = {
         <h2 class="mt-1 text-xl font-bold text-gray-950">先把行程後勤準備好</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
           <li><a href="/zh-tw/payment/" class="font-semibold text-brand-700">付款：</a>如果要去較小的城市，先把 Alipay、WeChat Pay 設定好，也準備一點現金備用。</li>
-          <li><a href="/zh-tw/esim/" class="font-semibold text-brand-700">網路：</a>在大量依賴地圖和翻譯前，先決定要用 eSIM、漫遊還是本地 SIM。</li>
-          <li><a href="/zh-tw/transport/" class="font-semibold text-brand-700">交通：</a>比較火車、機場接送、DiDi 與地鐵 QR 碼哪個最適合你的路線。</li>
+          <li><a href="/zh-tw/esim/" class="font-semibold text-brand-700">網路：</a>在大量依賴地圖和翻譯之前，先決定要用 eSIM、漫遊還是本地 SIM。</li>
+          <li><a href="/zh-tw/transport/" class="font-semibold text-brand-700">交通：</a>比較火車、機場接送、DiDi 與地鐵 QR 碼，看看哪個最適合你的路線。</li>
           <li><a href="/zh-tw/tools/best-time-to-visit/" class="font-semibold text-brand-700">時機：</a>用月份查看天氣、假期和人潮壓力，再決定出發時間。</li>
         </ul>
       </aside>
