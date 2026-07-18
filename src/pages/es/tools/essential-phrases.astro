@@ -11,7 +11,7 @@ const description =
   'Una lista práctica e imprimible de frases esenciales en chino mandarín para turistas en China, con pinyin y español. Incluye saludos, pagos, transporte, comida y emergencias.';
 
 interface Phrase {
-  en: string;
+  es: string;
   zh: string;
   pinyin: string;
 }
@@ -24,60 +24,60 @@ interface Group {
 
 const groups: Group[] = [
   {
-    id: 'basics', label: 'Saludos y básico', icon: '👋',
+    id: 'basicos', label: 'Saludos y frases básicas', icon: '👋',
     phrases: [
-      { en: 'Hola', zh: '你好', pinyin: 'nǐ hǎo' },
-      { en: 'Gracias', zh: '谢谢', pinyin: 'xièxie' },
-      { en: 'De nada', zh: '不客气', pinyin: 'bú kèqi' },
-      { en: 'Perdón / Disculpe', zh: '对不起', pinyin: 'duìbuqǐ' },
-      { en: 'Sí / Correcto', zh: '对', pinyin: 'duì' },
-      { en: 'No / Negación', zh: '不是', pinyin: 'bú shì' },
-      { en: 'No entiendo', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
-      { en: '¿Habla inglés?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
+      { es: 'Hola', zh: '你好', pinyin: 'nǐ hǎo' },
+      { es: 'Gracias', zh: '谢谢', pinyin: 'xièxie' },
+      { es: 'De nada', zh: '不客气', pinyin: 'bú kèqi' },
+      { es: 'Perdón / Disculpe', zh: '对不起', pinyin: 'duìbuqǐ' },
+      { es: 'Sí / Correcto', zh: '对', pinyin: 'duì' },
+      { es: 'No / Negación', zh: '不是', pinyin: 'bú shì' },
+      { es: 'No entiendo', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
+      { es: '¿Habla inglés?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
     ],
   },
   {
-    id: 'payment', label: 'Dinero y pagos', icon: '💳',
+    id: 'pagos', label: 'Dinero y pagos', icon: '💳',
     phrases: [
-      { en: '¿Cuánto cuesta?', zh: '多少钱？', pinyin: 'duōshao qián?' },
-      { en: '¿Puedo usar Alipay?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
-      { en: '¿Puedo usar WeChat Pay?', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng wēixìn zhīfù ma?' },
-      { en: 'Demasiado caro', zh: '太贵了', pinyin: 'tài guì le' },
-      { en: '¿Puedo pagar con tarjeta?', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
-      { en: 'Escanearé tu código', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
+      { es: '¿Cuánto cuesta?', zh: '多少钱？', pinyin: 'duōshao qián?' },
+      { es: '¿Puedo usar Alipay?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
+      { es: '¿Puedo usar WeChat Pay?', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng wēixìn zhīfù ma?' },
+      { es: 'Es demasiado caro', zh: '太贵了', pinyin: 'tài guì le' },
+      { es: '¿Puedo pagar con tarjeta?', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
+      { es: 'Voy a escanear tu código', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
     ],
   },
   {
-    id: 'transport', label: 'Cómo desplazarse', icon: '🚕',
+    id: 'transporte', label: 'Transporte y desplazamientos', icon: '🚕',
     phrases: [
-      { en: '¿Dónde está el metro?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
-      { en: 'Por favor, lléveme a esta dirección', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
-      { en: 'Pare aquí, por favor', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
-      { en: 'Estación de tren', zh: '火车站', pinyin: 'huǒchē zhàn' },
-      { en: 'Aeropuerto', zh: '机场', pinyin: 'jīchǎng' },
-      { en: '¿Cómo llego a...?', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
+      { es: '¿Dónde está el metro?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
+      { es: 'Por favor, lléveme a esta dirección', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
+      { es: 'Pare aquí, por favor', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
+      { es: 'Estación de tren', zh: '火车站', pinyin: 'huǒchē zhàn' },
+      { es: 'Aeropuerto', zh: '机场', pinyin: 'jīchǎng' },
+      { es: '¿Cómo llego a...?', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
     ],
   },
   {
-    id: 'food', label: 'Comida y restaurantes', icon: '🍜',
+    id: 'comida', label: 'Comida y restaurantes', icon: '🍜',
     phrases: [
-      { en: 'El menú, por favor', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
-      { en: 'Soy vegetariano/a', zh: '我吃素', pinyin: 'wǒ chī sù' },
-      { en: 'Sin picante, por favor', zh: '请不要辣', pinyin: 'qǐng búyào là' },
-      { en: 'Agua, por favor', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
-      { en: 'La cuenta, por favor', zh: '买单', pinyin: 'mǎidān' },
-      { en: 'Está delicioso', zh: '很好吃', pinyin: 'hěn hǎochī' },
+      { es: 'El menú, por favor', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
+      { es: 'Soy vegetariano/a', zh: '我吃素', pinyin: 'wǒ chī sù' },
+      { es: 'Sin picante, por favor', zh: '请不要辣', pinyin: 'qǐng búyào là' },
+      { es: 'Agua, por favor', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
+      { es: 'La cuenta, por favor', zh: '买单', pinyin: 'mǎidān' },
+      { es: 'Está delicioso', zh: '很好吃', pinyin: 'hěn hǎochī' },
     ],
   },
   {
-    id: 'help', label: 'Ayuda y emergencias', icon: '🆘',
+    id: 'ayuda', label: 'Ayuda y emergencias', icon: '🆘',
     phrases: [
-      { en: '¡Ayuda!', zh: '救命！', pinyin: 'jiùmìng!' },
-      { en: '¿Dónde está el baño?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
-      { en: 'Necesito un médico', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
-      { en: 'Llame a la policía', zh: '请报警', pinyin: 'qǐng bàojǐng' },
-      { en: 'Estoy perdido/a', zh: '我迷路了', pinyin: 'wǒ mílù le' },
-      { en: 'Por favor, escríbalo', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
+      { es: '¡Ayuda!', zh: '救命！', pinyin: 'jiùmìng!' },
+      { es: '¿Dónde está el baño?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
+      { es: 'Necesito un médico', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
+      { es: 'Llame a la policía', zh: '请报警', pinyin: 'qǐng bàojǐng' },
+      { es: 'Estoy perdido/a', zh: '我迷路了', pinyin: 'wǒ mílù le' },
+      { es: 'Por favor, escríbalo', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
     ],
   },
 ];
@@ -95,14 +95,14 @@ const groups: Group[] = [
 
     <!-- Controles -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
-      <button data-filter="all" class="phrase-filter btn-primary text-sm">Todo</button>
+      <button data-filter="todos" class="phrase-filter btn-primary text-sm">Todas</button>
       {groups.map((g) => (
         <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
           {g.icon} {g.label}
         </button>
       ))}
       <button id="print-btn" class="ml-auto rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
-        🖨️ Imprimir / Guardar PDF
+        🖨️ Imprimir / Guardar como PDF
       </button>
     </div>
 
@@ -114,7 +114,7 @@ const groups: Group[] = [
           <div class="grid gap-3 sm:grid-cols-2">
             {g.phrases.map((p) => (
               <div class="card flex flex-col">
-                <span class="text-sm text-gray-500">{p.en}</span>
+                <span class="text-sm text-gray-500">{p.es}</span>
                 <span class="mt-1 text-2xl font-bold text-gray-900">{p.zh}</span>
                 <span class="mt-0.5 text-sm italic text-brand-600">{p.pinyin}</span>
               </div>
@@ -125,9 +125,9 @@ const groups: Group[] = [
     </div>
 
     <AffiliateCta
-      title="Mantente en línea para traducir sobre la marcha"
-      description="Una eSIM de viaje para China mantiene las aplicaciones de traducción y los mapas funcionando desde el momento en que aterrizas."
-      buttonText="Conéctate"
+      title="Mantente conectado para traducir sobre la marcha"
+      description="Una eSIM de viaje para China mantiene funcionando las aplicaciones de traducción y los mapas desde el momento en que aterrizas."
+      buttonText="Conectarme"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -146,7 +146,7 @@ const groups: Group[] = [
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
       sections.forEach((s) => {
-        s.classList.toggle('hidden', filter !== 'all' && s.dataset.group !== filter);
+        s.classList.toggle('hidden', filter !== 'todos' && s.dataset.group !== filter);
       });
       buttons.forEach((b) => {
         const on = b === btn;
