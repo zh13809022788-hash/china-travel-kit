@@ -1,0 +1,86 @@
+[
+  {
+    "theme_id": "arrival_setup",
+    "slug": "arrival",
+    "title": "Набор выживания для прибытия",
+    "description": "Карточки и чек-лист на первый день для прибытия в аэропорт, заселения в отель, проверки оплаты и транспорта.",
+    "related_paths": [
+      "/posts/first-24-hours-in-china-arrival-checklist/",
+      "/posts/airport-to-city-transport-beijing-shanghai-guangzhou/",
+      "/tools/show-to-driver/"
+    ],
+    "tools": [
+      {
+        "name": "Помощь с адресом отеля",
+        "text_cn": "请帮我去这家酒店。这个是酒店地址。",
+        "text_en": "Please help me get to this hotel. This is the hotel address.",
+        "category": "hotel"
+      },
+      {
+        "name": "Я не говорю по-китайски",
+        "text_cn": "我不会说中文，请用翻译软件和我沟通。",
+        "text_en": "I do not speak Chinese. Please use a translation app to communicate with me.",
+        "category": "communication"
+      },
+      {
+        "name": "Безопасная остановка такси",
+        "text_cn": "请在安全合法的地方停车，谢谢。",
+        "text_en": "Please stop somewhere safe and legal. Thank you.",
+        "category": "transport"
+      }
+    ],
+    "checklist_steps": [
+      "Включите eSIM или роуминг до выхода из аэропорта",
+      "Сделайте один небольшой тестовый платеж через Alipay или WeChat Pay",
+      "Сохраните название и адрес вашего отеля на китайском",
+      "Выберите метро, официальное такси, сервис заказа поездок или трансфер",
+      "Зарядите телефон и пауэрбанк перед сном"
+    ],
+    "ai_prompt": "Help me with my first 24 hours after arriving in China."
+  },
+  {
+    "theme_id": "food_exploration",
+    "slug": "food",
+    "title": "Набор выживания для еды и ресторанов",
+    "description": "Заказ в ресторане, карточки с аллергиями, уровень остроты, фразы для оплаты и подготовка к доставке еды.",
+    "related_paths": [
+      "/food/",
+      "/posts/ordering-food-in-china-without-chinese-meituan-ele-me/",
+      "/posts/chengdu-street-food-safety-spice-levels-what-to-order/"
+    ],
+    "tools": [
+      {
+        "name": "Карточка без кинзы",
+        "text_cn": "我不吃香菜，谢谢。",
+        "text_en": "No cilantro, please.",
+        "category": "food_preference"
+      },
+      {
+        "name": "Аллергия на арахис",
+        "text_cn": "我对花生过敏，请不要放花生或花生酱。",
+        "text_en": "I am allergic to peanuts. Please do not add peanuts or peanut sauce.",
+        "category": "allergy"
+      },
+      {
+        "name": "Менее острое",
+        "text_cn": "请做微辣，少放辣椒。",
+        "text_en": "Please make it mildly spicy and use less chili.",
+        "category": "spice"
+      },
+      {
+        "name": "Нужен счет",
+        "text_cn": "您好，请帮我结账。",
+        "text_en": "Hello, could I have the bill please?",
+        "category": "payment"
+      }
+    ],
+    "checklist_steps": [
+      "Подготовьте карточки с аллергиями или пищевыми ограничениями",
+      "Настройте Alipay или WeChat Pay перед заказом",
+      "Сохраните одно приложение-переводчик для меню",
+      "Узнайте, как попросить не очень острое блюдо",
+      "Держите адрес вашего отеля под рукой для доставки еды"
+    ],
+    "ai_prompt": "Help me order food in China and explain dietary restrictions."
+  }
+]
