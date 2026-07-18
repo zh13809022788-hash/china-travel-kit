@@ -1,0 +1,86 @@
+[
+  {
+    "theme_id": "arrival_setup",
+    "slug": "arrival",
+    "title": "抵達準備求生包",
+    "description": "適用於抵達當天的卡片與檢查清單，涵蓋機場入境、飯店入住、支付測試與交通安排。",
+    "related_paths": [
+      "/posts/first-24-hours-in-china-arrival-checklist/",
+      "/posts/airport-to-city-transport-beijing-shanghai-guangzhou/",
+      "/tools/show-to-driver/"
+    ],
+    "tools": [
+      {
+        "name": "飯店地址協助",
+        "text_cn": "请帮我去这家酒店。这个是酒店地址。",
+        "text_en": "Please help me get to this hotel. This is the hotel address.",
+        "category": "hotel"
+      },
+      {
+        "name": "我不會說中文",
+        "text_cn": "我不会说中文，请用翻译软件和我沟通。",
+        "text_en": "I do not speak Chinese. Please use a translation app to communicate with me.",
+        "category": "communication"
+      },
+      {
+        "name": "安全下車地點",
+        "text_cn": "请在安全合法的地方停车，谢谢。",
+        "text_en": "Please stop somewhere safe and legal. Thank you.",
+        "category": "transport"
+      }
+    ],
+    "checklist_steps": [
+      "離開機場前先啟用 eSIM 或漫遊",
+      "先用支付寶或微信支付進行一筆小額測試付款",
+      "儲存你的飯店中文名稱與地址",
+      "選擇地鐵、官方計程車、叫車服務或接送",
+      "睡前將手機和行動電源充好電"
+    ],
+    "ai_prompt": "Help me with my first 24 hours after arriving in China."
+  },
+  {
+    "theme_id": "food_exploration",
+    "slug": "food",
+    "title": "美食與用餐求生包",
+    "description": "涵蓋餐廳點餐、過敏卡、辣度、付款用語，以及外送準備。",
+    "related_paths": [
+      "/food/",
+      "/posts/ordering-food-in-china-without-chinese-meituan-ele-me/",
+      "/posts/chengdu-street-food-safety-spice-levels-what-to-order/"
+    ],
+    "tools": [
+      {
+        "name": "不要香菜卡",
+        "text_cn": "我不吃香菜，谢谢。",
+        "text_en": "No cilantro, please.",
+        "category": "food_preference"
+      },
+      {
+        "name": "花生過敏",
+        "text_cn": "我对花生过敏，请不要放花生或花生酱。",
+        "text_en": "I am allergic to peanuts. Please do not add peanuts or peanut sauce.",
+        "category": "allergy"
+      },
+      {
+        "name": "少辣",
+        "text_cn": "请做微辣，少放辣椒。",
+        "text_en": "Please make it mildly spicy and use less chili.",
+        "category": "spice"
+      },
+      {
+        "name": "需要結帳",
+        "text_cn": "您好，请帮我结账。",
+        "text_en": "Hello, could I have the bill please?",
+        "category": "payment"
+      }
+    ],
+    "checklist_steps": [
+      "準備好過敏或飲食限制卡",
+      "點餐前先設定好支付寶或微信支付",
+      "儲存一個可翻譯菜單的翻譯 App",
+      "學會怎麼要求微辣",
+      "準備好飯店地址以便叫外送"
+    ],
+    "ai_prompt": "Help me order food in China and explain dietary restrictions."
+  }
+]
