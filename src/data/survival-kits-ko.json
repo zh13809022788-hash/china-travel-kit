@@ -1,0 +1,86 @@
+[
+  {
+    "theme_id": "arrival_setup",
+    "slug": "arrival",
+    "title": "도착 준비 생존 키트",
+    "description": "공항 도착, 호텔 체크인, 결제 테스트, 교통 이용을 위한 첫날 카드와 체크리스트입니다.",
+    "related_paths": [
+      "/posts/first-24-hours-in-china-arrival-checklist/",
+      "/posts/airport-to-city-transport-beijing-shanghai-guangzhou/",
+      "/tools/show-to-driver/"
+    ],
+    "tools": [
+      {
+        "name": "호텔 주소 도움말",
+        "text_cn": "请帮我去这家酒店。这个是酒店地址。",
+        "text_en": "Please help me get to this hotel. This is the hotel address.",
+        "category": "hotel"
+      },
+      {
+        "name": "저는 중국어를 하지 못합니다",
+        "text_cn": "我不会说中文，请用翻译软件和我沟通。",
+        "text_en": "I do not speak Chinese. Please use a translation app to communicate with me.",
+        "category": "communication"
+      },
+      {
+        "name": "안전한 택시 정차",
+        "text_cn": "请在安全合法的地方停车，谢谢。",
+        "text_en": "Please stop somewhere safe and legal. Thank you.",
+        "category": "transport"
+      }
+    ],
+    "checklist_steps": [
+      "공항을 나서기 전에 eSIM 또는 로밍을 켜기",
+      "알리페이 또는 위챗페이로 소액 결제 한 번 테스트하기",
+      "호텔 이름과 주소를 중국어로 저장하기",
+      "지하철, 공식 택시, 차량 호출, 또는 픽업 서비스를 선택하기",
+      "잠들기 전에 휴대폰과 보조배터리를 충전하기"
+    ],
+    "ai_prompt": "Help me with my first 24 hours after arriving in China."
+  },
+  {
+    "theme_id": "food_exploration",
+    "slug": "food",
+    "title": "음식 & 식사 생존 키트",
+    "description": "식당 주문, 알레르기 카드, 매운맛 조절, 결제 표현, 음식 배달 준비를 위한 키트입니다.",
+    "related_paths": [
+      "/food/",
+      "/posts/ordering-food-in-china-without-chinese-meituan-ele-me/",
+      "/posts/chengdu-street-food-safety-spice-levels-what-to-order/"
+    ],
+    "tools": [
+      {
+        "name": "고수 빼주세요 카드",
+        "text_cn": "我不吃香菜，谢谢。",
+        "text_en": "No cilantro, please.",
+        "category": "food_preference"
+      },
+      {
+        "name": "땅콩 알레르기",
+        "text_cn": "我对花生过敏，请不要放花生或花生酱。",
+        "text_en": "I am allergic to peanuts. Please do not add peanuts or peanut sauce.",
+        "category": "allergy"
+      },
+      {
+        "name": "덜 맵게",
+        "text_cn": "请做微辣，少放辣椒。",
+        "text_en": "Please make it mildly spicy and use less chili.",
+        "category": "spice"
+      },
+      {
+        "name": "계산 부탁합니다",
+        "text_cn": "您好，请帮我结账。",
+        "text_en": "Hello, could I have the bill please?",
+        "category": "payment"
+      }
+    ],
+    "checklist_steps": [
+      "알레르기 또는 음식 제한 카드를 준비하기",
+      "주문 전에 알리페이 또는 위챗페이를 설정하기",
+      "메뉴용 번역 앱 하나 저장하기",
+      "덜 맵게 요청하는 방법 익히기",
+      "음식 배달을 위해 호텔 주소를 바로 꺼낼 수 있게 준비하기"
+    ],
+    "ai_prompt": "Help me order food in China and explain dietary restrictions."
+  }
+]
