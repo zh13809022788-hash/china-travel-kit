@@ -85,7 +85,7 @@ const readMore = ui.readMore[locale] ?? 'Read more →';
 
       <FaqSection items={faqs} locale={locale} />
 
-      <RelatedReading items={related} />
+      <RelatedReading items={related} title={relatedTitle} readMore={readMore} />
 
       <ArticleSchema
         title={title}

@@ -141,6 +141,7 @@ const ui = {
   ctaTitle: { en:"Don't forget the essentials", 'zh-TW':'不要忘記必需品', ja:'必需品をお忘れなく', ko:'필수품을 잊지 마세요', ru:'Не забудьте самое необходимое', fr:'N\'oubliez pas l\'essentiel', de:'Vergessen Sie nicht das Wichtigste', es:'No olvides lo esencial' },
   ctaDesc: { en:'Get our complete pre-departure checklist — what to install, what to bring, and what to set up before your China trip.', 'zh-TW':'查看我們的行前準備清單——安裝什麼、帶什麼、出發前要設定什麼。', ja:'出発前の準備リストをご確認ください。インストールすべきアプリ、持ち物、設定すべきことをまとめました。', ko:'출발 전 준비 체크리스트를 확인하세요. 설치할 앱, 챙길 물건, 설정할 사항을 정리했습니다.', ru:'Получите полный предотъездный чек-лист: что установить, что взять и что настроить перед поездкой в Китай.', fr:'Obtenez notre checklist complète avant le départ : quoi installer, quoi apporter, quoi configurer avant votre voyage en Chine.', de:'Holen Sie sich unsere vollständige Checkliste für die Abreise: was Sie installieren, mitbringen und vor Ihrer China-Reise einrichten sollten.', es:'Obtén nuestra lista de verificación completa antes de la salida: qué instalar, qué traer y qué configurar antes de tu viaje a China.' },
   ctaButton: { en:'View pre-departure checklist →', 'zh-TW':'查看行前準備清單 →', ja:'出発前チェックリストを見る →', ko:'출발 전 체크리스트 보기 →', ru:'Посмотреть предотъездный чек-лист →', fr:'Voir la checklist avant départ →', de:'Vorab-Checkliste ansehen →', es:'Ver lista de verificación previa →' },
+  readMore: { en:'Read more →', 'zh-TW':'閱讀更多 →', ja:'続きを読む →', ko:'더 읽기 →', ru:'Читать далее →', fr:'Lire la suite →', de:'Weiterlesen →', es:'Seguir leyendo →' },
 };
 
 const homeHref = locale === 'en' ? '/' : '/' + localePrefix(locale) + '/';
@@ -203,7 +204,7 @@ const homeLabel = ui.home[locale] ?? 'Home';
 
       <AdSlot format="in-article" />
       <FaqSection items={faqs} locale={locale} />
-      <RelatedReading items={related} title={ui.relatedTitle[locale] ?? 'Recommended next steps'} />
+      <RelatedReading items={related} title={ui.relatedTitle[locale] ?? 'Recommended next steps'} readMore={ui.readMore[locale] ?? 'Read more →'} />
 
       <p class="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-600">
         {ui.correctionPrefix[locale] ?? 'Found something outdated or incorrect? Please '}
