@@ -10,6 +10,7 @@ const actionUrl = MAILCHIMP_URL || FORMSPREE_URL;
 const isMailchimp = !!MAILCHIMP_URL;
 
 const { locale = 'en' } = Astro.props;
+const normalizedLocale = (locale as string).toLowerCase();
 
 const UI = {
   title: {
@@ -54,7 +55,29 @@ const UI = {
   },
 };
 
-const t = (key: string) => UI[key]?.[locale] || UI[key]?.['en'] || '';
+const t = (key: string) => UI[key]?.[normalizedLocale] || UI[key]?.['en'] || '';
+
+const PLACEHOLDERS: Record<string, string> = {
+  en: 'your@email.com',
+  'zh-tw': 'your@email.com',
+  ja: 'your@email.com',
+  ko: 'your@email.com',
+  ru: 'your@email.com',
+  fr: 'votre@email.com',
+  de: 'ihre@email.com',
+  es: 'tu@email.com',
+};
+
+const POWERED_BY: Record<string, string> = {
+  en: 'Powered by Formspree',
+  'zh-tw': '由 Formspree 支援',
+  ja: 'Formspree 提供',
+  ko: 'Formspree 제공',
+  ru: 'На платформе Formspree',
+  fr: 'Propulsé par Formspree',
+  de: 'Bereitgestellt von Formspree',
+  es: 'Con tecnología de Formspree',
+};
 ---
 
 <div class="rounded-xl border border-brand-100 bg-brand-50 p-6">
