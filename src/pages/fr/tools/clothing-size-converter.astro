@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Convertisseur de tailles de vêtements et de chaussures en Chine';
+const title = 'Convertisseur de tailles de vêtements et de chaussures pour la Chine';
 const description =
-  'Convertissez les tailles US, UK et EU en tailles chinoises pour acheter en Chine en toute confiance. Inclut les vêtements et les chaussures pour femmes et pour hommes.';
+  'Convertissez les tailles US, UK et EU en tailles chinoises pour acheter en toute confiance en Chine. Le guide couvre les vêtements et les chaussures pour femmes et pour hommes.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
@@ -23,10 +23,10 @@ const description =
     <AdSlot format="banner" />
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm">
-      <button data-tab="vetements-femme" class="size-tab btn-primary px-3 py-1.5">Vêtements pour femme</button>
-      <button data-tab="vetements-homme" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Vêtements pour homme</button>
-      <button data-tab="chaussures-femme" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Chaussures pour femme</button>
-      <button data-tab="chaussures-homme" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Chaussures pour homme</button>
+      <button data-tab="vetements-femme" class="size-tab btn-primary px-3 py-1.5">Vêtements femme</button>
+      <button data-tab="vetements-homme" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Vêtements homme</button>
+      <button data-tab="chaussures-femme" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Chaussures femme</button>
+      <button data-tab="chaussures-homme" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Chaussures homme</button>
     </div>
 
     <div class="mt-6 overflow-x-auto">
@@ -45,13 +45,13 @@ const description =
 
     <p class="mt-4 text-xs text-gray-400">
       Les tailles varient selon les marques et les coupes. Les vêtements chinois taillent souvent plus petit que leurs équivalents occidentaux.
-      En cas de doute, choisissez la taille au-dessus ou essayez avant d’acheter. Ces tableaux sont fournis à titre indicatif.
+      En cas de doute, prenez la taille au-dessus ou essayez avant d'acheter. Ces tableaux sont fournis à titre indicatif.
     </p>
 
     <AffiliateCta
-      title="Faites vos achats plus sereinement pendant votre voyage"
-      description="Préparez d’abord vos paiements et votre connexion pour pouvoir faire vos achats sans difficulté dans n’importe quel magasin ou sur n’importe quelle application en Chine."
-      buttonText="Voir les indispensables de voyage"
+      title="Achetez plus sereinement pendant votre voyage"
+      description="Préparez vos paiements et votre connexion à l'avance pour pouvoir faire vos achats facilement dans n'importe quel magasin ou sur n'importe quelle application en Chine."
+      buttonText="Voir les essentiels de voyage"
       placeholder={AFFILIATE_LINKS.transport}
     />
   </main>
@@ -59,9 +59,9 @@ const description =
 </BaseLayout>
 
 <script>
-  // Tableaux de conversion de référence. Les vêtements chinois utilisent des repères de taille
-  // fondés sur la stature et le tour de poitrine en cm, souvent simplifiés en tailles numériques.
-  // Les chaussures utilisent généralement un système proche des pointures EU.
+  // Tableaux de conversion de référence. Les tailles chinoises pour les vêtements s'appuient souvent
+  // sur la stature et le tour de poitrine en cm, généralement simplifiés en tailles numériques.
+  // Les chaussures suivent en général une grille proche des pointures EU.
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
     'vetements-femme': [
       { cn: '155/80A (XS)', us: '0-2', uk: '4-6', eu: '32-34' },
