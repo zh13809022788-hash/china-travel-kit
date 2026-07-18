@@ -8,36 +8,36 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 const title = 'Mes applications fonctionneront-elles en Chine ? Vérificateur de disponibilité des applications';
 const description =
-  'Vérifiez si Google, WhatsApp, Instagram et d’autres applications fonctionnent en Chine sans VPN, et découvrez l’alternative locale pour chaque service bloqué.';
+  'Vérifiez si Google, WhatsApp, Instagram et d’autres applications fonctionnent en Chine sans VPN, et découvrez une alternative locale pour chaque service bloqué.';
 
 interface AppInfo {
   name: string;
   category: string;
-  status: 'fonctionne' | 'bloque' | 'partiel';
+  status: 'fonctionne' | 'bloque' | 'limite';
   note: string;
   alt?: string;
 }
 
 const apps: AppInfo[] = [
-  { name: 'Google Search', category: 'Google', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'Bing (accessible) ou Baidu' },
-  { name: 'Google Maps', category: 'Google', status: 'partiel', note: 'L’application se charge, mais les données sont souvent imprécises ou décalées en Chine continentale.', alt: 'Apple Maps, Amap ou Baidu Maps' },
-  { name: 'Gmail', category: 'Google', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'Outlook ou un autre service de messagerie non Google' },
-  { name: 'YouTube', category: 'Google', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'Bilibili (plateforme locale)' },
+  { name: 'Recherche Google', category: 'Google', status: 'bloque', note: 'Bloquée sans VPN.', alt: 'Bing (fonctionne) ou Baidu' },
+  { name: 'Google Maps', category: 'Google', status: 'limite', note: 'Se charge, mais les données sont inexactes ou décalées en Chine continentale.', alt: 'Apple Maps, Amap ou Baidu Maps' },
+  { name: 'Gmail', category: 'Google', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'Outlook ou une autre messagerie non Google' },
+  { name: 'YouTube', category: 'Google', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'Bilibili (local)' },
   { name: 'WhatsApp', category: 'Messagerie', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'WeChat' },
   { name: 'Facebook', category: 'Réseaux sociaux', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'Moments sur WeChat ou RED' },
   { name: 'Instagram', category: 'Réseaux sociaux', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'RED (Xiaohongshu)' },
   { name: 'X (Twitter)', category: 'Réseaux sociaux', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'Weibo' },
   { name: 'Telegram', category: 'Messagerie', status: 'bloque', note: 'Bloqué sans VPN.', alt: 'WeChat' },
-  { name: 'WeChat', category: 'Messagerie', status: 'fonctionne', note: 'Fonctionne pleinement : c’est l’application incontournable en Chine.' },
-  { name: 'Apple services (iMessage, App Store)', category: 'Apple', status: 'fonctionne', note: 'Fonctionnent normalement.' },
+  { name: 'WeChat', category: 'Messagerie', status: 'fonctionne', note: 'Fonctionne parfaitement : c’est l’application de référence en Chine.' },
+  { name: 'Services Apple (iMessage, App Store)', category: 'Apple', status: 'fonctionne', note: 'Fonctionnent normalement.' },
   { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'fonctionne', note: 'Fonctionnent normalement.' },
   { name: 'Booking.com', category: 'Voyage', status: 'fonctionne', note: 'Fonctionne normalement.' },
   { name: 'Airbnb', category: 'Voyage', status: 'fonctionne', note: 'Fonctionne normalement.' },
-  { name: 'Trip.com', category: 'Voyage', status: 'fonctionne', note: 'Fonctionne très bien, notamment pour les trains et les hôtels.' },
+  { name: 'Trip.com', category: 'Voyage', status: 'fonctionne', note: 'Fonctionne parfaitement, idéal pour les trains et les hôtels.' },
   { name: 'Alipay', category: 'Paiement', status: 'fonctionne', note: 'Fonctionne pleinement et accepte les cartes étrangères.' },
-  { name: 'Uber', category: 'Transport', status: 'bloque', note: 'Le service n’est pas disponible en Chine continentale.', alt: 'DiDi' },
+  { name: 'Uber', category: 'Transport', status: 'bloque', note: 'Ne fonctionne pas en Chine continentale.', alt: 'DiDi' },
   { name: 'Netflix', category: 'Médias', status: 'bloque', note: 'Non disponible en Chine continentale.', alt: 'Streaming local ou téléchargements avant le départ' },
-  { name: 'Spotify', category: 'Médias', status: 'bloque', note: 'Non disponible en Chine continentale.', alt: 'QQ Music ou écoute hors ligne préparée à l’avance' },
+  { name: 'Spotify', category: 'Médias', status: 'bloque', note: 'Non disponible en Chine continentale.', alt: 'QQ Music ou téléchargements hors ligne avant le départ' },
 ];
 ---
 
@@ -54,7 +54,7 @@ const apps: AppInfo[] = [
 
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-4">
       <label class="flex flex-col text-sm sm:max-w-sm">
-        <span class="mb-1 font-medium text-gray-700">Rechercher ou filtrer les applications</span>
+        <span class="mb-1 font-medium text-gray-700">Rechercher ou filtrer des applications</span>
         <input
           id="search"
           type="text"
@@ -65,7 +65,7 @@ const apps: AppInfo[] = [
       <div class="mt-3 flex flex-wrap gap-2 text-sm">
         <button data-status="tous" class="status-filter btn-primary px-3 py-1">Toutes</button>
         <button data-status="fonctionne" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">Fonctionne</button>
-        <button data-status="partiel" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">Partiel</button>
+        <button data-status="limite" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">Limité</button>
         <button data-status="bloque" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">Bloqué</button>
       </div>
     </div>
@@ -75,8 +75,8 @@ const apps: AppInfo[] = [
 
     <AffiliateCta
       title="Gardez vos applications accessibles avec une eSIM de voyage"
-      description="Une eSIM de voyage pour la Chine qui contourne les restrictions locales permet à vos applications habituelles de rester en ligne, sans configuration VPN séparée."
-      buttonText="Voir les options d’eSIM"
+      description="Une eSIM de voyage pour la Chine qui contourne les restrictions locales permet à vos applications habituelles de rester en ligne, sans configuration VPN distincte."
+      buttonText="Voir les offres eSIM"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -92,7 +92,7 @@ const apps: AppInfo[] = [
 
   const badge = {
     fonctionne: { cls: 'bg-green-100 text-green-800', label: 'Fonctionne' },
-    partiel: { cls: 'bg-amber-100 text-amber-800', label: 'Partiel' },
+    limite: { cls: 'bg-amber-100 text-amber-800', label: 'Limité' },
     bloque: { cls: 'bg-red-100 text-red-800', label: 'Bloqué' },
   };
 
