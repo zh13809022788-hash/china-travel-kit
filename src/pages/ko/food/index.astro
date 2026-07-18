@@ -12,22 +12,22 @@ const posts = (await getCollection('posts-ko'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = '중국 음식, 식사, 예절 가이드';
-const description = '외국인 방문객을 위한 실용적인 중국 음식 가이드: 배달 주문, 길거리 음식 안전, 매운맛 단계, 팁 문화, 식당 예절, 식문화.';
+const description = '외국인 방문객을 위한 실용적인 중국 음식 가이드예요. 배달 주문 방법, 길거리 음식 안전, 매운맛 단계, 팁 문화, 식당 예절, 식문화를 한눈에 정리했어요.';
 
 const pathways = [
   {
-    title: 'Order without Chinese',
-    desc: 'Set up delivery apps, save hotel addresses, and avoid courier-call confusion.',
+    title: '중국어 없이도 주문하기',
+    desc: '배달 앱을 설정하고, 호텔 주소를 저장하고, 배달 기사 전화 때문에 생기는 혼선을 피하는 방법을 알려드려요.',
     href: '/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
-    title: 'Eat street food safely',
-    desc: 'Use turnover, visible heat, water habits, and spice phrases to choose better stalls.',
+    title: '길거리 음식 안전하게 먹기',
+    desc: '회전율, 눈에 보이는 가열 상태, 물 섭취 습관, 매운맛 표현을 활용해 더 나은 노점을 고르는 방법이에요.',
     href: '/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: 'Handle dining etiquette',
-    desc: 'Know when not to tip, when service charges matter, and how local restaurant norms work.',
+    title: '식사 예절 익히기',
+    desc: '팁을 주지 않는 상황, 서비스 요금이 중요한 경우, 현지 식당 문화가 어떻게 돌아가는지 알려드려요.',
     href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
@@ -35,13 +35,13 @@ const pathways = [
 const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
-    title: 'Baijiu 101',
-    desc: 'Useful background if a banquet or hosted dinner includes China\'s national spirit.',
+    title: 'Baijiu 기초 가이드',
+    desc: '연회나 초대받은 식사 자리에서 중국의 대표 증류주가 나올 때 알아두면 좋은 배경지식이에요.',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: 'How to drink baijiu politely',
-    desc: 'A deeper companion guide for toasts, small pours, and pacing yourself at formal meals.',
+    title: '예의 있게 baijiu 마시는 법',
+    desc: '건배 예절, 소량으로 따르는 방식, 격식 있는 식사 자리에서 페이스를 조절하는 법까지 더 깊이 다룬 안내예요.',
   },
 ];
 ---
@@ -56,17 +56,17 @@ const cultureLinks = [
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chengdu-food" alt="Spicy Sichuan street food dishes at a night market in China" loading="lazy" />
+    <CoverImage name="topic-chengdu-food" alt="중국 야시장의 매콤한 쓰촨 길거리 음식" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">Food planning pathways</h2>
+      <h2 id="food-pathways" class="sr-only">음식 준비 경로</h2>
       {pathways.map((item) => (
         <a href={item.href} class="card block hover:no-underline">
           <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Read guide</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">가이드 보기</span>
         </a>
       ))}
     </section>
@@ -75,8 +75,8 @@ const cultureLinks = [
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Guides</p>
-            <h2>Food and etiquette articles</h2>
+            <p class="section-kicker">가이드</p>
+            <h2>음식과 식사 예절 관련 글</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
@@ -91,12 +91,12 @@ const cultureLinks = [
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">Culture companion</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">When baijiu appears</h2>
+        <p class="section-kicker">문화 함께 보기</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">baijiu가 등장할 때</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Most tourist meals do not require alcohol knowledge, but hosted banquets, business dinners,
-          and rural family meals sometimes include baijiu toasts. These companion resources go deeper
-          while ChinaTripBox stays focused on travel logistics.
+          대부분의 여행자 식사에서는 술에 대한 지식이 꼭 필요하지는 않아요. 하지만 초대받은 연회, 비즈니스 저녁 식사,
+          지방의 가정 식사에서는 baijiu 건배가 나오는 경우가 있어요. 아래 자료는 이런 상황을 더 깊이 다루고,
+          ChinaTripBox는 여행 실무 정보에 집중해 안내해드려요.
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
