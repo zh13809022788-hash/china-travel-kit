@@ -1,64 +1,41 @@
-﻿---
-title: "Aeropuerto al centro en China 2026: Pekin, Shanghai y Guangzhou"
-description: "Como ir del aeropuerto al centro en Pekin, Shanghai y Guangzhou: metro, tren express, taxi, DiDi, precios y consejos."
-pubDate: 2026-07-08
+---
+title: "Del aeropuerto al centro en China 2026: Pekín, Shanghái y Cantón"
+description: "Guía práctica para ir del aeropuerto al centro de Pekín (PEK/PKX), Shanghái (PVG/SHA) y Cantón (CAN): metro, tren exprés, taxi y DiDi."
+pubDate: 2026-07-18
 category: transport
-tags: ["transporte aeropuerto", "pekin", "shanghai", "guangzhou", "aeropuerto de guangzhou al centro", "transporte aeropuerto pekin"]
-cover: "topic-airport-transport"
-coverAlt: "Airport express train platform with modern train in station"
-
+tags: ["aeropuerto", "transporte", "Pekín", "Shanghái", "Cantón"]
 featured: false
 faqs:
-  - question: "Cual es la forma mas barata de ir del aeropuerto al centro en China?"
-    answer: "El metro o el tren express del aeropuerto casi siempre es la opcion mas barata en las grandes ciudades chinas, normalmente entre unos 7 y 50 RMB segun la ciudad y la linea. Tambien evita los atascos, algo importante en hora punta. El taxi y DiDi cuestan bastante mas, por lo general desde 100 RMB, pero te dejan en la puerta del hotel y son mas comodos con equipaje."
-  - question: "Conviene tomar taxi o DiDi desde el aeropuerto?"
-    answer: "DiDi, la principal app de transporte con conductor en China, suele ser tan fiable como un taxi y permite pagar desde la app, sin efectivo ni explicaciones largas al conductor. Los taxis oficiales estan disponibles en las paradas marcadas. Ambos cuestan parecido, normalmente entre 100 y 200 RMB hasta la ciudad segun el aeropuerto y el trafico, y ambos pueden tardar 40 a 60 minutos o mas si hay atasco."
-  - question: "Como voy del aeropuerto de Shanghai Pudong al centro?"
-    answer: "El famoso Maglev cubre gran parte del trayecto hasta Longyang Road en unos 7 u 8 minutos por alrededor de 50 RMB, donde conectas con el metro. La linea 2 del metro tambien va hacia la ciudad por unos 7 u 8 RMB, pero es lenta y puede tardar 60 a 90 minutos con transbordo. Un taxi cuesta aproximadamente 150 a 200 RMB y tarda 45 a 60 minutos. Elige segun tu presupuesto y tu equipaje."
-  - question: "Como voy de los aeropuertos de Pekin al centro?"
-    answer: "Desde Capital Airport (PEK), el Airport Express cuesta unos 25 RMB y llega a la red de metro en 20 a 30 minutos; un taxi suele costar 100 a 150 RMB. Desde Daxing (PKX), mucho mas al sur, el Daxing Airport Express cuesta unos 35 RMB y tambien hay enlace ferroviario de alta velocidad; un taxi desde PKX suele superar los 200 RMB y tarda mas de una hora."
-  - question: "Como voy del aeropuerto Baiyun de Guangzhou al centro?"
-    answer: "La linea 3 del metro conecta Baiyun Airport (CAN) con el centro por unos 7 RMB y tarda aproximadamente 50 a 70 minutos, sin depender del trafico. Un taxi cuesta alrededor de 150 a 180 RMB y tarda 40 a 60 minutos segun la circulacion; DiDi es similar o algo mas barato. Para llegar a hora fija, el metro es lo mas fiable."
-  - question: "Puedo pagar el transporte del aeropuerto con tarjeta extranjera o monedero movil?"
-    answer: "Para metro y trenes express, normalmente puedes pagar con codigos QR de Alipay o WeChat Pay, comprar billetes en maquinas que aceptan pago movil y, en algunas ciudades, tocar con tarjeta bancaria. En DiDi pagas dentro de la app con tu monedero o tarjeta vinculada. Los taxis pueden preferir efectivo o pago movil, asi que conviene llevar una app preparada y algo de dinero en yuanes."
+  - question: "¿Cuál es la forma más barata de ir del aeropuerto al centro?"
+    answer: "El metro es siempre la opción más económica. En Pekín cuesta entre 25 y 30 yuanes, en Shanghái entre 7 y 55 yuanes según la línea, y en Cantón unos 8 yuanes. Todas las líneas de metro aceptan pago con tarjeta extranjera a través de Alipay o WeChat Pay."
+  - question: "¿Funciona DiDi desde el aeropuerto?"
+    answer: "Sí, hay zonas designadas para recogida de DiDi en los tres aeropuertos. El coste al centro ronda los 100-200 yuanes. Recomendable tener la app instalada y una tarjeta vinculada antes de llegar."
+  - question: "¿Qué hago si no tengo internet al llegar?"
+    answer: "Antes de viajar, instala un eSIM (Airalo, Holafly) que funcione desde el aterrizaje. Todos los aeropuertos grandes tienen WiFi gratuito con verificación por SMS o pasaporte."
+  - question: "¿Los taxis del aeropuerto aceptan tarjetas extranjeras?"
+    answer: "No, los taxis tradicionales solo aceptan efectivo o pagos móviles chinos. Lleva 200-300 yuanes en efectivo por si acaso, aunque lo más práctico es usar DiDi."
+  - question: "¿Hay conexión directa en tren de alta velocidad desde los aeropuertos?"
+    answer: "Sí, el Aeropuerto de Pekín-Daxing (PKX) tiene tren de alta velocidad directo al centro. Shanghái-Hongqiao (SHA) es en sí misma una estación de alta velocidad. Pekín-Capital (PEK) y Cantón (CAN) conectan por metro."
 ---
 
-Aterrizar en China no tiene por que convertirse en una negociacion en la puerta de llegadas. En Pekin, Shanghai y Guangzhou hay enlaces ferroviarios claros, taxis oficiales y DiDi. La decision real es sencilla: si viajas ligero y quieres controlar el tiempo, usa tren o metro; si llegas tarde, con maletas grandes o en grupo, paga mas por ir puerta a puerta.
+## Pekín
 
-## Antes de salir del aeropuerto
+Llegar al centro de Pekín desde el aeropuerto es más fácil de lo que parece. Hay dos aeropuertos principales.
 
-Prepara dos cosas antes de volar: Alipay o WeChat Pay con una tarjeta extranjera vinculada, y una pequena reserva de RMB. Con eso puedes comprar billetes, pedir DiDi y resolver un taxi que no quiera complicarse con tarjetas. Guarda tambien el nombre y la direccion del hotel en chino.
+**Aeropuerto Internacional de Pekín-Capital (PEK)** es el más grande y concurrido. El metro exprés (Línea del Aeropuerto) cuesta 25 yuanes y tarda unos 40 minutos hasta la estación de Dongzhimen. También hay autobuses lanzadera por 30 yuanes. Un taxi cuesta entre 100 y 150 yuanes y tarda 45-60 minutos.
 
-> ⚠️ **Evita el atasco de hora punta:** entre 7:00-9:00 y 17:00-20:00, un taxi puede tardar mucho mas de lo previsto. Si tu llegada coincide con esas franjas, prioriza metro, Airport Express o Maglev.
+**Aeropuerto Internacional de Pekín-Daxing (PKX)** es más nuevo y moderno. El tren de alta velocidad llega a la estación de Pekín Oeste en 30 minutos. El metro exprés cuesta 35 yuanes. Un taxi cuesta unos 200 yuanes.
 
-## Pekin: PEK y PKX
+Consejo práctico: Si viajas con equipaje grande, el taxi merece la pena. Si viajas ligero, el metro es rápido y eficiente.
 
-**Capital Airport (PEK)** es el aeropuerto mas cercano al centro tradicional. El Airport Express cuesta unos 25 RMB y llega a Dongzhimen en 20 a 30 minutos, donde enlazas con el metro. Un taxi a zonas como Wangfujing o Sanlitun suele moverse entre 100 y 150 RMB, pero depende mucho del trafico.
+## Shanghái
 
-**Daxing Airport (PKX)** esta bastante mas al sur. El Daxing Airport Express cuesta unos 35 RMB y te lleva a Caoqiao, con transbordo a las lineas 10 o 19. Tambien existe el tren interurbano hacia Beijing West. Si tomas taxi desde PKX, calcula 200 RMB o mas y mas de una hora.
+Shanghái tiene dos aeropuertos. **Pudong (PVG)** es el internacional. El Maglev (tren de levitación magnética) llega a la estación de Longyang en 8 minutos por 50 yuanes, y desde allí se conecta con el metro. El metro Línea 2 tarda unos 60 minutos hasta el centro por 7 yuanes. Un taxi cuesta entre 150 y 200 yuanes.
 
-## Shanghai: PVG y SHA
+**Hongqiao (SHA)** está integrado con la estación de tren de alta velocidad. El metro Líneas 2 y 10 conectan directamente. Un taxi al centro cuesta unos 80 yuanes.
 
-**Pudong (PVG)** ofrece tres caminos. El Maglev es el mas rapido y turistico: unos 7 u 8 minutos hasta Longyang Road por cerca de 50 RMB. La linea 2 del metro es barata, unos 7 u 8 RMB, pero puede tardar 60 a 90 minutos. El taxi cuesta normalmente 150 a 200 RMB.
+## Cantón
 
-**Hongqiao (SHA)** esta mucho mas integrado en la ciudad. Las lineas 2 y 10 del metro suelen bastar por 4 a 7 RMB. Un taxi al centro puede rondar 60 a 100 RMB, asi que aqui casi cualquier opcion funciona.
+El **Aeropuerto Internacional de Cantón-Baiyun (CAN)** tiene la Línea de Metro 3 que llega al centro en unos 40 minutos por 8 yuanes. También hay autobuses por 25 yuanes. Un taxi cuesta unos 120-150 yuanes.
 
-## Guangzhou: CAN
-
-En Guangzhou, la linea 3 del metro conecta Baiyun Airport con el centro por unos 7 RMB y suele tardar 50 a 70 minutos. Es la eleccion mas previsible. Taxi o DiDi cuestan alrededor de 150 a 180 RMB y son utiles si aterrizas tarde o vas cargado.
-
-<!-- AFFILIATE_TRAVEL -->
-
-## Como elegir
-
-Usa tren o metro si quieres ahorrar, evitar trafico y no llevas demasiado equipaje. Usa taxi o DiDi si sois varios, llegais de noche o el hotel queda lejos de una estacion. En Shanghai, toma el Maglev si quieres velocidad y una experiencia distinta; no siempre ahorra todo el trayecto, porque despues toca metro o taxi desde Longyang Road.
-
-## Leer Tambien
-
-- [Guia del aeropuerto Daxing de Pekin](/es/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [Guia del metro de Shanghai para extranjeros](/es/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [Guia de DiDi en China](/es/posts/didi-china-foreign-tourists-guide/)
-
-## Resumen
-
-En estas tres ciudades, el transporte publico desde el aeropuerto es barato y fiable. PEK funciona bien con Airport Express, PKX exige planificar por distancia, PVG combina Maglev, metro y taxi, Hongqiao es facil por su ubicacion, y Guangzhou se resuelve muy bien con la linea 3. Lleva pago movil, algo de efectivo y la direccion del hotel en chino.
+Cantón tiene la ventaja de que el metro es barato y cubre casi todo, así que para presupuestos ajustados es la mejor opción.
