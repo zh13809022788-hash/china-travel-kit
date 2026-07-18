@@ -1,32 +1,32 @@
-﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'China旅行ヘルプ';
+const title = '中国旅行サポート';
 const description =
-  '決済、eSIM、交通、アプリ、初日の準備について、AIによる一次整理と必要に応じた人のサポートで、China旅行の個別質問ができます。';
+  '決済、eSIM、交通、アプリ、初日の準備について、AIによる一次整理と必要に応じた人によるサポートを通じて、中国旅行に関する個別の質問ができます。';
 
 const quickPrompts = [
-  'AlipayまたはWeChat Payにカードを連携できません。',
-  '旅行用のeSIMとアプリアクセス計画が必要です。',
-  '空港からホテルまでの移動を手伝ってほしいです。',
-  '現金をいくら持っていくべきかわかりません。',
+  'Alipay または WeChat Pay にカードを連携できません。',
+  '旅行用の eSIM とアプリ利用の準備について相談したいです。',
+  '空港からホテルまでの移動方法を教えてほしいです。',
+  '現金をどれくらい持っていけばよいかわかりません。',
 ];
 
 const supportAreas = [
   '決済設定: Alipay、WeChat Pay、カード、手数料、現金の予備',
-  '通信: eSIM、ローミング、VPN影響を受けるアプリ、空港到着時の通信',
-  '交通: 空港ルート、地下鉄、DiDi、タクシー、高速鉄道の基本',
-  'アプリ利用: 翻訳、フードデリバリー、地図、配車、スクリーンショット',
-  '旅行準備: 初日チェックリスト、都市別準備、実用的な次の手順',
-  '人へのエスカレーション: やり取りを重ねた文脈確認が必要な複雑なケース',
+  '通信: eSIM、ローミング、VPN の影響を受けるアプリ、空港到着時の通信手段',
+  '交通: 空港からの移動、地下鉄、DiDi、タクシー、高速鉄道の基本',
+  'アプリ利用: 翻訳、フードデリバリー、地図、配車、スクリーンショットの活用',
+  '旅行準備: 初日のチェックリスト、都市別の準備、実用的な次の手順',
+  '人による確認: やり取りを重ねながら状況確認が必要な複雑なケース',
 ];
 
 const safetyRules = [
-  'パスポート写真、カード番号全桁、パスワード、PIN、ワンタイムコードは送らないでください。',
-  '誰かにアカウントへログインしてもらったり、本人確認を代行してもらったりしないでください。',
-  '法律、入国管理、医療、銀行、緊急時対応の助言には使わないでください。',
+  'パスポートの写真、カード番号の全桁、パスワード、PIN、ワンタイムコードは送らないでください。',
+  'ほかの人にアカウントへログインしてもらったり、本人確認を代行してもらったりしないでください。',
+  '法律、入国管理、医療、銀行、緊急時対応に関する助言を得る目的では利用しないでください。',
   '重要なルールは、公式情報、航空会社、銀行、通信会社、アプリ運営元で確認してください。',
 ];
 ---
@@ -39,38 +39,38 @@ const safetyRules = [
         <div>
           <p class="section-kicker">個別旅行サポート</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            China旅行でつまずく前に質問する
+            中国旅行で困る前に相談できます
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            China旅行の実務的な問題は、まず無料のAIヘルプから始められます。人の判断、スクリーンショット、やり取りを重ねた文脈確認が必要な場合は、確認依頼に切り替えられます。
+            中国旅行で発生しやすい実務的な悩みは、まず無料の AI サポートから始められます。人の判断、スクリーンショットの確認、複数回のやり取りを通じた状況整理が必要な場合は、人による確認依頼へ切り替えられます。
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#travel-help-chat" class="btn-primary">依頼を始める</a>
-            <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">出発前チェックリストを使う</a>
+            <a href="#travel-help-chat" class="btn-primary">相談を始める</a>
+            <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">出発前チェックリストを見る</a>
             <a href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Travel%20Help%20Request" class="btn-outline">
-              直接メールする
+              メールで直接連絡する
             </a>
           </div>
         </div>
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
-          <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">試験運用中</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">まずAI、必要なら人が確認</h2>
+          <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">試験運用中です</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">まずは AI、必要に応じて人が確認します</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            無料回答はAIが生成します。人が確認する旅行ヘルプは、ワークフロー検証中のためメール経由で対応します。
+            無料の回答は AI が作成します。人が確認する旅行サポートは、現在ワークフローを検証中のため、メール経由で対応しています。
           </p>
           <dl class="mt-5 grid gap-3 text-sm">
             <div class="flex items-center justify-between gap-4">
-              <dt class="text-gray-500">向いている用途</dt>
-              <dd class="font-semibold text-gray-900">実用的な旅行準備</dd>
+              <dt class="text-gray-500">向いている内容</dt>
+              <dd class="font-semibold text-gray-900">実用的な旅行準備の相談</dd>
             </div>
             <div class="flex items-center justify-between gap-4">
               <dt class="text-gray-500">回答方法</dt>
-              <dd class="font-semibold text-gray-900">AI + メールでのフォロー</dd>
+              <dd class="font-semibold text-gray-900">AI とメールでのフォロー</dd>
             </div>
             <div class="flex items-center justify-between gap-4">
               <dt class="text-gray-500">決済</dt>
-              <dd class="font-semibold text-gray-900">未有効</dd>
+              <dd class="font-semibold text-gray-900">現在は未対応です</dd>
             </div>
           </dl>
         </aside>
@@ -81,16 +81,16 @@ const safetyRules = [
       <section id="travel-help-chat" class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <div class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <div class="border-b border-gray-200 bg-gray-50 px-5 py-4">
-          <p class="section-kicker">無料AI旅行ヘルプ</p>
-            <h2 class="mt-1 text-2xl font-bold text-gray-950">旅行ヘルプデスク</h2>
+          <p class="section-kicker">無料 AI 旅行サポート</p>
+            <h2 class="mt-1 text-2xl font-bold text-gray-950">旅行サポート窓口</h2>
           </div>
 
           <div class="grid gap-0 md:grid-cols-[minmax(0,1fr)_280px]">
             <div class="flex min-h-[560px] flex-col">
               <div id="chat-log" class="flex-1 space-y-4 overflow-y-auto p-5" aria-live="polite">
                 <div class="max-w-[88%] rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-700">
-                  <strong class="block text-gray-950">ChinaTripBoxヘルプ</strong>
-                  何をしようとしているのか、旅行のどの段階にいるのか、すでに何が起きたのかを教えてください。AIヘルパーが次の手順を提案し、人による確認が向いている場合はその旨を示します。
+                  <strong class="block text-gray-950">ChinaTripBox サポート</strong>
+                  何をしようとしているのか、旅行のどの段階にいるのか、これまでに何が起きたのかを教えてください。AI サポートが次の手順をご案内し、人による確認が適している場合はその旨もお伝えします。
                 </div>
               </div>
 
@@ -107,59 +107,59 @@ const safetyRules = [
                   ))}
                 </div>
                 <form id="travel-help-form" class="grid gap-3">
-                  <label class="sr-only" for="help-message">旅行に関する質問</label>
+                  <label class="sr-only" for="help-message">旅行に関する質問内容</label>
                   <textarea
                     id="help-message"
                     name="message"
                     rows="5"
                     class="w-full resize-y rounded-lg border border-gray-300 px-4 py-3 text-sm leading-6 text-gray-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
-                    placeholder="例: 明日Shanghaiに到着します。MastercardをWeChat Payに連携できませんが、Alipayは使えます。地下鉄、DiDi、フードデリバリーはまだ使えますか？"
+                    placeholder="例: 明日上海に到着します。Mastercard を WeChat Pay に連携できませんが、Alipay は使えます。地下鉄、DiDi、フードデリバリーはまだ利用できますか？"
                     required
                   ></textarea>
                   <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <p id="form-status" class="text-sm text-gray-500">機微な個人情報は入力しないでください。</p>
-                    <button id="help-submit" type="submit" class="btn-primary">AIに質問</button>
+                    <button id="help-submit" type="submit" class="btn-primary">AI に相談する</button>
                   </div>
                 </form>
               </div>
             </div>
 
             <aside class="border-t border-gray-200 bg-gray-50 p-5 md:border-l md:border-t-0">
-              <h3 class="text-lg font-bold text-gray-950">依頼の詳細</h3>
+              <h3 class="text-lg font-bold text-gray-950">相談内容の詳細</h3>
               <div class="mt-4 grid gap-4">
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
-                  旅行段階
+                  旅行の段階
                   <select id="trip-stage" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                    <option>出発前</option>
-                    <option>空港にいる</option>
-                    <option>すでにChina滞在中</option>
-                    <option>長期滞在の計画中</option>
+                    <option>出発前です</option>
+                    <option>空港にいます</option>
+                    <option>すでに中国に滞在しています</option>
+                    <option>長期滞在を計画しています</option>
                   </select>
                 </label>
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
-                  主なトピック
+                  主な相談テーマ
                   <select id="help-topic" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
                     <option>決済アプリ</option>
-                    <option>インターネットとeSIM</option>
-                    <option>交通ルート</option>
+                    <option>インターネットと eSIM</option>
+                    <option>移動ルート</option>
                     <option>食事、デリバリー、現地アプリ</option>
                     <option>一般的な旅行準備</option>
                   </select>
                 </label>
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
-                  都市またはルート
+                  都市または移動ルート
                   <input
                     id="help-location"
                     class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700"
-                    placeholder="Shanghai、Beijing、空港からホテル..."
+                    placeholder="上海、北京、空港からホテルまで など"
                   />
                 </label>
               </div>
 
               <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4">
-                <p class="text-sm font-bold text-gray-950">人による確認</p>
+                <p class="text-sm font-bold text-gray-950">人による確認依頼</p>
                 <p class="mt-2 text-sm leading-6 text-gray-700">
-                  シンプルなガイドだけでは足りない場合に使ってください。作成されるメールにはトピック、段階、場所、質問が含まれるため、人が文脈を把握して返信できます。
+                  簡単な案内だけでは足りない場合にご利用ください。作成されるメールには、テーマ、段階、場所、質問内容が含まれるため、担当者が状況を把握したうえで返信できます。
                 </p>
               </div>
 
@@ -168,7 +168,7 @@ const safetyRules = [
                 href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Travel%20Help%20Request"
                 class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 hover:border-brand-600 hover:text-brand-600 hover:no-underline"
               >
-                メール依頼を作成
+                依頼メールを作成する
               </a>
             </aside>
           </div>
@@ -176,8 +176,8 @@ const safetyRules = [
 
         <aside class="space-y-6">
           <section class="rounded-lg border border-gray-200 bg-white p-5">
-            <p class="section-kicker">対応範囲</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">サポートできること</h2>
+            <p class="section-kicker">対応内容</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">ご案内できること</h2>
             <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
               {supportAreas.map((area) => (
                 <li class="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0">{area}</li>
@@ -186,8 +186,8 @@ const safetyRules = [
           </section>
 
           <section class="rounded-lg border border-amber-200 bg-amber-50 p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">安全ルール</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">機微情報を入力しない</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">安全にご利用いただくために</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">機微情報は入力しないでください</h2>
             <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
               {safetyRules.map((rule) => (
                 <li>{rule}</li>
@@ -199,39 +199,39 @@ const safetyRules = [
 
       <section class="mt-12 grid gap-5 md:grid-cols-3">
         <div class="card">
-          <p class="section-kicker">ステップ1</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">問題を説明する</h2>
+          <p class="section-kicker">ステップ 1</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">状況を説明してください</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
             都市、アプリ、ルート、期限、すでに試したことを共有してください。
           </p>
         </div>
         <div class="card">
-          <p class="section-kicker">ステップ2</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">次の手順を得る</h2>
+          <p class="section-kicker">ステップ 2</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">次に取るべき行動を確認します</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            このページは実用的な一次回答を出し、関連ガイドへ案内します。
+            このページでは、実用的な初期回答をご案内し、必要に応じて関連ガイドへおつなぎします。
           </p>
         </div>
         <div class="card">
-          <p class="section-kicker">ステップ3</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">メールで相談を深める</h2>
+          <p class="section-kicker">ステップ 3</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">メールで詳しく相談できます</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            個別サポートが必要な場合は、作成されたメールを送り、非公開でやり取りを続けます。
+            個別サポートが必要な場合は、作成されたメールを送信し、非公開でやり取りを続けられます。
           </p>
         </div>
       </section>
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
-        <p class="section-kicker">まずセルフサービス</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">初めての旅行でよくある質問に答えるガイド</h2>
+        <p class="section-kicker">まずはセルフチェック</p>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">初めての中国旅行でよくある疑問に答えるガイド</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
           <a href="/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">初めてのChina旅行プランナー</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">決済、通信、交通、到着初日の準備をまだ整えている段階で使ってください。</p>
+            <h3 class="font-bold text-gray-950">初めての中国旅行プランナー</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">決済、通信、交通、到着初日の準備を進めている段階でご活用ください。</p>
           </a>
           <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">出発前設定チェックリスト</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">出発前にAlipay、WeChat Pay、eSIM、DiDi、鉄道チケット、翻訳、住所、現金の予備を確認します。</p>
+            <h3 class="font-bold text-gray-950">出発前の設定チェックリスト</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">出発前に Alipay、WeChat Pay、eSIM、DiDi、鉄道チケット、翻訳、住所、予備の現金を確認できます。</p>
           </a>
         </div>
       </section>
@@ -253,13 +253,13 @@ const safetyRules = [
 
   const guideLinks: Record<string, { label: string; href: string }> = {
     '決済アプリ': { label: '決済設定ガイド', href: '/ja/payment/' },
-    'インターネットとeSIM': { label: 'eSIMガイド', href: '/ja/esim/' },
-    '交通ルート': { label: '交通ガイド', href: '/ja/transport/' },
+    'インターネットと eSIM': { label: 'eSIM ガイド', href: '/ja/esim/' },
+    '移動ルート': { label: '交通ガイド', href: '/ja/transport/' },
     '食事、デリバリー、現地アプリ': {
       label: 'フードデリバリーガイド',
       href: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     },
-    '一般的な旅行準備': { label: 'ツールページ', href: '/ja/tools/' },
+    '一般的な旅行準備': { label: 'ツール一覧', href: '/ja/tools/' },
   };
 
   const escapeHtml = (value: string) =>
@@ -273,25 +273,25 @@ const safetyRules = [
 
   const updateEmailLink = () => {
     if (!emailLink) return;
-    const selectedStage = stage?.value ?? '出発前';
+    const selectedStage = stage?.value ?? '出発前です';
     const selectedTopic = topic?.value ?? '一般的な旅行準備';
-    const place = locationInput?.value.trim() || '未指定';
+    const place = locationInput?.value.trim() || '未指定です';
     const question = message?.value.trim() || '';
     const body = [
-      'ChinaTripBox 旅行ヘルプ依頼',
+      'ChinaTripBox 旅行サポート依頼',
       '',
-      `旅行段階: ${selectedStage}`,
-      `主なトピック: ${selectedTopic}`,
-      `都市またはルート: ${place}`,
+      `旅行の段階: ${selectedStage}`,
+      `主な相談テーマ: ${selectedTopic}`,
+      `都市または移動ルート: ${place}`,
       '',
-      '質問:',
+      '質問内容:',
       question,
       '',
-      'パスポート写真、銀行カード番号全桁、パスワード、PIN、ワンタイムコードを含めてはいけないことを理解しています。',
+      'パスポートの写真、銀行カード番号の全桁、パスワード、PIN、ワンタイムコードを含めてはいけないことを理解しています。',
     ].join('\n');
 
     emailLink.href = `mailto:zh13809022788@gmail.com?subject=${encodeURIComponent(
-      `旅行ヘルプ: ${selectedTopic}`,
+      `旅行サポート: ${selectedTopic}`,
     )}&body=${encodeURIComponent(body)}`;
   };
 
@@ -314,27 +314,27 @@ const safetyRules = [
 
   const buildReply = (question: string) => {
     const selectedTopic = topic?.value ?? '一般的な旅行準備';
-    const selectedStage = stage?.value ?? '出発前';
+    const selectedStage = stage?.value ?? '出発前です';
     const place = locationInput?.value.trim();
     const guide = guideLinks[selectedTopic] ?? guideLinks['一般的な旅行準備'];
     const needsHuman =
-      /screenshot|photo|declin|failed|stuck|urgent|tomorrow|today|passport|verification|identity|hotel|route/i.test(
+      /スクリーンショット|写真|失敗|できない|止ま|進めない|緊急|明日|今日|パスポート|認証|本人確認|ホテル|ルート/i.test(
         question,
       );
 
     const placeLine = place
-      ? `<strong>${escapeHtml(place)}</strong>に関する内容なので、メールには正確な空港、駅、ホテルエリア、アプリ名、日付を含めてください。`
-      : '個別サポートに送る前に、都市、空港、駅、ホテルエリア、またはアプリ名を追加してください。';
+      ? `<strong>${escapeHtml(place)}</strong>に関するご相談ですので、メールには正確な空港名、駅名、ホテル周辺エリア、アプリ名、日付を含めてください。`
+      : '個別サポートへ送る前に、都市名、空港名、駅名、ホテル周辺エリア、またはアプリ名を追記してください。';
 
     const escalation = needsHuman
-      ? 'これは文脈確認ややり取りが必要な可能性があるため、人によるフォローに向いています。'
-      : 'まずガイドで解決できる可能性があります。ガイドが状況に合わない場合は、人によるフォローを使ってください。';
+      ? 'この内容は、状況確認や複数回のやり取りが必要になる可能性があるため、人によるフォローが適しています。'
+      : 'まずはガイドで解決できる可能性があります。ガイドで状況に合わない場合は、人によるフォローをご利用ください。';
 
     return `
-      <strong class="block text-gray-950">おすすめの次の手順</strong>
-      <span class="block mt-1">トピック: ${escapeHtml(selectedTopic)}。段階: ${escapeHtml(selectedStage)}。</span>
+      <strong class="block text-gray-950">おすすめの次の手順です</strong>
+      <span class="block mt-1">テーマ: ${escapeHtml(selectedTopic)}。段階: ${escapeHtml(selectedStage)}。</span>
       <span class="block mt-2">${placeLine}</span>
-      <span class="block mt-2">まず<a href="${guide.href}" class="font-semibold text-brand-700">${guide.label}</a>を確認し、それでも個別サポートが必要なら作成済みメールボタンを使ってください。</span>
+      <span class="block mt-2">まずは<a href="${guide.href}" class="font-semibold text-brand-700">${guide.label}</a>をご確認ください。さらに個別サポートが必要な場合は、作成済みのメールボタンをご利用ください。</span>
       <span class="block mt-2">${escalation}</span>
     `;
   };
@@ -359,7 +359,7 @@ const safetyRules = [
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
         message: question,
-        stage: stage?.value ?? '出発前',
+        stage: stage?.value ?? '出発前です',
         topic: topic?.value ?? '一般的な旅行準備',
         location: locationInput?.value.trim() ?? '',
       }),
@@ -367,7 +367,7 @@ const safetyRules = [
 
     const data = await response.json() as { answer?: string; error?: string };
     if (!response.ok || !data.answer) {
-      throw new Error(data.error || 'AIヘルパーを利用できません。');
+      throw new Error(data.error || 'AI サポートを現在利用できません。');
     }
     return data.answer;
   };
@@ -376,27 +376,27 @@ const safetyRules = [
     event.preventDefault();
     const question = message?.value.trim() ?? '';
     if (!question) {
-      if (status) status.textContent = '先に質問を入力してください。';
+      if (status) status.textContent = '先に質問内容を入力してください。';
       return;
     }
     addBubble(escapeHtml(question), true);
-    const thinking = addBubble('AIが旅行の質問を確認しています...');
-    if (status) status.textContent = 'AI旅行ヘルプに質問しています...';
+    const thinking = addBubble('AI が旅行に関するご質問を確認しています...');
+    if (status) status.textContent = 'AI 旅行サポートに質問を送信しています...';
     if (submitButton) submitButton.disabled = true;
 
     try {
       const answer = await requestAiAnswer(question);
       if (thinking) {
         thinking.innerHTML = `
-          <strong class="block text-gray-950">AI旅行ヘルプ</strong>
+          <strong class="block text-gray-950">AI 旅行サポート</strong>
           <span class="mt-2 block">${formatAiAnswer(answer)}</span>
-          <span class="mt-3 block text-xs text-gray-500">複雑なアカウント、決済、ビザ、法律、医療、緊急時の問題は、公式提供元で確認するか、人による確認を依頼してください。</span>
+          <span class="mt-3 block text-xs text-gray-500">アカウント、決済、ビザ、法律、医療、緊急時対応などの複雑な問題は、公式提供元で確認するか、人による確認をご依頼ください。</span>
         `;
       }
-      if (status) status.textContent = 'AI回答を用意しました。人による確認が必要ならメールを使ってください。';
+      if (status) status.textContent = 'AI の回答を表示しました。人による確認が必要な場合はメールをご利用ください。';
     } catch {
       if (thinking) thinking.innerHTML = buildReply(question);
-      if (status) status.textContent = 'AIを利用できないため、ローカルの代替回答を用意しました。';
+      if (status) status.textContent = 'AI を利用できなかったため、このページ内の代替案内を表示しました。';
     } finally {
       if (submitButton) submitButton.disabled = false;
     }
