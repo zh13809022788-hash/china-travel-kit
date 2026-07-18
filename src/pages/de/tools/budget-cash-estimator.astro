@@ -6,25 +6,25 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'China-Reisebudget- und Bargeldrechner';
+const title = 'Reisebudget- und Bargeldrechner für China';
 const description =
-  'Schätzen Sie Ihr Tagesbudget und wie viel Bargeld Sie für China mitnehmen sollten, basierend auf Reiselänge, Reisestil und Stadtkategorie. Erhalten Sie eine klare Aufschlüsselung in RMB und USD.';
+  'Schätzen Sie Ihr Tagesbudget und wie viel Bargeld Sie für China mitnehmen sollten - basierend auf Reisedauer, Reisestil und Stadtkategorie. Sie erhalten eine übersichtliche Aufschlüsselung in RMB und USD.';
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Budget- und Bargeldrechner</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Reisebudget- und Bargeldrechner</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- Eingabesteuerungen -->
+    <!-- Eingabefelder -->
     <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Reisedauer (Nächte)</span>
+        <span class="mb-1 font-medium text-gray-700">Reisedauer in Nächten</span>
         <input id="nights" type="number" min="1" max="60" value="7"
           class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
       </label>
@@ -36,9 +36,9 @@ const description =
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Reisestil</span>
         <select id="style" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="budget">Günstig (Hostels, Streetfood, Metro)</option>
-          <option value="mid" selected>Mittelklasse (3–4★ Hotels, Restaurants)</option>
-          <option value="comfort">Komfort (4–5★ Hotels, Taxis, gehobene Gastronomie)</option>
+          <option value="budget">Preisbewusst (Hostels, Streetfood, Metro)</option>
+          <option value="mid" selected>Mittelklasse (Hotels mit 3-4 Sternen, Restaurants)</option>
+          <option value="comfort">Komfortabel (Hotels mit 4-5 Sternen, Taxis, gehobene Restaurants)</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
@@ -46,11 +46,11 @@ const description =
         <select id="tier" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           <option value="tier1">Kategorie 1 (Peking, Shanghai, Shenzhen)</option>
           <option value="tier2" selected>Kategorie 2 (Chengdu, Xi'an, Hangzhou)</option>
-          <option value="tier3">Kleinere Städte und Orte</option>
+          <option value="tier3">Kleinere Städte und ländliche Orte</option>
         </select>
       </label>
       <div class="sm:col-span-2">
-        <button id="calc-btn" class="btn-primary w-full sm:w-auto">Mein Budget berechnen</button>
+        <button id="calc-btn" class="btn-primary w-full sm:w-auto">Budget berechnen</button>
       </div>
     </div>
 
@@ -62,13 +62,13 @@ const description =
       </div>
       <div class="card mt-5" id="breakdown-card"></div>
       <p class="mt-3 text-xs text-gray-400">
-        Die Schätzungen sind Näherungswerte und enthalten keine internationalen Flüge. Die tatsächlichen Kosten variieren je nach Saison,
-        Wechselkurs und persönlichen Entscheidungen. Angenommener Wechselkurs: ca. 7,2 RMB pro USD.
+        Diese Schätzungen sind nur Richtwerte und enthalten keine internationalen Flüge. Die tatsächlichen Kosten hängen von Saison,
+        Wechselkurs und Ihren persönlichen Entscheidungen ab. Zugrunde gelegt ist ein Wechselkurs von etwa 7,2 RMB pro USD.
       </p>
 
       <AffiliateCta
-        title="Wie Einheimische bezahlen und Gebühren sparen"
-        description="Richten Sie eine reisefähige Zahlungsmethode ein, damit Sie den Großteil Ihrer Ausgaben ganz ohne Bargeld begleichen können."
+        title="Wie Einheimische bezahlen und Gebühren vermeiden"
+        description="Richten Sie eine reisetaugliche Zahlungsmethode ein, damit Sie den Großteil Ihrer Ausgaben auch ohne Bargeld problemlos bezahlen können."
         buttonText="Zahlungsoptionen ansehen"
         placeholder={AFFILIATE_LINKS.payment}
       />
@@ -90,14 +90,14 @@ const description =
     comfort: { essen: 400, transport: 200, aktivitaeten: 220, sonstiges: 130 },
   };
 
-  // Unterkunft pro Nacht in RMB (pro Zimmer, angenommen geteilt von bis zu 2 Personen).
+  // Unterkunft pro Nacht in RMB (pro Zimmer, angenommen bei Belegung mit bis zu 2 Personen).
   const lodging: Record<StyleKey, number> = {
     budget: 150,
     mid: 450,
     comfort: 1100,
   };
 
-  // Kostenmultiplikator für die Stadtkategorie.
+  // Kostenfaktor je nach Stadtkategorie.
   const tierMult: Record<TierKey, number> = {
     tier1: 1.25,
     tier2: 1.0,
@@ -130,39 +130,39 @@ const description =
     const spend = dailySpend[style];
     const perPersonDaily = (spend.essen + spend.transport + spend.aktivitaeten + spend.sonstiges) * mult;
 
-    // Unterkunft: 1 Zimmer pro 2 Reisende, aufgerundet.
+    // Unterkunft: 1 Zimmer für jeweils 2 Reisende, aufgerundet.
     const rooms = Math.ceil(travelers / 2);
     const lodgingTotal = lodging[style] * mult * rooms * nights;
 
     const spendTotal = perPersonDaily * travelers * nights;
     const grandTotal = spendTotal + lodgingTotal;
 
-    // Empfohlenes Bargeld: ca. 10 % der täglichen Ausgaben, begrenzt auf einen sinnvollen Betrag.
+    // Empfohlenes Bargeld: etwa 10-15 % der laufenden Ausgaben, gedeckelt auf einen sinnvollen Betrag.
     const dailyCashFloat = Math.min(perPersonDaily * 0.15 * travelers, 200 * travelers);
     const cashRecommended = Math.min(dailyCashFloat * nights, 2000 + 100 * travelers);
 
     budgetCard.innerHTML = `
       <h3 class="text-lg font-bold text-gray-900">Geschätztes Gesamtbudget</h3>
       <p class="mt-2 text-3xl font-bold text-brand-600">${rmb(grandTotal)}</p>
-      <p class="text-sm text-gray-500">≈ ${usd(grandTotal)} für ${travelers} Reisende, ${nights} Nächte</p>
+      <p class="text-sm text-gray-500">≈ ${usd(grandTotal)} für ${travelers} Reisende und ${nights} Nächte</p>
       <dl class="mt-4 space-y-2 text-sm">
         <div class="flex justify-between gap-4"><dt class="text-gray-500">Unterkunft</dt><dd class="font-medium text-gray-900">${rmb(lodgingTotal)}</dd></div>
-        <div class="flex justify-between gap-4"><dt class="text-gray-500">Tägliche Ausgaben</dt><dd class="font-medium text-gray-900">${rmb(spendTotal)}</dd></div>
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">Laufende Ausgaben</dt><dd class="font-medium text-gray-900">${rmb(spendTotal)}</dd></div>
         <div class="flex justify-between gap-4 border-t border-gray-100 pt-2"><dt class="text-gray-700 font-semibold">Pro Person</dt><dd class="font-semibold text-gray-900">${rmb(grandTotal / travelers)}</dd></div>
       </dl>`;
 
     cashCard.innerHTML = `
       <h3 class="text-lg font-bold text-gray-900">Empfohlenes Bargeld</h3>
       <p class="mt-2 text-3xl font-bold text-gray-900">${rmb(cashRecommended)}</p>
-      <p class="text-sm text-gray-500">≈ ${usd(cashRecommended)} in barer RMB-Währung</p>
+      <p class="text-sm text-gray-500">≈ ${usd(cashRecommended)} als Bargeld in RMB</p>
       <p class="mt-4 text-sm text-gray-600">
-        In China wird überwiegend mobil bezahlt. Fast alles bezahlen Sie mit Alipay oder WeChat Pay, verknüpft mit einer
-        ausländischen Karte. Dieses Bargeld dient als Reserve für Taxis ohne QR-Lesegeräte, kleine Händler auf dem Land und
-        Automaten, die nur Scheine annehmen. Nehmen Sie kleine Stückelungen mit (¥10, ¥20, ¥50).
+        In China wird überwiegend mobil bezahlt. Fast alles können Sie mit Alipay oder WeChat Pay bezahlen, verknüpft mit einer
+        ausländischen Karte. Dieses Bargeld ist als Reserve gedacht, etwa für Taxis ohne QR-Zahlung, kleine Händler in ländlichen Gegenden und
+        Automaten, die nur Banknoten annehmen. Sinnvoll sind kleine Stückelungen wie ¥10, ¥20 und ¥50.
       </p>`;
 
     breakdownCard.innerHTML = `
-      <h3 class="text-lg font-bold text-gray-900">Aufschlüsselung der täglichen Ausgaben <span class="text-sm font-normal text-gray-500">(pro Person)</span></h3>
+      <h3 class="text-lg font-bold text-gray-900">Tägliche Ausgaben im Überblick <span class="text-sm font-normal text-gray-500">(pro Person)</span></h3>
       <dl class="mt-4 grid gap-3 sm:grid-cols-4 text-sm">
         <div><dt class="text-gray-500">Essen</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.essen * mult)}</dd></div>
         <div><dt class="text-gray-500">Nahverkehr</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.transport * mult)}</dd></div>
