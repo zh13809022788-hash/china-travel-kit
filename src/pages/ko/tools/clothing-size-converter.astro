@@ -1,3 +1,4 @@
+```astro
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -6,9 +7,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = '중국 의류·신발 사이즈 변환기';
+const title = '중국 의류·신발 사이즈 변환표';
 const description =
-  '미국, 영국, 유럽 의류·신발 사이즈를 중국 사이즈로 바꿔 보고 중국에서도 더 자신 있게 쇼핑해 보세요. 남녀 의류와 신발 사이즈를 모두 확인할 수 있습니다.';
+  '미국, 영국, 유럽 의류·신발 사이즈를 중국 사이즈와 비교해 보고, 중국에서도 더 수월하게 쇼핑할 수 있도록 도와드립니다. 여성·남성 의류와 신발 사이즈를 한눈에 확인해 보세요.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
@@ -16,7 +17,7 @@ const description =
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">도구</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">의류·신발 사이즈 변환기</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">중국 의류·신발 사이즈 변환표</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -33,10 +34,10 @@ const description =
       <table class="w-full min-w-[560px] border-collapse text-sm">
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
-            <th class="py-3 pr-4 font-semibold">중국 사이즈</th>
-            <th class="py-3 pr-4 font-semibold">미국 사이즈</th>
-            <th class="py-3 pr-4 font-semibold">영국 사이즈</th>
-            <th class="py-3 pr-4 font-semibold">유럽 사이즈</th>
+            <th class="py-3 pr-4 font-semibold">중국</th>
+            <th class="py-3 pr-4 font-semibold">미국</th>
+            <th class="py-3 pr-4 font-semibold">영국</th>
+            <th class="py-3 pr-4 font-semibold">유럽</th>
           </tr>
         </thead>
         <tbody id="size-rows"></tbody>
@@ -44,14 +45,14 @@ const description =
     </div>
 
     <p class="mt-4 text-xs text-gray-400">
-      브랜드와 핏에 따라 실제 사이즈는 달라질 수 있습니다. 중국 의류는 서구권 사이즈보다 작게 나오는 경우가 많으니,
-      애매하다면 한 치수 크게 고르거나 구매 전에 직접 입어 보는 편이 좋습니다. 이 표는 일반적인 참고용입니다.
+      브랜드와 핏에 따라 실제 착용감은 달라질 수 있습니다. 중국 의류는 서구권 사이즈보다 작게 나오는 경우가 많으므로,
+      사이즈가 애매하다면 한 치수 크게 고르거나 구매 전에 직접 입어 보는 편이 좋습니다. 이 표는 일반적인 참고용입니다.
     </p>
 
     <AffiliateCta
-      title="여행 중에도 더 편하게 쇼핑하세요"
-      description="중국에서 매장이나 앱 어디서든 불편 없이 결제하고 연결할 수 있도록, 먼저 결제 수단과 인터넷 환경부터 준비해 두세요."
-      buttonText="여행 필수품 보기"
+      title="여행 중 쇼핑도 더 편하게 준비하세요"
+      description="중국에서 오프라인 매장이나 앱으로 불편 없이 결제하고 연결할 수 있도록, 결제 수단과 인터넷 환경을 미리 준비해 두세요."
+      buttonText="여행 준비물 보기"
       placeholder={AFFILIATE_LINKS.transport}
     />
   </main>
@@ -60,38 +61,38 @@ const description =
 
 <script>
   // 참고용 변환표입니다. 중국 의류는 키/가슴둘레(cm) 표기를 사용하며,
-  // 대체로 숫자 사이즈로 함께 표시됩니다. 신발은 유럽식 기준의 cm 사이즈를 사용합니다.
-  const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
+  // 대체로 숫자 사이즈로도 함께 표시됩니다. 신발은 유럽식 기준에 가까운 표기를 사용합니다.
+  const charts: Record<string, { 중국: string; 미국: string; 영국: string; 유럽: string }[]> = {
     '여성-의류': [
-      { cn: '155/80A (초소형)', us: '0–2', uk: '4–6', eu: '32–34' },
-      { cn: '160/84A (소형)', us: '4', uk: '8', eu: '36' },
-      { cn: '165/88A (중간)', us: '6–8', uk: '10–12', eu: '38–40' },
-      { cn: '170/92A (대형)', us: '10–12', uk: '14–16', eu: '42–44' },
-      { cn: '175/96A (특대형)', us: '14', uk: '18', eu: '46' },
+      { 중국: '155/80A (매우 작음)', 미국: '0–2', 영국: '4–6', 유럽: '32–34' },
+      { 중국: '160/84A (작음)', 미국: '4', 영국: '8', 유럽: '36' },
+      { 중국: '165/88A (보통)', 미국: '6–8', 영국: '10–12', 유럽: '38–40' },
+      { 중국: '170/92A (큼)', 미국: '10–12', 영국: '14–16', 유럽: '42–44' },
+      { 중국: '175/96A (매우 큼)', 미국: '14', 영국: '18', 유럽: '46' },
     ],
     '남성-의류': [
-      { cn: '165/88A (소형)', us: '34–36', uk: '34–36', eu: '44–46' },
-      { cn: '170/92A (중간)', us: '38', uk: '38', eu: '48' },
-      { cn: '175/96A (대형)', us: '40', uk: '40', eu: '50' },
-      { cn: '180/100A (특대형)', us: '42–44', uk: '42–44', eu: '52–54' },
-      { cn: '185/104A (아주 큰 사이즈)', us: '46', uk: '46', eu: '56' },
+      { 중국: '165/88A (작음)', 미국: '34–36', 영국: '34–36', 유럽: '44–46' },
+      { 중국: '170/92A (보통)', 미국: '38', 영국: '38', 유럽: '48' },
+      { 중국: '175/96A (큼)', 미국: '40', 영국: '40', 유럽: '50' },
+      { 중국: '180/100A (매우 큼)', 미국: '42–44', 영국: '42–44', 유럽: '52–54' },
+      { 중국: '185/104A (아주 큼)', 미국: '46', 영국: '46', 유럽: '56' },
     ],
     '여성-신발': [
-      { cn: '35', us: '5', uk: '2.5', eu: '35' },
-      { cn: '36', us: '6', uk: '3.5', eu: '36' },
-      { cn: '37', us: '6.5', uk: '4.5', eu: '37' },
-      { cn: '38', us: '7.5', uk: '5.5', eu: '38' },
-      { cn: '39', us: '8.5', uk: '6.5', eu: '39' },
-      { cn: '40', us: '9', uk: '7', eu: '40' },
+      { 중국: '35', 미국: '5', 영국: '2.5', 유럽: '35' },
+      { 중국: '36', 미국: '6', 영국: '3.5', 유럽: '36' },
+      { 중국: '37', 미국: '6.5', 영국: '4.5', 유럽: '37' },
+      { 중국: '38', 미국: '7.5', 영국: '5.5', 유럽: '38' },
+      { 중국: '39', 미국: '8.5', 영국: '6.5', 유럽: '39' },
+      { 중국: '40', 미국: '9', 영국: '7', 유럽: '40' },
     ],
     '남성-신발': [
-      { cn: '39', us: '6.5', uk: '6', eu: '39' },
-      { cn: '40', us: '7', uk: '6.5', eu: '40' },
-      { cn: '41', us: '8', uk: '7.5', eu: '41' },
-      { cn: '42', us: '8.5', uk: '8', eu: '42' },
-      { cn: '43', us: '9.5', uk: '9', eu: '43' },
-      { cn: '44', us: '10.5', uk: '10', eu: '44' },
-      { cn: '45', us: '11', uk: '10.5', eu: '45' },
+      { 중국: '39', 미국: '6.5', 영국: '6', 유럽: '39' },
+      { 중국: '40', 미국: '7', 영국: '6.5', 유럽: '40' },
+      { 중국: '41', 미국: '8', 영국: '7.5', 유럽: '41' },
+      { 중국: '42', 미국: '8.5', 영국: '8', 유럽: '42' },
+      { 중국: '43', 미국: '9.5', 영국: '9', 유럽: '43' },
+      { 중국: '44', 미국: '10.5', 영국: '10', 유럽: '44' },
+      { 중국: '45', 미국: '11', 영국: '10.5', 유럽: '45' },
     ],
   };
 
@@ -103,10 +104,10 @@ const description =
     rowsEl.innerHTML = charts[key]
       .map((r) => `
         <tr class="border-b border-gray-100">
-          <td class="py-3 pr-4 font-semibold text-gray-900">${r.cn}</td>
-          <td class="py-3 pr-4">${r.us}</td>
-          <td class="py-3 pr-4">${r.uk}</td>
-          <td class="py-3 pr-4">${r.eu}</td>
+          <td class="py-3 pr-4 font-semibold text-gray-900">${r.중국}</td>
+          <td class="py-3 pr-4">${r.미국}</td>
+          <td class="py-3 pr-4">${r.영국}</td>
+          <td class="py-3 pr-4">${r.유럽}</td>
         </tr>`)
       .join('');
   }
@@ -124,3 +125,4 @@ const description =
 
   render('여성-의류');
 </script>
+```
