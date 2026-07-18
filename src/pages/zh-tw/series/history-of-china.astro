@@ -10,13 +10,13 @@ const posts = (await getCollection('posts-zh-tw'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'China 歷史 — 給旅人的古蹟與故事';
-const description = '以外國旅人的角度探索 China 的歷史景點：長城、兵馬俑、紫禁城、絲路、古都與水鄉，透過背後故事解讀眼前所見。';
+const title = '中國歷史 — 獻給旅人的古蹟與故事';
+const description = '以外國旅人的視角探索中國的歷史景點：長城、兵馬俑、紫禁城、絲路、古都與水鄉，透過背後的故事理解眼前所見。';
 
 const relatedTools = [
-  { href: '/zh-tw/posts/china-visa-free-entry-transit-guide-2026/', title: '簽證與入境指南', desc: '免簽過境與入境要求' },
-  { href: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/', title: '高鐵指南', desc: '前往 China 各地歷史景點的列車' },
-  { href: '/zh-tw/posts/book-china-train-tickets-12306-foreigners/', title: '預訂火車票', desc: '外國護照持有人 12306 指南' },
+  { href: '/zh-tw/posts/china-visa-free-entry-transit-guide-2026/', title: '簽證與入境指南', desc: '免簽過境與入境規定' },
+  { href: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/', title: '高鐵指南', desc: '前往中國各地歷史景點的列車' },
+  { href: '/zh-tw/posts/book-china-train-tickets-12306-foreigners/', title: '預訂火車票', desc: '外國護照持有人使用 12306 的指南' },
 ];
 
 const relatedCities = [
@@ -26,9 +26,9 @@ const relatedCities = [
 ];
 
 const otherSeries = [
-  { href: '/zh-tw/series/food-of-china/', title: 'China 美食' },
-  { href: '/zh-tw/series/culture-of-china/', title: 'China 文化' },
-  { href: '/zh-tw/series/nature-of-china/', title: 'China 自然' },
+  { href: '/zh-tw/series/food-of-china/', title: '中國美食' },
+  { href: '/zh-tw/series/culture-of-china/', title: '中國文化' },
+  { href: '/zh-tw/series/nature-of-china/', title: '中國自然' },
 ];
 ---
 
@@ -48,7 +48,7 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">文章</p>
-            <h2>China 歷史系列</h2>
+            <h2>中國歷史系列</h2>
           </div>
         </div>
         {posts.length > 0 ? (
