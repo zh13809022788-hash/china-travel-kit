@@ -6,20 +6,20 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'eSIM Plan Comparator for China Travel';
+const title = 'Сравнение тарифов eSIM для поездки в Китай';
 const description =
-  'Compare the top China travel eSIM plans by data, validity, price, and network. Filter and sort to find the best plan for your trip.';
+  'Сравните лучшие тарифы eSIM для поездки в Китай по объему трафика, сроку действия, цене и сети. Используйте фильтры и сортировку, чтобы подобрать оптимальный вариант для вашего путешествия.';
 
 // 8 preset China travel eSIM products (representative sample data)
 const plans = [
-  { id: 1, name: 'China Explorer 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: 'Bypasses local app restrictions' },
-  { id: 2, name: 'China Explorer 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: 'Bypasses local app restrictions' },
-  { id: 3, name: 'Mainland Lite 3GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: 'Local network, no VPN routing' },
-  { id: 4, name: 'Greater China 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Covers CN, HK, MO, TW' },
-  { id: 5, name: 'Unlimited Daily', data: 9999, dataLabel: 'Unlimited*', days: 10, price: 29, network: 'China Unicom', note: 'Fair-use cap after 2GB/day' },
-  { id: 6, name: 'Business 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Bypasses local app restrictions' },
-  { id: 7, name: 'Short Trip 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Best for quick layovers' },
-  { id: 8, name: 'Family 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Shareable via hotspot' },
+  { id: 1, name: 'China Explorer 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: 'Обходит локальные ограничения приложений' },
+  { id: 2, name: 'China Explorer 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: 'Обходит локальные ограничения приложений' },
+  { id: 3, name: 'Mainland Lite 3GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: 'Локальная сеть, без маршрутизации через VPN' },
+  { id: 4, name: 'Greater China 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Покрытие в CN, HK, MO, TW' },
+  { id: 5, name: 'Unlimited Daily', data: 9999, dataLabel: 'Безлимит*', days: 10, price: 29, network: 'China Unicom', note: 'Ограничение fair-use после 2 GB в день' },
+  { id: 6, name: 'Business 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Обходит локальные ограничения приложений' },
+  { id: 7, name: 'Short Trip 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Лучший вариант для короткой пересадки' },
+  { id: 8, name: 'Family 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Можно раздавать через точку доступа' },
 ];
 ---
 
@@ -27,8 +27,8 @@ const plans = [
   <Header locale="ru" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM Plan Comparator</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Инструмент</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Сравнение тарифов eSIM</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -37,26 +37,26 @@ const plans = [
     <!-- Controls -->
     <div class="mt-6 flex flex-wrap items-end gap-4 rounded-xl border border-gray-200 bg-gray-50 p-4">
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Sort by</span>
+        <span class="mb-1 font-medium text-gray-700">Сортировать по</span>
         <select id="sort-by" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="price-asc">Price: Low to High</option>
-          <option value="price-desc">Price: High to Low</option>
-          <option value="data-desc">Data: High to Low</option>
-          <option value="days-desc">Validity: Long to Short</option>
+          <option value="price-asc">Цена: по возрастанию</option>
+          <option value="price-desc">Цена: по убыванию</option>
+          <option value="data-desc">Трафик: от большего к меньшему</option>
+          <option value="days-desc">Срок действия: от большего к меньшему</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Network</span>
+        <span class="mb-1 font-medium text-gray-700">Сеть</span>
         <select id="filter-network" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="all">All networks</option>
+          <option value="all">Все сети</option>
           <option value="China Unicom">China Unicom</option>
           <option value="China Mobile">China Mobile</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Min. data (GB)</span>
+        <span class="mb-1 font-medium text-gray-700">Мин. трафик (GB)</span>
         <select id="filter-data" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="0">Any</option>
+          <option value="0">Любой</option>
           <option value="5">5+ GB</option>
           <option value="10">10+ GB</option>
           <option value="20">20+ GB</option>
@@ -69,23 +69,23 @@ const plans = [
       <table class="w-full min-w-[720px] border-collapse text-sm">
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
-            <th class="py-3 pr-4 font-semibold">Plan</th>
-            <th class="py-3 pr-4 font-semibold">Data</th>
-            <th class="py-3 pr-4 font-semibold">Validity</th>
-            <th class="py-3 pr-4 font-semibold">Price (USD)</th>
-            <th class="py-3 pr-4 font-semibold">Network</th>
-            <th class="py-3 pr-4 font-semibold">Notes</th>
+            <th class="py-3 pr-4 font-semibold">Тариф</th>
+            <th class="py-3 pr-4 font-semibold">Трафик</th>
+            <th class="py-3 pr-4 font-semibold">Срок действия</th>
+            <th class="py-3 pr-4 font-semibold">Цена (USD)</th>
+            <th class="py-3 pr-4 font-semibold">Сеть</th>
+            <th class="py-3 pr-4 font-semibold">Примечания</th>
           </tr>
         </thead>
         <tbody id="plan-rows"></tbody>
       </table>
-      <p id="no-results" class="hidden py-8 text-center text-gray-500">No plans match your filters.</p>
+      <p id="no-results" class="hidden py-8 text-center text-gray-500">По выбранным фильтрам подходящих тарифов не найдено.</p>
     </div>
 
     <AffiliateCta
-      title="Ready to Get Connected?"
-      description="Activate a recommended China eSIM and be online the moment you land."
-      buttonText="Get Your eSIM"
+      title="Готовы подключиться?"
+      description="Активируйте рекомендованную eSIM для Китая и выходите в интернет сразу после приземления."
+      buttonText="Получить eSIM"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -120,7 +120,7 @@ const plans = [
       <tr class="border-b border-gray-100">
         <td class="py-3 pr-4 font-semibold text-gray-900">${p.name}</td>
         <td class="py-3 pr-4">${p.dataLabel}</td>
-        <td class="py-3 pr-4">${p.days} days</td>
+        <td class="py-3 pr-4">${p.days} дней</td>
         <td class="py-3 pr-4 font-semibold">$${p.price.toFixed(2)}</td>
         <td class="py-3 pr-4">${p.network}</td>
         <td class="py-3 pr-4 text-gray-500">${p.note}</td>
