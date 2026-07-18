@@ -20,15 +20,15 @@ const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
 const nextSteps = [
   { href: '/de/posts/alipay-foreign-credit-card-step-by-step/', title: 'Alipay mit einer ausländischen Karte einrichten' },
   { href: '/de/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: 'Visa oder Mastercard mit WeChat Pay verknüpfen' },
-  { href: '/de/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: 'Wissen, wann Bargeld noch hilft' },
-  { href: '/de/payment/', title: 'Alle Zahlungsratgeber fur China ansehen' },
+  { href: '/de/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: 'Verstehen, wann Bargeld noch hilfreich ist' },
+  { href: '/de/payment/', title: 'Alle Zahlungsratgeber für China ansehen' },
 ];
 
 const faqItems = [
   {
-    question: 'Funktioniert jede ausländische Visa oder Mastercard in China?',
+    question: 'Funktioniert jede ausländische Visa- oder Mastercard in China?',
     answer:
-      'Nein. Visa und Mastercard sind der sicherste Ausgangspunkt für Alipay und WeChat Pay, aber einzelne Banken können die Verifizierung blockieren, die Verknüpfung mit einer Online-Wallet ablehnen oder Transaktionen in China markieren. Halten Sie eine zweite Karte und etwas Bargeld als Reserve bereit.',
+      'Nein. Visa und Mastercard sind der sicherste Ausgangspunkt für Alipay und WeChat Pay, aber einzelne Banken können die Verifizierung blockieren, die Verknüpfung mit einer digitalen Geldbörse ablehnen oder Transaktionen in China markieren. Halten Sie eine zweite Karte und etwas Bargeld als Reserve bereit.',
   },
   {
     question: 'Sollten Touristen sowohl Alipay als auch WeChat Pay einrichten?',
@@ -183,16 +183,16 @@ const faqItems = [
     wechat: { status: string; single: string; daily: string; fee: string; how: string };
   }> = {
     Visa: {
-      alipay: { status: 'Unterstützt', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% über 200 RMB', how: 'Karte in der digitalen Alipay-Geldbörse hinzufügen, Reisepass verifizieren' },
-      wechat: { status: 'Unterstützt', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% über 200 RMB', how: 'Karte in der digitalen WeChat-Geldbörse hinzufügen, Reisepass verifizieren' },
+      alipay: { status: 'Unterstützt', single: '~6.000 RMB', daily: '~50.000 RMB', fee: '~3 % über 200 RMB', how: 'Karte in der digitalen Alipay-Geldbörse hinzufügen, Reisepass verifizieren' },
+      wechat: { status: 'Unterstützt', single: '~6.000 RMB', daily: '~50.000 RMB', fee: '~3 % über 200 RMB', how: 'Karte in der digitalen WeChat-Geldbörse hinzufügen, Reisepass verifizieren' },
     },
     Mastercard: {
-      alipay: { status: 'Unterstützt', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% über 200 RMB', how: 'Karte in der digitalen Alipay-Geldbörse hinzufügen, Reisepass verifizieren' },
-      wechat: { status: 'Unterstützt', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% über 200 RMB', how: 'Karte in der digitalen WeChat-Geldbörse hinzufügen, Reisepass verifizieren' },
+      alipay: { status: 'Unterstützt', single: '~6.000 RMB', daily: '~50.000 RMB', fee: '~3 % über 200 RMB', how: 'Karte in der digitalen Alipay-Geldbörse hinzufügen, Reisepass verifizieren' },
+      wechat: { status: 'Unterstützt', single: '~6.000 RMB', daily: '~50.000 RMB', fee: '~3 % über 200 RMB', how: 'Karte in der digitalen WeChat-Geldbörse hinzufügen, Reisepass verifizieren' },
     },
     Amex: {
-      alipay: { status: 'Teilweise unterstützt', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% über 200 RMB', how: 'Amex funktioniert in Alipay in den meisten Fällen; halten Sie Visa/MC als Reserve bereit' },
-      wechat: { status: 'Eingeschränkt', single: 'Variiert', daily: 'Variiert', fee: '~3% über 200 RMB', how: 'Die Unterstützung ist uneinheitlich; bevorzugen Sie Visa/Mastercard in WeChat' },
+      alipay: { status: 'Teilweise unterstützt', single: '~6.000 RMB', daily: '~50.000 RMB', fee: '~3 % über 200 RMB', how: 'Amex funktioniert in Alipay in den meisten Fällen; halten Sie Visa/MC als Reserve bereit' },
+      wechat: { status: 'Eingeschränkt', single: 'Variiert', daily: 'Variiert', fee: '~3 % über 200 RMB', how: 'Die Unterstützung ist uneinheitlich; bevorzugen Sie Visa/Mastercard in WeChat' },
     },
     Discover: {
       alipay: { status: 'Eingeschränkt', single: 'Variiert', daily: 'Variiert', fee: 'Variiert', how: 'Die Akzeptanz ist begrenzt; Visa/Mastercard wird dringend empfohlen' },
