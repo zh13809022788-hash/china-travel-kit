@@ -114,6 +114,6 @@ The Shanghai Metro is genuinely one of the easiest big-city subways in the world
 ## Read Next
 
 - [Shanghai city guide](/posts/shanghai-city-guide-for-foreigners/)
-- [airport to city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
+- [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
 

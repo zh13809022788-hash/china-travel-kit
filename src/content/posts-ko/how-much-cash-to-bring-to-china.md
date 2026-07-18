@@ -84,7 +84,7 @@ ATM이나 환전 창구에서 "자국 통화로 환산" 또는 원화 기준 결
 ## 다음 글
 
 - [cash in China for foreigners](/ko/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/)
-- [how to pay in China as a tourist](/ko/posts/how-to-pay-in-china-tourist-guide/)
+- [중국 여행자 결제 방법: 알리페이, 현금, 신용카드](/ko/posts/how-to-pay-in-china-tourist-guide/)
 - [foreign credit card acceptance in China](/ko/posts/use-foreign-credit-card-in-china-directly/)
 
 ## 요약

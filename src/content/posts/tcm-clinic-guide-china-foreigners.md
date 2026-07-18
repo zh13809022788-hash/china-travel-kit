@@ -176,7 +176,7 @@ Refer to the FAQ section at the top of this guide for answers to the most common
 
 ## What to Do Next
 
-1. **Set up Alipay or WeChat Pay** before you arrive — most hospital payments require them. Read our [payment setup guide](/posts/alipay-foreign-credit-card-step-by-step/).
+1. **Set up Alipay or WeChat Pay** before you arrive — most hospital payments require them. Read our [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/).
 2. **Get an eSIM** so you have internet access at the hospital. See our [eSIM comparison](/posts/best-esim-for-china-travel-2026/).
 3. **Save the symptom phrase card** from this guide on your phone.
 4. **Print or screenshot the hospital registration message** — "我想挂中医科的号" — to show at the registration counter.

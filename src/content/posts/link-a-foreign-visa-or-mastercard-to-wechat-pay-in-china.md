@@ -85,7 +85,7 @@ Linking a foreign Visa or Mastercard to WeChat Pay is straightforward once you k
 
 ## Read Next
 
-- [WeChat Pay guide for foreign visitors](/posts/wechat-pay-foreign-visitors-guide/)
-- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
 

@@ -86,8 +86,8 @@ faqs:
 
 ## 다음에 읽기
 
-- [booking China train tickets on 12306](/ko/posts/book-china-train-tickets-12306-foreigners/)
-- [Hangzhou city guide](/ko/posts/hangzhou-city-guide-for-foreigners/)
+- [외국인이 12306에서 중국 기차표를 예매하는 방법](/ko/posts/book-china-train-tickets-12306-foreigners/)
+- [항저우 여행 가이드 2026: 서호, 용징차, 주말 코스](/ko/posts/hangzhou-city-guide-for-foreigners/)
 - [first-time China trip planner](/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## 요약

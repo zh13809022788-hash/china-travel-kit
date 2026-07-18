@@ -116,4 +116,4 @@ The Yangshuo case illustrates why location matters enormously. Losing your passp
 
 ---
 
-**Read next:** [China Visa-Free Entry and Transit Guide 2026](/posts/china-visa-free-entry-transit-guide-2026/) explains what visa rules apply and how to avoid overstay problems after you get your replacement documents. [First 24 Hours in China: Complete Arrival Checklist](/posts/first-24-hours-in-china-arrival-checklist/) covers the practical steps that prevent emergencies — including making a passport photocopy the moment you check into your hotel.
+**Read next:** [China Visa-Free Entry and Transit Guide 2026](/posts/china-visa-free-entry-transit-guide-2026/) explains what visa rules apply and how to avoid overstay problems after you get your replacement documents. [First 24 Hours in China: Arrival Checklist](/posts/first-24-hours-in-china-arrival-checklist/) covers the practical steps that prevent emergencies — including making a passport photocopy the moment you check into your hotel.

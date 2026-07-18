@@ -60,7 +60,7 @@ Cash helps when:
 - a taxi payment flow is confusing;
 - you need a deposit or emergency fallback.
 
-For amounts and ATM strategy, read [how much cash to bring to China](/posts/how-much-cash-to-bring-to-china/).
+For amounts and ATM strategy, read [How Much Cash Should You Bring to China?](/posts/how-much-cash-to-bring-to-china/).
 
 ## Step 4: Choose Airport Transport Carefully
 
@@ -68,7 +68,7 @@ Airport transport is the first real navigation test. Pick the method that matche
 
 If you arrive during the day with light luggage, airport metro or train links are often excellent. If you arrive late, have children, or carry multiple bags, a taxi queue or prearranged transfer may be calmer. Ride-hailing can be convenient, but only if your app, payment, pickup location, and Chinese destination are ready.
 
-Before entering a car, save your hotel name and address in Chinese. Screenshots are not enough if the address is cropped or only in English. Use the [airport-to-city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/) and the [show-to-driver tool](/tools/show-to-driver/) if you need a large Chinese address card.
+Before entering a car, save your hotel name and address in Chinese. Screenshots are not enough if the address is cropped or only in English. Use the [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/) and the [show-to-driver tool](/tools/show-to-driver/) if you need a large Chinese address card.
 
 ## Step 5: Check In And Stabilize Your Base
 
@@ -108,7 +108,7 @@ Use the [resource hub](/resources/) for a broader plan and the [China trip plann
 
 - [What to set up before traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 - [Payment checker](/tools/payment-checker/)
-- [Airport to city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [China travel resources](/resources/)
 
 ## Summary

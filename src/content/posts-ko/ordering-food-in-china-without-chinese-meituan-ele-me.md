@@ -114,4 +114,4 @@ faqs:
 
 - [Chengdu street food guide](/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
 - [Chengdu city guide](/ko/posts/chengdu-city-guide-for-foreigners/)
-- [how to pay in China as a tourist](/ko/posts/how-to-pay-in-china-tourist-guide/)
+- [중국 여행자 결제 방법: 알리페이, 현금, 신용카드](/ko/posts/how-to-pay-in-china-tourist-guide/)

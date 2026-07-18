@@ -73,8 +73,8 @@ For hotels, first-time visitors should stay near the east side of West Lake, Wul
 ## Read Next
 
 - [Shanghai city guide](/posts/shanghai-city-guide-for-foreigners/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
-- [book China train tickets on 12306](/posts/book-china-train-tickets-12306-foreigners/)
+- [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
+- [How to Book China Train Tickets on 12306 for Foreigners](/posts/book-china-train-tickets-12306-foreigners/)
 
 ## Summary
 

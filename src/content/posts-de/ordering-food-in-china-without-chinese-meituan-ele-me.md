@@ -88,7 +88,7 @@ Auch vor Ort helfen dieselben Werkzeuge: Bildmenüs, Kameraübersetzung, Alipay/
 
 - [Chengdu street food guide](/de/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
 - [Chengdu city guide](/de/posts/chengdu-city-guide-for-foreigners/)
-- [how to pay in China as a tourist](/de/posts/how-to-pay-in-china-tourist-guide/)
+- [In China als Tourist bezahlen](/de/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Fazit
 

@@ -59,8 +59,8 @@ Buchen Sie beliebte Strecken früh, besonders an Wochenenden, vor Feiertagen und
 
 ## Weiterlesen
 
-- [booking China train tickets on 12306](/de/posts/book-china-train-tickets-12306-foreigners/)
-- [Hangzhou city guide](/de/posts/hangzhou-city-guide-for-foreigners/)
+- [China-Bahntickets über 12306 für Ausländer buchen](/de/posts/book-china-train-tickets-12306-foreigners/)
+- [Hangzhou-Reiseführer 2026: Westsee, Longjing-Tee und Wochenendtrips](/de/posts/hangzhou-city-guide-for-foreigners/)
 - [first-time China trip planner](/de/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## Fazit

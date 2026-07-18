@@ -74,7 +74,7 @@ For longer stays, check the ordinary-life details before committing to an apartm
 ## Read Next
 
 - [season-by-season China packing checklist](/posts/what-to-pack-for-china-a-season-by-season-checklist/)
-- [China visa-free and transit guide](/posts/china-visa-free-entry-transit-guide-2026/)
+- [China Visa-Free Entry and Transit Guide 2026](/posts/china-visa-free-entry-transit-guide-2026/)
 - [best time to visit tool](/tools/best-time-to-visit/)
 
 ## Summary

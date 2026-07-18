@@ -142,7 +142,7 @@ Use high-speed rail for routes such as Beijing-Shanghai, Shanghai-Hangzhou, Chen
 Related guides:
 
 - [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
-- [Book China Train Tickets on 12306 as a Foreigner](/posts/book-china-train-tickets-12306-foreigners/)
+- [How to Book China Train Tickets on 12306 for Foreigners](/posts/book-china-train-tickets-12306-foreigners/)
 
 ## 6. Make a First-Day Checklist
 

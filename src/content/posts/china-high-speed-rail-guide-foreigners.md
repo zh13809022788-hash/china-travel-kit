@@ -88,8 +88,8 @@ If your route is long, consider First Class for the extra comfort, but don't fee
 
 ## Read Next
 
-- [booking China train tickets on 12306](/posts/book-china-train-tickets-12306-foreigners/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
+- [How to Book China Train Tickets on 12306 for Foreigners](/posts/book-china-train-tickets-12306-foreigners/)
+- [Hangzhou Travel Guide 2026](/posts/hangzhou-city-guide-for-foreigners/)
 - [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## Summary

@@ -62,9 +62,9 @@ faqs:
 
 ## Что читать дальше
 
-- [аэропорт Daxing до центра](/ru/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [транспорт из аэропорта](/ru/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [поезда в Китае](/ru/posts/china-high-speed-rail-guide-foreigners/)
+- [Пекин Дасин до центра: руководство для новичков](/ru/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [Трансфер из аэропорта в город 2026: Пекин, Шанхай, Гуанчжоу](/ru/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Высокоскоростные поезда Китая: руководство для иностранцев](/ru/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Итог
 

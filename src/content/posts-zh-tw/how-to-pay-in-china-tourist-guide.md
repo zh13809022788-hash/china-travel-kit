@@ -79,9 +79,9 @@ faqs:
 早上用 Alipay 掃碼買早餐；中午用 App 裡的交通 QR Code 進捷運；下午掃博物館的 QR Code 買票；晚上和朋友用 WeChat Pay 分帳；深夜用掃碼買販賣機飲料。整趟旅程都沒打開實體錢包，現在已經很常見。
 
 ## 延伸閱讀
-- [Alipay setup guide](/zh-tw/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay setup guide](/zh-tw/posts/wechat-pay-foreign-visitors-guide/)
-- [how much cash to bring](/zh-tw/posts/how-much-cash-to-bring-to-china/)
+- [外國人使用 Alipay：一步步綁定海外信用卡](/zh-tw/posts/alipay-foreign-credit-card-step-by-step/)
+- [外國旅客 WeChat Pay 使用指南](/zh-tw/posts/wechat-pay-foreign-visitors-guide/)
+- [去中國應該帶多少現金？](/zh-tw/posts/how-much-cash-to-bring-to-china/)
 
 ## 總結
 2026 年旅客在中國付款的核心很簡單：**出發前把 Alipay 和 WeChat Pay 綁好海外卡。** 實體 Visa 或 Mastercard 留給飯店與大商場，少量現金留作備援。這樣從路邊小吃到高鐵票都能順利處理，不需要中國銀行帳戶。

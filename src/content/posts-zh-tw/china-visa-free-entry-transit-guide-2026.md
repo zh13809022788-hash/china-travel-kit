@@ -68,7 +68,7 @@ faqs:
 ## 延伸閱讀
 - [What to set up before traveling to China](/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 - [First-time China trip planner](/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [China airport transport guide](/zh-tw/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [中國機場到市區交通 2026：北京、上海、廣州攻略](/zh-tw/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 
 ## 總結
 2026 年去中國是否需要簽證，取決於你的護照與行程。30 天單方面免簽適合符合資格的普通入境旅行；240 小時過境免簽適合前往第三國或地區的中轉停留。不要只看一篇文章下結論，請在訂票前用官方來源和航空公司確認。

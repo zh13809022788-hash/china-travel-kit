@@ -86,7 +86,7 @@ faqs:
 ## 関連記事
 - [visa-free checker tool](/ja/tools/visa-free-checker/)
 - [first-time China trip planner](/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [airport transport guide](/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [中国の空港から市内への移動 2026：北京・上海・広州](/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 
 ## まとめ
 

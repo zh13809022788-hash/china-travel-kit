@@ -104,9 +104,9 @@ The trade-off is a **small service or convenience fee per ticket** on top of the
 
 ## Read Next
 
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
 - [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [airport and city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 
 ## Summary
 

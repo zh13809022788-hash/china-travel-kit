@@ -71,9 +71,9 @@ Comprueba bien si llegas a Pudong o Hongqiao. Pudong está lejos del centro; Hon
 
 ## Leer Después
 
-- [Shanghai metro guide](/es/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [airport transport guide](/es/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Hangzhou city guide](/es/posts/hangzhou-city-guide-for-foreigners/)
+- [Metro de Shanghái 2026: cómo comprar billetes, códigos QR y transbordos](/es/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [Transporte del aeropuerto a la ciudad en China 2026: Pekín, Shanghái, Cantón](/es/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Guía de Hangzhou 2026: lago del Oeste, té Longjing y escapadas de fin de semana](/es/posts/hangzhou-city-guide-for-foreigners/)
 
 ## Resumen
 

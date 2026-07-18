@@ -102,4 +102,4 @@ Recibirás un 停留证件 — permiso de estancia de 15–30 días. Empieza est
 
 ---
 
-**Leer después:** [Entrada sin visado y tránsito en China 2026](/es/posts/china-visa-free-entry-transit-guide-2026/) sobre las normas de visado tras reponer los documentos. [Primeras 24 horas en China](/es/posts/first-24-hours-in-china-arrival-checklist/) sobre medidas que previenen emergencias.
+**Leer después:** [Guía de entrada sin visa y tránsito en China 2026](/es/posts/china-visa-free-entry-transit-guide-2026/) sobre las normas de visado tras reponer los documentos. [Primeras 24 horas en China: lista de llegada](/es/posts/first-24-hours-in-china-arrival-checklist/) sobre medidas que previenen emergencias.

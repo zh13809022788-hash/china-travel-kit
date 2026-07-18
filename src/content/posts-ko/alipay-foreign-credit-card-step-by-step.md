@@ -102,9 +102,9 @@ Apple App Store 또는 Google Play에서 **Alipay**를 검색합니다. Ant Grou
 
 ## 다음에 읽기
 
-- [how to pay in China as a tourist](/ko/posts/how-to-pay-in-china-tourist-guide/)
-- [WeChat Pay setup guide](/ko/posts/wechat-pay-foreign-visitors-guide/)
-- [cash backup guide for China](/ko/posts/how-much-cash-to-bring-to-china/)
+- [중국 여행자 결제 방법: 알리페이, 현금, 신용카드](/ko/posts/how-to-pay-in-china-tourist-guide/)
+- [위챗페이 외국인 관광객 가이드](/ko/posts/wechat-pay-foreign-visitors-guide/)
+- [중국 여행 시 현금은 얼마나 가져가야 할까요?](/ko/posts/how-much-cash-to-bring-to-china/)
 
 ## 요약
 

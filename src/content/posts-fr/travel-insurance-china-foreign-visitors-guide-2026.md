@@ -112,4 +112,4 @@ Dans les hôpitaux publics, attendez-vous à payer chaque étape : ¥200 l'enreg
 
 ---
 
-**À lire ensuite :** [Premières 24 heures en Chine : check-list complète](/fr/posts/first-24-hours-in-china-arrival-checklist/) couvre tout ce qu'il faut faire à l'atterrissage. [Ce qu'il faut configurer avant de partir en Chine](/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) détaille la check-list pré-départ.
+**À lire ensuite :** [Les premières 24 heures en Chine : check-list d'arrivée](/fr/posts/first-24-hours-in-china-arrival-checklist/) couvre tout ce qu'il faut faire à l'atterrissage. [Ce qu'il faut configurer avant de partir en Chine](/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) détaille la check-list pré-départ.

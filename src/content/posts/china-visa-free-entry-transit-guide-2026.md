@@ -90,7 +90,7 @@ Use these official sources before you book flights or hotels:
 
 - [visa-free checker tool](/tools/visa-free-checker/)
 - [first-time China trip planner](/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 
 ## Summary
 

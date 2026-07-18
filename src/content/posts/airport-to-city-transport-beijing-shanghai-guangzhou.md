@@ -98,9 +98,9 @@ For payment, use your mobile wallet wherever possible. Metro machines and gates 
 
 ## Read Next
 
-- [Beijing Daxing airport transfer guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [Shanghai metro guide for foreigners](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [DiDi China guide for tourists](/posts/didi-china-foreign-tourists-guide/)
+- [Beijing Daxing Airport to City Center: A First-Timer's Guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [Shanghai Metro Guide 2026: How to Ride for Foreigners](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [DiDi China Guide for Foreign Tourists](/posts/didi-china-foreign-tourists-guide/)
 
 ## Summary
 

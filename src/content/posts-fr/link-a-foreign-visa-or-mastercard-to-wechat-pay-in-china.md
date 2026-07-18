@@ -92,9 +92,9 @@ Faites un premier test avec un petit achat, par exemple une bouteille d'eau ou u
 
 ## À lire ensuite
 
-- [WeChat Pay guide for foreign visitors](/fr/posts/wechat-pay-foreign-visitors-guide/)
-- [Alipay setup guide](/fr/posts/alipay-foreign-credit-card-step-by-step/)
-- [how to pay in China as a tourist](/fr/posts/how-to-pay-in-china-tourist-guide/)
+- [Guide WeChat Pay pour les visiteurs étrangers](/fr/posts/wechat-pay-foreign-visitors-guide/)
+- [Alipay en Chine en 2026 : associer une carte étrangère étape par étape](/fr/posts/alipay-foreign-credit-card-step-by-step/)
+- [Comment payer en Chine en tant que touriste](/fr/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Résumé
 

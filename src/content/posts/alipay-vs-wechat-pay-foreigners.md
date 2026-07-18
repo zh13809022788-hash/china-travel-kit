@@ -50,7 +50,7 @@ Use this sequence:
 4. Complete passport verification while you still have stable home internet.
 5. Make a small test purchase after arrival.
 
-If you want a compatibility check before setup, use the [payment card checker](/tools/payment-checker/) and then read the step-by-step [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/).
+If you want a compatibility check before setup, use the [payment card checker](/tools/payment-checker/) and then read the step-by-step [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/).
 
 ## Foreign Card Support
 
@@ -71,7 +71,7 @@ For ordinary spending, the apps work in two ways. Sometimes you scan the merchan
 
 Alipay often feels quicker when you are paying as a tourist. WeChat Pay becomes especially useful when a restaurant menu, attraction booking, delivery order, hotel message, or service account already lives in WeChat. If a Chinese friend, guide, host, or business contact sends you a payment-related instruction, it will often happen inside WeChat.
 
-For broader payment planning, keep the [complete China payment guide](/posts/how-to-pay-in-china-tourist-guide/) open before you fly.
+For broader payment planning, keep the [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/) open before you fly.
 
 ## Fees And Limits
 
@@ -100,9 +100,9 @@ The third mistake is bringing no cash. You probably will not use much cash, but 
 
 ## Read Next
 
-- [How to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [Set up Alipay with a foreign card](/posts/alipay-foreign-credit-card-step-by-step/)
-- [Set up WeChat Pay with a foreign card](/posts/wechat-pay-foreign-visitors-guide/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
 - [Payment card compatibility checker](/tools/payment-checker/)
 
 ## Summary

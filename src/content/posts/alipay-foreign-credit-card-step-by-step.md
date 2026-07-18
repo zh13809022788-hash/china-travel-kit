@@ -100,9 +100,9 @@ A practical habit: keep a small amount of RMB cash and a physical Visa or Master
 
 ## Read Next
 
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
-- [cash backup guide for China](/posts/how-much-cash-to-bring-to-china/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [How Much Cash Should You Bring to China?](/posts/how-much-cash-to-bring-to-china/)
 
 ## Summary
 

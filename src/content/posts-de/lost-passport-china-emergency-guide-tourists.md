@@ -102,4 +102,4 @@ Sie erhalten ein 停留证件 — Aufenthaltserlaubnis für 15–30 Tage. Beginn
 
 ---
 
-**Weiterlesen:** [Visumfreie Einreise und Transit China 2026](/de/posts/china-visa-free-entry-transit-guide-2026/) zu Visaregeln nach Dokumentenersatz. [Erste 24 Stunden in China](/de/posts/first-24-hours-in-china-arrival-checklist/) zu vorbeugenden Maßnahmen.
+**Weiterlesen:** [China visumfreie Einreise und Transit 2026](/de/posts/china-visa-free-entry-transit-guide-2026/) zu Visaregeln nach Dokumentenersatz. [Die ersten 24 Stunden in China: Ankunfts-Checkliste](/de/posts/first-24-hours-in-china-arrival-checklist/) zu vorbeugenden Maßnahmen.

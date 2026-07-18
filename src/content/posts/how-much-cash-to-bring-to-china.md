@@ -74,7 +74,7 @@ For an ordinary tourist trip, you'll be comfortably below both limits, so this r
 ## Read Next
 
 - [cash in China for foreigners](/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
 - [foreign credit card acceptance in China](/posts/use-foreign-credit-card-in-china-directly/)
 
 ## Summary

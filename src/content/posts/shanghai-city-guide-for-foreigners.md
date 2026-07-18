@@ -73,9 +73,9 @@ Weather affects the experience. Summers are hot and humid, winters are damp and 
 
 ## Read Next
 
-- [Shanghai metro guide](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [airport transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Hangzhou city guide](/posts/hangzhou-city-guide-for-foreigners/)
+- [Shanghai Metro Guide 2026: How to Ride for Foreigners](/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Hangzhou Travel Guide 2026](/posts/hangzhou-city-guide-for-foreigners/)
 
 ## Summary
 

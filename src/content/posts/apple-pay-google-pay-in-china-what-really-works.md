@@ -105,7 +105,7 @@ Apple Pay can genuinely help you in China, but only at hotels, malls, chain stor
 
 ## Read Next
 
-- [mobile payment guide for tourists](/posts/how-to-pay-in-china-tourist-guide/)
-- [linking a foreign card to Alipay](/posts/alipay-foreign-credit-card-step-by-step/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
 - [where foreign credit cards work directly](/posts/use-foreign-credit-card-in-china-directly/)
 

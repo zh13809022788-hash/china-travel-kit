@@ -78,7 +78,7 @@ For accommodation, first-time visitors usually do best near Tianfu Square, Chunx
 
 - [Chengdu street food guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
 - [ordering food without Chinese](/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Summary
 

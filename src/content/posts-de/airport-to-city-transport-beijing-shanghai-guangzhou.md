@@ -55,9 +55,9 @@ Reisen Sie leicht und tagsueber, nehmen Sie Metro oder Airport Express. Reisen S
 
 ## Weiterlesen
 
-- [Beijing Daxing Flughafentransfer](/de/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [Shanghai Metro Guide](/de/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [DiDi in China nutzen](/de/posts/didi-china-foreign-tourists-guide/)
+- [Peking Daxing Flughafen ins Stadtzentrum: Erste-Schritte-Guide](/de/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [Shanghai Metro 2026: Tickets, QR-Codes und Umsteigen für Reisende](/de/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [DiDi China Anleitung für ausländische Touristen](/de/posts/didi-china-foreign-tourists-guide/)
 
 ## Fazit
 

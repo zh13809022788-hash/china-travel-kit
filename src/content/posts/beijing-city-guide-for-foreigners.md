@@ -76,9 +76,9 @@ For transport planning, cluster each day by district. Dongcheng and Xicheng hold
 
 ## Read Next
 
-- [Daxing airport to city guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [airport transport comparison](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [China high-speed rail guide](/posts/china-high-speed-rail-guide-foreigners/)
+- [Beijing Daxing Airport to City Center: A First-Timer's Guide](/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Summary
 

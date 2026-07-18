@@ -107,7 +107,7 @@ Set up Alipay or WeChat Pay for everyday ease, then carry roughly 500 to 1,000 R
 
 ## Read Next
 
-- [how much cash to bring to China](/posts/how-much-cash-to-bring-to-china/)
-- [tourist payment guide for China](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay setup with a foreign card](/posts/alipay-foreign-credit-card-step-by-step/)
+- [How Much Cash Should You Bring to China?](/posts/how-much-cash-to-bring-to-china/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
 

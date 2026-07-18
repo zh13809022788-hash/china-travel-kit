@@ -80,9 +80,9 @@ Mantén algo de efectivo en RMB para casos raros: vendedores pequeños, taxis an
 
 ## Leer Después
 
-- [WeChat Pay guide for foreign visitors](/es/posts/wechat-pay-foreign-visitors-guide/)
-- [Alipay setup guide](/es/posts/alipay-foreign-credit-card-step-by-step/)
-- [how to pay in China as a tourist](/es/posts/how-to-pay-in-china-tourist-guide/)
+- [Guía de WeChat Pay para visitantes extranjeros](/es/posts/wechat-pay-foreign-visitors-guide/)
+- [Alipay para extranjeros en 2026: cómo vincular una tarjeta paso a paso](/es/posts/alipay-foreign-credit-card-step-by-step/)
+- [Cómo pagar en China como turista](/es/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Resumen
 

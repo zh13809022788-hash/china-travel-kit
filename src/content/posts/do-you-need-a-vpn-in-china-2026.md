@@ -90,7 +90,7 @@ Make your trip resilient:
 - Tell family or colleagues which app you will use if your normal messaging app fails.
 - Carry a power bank so payment and maps do not die with your battery.
 
-If you only do one thing, make sure payment and hotel transport work without your normal foreign apps. The [first 24 hours in China checklist](/posts/first-24-hours-in-china-arrival-checklist/) covers that sequence.
+If you only do one thing, make sure payment and hotel transport work without your normal foreign apps. The [First 24 Hours in China: Arrival Checklist](/posts/first-24-hours-in-china-arrival-checklist/) covers that sequence.
 
 ## Common Mistakes
 

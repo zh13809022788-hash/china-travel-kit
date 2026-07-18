@@ -61,7 +61,7 @@ faqs:
 
 ## 延伸閱讀
 - [cash in China for foreigners](/zh-tw/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/)
-- [how to pay in China as a tourist](/zh-tw/posts/how-to-pay-in-china-tourist-guide/)
+- [外國旅客在中國怎麼付款：支付寶、現金、信用卡](/zh-tw/posts/how-to-pay-in-china-tourist-guide/)
 - [foreign credit card acceptance in China](/zh-tw/posts/use-foreign-credit-card-in-china-directly/)
 
 ## 總結

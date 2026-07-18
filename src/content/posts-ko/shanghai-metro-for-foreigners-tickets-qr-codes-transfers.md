@@ -122,5 +122,5 @@ graph TD
 ## 함께 읽기
 
 - [상하이 도시 가이드](/ko/posts/shanghai-city-guide-for-foreigners/)
-- [공항에서 시내로 가는 교통 가이드](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [알리페이 설정 가이드](/ko/posts/alipay-foreign-credit-card-step-by-step/)
+- [중국 공항에서 시내로 이동 2026: 베이징, 상하이, 광저우](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [2026 중국 여행 알리페이 사용법: 해외 신용카드 연결 단계별 가이드](/ko/posts/alipay-foreign-credit-card-step-by-step/)

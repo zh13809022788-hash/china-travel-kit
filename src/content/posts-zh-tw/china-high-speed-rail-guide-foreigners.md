@@ -67,8 +67,8 @@ faqs:
 長途可考慮一等座，但不用覺得非升級不可；二等座已經足夠舒適。也別忘了預留到車站的路程時間，部分高鐵站離市中心較遠。
 
 ## 延伸閱讀
-- [booking China train tickets on 12306](/zh-tw/posts/book-china-train-tickets-12306-foreigners/)
-- [Hangzhou city guide](/zh-tw/posts/hangzhou-city-guide-for-foreigners/)
+- [外國旅客如何在 12306 訂中國火車票](/zh-tw/posts/book-china-train-tickets-12306-foreigners/)
+- [杭州旅遊指南 2026：外國旅客西湖、龍井茶與週末行程攻略](/zh-tw/posts/hangzhou-city-guide-for-foreigners/)
 - [first-time China trip planner](/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 
 ## 總結

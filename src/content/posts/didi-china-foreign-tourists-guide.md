@@ -122,9 +122,9 @@ For anything the app cannot solve, Didi offers English-language in-app support t
 
 ## Read Next
 
-- [airport to city transport guide](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [Show to Driver tool](/tools/show-to-driver/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Summary
 

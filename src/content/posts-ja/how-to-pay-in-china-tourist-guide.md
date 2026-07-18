@@ -85,9 +85,9 @@ faqs:
 朝は屋台で朝食を買うためにAlipayでQRをスキャン。昼はアプリ内の交通QRで地下鉄改札を通過。午後は博物館の入場料をQRで支払い、夜はWeChat Payでレストランの会計を割り勘。深夜は自動販売機でスキャンして軽食を購入。旅行中ずっと財布を開かないことも珍しくありません。今の中国ではそれが普通です。
 
 ## 関連記事
-- [Alipay setup guide](/ja/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay setup guide](/ja/posts/wechat-pay-foreign-visitors-guide/)
-- [how much cash to bring](/ja/posts/how-much-cash-to-bring-to-china/)
+- [外国人向けAlipay: 海外クレジットカードを紐づける手順](/ja/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay外国人旅行者ガイド](/ja/posts/wechat-pay-foreign-visitors-guide/)
+- [中国にいくら現金を持っていくべきか](/ja/posts/how-much-cash-to-bring-to-china/)
 
 ## まとめ
 

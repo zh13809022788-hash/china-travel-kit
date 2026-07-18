@@ -50,7 +50,7 @@ faqs:
 4. 한국에서 인터넷이 안정적일 때 여권 인증까지 끝냅니다.
 5. 중국 도착 후 편의점이나 카페에서 소액 결제로 테스트합니다.
 
-설정 전에 카드 호환성이 걱정된다면 [payment card checker](/ko/tools/payment-checker/)를 먼저 확인하고, 자세한 등록 절차는 [Alipay setup guide](/ko/posts/alipay-foreign-credit-card-step-by-step/)를 참고하세요.
+설정 전에 카드 호환성이 걱정된다면 [payment card checker](/ko/tools/payment-checker/)를 먼저 확인하고, 자세한 등록 절차는 [2026 중국 여행 알리페이 사용법: 해외 신용카드 연결 단계별 가이드](/ko/posts/alipay-foreign-credit-card-step-by-step/)를 참고하세요.
 
 ## 해외 카드 지원
 
@@ -71,7 +71,7 @@ American Express나 다른 국제 브랜드 카드도 일부 상황에서는 쓸
 
 관광객이 단순히 돈을 낼 때는 알리페이가 빠르게 느껴지는 경우가 많습니다. 반면 식당 메뉴판, 관광지 예약, 배달 주문, 호텔 안내 메시지, 현지 서비스 계정이 위챗 안에 있을 때는 위챗페이가 훨씬 자연스럽습니다. 중국인 친구, 가이드, 숙소 직원, 비즈니스 상대가 결제 관련 안내를 보내 준다면 위챗으로 받을 가능성이 높습니다.
 
-전체 결제 계획을 세우고 싶다면 출국 전에 [complete China payment guide](/ko/posts/how-to-pay-in-china-tourist-guide/)도 함께 열어 두세요.
+전체 결제 계획을 세우고 싶다면 출국 전에 [중국 여행자 결제 방법: 알리페이, 현금, 신용카드](/ko/posts/how-to-pay-in-china-tourist-guide/)도 함께 열어 두세요.
 
 ## 수수료와 한도
 
@@ -102,9 +102,9 @@ American Express나 다른 국제 브랜드 카드도 일부 상황에서는 쓸
 
 ## 다음에 읽기
 
-- [How to pay in China as a tourist](/ko/posts/how-to-pay-in-china-tourist-guide/)
-- [Set up Alipay with a foreign card](/ko/posts/alipay-foreign-credit-card-step-by-step/)
-- [Set up WeChat Pay with a foreign card](/ko/posts/wechat-pay-foreign-visitors-guide/)
+- [중국 여행자 결제 방법: 알리페이, 현금, 신용카드](/ko/posts/how-to-pay-in-china-tourist-guide/)
+- [2026 중국 여행 알리페이 사용법: 해외 신용카드 연결 단계별 가이드](/ko/posts/alipay-foreign-credit-card-step-by-step/)
+- [위챗페이 외국인 관광객 가이드](/ko/posts/wechat-pay-foreign-visitors-guide/)
 - [Payment card compatibility checker](/ko/tools/payment-checker/)
 
 ## 요약

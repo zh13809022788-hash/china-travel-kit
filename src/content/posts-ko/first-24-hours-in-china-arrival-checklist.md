@@ -64,7 +64,7 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 - 택시 결제 과정이 헷갈릴 때
 - 보증금이나 긴급 상황에 대비해야 할 때
 
-얼마나 가져가면 좋은지, ATM은 어떻게 쓰면 좋은지는 [how much cash to bring to China](/ko/posts/how-much-cash-to-bring-to-china/)에서 더 자세히 확인할 수 있습니다.
+얼마나 가져가면 좋은지, ATM은 어떻게 쓰면 좋은지는 [중국 여행 시 현금은 얼마나 가져가야 할까요?](/ko/posts/how-much-cash-to-bring-to-china/)에서 더 자세히 확인할 수 있습니다.
 
 ## 4단계: 공항 이동수단은 신중하게 고르기
 
@@ -74,7 +74,7 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 
 반대로 밤늦게 도착했거나, 아이와 함께 이동하거나, 짐이 많다면 공식 택시 승강장이나 사전 예약 픽업이 더 편할 수 있습니다. 디디 같은 호출차량은 편리하지만 앱 로그인, 결제, 픽업 위치, 중국어 목적지 주소가 모두 준비되어 있을 때 가장 잘 작동합니다.
 
-차에 타기 전에는 호텔 이름과 주소를 중국어로 저장해 두세요. 예약 사이트의 영어 주소나 잘린 스크린샷만으로는 부족할 수 있습니다. 큰 글씨의 중국어 주소 카드가 필요하면 [airport-to-city transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)와 [show-to-driver tool](/ko/tools/show-to-driver/)을 활용하세요.
+차에 타기 전에는 호텔 이름과 주소를 중국어로 저장해 두세요. 예약 사이트의 영어 주소나 잘린 스크린샷만으로는 부족할 수 있습니다. 큰 글씨의 중국어 주소 카드가 필요하면 [중국 공항에서 시내로 이동 2026: 베이징, 상하이, 광저우](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)와 [show-to-driver tool](/ko/tools/show-to-driver/)을 활용하세요.
 
 ## 5단계: 체크인 후 거점부터 안정시키기
 
@@ -118,7 +118,7 @@ eSIM을 구매했다면 비행기에서 내린 직후나 입국 심사 전후에
 
 - [What to set up before traveling to China](/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
 - [Payment checker](/ko/tools/payment-checker/)
-- [Airport to city transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [중국 공항에서 시내로 이동 2026: 베이징, 상하이, 광저우](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 - [China travel resources](/resources/)
 
 ## 요약

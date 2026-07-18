@@ -112,5 +112,5 @@ Get the setup done on your first calm evening, not when you're starving. Link bo
 
 - [Chengdu street food guide](/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
 - [Chengdu city guide](/posts/chengdu-city-guide-for-foreigners/)
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
 

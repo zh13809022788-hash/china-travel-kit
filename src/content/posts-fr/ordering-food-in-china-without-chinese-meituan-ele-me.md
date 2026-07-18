@@ -113,7 +113,7 @@ Même sans livraison, ces habitudes aident :
 
 - [Chengdu street food guide](/fr/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
 - [Chengdu city guide](/fr/posts/chengdu-city-guide-for-foreigners/)
-- [how to pay in China as a tourist](/fr/posts/how-to-pay-in-china-tourist-guide/)
+- [Comment payer en Chine en tant que touriste](/fr/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Résumé
 

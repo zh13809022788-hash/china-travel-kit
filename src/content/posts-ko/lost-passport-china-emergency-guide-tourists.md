@@ -114,4 +114,4 @@ faqs:
 
 ---
 
-**함께 읽기:** [중국 무비자·경유 가이드 2026](/ko/posts/china-visa-free-entry-transit-guide-2026/)에서 대체 서류 발급 후 비자 규정과 체류 초과 방지법 확인. [중국 도착 후 24시간 완전 체크리스트](/ko/posts/first-24-hours-in-china-arrival-checklist/)에서 호텔 체크인 즉시 여권 사본 만들기 등 비상사태 예방 실천법을 알아보세요.
+**함께 읽기:** [중국 무비자 입국 및 경유 가이드 2026](/ko/posts/china-visa-free-entry-transit-guide-2026/)에서 대체 서류 발급 후 비자 규정과 체류 초과 방지법 확인. [중국 도착 후 24시간: 준비 체크리스트](/ko/posts/first-24-hours-in-china-arrival-checklist/)에서 호텔 체크인 즉시 여권 사본 만들기 등 비상사태 예방 실천법을 알아보세요.

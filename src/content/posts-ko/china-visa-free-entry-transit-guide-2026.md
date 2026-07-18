@@ -96,7 +96,7 @@ faqs:
 
 - [visa-free checker tool](/ko/tools/visa-free-checker/)
 - [first-time China trip planner](/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
-- [airport transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [중국 공항에서 시내로 이동 2026: 베이징, 상하이, 광저우](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
 
 ## 요약
 

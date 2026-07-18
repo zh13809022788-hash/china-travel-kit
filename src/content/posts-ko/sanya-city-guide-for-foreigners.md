@@ -88,7 +88,7 @@ coverAlt: "하이난 섬 싼야의 열대 해변"
 ## 다음에 읽기
 
 - [계절별 중국 여행 짐 싸기 체크리스트](/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/)
-- [중국 무비자 입국 및 환승 가이드](/ko/posts/china-visa-free-entry-transit-guide-2026/)
+- [중국 무비자 입국 및 경유 가이드 2026](/ko/posts/china-visa-free-entry-transit-guide-2026/)
 - [중국 여행 최적기 확인 도구](/ko/tools/best-time-to-visit/)
 
 ## 요약

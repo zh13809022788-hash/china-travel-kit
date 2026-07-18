@@ -116,8 +116,8 @@ Utilisez le train pour Beijing-Shanghai, Shanghai-Hangzhou, Chengdu-Chongqing et
 
 Guides liés :
 
-- [China High-Speed Rail Guide for Foreigners](/fr/posts/china-high-speed-rail-guide-foreigners/)
-- [Book China Train Tickets on 12306 as a Foreigner](/fr/posts/book-china-train-tickets-12306-foreigners/)
+- [Guide du train à grande vitesse chinois pour étrangers](/fr/posts/china-high-speed-rail-guide-foreigners/)
+- [Réserver des billets de train chinois sur 12306 pour étrangers](/fr/posts/book-china-train-tickets-12306-foreigners/)
 
 ## 6. Première journée : vérifier le système
 

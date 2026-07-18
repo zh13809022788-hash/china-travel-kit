@@ -62,9 +62,9 @@ WeChat в Китае - не просто мессенджер. Через нег
 
 ## Что читать дальше
 
-- [подробный гид по WeChat Pay](/ru/posts/wechat-pay-foreign-visitors-guide/)
-- [настройка Alipay](/ru/posts/alipay-foreign-credit-card-step-by-step/)
-- [как платить в Китае туристу](/ru/posts/how-to-pay-in-china-tourist-guide/)
+- [WeChat Pay: руководство для иностранных гостей](/ru/posts/wechat-pay-foreign-visitors-guide/)
+- [Alipay в Китае 2026: пошаговое руководство для иностранных карт](/ru/posts/alipay-foreign-credit-card-step-by-step/)
+- [Как платить в Китае туристу](/ru/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Итог
 

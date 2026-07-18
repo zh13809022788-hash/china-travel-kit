@@ -108,6 +108,6 @@ faqs:
 
 ## 다음으로 읽기
 
-- [how much cash to bring to China](/ko/posts/how-much-cash-to-bring-to-china/)
-- [tourist payment guide for China](/ko/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay setup with a foreign card](/ko/posts/alipay-foreign-credit-card-step-by-step/)
+- [중국 여행 시 현금은 얼마나 가져가야 할까요?](/ko/posts/how-much-cash-to-bring-to-china/)
+- [중국 여행자 결제 방법: 알리페이, 현금, 신용카드](/ko/posts/how-to-pay-in-china-tourist-guide/)
+- [2026 중국 여행 알리페이 사용법: 해외 신용카드 연결 단계별 가이드](/ko/posts/alipay-foreign-credit-card-step-by-step/)

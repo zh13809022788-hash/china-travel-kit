@@ -86,7 +86,7 @@ Avant de partir :
 - décidez quelle application de messagerie utiliser si votre app habituelle échoue ;
 - emportez une batterie externe.
 
-La [checklist des premières 24 heures en Chine](/fr/posts/first-24-hours-in-china-arrival-checklist/) suit cette logique : connecter le téléphone, payer, rejoindre l'hôtel, puis seulement optimiser le reste.
+La [Les premières 24 heures en Chine : check-list d'arrivée](/fr/posts/first-24-hours-in-china-arrival-checklist/) suit cette logique : connecter le téléphone, payer, rejoindre l'hôtel, puis seulement optimiser le reste.
 
 ## À lire ensuite
 

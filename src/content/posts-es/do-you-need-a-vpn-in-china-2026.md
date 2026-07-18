@@ -84,7 +84,7 @@ El problema práctico es la fiabilidad. Algo puede funcionar en el Wi-Fi de un h
 - Acuerda con familia o colegas qué app usar si falla la habitual.
 - Lleva batería externa.
 
-Si solo haces una cosa, asegúrate de poder pagar y llegar al hotel sin tus apps extranjeras normales. La [first 24 hours in China checklist](/es/posts/first-24-hours-in-china-arrival-checklist/) sigue ese orden.
+Si solo haces una cosa, asegúrate de poder pagar y llegar al hotel sin tus apps extranjeras normales. La [Primeras 24 horas en China: lista de llegada](/es/posts/first-24-hours-in-china-arrival-checklist/) sigue ese orden.
 
 ## Errores Frecuentes
 

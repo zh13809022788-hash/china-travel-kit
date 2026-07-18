@@ -86,4 +86,4 @@ Internationale Anbieter kosten 3–5× mehr. Dafür bekommen Sie englische Schad
 
 ---
 
-**Weiterlesen:** [Erste 24 Stunden in China: Ankunfts-Checkliste](/de/posts/first-24-hours-in-china-arrival-checklist/) zeigt, was direkt nach der Landung zu tun ist. [Vor der China-Reise einzurichten](/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) führt durch die Pre-Departure-Checkliste.
+**Weiterlesen:** [Die ersten 24 Stunden in China: Ankunfts-Checkliste](/de/posts/first-24-hours-in-china-arrival-checklist/) zeigt, was direkt nach der Landung zu tun ist. [Vor der China-Reise einzurichten](/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) führt durch die Pre-Departure-Checkliste.

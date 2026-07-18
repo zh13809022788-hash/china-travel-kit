@@ -93,9 +93,9 @@ If the fees feel high, remember the two levers you control: use a no-foreign-fee
 
 ## Read Next
 
-- [how to pay in China as a tourist](/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay foreign card setup](/posts/alipay-foreign-credit-card-step-by-step/)
-- [how much cash to bring to China](/posts/how-much-cash-to-bring-to-china/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
+- [How Much Cash Should You Bring to China?](/posts/how-much-cash-to-bring-to-china/)
 
 ## Summary
 

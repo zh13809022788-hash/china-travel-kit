@@ -52,8 +52,8 @@ Alipay gagne pour la simplicité touristique. WeChat Pay gagne pour l'intégrati
 
 ## À lire ensuite
 
-- [Payer en Chine comme touriste](/fr/posts/how-to-pay-in-china-tourist-guide/)
-- [Guide WeChat Pay pour visiteurs](/fr/posts/wechat-pay-foreign-visitors-guide/)
+- [Comment payer en Chine en tant que touriste](/fr/posts/how-to-pay-in-china-tourist-guide/)
+- [Guide WeChat Pay pour les visiteurs étrangers](/fr/posts/wechat-pay-foreign-visitors-guide/)
 - [Utiliser une carte étrangère en Chine](/fr/posts/use-foreign-credit-card-in-china-directly/)
 
 ## Résumé

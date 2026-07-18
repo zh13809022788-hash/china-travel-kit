@@ -81,9 +81,9 @@ La ville est très sûre, mais les foules autour du Bund, de Nanjing Road ou de 
 
 ## À lire ensuite
 
-- [Shanghai metro guide](/fr/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [airport transport guide](/fr/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Hangzhou city guide](/fr/posts/hangzhou-city-guide-for-foreigners/)
+- [Métro de Shanghai en 2026 : billets, QR codes et correspondances](/fr/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [Transport aéroport-ville en Chine 2026 : Pékin, Shanghai, Canton](/fr/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [Guide de Hangzhou 2026 : lac de l'Ouest, thé Longjing et week-ends](/fr/posts/hangzhou-city-guide-for-foreigners/)
 
 ## Résumé
 

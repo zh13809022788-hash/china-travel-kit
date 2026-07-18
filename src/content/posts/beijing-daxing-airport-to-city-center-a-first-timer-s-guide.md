@@ -105,7 +105,7 @@ For a daytime arrival at Daxing, the Airport Express to Caoqiao then a metro tra
 
 ## Read Next
 
-- [Beijing city guide](/posts/beijing-city-guide-for-foreigners/)
-- [airport transport guide for major China cities](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [DiDi ride-hailing guide](/posts/didi-china-foreign-tourists-guide/)
+- [Beijing City Guide for Foreigners](/posts/beijing-city-guide-for-foreigners/)
+- [China Airport to City Transport 2026: Beijing, Shanghai, Guangzhou](/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [DiDi China Guide for Foreign Tourists](/posts/didi-china-foreign-tourists-guide/)
 

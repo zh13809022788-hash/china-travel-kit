@@ -83,9 +83,9 @@ coverAlt: "해 질 무렵 와이탄과 상하이 스카이라인"
 
 ## 다음 글
 
-- [Shanghai metro guide](/ko/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [airport transport guide](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [Hangzhou city guide](/ko/posts/hangzhou-city-guide-for-foreigners/)
+- [상하이 지하철 외국인 이용 가이드 2026: QR 코드, 승차권, 환승](/ko/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [중국 공항에서 시내로 이동 2026: 베이징, 상하이, 광저우](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [항저우 여행 가이드 2026: 서호, 용징차, 주말 코스](/ko/posts/hangzhou-city-guide-for-foreigners/)
 
 ## 요약
 

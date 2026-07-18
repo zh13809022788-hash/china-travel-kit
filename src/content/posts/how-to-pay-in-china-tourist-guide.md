@@ -111,9 +111,9 @@ Morning: scan a QR to buy breakfast from a street stall (Alipay). Midday: tap th
 
 ## Read Next
 
-- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay setup guide](/posts/wechat-pay-foreign-visitors-guide/)
-- [how much cash to bring](/posts/how-much-cash-to-bring-to-china/)
+- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay Foreign Visitors Guide](/posts/wechat-pay-foreign-visitors-guide/)
+- [How Much Cash Should You Bring to China?](/posts/how-much-cash-to-bring-to-china/)
 
 ## Summary
 

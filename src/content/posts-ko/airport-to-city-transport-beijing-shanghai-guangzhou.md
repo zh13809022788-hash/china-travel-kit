@@ -110,9 +110,9 @@ graph TD
 
 ## 함께 읽으면 좋은 글
 
-- [베이징 다싱공항 교통 가이드](/ko/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
-- [외국인을 위한 상하이 지하철 가이드](/ko/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
-- [여행자를 위한 중국 DiDi 가이드](/ko/posts/didi-china-foreign-tourists-guide/)
+- [베이징 다싱 공항에서 시내로: 첫 방문자 가이드](/ko/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/)
+- [상하이 지하철 외국인 이용 가이드 2026: QR 코드, 승차권, 환승](/ko/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/)
+- [중국 DiDi 외국인 관광객 가이드](/ko/posts/didi-china-foreign-tourists-guide/)
 
 ## 요약
 

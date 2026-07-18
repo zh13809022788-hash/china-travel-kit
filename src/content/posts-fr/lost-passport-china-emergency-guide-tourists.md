@@ -102,4 +102,4 @@ Vous recevrez un 停留证件 — permis de séjour de 15–30 jours. Démarrez 
 
 ---
 
-**À lire ensuite :** [Entrée sans visa et transit en Chine 2026](/fr/posts/china-visa-free-entry-transit-guide-2026/) sur les règles de visa après remplacement des documents. [Premières 24 heures en Chine](/fr/posts/first-24-hours-in-china-arrival-checklist/) sur les gestes qui préviennent les urgences.
+**À lire ensuite :** [Entrée sans visa et transit en Chine 2026](/fr/posts/china-visa-free-entry-transit-guide-2026/) sur les règles de visa après remplacement des documents. [Les premières 24 heures en Chine : check-list d'arrivée](/fr/posts/first-24-hours-in-china-arrival-checklist/) sur les gestes qui préviennent les urgences.

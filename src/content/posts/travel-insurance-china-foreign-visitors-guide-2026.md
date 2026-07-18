@@ -114,4 +114,4 @@ Three scenarios from actual travelers:
 
 ---
 
-**Read next:** [First 24 Hours in China: Complete Arrival Checklist](/posts/first-24-hours-in-china-arrival-checklist/) covers what to do the moment you land — including whether to buy insurance at the airport. [What to Set Up Before Traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) walks through the pre-departure checklist so your arrival is smooth, insured or not.
+**Read next:** [First 24 Hours in China: Arrival Checklist](/posts/first-24-hours-in-china-arrival-checklist/) covers what to do the moment you land — including whether to buy insurance at the airport. [What to Set Up Before Traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) walks through the pre-departure checklist so your arrival is smooth, insured or not.

@@ -98,8 +98,8 @@ If a charge appears stuck, check the transaction record under Wallet before retr
 ## Read Next
 
 - [link a foreign Visa or Mastercard to WeChat Pay](/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/)
-- [Alipay setup guide](/posts/alipay-foreign-credit-card-step-by-step/)
-- [China tourist payment guide](/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay Foreign Credit Card Step by Step](/posts/alipay-foreign-credit-card-step-by-step/)
+- [How to Pay in China as a Tourist](/posts/how-to-pay-in-china-tourist-guide/)
 
 ## Summary
 

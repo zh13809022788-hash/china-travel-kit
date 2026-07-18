@@ -83,9 +83,9 @@ faqs:
 
 관련 가이드:
 
-- [여행자를 위한 중국 결제 가이드](/ko/posts/how-to-pay-in-china-tourist-guide/)
-- [해외 카드로 알리페이 설정하기](/ko/posts/alipay-foreign-credit-card-step-by-step/)
-- [외국인 방문객을 위한 WeChat Pay 가이드](/ko/posts/wechat-pay-foreign-visitors-guide/)
+- [중국 여행자 결제 방법: 알리페이, 현금, 신용카드](/ko/posts/how-to-pay-in-china-tourist-guide/)
+- [2026 중국 여행 알리페이 사용법: 해외 신용카드 연결 단계별 가이드](/ko/posts/alipay-foreign-credit-card-step-by-step/)
+- [위챗페이 외국인 관광객 가이드](/ko/posts/wechat-pay-foreign-visitors-guide/)
 
 ## 3. 첫 공항 이동 계획하기
 
@@ -141,8 +141,8 @@ faqs:
 
 관련 가이드:
 
-- [외국인을 위한 중국 고속철 가이드](/ko/posts/china-high-speed-rail-guide-foreigners/)
-- [외국인 12306 중국 기차표 예매 가이드](/ko/posts/book-china-train-tickets-12306-foreigners/)
+- [중국 고속철도 외국인 가이드](/ko/posts/china-high-speed-rail-guide-foreigners/)
+- [외국인이 12306에서 중국 기차표를 예매하는 방법](/ko/posts/book-china-train-tickets-12306-foreigners/)
 
 ## 6. 첫날 체크리스트 만들기
 

@@ -68,9 +68,9 @@ faqs:
 ## Что читать дальше
 
 - [что настроить перед поездкой](/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
-- [как платить в Китае](/ru/posts/how-to-pay-in-china-tourist-guide/)
+- [Как платить в Китае туристу](/ru/posts/how-to-pay-in-china-tourist-guide/)
 - [eSIM против роуминга](/ru/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/)
-- [гид по высокоскоростным поездам](/ru/posts/china-high-speed-rail-guide-foreigners/)
+- [Высокоскоростные поезда Китая: руководство для иностранцев](/ru/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Итог
 

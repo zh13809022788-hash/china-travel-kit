@@ -119,6 +119,6 @@ faqs:
 
 ## 다음 글
 
-- [베이징 여행 가이드](/ko/posts/beijing-city-guide-for-foreigners/)
-- [중국 주요 도시 공항-시내 교통 가이드](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
-- [디디 차량 호출 가이드](/ko/posts/didi-china-foreign-tourists-guide/)
+- [베이징 여행 가이드: 외국인 관광객 추천 명소와 일정](/ko/posts/beijing-city-guide-for-foreigners/)
+- [중국 공항에서 시내로 이동 2026: 베이징, 상하이, 광저우](/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/)
+- [중국 DiDi 외국인 관광객 가이드](/ko/posts/didi-china-foreign-tourists-guide/)

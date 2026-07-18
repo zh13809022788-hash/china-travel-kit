@@ -125,7 +125,7 @@ Keep screenshots or offline copies of your booking details, including station na
 
 Related guides:
 
-- [Book China Train Tickets on 12306 as a Foreigner](/posts/book-china-train-tickets-12306-foreigners/)
+- [How to Book China Train Tickets on 12306 for Foreigners](/posts/book-china-train-tickets-12306-foreigners/)
 - [China High-Speed Rail Guide for Foreigners](/posts/china-high-speed-rail-guide-foreigners/)
 
 ## Save Chinese Addresses

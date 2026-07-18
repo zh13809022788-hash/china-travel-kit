@@ -120,8 +120,8 @@ Usa tren rápido para Beijing-Shanghai, Shanghai-Hangzhou, Chengdu-Chongqing y c
 
 Guías relacionadas:
 
-- [China High-Speed Rail Guide for Foreigners](/es/posts/china-high-speed-rail-guide-foreigners/)
-- [Book China Train Tickets on 12306 as a Foreigner](/es/posts/book-china-train-tickets-12306-foreigners/)
+- [Guía del tren de alta velocidad de China para extranjeros](/es/posts/china-high-speed-rail-guide-foreigners/)
+- [Cómo reservar billetes de tren en China en 12306 para extranjeros](/es/posts/book-china-train-tickets-12306-foreigners/)
 
 ## 6. Primer Día: Que Todo Funcione
 

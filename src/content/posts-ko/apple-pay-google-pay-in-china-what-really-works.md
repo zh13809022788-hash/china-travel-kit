@@ -115,6 +115,6 @@ graph TD
 
 ## 다음 글
 
-- [중국 여행자를 위한 모바일 결제 가이드](/ko/posts/how-to-pay-in-china-tourist-guide/)
-- [해외 카드를 알리페이에 연결하는 방법](/ko/posts/alipay-foreign-credit-card-step-by-step/)
+- [중국 여행자 결제 방법: 알리페이, 현금, 신용카드](/ko/posts/how-to-pay-in-china-tourist-guide/)
+- [2026 중국 여행 알리페이 사용법: 해외 신용카드 연결 단계별 가이드](/ko/posts/alipay-foreign-credit-card-step-by-step/)
 - [중국에서 해외 신용카드를 바로 쓸 수 있는 곳](/ko/posts/use-foreign-credit-card-in-china-directly/)
