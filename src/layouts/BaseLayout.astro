@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID } from '../config';
+import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID, GA4_MEASUREMENT_ID } from '../config';
 
 type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
 
@@ -160,6 +160,20 @@ const jsonLd = {
             })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");
           `}
         />
+      )
+    }
+
+    {
+      GA4_MEASUREMENT_ID && (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`} />
+          <script is:inline set:html={`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA4_MEASUREMENT_ID}');
+          `} />
+        </>
       )
     }
 
