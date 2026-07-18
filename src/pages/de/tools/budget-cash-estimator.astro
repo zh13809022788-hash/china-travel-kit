@@ -21,10 +21,9 @@ const description =
 
     <AdSlot format="banner" />
 
-    <!-- Eingabefelder -->
     <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Reisedauer in Nächten</span>
+        <span class="mb-1 font-medium text-gray-700">Anzahl der Nächte</span>
         <input id="nights" type="number" min="1" max="60" value="7"
           class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
       </label>
@@ -36,17 +35,17 @@ const description =
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Reisestil</span>
         <select id="style" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="budget">Günstig (Hostels, Streetfood, Metro)</option>
-          <option value="mid" selected>Mittelklasse (3- bis 4-Sterne-Hotels, Restaurants)</option>
-          <option value="comfort">Komfortabel (4- bis 5-Sterne-Hotels, Taxis, gehobene Restaurants)</option>
+          <option value="guenstig">Günstig (Hostels, Streetfood, Metro)</option>
+          <option value="mittel" selected>Mittelklasse (3- bis 4-Sterne-Hotels, Restaurants)</option>
+          <option value="komfort">Komfortabel (4- bis 5-Sterne-Hotels, Taxis, gehobene Restaurants)</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Stadtkategorie</span>
         <select id="tier" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="tier1">Kategorie 1 (Peking, Shanghai, Shenzhen)</option>
-          <option value="tier2" selected>Kategorie 2 (Chengdu, Xi'an, Hangzhou)</option>
-          <option value="tier3">Kleinere Städte und ländliche Regionen</option>
+          <option value="metropole">Kategorie 1 (Peking, Shanghai, Shenzhen)</option>
+          <option value="grossstadt" selected>Kategorie 2 (Chengdu, Xi'an, Hangzhou)</option>
+          <option value="kleinstadt">Kleinere Städte und ländliche Regionen</option>
         </select>
       </label>
       <div class="sm:col-span-2">
@@ -54,7 +53,6 @@ const description =
       </div>
     </div>
 
-    <!-- Ergebnis -->
     <div id="result" class="mt-6 hidden">
       <div class="grid gap-5 md:grid-cols-2">
         <div class="card" id="budget-card"></div>
@@ -62,13 +60,13 @@ const description =
       </div>
       <div class="card mt-5" id="breakdown-card"></div>
       <p class="mt-3 text-xs text-gray-400">
-        Diese Schätzungen sind nur Richtwerte und enthalten keine internationalen Flüge. Die tatsächlichen Kosten hängen von der Saison,
-        dem Wechselkurs und Ihren persönlichen Entscheidungen ab. Zugrunde gelegt ist ein Wechselkurs von rund 7,2 RMB pro USD.
+        Diese Schätzwerte dienen nur zur Orientierung und enthalten keine internationalen Flüge. Die tatsächlichen Kosten hängen von Saison,
+        Wechselkurs und Ihren persönlichen Entscheidungen ab. Grundlage ist ein Wechselkurs von etwa 7,2 RMB pro USD.
       </p>
 
       <AffiliateCta
-        title="Wie Einheimische bezahlen und Gebühren vermeiden"
-        description="Richten Sie eine reisetaugliche Zahlungsmethode ein, damit Sie den Großteil Ihrer Ausgaben auch ohne Bargeld bequem bezahlen können."
+        title="Wie Einheimische zahlen und wie Sie Gebühren vermeiden"
+        description="Richten Sie eine reisetaugliche Zahlungsmethode ein, damit Sie den Großteil Ihrer Ausgaben auch ohne Bargeld bequem begleichen können."
         buttonText="Zahlungsoptionen ansehen"
         placeholder={AFFILIATE_LINKS.payment}
       />
@@ -78,30 +76,30 @@ const description =
 </BaseLayout>
 
 <script>
-  type StyleKey = 'budget' | 'mid' | 'comfort';
-  type TierKey = 'tier1' | 'tier2' | 'tier3';
+  type StyleKey = 'guenstig' | 'mittel' | 'komfort';
+  type TierKey = 'metropole' | 'grossstadt' | 'kleinstadt';
 
-  const USD_RATE = 7.2; // RMB pro USD (ungefähr)
+  const USD_RATE = 7.2; // RMB pro USD (ca.)
 
   // Tägliche Ausgaben pro Person in RMB, ohne Unterkunft.
   const dailySpend: Record<StyleKey, { essen: number; transport: number; aktivitaeten: number; sonstiges: number }> = {
-    budget: { essen: 80, transport: 30, aktivitaeten: 40, sonstiges: 30 },
-    mid: { essen: 180, transport: 70, aktivitaeten: 100, sonstiges: 60 },
-    comfort: { essen: 400, transport: 200, aktivitaeten: 220, sonstiges: 130 },
+    guenstig: { essen: 80, transport: 30, aktivitaeten: 40, sonstiges: 30 },
+    mittel: { essen: 180, transport: 70, aktivitaeten: 100, sonstiges: 60 },
+    komfort: { essen: 400, transport: 200, aktivitaeten: 220, sonstiges: 130 },
   };
 
-  // Unterkunft pro Nacht in RMB (pro Zimmer, angenommen bei Belegung mit bis zu 2 Personen).
+  // Unterkunft pro Nacht in RMB (pro Zimmer, gerechnet mit bis zu 2 Personen pro Zimmer).
   const lodging: Record<StyleKey, number> = {
-    budget: 150,
-    mid: 450,
-    comfort: 1100,
+    guenstig: 150,
+    mittel: 450,
+    komfort: 1100,
   };
 
   // Kostenfaktor je nach Stadtkategorie.
   const tierMult: Record<TierKey, number> = {
-    tier1: 1.25,
-    tier2: 1.0,
-    tier3: 0.8,
+    metropole: 1.25,
+    grossstadt: 1.0,
+    kleinstadt: 0.8,
   };
 
   const rmb = (n: number) => `¥${Math.round(n).toLocaleString()}`;
@@ -130,14 +128,14 @@ const description =
     const spend = dailySpend[style];
     const perPersonDaily = (spend.essen + spend.transport + spend.aktivitaeten + spend.sonstiges) * mult;
 
-    // Unterkunft: 1 Zimmer für jeweils 2 Reisende, aufgerundet.
+    // Unterkunft: 1 Zimmer pro 2 Reisende, aufgerundet.
     const rooms = Math.ceil(travelers / 2);
     const lodgingTotal = lodging[style] * mult * rooms * nights;
 
     const spendTotal = perPersonDaily * travelers * nights;
     const grandTotal = spendTotal + lodgingTotal;
 
-    // Empfohlenes Bargeld: etwa 10 bis 15 % der laufenden Ausgaben, gedeckelt auf einen sinnvollen Betrag.
+    // Empfohlenes Bargeld: etwa 10-15 % der laufenden Ausgaben, gedeckelt auf einen praktikablen Betrag.
     const dailyCashFloat = Math.min(perPersonDaily * 0.15 * travelers, 200 * travelers);
     const cashRecommended = Math.min(dailyCashFloat * nights, 2000 + 100 * travelers);
 
@@ -154,11 +152,11 @@ const description =
     cashCard.innerHTML = `
       <h3 class="text-lg font-bold text-gray-900">Empfohlenes Bargeld</h3>
       <p class="mt-2 text-3xl font-bold text-gray-900">${rmb(cashRecommended)}</p>
-      <p class="text-sm text-gray-500">≈ ${usd(cashRecommended)} als Bargeld in RMB</p>
+      <p class="text-sm text-gray-500">≈ ${usd(cashRecommended)} als Bargeldreserve in RMB</p>
       <p class="mt-4 text-sm text-gray-600">
-        In China wird überwiegend mobil bezahlt. Fast alles lässt sich mit Alipay oder WeChat Pay bezahlen, verknüpft mit einer
-        ausländischen Karte. Dieses Bargeld ist als Reserve gedacht, zum Beispiel für Taxis ohne QR-Zahlung, kleine Händler in ländlichen Gegenden und
-        Automaten, die nur Banknoten annehmen. Praktisch sind kleine Stückelungen wie ¥10, ¥20 und ¥50.
+        In China wird meist mobil bezahlt. Fast alles lässt sich mit Alipay oder WeChat Pay begleichen, verknüpft mit einer
+        ausländischen Karte. Dieses Bargeld ist als Reserve gedacht, etwa für Taxis ohne QR-Zahlung, kleine Händler in ländlichen Gegenden und
+        Automaten, die nur Banknoten annehmen. Praktisch sind kleine Scheine wie ¥10, ¥20 und ¥50.
       </p>`;
 
     breakdownCard.innerHTML = `
