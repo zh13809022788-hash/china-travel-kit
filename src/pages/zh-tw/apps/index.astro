@@ -5,180 +5,180 @@ import Footer from '../../../components/Footer.astro';
 import CoverImage from '../../../components/CoverImage.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const title = '外國旅客中國必備 App：下載連結與網頁替代方案';
-const description = 'A complete directory of apps you need in China — WeChat, Alipay, DiDi, Baidu Maps, Meituan, 12306, VPN and more. Every app includes App Store / Google Play download links and H5 web versions that work without installing.';
+const title = '外國旅客在中國必備應用程式：下載連結與網頁版替代方案';
+const description = '整理好中國旅行常用應用程式：WeChat、Alipay、DiDi、Baidu Maps、Meituan、12306、VPN 等。每個應用程式都附上 App Store／Google Play 下載連結，以及免安裝也能使用的 H5 網頁版。';
 
 const appGroups = [
   {
-    category: '付款 & Wallet',
+    category: '支付與電子錢包',
     apps: [
       {
         name: 'Alipay',
-        desc: '中國最廣泛接受的手機錢包。綁定海外 Visa 或 Mastercard，即可在商店、餐廳、計程車和路邊攤掃 QR code 付款。',
+        desc: '中國最普及的行動支付錢包。綁定海外 Visa 或 Mastercard 後，就能在商店、餐廳、計程車和路邊攤掃 QR code 付款。',
         android: 'https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone',
         ios: 'https://apps.apple.com/app/alipay/id333206289',
         h5: null,
-        note: 'Setup takes 10-15 min. Need passport for verification.',
+        note: '設定大約需要 10 到 15 分鐘，並需使用護照完成身分驗證。',
         guide: '/zh-tw/posts/alipay-foreign-credit-card-step-by-step/',
       },
       {
         name: 'WeChat',
-        desc: '中國的超級應用程式。可用來傳訊息、打電話、看朋友圈（社交動態），以及使用 WeChat Pay。大多數中國人每天都用它處理各種事情。',
+        desc: '中國最核心的超級應用程式。可用來聊天、通話、看朋友圈，以及使用 WeChat Pay。多數中國人每天都會靠它處理各種大小事。',
         android: 'https://play.google.com/store/apps/details?id=com.tencent.mm',
         ios: 'https://apps.apple.com/app/wechat/id414478124',
         h5: 'https://web.wechat.com/',
-        note: 'WeChat Pay needs a linked card. WeChat itself works for messaging without setup.',
+        note: 'WeChat Pay 需要先綁定銀行卡；如果只是傳訊息，WeChat 本身可直接使用。',
         guide: '/zh-tw/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/',
       },
     ],
   },
   {
-    category: '交通 & Ride-Hailing',
+    category: '交通與叫車',
     apps: [
       {
         name: 'DiDi',
-        desc: '中國版 Uber。可預約計程車和私家車。支援英文介面。可使用 Alipay 或 WeChat Pay 付款。',
+        desc: '中國版 Uber，可叫計程車與專車，支援英文介面，也能用 Alipay 或 WeChat Pay 付款。',
         android: 'https://play.google.com/store/apps/details?id=com.didi.sdk',
         ios: 'https://apps.apple.com/app/didi/id1164272094',
         h5: 'https://m.didiglobal.com/',
-        note: 'H5 version works in browser or WeChat mini-program. No app needed for occasional rides.',
+        note: 'H5 網頁版可直接用瀏覽器開啟，也可透過 WeChat 小程式使用。若只是偶爾搭車，不一定要下載應用程式。',
         guide: '/zh-tw/posts/didi-china-foreign-tourists-guide/',
       },
       {
-        name: 'Alipay 交通 Mini-Program',
-        desc: '在 Alipay 裡，可使用交通小程式掃描 QR code，搭乘多數主要城市的地鐵和公車。',
+        name: 'Alipay 交通小程式',
+        desc: '在 Alipay 內可使用交通相關小程式，掃 QR code 搭乘多數大城市的地鐵與公車。',
         android: null,
         ios: null,
         h5: null,
-        note: 'Open Alipay → "交通" icon. No separate install needed.',
+        note: '打開 Alipay，點選「交通」圖示即可，不需要另外安裝。',
         guide: '/zh-tw/transport/',
       },
       {
         name: '12306',
-        desc: '中國鐵路官方訂票 App。介面僅支援中文，且需要驗證。替代方案：使用 Trip.com。',
+        desc: '中國鐵路官方訂票應用程式。介面只有中文，註冊與驗證流程也較麻煩。替代方案可用 Trip.com。',
         android: 'https://play.google.com/store/apps/details?id=com.cars.blaili',
         ios: 'https://apps.apple.com/app/12306/id564757494',
         h5: 'https://www.12306.cn/',
-        note: 'Tricky for foreigners. Use Trip.com (English, no verification hassle).',
+        note: '外國旅客使用起來較不友善，建議改用 Trip.com，英文介面且省去繁瑣驗證。',
         guide: '/zh-tw/posts/book-china-train-tickets-12306-foreigners/',
       },
       {
         name: 'Trip.com (Ctrip)',
-        desc: '適合英語使用者的火車、機票和飯店預訂 App。可直接接受外國信用卡付款。',
+        desc: '適合英文使用者的火車票、機票與飯店預訂應用程式，可直接使用外國信用卡付款。',
         android: 'https://play.google.com/store/apps/details?id=com.ctrip',
         ios: 'https://apps.apple.com/app/trip-com/id1612956441',
         h5: 'https://www.trip.com/',
-        note: 'Best alternative to 12306 for train tickets. Higher service fee but much easier.',
+        note: '是 12306 以外最好上手的火車票替代方案。手續費較高，但操作簡單很多。',
         guide: null,
       },
     ],
   },
   {
-    category: 'Navigation & Maps',
+    category: '導航與地圖',
     apps: [
       {
         name: 'Baidu Maps',
-        desc: '最詳細的中國地圖。逐步導航、大眾運輸路線規劃、餐廳搜尋。僅支援中文，但可透過手勢操作。',
+        desc: '中國資料最完整的地圖應用程式，提供步行導航、大眾運輸規劃與餐廳搜尋。雖然只有中文，但靠操作介面也能上手。',
         android: 'https://play.google.com/store/apps/details?id=com.baidu.BaiduMap',
         ios: 'https://apps.apple.com/app/baidu-maps/id452186370',
         h5: 'https://map.baidu.com/',
-        note: 'Google Maps is blocked in China. Need Baidu or Amap for navigation.',
+        note: 'Google Maps 在中國受限，實際導航建議使用 Baidu Maps 或 Amap。',
         guide: null,
       },
       {
         name: 'Amap (Gaode)',
-        desc: '百度地圖的替代選擇。許多當地人更偏好使用高德地圖。更適合計程車導航、即時路況和餐廳評價。',
+        desc: '另一款主流中國地圖應用程式，許多在地人更習慣用高德地圖。對計程車導航、即時路況和餐廳評價特別方便。',
         android: 'https://play.google.com/store/apps/details?id=com.autonavi.minimap',
         ios: 'https://apps.apple.com/app/amap/id461703208',
         h5: 'https://ditu.amap.com/',
-        note: 'Both Baidu and Amap work. Pick one. Amap tends to be more accurate for taxi hailing.',
+        note: 'Baidu Maps 和 Amap 都能用，擇一即可。若常叫車，Amap 通常更精準。',
         guide: null,
       },
       {
         name: 'Google Maps',
-        desc: '在中國可部分用於瀏覽，但導航和即時路況不太可靠。適合行前規劃。',
+        desc: '在中國仍可有限度查看地圖，但導航與即時路況不太可靠，比較適合出發前先做行程規劃。',
         android: null,
         ios: null,
         h5: 'https://maps.google.com/',
-        note: 'Will not work for turn-by-turn navigation in China without VPN.',
+        note: '在中國若沒有 VPN，無法正常使用即時導航功能。',
         guide: '/zh-tw/posts/do-you-need-a-vpn-in-china-2026/',
       },
     ],
   },
   {
-    category: 'Food & Dining',
+    category: '美食與餐飲',
     apps: [
       {
         name: 'Meituan',
-        desc: '外送餐點、餐廳訂位、電影票、飯店預訂。僅限中文。用於 Alipay 小程式內的英文說明。',
+        desc: '可用來叫外送、訂餐廳、買電影票和訂飯店。介面只有中文，但可搭配 Alipay 小程式內的英文說明使用。',
         android: 'https://play.google.com/store/apps/details?id=com.sankuai.meituan',
         ios: 'https://apps.apple.com/app/meituan/id423924287',
         h5: 'https://waimai.meituan.com/',
-        note: 'H5 food delivery works in browser. Pay with Alipay at delivery.',
+        note: '外送 H5 網頁版可直接在瀏覽器使用，也可在送達時用 Alipay 付款。',
         guide: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Ele.me',
-        desc: '外送餐飲 App（阿里巴巴旗下）。類似美團。可以用 Alipay 點餐。',
+        desc: '阿里巴巴旗下的外送應用程式，功能和 Meituan 類似，也能透過 Alipay 付款。',
         android: 'https://play.google.com/store/apps/details?id=me.ele',
         ios: 'https://apps.apple.com/app/ele-me/id532785356',
         h5: 'https://www.ele.me/',
-        note: 'Both Meituan and Ele.me work. Try both for best restaurant coverage.',
+        note: 'Meituan 和 Ele.me 都很常用，建議兩個都試試，餐廳選擇會更完整。',
         guide: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Dianping',
-        desc: '中國版的 Yelp。提供餐廳評論、評分和照片，幫助你找到優質的在地美食。僅支援中文。',
+        desc: '中國版 Yelp，提供餐廳評論、評分與照片，方便你找出值得吃的在地店家。介面只有中文。',
         android: 'https://play.google.com/store/apps/details?id=com.dianping.v1',
         ios: 'https://apps.apple.com/app/dianping/id416896465',
         h5: 'https://www.dianping.com/',
-        note: 'Use the photo search feature — see what dishes look like before ordering.',
+        note: '很推薦用照片功能先看菜色長什麼樣子，再決定要不要點。',
         guide: '/zh-tw/food/',
       },
     ],
   },
   {
-    category: 'Communication & VPN',
+    category: '通訊與 VPN',
     apps: [
       {
-        name: 'VPN (choose one before travel)',
-        desc: '出發前先安裝 VPN。ExpressVPN、NordVPN 和 Astrill 在中國可用。免費 VPN 大多會被封鎖。',
+        name: 'VPN（出發前先選好一個）',
+        desc: '請務必在出發前先安裝 VPN。ExpressVPN、NordVPN 和 Astrill 在中國較常用；免費 VPN 大多不穩或直接無法使用。',
         android: null,
         ios: null,
         h5: null,
-        note: 'ESSENTIAL: Install and test before arriving. Activate when you land.',
+        note: '必備：請在抵達中國前先安裝並測試，落地後立刻啟用。',
         guide: '/zh-tw/posts/do-you-need-a-vpn-in-china-2026/',
       },
       {
         name: 'Google Translate',
-        desc: '菜單、標誌和文件的相機翻譯。下載中文（簡體）離線包。',
+        desc: '可用相機翻譯菜單、路標和文件。建議先下載中文（簡體）離線語言包。',
         android: 'https://play.google.com/store/apps/details?id=com.google.android.apps.translate',
         ios: 'https://apps.apple.com/app/google-translate/id414706506',
         h5: 'https://translate.google.com/',
-        note: 'Best translation tool. Download offline pack before trip.',
+        note: '這是最好用的翻譯工具之一，出發前記得先下載離線包。',
         guide: '/zh-tw/tools/survival-kit/',
       },
     ],
   },
   {
-    category: 'Travel Booking',
+    category: '旅遊預訂',
     apps: [
       {
         name: 'Trip.com (Hotels)',
-        desc: '最適合使用外國信用卡預訂飯店。覆蓋範圍廣。英文介面。',
+        desc: '最適合用外國信用卡訂中國飯店的平台，住宿選擇多，且有英文介面。',
         android: null,
         ios: null,
         h5: 'https://www.trip.com/hotels/',
-        note: 'Also works for flights and trains. One-stop shop.',
+        note: '機票和火車票也能一起處理，算是一站式預訂平台。',
         guide: null,
       },
       {
         name: 'Fliggy (Alitrip)',
-        desc: '阿里巴巴的旅遊訂票平台。內建於 Alipay 應用程式中。適合預訂國內航班。',
+        desc: '阿里巴巴旗下的旅遊預訂平台，也整合在 Alipay 裡，特別適合預訂中國國內航班。',
         android: null,
         ios: null,
         h5: 'https://www.fliggy.com/',
-        note: 'Can pay with Alipay. No separate download needed.',
+        note: '可直接使用 Alipay 付款，不需要另外下載。',
         guide: null,
       },
     ],
@@ -190,15 +190,15 @@ const appGroups = [
   <Header locale="zh-TW" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Mobile apps</p>
-      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">中國必備 App</h1>
+      <p class="section-kicker">行動應用程式</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">中國旅行必備應用程式</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-internet-apps" alt="Smartphone with essential China travel apps icons" loading="eager" />
+    <CoverImage name="topic-internet-apps" alt="顯示中國旅行常用應用程式圖示的智慧型手機" loading="eager" />
 
     <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-900">
-      <strong>Before you go:</strong> Install these apps on WiFi before departure. Some app stores are slow or blocked from within China. Download offline translation packs and VPN apps at home.
+      <strong>出發前先準備：</strong> 這些應用程式最好先在有 Wi-Fi 的環境下載好。進入中國後，部分應用程式商店速度可能偏慢，甚至無法正常使用。離線翻譯包和 VPN 也建議先在家安裝完成。
     </div>
 
     <AdSlot format="banner" />
@@ -228,16 +228,16 @@ const appGroups = [
                 {app.h5 && (
                   <a href={app.h5} target="_blank" rel="noopener" class="inline-flex items-center gap-1 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 transition-colors hover:bg-gray-50">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    Open Web Version
+                    開啟網頁版
                   </a>
                 )}
               </div>
 
               {app.note && (
-                <p class="mt-3 text-xs leading-5 text-gray-500"><span class="font-semibold">Tip:</span> {app.note}</p>
+                <p class="mt-3 text-xs leading-5 text-gray-500"><span class="font-semibold">提醒：</span> {app.note}</p>
               )}
               {app.guide && (
-                <a href={app.guide} class="mt-2 inline-block text-xs font-semibold text-brand-700 hover:text-brand-800">Read setup guide &rarr;</a>
+                <a href={app.guide} class="mt-2 inline-block text-xs font-semibold text-brand-700 hover:text-brand-800">查看設定教學 &rarr;</a>
               )}
             </article>
           ))}
@@ -246,25 +246,25 @@ const appGroups = [
     ))}
 
     <section class="mt-12 rounded-lg border border-gray-200 p-6">
-      <h2 class="text-xl font-bold text-gray-950">H5 Web Apps — No Download Needed</h2>
+      <h2 class="text-xl font-bold text-gray-950">H5 網頁版應用程式：免下載也能用</h2>
       <p class="mt-2 text-sm leading-6 text-gray-600">
-        Many China services have <strong>web-based (H5) versions</strong> that work directly in your phone browser or inside WeChat/Alipay mini-programs. These are great for short-term travelers who don't want to clutter their phone with 10+ apps. Key ones:
+        很多中國服務都有<strong>網頁版（H5）</strong>，可直接在手機瀏覽器中使用，或透過 WeChat／Alipay 小程式開啟。對短期旅客來說很方便，不必讓手機一次塞進 10 個以上應用程式。常用的有：
       </p>
       <div class="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">m.didiglobal.com (English available)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Baidu Maps</strong> — <span class="text-gray-600">map.baidu.com (Chinese only)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">WeChat Web</strong> — <span class="text-gray-600">web.wechat.com (messaging only)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Meituan</strong> — <span class="text-gray-600">waimai.meituan.com (food delivery)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Dianping</strong> — <span class="text-gray-600">dianping.com (restaurant search)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay Mini-Programs</strong> — <span class="text-gray-600">Everything inside Alipay (no extra install)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">m.didiglobal.com（提供英文介面）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Baidu Maps</strong> — <span class="text-gray-600">map.baidu.com（僅支援中文）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">WeChat 網頁版</strong> — <span class="text-gray-600">web.wechat.com（僅限訊息功能）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Meituan</strong> — <span class="text-gray-600">waimai.meituan.com（外送點餐）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Dianping</strong> — <span class="text-gray-600">dianping.com（找餐廳用）</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay 小程式</strong> — <span class="text-gray-600">多數功能都整合在 Alipay 內（免額外安裝）</span></div>
       </div>
       <p class="mt-4 text-xs text-gray-500">
-        <strong>Web versions work without a VPN</strong> in most cases. For app downloads, install before arrival on home WiFi.
+        <strong>多數情況下，網頁版不需要 VPN 也能使用。</strong> 但若要下載應用程式，仍建議在抵達中國前先用家中 Wi-Fi 完成安裝。
       </p>
     </section>
 
     <section class="mt-10 text-center">
-      <p class="text-sm text-gray-500">App store links open official pages. Prices and availability subject to regional restrictions.</p>
+      <p class="text-sm text-gray-500">應用程式商店連結皆為官方頁面。價格與是否可下載，仍可能因地區限制而有所不同。</p>
     </section>
   </main>
   <Footer />
