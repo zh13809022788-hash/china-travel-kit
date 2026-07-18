@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,35 +7,35 @@ import { TOOLS as tools } from '../../../config';
 
 const title = '무료 중국 여행 도구: 비자, 결제, eSIM, 예산, 기사 카드, 필수 표현';
 const description =
-  'Free interactive tools for China travel planning: check visa-free entry, payment card compatibility, eSIM options, trip budget, cash backup, power plugs, Chinese phrases, and taxi driver address cards.';
+  '중국 여행을 준비할 때 유용한 무료 인터랙티브 도구를 한곳에 모았어요. 무비자 입국 가능 여부, 결제 카드 호환성, eSIM 옵션, 여행 예산, 현금 예비금, 전원 플러그, 중국어 필수 표현, 택시 기사님용 주소 카드를 확인해 보세요.';
 
 const toolUseCases = [
   {
-    title: 'Before booking flights',
-    text: 'Use the visa-free checker, best-time planner, and budget estimator before you lock dates and cities.',
+    title: '항공권 예약 전에',
+    text: '날짜와 도시를 확정하기 전에 무비자 확인기, 최적 여행 시기 플래너, 예산 계산기를 먼저 활용해 보세요.',
     links: [
-      { href: '/ko/tools/visa-free-checker/', label: 'Visa-free checker' },
-      { href: '/ko/tools/best-time-to-visit/', label: 'Best time to visit' },
-      { href: '/ko/tools/budget-cash-estimator/', label: 'Budget estimator' },
+      { href: '/ko/tools/visa-free-checker/', label: '무비자 확인기' },
+      { href: '/ko/tools/best-time-to-visit/', label: '여행 최적 시기' },
+      { href: '/ko/tools/budget-cash-estimator/', label: '예산 계산기' },
     ],
   },
   {
-    title: 'Before departure',
-    text: 'Use payment, eSIM, app, plug, and phrase tools while you still have time to fix setup problems at home.',
+    title: '출발 전에',
+    text: '집에서 아직 설정을 바로잡을 시간이 있을 때 결제, eSIM, 앱, 플러그, 표현 도구를 확인해 보세요.',
     links: [
-      { href: '/ko/tools/payment-checker/', label: '결제 checker' },
-      { href: '/ko/tools/esim-comparison/', label: 'eSIM comparator' },
-      { href: '/ko/tools/app-availability-checker/', label: 'App checker' },
+      { href: '/ko/tools/payment-checker/', label: '결제 확인기' },
+      { href: '/ko/tools/esim-comparison/', label: 'eSIM 비교기' },
+      { href: '/ko/tools/app-availability-checker/', label: '앱 확인기' },
     ],
   },
   {
-    title: 'On the ground in China',
-    text: 'Use driver cards, currency conversion, and essential phrases when apps, taxis, menus, or front desks get confusing.',
+    title: '중국 현지에서',
+    text: '앱, 택시, 메뉴, 프런트 데스크 이용이 헷갈릴 때 기사 카드, 환율 변환, 필수 표현 도구를 활용해 보세요.',
     links: [
-      { href: '/ko/tools/survival-kit/', label: 'Survival kit' },
-      { href: '/ko/tools/show-to-driver/', label: 'Show to Driver' },
-      { href: '/ko/tools/currency-converter/', label: 'RMB converter' },
-      { href: '/ko/tools/essential-phrases/', label: 'Essential phrases' },
+      { href: '/ko/tools/survival-kit/', label: '생존 키트' },
+      { href: '/ko/tools/show-to-driver/', label: '기사님께 보여주기' },
+      { href: '/ko/tools/currency-converter/', label: 'RMB 변환기' },
+      { href: '/ko/tools/essential-phrases/', label: '필수 표현' },
     ],
   },
 ];
@@ -64,8 +64,8 @@ const toolsJsonLd = {
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">무료 중국 여행 도구</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Use pre-trip checklist</a>
-        <a href="/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Read first-time planner</a>
+        <a href="/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">출발 전 체크리스트 보기</a>
+        <a href="/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">처음 가는 분용 가이드 읽기</a>
       </div>
     </header>
 
@@ -73,7 +73,7 @@ const toolsJsonLd = {
 
     <section class="mt-8 grid gap-5 lg:grid-cols-3" aria-labelledby="tool-use-cases-heading">
       <div class="lg:col-span-3">
-        <h2 id="tool-use-cases-heading" class="text-2xl font-bold text-gray-950">Which tool should you use first?</h2>
+        <h2 id="tool-use-cases-heading" class="text-2xl font-bold text-gray-950">어떤 도구부터 써보면 좋을까요?</h2>
       </div>
       {toolUseCases.map((useCase) => (
         <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
