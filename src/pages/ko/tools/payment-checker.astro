@@ -158,7 +158,7 @@ const faqItems = [
             <tr>
               <td class="px-4 py-3 font-medium text-gray-900">계산 시 네트워크 불안정</td>
               <td class="px-4 py-3">모바일 데이터가 약하거나 로밍이 없거나 앱이 열리지 않습니다.</td>
-              <td class="px-4 py-3">다른 지갑, 매장 Wi-Fi, 또는 소액 현금을 사용하세요.</td>
+              <td class="px-4 py-3">다른 지갑, 매장 Wi‑Fi, 또는 소액 현금을 사용하세요.</td>
             </tr>
           </tbody>
         </table>
@@ -170,7 +170,7 @@ const faqItems = [
       </p>
     </section>
 
-    <FaqSection items={faqItems} title="결제 카드 호환성 확인기 FAQ" />
+    <FaqSection items={faqItems} title="결제 카드 호환성 확인기 자주 묻는 질문" />
   </main>
   <Footer />
 </BaseLayout>
@@ -184,16 +184,16 @@ const faqItems = [
     wechat: { status: string; single: string; daily: string; fee: string; how: string };
   }> = {
     Visa: {
-      alipay: { status: '지원됨', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: 'Alipay Wallet에서 카드를 추가하고 여권 인증을 진행하세요' },
-      wechat: { status: '지원됨', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: 'WeChat Wallet에서 카드를 추가하고 여권 인증을 진행하세요' },
+      alipay: { status: '지원됨', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: 'Alipay 앱에서 카드를 추가하고 여권 인증을 진행하세요' },
+      wechat: { status: '지원됨', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: 'WeChat Pay에서 카드를 추가하고 여권 인증을 진행하세요' },
     },
     Mastercard: {
-      alipay: { status: '지원됨', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: 'Alipay Wallet에서 카드를 추가하고 여권 인증을 진행하세요' },
-      wechat: { status: '지원됨', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: 'WeChat Wallet에서 카드를 추가하고 여권 인증을 진행하세요' },
+      alipay: { status: '지원됨', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: 'Alipay 앱에서 카드를 추가하고 여권 인증을 진행하세요' },
+      wechat: { status: '지원됨', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: 'WeChat Pay에서 카드를 추가하고 여권 인증을 진행하세요' },
     },
     Amex: {
       alipay: { status: '부분 지원', single: '약 6,000위안', daily: '약 50,000위안', fee: '200위안 초과 시 약 3%', how: '대부분의 경우 Alipay에서 Amex를 사용할 수 있지만, Visa 또는 Mastercard를 백업으로 준비하세요' },
-      wechat: { status: '제한적', single: '상황에 따라 다름', daily: '상황에 따라 다름', fee: '200위안 초과 시 약 3%', how: '지원이 일관되지 않으므로 WeChat에서는 Visa 또는 Mastercard를 우선 권장합니다' },
+      wechat: { status: '제한적', single: '상황에 따라 다름', daily: '상황에 따라 다름', fee: '200위안 초과 시 약 3%', how: '지원이 일정하지 않으므로 WeChat Pay에서는 Visa 또는 Mastercard를 우선 권장합니다' },
     },
     Discover: {
       alipay: { status: '제한적', single: '상황에 따라 다름', daily: '상황에 따라 다름', fee: '상황에 따라 다름', how: '가맹점 수용 범위가 제한적이므로 Visa 또는 Mastercard를 강력히 권장합니다' },
