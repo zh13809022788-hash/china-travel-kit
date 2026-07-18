@@ -13,28 +13,28 @@ const cityPosts = allPosts
   .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-const title = '外国人旅行者向け中国主要都市ガイド';
+const title = '外国人旅行者向け 中国の主要都市ガイド';
 const description =
-  '北京、上海、広州、成都、西安、杭州、重慶、三亜のガイドをもとに、中国旅行で無理なく回りやすい都市滞在を計画できます。空港アクセス、地下鉄、食事、移動準備まで、次に確認したい情報もあわせてご覧いただけます。';
+  '北京、上海、広州、成都、西安、杭州、重慶、三亜のガイドをもとに、中国旅行で無理なく回りやすい都市滞在を計画していただけます。空港アクセス、地下鉄、食事、移動準備まで、次に確認したい情報もあわせてご覧ください。';
 
 const mapCities = [
-  { name: '北京', x: 470, y: 80, href: '#beijing' },
-  { name: '西安', x: 340, y: 155, href: '#xian' },
+  { name: '北京', x: 470, y: 80, href: '#北京' },
+  { name: '西安', x: 340, y: 155, href: '#西安' },
   { name: '南京', x: 490, y: 180, href: '' },
-  { name: '上海', x: 540, y: 200, href: '#shanghai' },
-  { name: '成都', x: 250, y: 220, href: '#chengdu' },
-  { name: '杭州', x: 520, y: 205, href: '#hangzhou' },
-  { name: '重慶', x: 310, y: 260, href: '#chongqing' },
+  { name: '上海', x: 540, y: 200, href: '#上海' },
+  { name: '成都', x: 250, y: 220, href: '#成都' },
+  { name: '杭州', x: 520, y: 205, href: '#杭州' },
+  { name: '重慶', x: 310, y: 260, href: '#重慶' },
   { name: '桂林', x: 370, y: 300, href: '' },
   { name: '昆明', x: 210, y: 335, href: '' },
-  { name: '広州', x: 400, y: 370, href: '#guangzhou' },
+  { name: '広州', x: 400, y: 370, href: '#広州' },
   { name: '深圳', x: 430, y: 390, href: '' },
-  { name: '三亜', x: 360, y: 440, href: '#sanya' },
+  { name: '三亜', x: 360, y: 440, href: '#三亜' },
 ];
 
 const cities = [
   {
-    id: 'beijing',
+    id: '北京',
     name: '北京',
     href: '/ja/posts/beijing-city-guide-for-foreigners/',
     desc: '歴史、胡同、万里の長城など、初めての中国旅行で外せない定番スポットを押さえたい方におすすめです。',
@@ -46,7 +46,7 @@ const cities = [
     nextLabel: '大興空港から市内へのアクセスを確認します',
   },
   {
-    id: 'shanghai',
+    id: '上海',
     name: '上海',
     href: '/ja/posts/shanghai-city-guide-for-foreigners/',
     desc: '到着後の動きやすさ、各国料理、スカイライン散策、地下鉄の使いやすさを重視する方に最適です。',
@@ -58,7 +58,7 @@ const cities = [
     nextLabel: '上海地下鉄の使い方を確認します',
   },
   {
-    id: 'chengdu',
+    id: '成都',
     name: '成都',
     href: '/ja/posts/chengdu-city-guide-for-foreigners/',
     desc: '四川料理、茶館のゆったりした雰囲気、パンダ、落ち着いた大都市のリズムを楽しみたい方に向いています。',
@@ -70,31 +70,31 @@ const cities = [
     nextLabel: '成都の屋台グルメを確認します',
   },
   {
-    id: 'xian',
+    id: '西安',
     name: '西安',
     href: '/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
     desc: '古代史、兵馬俑、城壁などを通して、中国文化の奥行きを感じる旅をしたい方におすすめです。',
     days: '3〜4日',
     bestSeason: '3月〜5月、9月〜11月',
     difficulty: '普通です',
-    whyGo: '兵馬俑、古城壁、回民街のグルメなどを通して、中国史の奥深さを実感できます。',
+    whyGo: '兵馬俑、古城壁、回民街のグルメなどを通して、中国史の奥深さを実感していただけます。',
     next: '/ja/posts/china-high-speed-rail-guide-foreigners/',
     nextLabel: '西安へ向かう高速鉄道を調べます',
   },
   {
-    id: 'guangzhou',
+    id: '広州',
     name: '広州',
     href: '/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
     desc: '広東料理、商都の活気、華南の玄関口としての利便性、香港へのアクセスを重視する方に向いています。',
     days: '3〜4日',
     bestSeason: '10月〜12月、3月〜4月',
     difficulty: '普通です',
-    whyGo: '広東点心、陳氏書院、広州塔に加えて、北京や上海とは異なる温暖な南方都市の雰囲気も楽しめます。',
+    whyGo: '広東点心、陳氏書院、広州塔に加えて、北京や上海とは異なる温暖な南方都市の雰囲気も楽しんでいただけます。',
     next: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     nextLabel: '広東料理の楽しみ方を確認します',
   },
   {
-    id: 'chongqing',
+    id: '重慶',
     name: '重慶',
     href: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     desc: '火鍋、近未来的な夜景、起伏の多い街並み、長江クルーズを楽しみたい方にぴったりです。',
@@ -106,7 +106,7 @@ const cities = [
     nextLabel: '重慶グルメをまとめて見ます',
   },
   {
-    id: 'hangzhou',
+    id: '杭州',
     name: '杭州',
     href: '/ja/posts/hangzhou-city-guide-for-foreigners/',
     desc: '西湖、緑の多い景色、週末旅行に合う穏やかなテンポ、洗練された滞在を求める方に向いています。',
@@ -118,7 +118,7 @@ const cities = [
     nextLabel: '鉄道と市内交通を計画します',
   },
   {
-    id: 'sanya',
+    id: '三亜',
     name: '三亜',
     href: '/ja/posts/sanya-city-guide-for-foreigners/',
     desc: '暖かい冬、リゾート滞在、ビーチで過ごす時間、海南島内の小旅行を重視する方に最適です。',
@@ -135,7 +135,7 @@ const routes = [
   {
     name: '初めての中国旅行におすすめの8〜10日間',
     plan: '上海3日、杭州2日、北京4日',
-    fit: '到着後の動きやすさ、定番の景色、代表的な歴史スポットを、無理なくバランスよく組み合わせられます。',
+    fit: '到着後の動きやすさ、定番の景色、代表的な歴史スポットを、無理なくバランスよく組み合わせていただけます。',
   },
   {
     name: '食とゆったりした滞在を楽しむ7〜9日間',
@@ -163,7 +163,7 @@ const faqItems = [
   {
     question: '中国で長めに滞在するなら、どの都市が向いていますか？',
     answer:
-      '利便性や英語対応のしやすさを重視するなら、上海が長期滞在の拠点として最も使いやすいです。成都は、生活コストを抑えながら落ち着いて過ごしたい方に向いています。杭州は景観の美しさとテック都市としての活気を兼ね備えた、中間的な選択肢です。三亜は通年の都市生活というより、冬の滞在先として考えるのが自然です。',
+      '利便性や英語対応のしやすさを重視するなら、上海が長期滞在の拠点として最も使いやすいです。成都は、生活コストを抑えながら落ち着いて過ごしたい方に向いています。杭州は景観の美しさとテック都市としての活気を兼ね備えた、バランスのよい選択肢です。三亜は通年の都市生活というより、冬の滞在先として考えるのが自然です。',
   },
 ];
 
@@ -196,8 +196,8 @@ const faqJsonLd = {
 
     <AdSlot format="banner" />
 
-    <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
-      <h2 id="city-shortcuts" class="sr-only">都市別のショートカット</h2>
+    <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="都市一覧">
+      <h2 id="都市一覧" class="sr-only">都市別ショートカット</h2>
       {cities.map((city) => (
         <article class="card" id={city.id}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
@@ -217,18 +217,18 @@ const faqJsonLd = {
             </div>
           </dl>
           <div class="mt-5 grid gap-2 text-sm font-semibold">
-            <a href={city.href} class="text-brand-700 hover:text-brand-800">都市ガイドを見ます</a>
+            <a href={city.href} class="text-brand-700 hover:text-brand-800">都市ガイドを見る</a>
             <a href={city.next} class="text-gray-700 hover:text-brand-700">{city.nextLabel}</a>
           </div>
         </article>
       ))}
     </section>
 
-    <section class="mt-12" aria-labelledby="compare-cities">
+    <section class="mt-12" aria-labelledby="都市比較">
       <div class="section-heading">
         <div>
           <p class="section-kicker">都市比較</p>
-          <h2 id="compare-cities">どの都市を選べばよいですか？</h2>
+          <h2 id="都市比較">どの都市を選べばよいでしょうか？</h2>
         </div>
       </div>
       <div class="mt-6 overflow-hidden rounded-lg border border-gray-200">
@@ -259,10 +259,10 @@ const faqJsonLd = {
       </div>
     </section>
 
-    <section class="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]" aria-labelledby="route-ideas">
+    <section class="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]" aria-labelledby="モデルルート">
       <div>
         <p class="section-kicker">モデルルート</p>
-        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">無理なく回りやすい都市の組み合わせ</h2>
+        <h2 id="モデルルート" class="mt-2 text-3xl font-bold text-gray-950">無理なく回りやすい都市の組み合わせ</h2>
         <p class="mt-3 leading-7 text-gray-600">
           中国旅行の行程は、都市ごとの役割を分けて考えると組みやすくなります。上海は到着しやすい玄関口で、
           北京は歴史、杭州は景色、成都は食と中国西部へのアクセス、三亜は暖かい休暇に向いています。
@@ -311,11 +311,11 @@ const faqJsonLd = {
       </aside>
     </section>
 
-    <section class="mt-12" aria-labelledby="city-faq">
+    <section class="mt-12" aria-labelledby="よくある質問">
       <div class="section-heading">
         <div>
           <p class="section-kicker">よくある質問</p>
-          <h2 id="city-faq">中国の都市選びでよくある質問</h2>
+          <h2 id="よくある質問">中国の都市選びでよくある質問</h2>
         </div>
       </div>
       <div class="mt-6 grid gap-4 md:grid-cols-3">
