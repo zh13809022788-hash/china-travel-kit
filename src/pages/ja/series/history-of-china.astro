@@ -10,23 +10,23 @@ const posts = (await getCollection('posts-ja'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '中国の歴史をたどる旅 古代遺跡と物語をご案内します';
-const description = '万里の長城、兵馬俑、紫禁城、シルクロード、古都、水郷の町々など、中国の歴史スポットを海外からの旅行者にもわかりやすくご案内します。目の前に広がる景色の背景にある物語まで読み解けます。';
+const title = '中国の歴史をめぐる旅 古代遺跡と物語をわかりやすくご案内します';
+const description = '万里の長城、兵馬俑、紫禁城、シルクロード、古都、水郷の町々など、中国各地の歴史スポットを海外からの旅行者にもわかりやすくご案内します。目の前に広がる景色の背景にある物語まで読み解けます。';
 
 const relatedTools = [
   { href: '/ja/posts/china-visa-free-entry-transit-guide-2026/', title: 'ビザ・入国ガイド', desc: 'ビザ免除トランジット制度や入国条件をわかりやすくご案内します。' },
   { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '高速鉄道ガイド', desc: '中国各地の歴史スポットへ向かう列車情報をご案内します。' },
-  { href: '/ja/posts/book-china-train-tickets-12306-foreigners/', title: '列車チケット予約ガイド', desc: '外国籍のパスポートをお持ちの方向けに、12306の使い方をご案内します。' },
+  { href: '/ja/posts/book-china-train-tickets-12306-foreigners/', title: '列車チケット予約ガイド', desc: '外国籍のパスポートをお持ちの方に向けて、12306の使い方をご案内します。' },
 ];
 
 const relatedCities = [
-  { href: '/ja/posts/beijing-city-guide-for-foreigners/', title: '北京', desc: '紫禁城、万里の長城、天壇などの歴史名所を巡れます。' },
+  { href: '/ja/posts/beijing-city-guide-for-foreigners/', title: '北京', desc: '紫禁城、万里の長城、天壇などの歴史名所をめぐれます。' },
   { href: '/ja/posts/hangzhou-city-guide-for-foreigners/', title: '杭州', desc: '南宋の古都として受け継がれてきた歴史に触れられます。' },
-  { href: '/ja/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '三国志ゆかりの史跡や風情ある古い街並みを楽しめます。' },
+  { href: '/ja/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '三国志ゆかりの史跡や風情ある古い町並みを楽しめます。' },
 ];
 
 const otherSeries = [
-  { href: '/ja/series/food-of-china/', title: '中国の食' },
+  { href: '/ja/series/food-of-china/', title: '中国の食文化' },
   { href: '/ja/series/culture-of-china/', title: '中国の文化' },
   { href: '/ja/series/nature-of-china/', title: '中国の自然' },
 ];
@@ -48,7 +48,7 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">記事一覧</p>
-            <h2>「中国の歴史」シリーズの記事</h2>
+            <h2>「中国の歴史」シリーズの記事一覧です</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -69,7 +69,7 @@ const otherSeries = [
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">旅行に役立つ情報</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">見学プラン作りに役立つガイド</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">見学プラン作りに役立つガイドです</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -82,7 +82,7 @@ const otherSeries = [
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">都市ガイド</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">歴史を感じられる都市</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">歴史を身近に感じられる都市です</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
