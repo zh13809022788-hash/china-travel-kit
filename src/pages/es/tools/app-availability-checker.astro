@@ -14,7 +14,7 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 
 
-const title = '¿Funcionarán mis apps en China? Comprobador de disponibilidad de apps';
+const title = '¿Mis apps funcionarán en China? Comprobador de disponibilidad';
 
 const description =
   'Comprueba si Google, WhatsApp, Instagram y otras apps funcionan en China sin VPN y descubre la mejor alternativa local para cada servicio bloqueado.';
@@ -41,7 +41,7 @@ const apps: InfoApp[] = [
   { name: 'Instagram', category: 'Redes sociales', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'RED (Xiaohongshu)' },
   { name: 'X (Twitter)', category: 'Redes sociales', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'Weibo' },
   { name: 'Telegram', category: 'Mensajería', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'WeChat' },
-  { name: 'WeChat', category: 'Mensajería', status: 'funciona', note: 'Funciona sin problemas; es la app más habitual en China.' },
+  { name: 'WeChat', category: 'Mensajería', status: 'funciona', note: 'Funciona sin problemas; es la app más utilizada en China.' },
   { name: 'Servicios de Apple (iMessage, App Store)', category: 'Apple', status: 'funciona', note: 'Funcionan con normalidad.' },
   { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'funciona', note: 'Funcionan con normalidad.' },
   { name: 'Booking.com', category: 'Viajes', status: 'funciona', note: 'Funciona con normalidad.' },
@@ -49,7 +49,7 @@ const apps: InfoApp[] = [
   { name: 'Trip.com', category: 'Viajes', status: 'funciona', note: 'Funciona sin problemas; es muy útil para reservar trenes y hoteles.' },
   { name: 'Alipay', category: 'Pagos', status: 'funciona', note: 'Funciona sin problemas y acepta tarjetas extranjeras.' },
   { name: 'Uber', category: 'Transporte', status: 'bloqueada', note: 'No opera en China continental.', alt: 'DiDi' },
-  { name: 'Netflix', category: 'Entretenimiento', status: 'bloqueada', note: 'No está disponible en China continental.', alt: 'Plataformas locales o contenido descargado con antelación' },
+  { name: 'Netflix', category: 'Entretenimiento', status: 'bloqueada', note: 'No está disponible en China continental.', alt: 'Plataformas locales o contenido descargado de antemano' },
   { name: 'Spotify', category: 'Entretenimiento', status: 'bloqueada', note: 'No está disponible en China continental.', alt: 'QQ Music o música descargada previamente' },
 ];
 
@@ -65,7 +65,7 @@ const apps: InfoApp[] = [
 
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
 
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">¿Funcionarán mis apps en China?</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">¿Mis apps funcionarán en China?</h1>
 
       <p class="mt-3 text-lg text-gray-600">{description}</p>
 
@@ -94,7 +94,7 @@ const apps: InfoApp[] = [
 
         <button data-status="funciona" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Funcionan</button>
 
-        <button data-status="parcial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Funcionan a medias</button>
+        <button data-status="parcial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Funcionamiento parcial</button>
 
         <button data-status="bloqueada" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Bloqueadas</button>
 
@@ -112,7 +112,7 @@ const apps: InfoApp[] = [
 
     <AffiliateCta
       title="Haz que tus apps sigan funcionando con una eSIM de viaje"
-      description="Una eSIM de viaje para China que evita las restricciones locales te permite seguir usando tus apps habituales sin tener que configurar una VPN por separado."
+      description="Una eSIM de viaje para China que evita las restricciones locales te permite seguir usando tus apps habituales sin tener que configurar una VPN aparte."
       buttonText="Ver opciones de eSIM"
       placeholder={AFFILIATE_LINKS.esim}
     />
@@ -141,7 +141,7 @@ const apps: InfoApp[] = [
 
   const insignias = {
     funciona: { cls: 'bg-green-100 text-green-800', label: '✅ Funcionan' },
-    parcial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Funcionan a medias' },
+    parcial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Funcionamiento parcial' },
     bloqueada: { cls: 'bg-red-100 text-red-800', label: '🚫 Bloqueadas' },
   };
 
