@@ -11,15 +11,15 @@ const posts = (await getCollection('posts-ja'))
   .filter((p) => p.data.category === CATEGORY)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '中国交通ガイド：鉄道、配車、市内移動';
+const title = '中国の交通ガイド：高速鉄道、DiDi、市内移動';
 const description =
-  '外国人旅行者向けに、中国高速鉄道の予約、DiDi 配車、公共交通の使い方を解説します。';
+  '外国人旅行者の方向けに、中国の高速鉄道の予約方法、DiDiの使い方、公共交通の利用方法をご案内します。';
 
 const transportPaths = [
-  { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: 'Long-distance trains', desc: 'Use this for city-to-city planning, seat classes, passport entry, and station timing.' },
-  { href: '/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Airport arrival', desc: 'Compare metro, taxi, ride-hailing, and airport rail for the first ride into town.' },
-  { href: '/ja/posts/didi-china-foreign-tourists-guide/', title: 'Ride-hailing', desc: 'Set up DiDi, use translated pickup pins, and reduce driver-call friction.' },
-  { href: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Metro systems', desc: 'Learn QR tickets, transfers, and rush-hour habits through the Shanghai example.' },
+  { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '長距離列車', desc: '都市間の移動計画、座席クラス、パスポート情報の入力、駅に到着するタイミングを確認できます。' },
+  { href: '/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: '空港到着後の移動', desc: '空港から市内へ向かう最初の移動手段として、地下鉄、タクシー、配車アプリ、空港連絡鉄道を比較できます。' },
+  { href: '/ja/posts/didi-china-foreign-tourists-guide/', title: '配車サービス', desc: 'DiDiの設定方法、翻訳付きの乗車位置ピンの使い方、運転手からの連絡を減らすコツをご紹介します。' },
+  { href: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '地下鉄の利用方法', desc: '上海を例に、QR乗車券、乗り換え、ラッシュ時の利用の流れを学べます。' },
 ];
 ---
 
@@ -28,36 +28,36 @@ const transportPaths = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">交通</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">中国交通ガイド</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">中国の交通ガイド</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="hub-transport" alt="Modern high-speed train and railway system in China" loading="lazy" />
+    <CoverImage name="hub-transport" alt="中国の近代的な高速鉄道と鉄道システム" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-transport">
-      <h2 id="featured-transport" class="sr-only">注目の交通ガイド</h2>
+      <h2 id="featured-transport" class="sr-only">おすすめの交通ガイド</h2>
       <a href="/ja/posts/china-high-speed-rail-guide-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">High-Speed Rail Guide</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Book tickets, choose classes, navigate stations</p>
+        <span class="font-semibold text-gray-950">高速鉄道ガイド</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">切符の予約方法、座席クラスの選び方、駅での移動方法をご案内します。</p>
       </a>
       <a href="/ja/posts/book-china-train-tickets-12306-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">12306 Train Booking</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Step-by-step guide with foreign passport</p>
+        <span class="font-semibold text-gray-950">12306での切符予約</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">外国のパスポートを使った予約手順を順番にご説明します。</p>
       </a>
       <a href="/ja/posts/didi-china-foreign-tourists-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">DiDi Ride-Hailing</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">How to use China's ride-hailing app</p>
+        <span class="font-semibold text-gray-950">DiDi配車ガイド</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">中国の配車アプリの使い方をご案内します。</p>
       </a>
       <a href="/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Airport Transfers</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Beijing, Shanghai, Guangzhou guides</p>
+        <span class="font-semibold text-gray-950">空港から市内への移動</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">北京、上海、広州での移動方法をご案内します。</p>
       </a>
     </section>
 
     <section class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4" aria-labelledby="transport-paths">
-      <h2 id="transport-paths" class="sr-only">交通 planning paths</h2>
+      <h2 id="transport-paths" class="sr-only">交通計画のガイド一覧</h2>
       {transportPaths.map((path) => (
         <a href={path.href} class="card block hover:no-underline">
           <h3 class="text-lg font-bold text-gray-950">{path.title}</h3>
