@@ -35,7 +35,7 @@ const pathways = [
 const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
-    title: 'Baijiu 101',
+    title: '白酒入門',
     desc: '如果宴席或主人招待的晚餐出現中國白酒，這些背景資訊會很實用。',
   },
   {
@@ -60,8 +60,8 @@ const cultureLinks = [
 
     <AdSlot format="banner" />
 
-    <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">美食規劃導覽</h2>
+    <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="meishi-guide">
+      <h2 id="meishi-guide" class="sr-only">美食規劃導覽</h2>
       {pathways.map((item) => (
         <a href={item.href} class="card block hover:no-underline">
           <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
