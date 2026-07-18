@@ -1,3 +1,4 @@
+```astro
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -6,9 +7,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = '중국 여행 예산 및 현금 계산기';
+const title = '중국 여행 예산·현금 계산기';
 const description =
-  '여행 기간, 여행 스타일, 도시 등급에 따라 중국 여행의 하루 예산과 가져가야 할 현금 액수를 계산해 보세요. RMB와 USD 기준으로 한눈에 확인할 수 있습니다.';
+  '여행 기간, 여행 스타일, 도시 물가 수준에 맞춰 중국 여행의 하루 예산과 준비할 현금 액수를 계산해 보세요. 위안화와 미국 달러 기준으로 한눈에 확인할 수 있습니다.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
@@ -16,38 +17,49 @@ const description =
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">도구</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">예산 및 현금 계산기</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">중국 여행 예산·현금 계산기</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- 입력 항목 -->
     <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">여행 기간(박 수)</span>
-        <input id="nights" type="number" min="1" max="60" value="7"
-          class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+        <input
+          id="nights"
+          type="number"
+          min="1"
+          max="60"
+          value="7"
+          class="rounded-lg border border-gray-300 px-3 py-2 text-sm"
+        />
       </label>
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">여행 인원</span>
-        <input id="travelers" type="number" min="1" max="10" value="1"
-          class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+        <input
+          id="travelers"
+          type="number"
+          min="1"
+          max="10"
+          value="1"
+          class="rounded-lg border border-gray-300 px-3 py-2 text-sm"
+        />
       </label>
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">여행 스타일</span>
         <select id="style" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="budget">절약형(호스텔, 길거리 음식, 지하철)</option>
-          <option value="mid" selected>보통형(3~4성급 호텔, 일반 식당)</option>
-          <option value="comfort">여유형(4~5성급 호텔, 택시, 외식 중심)</option>
+          <option value="절약형">절약형(호스텔, 길거리 음식, 지하철 위주)</option>
+          <option value="보통형" selected>보통형(3~4성급 호텔, 일반 식당)</option>
+          <option value="여유형">여유형(4~5성급 호텔, 택시, 외식 중심)</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">도시 등급</span>
+        <span class="mb-1 font-medium text-gray-700">도시 물가 수준</span>
         <select id="tier" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="tier1">1선 도시(베이징, 상하이, 선전)</option>
-          <option value="tier2" selected>2선 도시(청두, 시안, 항저우)</option>
-          <option value="tier3">중소 도시</option>
+          <option value="1선도시">1선 도시(베이징, 상하이, 선전)</option>
+          <option value="2선도시" selected>2선 도시(청두, 시안, 항저우)</option>
+          <option value="중소도시">중소 도시</option>
         </select>
       </label>
       <div class="sm:col-span-2">
@@ -55,7 +67,6 @@ const description =
       </div>
     </div>
 
-    <!-- 계산 결과 -->
     <div id="result" class="mt-6 hidden">
       <div class="grid gap-5 md:grid-cols-2">
         <div class="card" id="budget-card"></div>
@@ -63,7 +74,7 @@ const description =
       </div>
       <div class="card mt-5" id="breakdown-card"></div>
       <p class="mt-3 text-xs text-gray-400">
-        예상 금액은 참고용이며 국제선 항공권은 포함되지 않습니다. 실제 비용은 여행 시기, 환율, 개인 소비 방식에 따라 달라질 수 있습니다. 환율은 1 USD당 약 7.2 RMB로 가정했습니다.
+        예상 금액은 참고용이며 국제선 항공권은 포함되지 않습니다. 실제 비용은 여행 시기, 환율, 개인 소비 방식에 따라 달라질 수 있습니다. 환율은 1달러당 약 7.2위안으로 가정했습니다.
       </p>
 
       <AffiliateCta
@@ -78,30 +89,27 @@ const description =
 </BaseLayout>
 
 <script>
-  type StyleKey = 'budget' | 'mid' | 'comfort';
-  type TierKey = 'tier1' | 'tier2' | 'tier3';
+  type StyleKey = '절약형' | '보통형' | '여유형';
+  type TierKey = '1선도시' | '2선도시' | '중소도시';
 
-  const USD_RATE = 7.2; // 1 USD당 RMB 환율(대략값)
+  const USD_RATE = 7.2;
 
-  // 1인 기준 하루 지출액(RMB, 숙박비 제외)
   const dailySpend: Record<StyleKey, { food: number; transport: number; activities: number; misc: number }> = {
-    budget: { food: 80, transport: 30, activities: 40, misc: 30 },
-    mid: { food: 180, transport: 70, activities: 100, misc: 60 },
-    comfort: { food: 400, transport: 200, activities: 220, misc: 130 },
+    절약형: { food: 80, transport: 30, activities: 40, misc: 30 },
+    보통형: { food: 180, transport: 70, activities: 100, misc: 60 },
+    여유형: { food: 400, transport: 200, activities: 220, misc: 130 },
   };
 
-  // 1박 기준 숙박비(RMB, 객실 1개에 최대 2명 투숙 기준)
   const lodging: Record<StyleKey, number> = {
-    budget: 150,
-    mid: 450,
-    comfort: 1100,
+    절약형: 150,
+    보통형: 450,
+    여유형: 1100,
   };
 
-  // 도시 등급별 비용 배수
   const tierMult: Record<TierKey, number> = {
-    tier1: 1.25,
-    tier2: 1.0,
-    tier3: 0.8,
+    '1선도시': 1.25,
+    '2선도시': 1.0,
+    중소도시: 0.8,
   };
 
   const rmb = (n: number) => `¥${Math.round(n).toLocaleString()}`;
@@ -130,14 +138,12 @@ const description =
     const spend = dailySpend[style];
     const perPersonDaily = (spend.food + spend.transport + spend.activities + spend.misc) * mult;
 
-    // 숙박은 여행자 2명당 객실 1개로 계산하고, 객실 수는 올림 처리
     const rooms = Math.ceil(travelers / 2);
     const lodgingTotal = lodging[style] * mult * rooms * nights;
 
     const spendTotal = perPersonDaily * travelers * nights;
     const grandTotal = spendTotal + lodgingTotal;
 
-    // 권장 현금은 일일 지출의 약 15%로 계산하되, 과하지 않도록 상한 적용
     const dailyCashFloat = Math.min(perPersonDaily * 0.15 * travelers, 200 * travelers);
     const cashRecommended = Math.min(dailyCashFloat * nights, 2000 + 100 * travelers);
 
@@ -154,7 +160,7 @@ const description =
     cashCard.innerHTML = `
       <h3 class="text-lg font-bold text-gray-900">권장 현금 준비액</h3>
       <p class="mt-2 text-3xl font-bold text-gray-900">${rmb(cashRecommended)}</p>
-      <p class="text-sm text-gray-500">약 ${usd(cashRecommended)} 상당의 실물 RMB</p>
+      <p class="text-sm text-gray-500">약 ${usd(cashRecommended)} 상당의 실물 위안화</p>
       <p class="mt-4 text-sm text-gray-600">
         중국은 모바일 결제가 중심이라 외국 카드가 연결된 Alipay 또는 WeChat Pay로 대부분 결제할 수 있습니다. 이 현금은 QR 결제가 어려운 택시, 소규모 지방 상점, 현금만 받는 기계 등에 대비한 예비 자금입니다. 10위안, 20위안, 50위안처럼 소액권 위주로 준비하는 것이 좋습니다.
       </p>`;
@@ -174,3 +180,4 @@ const description =
 
   btn?.addEventListener('click', calc);
 </script>
+```
