@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = '중국 의류 및 신발 사이즈 변환기';
+const title = '중국 의류·신발 사이즈 변환기';
 const description =
-  '미국, 영국, 유럽 의류 및 신발 사이즈를 중국 사이즈로 변환해 중국에서도 자신 있게 쇼핑하세요. 남성용과 여성용 의류 및 신발을 모두 지원합니다.';
+  '미국, 영국, 유럽 의류·신발 사이즈를 중국 사이즈로 바꿔 보고 중국에서도 더 자신 있게 쇼핑해 보세요. 남녀 의류와 신발 사이즈를 모두 확인할 수 있습니다.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
@@ -16,27 +16,27 @@ const description =
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">도구</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">의류 및 신발 사이즈 변환기</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">의류·신발 사이즈 변환기</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm">
-      <button data-tab="women-clothing" class="size-tab btn-primary px-3 py-1.5">여성 의류</button>
-      <button data-tab="men-clothing" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">남성 의류</button>
-      <button data-tab="women-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">여성 신발</button>
-      <button data-tab="men-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">남성 신발</button>
+      <button data-tab="여성-의류" class="size-tab btn-primary px-3 py-1.5">여성 의류</button>
+      <button data-tab="남성-의류" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">남성 의류</button>
+      <button data-tab="여성-신발" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">여성 신발</button>
+      <button data-tab="남성-신발" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">남성 신발</button>
     </div>
 
     <div class="mt-6 overflow-x-auto">
       <table class="w-full min-w-[560px] border-collapse text-sm">
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
-            <th class="py-3 pr-4 font-semibold">중국</th>
-            <th class="py-3 pr-4 font-semibold">US</th>
-            <th class="py-3 pr-4 font-semibold">UK</th>
-            <th class="py-3 pr-4 font-semibold">EU</th>
+            <th class="py-3 pr-4 font-semibold">중국 사이즈</th>
+            <th class="py-3 pr-4 font-semibold">미국 사이즈</th>
+            <th class="py-3 pr-4 font-semibold">영국 사이즈</th>
+            <th class="py-3 pr-4 font-semibold">유럽 사이즈</th>
           </tr>
         </thead>
         <tbody id="size-rows"></tbody>
@@ -44,13 +44,13 @@ const description =
     </div>
 
     <p class="mt-4 text-xs text-gray-400">
-      브랜드와 핏에 따라 사이즈는 달라질 수 있습니다. 중국 의류는 서양권 사이즈보다 작게 나오는 경우가 많으므로,
-      확실하지 않다면 한 치수 크게 고르거나 구매 전에 직접 착용해 보는 것이 좋습니다. 이 표는 일반적인 참고용입니다.
+      브랜드와 핏에 따라 실제 사이즈는 달라질 수 있습니다. 중국 의류는 서구권 사이즈보다 작게 나오는 경우가 많으니,
+      애매하다면 한 치수 크게 고르거나 구매 전에 직접 입어 보는 편이 좋습니다. 이 표는 일반적인 참고용입니다.
     </p>
 
     <AffiliateCta
-      title="여행 중 더 똑똑하게 쇼핑하세요"
-      description="중국에서 어떤 매장이나 앱에서든 불편 없이 결제하고 연결할 수 있도록, 먼저 결제 수단과 인터넷 연결부터 준비하세요."
+      title="여행 중에도 더 편하게 쇼핑하세요"
+      description="중국에서 매장이나 앱 어디서든 불편 없이 결제하고 연결할 수 있도록, 먼저 결제 수단과 인터넷 환경부터 준비해 두세요."
       buttonText="여행 필수품 보기"
       placeholder={AFFILIATE_LINKS.transport}
     />
@@ -60,23 +60,23 @@ const description =
 
 <script>
   // 참고용 변환표입니다. 중국 의류는 키/가슴둘레(cm) 표기를 사용하며,
-  // 보통 숫자 사이즈로 간단히 표시됩니다. 신발은 EU 기반 cm 사이즈를 사용합니다.
+  // 대체로 숫자 사이즈로 함께 표시됩니다. 신발은 유럽식 기준의 cm 사이즈를 사용합니다.
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
-    'women-clothing': [
-      { cn: '155/80A (XS)', us: '0–2', uk: '4–6', eu: '32–34' },
-      { cn: '160/84A (S)', us: '4', uk: '8', eu: '36' },
-      { cn: '165/88A (M)', us: '6–8', uk: '10–12', eu: '38–40' },
-      { cn: '170/92A (L)', us: '10–12', uk: '14–16', eu: '42–44' },
-      { cn: '175/96A (XL)', us: '14', uk: '18', eu: '46' },
+    '여성-의류': [
+      { cn: '155/80A (초소형)', us: '0–2', uk: '4–6', eu: '32–34' },
+      { cn: '160/84A (소형)', us: '4', uk: '8', eu: '36' },
+      { cn: '165/88A (중간)', us: '6–8', uk: '10–12', eu: '38–40' },
+      { cn: '170/92A (대형)', us: '10–12', uk: '14–16', eu: '42–44' },
+      { cn: '175/96A (특대형)', us: '14', uk: '18', eu: '46' },
     ],
-    'men-clothing': [
-      { cn: '165/88A (S)', us: '34–36', uk: '34–36', eu: '44–46' },
-      { cn: '170/92A (M)', us: '38', uk: '38', eu: '48' },
-      { cn: '175/96A (L)', us: '40', uk: '40', eu: '50' },
-      { cn: '180/100A (XL)', us: '42–44', uk: '42–44', eu: '52–54' },
-      { cn: '185/104A (XXL)', us: '46', uk: '46', eu: '56' },
+    '남성-의류': [
+      { cn: '165/88A (소형)', us: '34–36', uk: '34–36', eu: '44–46' },
+      { cn: '170/92A (중간)', us: '38', uk: '38', eu: '48' },
+      { cn: '175/96A (대형)', us: '40', uk: '40', eu: '50' },
+      { cn: '180/100A (특대형)', us: '42–44', uk: '42–44', eu: '52–54' },
+      { cn: '185/104A (아주 큰 사이즈)', us: '46', uk: '46', eu: '56' },
     ],
-    'women-shoes': [
+    '여성-신발': [
       { cn: '35', us: '5', uk: '2.5', eu: '35' },
       { cn: '36', us: '6', uk: '3.5', eu: '36' },
       { cn: '37', us: '6.5', uk: '4.5', eu: '37' },
@@ -84,7 +84,7 @@ const description =
       { cn: '39', us: '8.5', uk: '6.5', eu: '39' },
       { cn: '40', us: '9', uk: '7', eu: '40' },
     ],
-    'men-shoes': [
+    '남성-신발': [
       { cn: '39', us: '6.5', uk: '6', eu: '39' },
       { cn: '40', us: '7', uk: '6.5', eu: '40' },
       { cn: '41', us: '8', uk: '7.5', eu: '41' },
@@ -122,5 +122,5 @@ const description =
     });
   });
 
-  render('women-clothing');
+  render('여성-의류');
 </script>
