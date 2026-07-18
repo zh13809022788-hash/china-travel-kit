@@ -14,10 +14,10 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 
 
-const title = '¿Funcionarán mis apps en China? Verificador de disponibilidad de apps';
+const title = '¿Funcionarán mis apps en China? Comprobador de disponibilidad de apps';
 
 const description =
-  'Comprueba si Google, WhatsApp, Instagram y otras apps funcionan en China sin VPN, y descubre la alternativa local para cada servicio bloqueado.';
+  'Comprueba si Google, WhatsApp, Instagram y otras apps funcionan en China sin VPN y descubre la mejor alternativa local para cada servicio bloqueado.';
 
 
 
@@ -32,12 +32,12 @@ interface InfoApp {
 
 
 const apps: InfoApp[] = [
-  { name: 'Google Search', category: 'Google', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'Bing (funciona) o Baidu' },
+  { name: 'Búsqueda de Google', category: 'Google', status: 'bloqueada', note: 'Está bloqueada sin VPN.', alt: 'Bing (funciona) o Baidu' },
   { name: 'Google Maps', category: 'Google', status: 'parcial', note: 'Carga, pero los datos pueden ser imprecisos o aparecer desplazados en China continental.', alt: 'Apple Maps, Amap o Baidu Maps' },
   { name: 'Gmail', category: 'Google', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'Outlook u otro servicio de correo que no sea de Google' },
   { name: 'YouTube', category: 'Google', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'Bilibili (local)' },
   { name: 'WhatsApp', category: 'Mensajería', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'WeChat' },
-  { name: 'Facebook', category: 'Redes sociales', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'Moments de WeChat / RED' },
+  { name: 'Facebook', category: 'Redes sociales', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'Moments de WeChat o RED' },
   { name: 'Instagram', category: 'Redes sociales', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'RED (Xiaohongshu)' },
   { name: 'X (Twitter)', category: 'Redes sociales', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'Weibo' },
   { name: 'Telegram', category: 'Mensajería', status: 'bloqueada', note: 'Está bloqueado sin VPN.', alt: 'WeChat' },
@@ -94,7 +94,7 @@ const apps: InfoApp[] = [
 
         <button data-status="funciona" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Funcionan</button>
 
-        <button data-status="parcial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Funcionamiento parcial</button>
+        <button data-status="parcial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Funcionan a medias</button>
 
         <button data-status="bloqueada" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Bloqueadas</button>
 
@@ -111,7 +111,7 @@ const apps: InfoApp[] = [
 
 
     <AffiliateCta
-      title="Mantén tus apps funcionando con una eSIM de viaje"
+      title="Haz que tus apps sigan funcionando con una eSIM de viaje"
       description="Una eSIM de viaje para China que evita las restricciones locales te permite seguir usando tus apps habituales sin tener que configurar una VPN por separado."
       buttonText="Ver opciones de eSIM"
       placeholder={AFFILIATE_LINKS.esim}
@@ -141,7 +141,7 @@ const apps: InfoApp[] = [
 
   const insignias = {
     funciona: { cls: 'bg-green-100 text-green-800', label: '✅ Funcionan' },
-    parcial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Funcionamiento parcial' },
+    parcial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Funcionan a medias' },
     bloqueada: { cls: 'bg-red-100 text-red-800', label: '🚫 Bloqueadas' },
   };
 
