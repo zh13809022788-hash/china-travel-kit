@@ -1,3 +1,285 @@
-Reescribí el archivo completo al español en ambas variantes presentes en `es_fixes`: [es_fixes/tools/visa-free-checker.astro](/abs/path/C:/Users/Administrator/WorkBuddy/2026-07-17-18-58-48/ChinaTripBox/es_fixes/tools/visa-free-checker.astro) y [es_fixes/tools__visa-free-checker.astro](/abs/path/C:/Users/Administrator/WorkBuddy/2026-07-17-18-58-48/ChinaTripBox/es_fixes/tools__visa-free-checker.astro).
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import AffiliateCta from '../../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../../config';
 
-Quedó traducido el texto visible, los labels de países, el contenido HTML y los textos generados por JS. Conservé `imports`, URLs, marcas y claves internas como `value`, `TripKey` y los `Set` en inglés para no romper la lógica. No ejecuté build ni preview.
+const title = 'Comprobador de entrada sin visa y tránsito en China';
+const description =
+  'Comprueba si puedes entrar en China sin visa, usar el tránsito sin visa de 240 horas o si necesitas solicitar una visa según tu nacionalidad y tipo de viaje.';
+
+const lastReviewed = '13 de julio de 2026';
+
+// Datos representativos de políticas para 2026. Es orientación, no asesoramiento legal;
+// los viajeros deben confirmar con una embajada antes de reservar.
+const countries = [
+  { value: 'United States', label: 'Estados Unidos' },
+  { value: 'United Kingdom', label: 'Reino Unido' },
+  { value: 'Canada', label: 'Canadá' },
+  { value: 'Australia', label: 'Australia' },
+  { value: 'Germany', label: 'Alemania' },
+  { value: 'France', label: 'Francia' },
+  { value: 'Italy', label: 'Italia' },
+  { value: 'Spain', label: 'España' },
+  { value: 'Netherlands', label: 'Países Bajos' },
+  { value: 'Japan', label: 'Japón' },
+  { value: 'South Korea', label: 'Corea del Sur' },
+  { value: 'Singapore', label: 'Singapur' },
+  { value: 'Malaysia', label: 'Malasia' },
+  { value: 'Thailand', label: 'Tailandia' },
+  { value: 'Brazil', label: 'Brasil' },
+  { value: 'New Zealand', label: 'Nueva Zelanda' },
+  { value: 'Switzerland', label: 'Suiza' },
+  { value: 'Ireland', label: 'Irlanda' },
+  { value: 'Norway', label: 'Noruega' },
+  { value: 'Other', label: 'Otro' },
+];
+---
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
+  <Header locale="es" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Comprobador de entrada sin visa y tránsito</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+      <p class="mt-3 text-sm text-gray-500">
+        Última revisión: {lastReviewed}. Este comprobador ayuda a planificar; no es una decisión oficial de elegibilidad.
+      </p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <!-- Controles de entrada -->
+    <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">Nacionalidad de tu pasaporte</span>
+        <select id="country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {countries.map((c) => <option value={c.value}>{c.label}</option>)}
+        </select>
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">Tipo de viaje</span>
+        <select id="trip" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          <option value="tourism">Turismo / visita</option>
+          <option value="business">Negocios</option>
+          <option value="transit">Solo tránsito hacia otro país</option>
+        </select>
+      </label>
+      <div class="sm:col-span-2">
+        <button id="check-btn" class="btn-primary w-full sm:w-auto">Comprobar elegibilidad</button>
+      </div>
+    </div>
+
+    <!-- Resultado -->
+    <div id="result" class="mt-6 hidden">
+      <div class="card" id="result-card"></div>
+      <p class="mt-3 text-xs text-gray-400">
+        Las políticas cambian con frecuencia y dependen de tus circunstancias concretas. Confirma siempre con una
+        embajada o consulado chino antes de reservar el viaje. Esta herramienta solo ofrece orientación general.
+      </p>
+
+      <AffiliateCta
+        title="Planifica el resto de tu viaje"
+        description="Organiza conectividad, pagos y transporte antes de aterrizar en China."
+        buttonText="Ver básicos de viaje"
+        placeholder={AFFILIATE_LINKS.transport}
+      />
+    </div>
+
+    <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="official-sources">
+      <h2 id="official-sources" class="text-xl font-bold text-gray-950">Fuentes oficiales que verificar antes de reservar</h2>
+      <p class="mt-2 text-sm leading-6 text-gray-600">
+        Las listas de países sin visa, puertos de entrada, zonas de viaje permitidas y comprobaciones de embarque de aerolíneas pueden cambiar.
+        Considera definitivas las normas oficiales del gobierno y de la aerolínea.
+      </p>
+      <ul class="mt-4 grid gap-2 text-sm leading-6 text-gray-700">
+        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Administración Nacional de Inmigración</a> para actualizaciones sobre inspección fronteriza y exenciones de tránsito.</li>
+        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Portal informativo del Consejo de Estado</a> para anuncios de políticas en inglés.</li>
+        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministerio de Asuntos Exteriores</a> y sitios web de embajadas o consulados chinos para normas específicas por pasaporte.</li>
+      </ul>
+    </section>
+
+    <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div class="rounded-lg border border-gray-200 bg-white p-6">
+        <h2 class="text-2xl font-bold text-gray-900">Cómo evitar errores con la entrada sin visa</h2>
+        <p class="mt-3 text-sm leading-6 text-gray-600">
+          El error más común es confundir la entrada ordinaria sin visa con el tránsito sin visa. Un
+          viaje normal de ida y vuelta y una escala hacia un tercer país no son el mismo itinerario. Las aerolíneas
+          revisan los documentos antes de embarcar, así que un malentendido puede detener el viaje antes de llegar a
+          China.
+        </p>
+        <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
+          <li><strong class="text-gray-900">Comprueba primero la nacionalidad del pasaporte.</strong> El país de residencia y el país de facturación de la tarjeta no determinan la elegibilidad sin visa.</li>
+          <li><strong class="text-gray-900">Distingue entrada de tránsito.</strong> El tránsito suele requerir un viaje posterior confirmado a un tercer país o región.</li>
+          <li><strong class="text-gray-900">Confirma los puertos de entrada.</strong> Las políticas de tránsito dependen de puertos designados y zonas de viaje permitidas.</li>
+          <li><strong class="text-gray-900">Ten las pruebas preparadas.</strong> Las aerolíneas y los agentes fronterizos pueden pedir billete de salida, hotel, itinerario o detalles de invitación.</li>
+        </ul>
+      </div>
+      <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
+        <h2 class="text-lg font-bold text-gray-900">Planifica el resto de la llegada</h2>
+        <div class="mt-4 grid gap-3">
+          <a href="/es/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Leer la guía completa de entrada sin visa</a>
+          <a href="/es/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Usar la lista de llegada</a>
+          <a href="/es/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Planificar transporte desde el aeropuerto</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  type TripKey = 'tourism' | 'business' | 'transit';
+
+  const countryLabels: Record<string, string> = {
+    'United States': 'Estados Unidos',
+    'United Kingdom': 'Reino Unido',
+    Canada: 'Canadá',
+    Australia: 'Australia',
+    Germany: 'Alemania',
+    France: 'Francia',
+    Italy: 'Italia',
+    Spain: 'España',
+    Netherlands: 'Países Bajos',
+    Japan: 'Japón',
+    'South Korea': 'Corea del Sur',
+    Singapore: 'Singapur',
+    Malaysia: 'Malasia',
+    Thailand: 'Tailandia',
+    Brazil: 'Brasil',
+    'New Zealand': 'Nueva Zelanda',
+    Switzerland: 'Suiza',
+    Ireland: 'Irlanda',
+    Norway: 'Noruega',
+    Other: 'Otro',
+  };
+
+  // Nacionalidades elegibles para la entrada unilateral sin visa de 30 días (programa 2026).
+  const visaFree30 = new Set([
+    'Germany', 'France', 'Italy', 'Spain', 'Netherlands', 'Switzerland',
+    'Ireland', 'Norway', 'Japan', 'South Korea', 'Brazil', 'New Zealand',
+    'Malaysia', 'Thailand', 'Australia',
+  ]);
+
+  // Nacionalidades elegibles para tránsito sin visa de 240 horas (10 días) a través de
+  // puertos designados al viajar hacia un tercer país o región.
+  const transit240 = new Set([
+    'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
+    'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
+    'Singapore', 'Switzerland', 'Ireland', 'Norway', 'Brazil', 'New Zealand',
+  ]);
+
+  interface Verdict {
+    tone: 'good' | 'warn' | 'info';
+    heading: string;
+    body: string;
+    points: string[];
+  }
+
+  function getCountryLabel(country: string): string {
+    return countryLabels[country] ?? country;
+  }
+
+  function evaluate(country: string, trip: TripKey): Verdict {
+    const has30 = visaFree30.has(country);
+    const hasTransit = transit240.has(country);
+    const countryLabel = getCountryLabel(country);
+
+    if (trip === 'transit') {
+      if (hasTransit) {
+        return {
+          tone: 'good',
+          heading: 'Probablemente calificas para el tránsito sin visa de 240 horas',
+          body: `Como titular de pasaporte de ${countryLabel} en tránsito por China hacia un tercer país, normalmente puedes permanecer hasta 240 horas (10 días) sin visa si entras por un puerto elegible.`,
+          points: [
+            'Debes tener un billete confirmado hacia un tercer país o región dentro de las 240 horas.',
+            'La entrada y salida deben realizarse por puertos de tránsito designados (la mayoría de aeropuertos internacionales principales califican).',
+            'Normalmente estás limitado a la provincia o región de entrada; consulta las normas específicas del puerto.',
+          ],
+        };
+      }
+      return {
+        tone: 'warn',
+        heading: 'La exención de visa de tránsito puede no aplicarse a tu nacionalidad',
+        body: `${countryLabel} no figura en nuestra lista estándar de tránsito de 240 horas. Aun así podrías calificar para entrada sin visa si eres elegible, o podrías necesitar una visa de tránsito (G).`,
+        points: [
+          'Comprueba si tu nacionalidad califica para entrada completa sin visa.',
+          'Si no, solicita la visa adecuada antes de viajar.',
+        ],
+      };
+    }
+
+    // turismo o negocios
+    if (has30) {
+      return {
+        tone: 'good',
+        heading: 'Probablemente calificas para entrada sin visa de 30 días',
+        body: `Como titular de pasaporte de ${countryLabel}, normalmente puedes entrar en China sin visa hasta 30 días por turismo, negocios, visitas familiares o tránsito bajo la política unilateral actual.`,
+        points: [
+          'Tu pasaporte debe tener al menos 6 meses de validez y páginas en blanco.',
+          'Ten preparada prueba de viaje de salida o regreso y alojamiento para inmigración.',
+          'Los 30 días son por entrada; confirma el cálculo más reciente antes de reservar.',
+        ],
+      };
+    }
+    if (hasTransit) {
+      return {
+        tone: 'info',
+        heading: 'Probablemente necesitas visa, pero la exención de tránsito puede ayudar',
+        body: `${countryLabel} no está en nuestra lista de 30 días sin visa para turismo/negocios, así que por lo general se requiere visa. Sin embargo, si estás de paso hacia un tercer país, podrías usar el tránsito sin visa de 240 horas.`,
+        points: [
+          'Para una visita específica, solicita con antelación una visa L (turismo) o M (negocios).',
+          'Para una escala de camino a otro lugar, podrías calificar para el tránsito de 240 horas; cambia "Tipo de viaje" a Tránsito para comprobarlo.',
+        ],
+      };
+    }
+    return {
+      tone: 'warn',
+      heading: 'Probablemente necesitas visa',
+      body: `Según nuestros datos, los titulares de pasaporte de ${countryLabel} generalmente necesitan visa para entrar en China para este tipo de viaje. Solicítala en una embajada, consulado o centro de visas autorizado chino antes de viajar.`,
+      points: [
+        'Solicita una visa L (turismo) o M (negocios) con bastante antelación.',
+        'Los requisitos suelen incluir una invitación o itinerario, reservas de hotel y billetes de regreso.',
+      ],
+    };
+  }
+
+  const toneStyles: Record<Verdict['tone'], string> = {
+    good: 'border-green-200 bg-green-50',
+    warn: 'border-amber-200 bg-amber-50',
+    info: 'border-blue-200 bg-blue-50',
+  };
+  const toneBadge: Record<Verdict['tone'], string> = {
+    good: 'bg-green-600 text-white',
+    warn: 'bg-amber-500 text-white',
+    info: 'bg-blue-600 text-white',
+  };
+  const toneLabel: Record<Verdict['tone'], string> = {
+    good: 'Probablemente elegible',
+    warn: 'Probablemente necesitas visa',
+    info: 'Depende de tu plan',
+  };
+
+  const btn = document.getElementById('check-btn');
+  const result = document.getElementById('result');
+  const card = document.getElementById('result-card');
+  const countryEl = document.getElementById('country') as HTMLSelectElement;
+  const tripEl = document.getElementById('trip') as HTMLSelectElement;
+
+  btn?.addEventListener('click', () => {
+    if (!card || !result) return;
+    const v = evaluate(countryEl.value, tripEl.value as TripKey);
+    card.className = `card border ${toneStyles[v.tone]}`;
+    card.innerHTML = `
+      <span class="inline-block rounded-full px-3 py-0.5 text-xs font-semibold ${toneBadge[v.tone]}">${toneLabel[v.tone]}</span>
+      <h2 class="mt-3 text-xl font-bold text-gray-900">${v.heading}</h2>
+      <p class="mt-2 text-gray-700">${v.body}</p>
+      <ul class="mt-4 list-disc space-y-1.5 pl-5 text-sm text-gray-600">
+        ${v.points.map((p) => `<li>${p}</li>`).join('')}
+      </ul>`;
+    result.classList.remove('hidden');
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
