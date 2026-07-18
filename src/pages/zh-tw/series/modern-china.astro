@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-zh-tw'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '現代 China：最讓外國人驚訝的地方';
-const description = '以外國旅客的視角探索現代 China：無現金社會、全球最快的列車、超大城市導航、超級應用程式、夜間列車，以及定義日常生活的科技。';
+const title = '現代中國：最讓外國人驚訝的地方';
+const description = '以外國旅客的視角探索現代中國：無現金社會、全球最快的列車、超大城市導航、超級應用程式、夜間列車，以及定義日常生活的科技。';
 
 const relatedTools = [
-  { href: '/zh-tw/posts/how-to-pay-in-china-tourist-guide/', title: '在 China 如何付款', desc: '旅客行動支付設定' },
-  { href: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/', title: '高鐵指南', desc: '搭乘 China 的高速列車' },
-  { href: '/zh-tw/posts/best-esim-for-china-travel-2026/', title: 'China 最佳 eSIM', desc: '抵達後立即保持連線' },
+  { href: '/zh-tw/posts/how-to-pay-in-china-tourist-guide/', title: '在中國如何付款', desc: '旅客行動支付設定' },
+  { href: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/', title: '高鐵指南', desc: '搭乘中國的高速列車' },
+  { href: '/zh-tw/posts/best-esim-for-china-travel-2026/', title: '中國最佳 eSIM', desc: '抵達後立即保持連線' },
 ];
 
 const relatedCities = [
-  { href: '/zh-tw/posts/shanghai-city-guide-for-foreigners/', title: '上海', desc: 'China 的金融超大城市' },
+  { href: '/zh-tw/posts/shanghai-city-guide-for-foreigners/', title: '上海', desc: '中國的金融超大城市' },
   { href: '/zh-tw/posts/beijing-city-guide-for-foreigners/', title: '北京', desc: '古都與現代樞紐交會' },
   { href: '/zh-tw/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '上海地鐵', desc: '掌握龐大的大眾運輸系統' },
 ];
 
 const otherSeries = [
-  { href: '/zh-tw/series/food-of-china/', title: 'China 美食' },
-  { href: '/zh-tw/series/history-of-china/', title: 'China 歷史' },
-  { href: '/zh-tw/series/culture-of-china/', title: 'China 文化' },
+  { href: '/zh-tw/series/food-of-china/', title: '中國美食' },
+  { href: '/zh-tw/series/history-of-china/', title: '中國歷史' },
+  { href: '/zh-tw/series/culture-of-china/', title: '中國文化' },
 ];
 ---
 
@@ -48,7 +48,7 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">文章</p>
-            <h2>現代 China 系列</h2>
+            <h2>現代中國系列</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -69,7 +69,7 @@ const otherSeries = [
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">實用工具</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">暢行現代 China</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">暢行現代中國</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
