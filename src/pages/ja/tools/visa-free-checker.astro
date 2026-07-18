@@ -6,14 +6,14 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Chinaビザ免除・トランジットチェッカー';
+const title = '中国ビザ免除・トランジット判定ツール';
 const description =
-  '国籍と旅行タイプに基づいて、Chinaにビザなしで入国できるか、240時間ビザなしトランジットを使えるか、またはビザ申請が必要かを確認できます。';
+  'パスポートの国籍と旅行タイプに応じて、中国へビザなしで入国できる可能性があるか、240時間のビザなしトランジットを利用できるか、またはビザ申請が必要かを確認できます。';
 
 const lastReviewed = '2026年7月13日';
 
-// 2026年の代表的な制度データ。これは一般的な目安であり、法的助言ではありません。
-// 旅行者は予約前に大使館で確認する必要があります。
+// 2026年時点の代表的な制度データです。一般的な目安であり、法的助言ではありません。
+// 予約前に必ず大使館や領事館などの公式情報で確認してください。
 const countries = [
   '米国', '英国', 'カナダ', 'オーストラリア', 'ドイツ',
   'フランス', 'イタリア', 'スペイン', 'オランダ', '日本', '韓国',
@@ -27,16 +27,16 @@ const countries = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">ビザ免除・トランジットチェッカー</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">中国ビザ免除・トランジット判定ツール</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <p class="mt-3 text-sm text-gray-500">
-        最終確認日: {lastReviewed}。このチェッカーは計画の補助であり、公式な適格性判断ではありません。
+        最終確認日: {lastReviewed}。このツールは旅行計画の参考情報であり、公式な入国可否を保証するものではありません。
       </p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- 入力コントロール -->
+    <!-- 入力項目 -->
     <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">パスポートの国籍</span>
@@ -47,62 +47,62 @@ const countries = [
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">旅行タイプ</span>
         <select id="trip" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="tourism">観光・訪問</option>
-          <option value="business">ビジネス</option>
-          <option value="transit">第三国への乗り継ぎのみ</option>
+          <option value="tourism">観光・親族訪問</option>
+          <option value="business">出張・商用</option>
+          <option value="transit">第三国・地域への乗り継ぎのみ</option>
         </select>
       </label>
       <div class="sm:col-span-2">
-        <button id="check-btn" class="btn-primary w-full sm:w-auto">対象か確認する</button>
+        <button id="check-btn" class="btn-primary w-full sm:w-auto">対象かどうかを確認する</button>
       </div>
     </div>
 
-    <!-- 結果 -->
+    <!-- 判定結果 -->
     <div id="result" class="mt-6 hidden">
       <div class="card" id="result-card"></div>
       <p class="mt-3 text-xs text-gray-400">
-        制度は頻繁に変更され、個別の状況によって異なります。旅行を予約する前に、必ずChinaの大使館または領事館で確認してください。このツールは一般的な目安のみを提供します。
+        制度は頻繁に変更され、個別の事情によって判断が異なる場合があります。旅行を予約する前に、必ず中国の大使館または領事館で最新情報をご確認ください。このツールは一般的な目安のみを示しています。
       </p>
 
       <AffiliateCta
-        title="残りの旅行準備を整える"
-        description="China到着前に通信、決済、交通手段を整理しておきましょう。"
-        buttonText="旅行必需品を見る"
+        title="出発前の準備もまとめて進めましょう"
+        description="中国到着前に、通信手段、支払い方法、移動手段をあらかじめ整えておくと安心です。"
+        buttonText="旅行に必要なものを見る"
         placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
 
     <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="official-sources">
-      <h2 id="official-sources" class="text-xl font-bold text-gray-950">予約前に確認すべき公式情報源</h2>
+      <h2 id="official-sources" class="text-xl font-bold text-gray-950">予約前に確認したい公式情報</h2>
       <p class="mt-2 text-sm leading-6 text-gray-600">
-        ビザ免除対象国、入国港、許可される移動エリア、航空会社の搭乗確認は変更されることがあります。政府と航空会社の公式ルールを最終判断として扱ってください。
+        ビザ免除対象国、入国可能な港、移動できる範囲、航空会社による搭乗可否の確認基準は変更されることがあります。最終判断は、必ず政府機関と航空会社の公式案内に従ってください。
       </p>
       <ul class="mt-4 grid gap-2 text-sm leading-6 text-gray-700">
-        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">国家移民管理局</a>で国境検査とトランジット免除の更新を確認。</li>
-        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">国務院情報ポータル</a>で英語の政策発表を確認。</li>
-        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">外交部</a>およびChinaの大使館・領事館サイトでパスポート別ルールを確認。</li>
+        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">国家移民管理局</a>で、出入境審査やトランジット免除制度の最新情報を確認できます。</li>
+        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">国務院情報ポータル</a>で、英語の政策発表を確認できます。</li>
+        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">外交部</a>および中国の大使館・領事館のサイトで、パスポート国籍ごとの要件を確認してください。</li>
       </ul>
     </section>
 
     <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">ビザ免除での失敗を避ける方法</h2>
+        <h2 class="text-2xl font-bold text-gray-900">ビザ免除利用で失敗しないためのポイント</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          最もよくある間違いは、通常のビザなし入国とビザなしトランジットを混同することです。通常の往復旅行と第三国への途中降機は同じ旅程ではありません。航空会社は搭乗前に書類を確認するため、誤解があるとChinaに到着する前に旅行が止まることがあります。
+          よくある間違いは、通常のビザ免除入国とビザなしトランジットを混同してしまうことです。単純な往復旅行と、第三国・地域へ向かう途中の乗り継ぎは同じ扱いではありません。航空会社は搭乗前に必要書類を確認するため、条件を誤解していると中国に到着する前の段階で搭乗を断られることがあります。
         </p>
         <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
-          <li><strong class="text-gray-900">まずパスポート国籍を確認します。</strong>居住国やカード請求先の国では、ビザ免除の可否は決まりません。</li>
-          <li><strong class="text-gray-900">入国とトランジットを分けて考えます。</strong>トランジットでは通常、第三国または地域への確定した次の目的地への移動が必要です。</li>
-          <li><strong class="text-gray-900">入国港を確認します。</strong>トランジット制度は指定港と許可された移動エリアに左右されます。</li>
-          <li><strong class="text-gray-900">証明書類を準備します。</strong>航空会社や国境審査官が、次の目的地への航空券、ホテル、旅程、招待状の詳細を求める場合があります。</li>
+          <li><strong class="text-gray-900">最初に確認すべきなのはパスポートの国籍です。</strong>居住国やクレジットカードの請求先国では判断されません。</li>
+          <li><strong class="text-gray-900">入国とトランジットは分けて考えてください。</strong>トランジットでは通常、第三国または地域への確定済みの移動予定が必要です。</li>
+          <li><strong class="text-gray-900">利用する入国港も重要です。</strong>トランジット制度は、指定された港と認められた移動範囲に基づいて運用されます。</li>
+          <li><strong class="text-gray-900">証明書類を事前にそろえておきましょう。</strong>航空会社や入国審査官から、次の目的地への航空券、ホテル予約、旅程表、招待状などの提示を求められる場合があります。</li>
         </ul>
       </div>
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">到着後の準備も計画する</h2>
+        <h2 class="text-lg font-bold text-gray-900">到着後の準備も忘れずに</h2>
         <div class="mt-4 grid gap-3">
-          <a href="/ja/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">完全版ビザ免除ガイドを読む</a>
-          <a href="/ja/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">到着チェックリストを使う</a>
-          <a href="/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">空港から市内への移動を計画する</a>
+          <a href="/ja/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">ビザ免除の完全ガイドを読む</a>
+          <a href="/ja/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">到着後チェックリストを確認する</a>
+          <a href="/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">空港から市内への移動を調べる</a>
         </div>
       </aside>
     </section>
@@ -113,14 +113,14 @@ const countries = [
 <script>
   type TripKey = 'tourism' | 'business' | 'transit';
 
-  // 30日間の一方的ビザ免除入国（2026年制度）の対象国籍。
+  // 30日間の一方的ビザ免除入国（2026年制度）の対象国籍です。
   const visaFree30 = new Set([
     'ドイツ', 'フランス', 'イタリア', 'スペイン', 'オランダ', 'スイス',
     'アイルランド', 'ノルウェー', '日本', '韓国', 'ブラジル', 'ニュージーランド',
     'マレーシア', 'タイ', 'オーストラリア',
   ]);
 
-  // 第三国・地域へ向かう際、指定港経由で240時間（10日間）ビザなしトランジットの対象となる国籍。
+  // 第三国・地域へ向かう際に、指定港経由で240時間（10日間）のビザなしトランジットを利用できる主な国籍です。
   const transit240 = new Set([
     '米国', '英国', 'カナダ', 'オーストラリア', 'ドイツ',
     'フランス', 'イタリア', 'スペイン', 'オランダ', '日本', '韓国',
@@ -142,57 +142,57 @@ const countries = [
       if (hasTransit) {
         return {
           tone: 'good',
-          heading: '240時間ビザなしトランジットの対象となる可能性があります',
-          body: `${country}のパスポート保持者としてChinaを経由して第三国へ向かう場合、対象港から入国すれば通常、ビザなしで最大240時間（10日間）滞在できます。`,
+          heading: '240時間のビザなしトランジットを利用できる可能性があります',
+          body: `${country}のパスポートをお持ちで、中国を経由して第三国・地域へ向かう場合は、対象となる入国港を利用すれば、通常は最大240時間（10日間）までビザなしで滞在できる可能性があります。`,
           points: [
-            '240時間以内に第三国または地域へ向かう確定済みの次の目的地への航空券が必要です。',
-            '入国・出国は指定されたトランジット港を利用する必要があります（主要な国際空港の多くが対象です）。',
-            '通常、入国した省・地域内に移動が制限されます。具体的な港のルールを確認してください。',
+            '240時間以内に第三国または地域へ出発する、確定済みの航空券などが必要です。',
+            '入国と出国は、制度の対象となっている指定港を利用する必要があります。',
+            '通常は、滞在中に移動できる地域が制限されます。利用する港ごとの条件を必ず確認してください。',
           ],
         };
       }
       return {
         tone: 'warn',
-        heading: 'この国籍ではトランジットビザ免除が適用されない可能性があります',
-        body: `${country}は当サイトのデータでは標準的な240時間トランジット対象リストに含まれていません。条件を満たせばビザなし入国の対象となる場合もありますが、トランジット（G）ビザが必要な可能性もあります。`,
+        heading: 'この国籍ではトランジット免除の対象外となる可能性があります',
+        body: `${country}は、当サイトのデータでは一般的な240時間トランジット対象国の一覧に含まれていません。条件によっては別のビザ免除制度が使える場合もありますが、トランジット（G）ビザの取得が必要になる可能性があります。`,
         points: [
-          '代わりに通常のビザなし入国の対象国籍か確認してください。',
-          '対象外の場合は、旅行前に適切なビザを申請してください。',
+          '通常のビザ免除入国の対象国かどうかもあわせて確認してください。',
+          '対象外の場合は、出発前に適切なビザを申請してください。',
         ],
       };
     }
 
-    // 観光またはビジネスの場合
+    // 観光または商用渡航の場合
     if (has30) {
       return {
         tone: 'good',
-        heading: '30日間のビザなし入国の対象となる可能性があります',
-        body: `${country}のパスポート保持者は、現在の一方的ビザ免除制度により、観光、ビジネス、親族訪問、トランジット目的で通常最大30日間Chinaにビザなし入国できます。`,
+        heading: '30日以内のビザなし入国が可能な場合があります',
+        body: `${country}のパスポートをお持ちの方は、現在の一方的ビザ免除制度により、観光、商用、親族訪問、トランジットなどの目的で、通常は最長30日まで中国へビザなしで入国できる可能性があります。`,
         points: [
-          'パスポートは少なくとも6か月以上有効で、空白ページが必要です。',
-          '入国審査に備えて、次の目的地または帰国の移動と宿泊先の証明を準備してください。',
-          '30日は1回の入国ごとの日数です。予約前に最新の数え方を確認してください。',
+          'パスポートの残存有効期間は通常6か月以上必要で、空白ページも必要です。',
+          '入国審査に備えて、復路または次の目的地への移動手段、宿泊先の証明を準備しておきましょう。',
+          '30日という日数は1回の入国ごとに適用されます。予約前に最新の運用を確認してください。',
         ],
       };
     }
     if (hasTransit) {
       return {
         tone: 'info',
-        heading: 'ビザが必要な可能性が高いですが、トランジット免除が使える場合があります',
-        body: `${country}は当サイトの30日間ビザ免除リストでは観光・ビジネス対象外のため、通常はビザが必要です。ただし、第三国へ向かう途中で通過する場合は、240時間ビザなしトランジットを利用できる可能性があります。`,
+        heading: '通常はビザが必要ですが、トランジット免除を利用できる場合があります',
+        body: `${country}は、当サイトの30日間ビザ免除リストでは観光・商用目的の対象外です。そのため通常はビザが必要ですが、第三国・地域へ向かう途中で中国を経由する場合は、240時間のビザなしトランジットを利用できる可能性があります。`,
         points: [
-          '訪問を主目的とする場合は、事前にL（観光）またはM（ビジネス）ビザを申請してください。',
-          '別の目的地へ向かう途中の立ち寄りなら、240時間トランジット対象の可能性があります。「旅行タイプ」をトランジットに切り替えて確認してください。',
+          '中国への訪問自体が主目的であれば、事前にL（観光）またはM（商用）ビザを申請してください。',
+          '第三国・地域への途中立ち寄りであれば、240時間トランジットの対象となる可能性があります。「旅行タイプ」をトランジットに切り替えて確認してください。',
         ],
       };
     }
     return {
       tone: 'warn',
-      heading: 'ビザが必要な可能性が高いです',
-      body: `当サイトのデータでは、${country}のパスポート保持者がこの旅行タイプでChinaに入国するには通常ビザが必要です。旅行前にChinaの大使館、領事館、または認可されたビザセンターを通じて申請してください。`,
+      heading: 'ビザの取得が必要となる可能性が高いです',
+      body: `当サイトのデータでは、${country}のパスポートをお持ちの方がこの旅行タイプで中国に入国する場合、通常はビザが必要です。旅行前に、中国の大使館、領事館、または認可されたビザ申請センターを通じて申請してください。`,
       points: [
-        '旅行の十分前にL（観光）またはM（ビジネス）ビザを申請してください。',
-        '通常、招待状または旅程、ホテル予約、帰国便チケットなどが必要です。',
+        '旅行まで十分な余裕をもって、L（観光）またはM（商用）ビザを申請してください。',
+        '通常は、招待状または旅程表、ホテル予約、復路または次の目的地への航空券などが必要です。',
       ],
     };
   }
@@ -208,9 +208,9 @@ const countries = [
     info: 'bg-blue-600 text-white',
   };
   const toneLabel: Record<Verdict['tone'], string> = {
-    good: '対象の可能性あり',
-    warn: 'ビザが必要な可能性',
-    info: '旅程によります',
+    good: '利用できる可能性があります',
+    warn: 'ビザが必要な可能性があります',
+    info: '旅程によって異なります',
   };
 
   const btn = document.getElementById('check-btn');
