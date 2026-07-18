@@ -1,4 +1,5 @@
 ---
+---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -10,11 +11,11 @@ const posts = (await getCollection('posts-fr'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'La cuisine de Chine — un voyage culinaire pour étrangers';
-const description = 'Explorez la culture culinaire chinoise en tant que voyageur étranger : les huit grandes cuisines, le hotpot régional, la sécurité de la street food, les dim sum, le petit-déjeuner, les options végétariennes et les plats qui méritent de traverser une ville.';
+const title = 'La cuisine de Chine — un voyage culinaire pour les étrangers';
+const description = 'Explorez la culture culinaire chinoise en tant que voyageur étranger : les huit grandes cuisines, le hotpot régional, la sécurité de la cuisine de rue, les dim sum, le petit-déjeuner, les options végétariennes et les plats qui méritent de traverser une ville.';
 
 const relatedTools = [
-  { href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Commander à manger sans chinois', desc: 'Configuration de Meituan & Ele.me pour les étrangers' },
+  { href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Commander à manger sans chinois', desc: 'Configuration de Meituan et Ele.me pour les étrangers' },
   { href: '/fr/posts/how-to-pay-in-china-tourist-guide/', title: 'Comment payer en Chine', desc: 'Alipay, WeChat Pay et espèces pour la restauration' },
   { href: '/fr/food/', title: 'Guides cuisine et restaurants', desc: 'Tous les articles liés à la nourriture sur ChinaTripBox' },
 ];
@@ -64,7 +65,7 @@ const locale = 'fr';
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Les articles de cette série sont en préparation. Revenez bientôt.</p>
+          <p class="mt-6 text-gray-500">Les articles de cette série sont en cours de préparation. Revenez bientôt.</p>
         )}
       </div>
 
@@ -108,3 +109,5 @@ const locale = 'fr';
   </main>
   <Footer />
 </BaseLayout>
+
+---
