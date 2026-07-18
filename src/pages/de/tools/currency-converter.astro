@@ -6,7 +6,7 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'RMB-Währungsrechner für China-Reisende';
+const title = 'Währungsrechner für chinesische Yuan (RMB)';
 const description =
   'Rechne deine Heimatwährung in chinesische Yuan (RMB) und zurück um und sieh, was alltägliche Dinge in China kosten, damit du Preise direkt vor Ort besser einschätzen kannst.';
 ---
@@ -15,7 +15,9 @@ const description =
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">RMB-Währungsrechner</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">
+        Währungsrechner für chinesische Yuan
+      </h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -58,21 +60,25 @@ const description =
       </div>
       <p id="rate-line" class="mt-3 text-sm text-gray-500"></p>
       <p class="mt-1 text-xs text-gray-400">
-        Die Kurse sind ungefähre Richtwerte für deine Planung und keine Live-Marktkurse. Prüfe bei deiner Bank oder in einem Live-Währungsrechner den genauen Kurs zum Zeitpunkt deiner Transaktion.
+        Die Kurse sind ungefähre Richtwerte für deine Planung und keine Live-Marktkurse. Prüfe bei
+        deiner Bank oder in einem aktuellen Währungsrechner den genauen Kurs zum Zeitpunkt deiner
+        Transaktion.
       </p>
     </div>
 
     <!-- Preise in China -->
     <section class="mt-8">
       <h2 class="text-xl font-bold text-gray-900">Was Dinge in China kosten</h2>
-      <p class="mt-1 text-sm text-gray-500">Typische Preise in RMB, zum Vergleich auch in deiner Währung.</p>
+      <p class="mt-1 text-sm text-gray-500">
+        Typische Preise in RMB, mit deiner Währung zum Vergleich.
+      </p>
       <div id="cost-grid" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
     </section>
 
     <AffiliateCta
-      title="Wechselstuben meiden"
-      description="Verbinde eine Karte ohne Fremdwährungsgebühren mit Alipay oder WeChat Pay und zahle zum echten Wechselkurs, ohne Aufschlag beim Bargeldtausch."
-      buttonText="Zahlungs-Setup ansehen"
+      title="Wechselstuben umgehen"
+      description="Verbinde eine Karte ohne Fremdwährungsgebühren mit Alipay oder WeChat Pay und zahle zum echten Wechselkurs, ohne Aufschläge beim Bargeldtausch."
+      buttonText="Zahlungsoptionen ansehen"
       placeholder={AFFILIATE_LINKS.payment}
     />
   </main>
@@ -96,12 +102,12 @@ const description =
 
   const commonCosts: { label: string; rmb: number }[] = [
     { label: 'Flasche Wasser', rmb: 2 },
-    { label: 'Fahrt mit der Metro', rmb: 4 },
+    { label: 'Fahrt mit der U-Bahn', rmb: 4 },
     { label: 'Streetfood-Snack', rmb: 10 },
     { label: 'Kaffee im Café', rmb: 30 },
-    { label: 'Essen in einem einfachen Restaurant', rmb: 45 },
-    { label: 'Kurze Fahrt mit DiDi oder dem Taxi', rmb: 25 },
-    { label: 'Hochgeschwindigkeitszug (1 bis 2 Std.)', rmb: 250 },
+    { label: 'Mahlzeit in einem einfachen Restaurant', rmb: 45 },
+    { label: 'Kurze Fahrt mit DiDi oder Taxi', rmb: 25 },
+    { label: 'Hochgeschwindigkeitszug (1 bis 2 Stunden)', rmb: 250 },
     { label: 'Eintritt für Museum oder Sehenswürdigkeit', rmb: 60 },
     { label: 'Mittelklassehotel pro Nacht', rmb: 450 },
   ];
@@ -141,7 +147,7 @@ const description =
             <span class="text-sm text-gray-500">${c.label}</span>
             <div class="mt-1 flex items-baseline gap-2">
               <span class="text-xl font-bold text-gray-900">¥${c.rmb}</span>
-              <span class="text-sm text-brand-600">ca. ${sym()}${(c.rmb / rate()).toFixed(2)}</span>
+              <span class="text-sm text-brand-600">etwa ${sym()}${(c.rmb / rate()).toFixed(2)}</span>
             </div>
           </div>`)
         .join('');
