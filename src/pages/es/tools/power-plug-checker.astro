@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Comprobador de enchufes y voltaje para China';
+const title = 'Verificador de enchufes y voltaje para China';
 const description =
-  'Averigua si necesitas un adaptador de enchufe o un convertidor de voltaje para China según tu país de origen. China usa 220 V y enchufes de tipo A, C e I.';
+  'Descubre si necesitas un adaptador de enchufe o un convertidor de voltaje para viajar a China según tu país de origen. En China se usan 220 V y enchufes de tipo A, C e I.';
 
 const countries = [
   'Estados Unidos', 'Reino Unido', 'Canadá', 'Australia', 'Alemania',
@@ -22,7 +22,7 @@ const countries = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Comprobador de enchufes y voltaje</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Verificador de enchufes y voltaje</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -30,15 +30,15 @@ const countries = [
 
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
       <label class="flex flex-col text-sm sm:max-w-sm">
-        <span class="mb-1 font-medium text-gray-700">Viajas desde</span>
+        <span class="mb-1 font-medium text-gray-700">¿Desde qué país viajas?</span>
         <select id="country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {countries.map((c) => <option value={c}>{c}</option>)}
         </select>
       </label>
-      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Comprobar qué necesito</button>
+      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Ver qué necesito</button>
     </div>
 
-    <!-- Referencia: estándar de China -->
+    <!-- Referencia: estándar eléctrico de China -->
     <div class="mt-6 grid gap-4 sm:grid-cols-3">
       <div class="card"><dt class="text-sm text-gray-500">Voltaje</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
       <div class="card"><dt class="text-sm text-gray-500">Frecuencia</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
@@ -50,8 +50,8 @@ const countries = [
 
       <AffiliateCta
         title="Consigue un adaptador universal para China"
-        description="Un adaptador de viaje compacto todo en uno que encaja en los enchufes de China y carga varios dispositivos a la vez."
-        buttonText="Ver adaptador recomendado"
+        description="Un adaptador de viaje compacto todo en uno que sirve para los enchufes de China y permite cargar varios dispositivos al mismo tiempo."
+        buttonText="Ver el adaptador recomendado"
         placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
@@ -60,7 +60,7 @@ const countries = [
 </BaseLayout>
 
 <script>
-  // Voltaje doméstico de cada país y tipos de enchufe que usa.
+  // Voltaje doméstico y tipos de enchufe habituales de cada país.
   const data: Record<string, { volts: number; plugs: string[] }> = {
     'Estados Unidos': { volts: 120, plugs: ['A', 'B'] },
     'Canadá': { volts: 120, plugs: ['A', 'B'] },
@@ -83,7 +83,7 @@ const countries = [
     'Otro': { volts: 0, plugs: [] },
   };
 
-  // China acepta enchufes de tipo A, C e I.
+  // En China se usan enchufes de tipo A, C e I.
   const CHINA_PLUGS = ['A', 'C', 'I'];
   const CHINA_VOLTS = 220;
 
@@ -102,10 +102,10 @@ const countries = [
 
     if (!info || info.volts === 0) {
       tone = 'info';
-      heading = 'Comprueba tu enchufe y voltaje específicos';
-      body = 'No tenemos datos para tu selección. Mira la etiqueta de tu cargador: si indica "100-240V", solo necesitas un adaptador de enchufe para tomas de China de tipo A, C o I.';
-      points.push('China usa 220 V, 50 Hz y enchufes de tipo A, C e I.');
-      points.push('La mayoría de cargadores de teléfono y portátil son de doble voltaje (100-240 V) y solo necesitan un adaptador de enchufe.');
+      heading = 'Comprueba el enchufe y el voltaje de tus dispositivos';
+      body = 'No tenemos datos para esa selección. Revisa la etiqueta de tu cargador: si indica "100-240V", solo necesitas un adaptador compatible con enchufes chinos de tipo A, C o I.';
+      points.push('En China se usan 220 V, 50 Hz y enchufes de tipo A, C e I.');
+      points.push('La mayoría de cargadores de móviles y portátiles son de doble voltaje (100-240 V) y solo requieren un adaptador de enchufe.');
     } else {
       const plugMatch = info.plugs.some((p) => CHINA_PLUGS.includes(p));
       const voltMatch = Math.abs(info.volts - CHINA_VOLTS) <= 20;
@@ -113,26 +113,26 @@ const countries = [
       if (plugMatch && voltMatch) {
         tone = 'good';
         heading = 'Probablemente no necesitas adaptador';
-        body = `${country} usa tipos de enchufe compatibles (${info.plugs.join(', ')}) y un voltaje similar (${info.volts}V). Tus enchufes deberían encajar directamente en las tomas de China.`;
-        points.push('Comprueba cada enchufe; lleva un adaptador por si alguna toma encaja demasiado ajustada.');
+        body = `${country} utiliza tipos de enchufe compatibles (${info.plugs.join(', ')}) y un voltaje parecido (${info.volts} V). Lo normal es que tus enchufes funcionen directamente en China.`;
+        points.push('Aun así, conviene revisar cada enchufe y llevar un adaptador por si alguna toma queda demasiado ajustada.');
       } else if (!plugMatch && voltMatch) {
         tone = 'warn';
         heading = 'Necesitas un adaptador de enchufe, pero no un convertidor de voltaje';
-        body = `${country} usa un voltaje similar (${info.volts}V), así que tus dispositivos son seguros. Pero tu tipo de enchufe (${info.plugs.join(', ')}) no encaja en las tomas de China; lleva un adaptador de enchufe.`;
-        points.push('Solo necesitas un adaptador de enchufe sencillo y económico para tipo A/C/I.');
-        points.push('No hace falta un convertidor de voltaje voluminoso.');
+        body = `${country} usa un voltaje parecido (${info.volts} V), así que tus dispositivos deberían funcionar sin problema. Pero tus enchufes (${info.plugs.join(', ')}) no encajan en las tomas de China, así que necesitas un adaptador.`;
+        points.push('Te basta con un adaptador de enchufe sencillo para tipo A, C o I.');
+        points.push('No necesitas un convertidor de voltaje grande ni pesado.');
       } else if (plugMatch && !voltMatch) {
         tone = 'warn';
-        heading = 'Vigila el voltaje en dispositivos de un solo voltaje';
-        body = `Tus enchufes (${info.plugs.join(', ')}) pueden encajar, pero el voltaje de ${country} (${info.volts}V) difiere de los 220 V de China.`;
-        points.push('Teléfonos, portátiles y cámaras etiquetados como 100-240 V funcionan bien en cualquier lugar.');
-        points.push('Los artículos de un solo voltaje, como algunos secadores y planchas de pelo, necesitan un convertidor de voltaje o conviene dejarlos en casa.');
+        heading = 'Presta atención al voltaje si tu dispositivo no es multivoltaje';
+        body = `Tus enchufes (${info.plugs.join(', ')}) pueden encajar, pero el voltaje de ${country} (${info.volts} V) es distinto de los 220 V de China.`;
+        points.push('Los móviles, portátiles y cámaras con etiqueta 100-240 V funcionan sin problema.');
+        points.push('Los aparatos de un solo voltaje, como algunos secadores o planchas de pelo, necesitan convertidor o es mejor no llevarlos.');
       } else {
         tone = 'warn';
-        heading = 'Necesitas adaptador de enchufe y comprobar el voltaje';
-        body = `${country} usa enchufes distintos (${info.plugs.join(', ')}) y un voltaje diferente (${info.volts}V) al de China, 220 V. Lleva un adaptador para tipo A/C/I.`;
-        points.push('Los cargadores de doble voltaje (100-240 V) solo necesitan el adaptador de enchufe.');
-        points.push('Los dispositivos de alto consumo y un solo voltaje también necesitan un convertidor de voltaje, o puedes comprar un equivalente local.');
+        heading = 'Necesitas adaptador y revisar el voltaje';
+        body = `${country} usa enchufes diferentes (${info.plugs.join(', ')}) y un voltaje distinto (${info.volts} V) al de China, que es de 220 V. Necesitas un adaptador para enchufes de tipo A, C o I.`;
+        points.push('Los cargadores de doble voltaje (100-240 V) solo necesitan el adaptador.');
+        points.push('Los aparatos potentes de un solo voltaje también necesitan convertidor, o quizá te convenga comprar una alternativa local.');
       }
     }
 
@@ -146,7 +146,11 @@ const countries = [
       warn: 'bg-amber-500 text-white',
       info: 'bg-blue-600 text-white',
     } as const;
-    const toneLabel = { good: 'No necesitas adaptador', warn: 'Necesitas adaptador', info: 'Comprueba tu cargador' } as const;
+    const toneLabel = {
+      good: 'No necesitas adaptador',
+      warn: 'Necesitas adaptador',
+      info: 'Revisa tu cargador'
+    } as const;
 
     card.className = `card border ${toneStyles[tone]}`;
     card.innerHTML = `
