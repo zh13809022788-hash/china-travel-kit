@@ -71,9 +71,9 @@ Faites-le avant le départ :
 
 Guides utiles :
 
-- [How to Pay in China as a Tourist](/fr/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay Foreign Credit Card Step by Step](/fr/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay Foreign Visitors Guide](/fr/posts/wechat-pay-foreign-visitors-guide/)
+- [Comment payer en Chine en tant que touriste](/fr/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay en Chine en 2026 : associer une carte étrangère étape par étape](/fr/posts/alipay-foreign-credit-card-step-by-step/)
+- [Guide WeChat Pay pour les visiteurs étrangers](/fr/posts/wechat-pay-foreign-visitors-guide/)
 
 ## 3. Planifier le premier transfert
 

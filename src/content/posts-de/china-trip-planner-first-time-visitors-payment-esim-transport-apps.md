@@ -52,9 +52,9 @@ Richten Sie mindestens eine App ein, besser beide. Registrieren Sie sich mit Ihr
 
 Nützliche Guides:
 
-- [How to Pay in China as a Tourist](/de/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay Foreign Credit Card Step by Step](/de/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay Foreign Visitors Guide](/de/posts/wechat-pay-foreign-visitors-guide/)
+- [In China als Tourist bezahlen](/de/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay in China 2026: Ausländische Kreditkarte Schritt für Schritt verknüpfen](/de/posts/alipay-foreign-credit-card-step-by-step/)
+- [WeChat Pay Leitfaden für ausländische Besucher](/de/posts/wechat-pay-foreign-visitors-guide/)
 
 ## 3. Den ersten Transfer einfach halten
 

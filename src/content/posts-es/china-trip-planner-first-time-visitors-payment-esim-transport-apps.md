@@ -70,9 +70,9 @@ No esperes al hall de llegadas: los SMS, avisos antifraude y verificaciones son 
 
 Guías relacionadas:
 
-- [How to Pay in China as a Tourist](/es/posts/how-to-pay-in-china-tourist-guide/)
-- [Alipay Foreign Credit Card Step by Step](/es/posts/alipay-foreign-credit-card-step-by-step/)
-- [WeChat Pay Foreign Visitors Guide](/es/posts/wechat-pay-foreign-visitors-guide/)
+- [Cómo pagar en China como turista](/es/posts/how-to-pay-in-china-tourist-guide/)
+- [Alipay para extranjeros en 2026: cómo vincular una tarjeta paso a paso](/es/posts/alipay-foreign-credit-card-step-by-step/)
+- [Guía de WeChat Pay para visitantes extranjeros](/es/posts/wechat-pay-foreign-visitors-guide/)
 
 ## 3. Planifica El Primer Traslado
 
