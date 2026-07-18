@@ -407,11 +407,8 @@ const locale = 'en';
   </main>
   <NewsletterSignup />
   <Footer />
-</BaseLayout>
-
-<script type="application/json" id="site-search-data" set:html={JSON.stringify(searchItems)} />
-
-<script>
+  <script type="application/json" id="site-search-data" set:html={JSON.stringify(searchItems)} />
+  <script>
   const input = document.getElementById('site-search') as HTMLInputElement | null;
   const results = document.getElementById('search-results');
   const empty = document.getElementById('search-empty');
@@ -485,3 +482,4 @@ const locale = 'en';
     });
   });
 </script>
+</BaseLayout>
