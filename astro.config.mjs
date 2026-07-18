@@ -42,8 +42,9 @@ export default defineConfig({
           if (allowedZhTw.includes(path)) return true;
           return false;
         }
-        // Keep only English pages; exclude other non-English locales and low-value paths
-        const excludedPrefixes = ['/ja/', '/ko/', '/ru/', '/fr/', '/de/', '/es/', '/authors/'];
+        // Keep only released non-English pages; exclude unreleased non-English locales and low-value paths
+        const excludedPrefixes = ['/ja/', '/ko/', '/ru/', '/es/', '/authors/'];
+        // de-DE, fr-FR released for Google indexing
         if (excludedPrefixes.some((prefix) => path.startsWith(prefix))) return false;
         if (path === '/404' || path === '/404/') return false;
         return true;
