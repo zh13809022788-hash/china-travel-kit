@@ -6,24 +6,24 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Umrechner für chinesische Kleider- und Schuhgrößen';
+const title = 'Größenumrechner für chinesische Kleidung und Schuhe';
 const description =
-  'Rechnen Sie US-, UK- und EU-Größen für Kleidung und Schuhe in chinesische Größen um, damit Sie in China sicher einkaufen können. Mit Tabellen für Damen- und Herrenmode sowie Schuhe.';
+  'Rechnen Sie US-, UK- und EU-Größen für Kleidung und Schuhe in chinesische Größen um, damit Sie in China sicher einkaufen können. Mit Übersichten für Damen- und Herrenbekleidung sowie für Schuhe.';
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Umrechner für Kleider- und Schuhgrößen</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Größenumrechner für chinesische Kleidung und Schuhe</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm">
-      <button data-tab="damenmode" class="size-tab btn-primary px-3 py-1.5">Damenmode</button>
-      <button data-tab="herrenmode" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Herrenmode</button>
+      <button data-tab="damenbekleidung" class="size-tab btn-primary px-3 py-1.5">Damenbekleidung</button>
+      <button data-tab="herrenbekleidung" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Herrenbekleidung</button>
       <button data-tab="damenschuhe" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Damenschuhe</button>
       <button data-tab="herrenschuhe" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Herrenschuhe</button>
     </div>
@@ -33,24 +33,24 @@ const description =
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
             <th class="py-3 pr-4 font-semibold">China</th>
-            <th class="py-3 pr-4 font-semibold">USA</th>
-            <th class="py-3 pr-4 font-semibold">Großbritannien</th>
+            <th class="py-3 pr-4 font-semibold">US</th>
+            <th class="py-3 pr-4 font-semibold">UK</th>
             <th class="py-3 pr-4 font-semibold">EU</th>
           </tr>
         </thead>
-        <tbody id="groessen-zeilen"></tbody>
+        <tbody id="size-rows"></tbody>
       </table>
     </div>
 
     <p class="mt-4 text-xs text-gray-400">
       Größen unterscheiden sich je nach Marke und Schnitt. Chinesische Kleidung fällt oft kleiner aus als vergleichbare westliche Größen.
-      Wählen Sie im Zweifel lieber eine Nummer größer oder probieren Sie die Kleidung vor dem Kauf an. Diese Tabellen dienen nur zur allgemeinen Orientierung.
+      Wenn Sie unsicher sind, wählen Sie lieber eine Nummer größer oder probieren Sie die Kleidung vor dem Kauf an. Diese Tabellen dienen nur zur groben Orientierung.
     </p>
 
     <AffiliateCta
-      title="Besser einkaufen auf Ihrer Reise"
-      description="Kümmern Sie sich zuerst um Zahlungen und Konnektivität, damit Sie in China in jedem Geschäft und in jeder App problemlos einkaufen können."
-      buttonText="Reise-Essentials entdecken"
+      title="Clever einkaufen auf Ihrer Reise"
+      description="Kümmern Sie sich am besten zuerst um Zahlungen und Konnektivität, damit Sie in China in jedem Geschäft und in jeder App problemlos einkaufen können."
+      buttonText="Reise-Essentials ansehen"
       placeholder={AFFILIATE_LINKS.transport}
     />
   </main>
@@ -58,17 +58,18 @@ const description =
 </BaseLayout>
 
 <script>
-  // Referenztabellen für die Umrechnung. Chinesische Kleidung nutzt oft Etiketten mit Körpergröße und Brustumfang in cm,
-  // die häufig auf einfache Konfektionsgrößen reduziert werden. Bei Schuhen sind cm-basierte Angaben üblich, die sich an EU-Größen orientieren.
+  // Referenztabellen für die Umrechnung. Bei chinesischer Kleidung stehen auf den Etiketten oft
+  // Körpergröße und Brustumfang in cm; diese Angaben werden häufig zu vereinfachten Größen zusammengefasst.
+  // Bei Schuhen sind cm-basierte Angaben üblich, die sich oft an EU-Größen orientieren.
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
-    damenmode: [
+    damenbekleidung: [
       { cn: '155/80A (XS)', us: '0-2', uk: '4-6', eu: '32-34' },
       { cn: '160/84A (S)', us: '4', uk: '8', eu: '36' },
       { cn: '165/88A (M)', us: '6-8', uk: '10-12', eu: '38-40' },
       { cn: '170/92A (L)', us: '10-12', uk: '14-16', eu: '42-44' },
       { cn: '175/96A (XL)', us: '14', uk: '18', eu: '46' },
     ],
-    herrenmode: [
+    herrenbekleidung: [
       { cn: '165/88A (S)', us: '34-36', uk: '34-36', eu: '44-46' },
       { cn: '170/92A (M)', us: '38', uk: '38', eu: '48' },
       { cn: '175/96A (L)', us: '40', uk: '40', eu: '50' },
@@ -94,7 +95,7 @@ const description =
     ],
   };
 
-  const rowsEl = document.getElementById('groessen-zeilen');
+  const rowsEl = document.getElementById('size-rows');
   const tabs = document.querySelectorAll<HTMLButtonElement>('.size-tab');
 
   function render(key: string) {
@@ -121,5 +122,5 @@ const description =
     });
   });
 
-  render('damenmode');
+  render('damenbekleidung');
 </script>
