@@ -26,7 +26,7 @@ const {
 
 // Auto noindex for non-English locales (only unreleased ones) and low-value cluster pages
 const path = Astro.url.pathname;
-const nonEnglishLocales: string[] = [];  // de, fr, es confirmed 100% native - released for indexing
+const nonEnglishLocales: string[] = [];  // all 7 locales confirmed 100% native - all released
 const isNonEnglish = nonEnglishLocales.some((loc) => path.startsWith(`/${loc}/`));
 const lowValuePaths = ['/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
 const isLowValue = lowValuePaths.some((prefix) => path.startsWith(prefix));
@@ -212,7 +212,6 @@ const jsonLd = {
     <slot name="head" />
   </head>
   <body class="flex min-h-screen flex-col">
-    <slot />
     <script is:inline set:html={`(function(){
       var PREF_KEY='ctb-lang-pref';
       var LOCALE_PREFIXES=['zh-tw','ja','ko','ru','fr','de','es'];
