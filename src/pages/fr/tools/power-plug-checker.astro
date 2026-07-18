@@ -11,25 +11,25 @@ const description =
   'Découvrez si vous avez besoin d’un adaptateur de prise ou d’un convertisseur de tension pour la Chine selon votre pays d’origine. La Chine utilise le 220 V et les prises de type A, C et I.';
 
 const countries = [
-  { value: 'United States', label: 'États-Unis' },
-  { value: 'United Kingdom', label: 'Royaume-Uni' },
+  { value: 'États-Unis', label: 'États-Unis' },
+  { value: 'Royaume-Uni', label: 'Royaume-Uni' },
   { value: 'Canada', label: 'Canada' },
-  { value: 'Australia', label: 'Australie' },
-  { value: 'Germany', label: 'Allemagne' },
+  { value: 'Australie', label: 'Australie' },
+  { value: 'Allemagne', label: 'Allemagne' },
   { value: 'France', label: 'France' },
-  { value: 'Italy', label: 'Italie' },
-  { value: 'Spain', label: 'Espagne' },
-  { value: 'Netherlands', label: 'Pays-Bas' },
-  { value: 'Japan', label: 'Japon' },
-  { value: 'South Korea', label: 'Corée du Sud' },
-  { value: 'Singapore', label: 'Singapour' },
-  { value: 'India', label: 'Inde' },
-  { value: 'Brazil', label: 'Brésil' },
-  { value: 'New Zealand', label: 'Nouvelle-Zélande' },
-  { value: 'Switzerland', label: 'Suisse' },
-  { value: 'South Africa', label: 'Afrique du Sud' },
-  { value: 'United Arab Emirates', label: 'Émirats arabes unis' },
-  { value: 'Other', label: 'Autre' },
+  { value: 'Italie', label: 'Italie' },
+  { value: 'Espagne', label: 'Espagne' },
+  { value: 'Pays-Bas', label: 'Pays-Bas' },
+  { value: 'Japon', label: 'Japon' },
+  { value: 'Corée du Sud', label: 'Corée du Sud' },
+  { value: 'Singapour', label: 'Singapour' },
+  { value: 'Inde', label: 'Inde' },
+  { value: 'Brésil', label: 'Brésil' },
+  { value: 'Nouvelle-Zélande', label: 'Nouvelle-Zélande' },
+  { value: 'Suisse', label: 'Suisse' },
+  { value: 'Afrique du Sud', label: 'Afrique du Sud' },
+  { value: 'Émirats arabes unis', label: 'Émirats arabes unis' },
+  { value: 'Autre', label: 'Autre' },
 ];
 ---
 
@@ -79,25 +79,25 @@ const countries = [
 <script>
   // Tension domestique de chaque pays et types de prises utilisés.
   const data: Record<string, { volts: number; plugs: string[] }> = {
-    'United States': { volts: 120, plugs: ['A', 'B'] },
+    'États-Unis': { volts: 120, plugs: ['A', 'B'] },
     'Canada': { volts: 120, plugs: ['A', 'B'] },
-    'Japan': { volts: 100, plugs: ['A', 'B'] },
-    'Brazil': { volts: 127, plugs: ['C', 'N'] },
-    'United Kingdom': { volts: 230, plugs: ['G'] },
-    'Australia': { volts: 230, plugs: ['I'] },
-    'New Zealand': { volts: 230, plugs: ['I'] },
-    'Germany': { volts: 230, plugs: ['C', 'F'] },
+    'Japon': { volts: 100, plugs: ['A', 'B'] },
+    'Brésil': { volts: 127, plugs: ['C', 'N'] },
+    'Royaume-Uni': { volts: 230, plugs: ['G'] },
+    'Australie': { volts: 230, plugs: ['I'] },
+    'Nouvelle-Zélande': { volts: 230, plugs: ['I'] },
+    'Allemagne': { volts: 230, plugs: ['C', 'F'] },
     'France': { volts: 230, plugs: ['C', 'E'] },
-    'Italy': { volts: 230, plugs: ['C', 'F', 'L'] },
-    'Spain': { volts: 230, plugs: ['C', 'F'] },
-    'Netherlands': { volts: 230, plugs: ['C', 'F'] },
-    'Switzerland': { volts: 230, plugs: ['C', 'J'] },
-    'South Korea': { volts: 220, plugs: ['C', 'F'] },
-    'Singapore': { volts: 230, plugs: ['G'] },
-    'India': { volts: 230, plugs: ['C', 'D', 'M'] },
-    'South Africa': { volts: 230, plugs: ['C', 'D', 'M', 'N'] },
-    'United Arab Emirates': { volts: 230, plugs: ['C', 'D', 'G'] },
-    'Other': { volts: 0, plugs: [] },
+    'Italie': { volts: 230, plugs: ['C', 'F', 'L'] },
+    'Espagne': { volts: 230, plugs: ['C', 'F'] },
+    'Pays-Bas': { volts: 230, plugs: ['C', 'F'] },
+    'Suisse': { volts: 230, plugs: ['C', 'J'] },
+    'Corée du Sud': { volts: 220, plugs: ['C', 'F'] },
+    'Singapour': { volts: 230, plugs: ['G'] },
+    'Inde': { volts: 230, plugs: ['C', 'D', 'M'] },
+    'Afrique du Sud': { volts: 230, plugs: ['C', 'D', 'M', 'N'] },
+    'Émirats arabes unis': { volts: 230, plugs: ['C', 'D', 'G'] },
+    'Autre': { volts: 0, plugs: [] },
   };
 
   // La Chine accepte les prises de type A, C et I.
@@ -164,7 +164,11 @@ const countries = [
       warn: 'bg-amber-500 text-white',
       info: 'bg-blue-600 text-white',
     } as const;
-    const toneLabel = { good: 'Aucun adaptateur nécessaire', warn: 'Adaptateur nécessaire', info: 'Vérifiez votre chargeur' } as const;
+    const toneLabel = {
+      good: 'Aucun adaptateur nécessaire',
+      warn: 'Adaptateur nécessaire',
+      info: 'Vérifiez votre chargeur',
+    } as const;
 
     card.className = `card border ${toneStyles[tone]}`;
     card.innerHTML = `
