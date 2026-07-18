@@ -1,4 +1,5 @@
 ---
+---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
@@ -48,7 +49,7 @@ const locale = 'de';
         <aside class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <Image
             src={heroImage}
-            alt="Shanghai Skyline, China-Reiseplanung"
+            alt="Skyline von Shanghai, Reiseplanung für China"
             widths={[360, 720]}
             sizes="(max-width: 1024px) 100vw, 360px"
             quality={65}
@@ -106,3 +107,5 @@ const locale = 'de';
   </main>
   <Footer />
 </BaseLayout>
+
+---
