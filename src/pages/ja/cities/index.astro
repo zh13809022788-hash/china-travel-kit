@@ -201,7 +201,7 @@ const locale = 'ja';
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="都市一覧">
       <h2 id="都市一覧" class="sr-only">都市別ショートカット</h2>
       {cities.map((city) => (
-        <article class="card" id={city.id}>
+        <article class="card scroll-mt-20" id={city.id}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">
