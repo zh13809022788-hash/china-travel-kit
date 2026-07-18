@@ -11,23 +11,23 @@ const posts = (await getCollection('posts-fr'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Guides cuisine, restaurants et étiquette en Chine';
-const description = 'Guides pratiques de la cuisine chinoise pour les visiteurs étrangers : livraison, sécurité de la street food, niveaux de piment, pourboires, étiquette au restaurant et culture culinaire.';
+const title = 'Guides sur la cuisine, les restaurants et l’étiquette en Chine';
+const description = 'Guides pratiques sur la cuisine chinoise pour les visiteurs étrangers : livraison, sécurité de la street food, niveaux de piment, pourboires, étiquette au restaurant et culture culinaire.';
 
 const pathways = [
   {
-    title: 'Order without Chinese',
-    desc: 'Set up delivery apps, save hotel addresses, and avoid courier-call confusion.',
+    title: 'Commander sans parler chinois',
+    desc: 'Configurez les applications de livraison, enregistrez les adresses des hôtels et évitez les malentendus lors des appels des livreurs.',
     href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
-    title: 'Eat street food safely',
-    desc: 'Use turnover, visible heat, water habits, and spice phrases to choose better stalls.',
+    title: 'Manger la street food en toute sécurité',
+    desc: 'Observez le débit, la cuisson visible, les habitudes liées à l’eau et les formules sur le piment pour mieux choisir les stands.',
     href: '/fr/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: 'Handle dining etiquette',
-    desc: 'Know when not to tip, when service charges matter, and how local restaurant norms work.',
+    title: 'Maîtriser l’étiquette au restaurant',
+    desc: 'Sachez quand il ne faut pas laisser de pourboire, quand les frais de service comptent et comment fonctionnent les usages locaux au restaurant.',
     href: '/fr/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
@@ -36,12 +36,12 @@ const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
     title: 'Baijiu 101',
-    desc: 'Useful background if a banquet or hosted dinner includes China\'s national spirit.',
+    desc: 'Un bon point de départ si un banquet ou un dîner organisé comprend l’alcool national chinois.',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: 'How to drink baijiu politely',
-    desc: 'A deeper companion guide for toasts, small pours, and pacing yourself at formal meals.',
+    title: 'Comment boire du baijiu avec politesse',
+    desc: 'Un guide complémentaire plus approfondi sur les toasts, les petites quantités et le bon rythme à adopter lors des repas formels.',
   },
 ];
 ---
@@ -56,17 +56,17 @@ const cultureLinks = [
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chengdu-food" alt="Spicy Sichuan street food dishes at a night market in China" loading="lazy" />
+    <CoverImage name="topic-chengdu-food" alt="Plats épicés de street food du Sichuan dans un marché de nuit en Chine" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">Food planning pathways</h2>
+      <h2 id="food-pathways" class="sr-only">Parcours pour organiser ses repas</h2>
       {pathways.map((item) => (
         <a href={item.href} class="card block hover:no-underline">
           <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Read guide</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Lire le guide</span>
         </a>
       ))}
     </section>
@@ -76,7 +76,7 @@ const cultureLinks = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">Guides</p>
-            <h2>Food and etiquette articles</h2>
+            <h2>Articles sur la cuisine et l’étiquette</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
@@ -91,12 +91,12 @@ const cultureLinks = [
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">Culture companion</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">When baijiu appears</h2>
+        <p class="section-kicker">Complément culturel</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Quand le baijiu fait son apparition</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Most tourist meals do not require alcohol knowledge, but hosted banquets, business dinners,
-          and rural family meals sometimes include baijiu toasts. These companion resources go deeper
-          while ChinaTripBox stays focused on travel logistics.
+          La plupart des repas touristiques ne nécessitent aucune connaissance sur l’alcool, mais les banquets organisés, les dîners d’affaires
+          et les repas familiaux en zone rurale incluent parfois des toasts au baijiu. Ces ressources complémentaires vont plus loin,
+          tandis que ChinaTripBox reste centré sur la logistique du voyage.
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
