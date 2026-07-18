@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-ru'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'History of China — Ancient Sites & Stories for Travelers';
-const description = 'Explore China\'s historical sites as a foreign traveler: the Great Wall, Terracotta Army, Forbidden City, Silk Road, ancient capitals, and water towns — decoded with the stories behind what you see.';
+const title = 'История Китая — древние места и сюжеты для путешественников';
+const description = 'Откройте для себя исторические места Китая глазами иностранного путешественника: Великую китайскую стену, Терракотовую армию, Запретный город, Шёлковый путь, древние столицы и водные города — с понятным объяснением историй, которые стоят за тем, что вы видите.';
 
 const relatedTools = [
-  { href: '/ru/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa & entry guide', desc: 'Visa-free transit and entry requirements' },
-  { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'High-speed rail guide', desc: 'Trains to historical sites across China' },
-  { href: '/ru/posts/book-china-train-tickets-12306-foreigners/', title: 'Book train tickets', desc: '12306 guide for foreign passport holders' },
+  { href: '/ru/posts/china-visa-free-entry-transit-guide-2026/', title: 'Виза и въезд', desc: 'Безвизовый транзит и требования для въезда' },
+  { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'Гид по скоростным поездам', desc: 'Поезда к историческим местам по всему Китаю' },
+  { href: '/ru/posts/book-china-train-tickets-12306-foreigners/', title: 'Купить билеты на поезд', desc: 'Гид по 12306 для владельцев иностранных паспортов' },
 ];
 
 const relatedCities = [
-  { href: '/ru/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Forbidden City, Great Wall, Temple of Heaven' },
-  { href: '/ru/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Ancient capital of the Southern Song' },
-  { href: '/ru/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Three Kingdoms heritage and ancient streets' },
+  { href: '/ru/posts/beijing-city-guide-for-foreigners/', title: 'Пекин', desc: 'Запретный город, Великая китайская стена, Храм Неба' },
+  { href: '/ru/posts/hangzhou-city-guide-for-foreigners/', title: 'Ханчжоу', desc: 'Древняя столица эпохи Южной Сун' },
+  { href: '/ru/posts/chengdu-city-guide-for-foreigners/', title: 'Чэнду', desc: 'Наследие Троецарствия и старинные улицы' },
 ];
 
 const otherSeries = [
-  { href: '/ru/series/food-of-china/', title: 'Food of China' },
-  { href: '/ru/series/culture-of-china/', title: 'Culture of China' },
-  { href: '/ru/series/nature-of-china/', title: 'Nature of China' },
+  { href: '/ru/series/food-of-china/', title: 'Кухня Китая' },
+  { href: '/ru/series/culture-of-china/', title: 'Культура Китая' },
+  { href: '/ru/series/nature-of-china/', title: 'Природа Китая' },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
 const locale = 'ru';
@@ -38,7 +38,7 @@ const locale = 'ru';
   <Header locale="ru" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content Series</p>
+      <p class="section-kicker">Серия материалов</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -49,8 +49,8 @@ const locale = 'ru';
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Articles</p>
-            <h2>History of China series</h2>
+            <p class="section-kicker">Статьи</p>
+            <h2>Серия «История Китая»</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -64,14 +64,14 @@ const locale = 'ru';
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Articles in this series are being prepared. Check back soon.</p>
+          <p class="mt-6 text-gray-500">Статьи этой серии готовятся. Загляните сюда чуть позже.</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Practical tools</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Plan your visit</h2>
+          <p class="section-kicker">Полезные материалы</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Спланируйте поездку</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -83,8 +83,8 @@ const locale = 'ru';
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">City guides</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Historic cities</h2>
+          <p class="section-kicker">Гиды по городам</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Исторические города</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -96,7 +96,7 @@ const locale = 'ru';
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">More series</p>
+          <p class="section-kicker">Другие серии</p>
           <div class="mt-3 grid gap-2">
             {otherSeries.map((s) => (
               <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
