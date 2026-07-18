@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-zh-tw'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'China 自然 — 景觀與野境';
-const description = '以外國旅人的視角探索 China 的自然奇觀：張家界的阿凡達山峰、九寨溝童話般的湖泊、黃山雲海、桂林喀斯特峰林，以及青藏高原。';
+const title = '中國自然 — 景觀與野境';
+const description = '以外國旅人的視角探索中國的自然奇觀：張家界如《阿凡達》般的群峰、九寨溝夢幻的湖泊、黃山雲海、桂林喀斯特峰林，以及青藏高原。';
 
 const relatedTools = [
   { href: '/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '打包清單', desc: '戶外旅行的四季裝備建議' },
-  { href: '/zh-tw/posts/china-visa-free-entry-transit-guide-2026/', title: '簽證與入境指南', desc: '偏遠地區的許可證與入境規則' },
-  { href: '/zh-tw/trip-planner/', title: '行程規劃工具', desc: '打造你的 China 自然行程' },
+  { href: '/zh-tw/posts/china-visa-free-entry-transit-guide-2026/', title: '簽證與入境指南', desc: '偏遠地區的許可證與入境規定' },
+  { href: '/zh-tw/trip-planner/', title: '行程規劃工具', desc: '打造你的中國自然之旅行程' },
 ];
 
 const relatedCities = [
   { href: '/zh-tw/posts/sanya-city-guide-for-foreigners/', title: '三亞', desc: '熱帶海灘與雨林' },
   { href: '/zh-tw/posts/hangzhou-city-guide-for-foreigners/', title: '杭州', desc: '西湖與茶山' },
-  { href: '/zh-tw/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '通往西部山區與熊貓棲地的門戶' },
+  { href: '/zh-tw/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '前往西部山區與熊貓棲地的門戶' },
 ];
 
 const otherSeries = [
-  { href: '/zh-tw/series/history-of-china/', title: 'China 歷史' },
-  { href: '/zh-tw/series/culture-of-china/', title: 'China 文化' },
-  { href: '/zh-tw/series/food-of-china/', title: 'China 美食' },
+  { href: '/zh-tw/series/history-of-china/', title: '中國歷史' },
+  { href: '/zh-tw/series/culture-of-china/', title: '中國文化' },
+  { href: '/zh-tw/series/food-of-china/', title: '中國美食' },
 ];
 ---
 
@@ -48,7 +48,7 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">文章</p>
-            <h2>China 自然系列</h2>
+            <h2>中國自然系列</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -62,7 +62,7 @@ const otherSeries = [
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">本系列文章正在準備中，敬請稍後再回來查看。</p>
+          <p class="mt-6 text-gray-500">本系列文章正在準備中，歡迎稍後再回來查看。</p>
         )}
       </div>
 
