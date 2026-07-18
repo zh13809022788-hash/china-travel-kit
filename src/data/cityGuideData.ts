@@ -1,19 +1,20 @@
 // Central city guide metadata for China cities page
 // Add a new entry here + create a city guide post → auto appears on /cities/
+// mapX/mapY use equirectangular projection (no borders, just geographic positions)
 
 export interface CityGuideEntry {
-  slug: string;           // matches post slug (e.g. 'beijing-city-guide-for-foreigners')
-  name: string;           // display name (English)
-  nameZh: string;         // Chinese name for reference
+  slug: string;
+  name: string;
+  nameZh: string;
   desc: string;
   days: string;
   bestSeason: string;
   difficulty: string;
   whyGo: string;
-  next: string;           // related post/guide href
+  next: string;
   nextLabel: string;
-  mapX: number;           // SVG x coordinate
-  mapY: number;           // SVG y coordinate
+  mapX: number;
+  mapY: number;
 }
 
 export const CITY_GUIDES: CityGuideEntry[] = [
@@ -25,7 +26,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'Imperial history, museums, and the easiest Great Wall access.',
     next: '/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
     nextLabel: 'Daxing airport transfer guide',
-    mapX: 470, mapY: 80,
+    mapX: 460, mapY: 208, // 116.4°E, 39.9°N
   },
   {
     slug: 'shanghai-city-guide-for-foreigners',
@@ -35,7 +36,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'The smoothest first stop for metro, airports, food, and English-friendly services.',
     next: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
     nextLabel: 'Shanghai metro guide',
-    mapX: 540, mapY: 200,
+    mapX: 509, mapY: 324, // 121.5°E, 31.2°N
   },
   {
     slug: 'chengdu-city-guide-for-foreigners',
@@ -45,7 +46,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'Pandas, Sichuan food, teahouses, lower costs, and western China side trips.',
     next: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
     nextLabel: 'Chengdu street-food guide',
-    mapX: 250, mapY: 220,
+    mapX: 341, mapY: 332, // 104.1°E, 30.6°N
   },
   {
     slug: 'xian-city-guide-for-foreigners',
@@ -55,7 +56,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: "Terracotta Warriors, ancient city wall, Muslim Quarter food street, and a deep sense of Chinese history.",
     next: '/posts/china-high-speed-rail-guide-foreigners/',
     nextLabel: "High-speed rail to Xi'an",
-    mapX: 340, mapY: 155,
+    mapX: 387, mapY: 283, // 108.9°E, 34.3°N
   },
   {
     slug: 'guangzhou-city-guide-for-foreigners',
@@ -65,7 +66,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'Cantonese dim sum, Chen Clan Academy, Canton Tower, and a warmer southern alternative.',
     next: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     nextLabel: 'Cantonese food guide',
-    mapX: 400, mapY: 370,
+    mapX: 430, mapY: 432, // 113.3°E, 23.1°N
   },
   {
     slug: 'chongqing-city-guide-for-foreigners',
@@ -75,7 +76,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'Chongqing hotpot, Hongya Cave, night skyline, Yangtze cable car, and a uniquely vertical city.',
     next: '/food/',
     nextLabel: 'Chongqing food guide',
-    mapX: 310, mapY: 260,
+    mapX: 364, mapY: 345, // 106.5°E, 29.6°N
   },
   {
     slug: 'hangzhou-city-guide-for-foreigners',
@@ -85,7 +86,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'West Lake, tea villages, temples, and a calm high-speed rail add-on from Shanghai.',
     next: '/transport/',
     nextLabel: 'Plan trains and local transport',
-    mapX: 520, mapY: 205,
+    mapX: 497, mapY: 336, // 120.2°E, 30.3°N
   },
   {
     slug: 'sanya-city-guide-for-foreigners',
@@ -95,7 +96,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'China beach time, winter sun, seafood, resorts, and longer seasonal stays.',
     next: '/posts/what-to-pack-for-china-a-season-by-season-checklist/',
     nextLabel: 'Seasonal packing guide',
-    mapX: 360, mapY: 440,
+    mapX: 393, mapY: 496, // 109.5°E, 18.3°N
   },
   {
     slug: 'nanjing-city-guide-for-foreigners',
@@ -105,7 +106,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'Ming Xiaoling Mausoleum, Sun Yat-sen Mausoleum, Confucius Temple, and a relaxed historical atmosphere.',
     next: '/posts/china-high-speed-rail-guide-foreigners/',
     nextLabel: 'High-speed rail to Nanjing',
-    mapX: 490, mapY: 180,
+    mapX: 483, mapY: 312, // 118.8°E, 32.1°N
   },
   {
     slug: 'guilin-city-guide-for-foreigners',
@@ -115,6 +116,6 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     whyGo: 'Li River, Yangshuo, Longji Rice Terraces, Reed Flute Cave, and China\'s most scenic landscapes.',
     next: '/posts/china-high-speed-rail-guide-foreigners/',
     nextLabel: 'High-speed rail to Guilin',
-    mapX: 370, mapY: 300,
+    mapX: 401, mapY: 403, // 110.3°E, 25.3°N
   },
 ];
