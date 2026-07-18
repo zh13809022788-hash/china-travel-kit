@@ -17,8 +17,9 @@ const categoryLabels: Record<string, string> = {
   essentials: '旅行準備',
   food: '食事',
 };
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'ja';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout
   title="ChinaTripBox 日本語ガイド | 中国旅行の支払い・通信・移動をわかりやすくご案内します"

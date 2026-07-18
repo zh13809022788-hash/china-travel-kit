@@ -21,8 +21,9 @@ const transportPaths = [
   { href: '/ja/posts/didi-china-foreign-tourists-guide/', title: '配車サービスの使い方をご案内します', desc: 'DiDiの設定方法、翻訳付きの乗車位置ピンの使い方、運転手からの連絡を減らすコツをご紹介します。' },
   { href: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '地下鉄の利用方法をご案内します', desc: '上海を例に、QR乗車券の使い方、乗り換え方法、ラッシュ時の利用の流れを学んでいただけます。' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ja';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />

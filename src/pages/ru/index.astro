@@ -17,8 +17,9 @@ const categoryLabels: Record<string, string> = {
   essentials: 'Планирование',
   food: 'Еда',
 };
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'ru';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout
   title="ChinaTripBox на русском | Оплата, интернет и транспорт в Китае"

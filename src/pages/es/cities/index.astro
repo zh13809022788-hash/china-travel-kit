@@ -171,8 +171,10 @@ const faqJsonLd = {
     },
   })),
 };
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'es';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
+
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main class="container-page py-10">

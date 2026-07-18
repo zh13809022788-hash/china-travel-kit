@@ -21,8 +21,9 @@ const transportPaths = [
   { href: '/zh-tw/posts/didi-china-foreign-tourists-guide/', title: '叫車服務', desc: '設定 DiDi、使用翻譯後的上車點定位，並減少司機來電溝通阻力。' },
   { href: '/zh-tw/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '地鐵系統', desc: '以上海為例，了解 QR 車票、轉乘與尖峰時段搭乘習慣。' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'zh-tw';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
   <Header locale="zh-TW" />

@@ -26,8 +26,9 @@ const paymentTools = [
   { href: '/fr/tools/budget-cash-estimator/', title: 'Estimateur de budget et d’espèces', desc: 'Estimez vos dépenses de voyage et le montant d’espèces de secours à emporter.' },
   { href: '/fr/tools/currency-converter/', title: 'Convertisseur de devise RMB', desc: 'Convertissez les prix en yuans et comprenez les coûts du quotidien.' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'fr';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />

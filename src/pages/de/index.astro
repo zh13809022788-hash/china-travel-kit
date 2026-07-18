@@ -17,8 +17,9 @@ const categoryLabels: Record<string, string> = {
   essentials: 'Reiseplanung',
   food: 'Essen',
 };
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'de';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout
   title="ChinaTripBox auf Deutsch | Bezahlung, Internet und Verkehr in China"

@@ -14,9 +14,9 @@ const posts = (await getCollection('posts-zh-tw'))
 
 const title = '中國旅行規劃指南：簽證、時間與行前準備';
 const description = '安心規劃中國之旅：簽證與入境規定、最佳旅遊時間、行李準備、安全事項，以及出發前該安排的一切。';
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'zh-tw';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
-
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
   <Header locale="zh-TW" />

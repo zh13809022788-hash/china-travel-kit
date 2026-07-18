@@ -14,9 +14,9 @@ const posts = (await getCollection('posts-fr'))
 
 const title = 'Préparer un voyage en Chine : visa, saison et essentiels';
 const description = 'Préparez votre voyage en Chine en toute confiance : visas et conditions d’entrée, meilleure période pour partir, bagages, sécurité et tout ce qu’il faut régler avant le départ.';
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'fr';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
-
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />

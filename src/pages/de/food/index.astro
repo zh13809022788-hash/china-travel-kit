@@ -43,8 +43,9 @@ const cultureLinks = [
     desc: 'Ein vertiefender Begleitratgeber zu Trinksprüchen, kleinen Einschenkungen und dem Tempo bei formellen Mahlzeiten.',
   },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'de';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />

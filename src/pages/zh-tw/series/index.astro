@@ -38,8 +38,9 @@ const seriesList = [
     icon: '文化',
   },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'zh-tw';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
   <Header locale="zh-TW" />

@@ -26,8 +26,9 @@ const paymentTools = [
   { href: '/tools/budget-cash-estimator/', title: 'Budget and cash estimator', desc: 'Estimate trip spending and how much backup cash to carry.' },
   { href: '/tools/currency-converter/', title: 'RMB currency converter', desc: 'Convert prices to yuan and understand everyday costs.' },
 ];
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description}>
   <Header />

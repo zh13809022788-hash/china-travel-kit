@@ -44,9 +44,9 @@ const cultureLinks = [
     desc: '乾杯の作法、少量ずつ注がれるお酒への対応、フォーマルな食事の場で無理なく付き合うコツを詳しく知りたい方におすすめです。',
   },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ja';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
-
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />

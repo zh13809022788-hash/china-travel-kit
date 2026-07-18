@@ -35,8 +35,9 @@ const internetTools = [
   { href: '/ja/tools/app-availability-checker/', title: 'アプリ利用可否チェッカー', desc: '中国で使いたいアプリが利用できるか、代替手段があるかを確認できます。' },
   { href: '/ja/posts/internet-access-china-apps-that-work-2026/', title: 'インターネット接続ガイド', desc: '使えるアプリ、VPNの考え方、出発前に済ませておきたい設定を確認できます。' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ja';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />

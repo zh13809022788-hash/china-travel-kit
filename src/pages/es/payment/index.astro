@@ -53,9 +53,9 @@ const paymentTools = [
   { href: '/es/tools/currency-converter/', title: 'Conversor de moneda RMB', desc: 'Convierte precios a yuanes y entiende los costes cotidianos.' },
 
 ];
-
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'es';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
 
@@ -73,15 +73,9 @@ import { getCategoryLabel } from '../../../i18n/categories.ts';
 
     </header>
 
-
-
     <CoverImage name="topic-how-to-pay" alt="Configuración de pago móvil con smartphone mostrando métodos de pago para viajar por China" loading="lazy" />
 
-
-
     <AdSlot format="banner" />
-
-
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-payment">
 
@@ -121,8 +115,6 @@ import { getCategoryLabel } from '../../../i18n/categories.ts';
 
     </section>
 
-
-
     <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
 
       <div class="rounded-lg border border-gray-200 bg-white p-6">
@@ -153,8 +145,6 @@ import { getCategoryLabel } from '../../../i18n/categories.ts';
 
       </div>
 
-
-
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
 
         <h2 class="text-lg font-bold text-gray-900">Herramientas de pago</h2>
@@ -178,8 +168,6 @@ import { getCategoryLabel } from '../../../i18n/categories.ts';
       </aside>
 
     </section>
-
-
 
     <section class="mt-8 grid gap-6 md:grid-cols-2">
 

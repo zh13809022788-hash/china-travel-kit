@@ -35,8 +35,9 @@ const internetTools = [
   { href: '/tools/app-availability-checker/', title: 'App availability checker', desc: 'Check whether common apps work in China and what alternatives to prepare.' },
   { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access guide', desc: 'Understand app access, VPN expectations, and practical setup before arrival.' },
 ];
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description}>
   <Header />

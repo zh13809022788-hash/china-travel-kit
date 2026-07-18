@@ -21,8 +21,9 @@ const transportPaths = [
   { href: '/fr/posts/didi-china-foreign-tourists-guide/', title: 'VTC', desc: 'Configurez DiDi, utilisez des points de prise en charge traduits et réduisez les frictions avec le chauffeur.' },
   { href: '/fr/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Réseaux de métro', desc: 'Découvrez les billets QR, les correspondances et les habitudes aux heures de pointe à travers l’exemple de Shanghai.' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'fr';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />

@@ -26,8 +26,9 @@ const paymentTools = [
   { href: '/ja/tools/budget-cash-estimator/', title: '予算・現金見積もりツール', desc: 'ご旅行中に想定される支出と、予備として持っておきたい現金額の目安を見積もっていただけます。' },
   { href: '/ja/tools/currency-converter/', title: '人民元換算ツール', desc: '価格を人民元に換算して、日常的な支出感覚をつかんでいただけます。' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ja';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />

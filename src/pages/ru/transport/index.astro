@@ -21,8 +21,9 @@ const transportPaths = [
   { href: '/ru/posts/didi-china-foreign-tourists-guide/', title: 'Ride-hailing', desc: 'Set up DiDi, use translated pickup pins, and reduce driver-call friction.' },
   { href: '/ru/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Metro systems', desc: 'Learn QR tickets, transfers, and rush-hour habits through the Shanghai example.' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ru';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
   <Header locale="ru" />

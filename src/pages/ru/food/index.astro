@@ -44,9 +44,9 @@ const cultureLinks = [
     desc: 'Более подробный гид по тостам, небольшим порциям и тому, как держать темп на официальных застольях.',
   },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ru';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
-
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
   <Header locale="ru" />

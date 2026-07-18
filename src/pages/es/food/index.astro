@@ -89,9 +89,9 @@ const cultureLinks = [
   },
 
 ];
-
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'es';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
 
@@ -109,15 +109,9 @@ import { getCategoryLabel } from '../../../i18n/categories.ts';
 
     </header>
 
-
-
     <CoverImage name="topic-chengdu-food" alt="Platos picantes de comida callejera de Sichuan en un mercado nocturno de China" loading="lazy" />
 
-
-
     <AdSlot format="banner" />
-
-
 
     <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
 
@@ -138,8 +132,6 @@ import { getCategoryLabel } from '../../../i18n/categories.ts';
       ))}
 
     </section>
-
-
 
     <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
 
@@ -176,8 +168,6 @@ import { getCategoryLabel } from '../../../i18n/categories.ts';
         </div>
 
       </div>
-
-
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
 

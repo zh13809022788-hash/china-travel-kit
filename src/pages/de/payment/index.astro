@@ -26,8 +26,10 @@ const paymentTools = [
   { href: '/de/tools/budget-cash-estimator/', title: 'Budget- und Bargeldrechner', desc: 'Schätze Reiseausgaben und wie viel Bargeld du als Reserve mitnehmen solltest.' },
   { href: '/de/tools/currency-converter/', title: 'RMB-Währungsumrechner', desc: 'Wandle Preise in Yuan um und verstehe alltägliche Kosten.' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'de';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
+
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">

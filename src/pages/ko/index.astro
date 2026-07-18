@@ -17,8 +17,9 @@ const categoryLabels: Record<string, string> = {
   essentials: '여행 준비',
   food: '음식',
 };
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'ko';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout
   title="ChinaTripBox 한국어 가이드 | 중국 여행 결제·통신·교통"

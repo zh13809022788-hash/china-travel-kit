@@ -14,9 +14,9 @@ const posts = (await getCollection('posts-ru'))
 
 const title = 'Подготовка поездки в Китай: визы, сезон и основы';
 const description = 'Планируйте поездку в Китай уверенно: визы и правила въезда, лучшее время для поездки, что взять с собой, безопасность и всё, что нужно подготовить до вылета.';
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ru';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
-
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
   <Header locale="ru" />

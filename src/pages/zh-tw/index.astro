@@ -17,8 +17,9 @@ const categoryLabels: Record<string, string> = {
   essentials: '行前準備',
   food: '美食與用餐',
 };
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'zh-tw';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout
   title="ChinaTripBox 繁體中文指南 | 中國自由行付款、上網與交通"

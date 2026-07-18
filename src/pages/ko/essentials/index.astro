@@ -14,9 +14,9 @@ const posts = (await getCollection('posts-ko'))
 
 const title = '중국 여행 준비 가이드: 비자, 시기, 필수 준비';
 const description = '중국 여행을 자신 있게 준비하세요: 비자와 입국 규정, 최적의 여행 시기, 챙길 것, 안전 정보, 출국 전 준비할 모든 것을 확인하세요.';
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ko';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
-
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
   <Header locale="ko" />

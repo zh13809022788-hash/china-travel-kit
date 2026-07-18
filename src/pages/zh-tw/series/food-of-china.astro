@@ -30,8 +30,9 @@ const otherSeries = [
   { href: '/zh-tw/series/culture-of-china/', title: '中國文化' },
   { href: '/zh-tw/series/modern-china/', title: '現代中國' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'zh-tw';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
   <Header locale="zh-TW" />

@@ -44,9 +44,9 @@ const cultureLinks = [
     desc: 'Un guide complémentaire plus approfondi sur les toasts, les petites quantités et le bon rythme à adopter lors des repas formels.',
   },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'fr';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
-
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />

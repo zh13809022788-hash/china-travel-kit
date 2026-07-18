@@ -14,8 +14,9 @@ const posts = (await getCollection('posts-ja'))
 
 const title = '中国旅行の準備ガイド：ビザ、時期、基本の準備';
 const description = '中国旅行を安心して計画できるように、ビザや入国ルール、ベストシーズン、持ち物、安全対策、出発前に準備しておきたいことをまとめました。';
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ja';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />

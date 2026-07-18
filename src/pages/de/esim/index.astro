@@ -35,8 +35,9 @@ const internetTools = [
   { href: '/de/tools/app-availability-checker/', title: 'Prüfer für App-Verfügbarkeit', desc: 'Prüfe, welche gängigen Apps in China funktionieren und welche Alternativen du vorab vorbereiten solltest.' },
   { href: '/de/posts/internet-access-china-apps-that-work-2026/', title: 'Leitfaden zum Internetzugang', desc: 'Verstehe den App-Zugang, realistische VPN-Erwartungen und die praktische Vorbereitung vor der Ankunft.' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'de';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />

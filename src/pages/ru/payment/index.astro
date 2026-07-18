@@ -26,8 +26,9 @@ const paymentTools = [
   { href: '/ru/tools/budget-cash-estimator/', title: 'Калькулятор бюджета и наличных', desc: 'Оцените расходы в поездке и сколько наличных стоит взять про запас.' },
   { href: '/ru/tools/currency-converter/', title: 'Конвертер валют в юани', desc: 'Переводите цены в юани и лучше понимайте повседневные расходы.' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ru';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
   <Header locale="ru" />

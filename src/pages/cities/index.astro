@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { getCategoryLabel } from '../../i18n/categories';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -171,8 +172,8 @@ const faqJsonLd = {
     },
   })),
 };
+const locale = 'en';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description}>
   <Header />

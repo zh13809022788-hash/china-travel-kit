@@ -38,8 +38,9 @@ const seriesList = [
     icon: 'Culture',
   },
 ];
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description}>
   <Header />

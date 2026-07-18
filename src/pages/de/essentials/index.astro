@@ -14,8 +14,9 @@ const posts = (await getCollection('posts-de'))
 
 const title = 'China-Reiseplanung: Visa, Reisezeit und Grundlagen';
 const description = 'Plane deine Reise nach China mit gutem Gefühl: Visa und Einreisebestimmungen, die beste Reisezeit, Packtipps, Sicherheit und alles, was du vor dem Abflug erledigen solltest.';
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'de';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />

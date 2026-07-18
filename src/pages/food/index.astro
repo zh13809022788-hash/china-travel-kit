@@ -44,8 +44,9 @@ const cultureLinks = [
     desc: 'A deeper companion guide for toasts, small pours, and pacing yourself at formal meals.',
   },
 ];
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
-import { getCategoryLabel } from '../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description}>
   <Header />

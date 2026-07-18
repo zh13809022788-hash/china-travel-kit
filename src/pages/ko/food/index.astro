@@ -44,9 +44,9 @@ const cultureLinks = [
     desc: '건배 예절, 소량으로 따르는 방식, 격식 있는 식사 자리에서 페이스를 조절하는 법까지 더 깊이 다룬 안내예요.',
   },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ko';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
-
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
   <Header locale="ko" />

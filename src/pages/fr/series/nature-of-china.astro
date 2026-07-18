@@ -30,8 +30,9 @@ const otherSeries = [
   { href: '/fr/series/culture-of-china/', title: 'Culture de la Chine' },
   { href: '/fr/series/food-of-china/', title: 'Cuisine de la Chine' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'fr';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />

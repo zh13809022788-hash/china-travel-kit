@@ -26,8 +26,9 @@ const paymentTools = [
   { href: '/ko/tools/budget-cash-estimator/', title: '예산 및 현금 계산기', desc: '여행 경비와 비상용으로 가져갈 현금 규모를 예상해보세요.' },
   { href: '/ko/tools/currency-converter/', title: '위안화 환율 변환기', desc: '가격을 위안화 기준으로 환산하고 일상적인 물가 수준을 파악해보세요.' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'ko';
 ---
-import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
   <Header locale="ko" />
