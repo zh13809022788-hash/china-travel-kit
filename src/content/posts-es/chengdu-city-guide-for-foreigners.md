@@ -1,47 +1,32 @@
-﻿---
-title: "Guia de Chengdu para extranjeros 2026: pandas, comida y consejos de viaje"
-description: "Guia practica de Chengdu para visitantes extranjeros: pandas gigantes, comida de Sichuan, casas de te, transporte, excursiones y consejos utiles."
-pubDate: 2026-07-09
+---
+title: "Guía de Chengdu 2026: todo lo que un turista extranjero necesita saber"
+description: "Guía completa de Chengdu para turistas extranjeros: pandas, comida picante, transporte, alojamiento y consejos prácticos para disfrutar la capital de Sichuan."
+pubDate: 2026-07-18
 category: essentials
-tags: ["chengdu", "guia de ciudad", "viaje a china", "extranjeros"]
+tags: ["Chengdu", "Sichuan", "pandas", "guía de viaje"]
 featured: false
 faqs:
-  - question: "Vale la pena visitar Chengdu si eres extranjero?"
-    answer: "Mucho. Chengdu ofrece pandas gigantes, una de las mejores y mas picantes cocinas de China, cultura relajada de casas de te y costes mas bajos que las megaciudades del este. Tambien es puerta de entrada al oeste de China, incluidas zonas tibetanas y paisajes de montana."
-  - question: "Como ver los pandas gigantes en Chengdu?"
-    answer: "Visita la Chengdu Research Base of Giant Panda Breeding temprano por la manana, cuando los pandas estan mas activos y comen. Se llega en metro mas bus corto o DiDi, y conviene reservar entradas con antelacion. Llegar a la apertura ayuda a evitar multitudes y siestas de mediodia."
-  - question: "La comida de Chengdu es demasiado picante para extranjeros?"
-    answer: "La comida de Sichuan es famosa por ser picante y adormecedora por la pimienta de Sichuan, pero puedes manejarla. Pide 'wei la' (poco picante) o 'bu la' (sin picante), elige platos suaves y prueba hotpot con olla dividida. Hay muchos sabores sin chile intenso."
-  - question: "Como es el coste de vida en Chengdu comparado con Shanghai?"
-    answer: "Bastante mas bajo. Alquiler, comida y gastos diarios en Chengdu estan muy por debajo de Shanghai o Shenzhen, una razon importante de su atractivo para estancias largas. Un presupuesto mensual comodo para una persona es notablemente menor sin perder servicios de gran ciudad."
-  - question: "La gente habla ingles en Chengdu?"
-    answer: "Menos que en Shanghai, pero el metro es bilingue y la comunidad extranjera creciente crea algunos cafes y servicios amigables con el ingles. Las apps de traduccion y los mini programas dentro de Alipay y WeChat resuelven la mayoria de situaciones."
-  - question: "Cuantos dias necesitas en Chengdu?"
-    answer: "Dos o tres dias cubren pandas, calles antiguas, casas de te, una cena de hotpot, templos y parques. Anade dias si quieres usar Chengdu como base para Leshan, el Buda Gigante o viajes al oeste de Sichuan."
-cover: "city-chengdu"
-coverAlt: "Giant pandas at Chengdu Research Base of Giant Panda Breeding"
+  - question: "¿Cuántos días se necesitan en Chengdu?"
+    answer: "3-4 días es lo ideal. Un día para los pandas, un día para la ciudad (Jinli, Wuhou, People's Park), un día para Leshan o el monte Qingcheng, y otro para disfrutar la gastronomía."
+  - question: "¿La comida de Chengdu es muy picante?"
+    answer: "Sí, la cocina de Sichuan es famosa por su picante. Pero hay opciones no picantes: wantanes, arroz frito, bollos al vapor. Siempre puedes pedir 'bu la' (sin picante)."
+  - question: "¿Cómo llegar a la base de pandas?"
+    answer: "En metro Línea 3 hasta la estación Panda Avenue, luego autobús o 10 minutos andando. Abren a las 7:30. Ve temprano para verlos activos."
 ---
 
-Chengdu es una de las ciudades chinas mas faciles de disfrutar despacio. No impresiona por rascacielos como Shanghai, sino por pandas, comida, parques, te y un ritmo mas relajado.
+Chengdu es la capital de la provincia de Sichuan y una de las ciudades más vibrantes de China. Es famosa por tres cosas: los pandas gigantes, la comida picante y su ambiente relajado.
 
-## Que hacer
+**Qué ver:**
+- **Base de Investigación de Pandas Gigantes** → La principal atracción. Ve temprano (antes de las 9) para verlos jugar.
+- **Calle Jinli** → Calle peatonal con arquitectura tradicional, tiendas y puestos de comida.
+- **Templo de Wuhou** → Dedicado al período de los Tres Reinos. Jardines preciosos.
+- **Parque del Pueblo** → Vida local auténtica. Tómate un té en la casa de té tradicional.
+- **Monte Qingcheng** → A 1 hora de Chengdu. Taoísmo, naturaleza y tranquilidad.
 
-Empieza temprano en la base de pandas. Despues dedica tiempo a People's Park, Kuanzhai Alley, Jinli Street y algun templo. Para una experiencia local, sientate en una casa de te y deja que la tarde pase sin prisa.
+**Comida:**
+- Hot pot de Sichuan (mápó dòufu, gōngbǎo jīdīng)
+- Dan dan noodles
+- Wontanes en sopa
+- Té de jazmín en las casas de té locales
 
-## Comer en Chengdu
-
-Hotpot, dan dan mian, mapo tofu, chuan chuan y snacks de mercado son parte central del viaje. Si no toleras el chile, aprende dos frases: **wei la** para poco picante y **bu la** para sin picante. La olla dividida en hotpot es la solucion mas facil.
-
-> ⚠️ **Suave no siempre significa sin picante:** en Sichuan, incluso platos moderados pueden llevar pimienta de Sichuan. Pide claro y empieza poco a poco.
-
-## Excursiones
-
-Leshan y su Buda Gigante funcionan bien como excursion. Si tienes mas dias, Chengdu sirve como puerta hacia montanas y zonas de cultura tibetana en el oeste de Sichuan.
-
-## Transporte y pagos
-
-El metro es bilingue y util. Para trayectos tarde o lugares menos conectados, DiDi ayuda mucho. Configura Alipay o WeChat Pay antes de viajar; las tarjetas fisicas extranjeras no sirven para la mayoria de pagos diarios.
-
-## Resumen
-
-Chengdu combina comida potente, pandas y vida urbana relajada. Dos o tres dias bastan para lo esencial; mas tiempo permite excursiones y un ritmo mas local.
+Chengdu es una ciudad ideal para pasar 3-4 días antes o después de un viaje a Tíbet o Yunnan.
