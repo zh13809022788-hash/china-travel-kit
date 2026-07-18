@@ -1,10 +1,11 @@
 ---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'Page introuvable';
-const description = 'Page introuvable - ChinaTripBox';
+const title = 'Page non trouvée';
+const description = 'Page non trouvée - ChinaTripBox';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
@@ -12,8 +13,8 @@ const description = 'Page introuvable - ChinaTripBox';
   <main class="container-page py-16">
     <section class="mx-auto max-w-2xl">
       <p class="section-kicker">404</p>
-      <h1 class="mt-2 text-4xl font-bold text-gray-950">Page introuvable</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">La page demandée a été déplacée ou l'adresse est incorrecte.</p>
+      <h1 class="mt-2 text-4xl font-bold text-gray-950">Page non trouvée</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">La page demandée a été déplacée ou l’adresse est incorrecte.</p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="/fr/" class="btn-primary">Accueil</a>
         <a href="/fr/resources/" class="btn-outline">Commencer</a>
@@ -23,3 +24,5 @@ const description = 'Page introuvable - ChinaTripBox';
   </main>
   <Footer />
 </BaseLayout>
+
+---
