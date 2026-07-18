@@ -1,0 +1,295 @@
+---
+import '../styles/global.css';
+import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID, GA4_MEASUREMENT_ID } from '../config';
+
+type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: string;
+  noindex?: boolean;
+  locale?: LocaleCode;
+  alternates?: Partial<Record<LocaleCode, string>>;
+}
+
+const {
+  title = 'ChinaTripBox - Payment, eSIM & Transport Guides for Visitors',
+  description = 'Practical, up-to-date guides for foreign visitors to China: mobile payments, eSIM data plans, trains, ride-hailing and more.',
+  image = '/og-default.svg',
+  type = 'website',
+  noindex: explicitNoindex = false,
+  locale = 'en',
+  alternates,
+} = Astro.props;
+
+// Auto noindex for non-English locales and low-value cluster pages
+const path = Astro.url.pathname;
+const nonEnglishLocales = ['ko', 'ru', 'fr', 'de', 'es'];
+const isNonEnglish = nonEnglishLocales.some((loc) => path.startsWith(`/${loc}/`));
+const lowValuePaths = ['/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
+const isLowValue = lowValuePaths.some((prefix) => path.startsWith(prefix));
+const is404 = path === '/404/' || path === '/404';
+const noindex = explicitNoindex || isNonEnglish || (isLowValue && isNonEnglish) || is404;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image, Astro.site);
+const siteName = 'ChinaTripBox';
+const siteURL = new URL('/', Astro.site).toString();
+
+const htmlLangMap: Record<string, string> = { en: 'en', 'zh-TW': 'zh-TW', ja: 'ja', ko: 'ko', ru: 'ru', fr: 'fr', de: 'de', es: 'es' };
+const htmlLang = htmlLangMap[locale] ?? 'en';
+
+const hreflangCodes: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
+const localePrefixes: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
+
+const stripLocalePrefix = (path: string) => {
+  for (const prefix of Object.values(localePrefixes).filter((p) => p !== '/')) {
+    if (path.startsWith(prefix)) return path.slice(prefix.length - 1);
+  }
+  return path;
+};
+
+const samePageAlternates = (() => {
+  const basePath = stripLocalePrefix(Astro.url.pathname);
+  const paths: Partial<Record<LocaleCode, string>> = {};
+  for (const code of hreflangCodes) {
+    if (code === 'en') {
+      paths[code] = basePath || '/';
+    } else {
+      const prefix = localePrefixes[code].replace(/\/$/, '');
+      paths[code] = basePath === '/' ? `${prefix}/` : `${prefix}${basePath}`;
+    }
+  }
+  return paths;
+})();
+const pageAlternates = alternates ?? samePageAlternates;
+
+const availableLanguage = locale === 'en'
+  ? ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es']
+  : [locale, 'en'];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteURL}#organization`,
+      name: siteName,
+      url: siteURL,
+      logo: new URL('/favicon.svg', Astro.site).toString(),
+      sameAs: [
+        new URL('/about/', Astro.site).toString(),
+        new URL('/editorial-policy/', Astro.site).toString(),
+      ],
+      description:
+        'Independent China travel guides and planning tools for foreign visitors, covering mobile payments, eSIMs, transport, trip planning, and everyday travel logistics.',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        url: new URL('/contact/', Astro.site).toString(),
+        availableLanguage,
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteURL}#website`,
+      name: siteName,
+      url: siteURL,
+      description,
+      publisher: {
+        '@id': `${siteURL}#organization`,
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${siteURL}?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalURL.toString()}#webpage`,
+      url: canonicalURL.toString(),
+      name: title,
+      description,
+      isPartOf: {
+        '@id': `${siteURL}#website`,
+      },
+      about: {
+        '@id': `${siteURL}#organization`,
+      },
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="ChinaTripBox Travel Guides" href="/rss.xml" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="google-site-verification" content="4IazPod-9BT1hQUHHWC0xb6GO0esJ2o3oZB9Iq_d_lA" />
+    {ADSENSE_PUBLISHER_ID && <meta name="google-adsense-account" content={ADSENSE_PUBLISHER_ID} />}
+    {
+      ADSENSE_PUBLISHER_ID && (
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`}
+          crossorigin="anonymous"
+        />
+      )
+    }
+
+    {
+      CLARITY_PROJECT_ID && (
+        <script
+          is:inline
+          set:html={`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");
+          `}
+        />
+      )
+    }
+
+    {
+      GA4_MEASUREMENT_ID && (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`} />
+          <script is:inline set:html={`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA4_MEASUREMENT_ID}');
+          `} />
+        </>
+      )
+    }
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    {hreflangCodes.map((code) => {
+      const altUrl = pageAlternates?.[code] ? new URL(pageAlternates[code]!, Astro.site).toString() : null;
+      return altUrl ? <link rel="alternate" hreflang={code} href={altUrl} /> : null;
+    })}
+    {pageAlternates?.en && <link rel="alternate" hreflang="x-default" href={new URL(pageAlternates.en, Astro.site).toString()} />}
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <script is:inline set:html={`(function(){
+      // Redirect bare domain to www for canonical consistency
+      if(window.location.hostname==='chinatripbox.com'){
+        window.location.replace('https://www.chinatripbox.com'+window.location.pathname+window.location.search);
+        return;
+      }
+      var PREF_KEY='ctb-lang-pref';
+      var LOCALE_PREFIXES=['zh-tw','ja','ko','ru','fr','de','es'];
+      var pref=null,locales=null;
+      try{pref=localStorage.getItem(PREF_KEY);}catch(e){}
+
+      // Helper: check if current path already has a locale prefix
+      function hasLocalePrefix(p){
+        var parts=p.replace(/\\/$/,'').split('/');
+        if(parts.length<2)return null;
+        var first=parts[1].toLowerCase();
+        for(var k=0;k<LOCALE_PREFIXES.length;k++){if(first===LOCALE_PREFIXES[k])return LOCALE_PREFIXES[k];}
+        return null;
+      }
+
+      // Helper: normalize locale to path prefix (Astro uses lowercase paths)
+      function localePath(locale){return locale.toLowerCase();}
+
+      // Helper: redirect to a URL
+      function goTo(url){if(url&&window.location.href!==url){window.location.replace(url);}}
+
+      // Helper: find hreflang alternate href for a locale code
+      function findAlt(locale){
+        var alts=document.querySelectorAll('link[rel="alternate"][hreflang]');
+        for(var j=0;j<alts.length;j++){
+          var hl=alts[j].getAttribute('hreflang');
+          var hr=alts[j].getAttribute('href');
+          if(hl===locale&&hr)return hr;
+        }
+        return null;
+      }
+
+      // --- Stage 1: User has a language preference ---
+      if(pref==='en'){return;}
+      if(pref&&pref!=='en'){
+        var currentLocale=hasLocalePrefix(window.location.pathname);
+        // If we're already on a page in the preferred locale, do nothing
+        if(currentLocale&&currentLocale===localePath(pref)){return;}
+        // If we're on a non-preferred locale page, redirect to preferred version of same page
+        // (e.g. on /de/posts/x/ with pref=fr → try /fr/posts/x/)
+        if(currentLocale){
+          var swappedPath=window.location.pathname.replace(new RegExp('^/'+currentLocale+'/','i'),'/'+localePath(pref)+'/');
+          goTo(swappedPath);
+          return;
+        }
+        // We're on an English page — try hreflang alternate for preferred locale
+        var altHref=findAlt(pref);
+        if(altHref){
+          try{var tp=new URL(altHref).pathname;}catch(e){tp=null;}
+          if(tp&&window.location.pathname!==tp){goTo(altHref);return;}
+        }
+        // No alternate exists → redirect to preferred locale homepage
+        // (nav links point to English pages, this keeps user in their language)
+        goTo(window.location.origin+'/'+localePath(pref)+'/');
+        return;
+      }
+
+      // --- Stage 2: No preference — auto-detect from browser language ---
+      var langs=navigator.languages||[navigator.language]||[];
+      var detected=null;
+      for(var i=0;i<langs.length;i++){
+        var lang=(langs[i]||'').toLowerCase();
+        if(lang.startsWith('zh-tw')||lang.startsWith('zh-hant')||lang==='zh-hk'||lang==='zh-mo'){detected='zh-TW';break;}
+        if(lang.startsWith('ja')){detected='ja';break;}
+        if(lang.startsWith('ko')){detected='ko';break;}
+        if(lang.startsWith('ru')){detected='ru';break;}
+        if(lang.startsWith('fr')){detected='fr';break;}
+        if(lang.startsWith('de')){detected='de';break;}
+        if(lang.startsWith('es')){detected='es';break;}
+        if(lang.startsWith('en')){detected='en';break;}
+        // zh-CN/zh-Hans -> no auto-redirect, let user manually choose language
+      }
+      if(!detected||detected==='en')return;
+      // Check we're not already on a locale page
+      if(hasLocalePrefix(window.location.pathname))return;
+      var alt=findAlt(detected);
+      if(alt){
+        try{var tp2=new URL(alt).pathname;}catch(e){tp2=null;}
+        if(tp2&&window.location.pathname!==tp2){goTo(alt);}
+      }
+    })();`} />
+
+    <slot name="head" />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <slot />
+  </body>
+</html>
