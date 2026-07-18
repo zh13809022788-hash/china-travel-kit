@@ -10,25 +10,25 @@ const posts = (await getCollection('posts-ko'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Culture of China — Traditions & Customs for Travelers';
-const description = 'Explore Chinese culture as a foreign traveler: tea ceremony, Spring Festival, face and guanxi, calligraphy, kung fu, the zodiac, and the traditions that shape daily life in China.';
+const title = '중국 문화: 여행자를 위한 전통과 관습';
+const description = '외국인 여행자의 시선으로 중국 문화를 살펴보세요. 다도, 춘절, 체면과 꽌시, 서예, 쿵푸, 띠 문화까지, 중국인의 일상을 이루는 전통을 소개합니다.';
 
 const relatedTools = [
-  { href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Tipping & etiquette', desc: 'When to tip, when not to, and why' },
-  { href: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Packing for festivals', desc: 'What to bring during holiday seasons' },
-  { href: '/ko/posts/how-to-pay-in-china-tourist-guide/', title: 'How to pay in China', desc: '결제s during festival season' },
+  { href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '팁과 예절', desc: '팁을 줘야 할 때와 그렇지 않을 때, 그리고 그 이유' },
+  { href: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '축제 시즌 짐 꾸리기', desc: '명절과 휴가철에 챙기면 좋은 준비물' },
+  { href: '/ko/posts/how-to-pay-in-china-tourist-guide/', title: '중국에서 결제하는 방법', desc: '축제 시즌에 알아두면 좋은 결제 수단' },
 ];
 
 const relatedCities = [
-  { href: '/ko/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Imperial culture and hutong life' },
-  { href: '/ko/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Tea culture and West Lake heritage' },
-  { href: '/ko/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Teahouse culture and slow living' },
+  { href: '/ko/posts/beijing-city-guide-for-foreigners/', title: '베이징', desc: '황실 문화와 후퉁의 일상' },
+  { href: '/ko/posts/hangzhou-city-guide-for-foreigners/', title: '항저우', desc: '차 문화와 서호의 유산' },
+  { href: '/ko/posts/chengdu-city-guide-for-foreigners/', title: '청두', desc: '찻집 문화와 느긋한 삶의 리듬' },
 ];
 
 const otherSeries = [
-  { href: '/ko/series/food-of-china/', title: 'Food of China' },
-  { href: '/ko/series/history-of-china/', title: 'History of China' },
-  { href: '/ko/series/modern-china/', title: 'Modern China' },
+  { href: '/ko/series/food-of-china/', title: '중국 음식' },
+  { href: '/ko/series/history-of-china/', title: '중국 역사' },
+  { href: '/ko/series/modern-china/', title: '현대 중국' },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
 const locale = 'ko';
@@ -38,7 +38,7 @@ const locale = 'ko';
   <Header locale="ko" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content Series</p>
+      <p class="section-kicker">콘텐츠 시리즈</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -49,8 +49,8 @@ const locale = 'ko';
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Articles</p>
-            <h2>Culture of China series</h2>
+            <p class="section-kicker">글 목록</p>
+            <h2>중국 문화 시리즈</h2>
           </div>
         </div>
         {posts.length > 0 ? (
@@ -64,14 +64,14 @@ const locale = 'ko';
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Articles in this series are being prepared. Check back soon.</p>
+          <p class="mt-6 text-gray-500">이 시리즈의 글은 현재 준비 중입니다. 곧 다시 확인해 주세요.</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Practical tools</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Travel with cultural awareness</h2>
+          <p class="section-kicker">실용 정보</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">문화를 이해하며 여행하기</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -83,8 +83,8 @@ const locale = 'ko';
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">City guides</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Cultural cities</h2>
+          <p class="section-kicker">도시 가이드</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">문화를 느낄 수 있는 도시</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -96,7 +96,7 @@ const locale = 'ko';
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">More series</p>
+          <p class="section-kicker">다른 시리즈</p>
           <div class="mt-3 grid gap-2">
             {otherSeries.map((s) => (
               <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
