@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -162,7 +162,7 @@ const countries = [
       };
     }
 
-    // tourism or business
+    // 観光またはビジネスの場合
     if (has30) {
       return {
         tone: 'good',
@@ -234,4 +234,3 @@ const countries = [
     result.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 </script>
-
