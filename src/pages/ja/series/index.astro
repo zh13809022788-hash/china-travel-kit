@@ -1,40 +1,40 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
-const title = 'China旅行コンテンツシリーズ';
-const description = '食、歴史、現代生活、自然、文化という5つのテーマ別シリーズを通じてChinaを探索。各シリーズは、外国人旅行者にひらめきと実用的な情報を届けるために作られています。';
+const title = '中国旅行コンテンツシリーズ';
+const description = '食、歴史、現代生活、自然、文化の5つのテーマ別シリーズを通して、中国の魅力をご紹介します。各シリーズは、海外からの旅行者の皆さまに着想と実用的な情報をお届けできるように作成しています。';
 
 const seriesList = [
   {
     href: '/ja/series/food-of-china/',
-    title: 'Chinaの食',
-    desc: '屋台から宴会場まで。八大料理、地域ごとの朝食、火鍋のスタイル、そして街を横断してでも食べに行く価値のある料理をめぐる、外国人のための美食の旅。',
-    icon: '食べ物・飲み物',
+    title: '中国の食',
+    desc: '屋台料理から宴席料理までご紹介します。八大料理、地域ごとの朝食、火鍋のスタイル、そしてわざわざ食べに行く価値のある一品まで、海外からの旅行者の皆さまに向けた美食の旅をお届けします。',
+    icon: '食と飲み物',
   },
   {
     href: '/ja/series/history-of-china/',
-    title: 'Chinaの歴史',
-    desc: '旅行者のために古代遺跡を読み解く。万里の長城、兵馬俑、紫禁城、シルクロード、そして目の前の景色の背後にある物語。',
+    title: '中国の歴史',
+    desc: '旅行者の皆さまにもわかりやすく古代遺跡を読み解きます。万里の長城、兵馬俑、紫禁城、シルクロード、そして目の前に広がる景色の背景にある物語まで丁寧にご紹介します。',
     icon: '歴史',
   },
   {
     href: '/ja/series/modern-china/',
-    title: '現代のChina',
-    desc: '外国人が最も驚くもの。キャッシュレスの街、世界最速クラスの鉄道、メガシティの規模、スーパーアプリ、そして今日のChinaの暮らしを形づくる日常のテクノロジー。',
+    title: '現代の中国',
+    desc: '海外からの旅行者の皆さまが特に驚かれる中国の今をご紹介します。キャッシュレス社会、世界有数の高速鉄道、巨大都市のスケール、スーパーアプリ、そして現在の暮らしを形づくる日常のテクノロジーまで幅広く取り上げます。',
     icon: '現代生活',
   },
   {
     href: '/ja/series/nature-of-china/',
-    title: 'Chinaの自然',
-    desc: 'Avatarのような山々、童話のような湖、カルスト地形、チベット高原。外国人旅行者向けの実用ガイドとともに巡る、China屈指の壮大な自然スポット。',
+    title: '中国の自然',
+    desc: 'Avatarを思わせる山々、おとぎ話のような湖、カルスト地形、チベット高原など、中国を代表する雄大な自然スポットをご紹介します。海外からの旅行者の皆さまに役立つ実用ガイドもあわせてご案内します。',
     icon: '自然',
   },
   {
     href: '/ja/series/culture-of-china/',
-    title: 'Chinaの文化',
-    desc: '茶道、春節、面子と関係、書道、カンフー、干支。表面的な観光を越えて理解したい旅行者のために、文化的伝統をわかりやすく解説します。',
+    title: '中国の文化',
+    desc: '茶文化、春節、面子と人間関係、書道、カンフー、干支などを取り上げます。表面的な観光だけではなく、文化への理解を深めたい旅行者の皆さまに向けて、伝統文化をわかりやすくご説明します。',
     icon: '文化',
   },
 ];
@@ -55,7 +55,7 @@ const seriesList = [
           <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{s.icon}</span>
           <h2 class="mt-2 text-xl font-bold text-gray-950">{s.title}</h2>
           <p class="mt-2 text-sm leading-6 text-gray-600">{s.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">シリーズを見る</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">シリーズ一覧を見る</span>
         </a>
       ))}
     </section>
