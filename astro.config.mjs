@@ -43,8 +43,8 @@ export default defineConfig({
           return false;
         }
         // Keep only released non-English pages; exclude unreleased non-English locales and low-value paths
-        const excludedPrefixes = ['/ja/', '/ko/', '/ru/', '/es/', '/authors/'];
-        // de-DE, fr-FR released for Google indexing
+        const excludedPrefixes = ['/ja/', '/ko/', '/ru/', '/authors/'];
+        // de-DE, fr-FR, es-ES released for Google indexing
         if (excludedPrefixes.some((prefix) => path.startsWith(prefix))) return false;
         if (path === '/404' || path === '/404/') return false;
         return true;
