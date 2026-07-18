@@ -5,14 +5,14 @@ import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import { TOOLS as tools } from '../../../config';
 
-const title = '無料で使える中国旅行ツール集：ビザ、決済、eSIM、予算、運転手向けカード、会話フレーズ';
+const title = '無料で使える中国旅行ツール集｜ビザ・決済・eSIM・予算・運転手向けカード・会話フレーズ';
 const description =
-  '中国旅行の準備に役立つ無料のインタラクティブツールをまとめました。ビザなし入国の確認、使える決済カードのチェック、eSIMの比較、旅行予算の試算、現金の予備額、電源プラグ、中国語フレーズ、タクシー運転手に見せる住所カードまで、このページで確認できます。';
+  '中国旅行の準備に役立つ無料のインタラクティブツールをまとめています。ビザなし入国の確認、使える決済カードのチェック、eSIMの比較、旅行予算の試算、現金の予備額、電源プラグ、中国語フレーズ、タクシー運転手に見せる住所カードまで、このページでまとめて確認できます。';
 
 const toolUseCases = [
   {
-    title: '航空券を予約する前に',
-    text: '旅程や訪問都市を決める前に、ビザなし入国チェッカー、ベストシーズンプランナー、予算見積もりを確認しておくと安心です。',
+    title: '航空券を予約する前に確認しましょう',
+    text: '旅程や訪問都市を決める前に、ビザなし入国チェッカー、旅行に最適な時期、予算見積もりを確認しておくと安心です。',
     links: [
       { href: '/ja/tools/visa-free-checker/', label: 'ビザなし入国チェッカー' },
       { href: '/ja/tools/best-time-to-visit/', label: '旅行に最適な時期' },
@@ -20,8 +20,8 @@ const toolUseCases = [
     ],
   },
   {
-    title: '出発前に',
-    text: 'まだ自宅で落ち着いて設定できるうちに、決済、eSIM、アプリ、電源プラグ、フレーズ関連のツールをひと通り確認しておきましょう。',
+    title: '出発前に確認しておきましょう',
+    text: 'まだ自宅で落ち着いて設定できるうちに、決済、eSIM、アプリ、電源プラグ、フレーズ関連のツールをひと通り確認しておくと安心です。',
     links: [
       { href: '/ja/tools/payment-checker/', label: '決済チェッカー' },
       { href: '/ja/tools/esim-comparison/', label: 'eSIM比較' },
@@ -29,8 +29,8 @@ const toolUseCases = [
     ],
   },
   {
-    title: '中国滞在中に',
-    text: 'アプリの操作、タクシーの利用、メニューの読み取り、ホテルのフロント対応で困ったときは、運転手カード、通貨換算、必須フレーズが役立ちます。',
+    title: '中国滞在中に役立ちます',
+    text: 'アプリの操作、タクシーの利用、メニューの読み取り、ホテルのフロント対応で困ったときは、運転手に見せるカード、通貨換算、必須フレーズが役立ちます。',
     links: [
       { href: '/ja/tools/survival-kit/', label: 'サバイバルキット' },
       { href: '/ja/tools/show-to-driver/', label: '運転手に見せるカード' },
@@ -60,12 +60,12 @@ const toolsJsonLd = {
   <Header locale="ja" />
   <main class="container-page py-12">
     <header class="max-w-2xl">
-      <p class="section-kicker">ツール一覧</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">無料で使える中国旅行ツール集</h1>
+      <p class="section-kicker">ツール一覧です</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">無料で使える中国旅行ツール集です</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">出発前チェックリストを見る</a>
-        <a href="/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">初めての方向け旅行プランを見る</a>
+        <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">出発前チェックリストを確認する</a>
+        <a href="/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">初めての方向け旅行プランを確認する</a>
       </div>
     </header>
 
