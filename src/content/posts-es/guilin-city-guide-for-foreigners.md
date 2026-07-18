@@ -1,19 +1,28 @@
 ---
-title: "Guía de Guilin 2026: todo lo que un turista extranjero necesita saber"
-description: "Guía completa de Guilin — crucero por el río Li, Yangshuo, terrazas de arroz de Longji, Cueva de la Flauta de Caña, comida y consejos."
+title: "Guía de Guilín 2026: paisajes de karst y el río Li"
+description: "Guía de Guilín para turistas extranjeros: crucero por el río Li, colinas de la Trompa del Elefante, terrazas de arroz de Longji."
 pubDate: 2026-07-18
 category: essentials
-tags: ["guilin", "guía de viaje", "china", "guangxi"]
+tags: ["Guilín", "río Li", "karst", "naturaleza"]
 featured: false
 faqs:
-  - question: "¿Cuántos días para Guilin?"
-    answer: "4 a 5 días. Día 1: llega, cueva y colina. Día 2: crucero a Yangshuo. Día 3: Yangshuo en bici. Día 4: terrazas de Longji. Día 5: descanso."
-  - question: "¿Vale la pena el crucero por el río Li?"
-    answer: "Totalmente. Cuatro horas navegando entre picos kársticos — uno de los viajes en barco más bellos del mundo."
-cover: "city-guilin"
-coverAlt: "Paisaje kárstico del río Li"
+  - question: "¿Cuántos días se necesitan en Guilín?"
+    answer: "3-4 días. Un día para el crucero por el río Li a Yangshuo, un día para las colinas de Guilín, y un día para las terrazas de arroz de Longji."
+  - question: "¿Merece la pena el crucero por el río Li?"
+    answer: "Sí, es una de las experiencias más icónicas de China. El crucero dura 4-5 horas hasta Yangshuo y cuesta unos 400 yuanes. Los paisajes de karst son impresionantes."
+  - question: "¿Mejor época para visitar?"
+    answer: "Septiembre-noviembre es la mejor época. Clima templado y el río Li tiene buen caudal. Evita julio-agosto por el calor extremo."
 ---
 
-## Introducción
+Guilín es el paisaje de postal de China. Las montañas de karst que se elevan sobre el río Li son una de las imágenes más famosas de China.
 
-Guilin es el destino más escénico de China. Los picos kársticos de piedra caliza que se elevan desde el río Li han sido celebrados durante más de mil años.
+**Imperdibles:**
+- Crucero por el río Li a Yangshuo (4-5 horas, ~450 yuanes)
+- Colina de la Trompa del Elefante (símbolo de Guilín)
+- Cueva del Caño de la Flauta (cueva de 240 millones de años)
+- Terrazas de arroz de Longji (a 2 horas, impresionantes en septiembre)
+- Yangshuo (pueblo turístico con ambiente relajado)
+
+**Comida local:**
+- Arroz de Guilín (桂林米粉) → El plato más famoso, fideos de arroz en caldo
+- Pescado del río Li al vapor
