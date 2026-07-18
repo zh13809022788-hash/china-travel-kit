@@ -18,22 +18,22 @@ const description = 'Vergleiche und richte die besten eSIM-Datentarife für Reis
 const connectionChoices = [
   {
     title: 'eSIM',
-    desc: 'Am besten für die meisten Kurztrips, wenn Ihr Telefon eSIM unterstützt und Sie Daten vor der Landung bereit haben möchten.',
+    desc: 'Für die meisten Kurzreisen die beste Wahl, wenn dein Smartphone eSIM unterstützt und du schon vor der Landung mobile Daten nutzen möchtest.',
   },
   {
     title: 'Roaming',
-    desc: 'Nützlich als Backup für Banking-SMS und Erreichbarkeit in der ersten Stunde, aber oft teurer bei hohem Datenverbrauch.',
+    desc: 'Praktisch als Absicherung für Banking-SMS und Erreichbarkeit in der ersten Stunde, bei hohem Datenverbrauch aber oft teurer.',
   },
   {
     title: 'Pocket-WLAN oder lokale SIM-Karte',
-    desc: 'Erwägenswert für Gruppen, längere Aufenthalte oder Telefone, die keine Reise-eSIMs installieren können.',
+    desc: 'Sinnvoll für Gruppen, längere Aufenthalte oder Smartphones, auf denen sich keine Reise-eSIM installieren lässt.',
   },
 ];
 
 const internetTools = [
-  { href: '/de/tools/esim-comparison/', title: 'eSIM-Tarif-Vergleich', desc: 'Vergleiche Reisedatentarife, Gültigkeit und typische Anwendungsfälle.' },
-  { href: '/de/tools/app-availability-checker/', title: 'App-Verfügbarkeitsprüfer', desc: 'Prüfe, ob gängige Apps in China funktionieren und welche Alternativen du vorbereiten solltest.' },
-  { href: '/de/posts/internet-access-china-apps-that-work-2026/', title: 'Leitfaden für Internetzugang', desc: 'Verstehe App-Zugang, VPN-Erwartungen und praktische Einrichtung vor der Ankunft.' },
+  { href: '/de/tools/esim-comparison/', title: 'eSIM-Tarifvergleich', desc: 'Vergleiche Reisedatentarife, Laufzeiten und typische Einsatzbereiche.' },
+  { href: '/de/tools/app-availability-checker/', title: 'Prüfer für App-Verfügbarkeit', desc: 'Prüfe, welche gängigen Apps in China funktionieren und welche Alternativen du vorab vorbereiten solltest.' },
+  { href: '/de/posts/internet-access-china-apps-that-work-2026/', title: 'Leitfaden zum Internetzugang', desc: 'Verstehe den App-Zugang, realistische VPN-Erwartungen und die praktische Vorbereitung vor der Ankunft.' },
 ];
 ---
 
@@ -42,7 +42,7 @@ const internetTools = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">eSIM</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM &amp; Datenguides</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Ratgeber zu eSIM und mobilen Daten</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -51,30 +51,30 @@ const internetTools = [
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-esim">
-      <h2 id="featured-esim" class="sr-only">Empfohlene Internetguides</h2>
+      <h2 id="featured-esim" class="sr-only">Empfohlene Internet-Ratgeber</h2>
       <a href="/de/posts/best-esim-for-china-travel-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">Beste eSIM 2026</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Vergleiche Airalo, Holafly, Nomad für Chinareisen</p>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Vergleiche Airalo, Holafly und Nomad für Reisen nach China</p>
       </a>
       <a href="/de/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">eSIM vs Roaming</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Echter 10-Tage-Kostenvergleich für Touristen</p>
+        <span class="font-semibold text-gray-950">eSIM oder Roaming</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Der echte Kostenvergleich für 10 Tage als Tourist</p>
       </a>
       <a href="/de/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">VPN-Guide 2026</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Brauchen Touristen in China noch ein VPN?</p>
+        <span class="font-semibold text-gray-950">VPN-Ratgeber 2026</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Brauchen Touristen in China überhaupt noch ein VPN?</p>
       </a>
       <a href="/de/posts/pocket-wifi-vs-esim-vs-sim-china/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Pocket WiFi vs eSIM</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Vergleiche alle Verbindungsoptionen</p>
+        <span class="font-semibold text-gray-950">Pocket WiFi oder eSIM</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Vergleiche alle Möglichkeiten für die Internetverbindung</p>
       </a>
     </section>
 
     <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Wähle deine Internet-Einrichtung für China</h2>
+        <h2 class="text-2xl font-bold text-gray-900">Wähle die passende Internetlösung für China</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Die sicherste Einrichtung für Besucher ist in der Regel eine primäre Datenoption plus eine Ausweichlösung für Banking, Karten, Übersetzung und Ride-Hailing am ersten Tag.
+          Für Besucher ist eine Kombination aus einer primären Datenlösung und einer Ausweichoption für Banking, Karten, Übersetzungen und Ride-Hailing am ersten Tag meist die sicherste Wahl.
         </p>
         <div class="mt-5 grid gap-3">
           {connectionChoices.map((choice) => (
@@ -87,7 +87,7 @@ const internetTools = [
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">Internet-Tools</h2>
+        <h2 class="text-lg font-bold text-gray-900">Hilfreiche Internet-Tools</h2>
         <div class="mt-4 grid gap-3">
           {internetTools.map((tool) => (
             <a href={tool.href} class="rounded-lg border border-brand-100 bg-white p-4 hover:border-brand-200 hover:no-underline">
@@ -113,7 +113,7 @@ const internetTools = [
           {(i + 1) % 3 === 0 && <div class="md:col-span-2"><AdSlot format="in-article" /></div>}
         </>
       ))}
-      {posts.length === 0 && <p class="text-gray-500">Guides erscheinen bald.</p>}
+      {posts.length === 0 && <p class="text-gray-500">Ratgeber folgen in Kürze.</p>}
     </section>
   </main>
   <Footer />
