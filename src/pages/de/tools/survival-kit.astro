@@ -7,22 +7,22 @@ import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
 import ContextAiBubble from '../../../components/ContextAiBubble.astro';
 import survivalKits from '../../../data/survival-kits.json';
 
-const title = 'China-Notfallkit: Übersetzungskarten und Reise-Checklisten';
+const title = 'China-Notfallset: Übersetzungskarten und Reise-Checklisten';
 const description =
-  'Interaktive China-Notfallkits für internationale Reisende: Vollbild-Übersetzungskarten, Ankunfts-Checklisten, Karten für Lebensmittelallergien und praktische Tools für die Kommunikation vor Ort.';
+  'Interaktive China-Notfallsets für internationale Reisende: Vollbild-Übersetzungskarten, Ankunfts-Checklisten, Karten für Lebensmittelallergien und praktische Hilfsmittel für die Kommunikation vor Ort.';
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Notfallkit</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">China-Notfallkit</h1>
+      <p class="section-kicker">Notfallset</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">China-Notfallset</h1>
       <p class="mt-3 text-lg leading-8 text-gray-600">
-        Nutze Vollbild-Übersetzungskarten und gespeicherte Checklisten für Situationen, in denen ein langer Reiseführer zu unpraktisch ist:
-        Ankunft am Flughafen, Hotel-Check-in, Taxis, Restaurants, Allergien und die wichtigsten Erledigungen am ersten Tag.
+        Nutze Vollbild-Übersetzungskarten und gespeicherte Checklisten für Situationen, in denen ein ausführlicher Reiseführer zu unhandlich ist:
+        Ankunft am Flughafen, Hotel-Check-in, Taxi, Restaurant, Allergien und die wichtigsten Erledigungen am ersten Tag.
       </p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="#arrival" class="btn-primary">Mit der Ankunft beginnen</a>
+        <a href="#arrival" class="btn-primary">Mit der Ankunft starten</a>
         <a href="#food" class="btn-outline">Essenskarten öffnen</a>
       </div>
     </header>
@@ -37,7 +37,7 @@ const description =
         <p class="mt-2 text-sm leading-6 text-gray-600">Dein Fortschritt wird im Browser gespeichert, damit du später genau dort weitermachen kannst, wo du aufgehört hast.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Kontextbezogener KI-Start</h2>
+        <h2 class="text-lg font-bold text-gray-950">Kontextbezogener KI-Einstieg</h2>
         <p class="mt-2 text-sm leading-6 text-gray-600">Nutze den schwebenden Helfer, um die Reisehilfe von ChinaTripBox direkt mit einem passenden Themen-Prompt zu öffnen.</p>
       </div>
     </section>
@@ -46,7 +46,7 @@ const description =
       {survivalKits.map((kit) => (
         <section id={kit.slug} class="grid gap-5 rounded-xl border border-gray-200 bg-gray-50 p-5">
           <div class="max-w-3xl">
-            <p class="section-kicker">{kit.slug} Paket</p>
+            <p class="section-kicker">{kit.slug} Set</p>
             <h2 class="mt-1 text-2xl font-bold text-gray-950">{kit.title}</h2>
             <p class="mt-2 text-sm leading-6 text-gray-600">{kit.description}</p>
             <div class="mt-3 flex flex-wrap gap-2">
@@ -65,6 +65,6 @@ const description =
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="Hilf mir dabei, das China-Notfallkit für Ankunft, Restaurants, Übersetzungskarten und die Vorbereitung meiner Checkliste zu nutzen." />
+  <ContextAiBubble defaultPrompt="Hilf mir, das China-Notfallset für Ankunft, Restaurants, Übersetzungskarten und die Vorbereitung meiner Checkliste zu nutzen." />
   <Footer />
 </BaseLayout>
