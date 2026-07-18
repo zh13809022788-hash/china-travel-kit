@@ -1,33 +1,33 @@
-﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'China Travel Help';
+const title = 'Aide voyage en Chine';
 const description =
-  'Ask one-on-one China travel questions about payments, eSIMs, transport, apps, and first-day setup with AI-assisted triage and optional human help.';
+  "Posez vos questions de voyage en Chine en tête-à-tête sur les paiements, les eSIM, les transports, les applications et la préparation du premier jour, avec un tri assisté par IA et une aide humaine en option.";
 
 const quickPrompts = [
-  'My Alipay or WeChat Pay card will not link.',
-  'I need an eSIM and app access plan for my trip.',
-  'I need help getting from the airport to my hotel.',
-  'I am not sure how much cash to bring.',
+  "Ma carte ne s'associe pas à Alipay ou WeChat Pay.",
+  "J'ai besoin d'un plan eSIM et d'accès aux applications pour mon voyage.",
+  "J'ai besoin d'aide pour aller de l'aéroport à mon hôtel.",
+  "Je ne sais pas combien d'espèces emporter.",
 ];
 
 const supportAreas = [
-  'Paiement setup: Alipay, WeChat Pay, cards, fees, and cash backup',
-  'Connectivity: eSIMs, roaming, VPN-sensitive apps, and airport arrival data',
-  'Transport: airport routes, metro, DiDi, taxis, and high-speed rail basics',
-  'App use: translation, food delivery, maps, ride-hailing, and screenshots',
-  'Trip setup: first-day checklist, city-specific prep, and practical next steps',
-  'Human escalation: complex cases that need back-and-forth context',
+  'Configuration des paiements : Alipay, WeChat Pay, cartes, frais et solution de secours en espèces',
+  "Connectivité : eSIM, roaming, applications sensibles au VPN et données à l'arrivée à l'aéroport",
+  "Transports : trajets depuis l'aéroport, métro, DiDi, taxis et bases du train à grande vitesse",
+  'Utilisation des applications : traduction, livraison de repas, cartes, VTC et captures d’écran',
+  'Préparation du voyage : checklist du premier jour, préparation selon la ville et prochaines étapes pratiques',
+  "Escalade vers un humain : cas complexes qui nécessitent des échanges supplémentaires",
 ];
 
 const safetyRules = [
-  'Do not send passport photos, full card numbers, passwords, PINs, or one-time codes.',
-  'Do not ask anyone to log in to your accounts or complete identity checks for you.',
-  'Do not use this for legal, immigration, medical, banking, or emergency advice.',
-  'Check important rules with official sources, airlines, banks, telecoms, or app operators.',
+  "N'envoyez pas de photos de passeport, de numéros complets de carte, de mots de passe, de codes PIN ni de codes à usage unique.",
+  "Ne demandez à personne de se connecter à vos comptes ni d'effectuer des vérifications d'identité à votre place.",
+  "N'utilisez pas ce service pour des conseils juridiques, d'immigration, médicaux, bancaires ou d'urgence.",
+  'Vérifiez les règles importantes auprès des sources officielles, des compagnies aériennes, des banques, des opérateurs télécoms ou des exploitants des applications.',
 ];
 ---
 
@@ -37,42 +37,42 @@ const safetyRules = [
     <section class="border-b border-gray-200 bg-white">
       <div class="container-page grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
         <div>
-          <p class="section-kicker">One-on-one travel support</p>
+          <p class="section-kicker">Assistance voyage en tête-à-tête</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            Ask a China travel question before it slows you down
+            Posez une question sur votre voyage en Chine avant qu’elle ne vous ralentisse
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            Start with free AI help for practical China travel problems. If your question needs
-            human judgment, screenshots, or back-and-forth context, turn it into a review request.
+            Commencez avec une aide IA gratuite pour les problèmes pratiques de voyage en Chine. Si votre question demande
+            un jugement humain, des captures d’écran ou des échanges supplémentaires, transformez-la en demande de révision.
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#travel-help-chat" class="btn-primary">Start a request</a>
-            <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">Use pre-trip checklist</a>
+            <a href="#travel-help-chat" class="btn-primary">Commencer une demande</a>
+            <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">Utiliser la checklist avant départ</a>
             <a href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Travel%20Help%20Request" class="btn-outline">
-              Email directly
+              Envoyer un e-mail directement
             </a>
           </div>
         </div>
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
-          <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Pilot status</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">AI first, human review later</h2>
+          <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Statut pilote</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">D’abord l’IA, ensuite la révision humaine</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            Free answers are generated by AI. Human-reviewed trip help is still routed by email
-            while we test the workflow.
+            Les réponses gratuites sont générées par IA. L’aide voyage relue par un humain est encore traitée par e-mail
+            pendant que nous testons ce fonctionnement.
           </p>
           <dl class="mt-5 grid gap-3 text-sm">
             <div class="flex items-center justify-between gap-4">
-              <dt class="text-gray-500">Best for</dt>
-              <dd class="font-semibold text-gray-900">Practical trip setup</dd>
+              <dt class="text-gray-500">Idéal pour</dt>
+              <dd class="font-semibold text-gray-900">Préparation pratique du voyage</dd>
             </div>
             <div class="flex items-center justify-between gap-4">
-              <dt class="text-gray-500">Response path</dt>
-              <dd class="font-semibold text-gray-900">AI + email follow-up</dd>
+              <dt class="text-gray-500">Mode de réponse</dt>
+              <dd class="font-semibold text-gray-900">IA + suivi par e-mail</dd>
             </div>
             <div class="flex items-center justify-between gap-4">
               <dt class="text-gray-500">Paiement</dt>
-              <dd class="font-semibold text-gray-900">Not active</dd>
+              <dd class="font-semibold text-gray-900">Non activé</dd>
             </div>
           </dl>
         </aside>
@@ -83,17 +83,17 @@ const safetyRules = [
       <section id="travel-help-chat" class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <div class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <div class="border-b border-gray-200 bg-gray-50 px-5 py-4">
-          <p class="section-kicker">Free AI travel help</p>
-            <h2 class="mt-1 text-2xl font-bold text-gray-950">Travel help desk</h2>
+          <p class="section-kicker">Aide voyage IA gratuite</p>
+            <h2 class="mt-1 text-2xl font-bold text-gray-950">Assistance voyage</h2>
           </div>
 
           <div class="grid gap-0 md:grid-cols-[minmax(0,1fr)_280px]">
             <div class="flex min-h-[560px] flex-col">
               <div id="chat-log" class="flex-1 space-y-4 overflow-y-auto p-5" aria-live="polite">
                 <div class="max-w-[88%] rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-700">
-                  <strong class="block text-gray-950">ChinaTripBox Help</strong>
-                  Tell us what you are trying to do, where you are in the trip, and what already
-                  happened. The AI helper will suggest next steps and flag when human review is better.
+                  <strong class="block text-gray-950">Aide ChinaTripBox</strong>
+                  Dites-nous ce que vous essayez de faire, où vous en êtes dans le voyage et ce qui s’est déjà
+                  passé. L’assistant IA suggérera les prochaines étapes et signalera quand une révision humaine est préférable.
                 </div>
               </div>
 
@@ -110,60 +110,60 @@ const safetyRules = [
                   ))}
                 </div>
                 <form id="travel-help-form" class="grid gap-3">
-                  <label class="sr-only" for="help-message">Your travel question</label>
+                  <label class="sr-only" for="help-message">Votre question de voyage</label>
                   <textarea
                     id="help-message"
                     name="message"
                     rows="5"
                     class="w-full resize-y rounded-lg border border-gray-300 px-4 py-3 text-sm leading-6 text-gray-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
-                    placeholder="Example: I arrive in Shanghai tomorrow. My Mastercard will not link in WeChat Pay, but Alipay works. Can I still use metro, DiDi, and food delivery?"
+                    placeholder="Exemple : J’arrive à Shanghai demain. Ma Mastercard ne s’associe pas à WeChat Pay, mais Alipay fonctionne. Est-ce que je peux quand même utiliser le métro, DiDi et la livraison de repas ?"
                     required
                   ></textarea>
                   <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <p id="form-status" class="text-sm text-gray-500">Avoid sensitive personal data.</p>
-                    <button id="help-submit" type="submit" class="btn-primary">Ask AI</button>
+                    <p id="form-status" class="text-sm text-gray-500">Évitez les données personnelles sensibles.</p>
+                    <button id="help-submit" type="submit" class="btn-primary">Demander à l’IA</button>
                   </div>
                 </form>
               </div>
             </div>
 
             <aside class="border-t border-gray-200 bg-gray-50 p-5 md:border-l md:border-t-0">
-              <h3 class="text-lg font-bold text-gray-950">Request details</h3>
+              <h3 class="text-lg font-bold text-gray-950">Détails de la demande</h3>
               <div class="mt-4 grid gap-4">
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
-                  Trip stage
+                  Étape du voyage
                   <select id="trip-stage" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                    <option>Before departure</option>
-                    <option>At the airport</option>
-                    <option>Already in China</option>
-                    <option>Long-stay planning</option>
+                    <option>Avant le départ</option>
+                    <option>À l’aéroport</option>
+                    <option>Déjà en Chine</option>
+                    <option>Planification long séjour</option>
                   </select>
                 </label>
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
-                  Main topic
+                  Sujet principal
                   <select id="help-topic" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                    <option>Paiement apps</option>
-                    <option>Internet and eSIM</option>
-                    <option>Transport route</option>
-                    <option>Food, delivery, or local apps</option>
-                    <option>General trip setup</option>
+                    <option>Applications de paiement</option>
+                    <option>Internet et eSIM</option>
+                    <option>Itinéraire de transport</option>
+                    <option>Repas, livraison ou applications locales</option>
+                    <option>Préparation générale du voyage</option>
                   </select>
                 </label>
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
-                  City or route
+                  Ville ou trajet
                   <input
                     id="help-location"
                     class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700"
-                    placeholder="Shanghai, Beijing, airport to hotel..."
+                    placeholder="Shanghai, Pékin, aéroport vers hôtel..."
                   />
                 </label>
               </div>
 
               <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4">
-                <p class="text-sm font-bold text-gray-950">Human upgrade</p>
+                <p class="text-sm font-bold text-gray-950">Passer à un humain</p>
                 <p class="mt-2 text-sm leading-6 text-gray-700">
-                  Use this when a simple guide is not enough. The prepared email includes your topic,
-                  stage, location, and question so a person can reply with context.
+                  Utilisez ceci quand un simple guide ne suffit pas. L’e-mail préparé inclut votre sujet,
+                  l’étape, le lieu et la question afin qu’une personne puisse répondre avec le contexte.
                 </p>
               </div>
 
@@ -172,7 +172,7 @@ const safetyRules = [
                 href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Travel%20Help%20Request"
                 class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 hover:border-brand-600 hover:text-brand-600 hover:no-underline"
               >
-                Prepare email request
+                Préparer la demande par e-mail
               </a>
             </aside>
           </div>
@@ -180,8 +180,8 @@ const safetyRules = [
 
         <aside class="space-y-6">
           <section class="rounded-lg border border-gray-200 bg-white p-5">
-            <p class="section-kicker">Scope</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">What this can help with</h2>
+            <p class="section-kicker">Périmètre</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">Ce avec quoi ce service peut aider</h2>
             <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
               {supportAreas.map((area) => (
                 <li class="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0">{area}</li>
@@ -190,8 +190,8 @@ const safetyRules = [
           </section>
 
           <section class="rounded-lg border border-amber-200 bg-amber-50 p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">Safety rules</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">Keep sensitive data out</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">Règles de sécurité</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">N’incluez pas de données sensibles</h2>
             <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
               {safetyRules.map((rule) => (
                 <li>{rule}</li>
@@ -203,39 +203,39 @@ const safetyRules = [
 
       <section class="mt-12 grid gap-5 md:grid-cols-3">
         <div class="card">
-          <p class="section-kicker">Step 1</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Describe the issue</h2>
+          <p class="section-kicker">Étape 1</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Décrivez le problème</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            Share the city, app, route, deadline, and what you have already tried.
+            Indiquez la ville, l’application, le trajet, l’échéance et ce que vous avez déjà essayé.
           </p>
         </div>
         <div class="card">
-          <p class="section-kicker">Step 2</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Get a next step</h2>
+          <p class="section-kicker">Étape 2</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Obtenez la prochaine étape</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            The page gives a practical first response and points you toward relevant guides.
+            La page fournit une première réponse pratique et vous oriente vers les guides pertinents.
           </p>
         </div>
         <div class="card">
-          <p class="section-kicker">Step 3</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Escalate by email</h2>
+          <p class="section-kicker">Étape 3</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Escaladez par e-mail</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            For one-on-one help, send the prepared email and continue the conversation privately.
+            Pour une aide en tête-à-tête, envoyez l’e-mail préparé et poursuivez la conversation en privé.
           </p>
         </div>
       </section>
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
-        <p class="section-kicker">Self-service first</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">Guides that answer common first-trip questions</h2>
+        <p class="section-kicker">D’abord l’autonomie</p>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">Des guides qui répondent aux questions fréquentes d’un premier voyage</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
           <a href="/fr/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">First-time China trip planner</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Use this when you are still arranging payment, data, transport, and your first arrival day.</p>
+            <h3 class="font-bold text-gray-950">Planificateur de premier voyage en Chine</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Utilisez ce guide si vous êtes encore en train d’organiser le paiement, les données mobiles, les transports et votre premier jour sur place.</p>
           </a>
           <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">Pre-departure setup checklist</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Check Alipay, WeChat Pay, eSIM, DiDi, train tickets, translation, addresses, and cash backup before you fly.</p>
+            <h3 class="font-bold text-gray-950">Checklist de préparation avant le départ</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Vérifiez Alipay, WeChat Pay, l’eSIM, DiDi, les billets de train, la traduction, les adresses et une réserve d’espèces avant de prendre l’avion.</p>
           </a>
         </div>
       </section>
@@ -256,14 +256,14 @@ const safetyRules = [
   const submitButton = document.getElementById('help-submit') as HTMLButtonElement | null;
 
   const guideLinks: Record<string, { label: string; href: string }> = {
-    'Paiement apps': { label: 'payment setup guide', href: '/fr/payment/' },
-    'Internet and eSIM': { label: 'eSIM guide', href: '/fr/esim/' },
-    'Transport route': { label: 'transport guide', href: '/fr/transport/' },
-    'Food, delivery, or local apps': {
-      label: 'food delivery guide',
+    'Applications de paiement': { label: 'guide de configuration des paiements', href: '/fr/payment/' },
+    'Internet et eSIM': { label: 'guide eSIM', href: '/fr/esim/' },
+    'Itinéraire de transport': { label: 'guide des transports', href: '/fr/transport/' },
+    'Repas, livraison ou applications locales': {
+      label: 'guide de livraison de repas',
       href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     },
-    'General trip setup': { label: 'tools page', href: '/fr/tools/' },
+    'Préparation générale du voyage': { label: 'page des outils', href: '/fr/tools/' },
   };
 
   const escapeHtml = (value: string) =>
@@ -277,25 +277,25 @@ const safetyRules = [
 
   const updateEmailLink = () => {
     if (!emailLink) return;
-    const selectedStage = stage?.value ?? 'Before departure';
-    const selectedTopic = topic?.value ?? 'General trip setup';
-    const place = locationInput?.value.trim() || 'Not specified';
+    const selectedStage = stage?.value ?? 'Avant le départ';
+    const selectedTopic = topic?.value ?? 'Préparation générale du voyage';
+    const place = locationInput?.value.trim() || 'Non précisé';
     const question = message?.value.trim() || '';
     const body = [
-      'ChinaTripBox Travel Help Request',
+      "Demande d'aide voyage ChinaTripBox",
       '',
-      `Trip stage: ${selectedStage}`,
-      `Main topic: ${selectedTopic}`,
-      `City or route: ${place}`,
+      `Étape du voyage : ${selectedStage}`,
+      `Sujet principal : ${selectedTopic}`,
+      `Ville ou trajet : ${place}`,
       '',
-      'Question:',
+      'Question :',
       question,
       '',
-      'I understand I should not include passport photos, full bank card numbers, passwords, PINs, or one-time codes.',
+      "Je comprends que je ne dois pas inclure de photos de passeport, de numéros complets de carte bancaire, de mots de passe, de codes PIN ou de codes à usage unique.",
     ].join('\n');
 
     emailLink.href = `mailto:zh13809022788@gmail.com?subject=${encodeURIComponent(
-      `Travel help: ${selectedTopic}`,
+      `Aide voyage : ${selectedTopic}`,
     )}&body=${encodeURIComponent(body)}`;
   };
 
@@ -317,28 +317,28 @@ const safetyRules = [
       .replace(/\n/g, '<br>');
 
   const buildReply = (question: string) => {
-    const selectedTopic = topic?.value ?? 'General trip setup';
-    const selectedStage = stage?.value ?? 'Before departure';
+    const selectedTopic = topic?.value ?? 'Préparation générale du voyage';
+    const selectedStage = stage?.value ?? 'Avant le départ';
     const place = locationInput?.value.trim();
-    const guide = guideLinks[selectedTopic] ?? guideLinks['General trip setup'];
+    const guide = guideLinks[selectedTopic] ?? guideLinks['Préparation générale du voyage'];
     const needsHuman =
       /screenshot|photo|declin|failed|stuck|urgent|tomorrow|today|passport|verification|identity|hotel|route/i.test(
         question,
       );
 
     const placeLine = place
-      ? `Because this involves <strong>${escapeHtml(place)}</strong>, include the exact airport, station, hotel area, app name, and date when you email.`
-      : 'Add your city, airport, station, hotel area, or app name before sending this for one-on-one help.';
+      ? `Comme cela concerne <strong>${escapeHtml(place)}</strong>, indiquez l’aéroport, la gare, le quartier de l’hôtel, le nom de l’application et la date exacts dans votre e-mail.`
+      : "Ajoutez votre ville, aéroport, gare, quartier d’hôtel ou nom d’application avant d’envoyer cela pour une aide en tête-à-tête.";
 
     const escalation = needsHuman
-      ? 'This looks like a good candidate for human follow-up because it may need context or back-and-forth checks.'
-      : 'This may be answerable from the guide first; use human follow-up if the guide does not match your exact situation.';
+      ? 'Cela semble être un bon candidat pour un suivi humain, car cela peut nécessiter du contexte ou des vérifications aller-retour.'
+      : 'La réponse peut peut-être se trouver d’abord dans le guide ; utilisez le suivi humain si le guide ne correspond pas exactement à votre situation.';
 
     return `
-      <strong class="block text-gray-950">Suggested next step</strong>
-      <span class="block mt-1">Topic: ${escapeHtml(selectedTopic)}. Stage: ${escapeHtml(selectedStage)}.</span>
+      <strong class="block text-gray-950">Prochaine étape suggérée</strong>
+      <span class="block mt-1">Sujet : ${escapeHtml(selectedTopic)}. Étape : ${escapeHtml(selectedStage)}.</span>
       <span class="block mt-2">${placeLine}</span>
-      <span class="block mt-2">Start with the <a href="${guide.href}" class="font-semibold text-brand-700">${guide.label}</a>, then use the prepared email button if you still need one-on-one help.</span>
+      <span class="block mt-2">Commencez par le <a href="${guide.href}" class="font-semibold text-brand-700">${guide.label}</a>, puis utilisez le bouton d’e-mail préparé si vous avez encore besoin d’une aide en tête-à-tête.</span>
       <span class="block mt-2">${escalation}</span>
     `;
   };
@@ -363,15 +363,15 @@ const safetyRules = [
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
         message: question,
-        stage: stage?.value ?? 'Before departure',
-        topic: topic?.value ?? 'General trip setup',
+        stage: stage?.value ?? 'Avant le départ',
+        topic: topic?.value ?? 'Préparation générale du voyage',
         location: locationInput?.value.trim() ?? '',
       }),
     });
 
     const data = await response.json() as { answer?: string; error?: string };
     if (!response.ok || !data.answer) {
-      throw new Error(data.error || 'AI helper unavailable.');
+      throw new Error(data.error || 'Assistant IA indisponible.');
     }
     return data.answer;
   };
@@ -380,27 +380,27 @@ const safetyRules = [
     event.preventDefault();
     const question = message?.value.trim() ?? '';
     if (!question) {
-      if (status) status.textContent = 'Add your question first.';
+      if (status) status.textContent = 'Ajoutez d’abord votre question.';
       return;
     }
     addBubble(escapeHtml(question), true);
-    const thinking = addBubble('AI is checking your travel question...');
-    if (status) status.textContent = 'Asking AI travel help...';
+    const thinking = addBubble('L’IA examine votre question de voyage...');
+    if (status) status.textContent = 'Demande d’aide voyage à l’IA en cours...';
     if (submitButton) submitButton.disabled = true;
 
     try {
       const answer = await requestAiAnswer(question);
       if (thinking) {
         thinking.innerHTML = `
-          <strong class="block text-gray-950">AI travel help</strong>
+          <strong class="block text-gray-950">Aide voyage IA</strong>
           <span class="mt-2 block">${formatAiAnswer(answer)}</span>
-          <span class="mt-3 block text-xs text-gray-500">For complex account, payment, visa, legal, medical, or emergency issues, verify with the official provider or request human review.</span>
+          <span class="mt-3 block text-xs text-gray-500">Pour les problèmes complexes liés au compte, au paiement, au visa, au droit, au médical ou aux urgences, vérifiez auprès du fournisseur officiel ou demandez une révision humaine.</span>
         `;
       }
-      if (status) status.textContent = 'AI answer ready. Use email if you want human review.';
+      if (status) status.textContent = 'Réponse de l’IA prête. Utilisez l’e-mail si vous souhaitez une révision humaine.';
     } catch {
       if (thinking) thinking.innerHTML = buildReply(question);
-      if (status) status.textContent = 'AI is unavailable, so a local fallback answer was prepared.';
+      if (status) status.textContent = 'L’IA est indisponible, une réponse locale de secours a donc été préparée.';
     } finally {
       if (submitButton) submitButton.disabled = false;
     }
