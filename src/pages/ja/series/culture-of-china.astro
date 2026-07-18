@@ -10,19 +10,19 @@ const posts = (await getCollection('posts-ja'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '中国の文化：旅行者のための伝統と習慣';
-const description = '外国人旅行者の方向けに、中国文化をわかりやすくご紹介するガイドです。茶文化、春節、面子と関係、書道、カンフー、十二支、そして中国の日常生活を形づくる伝統について解説します。';
+const title = '中国文化：旅行者のための伝統と習慣をご案内します';
+const description = '外国人旅行者の方向けに、中国文化をわかりやすくご案内するガイドです。茶文化、春節、面子と関係、書道、カンフー、十二支、そして中国の日常生活を形づくる伝統について丁寧に解説します。';
 
 const relatedTools = [
-  { href: '/ja/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'チップとマナー', desc: 'チップが必要な場面と不要な場面、その理由をわかりやすくご紹介します。' },
-  { href: '/ja/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'お祭りシーズンの持ち物', desc: '祝日シーズンに持っていくと便利なものをご紹介します。' },
-  { href: '/ja/posts/how-to-pay-in-china-tourist-guide/', title: '中国での支払い方法', desc: '祝日シーズンの支払い方法についてご案内します。' },
+  { href: '/ja/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'チップとマナー', desc: 'チップが必要な場面と不要な場面、その背景も含めてわかりやすくご案内します。' },
+  { href: '/ja/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'お祭りシーズンの持ち物', desc: '祝日シーズンの旅行で持っていくと便利なものをご紹介します。' },
+  { href: '/ja/posts/how-to-pay-in-china-tourist-guide/', title: '中国での支払い方法', desc: '祝日シーズンの旅行で役立つ支払い方法をご案内します。' },
 ];
 
 const relatedCities = [
-  { href: '/ja/posts/beijing-city-guide-for-foreigners/', title: '北京', desc: '皇城文化と胡同での暮らしを感じられます。' },
-  { href: '/ja/posts/hangzhou-city-guide-for-foreigners/', title: '杭州', desc: '茶文化と西湖の歴史遺産が魅力です。' },
-  { href: '/ja/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '茶館文化とゆったりした暮らしが楽しめます。' },
+  { href: '/ja/posts/beijing-city-guide-for-foreigners/', title: '北京', desc: '皇城文化や胡同の暮らしを身近に感じていただけます。' },
+  { href: '/ja/posts/hangzhou-city-guide-for-foreigners/', title: '杭州', desc: '茶文化と西湖の歴史遺産をお楽しみいただけます。' },
+  { href: '/ja/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '茶館文化とゆったりした暮らしを味わっていただけます。' },
 ];
 
 const otherSeries = [
@@ -36,7 +36,7 @@ const otherSeries = [
   <Header locale="ja" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">シリーズ案内</p>
+      <p class="section-kicker">シリーズのご案内</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -69,7 +69,7 @@ const otherSeries = [
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">お役立ち情報</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">文化を知って、より深く旅を楽しみましょう</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">文化を知って、旅をより深く楽しみましょう</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -82,7 +82,7 @@ const otherSeries = [
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">都市ガイド</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">文化を身近に感じられる都市です</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">文化を身近に感じていただける都市です</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
