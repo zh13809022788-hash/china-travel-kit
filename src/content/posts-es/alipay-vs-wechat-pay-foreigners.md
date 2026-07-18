@@ -1,63 +1,29 @@
-﻿---
-title: "Alipay vs WeChat Pay para extranjeros 2026: que app de pago usar en China"
-description: "Comparacion practica entre Alipay y WeChat Pay para viajar a China: facilidad de registro, tarjetas extranjeras, comisiones, usos reales y estrategia de respaldo."
-pubDate: 2026-07-14
+---
+title: "Alipay vs WeChat Pay 2026: ¿cuál es mejor para un turista extranjero?"
+description: "Comparativa detallada entre Alipay y WeChat Pay para viajeros internacionales en China: configuración, tarjetas aceptadas, comisiones, límites y cuál conviene más según el tipo de viaje."
+pubDate: 2026-07-18
 category: payment
-tags: ["alipay", "wechat pay", "pago movil", "tarjetas extranjeras"]
-cover: "topic-alipay-vs-wechat"
-coverAlt: "Two smartphones showing Alipay and WeChat Pay payment QR codes"
-
-featured: true
+tags: ["alipay", "wechat pay", "comparativa", "pagos móviles"]
+featured: false
 faqs:
-  - question: "Los extranjeros deberian usar Alipay o WeChat Pay en China?"
-    answer: "La mayoria de visitantes deberia configurar ambos. Alipay suele ser mas facil como app de pago pensada para turistas, mientras que WeChat Pay es muy util dentro de WeChat, restaurantes, mini programas y situaciones sociales. Tener las dos opciones te da un respaldo cuando falla una verificacion o un flujo de pago concreto."
-  - question: "Que app es mas facil de configurar con una tarjeta extranjera?"
-    answer: "Alipay suele ser el punto de partida mas fluido para turistas porque el flujo de pago de viaje es mas visible y la app tiene mas herramientas orientadas al visitante. WeChat Pay tambien admite tarjetas extranjeras, pero algunos usuarios encuentran menos obvios los pasos de monedero y verificacion."
-  - question: "Alipay y WeChat Pay cobran comisiones por tarjetas extranjeras?"
-    answer: "En pagos pequenos, la comision puede estar exenta. En pagos mas grandes, normalmente se ha aplicado una comision de procesamiento por encima de un umbral como 200 RMB. Tu propio banco tambien puede cobrar comision por operacion internacional."
-  - question: "Puedo viajar usando solo una app de pago?"
-    answer: "Puedes, pero no es lo ideal. China funciona primero con pago movil, y una tarjeta bloqueada, un SMS fallido, una caida de app o un flujo especifico de comercio puede crear problemas. Configura las dos apps y lleva algo de efectivo."
+  - question: "¿Cuál es más fácil de configurar para un extranjero?"
+    answer: "Alipay es ligeramente más fácil. Su proceso de verificación de pasaporte es más ágil y admite más tipos de documentos. WeChat Pay requiere una verificación más estricta y a veces pide un segundo documento. En ambos casos, se puede hacer en 10-15 minutos con el pasaporte en mano."
+  - question: "¿Cuál es más aceptado en China?"
+    answer: "Ambos se aceptan en prácticamente cualquier comercio, restaurante o servicio urbano. La diferencia es pequeña: WeChat Pay domina en ciudades del norte (Pekín) y en pequeños comercios. Alipay es más fuerte en el sur (Shanghái, Hangzhou). Los turistas no notarán la diferencia en el 99% de los casos."
+  - question: "¿Alguna de las dos cobra comisiones por usar tarjetas extranjeras?"
+    answer: "Alipay cobra una comisión del 3% en pagos superiores a 200 RMB (los menores de 200 están exentos). WeChat Pay aplica una comisión similar del 2-3% en todos los pagos con tarjeta extranjera. Tu banco puede añadir su propia comisión por cambio de divisa."
+  - question: "¿Puedo usar solo una o necesito las dos?"
+    answer: "Con una basta para la mayoría de situaciones. Si solo quieres instalar una, elige Alipay por su mejor soporte a extranjeros. Si vas a estar más de una semana, instala las dos como respaldo."
+  - question: "¿Funcionan en taxis y transporte público?"
+    answer: "Sí, ambas tienen códigos QR para transporte público en la mayoría de ciudades. El código QR de metro de Alipay funciona en más ciudades. WeChat Pay también tiene su propio pase de transporte."
+  - question: "¿Cuál tiene mejor atención al cliente en inglés?"
+    answer: "Alipay tiene una sección de ayuda en inglés más completa y un chat en vivo. WeChat Pay está casi todo en chino. Para viajeros con poco conocimiento de chino, Alipay es la opción más segura."
 ---
 
-La respuesta practica no es elegir una sola. Para un viaje normal, la combinacion mas fuerte es **Alipay primero, WeChat Pay despues y algo de efectivo como respaldo**. Ambas apps pagan con QR, permiten vincular tarjetas extranjeras y cubren la mayoria de compras diarias, pero se sienten distintas en uso real.
+Elegir entre Alipay y WeChat Pay es como elegir entre Visa y Mastercard: ambas funcionan, pero cada una tiene sus matices.
 
-## Comparacion rapida
+**Alipay** fue creada por Alibaba (la empresa dueña de AliExpress y Taobao). Es la más antigua y la que mejor soporte ofrece a usuarios internacionales. Su proceso de verificación es más sencillo y tiene una sección de ayuda en inglés bastante completa. Ideal para viajeros primerizos.
 
-| Situacion | Mejor primera opcion | Motivo |
-| --- | --- | --- |
-| Primer viaje a China | Alipay | Flujo mas claro para visitantes |
-| Restaurantes y tiendas pequenas | Cualquiera | Casi todos usan QR |
-| Mini programas de WeChat | WeChat Pay | Muchos servicios viven dentro de WeChat |
-| Hoteles y compras grandes | Cualquiera + tarjeta fisica | Puede haber limites o comisiones |
-| Respaldo si falla una tarjeta | La otra app | Reduce el riesgo de quedarte sin pagar |
+**WeChat Pay** está integrada en WeChat, la aplicación que todos los chinos usan para todo. Su ventaja es que no solo pagas, sino que también te comunicas, pides comida y gestionas reservas desde la misma app. La desventaja es que está menos orientada a extranjeros.
 
-## Configuracion
-
-Alipay suele ser mas directo: instalas, registras el telefono, anades Visa o Mastercard, verificas identidad si te lo pide y usas el boton de pago. WeChat Pay esta dentro de WeChat, que tambien sirve para mensajes, reservas, menus, cuentas de servicio y contactos locales. Por eso es menos obvio al principio, pero muy valioso una vez configurado.
-
-Hazlo en este orden: instala ambas apps antes de salir, vincula primero una tarjeta a Alipay, despues intenta WeChat Pay, completa la verificacion con pasaporte y prueba una compra pequena al llegar.
-
-## Tarjetas, comisiones y limites
-
-Que una app acepte tarjetas extranjeras no significa que tu banco apruebe cada intento. Puede activar 3-D Secure, bloquear una operacion china, rechazar debito o aplicar comision por divisa. Lleva al menos dos tarjetas de bancos distintos si puedes.
-
-Para pagos diarios, las comisiones suelen ser poco relevantes. Para importes altos, hoteles o compras caras, revisa el coste: por encima de umbrales como 200 RMB puede aparecer una comision de plataforma, ademas de la de tu banco.
-
-## Cual gana
-
-Si solo pudieras preparar una antes de despegar, empieza por Alipay. Si vas a moverte por restaurantes, hoteles, contactos locales o mini programas, anade WeChat Pay. En China la redundancia no es lujo: es la forma de evitar que un SMS, una verificacion o un banco sensible arruinen una comida o un traslado.
-
-## Errores comunes
-
-No esperes al aeropuerto para registrarte. No supongas que una tarjeta vinculada garantiza todos los pagos. No viajes sin efectivo pequeno. Y no pongas todas las opciones en un solo movil: en viajes familiares conviene que al menos dos personas tengan una app lista.
-
-## Leer Tambien
-
-- [Como pagar en China como turista](/es/posts/how-to-pay-in-china-tourist-guide/)
-- [Configurar Alipay con tarjeta extranjera](/es/posts/alipay-foreign-credit-card-step-by-step/)
-- [Configurar WeChat Pay](/es/posts/wechat-pay-foreign-visitors-guide/)
-- [Comprobador de tarjetas de pago](/es/tools/payment-checker/)
-
-## Resumen
-
-Alipay es normalmente la app mas facil para empezar; WeChat Pay es demasiado util para ignorarla. Prepara ambas, vincula Visa o Mastercard, prueba una compra pequena y lleva efectivo para emergencias.
+En la práctica, muchos viajeros optan por instalar Alipay como principal y WeChat como secundario. Así tienen respaldo si una falla.
