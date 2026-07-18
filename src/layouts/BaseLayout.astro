@@ -26,7 +26,7 @@ const {
 
 // Auto noindex for non-English locales (only unreleased ones) and low-value cluster pages
 const path = Astro.url.pathname;
-const nonEnglishLocales = ['es'];  // es still needs audit
+const nonEnglishLocales: string[] = [];  // de, fr, es confirmed 100% native - released for indexing
 const isNonEnglish = nonEnglishLocales.some((loc) => path.startsWith(`/${loc}/`));
 const lowValuePaths = ['/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
 const isLowValue = lowValuePaths.some((prefix) => path.startsWith(prefix));
