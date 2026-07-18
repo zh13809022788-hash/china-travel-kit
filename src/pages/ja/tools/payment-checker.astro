@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,38 +7,45 @@ import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 import FaqSection from '../../../components/FaqSection.astro';
 
-const title = 'China決済カード互換性チェッカー';
+const title = '中国の決済カード対応チェッカー';
 const description =
-  'お使いのクレジットカードがChinaでAlipayやWeChat Payに対応しているか確認できます。国籍とカードネットワーク別に、対応状況、利用上限、手数料、設定方法を確認しましょう。';
+  'お使いのクレジットカードが中国でAlipayやWeChat Payに対応しているか確認できます。国籍とカードブランドごとに、対応状況、利用上限、手数料、設定方法を確認しましょう。';
 
 const nationalities = [
-  '米国', '英国', 'カナダ', 'オーストラリア',
-  'ドイツ', 'フランス', '日本', 'シンガポール', 'その他',
+  'アメリカ',
+  'イギリス',
+  'カナダ',
+  'オーストラリア',
+  'ドイツ',
+  'フランス',
+  '日本',
+  'シンガポール',
+  'その他',
 ];
 const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
 
 const nextSteps = [
-  { href: '/ja/posts/alipay-foreign-credit-card-step-by-step/', title: '海外発行カードでAlipayを設定する' },
-  { href: '/ja/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: 'VisaまたはMastercardをWeChat Payに連携する' },
-  { href: '/ja/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: '現金が役立つ場面を知る' },
-  { href: '/ja/payment/', title: 'China決済ガイドをすべて見る' },
+  { href: '/ja/posts/alipay-foreign-credit-card-step-by-step/', title: '海外発行カードでAlipayを設定する方法を見る' },
+  { href: '/ja/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: 'VisaまたはMastercardをWeChat Payに連携する方法を見る' },
+  { href: '/ja/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: '現金が役立つ場面を確認する' },
+  { href: '/ja/payment/', title: '中国の決済ガイドをすべて見る' },
 ];
 
 const faqItems = [
   {
-    question: '海外発行のVisaやMastercardはすべてChinaで使えますか？',
+    question: '海外発行のVisaやMastercardは中国で必ず使えますか？',
     answer:
-      'いいえ。AlipayとWeChat PayではVisaとMastercardが最も無難な出発点ですが、発行銀行によっては本人確認をブロックしたり、オンラインウォレット連携を拒否したり、Chinaでの取引を警告対象にする場合があります。予備のカードと少額の現金を用意しておきましょう。',
+      'いいえ。AlipayとWeChat PayではVisaとMastercardが比較的使いやすい選択肢ですが、発行銀行によっては本人確認を止めたり、オンラインウォレットとの連携を拒否したり、中国での取引を不審と判断したりすることがあります。予備のカードと少額の現金も用意しておくことをおすすめします。',
   },
   {
-    question: '旅行者はAlipayとWeChat Payの両方を設定すべきですか？',
+    question: '旅行者はAlipayとWeChat Payの両方を設定したほうがよいですか？',
     answer:
-      '可能なら両方設定するのがおすすめです。Alipayは旅行者にとって設定しやすいことが多く、WeChat Payはミニプログラム、レストラン、ローカルサービスで役立ちます。両方あれば、店頭で支払えず困る可能性を減らせます。',
+      '可能であれば、両方設定しておくことをおすすめします。Alipayは旅行者でも設定しやすいことが多く、WeChat Payはミニプログラム、飲食店、現地サービスで便利です。両方使えるようにしておくと、店頭で支払えず困る可能性を減らせます。',
   },
   {
-    question: 'モバイル決済が使える場合、現金はいくら持っていけばよいですか？',
+    question: 'モバイル決済が使えるなら、現金はどれくらい持っていけばよいですか？',
     answer:
-      '空港からの移動、食事の予備、小さな店で使える程度の小額紙幣を持っていきましょう。ただし現金だけに頼らないでください。多くの場所ではQR決済が好まれ、スタッフがお釣りを用意していないこともあります。',
+      '空港からの移動、食事の予備、小さなお店での支払いに使える程度の少額紙幣を持っていくと安心です。ただし、現金だけに頼るのはおすすめしません。多くの場所ではQR決済が主流で、スタッフがお釣りを十分に用意していないこともあります。',
   },
 ];
 ---
@@ -48,28 +55,28 @@ const faqItems = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">ツール</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">決済互換性チェッカー</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">決済対応チェッカー</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <section class="mt-6 grid gap-4 md:grid-cols-3" aria-label="この決済チェッカーで確認できること">
+    <section class="mt-6 grid gap-4 md:grid-cols-3" aria-label="この決済チェッカーで確認できる内容です">
       <div class="rounded-lg border border-gray-200 bg-white p-4">
-        <h2 class="text-base font-bold text-gray-900">ウォレット対応を確認</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">お使いのカードネットワークがAlipayやWeChat Payに向いているか確認します。</p>
+        <h2 class="text-base font-bold text-gray-900">ウォレット対応状況を確認できます</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">お使いのカードブランドがAlipayやWeChat Payで使いやすいか確認できます。</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-4">
-        <h2 class="text-base font-bold text-gray-900">上限を見越して計画</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">高額決済の前に、一般的な取引上限と手数料を確認できます。</p>
+        <h2 class="text-base font-bold text-gray-900">上限を見込んで準備できます</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">高額決済の前に、一般的な取引上限や手数料の目安を確認できます。</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-4">
-        <h2 class="text-base font-bold text-gray-900">予備手段を準備</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">現金を持つべき場面、カードを切り替える場面、両方の決済アプリを用意すべき理由がわかります。</p>
+        <h2 class="text-base font-bold text-gray-900">予備の支払い手段を考えられます</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">現金を持つべき場面、カードを切り替える場面、両方の決済アプリを用意する理由がわかります。</p>
       </div>
     </section>
 
     <AdSlot format="banner" />
 
-    <!-- 入力コントロール -->
+    <!-- 入力欄です -->
     <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">国籍</span>
@@ -78,17 +85,17 @@ const faqItems = [
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">カードネットワーク</span>
+        <span class="mb-1 font-medium text-gray-700">カードブランド</span>
         <select id="network" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {cardNetworks.map((c) => <option value={c}>{c}</option>)}
         </select>
       </label>
       <div class="sm:col-span-2">
-        <button id="check-btn" class="btn-primary w-full sm:w-auto">互換性を確認</button>
+        <button id="check-btn" class="btn-primary w-full sm:w-auto">対応状況を確認する</button>
       </div>
     </div>
 
-    <!-- 結果 -->
+    <!-- 結果表示です -->
     <div id="result" class="mt-6 hidden">
       <div class="grid gap-5 md:grid-cols-2">
         <div class="card" id="alipay-card"></div>
@@ -96,9 +103,9 @@ const faqItems = [
       </div>
 
       <AffiliateCta
-        title="旅行向けカードを準備する"
-        description="China旅行でAlipayやWeChat Payに連携しやすいプリペイド旅行カードを用意しましょう。"
-        buttonText="おすすめカードを見る"
+        title="旅行向けカードを準備しましょう"
+        description="中国旅行でAlipayやWeChat Payに連携しやすいプリペイド式の旅行カードを用意しておくと安心です。"
+        buttonText="おすすめのカードを見る"
         placeholder={AFFILIATE_LINKS.payment}
       />
     </div>
@@ -107,17 +114,17 @@ const faqItems = [
       <div class="rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">このチェッカーの使い方</h2>
         <ol class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
-          <li><strong class="text-gray-900">1. パスポート国籍または居住国を選びます。</strong>銀行や本人確認で起こりやすい問題を把握する助けになります。</li>
-          <li><strong class="text-gray-900">2. カードネットワークを選びます。</strong>China旅行用ウォレットでは、通常VisaとMastercardが最初の選択肢として最も無難です。</li>
-          <li><strong class="text-gray-900">3. 少なくとも1つの予備手段を用意します。</strong>2枚目のカード、両方の決済アプリ、少額現金を準備して例外に備えましょう。</li>
+          <li><strong class="text-gray-900">1. パスポートの国籍または居住国を選びます。</strong>銀行や本人確認で起こりやすい問題を把握しやすくなります。</li>
+          <li><strong class="text-gray-900">2. カードブランドを選びます。</strong>中国旅行で使うウォレットでは、一般的にVisaとMastercardが最初の候補として無難です。</li>
+          <li><strong class="text-gray-900">3. 少なくとも1つは予備の支払い手段を用意します。</strong>2枚目のカード、両方の決済アプリ、少額の現金を準備して、例外的な状況に備えましょう。</li>
         </ol>
         <p class="mt-4 text-sm leading-6 text-gray-600">
-          決済ルール、ウォレット本人確認、カード発行会社のリスク判定は変わることがあります。結果は旅行計画の実用的な目安として扱い、出発前にAlipay、WeChat Pay、カード発行会社で高額取引の上限を確認してください。
+          決済ルール、ウォレットの本人確認、カード発行会社のリスク判定は変わることがあります。結果は旅行計画の実用的な目安としてお使いいただき、出発前にAlipay、WeChat Pay、カード発行会社で高額決済時の上限をご確認ください。
         </p>
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">次の決済準備</h2>
+        <h2 class="text-lg font-bold text-gray-900">次に確認したい決済準備</h2>
         <div class="mt-4 grid gap-3">
           {nextSteps.map((item) => (
             <a href={item.href} class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">
@@ -129,9 +136,9 @@ const faqItems = [
     </section>
 
     <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="payment-checker-seo">
-      <h2 id="payment-checker-seo" class="text-2xl font-bold text-gray-900">このチェッカーでわかること・わからないこと</h2>
+      <h2 id="payment-checker-seo" class="text-2xl font-bold text-gray-900">このチェッカーでわかることと、わからないこと</h2>
       <p class="mt-3 text-sm leading-6 text-gray-600">
-        このツールは出発前の計画用です。Chinaのレジに立つ前に、カードネットワーク、ウォレット対応、手数料が発生しやすいポイント、予備の支払い方法を整理できます。ただし、個別の銀行がすべての決済を承認することを保証するものではありません。
+        このツールは出発前の計画に役立つ確認用ツールです。中国で実際に支払う前に、カードブランド、ウォレット対応、手数料が発生しやすい場面、予備の支払い方法を整理できます。ただし、個別の銀行がすべての決済を承認することまでは保証していません。
       </p>
       <div class="mt-5 overflow-x-auto rounded-lg border border-gray-200">
         <table class="min-w-full divide-y divide-gray-200 text-sm">
@@ -139,36 +146,36 @@ const faqItems = [
             <tr>
               <th class="px-4 py-3 font-semibold">リスク</th>
               <th class="px-4 py-3 font-semibold">起こる理由</th>
-              <th class="px-4 py-3 font-semibold">最適な予備手段</th>
+              <th class="px-4 py-3 font-semibold">おすすめの予備手段</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200 bg-white text-gray-600">
             <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">カード連携に失敗する</td>
-              <td class="px-4 py-3">発行会社がウォレット認証をブロックする、または3-D Secureが失敗するため。</td>
-              <td class="px-4 py-3">別の銀行が発行したVisa/Mastercardを試します。</td>
+              <td class="px-4 py-3 font-medium text-gray-900">カード連携に失敗することがあります</td>
+              <td class="px-4 py-3">発行会社がウォレット認証を止めたり、3-D Secure認証に失敗したりするためです。</td>
+              <td class="px-4 py-3">別の銀行が発行したVisaまたはMastercardを試してください。</td>
             </tr>
             <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">高額決済が拒否される</td>
-              <td class="px-4 py-3">ウォレット、加盟店、発行会社の上限により確認が入るため。</td>
-              <td class="px-4 py-3">分割決済、物理カード、またはホテル・店舗の別手段を確認します。</td>
+              <td class="px-4 py-3 font-medium text-gray-900">高額決済が拒否されることがあります</td>
+              <td class="px-4 py-3">ウォレット、加盟店、発行会社それぞれの上限により追加確認が入るためです。</td>
+              <td class="px-4 py-3">分割して支払う、物理カードを使う、またはホテルや店舗で別の支払い方法を確認してください。</td>
             </tr>
             <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">会計時に通信できない</td>
-              <td class="px-4 py-3">モバイル通信が弱い、ローミングがない、アプリが読み込めないため。</td>
-              <td class="px-4 py-3">もう一方のウォレット、店舗Wi-Fi、または少額現金を使います。</td>
+              <td class="px-4 py-3 font-medium text-gray-900">会計時に通信できないことがあります</td>
+              <td class="px-4 py-3">モバイル通信が弱い、ローミングがない、またはアプリが読み込めないためです。</td>
+              <td class="px-4 py-3">もう一方のウォレット、店舗のWi-Fi、または少額の現金を使ってください。</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p class="mt-4 text-sm leading-6 text-gray-600">
-        最も堅実に準備するには、完全版の<a href="/ja/posts/how-to-pay-in-china-tourist-guide/" class="font-semibold">China旅行者向け決済ガイド</a>を読み、
-        <a href="/ja/posts/alipay-vs-wechat-pay-foreigners/" class="font-semibold">AlipayとWeChat Payの比較</a>を確認し、
-        <a href="/ja/posts/how-much-cash-to-bring-to-china/" class="font-semibold">現金ガイド</a>を使って少額RMBの予備も用意してください。
+        より確実に準備したい場合は、完全版の<a href="/ja/posts/how-to-pay-in-china-tourist-guide/" class="font-semibold">中国旅行者向け決済ガイド</a>を読み、
+        <a href="/ja/posts/alipay-vs-wechat-pay-foreigners/" class="font-semibold">AlipayとWeChat Payの比較記事</a>を確認し、
+        <a href="/ja/posts/how-much-cash-to-bring-to-china/" class="font-semibold">現金ガイド</a>を参考にして少額の人民元も用意してください。
       </p>
     </section>
 
-    <FaqSection items={faqItems} title="決済チェッカーFAQ" />
+    <FaqSection items={faqItems} title="決済チェッカーに関するよくある質問" />
   </main>
   <Footer />
 </BaseLayout>
@@ -176,26 +183,26 @@ const faqItems = [
 <script>
   type NetworkKey = 'Visa' | 'Mastercard' | 'Amex' | 'Discover';
 
-  // Static compatibility matrix (representative guidance)
+  // 固定の対応状況マトリクスです（代表的な目安です）
   const matrix: Record<NetworkKey, {
     alipay: { status: string; single: string; daily: string; fee: string; how: string };
     wechat: { status: string; single: string; daily: string; fee: string; how: string };
   }> = {
     Visa: {
-      alipay: { status: '対応', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMB超は約3%', how: 'Alipay Walletでカードを追加し、パスポート認証を行う' },
-      wechat: { status: '対応', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMB超は約3%', how: 'WeChat Walletでカードを追加し、パスポート認証を行う' },
+      alipay: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'Alipay Walletでカードを追加し、パスポート認証を行ってください' },
+      wechat: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'WeChat Walletでカードを追加し、パスポート認証を行ってください' },
     },
     Mastercard: {
-      alipay: { status: '対応', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMB超は約3%', how: 'Alipay Walletでカードを追加し、パスポート認証を行う' },
-      wechat: { status: '対応', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMB超は約3%', how: 'WeChat Walletでカードを追加し、パスポート認証を行う' },
+      alipay: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'Alipay Walletでカードを追加し、パスポート認証を行ってください' },
+      wechat: { status: '対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'WeChat Walletでカードを追加し、パスポート認証を行ってください' },
     },
     Amex: {
-      alipay: { status: '一部対応', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMB超は約3%', how: '多くの場合AmexはAlipayで使えますが、Visa/MCの予備を用意してください' },
-      wechat: { status: '限定的', single: '変動あり', daily: '変動あり', fee: '200 RMB超は約3%', how: '対応は不安定です。WeChatではVisa/Mastercardを優先してください' },
+      alipay: { status: '一部対応しています', single: '約6,000 RMB', daily: '約50,000 RMB', fee: '200 RMBを超えると約3%', how: 'Alipayで使えることが多いですが、VisaまたはMastercardも予備としてご用意ください' },
+      wechat: { status: '対応は限定的です', single: '変動します', daily: '変動します', fee: '200 RMBを超えると約3%', how: '対応状況は安定していません。WeChatではVisaまたはMastercardを優先してください' },
     },
     Discover: {
-      alipay: { status: '限定的', single: '変動あり', daily: '変動あり', fee: '変動あり', how: '利用できる場面は限られます。Visa/Mastercardを強くおすすめします' },
-      wechat: { status: '非推奨', single: '—', daily: '—', fee: '—', how: '代わりにVisaまたはMastercardを使ってください' },
+      alipay: { status: '対応は限定的です', single: '変動します', daily: '変動します', fee: '変動します', how: '使える場面は限られます。VisaまたはMastercardを強くおすすめします' },
+      wechat: { status: 'おすすめできません', single: '—', daily: '—', fee: '—', how: '代わりにVisaまたはMastercardをご利用ください' },
     },
   };
 
@@ -210,9 +217,9 @@ const faqItems = [
       <h3 class="text-lg font-bold text-gray-900">${wallet}</h3>
       <span class="mt-2 inline-block rounded-full border px-3 py-0.5 text-xs font-semibold ${statusColor(d.status)}">${d.status}</span>
       <dl class="mt-4 space-y-2 text-sm">
-        <div class="flex justify-between gap-4"><dt class="text-gray-500">1回の取引</dt><dd class="font-medium text-gray-900">${d.single}</dd></div>
-        <div class="flex justify-between gap-4"><dt class="text-gray-500">1日の上限</dt><dd class="font-medium text-gray-900">${d.daily}</dd></div>
-        <div class="flex justify-between gap-4"><dt class="text-gray-500">処理手数料</dt><dd class="font-medium text-gray-900">${d.fee}</dd></div>
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">1回あたりの取引上限</dt><dd class="font-medium text-gray-900">${d.single}</dd></div>
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">1日あたりの上限</dt><dd class="font-medium text-gray-900">${d.daily}</dd></div>
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">手数料</dt><dd class="font-medium text-gray-900">${d.fee}</dd></div>
         <div class="pt-2 text-gray-600"><dt class="text-gray-500">設定方法</dt><dd class="mt-1">${d.how}</dd></div>
       </dl>`;
   }
