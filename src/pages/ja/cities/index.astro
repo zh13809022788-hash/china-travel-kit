@@ -13,9 +13,9 @@ const cityPosts = allPosts
   .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-const title = '外国人旅行者のための中国主要都市ガイド';
+const title = '外国人旅行者向け中国主要都市ガイド';
 const description =
-  '北京、上海、広州、成都、西安、杭州、重慶、三亜のガイドをもとに、中国旅行で現実的に回りやすい都市滞在を計画できます。空港アクセス、地下鉄、食事、移動準備まで次に必要な情報も確認できます。';
+  '北京、上海、広州、成都、西安、杭州、重慶、三亜のガイドをもとに、中国旅行で無理なく回りやすい都市滞在を計画できます。空港アクセス、地下鉄、食事、移動準備まで、次に確認したい情報もあわせてご覧いただけます。';
 
 const mapCities = [
   { name: '北京', x: 470, y: 80, href: '#beijing' },
@@ -37,13 +37,13 @@ const cities = [
     id: 'beijing',
     name: '北京',
     href: '/ja/posts/beijing-city-guide-for-foreigners/',
-    desc: '歴史、胡同、万里の長城など、初めての中国旅行で外せない定番を押さえたい方に向いています。',
+    desc: '歴史、胡同、万里の長城など、初めての中国旅行で外せない定番スポットを押さえたい方におすすめです。',
     days: '4〜5日',
     bestSeason: '9月〜10月',
-    difficulty: '普通',
-    whyGo: '皇帝ゆかりの歴史や博物館を満喫でき、万里の長城にも最もアクセスしやすい拠点です。',
+    difficulty: '普通です',
+    whyGo: '皇帝ゆかりの歴史や博物館をじっくり楽しめて、万里の長城にも最もアクセスしやすい拠点です。',
     next: '/ja/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
-    nextLabel: '大興空港から市内へのアクセスを見る',
+    nextLabel: '大興空港から市内へのアクセスを確認します',
   },
   {
     id: 'shanghai',
@@ -52,34 +52,34 @@ const cities = [
     desc: '到着後の動きやすさ、各国料理、スカイライン散策、地下鉄の使いやすさを重視する方に最適です。',
     days: '3〜4日',
     bestSeason: '3月〜5月、10月〜11月',
-    difficulty: '簡単',
+    difficulty: '簡単です',
     whyGo: '地下鉄、空港、食事、英語対応サービスがそろっており、最初の滞在先として特にスムーズです。',
     next: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
-    nextLabel: '上海地下鉄の使い方を見る',
+    nextLabel: '上海地下鉄の使い方を確認します',
   },
   {
     id: 'chengdu',
     name: '成都',
     href: '/ja/posts/chengdu-city-guide-for-foreigners/',
-    desc: '四川料理、茶館のゆったりした空気、パンダ、落ち着いた大都市のリズムを楽しみたい方に向いています。',
+    desc: '四川料理、茶館のゆったりした雰囲気、パンダ、落ち着いた大都市のリズムを楽しみたい方に向いています。',
     days: '3〜5日',
     bestSeason: '3月〜6月、9月〜11月',
-    difficulty: '普通',
+    difficulty: '普通です',
     whyGo: 'パンダ、四川料理、茶館、比較的抑えやすい滞在費、西部方面への小旅行が魅力です。',
     next: '/ja/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
-    nextLabel: '成都の屋台グルメを確認する',
+    nextLabel: '成都の屋台グルメを確認します',
   },
   {
     id: 'xian',
     name: '西安',
     href: '/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
-    desc: '古代史、兵馬俑、城壁、中国文化の厚みを感じる旅をしたい方におすすめです。',
+    desc: '古代史、兵馬俑、城壁などを通して、中国文化の奥行きを感じる旅をしたい方におすすめです。',
     days: '3〜4日',
     bestSeason: '3月〜5月、9月〜11月',
-    difficulty: '普通',
-    whyGo: '兵馬俑、古城壁、回民街のグルメなどを通じて、中国史の奥深さを実感できます。',
+    difficulty: '普通です',
+    whyGo: '兵馬俑、古城壁、回民街のグルメなどを通して、中国史の奥深さを実感できます。',
     next: '/ja/posts/china-high-speed-rail-guide-foreigners/',
-    nextLabel: '西安へ向かう高速鉄道を調べる',
+    nextLabel: '西安へ向かう高速鉄道を調べます',
   },
   {
     id: 'guangzhou',
@@ -88,10 +88,10 @@ const cities = [
     desc: '広東料理、商都の活気、華南の玄関口としての利便性、香港へのアクセスを重視する方に向いています。',
     days: '3〜4日',
     bestSeason: '10月〜12月、3月〜4月',
-    difficulty: '普通',
-    whyGo: '広東点心、陳氏書院、広州塔に加え、北京や上海とは異なる温暖な南方都市の雰囲気を楽しめます。',
+    difficulty: '普通です',
+    whyGo: '広東点心、陳氏書院、広州塔に加えて、北京や上海とは異なる温暖な南方都市の雰囲気も楽しめます。',
     next: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    nextLabel: '広東料理の楽しみ方を見る',
+    nextLabel: '広東料理の楽しみ方を確認します',
   },
   {
     id: 'chongqing',
@@ -100,10 +100,10 @@ const cities = [
     desc: '火鍋、近未来的な夜景、起伏の多い街並み、長江クルーズを楽しみたい方にぴったりです。',
     days: '3〜4日',
     bestSeason: '3月〜5月、9月〜11月',
-    difficulty: '難しい',
+    difficulty: 'やや難しいです',
     whyGo: '重慶火鍋、洪崖洞、夜景、長江ロープウェイ、立体的で独特な都市構造が大きな魅力です。',
     next: '/ja/food/',
-    nextLabel: '重慶グルメをまとめて見る',
+    nextLabel: '重慶グルメをまとめて見ます',
   },
   {
     id: 'hangzhou',
@@ -112,10 +112,10 @@ const cities = [
     desc: '西湖、緑の多い景色、週末旅行に合う穏やかなテンポ、洗練された滞在を求める方に向いています。',
     days: '2〜3日',
     bestSeason: '3月〜5月、9月〜11月',
-    difficulty: '簡単〜普通',
-    whyGo: '西湖、茶畑の村、寺院があり、上海から高速鉄道で気軽に足せる落ち着いた滞在先です。',
+    difficulty: '簡単〜普通です',
+    whyGo: '西湖、茶畑の村、寺院があり、上海から高速鉄道で気軽に組み合わせやすい落ち着いた滞在先です。',
     next: '/ja/transport/',
-    nextLabel: '鉄道と市内交通を計画する',
+    nextLabel: '鉄道と市内交通を計画します',
   },
   {
     id: 'sanya',
@@ -124,26 +124,26 @@ const cities = [
     desc: '暖かい冬、リゾート滞在、ビーチで過ごす時間、海南島内の小旅行を重視する方に最適です。',
     days: '3〜7日',
     bestSeason: '11月〜4月',
-    difficulty: '普通',
-    whyGo: '中国では貴重な本格的なビーチ、冬の陽気、海鮮、リゾート滞在を満喫でき、季節を選べば長めの滞在にも向いています。',
+    difficulty: '普通です',
+    whyGo: '中国では貴重な本格的なビーチ、冬の暖かさ、海鮮、リゾート滞在を満喫でき、季節を選べば長めの滞在にも向いています。',
     next: '/ja/posts/what-to-pack-for-china-a-season-by-season-checklist/',
-    nextLabel: '季節別の持ち物を確認する',
+    nextLabel: '季節別の持ち物を確認します',
   },
 ];
 
 const routes = [
   {
-    name: '初めての中国旅行向け 8〜10日間',
+    name: '初めての中国旅行におすすめの8〜10日間',
     plan: '上海3日、杭州2日、北京4日',
-    fit: '到着後の動きやすさ、定番の景色、代表的な歴史スポットを無理なくバランスよく組み合わせられます。',
+    fit: '到着後の動きやすさ、定番の景色、代表的な歴史スポットを、無理なくバランスよく組み合わせられます。',
   },
   {
-    name: '食とゆったり滞在を楽しむ 7〜9日間',
+    name: '食とゆったりした滞在を楽しむ7〜9日間',
     plan: '成都4日、北京または上海3〜4日',
     fit: 'パンダ、茶館、火鍋に加えて、主要な玄関口都市も押さえたい旅行者に向いています。',
   },
   {
-    name: '冬の避寒旅行 6〜10日間',
+    name: '冬の避寒旅行におすすめの6〜10日間',
     plan: '三亜4〜6日、上海2〜3日',
     fit: '中国北部が寒い時期に、ビーチ滞在と都市観光をシンプルに組み合わせたい場合に適しています。',
   },
@@ -153,17 +153,17 @@ const faqItems = [
   {
     question: '初めて中国を訪れる外国人旅行者にとって、最も行きやすい都市はどこですか？',
     answer:
-      '上海は、空港、地下鉄表示、ホテル、レストラン、国際的なサービスがそろっており、外国人旅行者にとって最も使いやすい都市の一つです。最初の訪問先として特に選びやすいでしょう。北京も十分に旅行しやすいですが、事前予約や1日の移動計画はやや丁寧に組む必要があります。',
+      '上海は、空港、地下鉄表示、ホテル、レストラン、国際的なサービスがそろっており、外国人旅行者にとって特に使いやすい都市の一つです。初めての訪問先としても選びやすいでしょう。北京も十分に旅行しやすいですが、事前予約や1日の移動計画はやや丁寧に組む必要があります。',
   },
   {
     question: '1回の中国旅行で、都市はいくつ回るのが現実的ですか？',
     answer:
-      '初めてで8〜10日間の旅行であれば、2〜3都市で十分です。中国は広く、空港移動、駅での乗り継ぎ、保安検査、ホテル間の移動には想像以上に時間がかかります。玄関口となる都市を1つ、文化や景色を楽しむ都市を1つ、必要であれば追加でもう1都市に絞るのが無理のない組み方です。',
+      '初めてで8〜10日間の旅行であれば、2〜3都市で十分です。中国は広く、空港移動、駅での乗り継ぎ、保安検査、ホテル間の移動には想像以上に時間がかかります。玄関口となる都市を1つ、文化や景色を楽しむ都市を1つ、必要であれば追加でもう1都市に絞るのが、無理のない組み方です。',
   },
   {
     question: '中国で長めに滞在するなら、どの都市が向いていますか？',
     answer:
-      '利便性や英語対応のしやすさを重視するなら、上海が長期滞在の拠点として最も扱いやすいです。成都は、生活コストを抑えつつ落ち着いて過ごしたい方に向いています。杭州は景観の良さとテック都市としての活気を兼ね備えた中間的な選択肢です。三亜は通年の都市生活というより、冬の滞在先として考えるのが自然です。',
+      '利便性や英語対応のしやすさを重視するなら、上海が長期滞在の拠点として最も使いやすいです。成都は、生活コストを抑えながら落ち着いて過ごしたい方に向いています。杭州は景観の美しさとテック都市としての活気を兼ね備えた、中間的な選択肢です。三亜は通年の都市生活というより、冬の滞在先として考えるのが自然です。',
   },
 ];
 
@@ -197,14 +197,14 @@ const faqJsonLd = {
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
-      <h2 id="city-shortcuts" class="sr-only">都市別ショートカット</h2>
+      <h2 id="city-shortcuts" class="sr-only">都市別のショートカット</h2>
       {cities.map((city) => (
         <article class="card" id={city.id}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">おすすめ滞在日数</dt>
+              <dt class="font-semibold text-gray-900">おすすめの滞在日数</dt>
               <dd class="text-right">{city.days}</dd>
             </div>
             <div class="flex justify-between gap-4">
@@ -217,7 +217,7 @@ const faqJsonLd = {
             </div>
           </dl>
           <div class="mt-5 grid gap-2 text-sm font-semibold">
-            <a href={city.href} class="text-brand-700 hover:text-brand-800">都市ガイドを見る</a>
+            <a href={city.href} class="text-brand-700 hover:text-brand-800">都市ガイドを見ます</a>
             <a href={city.next} class="text-gray-700 hover:text-brand-700">{city.nextLabel}</a>
           </div>
         </article>
@@ -228,7 +228,7 @@ const faqJsonLd = {
       <div class="section-heading">
         <div>
           <p class="section-kicker">都市比較</p>
-          <h2 id="compare-cities">どの都市を選ぶとよいですか？</h2>
+          <h2 id="compare-cities">どの都市を選べばよいですか？</h2>
         </div>
       </div>
       <div class="mt-6 overflow-hidden rounded-lg border border-gray-200">
@@ -237,7 +237,7 @@ const faqJsonLd = {
             <tr>
               <th class="px-4 py-3">都市</th>
               <th class="px-4 py-3">おすすめの理由</th>
-              <th class="px-4 py-3">おすすめ滞在日数</th>
+              <th class="px-4 py-3">おすすめの滞在日数</th>
               <th class="px-4 py-3">ベストシーズン</th>
               <th class="px-4 py-3">難易度</th>
             </tr>
@@ -262,11 +262,11 @@ const faqJsonLd = {
     <section class="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]" aria-labelledby="route-ideas">
       <div>
         <p class="section-kicker">モデルルート</p>
-        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">無理なく回れる都市の組み合わせ</h2>
+        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">無理なく回りやすい都市の組み合わせ</h2>
         <p class="mt-3 leading-7 text-gray-600">
-          中国旅行の行程は、都市ごとの役割を分けて考えると組みやすくなります。上海は到着しやすい玄関口、
-          北京は歴史、杭州は景色、成都は食と中国西部へのアクセス、三亜は暖かい休暇向きです。
-          短期間の旅行では、フライトや駅での乗り換えを詰め込みすぎないようにするのが重要です。
+          中国旅行の行程は、都市ごとの役割を分けて考えると組みやすくなります。上海は到着しやすい玄関口で、
+          北京は歴史、杭州は景色、成都は食と中国西部へのアクセス、三亜は暖かい休暇に向いています。
+          短期間の旅行では、フライトや駅での乗り換えを詰め込みすぎないことが大切です。
         </p>
       </div>
       <div class="grid gap-4">
@@ -301,12 +301,12 @@ const faqJsonLd = {
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
         <p class="section-kicker">都市を決める前に</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">旅行インフラを先に確認しましょう</h2>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">先に旅行インフラを確認しておきましょう</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
           <li><a href="/ja/payment/" class="font-semibold text-brand-700">決済:</a> 地方都市へ向かう前に、Alipay、WeChat Pay、現金の予備を用意しておくと安心です。</li>
-          <li><a href="/ja/esim/" class="font-semibold text-brand-700">ネット接続:</a> 地図や翻訳アプリを使う前提なら、eSIM、ローミング、現地SIMのどれにするか先に決めておきましょう。</li>
+          <li><a href="/ja/esim/" class="font-semibold text-brand-700">ネット接続:</a> 地図や翻訳アプリを使う予定なら、eSIM、ローミング、現地SIMのどれにするか先に決めておきましょう。</li>
           <li><a href="/ja/transport/" class="font-semibold text-brand-700">移動手段:</a> 鉄道、空港アクセス、DiDi、地下鉄QRコードの使い分けを確認しておきましょう。</li>
-          <li><a href="/ja/tools/best-time-to-visit/" class="font-semibold text-brand-700">旅行時期:</a> 月ごとの天気、祝日、混雑状況を事前にチェックしておくのがおすすめです。</li>
+          <li><a href="/ja/tools/best-time-to-visit/" class="font-semibold text-brand-700">旅行時期:</a> 月ごとの天気、祝日、混雑状況を事前に確認しておくのがおすすめです。</li>
         </ul>
       </aside>
     </section>
