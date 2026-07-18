@@ -3,85 +3,85 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = '外国人旅行者のための中国旅行リソース集';
+const title = '外国人旅行者向け中国旅行リソース集です';
 const description =
-  '中国を訪れる外国人旅行者の方向けに、実用的な情報をまとめたリソース集です。決済、eSIM、鉄道、ビザ、都市ガイド、各種ツールなど、初めての中国旅行の計画に役立つリンクをご紹介します。';
+  '中国を訪れる外国人旅行者の方向けに、実用的な情報をまとめたリソース集です。決済、eSIM、鉄道、ビザ、都市ガイド、各種ツールなど、初めての中国旅行を計画する際に役立つリンクをご紹介します。';
 
 const resourceGroups = [
   {
-    title: '30分で全体をつかみたい方へ',
-    description: '短時間で中国旅行の準備を進めたい方向けに、最短で必要な情報を確認できる導線です。',
+    title: '30分で全体像をつかみたい方へ',
+    description: '短時間で中国旅行の準備を進めたい方向けに、必要な情報を手早く確認できる導線をご用意しています。',
     links: [
-      { href: '/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '出発前の準備チェックリスト' },
-      { href: '/ja/tools/survival-kit/', title: '中国旅行サバイバルカードとチェックリスト' },
-      { href: '/ja/tools/payment-checker/', title: '支払いの代替手段を確認する' },
-      { href: '/ja/tools/visa-free-checker/', title: 'ビザ免除またはトランジット条件を確認する' },
-      { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '鉄道の予約方法と駅での乗車手順を確認する' },
+      { href: '/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '出発前の準備チェックリストです' },
+      { href: '/ja/tools/survival-kit/', title: '中国旅行サバイバルカードとチェックリストです' },
+      { href: '/ja/tools/payment-checker/', title: '支払いの代替手段を確認します' },
+      { href: '/ja/tools/visa-free-checker/', title: 'ビザ免除またはトランジット条件を確認します' },
+      { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '鉄道の予約方法と駅での乗車手順を確認します' },
     ],
   },
   {
-    title: 'まずはこちら：初めての旅行準備',
-    description: '中国に行くと決めてから、現地で困らないように準備を整えるまでの最短ルートです。',
+    title: 'まずはこちらです：初めての旅行準備',
+    description: '中国に行くと決めてから、現地で困らないように準備を整えるまでの最短ルートをご案内します。',
     links: [
-      { href: '/ja/trip-planner/', title: '無料の中国旅行プランナー' },
-      { href: '/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: '初めて中国を訪れる方向けの旅行プランナー' },
-      { href: '/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '中国旅行前に準備しておきたいこと' },
-      { href: '/ja/posts/china-visa-free-entry-transit-guide-2026/', title: '中国のビザ免除・トランジットガイド' },
-      { href: '/ja/tools/best-time-to-visit/', title: '中国旅行のベストシーズンを調べる' },
-      { href: '/ja/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '中国旅行の持ち物リスト' },
+      { href: '/ja/trip-planner/', title: '無料の中国旅行プランナーです' },
+      { href: '/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: '初めて中国を訪れる方向けの旅行プランナーです' },
+      { href: '/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '中国旅行前に準備しておきたいことです' },
+      { href: '/ja/posts/china-visa-free-entry-transit-guide-2026/', title: '中国のビザ免除・トランジットガイドです' },
+      { href: '/ja/tools/best-time-to-visit/', title: '中国旅行のベストシーズンを調べます' },
+      { href: '/ja/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '中国旅行の持ち物リストです' },
     ],
   },
   {
-    title: '支払いとお金',
+    title: '支払いとお金について',
     description: 'モバイル決済、現金の備え、クレジットカード、日常の支払いで起こりやすいトラブルをまとめています。',
     links: [
-      { href: '/ja/posts/how-to-pay-in-china-tourist-guide/', title: '旅行者が中国で支払う方法' },
-      { href: '/ja/posts/alipay-foreign-credit-card-step-by-step/', title: '海外発行カードでAlipayを設定する' },
-      { href: '/ja/posts/wechat-pay-foreign-visitors-guide/', title: '外国人旅行者向けWeChat Payガイド' },
-      { href: '/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '出発前の決済・アプリ準備チェックリスト' },
-      { href: '/ja/tools/payment-checker/', title: '決済対応チェッカー' },
+      { href: '/ja/posts/how-to-pay-in-china-tourist-guide/', title: '旅行者が中国で支払う方法です' },
+      { href: '/ja/posts/alipay-foreign-credit-card-step-by-step/', title: '海外発行カードでAlipayを設定する方法です' },
+      { href: '/ja/posts/wechat-pay-foreign-visitors-guide/', title: '外国人旅行者向けWeChat Payガイドです' },
+      { href: '/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '出発前の決済・アプリ準備チェックリストです' },
+      { href: '/ja/tools/payment-checker/', title: '決済対応チェッカーです' },
     ],
   },
   {
-    title: 'インターネットとアプリ',
+    title: 'インターネットとアプリについて',
     description: '通信手段を確保し、eSIMを選び、到着前に入れておきたいアプリを把握できる情報をまとめています。',
     links: [
-      { href: '/ja/posts/best-esim-for-china-travel-2026/', title: '中国旅行におすすめのeSIM' },
-      { href: '/ja/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: '中国向けeSIMとローミング料金を比較する' },
-      { href: '/ja/posts/internet-access-china-apps-that-work-2026/', title: '中国でのインターネット接続と使えるアプリ' },
-      { href: '/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'eSIMとアプリを含めた初めての旅行計画' },
-      { href: '/ja/tools/app-availability-checker/', title: 'このアプリは中国で使えるか確認する' },
+      { href: '/ja/posts/best-esim-for-china-travel-2026/', title: '中国旅行におすすめのeSIMです' },
+      { href: '/ja/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: '中国向けeSIMとローミング料金を比較します' },
+      { href: '/ja/posts/internet-access-china-apps-that-work-2026/', title: '中国でのインターネット接続と使えるアプリについてです' },
+      { href: '/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'eSIMとアプリを含めた初めての旅行計画です' },
+      { href: '/ja/tools/app-availability-checker/', title: 'このアプリが中国で使えるか確認します' },
     ],
   },
   {
-    title: '移動手段と都市ガイド',
+    title: '移動手段と都市ガイドです',
     description: '鉄道、地下鉄、空港、配車アプリに加えて、都市ごとの実用的な計画づくりに役立つ情報をまとめています。',
     links: [
-      { href: '/ja/cities/', title: '中国の都市ガイド一覧' },
-      { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '外国人向け中国高速鉄道ガイド' },
-      { href: '/ja/posts/book-china-train-tickets-12306-foreigners/', title: '12306で中国の鉄道チケットを予約する方法' },
-      { href: '/ja/posts/didi-china-foreign-tourists-guide/', title: '外国人旅行者がDiDiを使う方法' },
-      { href: '/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: '空港から市内への移動ガイド' },
+      { href: '/ja/cities/', title: '中国の都市ガイド一覧です' },
+      { href: '/ja/posts/china-high-speed-rail-guide-foreigners/', title: '外国人向け中国高速鉄道ガイドです' },
+      { href: '/ja/posts/book-china-train-tickets-12306-foreigners/', title: '12306で中国の鉄道チケットを予約する方法です' },
+      { href: '/ja/posts/didi-china-foreign-tourists-guide/', title: '外国人旅行者がDiDiを使う方法です' },
+      { href: '/ja/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: '空港から市内への移動ガイドです' },
     ],
   },
   {
-    title: '食事、マナー、日常生活',
+    title: '食事、マナー、日常生活について',
     description: '食事、チップ、デリバリーアプリ、屋台グルメ、現地での不便を減らすための実用的な習慣をまとめています。',
     links: [
-      { href: '/ja/food/', title: '中国の食事・グルメガイド' },
-      { href: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: '中国語ができなくても料理を注文する方法' },
-      { href: '/ja/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: '成都の屋台グルメ、安全性と辛さの目安ガイド' },
-      { href: '/ja/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '中国でチップが必要な場面を確認する' },
+      { href: '/ja/food/', title: '中国の食事・グルメガイドです' },
+      { href: '/ja/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: '中国語ができなくても料理を注文する方法です' },
+      { href: '/ja/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: '成都の屋台グルメ、安全性と辛さの目安ガイドです' },
+      { href: '/ja/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '中国でチップが必要な場面を確認します' },
     ],
   },
   {
-    title: '長期滞在とリモートワーク',
+    title: '長期滞在とリモートワークについて',
     description: '数週間から数か月滞在する場合は、法的要件、住まい、決済、仕事で使うツールの安定性を先に確認しておくと安心です。',
     links: [
-      { href: '/ja/long-stay/', title: '中国長期滞在ガイド' },
-      { href: '/ja/digital-nomads/', title: '中国デジタルノマドガイド' },
-      { href: '/ja/digital-nomads/visa/', title: 'デジタルノマド向け中国ビザガイド' },
-      { href: '/ja/digital-nomads/payment/', title: '長期滞在向けの決済設定' },
+      { href: '/ja/long-stay/', title: '中国長期滞在ガイドです' },
+      { href: '/ja/digital-nomads/', title: '中国デジタルノマドガイドです' },
+      { href: '/ja/digital-nomads/visa/', title: 'デジタルノマド向け中国ビザガイドです' },
+      { href: '/ja/digital-nomads/payment/', title: '長期滞在向けの決済設定です' },
     ],
   },
 ];
@@ -91,7 +91,7 @@ const resourceGroups = [
   <Header locale="ja" />
   <main class="container-page py-10">
     <section class="max-w-3xl">
-      <p class="section-kicker">ご案内</p>
+      <p class="section-kicker">ご案内です</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </section>
