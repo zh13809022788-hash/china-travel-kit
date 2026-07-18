@@ -36,6 +36,7 @@ const internetTools = [
   { href: '/zh-tw/posts/internet-access-china-apps-that-work-2026/', title: '中國上網攻略', desc: '出發前先了解應用程式使用情況、VPN 預期，以及實用設定方式。' },
 ];
 ---
+import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
@@ -104,7 +105,7 @@ const internetTools = [
       {posts.map((post, i) => (
         <>
           <a href={`/zh-tw/posts/${post.slug}/`} class="card block hover:no-underline">
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">

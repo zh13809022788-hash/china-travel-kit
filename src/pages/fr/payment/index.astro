@@ -27,6 +27,7 @@ const paymentTools = [
   { href: '/fr/tools/currency-converter/', title: 'Convertisseur de devise RMB', desc: 'Convertissez les prix en yuans et comprenez les coûts du quotidien.' },
 ];
 ---
+import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />
@@ -94,7 +95,7 @@ const paymentTools = [
       {posts.map((post, i) => (
         <>
           <a href={`/fr/posts/${post.slug}/`} class="card block hover:no-underline">
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">

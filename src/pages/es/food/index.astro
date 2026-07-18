@@ -91,6 +91,7 @@ const cultureLinks = [
 ];
 
 ---
+import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
 
@@ -162,7 +163,7 @@ const cultureLinks = [
 
             <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
 
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
 
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
 

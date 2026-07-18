@@ -55,6 +55,7 @@ const paymentTools = [
 ];
 
 ---
+import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
 
@@ -188,7 +189,7 @@ const paymentTools = [
 
           <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
 
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
 
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
 

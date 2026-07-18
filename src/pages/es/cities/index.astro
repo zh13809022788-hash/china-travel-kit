@@ -172,6 +172,7 @@ const faqJsonLd = {
   })),
 };
 ---
+import { getCategoryLabel } from '../../../i18n/categories.ts';
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main class="container-page py-10">
@@ -282,7 +283,7 @@ const faqJsonLd = {
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {cityPosts.map((post) => (
             <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
             </a>

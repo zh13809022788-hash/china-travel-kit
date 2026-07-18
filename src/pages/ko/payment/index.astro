@@ -27,6 +27,7 @@ const paymentTools = [
   { href: '/ko/tools/currency-converter/', title: '위안화 환율 변환기', desc: '가격을 위안화 기준으로 환산하고 일상적인 물가 수준을 파악해보세요.' },
 ];
 ---
+import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
   <Header locale="ko" />
@@ -94,7 +95,7 @@ const paymentTools = [
       {posts.map((post, i) => (
         <>
           <a href={`/ko/posts/${post.slug}/`} class="card block hover:no-underline">
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">

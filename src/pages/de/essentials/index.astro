@@ -15,6 +15,7 @@ const posts = (await getCollection('posts-de'))
 const title = 'China-Reiseplanung: Visa, Reisezeit und Grundlagen';
 const description = 'Plane deine Reise nach China mit gutem Gefühl: Visa und Einreisebestimmungen, die beste Reisezeit, Packtipps, Sicherheit und alles, was du vor dem Abflug erledigen solltest.';
 ---
+import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
@@ -33,7 +34,7 @@ const description = 'Plane deine Reise nach China mit gutem Gefühl: Visa und Ei
       {posts.map((post, i) => (
         <>
           <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">

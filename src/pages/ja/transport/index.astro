@@ -22,6 +22,7 @@ const transportPaths = [
   { href: '/ja/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '地下鉄の利用方法をご案内します', desc: '上海を例に、QR乗車券の使い方、乗り換え方法、ラッシュ時の利用の流れを学んでいただけます。' },
 ];
 ---
+import { getCategoryLabel } from '../../../i18n/categories.ts';
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />
@@ -70,7 +71,7 @@ const transportPaths = [
       {posts.map((post, i) => (
         <>
           <a href={`/ja/posts/${post.slug}/`} class="card block hover:no-underline">
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">
