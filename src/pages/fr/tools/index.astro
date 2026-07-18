@@ -1,4 +1,5 @@
 ---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,35 +8,35 @@ import { TOOLS as tools } from '../../../config';
 
 const title = 'Outils gratuits : visa, paiement, eSIM, budget, cartes chauffeur et phrases';
 const description =
-  'Free interactive tools for China travel planning: check visa-free entry, payment card compatibility, eSIM options, trip budget, cash backup, power plugs, Chinese phrases, and taxi driver address cards.';
+  'Outils interactifs gratuits pour planifier un voyage en Chine : vérifiez l’entrée sans visa, la compatibilité des cartes de paiement, les options eSIM, le budget du voyage, les solutions de secours en espèces, les prises électriques, les phrases en chinois et les cartes d’adresse pour chauffeur de taxi.';
 
 const toolUseCases = [
   {
-    title: 'Before booking flights',
-    text: 'Use the visa-free checker, best-time planner, and budget estimator before you lock dates and cities.',
+    title: 'Avant de réserver les vols',
+    text: 'Utilisez le vérificateur d’entrée sans visa, l’outil pour choisir la meilleure période et l’estimateur de budget avant de fixer vos dates et vos villes.',
     links: [
-      { href: '/fr/tools/visa-free-checker/', label: 'Visa-free checker' },
-      { href: '/fr/tools/best-time-to-visit/', label: 'Best time to visit' },
-      { href: '/fr/tools/budget-cash-estimator/', label: 'Budget estimator' },
+      { href: '/fr/tools/visa-free-checker/', label: 'Vérificateur d’entrée sans visa' },
+      { href: '/fr/tools/best-time-to-visit/', label: 'Meilleure période pour partir' },
+      { href: '/fr/tools/budget-cash-estimator/', label: 'Estimateur de budget' },
     ],
   },
   {
-    title: 'Before departure',
-    text: 'Use payment, eSIM, app, plug, and phrase tools while you still have time to fix setup problems at home.',
+    title: 'Avant le départ',
+    text: 'Utilisez les outils de paiement, eSIM, applications, prises et phrases pendant qu’il est encore temps de résoudre les problèmes de configuration chez vous.',
     links: [
-      { href: '/fr/tools/payment-checker/', label: 'Paiement checker' },
-      { href: '/fr/tools/esim-comparison/', label: 'eSIM comparator' },
-      { href: '/fr/tools/app-availability-checker/', label: 'App checker' },
+      { href: '/fr/tools/payment-checker/', label: 'Vérificateur de paiement' },
+      { href: '/fr/tools/esim-comparison/', label: 'Comparateur eSIM' },
+      { href: '/fr/tools/app-availability-checker/', label: 'Vérificateur d’applications' },
     ],
   },
   {
-    title: 'On the ground in China',
-    text: 'Use driver cards, currency conversion, and essential phrases when apps, taxis, menus, or front desks get confusing.',
+    title: 'Sur place en Chine',
+    text: 'Utilisez les cartes chauffeur, la conversion de devises et les phrases essentielles lorsque les applications, les taxis, les menus ou les comptoirs d’accueil deviennent difficiles à comprendre.',
     links: [
-      { href: '/fr/tools/survival-kit/', label: 'Survival kit' },
-      { href: '/fr/tools/show-to-driver/', label: 'Show to Driver' },
-      { href: '/fr/tools/currency-converter/', label: 'RMB converter' },
-      { href: '/fr/tools/essential-phrases/', label: 'Essential phrases' },
+      { href: '/fr/tools/survival-kit/', label: 'Kit de survie' },
+      { href: '/fr/tools/show-to-driver/', label: 'Montrer au chauffeur' },
+      { href: '/fr/tools/currency-converter/', label: 'Convertisseur RMB' },
+      { href: '/fr/tools/essential-phrases/', label: 'Phrases essentielles' },
     ],
   },
 ];
@@ -64,8 +65,8 @@ const toolsJsonLd = {
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Outils gratuits pour voyager en Chine</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Utiliser la checklist avant départ</a>
-        <a href="/fr/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Lire le guide première visite</a>
+        <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Utiliser la checklist avant le départ</a>
+        <a href="/fr/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Lire le guide pour une première visite</a>
       </div>
     </header>
 
@@ -101,3 +102,5 @@ const toolsJsonLd = {
   </main>
   <Footer />
 </BaseLayout>
+
+---
