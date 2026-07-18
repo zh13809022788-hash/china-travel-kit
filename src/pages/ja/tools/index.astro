@@ -1,39 +1,39 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import { TOOLS as tools } from '../../../config';
 
-const title = '無料の中国旅行ツール：ビザ、決済、eSIM、予算、運転手カード、会話フレーズ';
+const title = '無料で使える中国旅行ツール集：ビザ、決済、eSIM、予算、運転手向けカード、会話フレーズ';
 const description =
-  '中国旅行の計画に役立つ無料のインタラクティブツール：ビザなし入国、決済カードの対応状況、eSIMの選択肢、旅行予算、現金の予備、電源プラグ、中国語フレーズ、タクシー運転手に見せる住所カードを確認できます。';
+  '中国旅行の準備に役立つ無料のインタラクティブツールをまとめました。ビザなし入国の確認、使える決済カードのチェック、eSIMの比較、旅行予算の試算、現金の予備額、電源プラグ、中国語フレーズ、タクシー運転手に見せる住所カードまで、このページで確認できます。';
 
 const toolUseCases = [
   {
-    title: '航空券を予約する前',
-    text: '日程と訪問都市を確定する前に、ビザなし入国チェッカー、ベストシーズンプランナー、予算見積もりを使いましょう。',
+    title: '航空券を予約する前に',
+    text: '旅程や訪問都市を決める前に、ビザなし入国チェッカー、ベストシーズンプランナー、予算見積もりを確認しておくと安心です。',
     links: [
       { href: '/ja/tools/visa-free-checker/', label: 'ビザなし入国チェッカー' },
-      { href: '/ja/tools/best-time-to-visit/', label: '訪問に最適な時期' },
+      { href: '/ja/tools/best-time-to-visit/', label: '旅行に最適な時期' },
       { href: '/ja/tools/budget-cash-estimator/', label: '予算見積もり' },
     ],
   },
   {
-    title: '出発前',
-    text: '自宅で設定トラブルに対処できるうちに、決済、eSIM、アプリ、電源プラグ、フレーズの各ツールを確認しましょう。',
+    title: '出発前に',
+    text: 'まだ自宅で落ち着いて設定できるうちに、決済、eSIM、アプリ、電源プラグ、フレーズ関連のツールをひと通り確認しておきましょう。',
     links: [
       { href: '/ja/tools/payment-checker/', label: '決済チェッカー' },
       { href: '/ja/tools/esim-comparison/', label: 'eSIM比較' },
-      { href: '/ja/tools/app-availability-checker/', label: 'アプリチェッカー' },
+      { href: '/ja/tools/app-availability-checker/', label: 'アプリ利用可否チェッカー' },
     ],
   },
   {
-    title: 'China滞在中',
-    text: 'アプリ、タクシー、メニュー、ホテルのフロントで困ったときは、運転手カード、通貨換算、必須フレーズを使いましょう。',
+    title: '中国滞在中に',
+    text: 'アプリの操作、タクシーの利用、メニューの読み取り、ホテルのフロント対応で困ったときは、運転手カード、通貨換算、必須フレーズが役立ちます。',
     links: [
       { href: '/ja/tools/survival-kit/', label: 'サバイバルキット' },
-      { href: '/ja/tools/show-to-driver/', label: '運転手に見せる' },
+      { href: '/ja/tools/show-to-driver/', label: '運転手に見せるカード' },
       { href: '/ja/tools/currency-converter/', label: '人民元換算' },
       { href: '/ja/tools/essential-phrases/', label: '必須フレーズ' },
     ],
@@ -60,12 +60,12 @@ const toolsJsonLd = {
   <Header locale="ja" />
   <main class="container-page py-12">
     <header class="max-w-2xl">
-      <p class="section-kicker">ツールセンター</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">無料の中国旅行ツール</h1>
+      <p class="section-kicker">ツール一覧</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">無料で使える中国旅行ツール集</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">出発前チェックリストを使う</a>
-        <a href="/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">初めての方向けプランナーを読む</a>
+        <a href="/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">出発前チェックリストを見る</a>
+        <a href="/ja/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">初めての方向け旅行プランを見る</a>
       </div>
     </header>
 
@@ -73,7 +73,7 @@ const toolsJsonLd = {
 
     <section class="mt-8 grid gap-5 lg:grid-cols-3" aria-labelledby="tool-use-cases-heading">
       <div class="lg:col-span-3">
-        <h2 id="tool-use-cases-heading" class="text-2xl font-bold text-gray-950">最初に使うべきツールは？</h2>
+        <h2 id="tool-use-cases-heading" class="text-2xl font-bold text-gray-950">どのツールから使えばよいですか？</h2>
       </div>
       {toolUseCases.map((useCase) => (
         <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
@@ -94,7 +94,7 @@ const toolsJsonLd = {
           <div class="text-3xl">{tool.icon}</div>
           <h2 class="mt-3 text-lg font-bold text-gray-900">{tool.title}</h2>
           <p class="mt-1.5 text-sm text-gray-600">{tool.desc}</p>
-          <span class="mt-3 inline-block text-sm font-semibold text-brand-600">ツールを開く →</span>
+          <span class="mt-3 inline-block text-sm font-semibold text-brand-600">ツールを開く</span>
         </a>
       ))}
     </section>
