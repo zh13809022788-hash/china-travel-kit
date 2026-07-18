@@ -8,28 +8,28 @@ import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
 const allPosts = await getCollection('posts-zh-tw');
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
 const cityPosts = allPosts
   .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
 const title = '外籍旅客的中國城市指南';
 const description =
-  '透過北京、上海、廣州、成都、西安、杭州、重慶與三亞等城市指南，規劃更順暢的中國行程，並掌握機場、地鐵、美食與市區交通安排。';
+  '透過北京、上海、廣州、成都、西安、杭州、南京、桂林、重慶與三亞等城市指南，規劃更順暢的中國行程，並掌握機場、地鐵、美食與市區交通安排。';
 
 const mapCities = [
-  { name: '北京', x: 470, y: 80, href: '#beijing' },
-  { name: '西安', x: 340, y: 155, href: '#xian' },
-  { name: '南京', x: 490, y: 180, href: '' },
-  { name: '上海', x: 540, y: 200, href: '#shanghai' },
-  { name: '成都', x: 250, y: 220, href: '#chengdu' },
-  { name: '杭州', x: 520, y: 205, href: '#hangzhou' },
-  { name: '重慶', x: 310, y: 260, href: '#chongqing' },
-  { name: '桂林', x: 370, y: 300, href: '' },
-  { name: '昆明', x: 210, y: 335, href: '' },
-  { name: '廣州', x: 400, y: 370, href: '#guangzhou' },
-  { name: '深圳', x: 430, y: 390, href: '' },
-  { name: '三亞', x: 360, y: 440, href: '#sanya' },
+  { name: '北京', x: 460, y: 208, href: '#beijing' },
+  { name: '西安', x: 387, y: 283, href: '#xian' },
+  { name: '南京', x: 483, y: 312, href: '#nanjing' },
+  { name: '上海', x: 509, y: 324, href: '#shanghai' },
+  { name: '成都', x: 341, y: 332, href: '#chengdu' },
+  { name: '杭州', x: 497, y: 336, href: '#hangzhou' },
+  { name: '重慶', x: 364, y: 345, href: '#chongqing' },
+  { name: '桂林', x: 401, y: 403, href: '#guilin' },
+  { name: '昆明', x: 327, y: 407, href: '' },
+  { name: '廣州', x: 430, y: 432, href: '#guangzhou' },
+  { name: '深圳', x: 438, y: 440, href: '' },
+  { name: '三亞', x: 393, y: 496, href: '#sanya' },
 ];
 
 const cities = [
@@ -129,6 +129,30 @@ const cities = [
     next: '/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/',
     nextLabel: '各季節行李打包指南',
   },
+  {
+    id: 'nanjing',
+    name: '南京',
+    href: '/zh-tw/posts/nanjing-city-guide-for-foreigners/',
+    desc: '適合想感受明代歷史、秦淮河夜景，以及悠閒文化氛圍的旅客。',
+    days: '2 到 3 天',
+    bestSeason: '3 月到 5 月、9 月到 11 月',
+    difficulty: '容易到中等',
+    whyGo: '明孝陵、中山陵、夫子廟秦淮河，歷史氣息濃厚，步調比上海從容。',
+    next: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/',
+    nextLabel: '前往南京的高鐵指南',
+  },
+  {
+    id: 'guilin',
+    name: '桂林',
+    href: '/zh-tw/posts/guilin-city-guide-for-foreigners/',
+    desc: '適合想看喀斯特山水、灕江遊船、陽朔田園風光與戶外活動的旅客。',
+    days: '3 到 4 天',
+    bestSeason: '3 月到 10 月',
+    difficulty: '中等',
+    whyGo: '灕江、陽朔、龍脊梯田、蘆笛岩，擁有中國最美的山水景觀。',
+    next: '/zh-tw/posts/china-high-speed-rail-guide-foreigners/',
+    nextLabel: '前往桂林的高鐵指南',
+  },
 ];
 
 const routes = [
@@ -146,6 +170,16 @@ const routes = [
     name: '冬季避寒之旅，6 到 10 天',
     plan: '三亞 4 到 6 天、上海 2 到 3 天',
     fit: '如果中國北方太冷，想安排海灘加城市的簡單組合，這條路線很合適。',
+  },
+  {
+    name: '南方發現之旅，10 到 12 天',
+    plan: '廣州 3 天、桂林 3 天、上海 4 天',
+    fit: '適合喜愛美食、山水風景與輕鬆步調，一路感受南方魅力的旅客。',
+  },
+  {
+    name: '千年古都之旅，10 到 12 天',
+    plan: '北京 4 天、西安 3 天、南京 2 天、上海 3 天',
+    fit: '沿高鐵串聯中國歷代皇都，適合對歷史文化感興趣的深度旅客。',
   },
 ];
 

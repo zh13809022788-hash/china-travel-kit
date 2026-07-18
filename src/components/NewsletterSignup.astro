@@ -1,13 +1,14 @@
 ---
 // Email newsletter signup form.
-// Replace MAILCHIMP_URL with your actual Mailchimp/ConvertKit endpoint.
-// Currently posts to Formspree as free fallback.
+// Sends subscriber email via mailto; replace with Mailchimp/Formspree later.
 
 const MAILCHIMP_URL = '';
-const FORMSPREE_URL = 'https://formspree.io/f/your-form-id';
+const FORMSPREE_URL = '';
 
 const actionUrl = MAILCHIMP_URL || FORMSPREE_URL;
 const isMailchimp = !!MAILCHIMP_URL;
+const isFormspree = !!FORMSPREE_URL;
+const isMailto = !MAILCHIMP_URL && !FORMSPREE_URL;
 
 const { locale = 'en' } = Astro.props;
 const normalizedLocale = (locale as string).toLowerCase();
@@ -87,14 +88,14 @@ const POWERED_BY: Record<string, string> = {
       {t('desc')}
     </p>
     <form
-      action={actionUrl}
-      method="post"
+      action={isMailto ? `mailto:zh13809022788@gmail.com?subject=${encodeURIComponent('ChinaTripBox Newsletter Subscription')}` : actionUrl}
+      method={isMailto ? 'get' : 'post'}
       target="_blank"
       class="mt-4 flex flex-col gap-3 sm:flex-row"
     >
       <input
         type="email"
-        name="EMAIL"
+        name="body"
         placeholder="your@email.com"
         required
         class="min-w-0 flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-100"
@@ -109,7 +110,7 @@ const POWERED_BY: Record<string, string> = {
       </button>
     </form>
     <p class="mt-2 text-xs text-gray-500">
-      {isMailchimp ? 'Powered by Mailchimp' : `Powered by Formspree`} &middot; {t('powered')}
+      {isMailchimp ? 'Powered by Mailchimp' : isFormspree ? 'Powered by Formspree' : `Sent to zh13809022788@gmail.com`} &middot; {t('powered')}
     </p>
   </div>
 </div>
