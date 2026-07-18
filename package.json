@@ -5,10 +5,12 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/validate-layout.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check:content": "node scripts/check-content-quality.mjs"
+    "check:content": "node scripts/check-content-quality.mjs",
+    "validate:layout": "node scripts/validate-layout.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.14",

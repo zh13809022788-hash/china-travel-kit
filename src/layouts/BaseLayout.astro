@@ -1,4 +1,8 @@
 ---
+// ⚠️ CRITICAL: The <slot /> tag in <body> is REQUIRED for page content to render.
+// Removing it causes ALL pages to render blank (content goes after </html>).
+// The prebuild script (scripts/validate-layout.mjs) will FAIL the build if missing.
+// DO NOT remove or move <slot /> — see MEMORY.md for details.
 import '../styles/global.css';
 import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID, GA4_MEASUREMENT_ID } from '../config';
 
