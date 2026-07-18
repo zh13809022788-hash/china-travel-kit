@@ -19,25 +19,25 @@ interface AppInfo {
 }
 
 const apps: AppInfo[] = [
-  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Bing (funktioniert) oder Baidu' },
-  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Lädt, aber Daten sind im chinesischen Festland ungenau/verschoben.', alt: 'Apple Maps, Amap oder Baidu Maps' },
-  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Outlook / eine Nicht-Google-E-Mail' },
+  { name: 'Google-Suche', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Bing (funktioniert) oder Baidu' },
+  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Lädt, aber Daten sind auf dem chinesischen Festland ungenau/verschoben.', alt: 'Apple Maps, Amap oder Baidu Maps' },
+  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Outlook / eine E-Mail ohne Google' },
   { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Bilibili (lokal)' },
   { name: 'WhatsApp', category: 'Nachrichten', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat' },
-  { name: 'Facebook', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat Moments / RED' },
-  { name: 'Instagram', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'RED (Xiaohongshu)' },
-  { name: 'X (Twitter)', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Weibo' },
+  { name: 'Facebook', category: 'Soziale Medien', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat Moments / RED' },
+  { name: 'Instagram', category: 'Soziale Medien', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'RED (Xiaohongshu)' },
+  { name: 'X (Twitter)', category: 'Soziale Medien', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Weibo' },
   { name: 'Telegram', category: 'Nachrichten', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat' },
   { name: 'WeChat', category: 'Nachrichten', status: 'works', note: 'Funktioniert vollständig — der Standard in China.' },
   { name: 'Apple-Dienste (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Funktioniert normal.' },
   { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: 'Funktioniert normal.' },
   { name: 'Booking.com', category: 'Reise', status: 'works', note: 'Funktioniert normal.' },
   { name: 'Airbnb', category: 'Reise', status: 'works', note: 'Funktioniert normal.' },
-  { name: 'Trip.com', category: 'Reise', status: 'works', note: 'Funktioniert vollständig — toll für Züge und Hotels.' },
+  { name: 'Trip.com', category: 'Reise', status: 'works', note: 'Funktioniert vollständig — ideal für Züge und Hotels.' },
   { name: 'Alipay', category: 'Bezahlung', status: 'works', note: 'Funktioniert vollständig — unterstützt ausländische Karten.' },
-  { name: 'Uber', category: 'Verkehr', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'DiDi' },
-  { name: 'Netflix', category: 'Medien', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'Lokales Streaming oder vorher herunterladen' },
-  { name: 'Spotify', category: 'Medien', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'QQ Music / zuerst offline herunterladen' },
+  { name: 'Uber', category: 'Verkehr', status: 'blocked', note: 'Auf dem chinesischen Festland nicht verfügbar.', alt: 'DiDi' },
+  { name: 'Netflix', category: 'Medien', status: 'blocked', note: 'Auf dem chinesischen Festland nicht verfügbar.', alt: 'Lokales Streaming oder vorher herunterladen' },
+  { name: 'Spotify', category: 'Medien', status: 'blocked', note: 'Auf dem chinesischen Festland nicht verfügbar.', alt: 'QQ Music / vorher offline herunterladen' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
