@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import CoverImage from '../../../components/CoverImage.astro';
 
 const CATEGORY = 'transport';
 const posts = (await getCollection('posts'))
@@ -21,7 +21,7 @@ const transportPaths = [
   { href: '/posts/didi-china-foreign-tourists-guide/', title: 'Ride-Hailing', desc: 'Richten Sie DiDi ein, verwenden Sie übersetzte Abholpins und verringern Sie Reibung durch Fahreranrufe.' },
   { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Metrosysteme', desc: 'Lernen Sie QR-Tickets, Umstiege und Gewohnheiten zur Hauptverkehrszeit am Beispiel Shanghai kennen.' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from '../../../i18n/categories';
 const locale = 'en';
 ---
 <!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
