@@ -1,77 +1,316 @@
 ---
-import GuideLayout from '../../../layouts/GuideLayout.astro';
+import GuideLayout from '../../layouts/GuideLayout.astro';
 
-const title = 'Estancia larga en China: guía completa para extranjeros (2026)';
+const title = "Estancia de larga duracion en China: guia completa para extranjeros (2026)";
 const description =
-  '¿Piensas quedarte en China entre uno y seis meses? Esta guía explica alojamiento, visados, costes mensuales y vida diaria para viajeros de larga estancia y expatriados temporales.';
+  'Planeas quedarte en China de 1 a 6 meses? Nuestra guia cubre alojamiento de larga estancia, normas de visa, costos mensuales y consejos de vida diaria para viajeros lentos y expatriados.';
 const url = '/long-stay/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
   { label: 'Inicio', href: '/' },
-  { label: 'Estancia larga' },
+  { label: 'Larga estancia' },
 ];
 
 const toc = [
-  { id: 'short-vs-long', label: 'Viaje corto frente a estancia larga' },
-  { id: 'legal-stay', label: 'Cómo quedarse legalmente de 1 a 6 meses' },
-  { id: 'accommodation', label: 'Opciones de alojamiento' },
-  { id: 'monthly-cost', label: 'Coste mensual de vida' },
-  { id: 'daily-life', label: 'Aspectos básicos del día a día' },
-  { id: 'cities', label: 'Ciudades recomendadas' },
+  { id: 'short-vs-long', label: 'Viaje corto vs. larga estancia' },
+  { id: 'legal-stay', label: 'Estancia legal de 1 a 6 meses' },
+  { id: 'accommodation', label: 'Alojamiento de larga estancia' },
+  { id: 'monthly-cost', label: 'Costo de vida mensual' },
+  { id: 'daily-life', label: 'Aspectos esenciales de la vida diaria' },
+  { id: 'cities', label: 'Ciudades populares para largas estancias' },
   { id: 'faq', label: 'Preguntas frecuentes' },
 ];
 
 const faqs = [
-  { question: '¿Cuánto tiempo puede quedarse legalmente un extranjero en China sin permiso de residencia?', answer: 'Depende del visado. Un visado turístico suele permitir 30, 60 o 90 días por entrada, y en algunos casos puede ampliarse. Un visado de negocios puede ofrecer entre 90 y 180 días por entrada. Para vivir de forma continuada durante más tiempo o trabajar localmente, normalmente hace falta permiso de residencia.' },
-  { question: '¿Puede un extranjero alquilar un apartamento normal durante unos meses?', answer: 'Sí, aunque muchos propietarios prefieren contratos de seis o doce meses. Para estancias de uno a tres meses, los apartahoteles y las tarifas mensuales de hotel suelen ser opciones más fáciles y mejor preparadas para el papeleo.' },
-  { question: '¿Tengo que registrarme en la policía si alquilo por mi cuenta?', answer: 'Sí. Los hoteles lo hacen automáticamente, pero si te alojas en un piso privado debes registrar tu dirección en la comisaría local dentro de las 24 horas y repetirlo tras cada nueva entrada en China.' },
-  { question: '¿Cuánto cuesta vivir un mes en China como extranjero?', answer: 'Un presupuesto razonablemente cómodo puede empezar alrededor de 6.000 RMB en ciudades pequeñas como Dali y superar 15.000 RMB en zonas céntricas de Shanghái. El alquiler es la partida que más pesa.' },
-  { question: '¿La barrera del idioma complica mucho una estancia larga?', answer: 'Fuera de las zonas más internacionales, sí puede notarse. Aun así, con apps de traducción, mapas offline y mini-programas de Alipay o WeChat es posible resolver la mayoría de situaciones cotidianas.' },
-  { question: '¿Puedo usar mi seguro médico de origen?', answer: 'China no exige un seguro local para visitantes, pero muchos hospitales piden pago por adelantado. Si vas a quedarte varios meses, conviene llevar un seguro internacional que cubra China de forma clara.' },
-  { question: '¿Puedo abrir una cuenta bancaria china?', answer: 'A veces sí, pero cada vez piden más documentación a los no residentes. Muchos viajeros de larga estancia lo evitan porque Alipay y WeChat Pay ya aceptan tarjetas extranjeras.' },
-  { question: '¿Qué pasa si quiero quedarme más tiempo del que permite mi visado?', answer: 'Debes solicitar una ampliación antes del vencimiento o salir y volver a entrar si tu visado lo permite. Sobrepasar la estancia autorizada puede implicar multas y afectar futuras solicitudes.' },
+  {
+    question: 'Cuanto tiempo puede quedarse legalmente un extranjero en China sin permiso de residencia?',
+    answer:
+      'Depende de tu visa. La visa de turista (L) suele emitirse para una estancia de 30, 60 o 90 dias por entrada, y algunas nacionalidades pueden ampliarla una vez en la oficina local de salida y entrada. Una visa de negocios (M) puede permitir de 90 a 180 dias por entrada dentro de una validez de varios anos. Cualquier cosa que supere aproximadamente seis meses de vida continua, o cualquier trabajo local, requiere un permiso de residencia vinculado a una visa de trabajo o familiar.',
+  },
+  {
+    question: 'Pueden los extranjeros alquilar un apartamento normal en China por unos meses?',
+    answer:
+      'Si. Los extranjeros pueden alquilar apartamentos privados, aunque los propietarios suelen preferir contratos de 6 o 12 meses. Para 1 a 3 meses, los apartamentos con servicios y las tarifas mensuales de hotel son mas faciles porque gestionan el papeleo. Sea cual sea el lugar que alquiles, debes registrar tu direccion ante la policia local dentro de las 24 horas posteriores a la mudanza.',
+  },
+  {
+    question: 'Tengo que registrarme en la policia si alquilo de forma privada?',
+    answer:
+      'Si. Los hoteles te registran automaticamente, pero si te alojas en un apartamento privado o con amigos debes registrarte en la comisaria local dentro de las 24 horas posteriores a tu llegada, y de nuevo cada vez que vuelvas a entrar en el pais. Lleva tu pasaporte y el contrato de alquiler o los datos del anfitrion. Omitir este paso puede conllevar multas.',
+  },
+  {
+    question: 'Cuanto cuesta vivir en China durante un mes siendo extranjero?',
+    answer:
+      'Un presupuesto comodo para una sola persona va desde unos 6.000 RMB al mes en una ciudad pequena como Dali hasta 15.000 RMB o mas en el centro de Shanghai. El alquiler es la variable mas importante. La comida, el transporte y los datos moviles son baratos en comparacion con las ciudades occidentales, por lo que la mayor parte de tu presupuesto se destina al alojamiento.',
+  },
+  {
+    question: 'Existe barrera idiomatica para estancias mas largas?',
+    answer:
+      'Fuera de los principales distritos internacionales, el ingles es limitado. Las aplicaciones de traduccion, los mapas sin conexion y los mini-programas de Alipay o WeChat cubren la mayoria de las situaciones diarias. Aprender unas cuantas frases en mandarin y reconocer algunos caracteres hace que una larga estancia sea mucho mas fluida, pero no es un requisito previo.',
+  },
+  {
+    question: 'Puedo usar mi seguro medico de mi pais y necesito cobertura local?',
+    answer:
+      'China no exige a los visitantes tener un seguro medico local, pero los hospitales publicos esperan el pago por adelantado y la mayoria de las polizas de origen no pagan directamente a los proveedores chinos. Para una estancia de varios meses, se recomienda encarecidamente un seguro medico internacional de viaje o para expatriados que cubra China, idealmente incluyendo clinicas internacionales privadas en las grandes ciudades.',
+  },
+  {
+    question: 'Puedo abrir una cuenta bancaria china para una larga estancia?',
+    answer:
+      'Es posible, pero cada vez requiere mas papeleo para los no residentes. Muchos viajeros de larga estancia la omiten por completo porque Alipay y WeChat Pay ahora aceptan las principales tarjetas extranjeras para los gastos cotidianos. Una cuenta local ayuda sobre todo si necesitas recibir RMB localmente o pagar a ciertos propietarios mediante transferencia bancaria.',
+  },
+  {
+    question: 'Que pasa si quiero quedarme mas tiempo del que permite mi visa?',
+    answer:
+      'Solicita una prorroga en la oficina local de salida y entrada del Buró de Seguridad Publica antes de que venza tu estancia actual, o sal y vuelve a entrar con una nueva entrada si tu visa tiene entradas multiples. Exceder el tiempo permitido conlleva una multa diaria y puede afectar futuras solicitudes de visa, asi que planifica tu salida o prorroga con bastante antelacion a la fecha de vencimiento.',
+  },
 ];
 
 const related = [
-  { title: 'Guía completa para nómadas digitales en China (2026)', description: 'Trabajar en remoto desde China: visados, pagos, ciudades recomendadas e internet.', href: '/es/digital-nomads/' },
-  { title: 'Visado para nómadas digitales en China (2026)', description: 'Opciones reales para quedarse más tiempo: turismo, negocios, tránsito y salidas estratégicas.', href: '/es/digital-nomads/visa/' },
-  { title: 'Cómo pagar en China siendo extranjero', description: 'Todo lo necesario para configurar Alipay, WeChat Pay, efectivo y tarjetas.', href: '/es/digital-nomads/payment/' },
+  {
+    title: 'La guia completa para nomadas digitales en China (2026)',
+    description: 'Vivir en China mientras trabajas en remoto: visas, pagos, mejores ciudades y acceso a internet.',
+    href: '/digital-nomads/',
+  },
+  {
+    title: 'Visa para nomadas digitales en China (2026)',
+    description: 'Todas las opciones legales para quedarse mas tiempo: visas de turista, visas de negocios, normas de transito y border runs.',
+    href: '/digital-nomads/visa/',
+  },
+  {
+    title: 'Como pagar cosas en China siendo extranjero',
+    description: 'Configura Alipay y WeChat Pay, entiende las necesidades de efectivo y usa tarjetas extranjeras en el dia a dia.',
+    href: '/digital-nomads/payment/',
+  },
 ];
 ---
-<GuideLayout title={title} description={description} url={url} datePublished={datePublished} breadcrumbs={breadcrumbs} toc={toc} faqs={faqs} related={related} cover="cover-long-stay" coverAlt="Extranjero instalándose para una estancia prolongada en una ciudad china" locale="es">
-  <p>Quedarse en China durante un mes o más cambia por completo la lógica del viaje. Ya no se trata solo de visitar monumentos: empiezas a pensar en supermercado, lavandería, barrio, cafetería habitual y trayectos que harás una y otra vez.</p>
-  <h2 id="short-vs-long">Viaje corto frente a estancia larga: qué cambia</h2>
-  <p>En una escapada breve, el hotel resuelve casi todo: registro policial, limpieza y ubicación. En una estancia larga, lo importante pasa a ser tu situación legal, el tipo de vivienda y la gestión de trámites como el registro de domicilio, las prórrogas o el seguro médico.</p>
-  <h2 id="legal-stay">Cómo quedarse legalmente de 1 a 6 meses</h2>
-  <p>No existe una única visa pensada para vivir tranquilamente varios meses en China. La mejor opción depende del motivo del viaje y del tiempo que quieras pasar allí.</p>
-  <h3>Visa turística (L) y posibles extensiones</h3>
-  <p>La visa L suele conceder estancias de 30, 60 o 90 días por entrada. En bastantes casos se puede pedir una prórroga de 30 días antes del vencimiento, siempre que acredites medios y alojamiento.</p>
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<GuideLayout
+  title={title}
+  description={description}
+  url={url}
+  datePublished={datePublished}
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  related={related}
+  cover="cover-long-stay"
+  coverAlt="Un extranjero instalandose en una vida de larga estancia en una ciudad china"
+>
+  <p>
+    Quedarse en China durante un mes o mas es una experiencia completamente distinta a la de un
+    viaje de una semana. Dejas de optimizar cada dia para hacer turismo y empiezas a vivir:
+    cocinas parte de tus propias comidas, encuentras una cafeteria de barrio, aprendes que salida
+    del metro queda mas cerca de casa. Esta guia es para viajeros lentos, personas en ano
+    sabatico, trabajadores remotos y futuros expatriados que planean establecerse en algun lugar
+    de China entre uno y seis meses. Explica como quedarse legalmente, donde vivir, cuanto cuesta
+    y como gestionar la logistica cotidiana en la que una visita turistica corta nunca te obliga a
+    pensar.
+  </p>
+
+  <h2 id="short-vs-long">Viaje corto vs. larga estancia: que cambia realmente</h2>
+  <p>
+    En un viaje corto, un hotel absorbe casi todos los problemas logisticos por ti: te registra
+    ante la policia, limpia tu habitacion y esta cerca de los lugares de interes. En una larga
+    estancia, esas comodidades desaparecen o se vuelven caras, asi que las intercambias por costos
+    diarios mas bajos y una rutina real. Las tres cosas que mas cambian son <strong>tu situacion
+    legal</strong> (una sola entrada de turista puede no cubrir todo el periodo),
+    <strong>tu vivienda</strong> (las tarifas de hotel por noche dejan de tener sentido despues de
+    unas pocas semanas) y <strong>tu relacion con la burocracia</strong> (el registro de direccion,
+    las posibles prorrogas de visa y el seguro de mas largo plazo pasan a ser tu responsabilidad).
+    Si aciertas en esas tres cosas, el resto de la vida de larga estancia en China resulta
+    sorprendentemente fluido.
+  </p>
+
+  <h2 id="legal-stay">Estancia legal de 1 a 6 meses</h2>
+  <p>
+    No existe una unica "visa de larga estancia" para vivir de manera informal en China, asi que
+    la mayoria de la gente combina o amplía las opciones estandar. Tu eleccion depende de cuanto
+    tiempo quieras quedarte y de si tienes algun motivo de negocios para estar alli.
+  </p>
+  <h3>Visa de turista (L) y prorrogas</h3>
+  <p>
+    La visa L es la opcion predeterminada para estancias de ocio. Dependiendo de tu nacionalidad,
+    se emite para 30, 60 o 90 dias por entrada. Si necesitas un poco mas de tiempo, por lo general
+    puedes solicitar una vez una prorroga de 30 dias en la oficina local de salida y entrada,
+    siempre que presentes la solicitud antes de que expire tu estancia actual y puedas demostrar
+    fondos y un lugar donde quedarte. Esto cubre comodamente estancias de hasta dos o tres meses
+    para muchos viajeros.
+  </p>
   <h3>Visa de negocios (M) para 3-6 meses</h3>
-  <p>Si tienes reuniones, proveedores, ferias o actividad comercial legítima, la visa M puede dar entre 90 y 180 días por entrada y una validez más práctica para estancias repetidas. Necesita una carta de invitación real.</p>
-  <h3>Tránsito sin visa para hacer una prueba corta</h3>
-  <p>El tránsito sin visa de 240 horas puede servir para probar una ciudad antes de comprometerte con una estancia más larga. Comprueba tu elegibilidad con el <a href="/es/tools/visa-free-checker/">comprobador de entrada sin visa y tránsito</a>.</p>
-  <p>No apures el calendario: deja organizada la salida o la ampliación con margen. Exceder la estancia autorizada puede complicarte futuras entradas.</p>
-  <h2 id="accommodation">Opciones de alojamiento</h2>
-  <p>La vivienda será casi siempre la decisión más importante y también el gasto principal. Para la mayoría de extranjeros hay tres fórmulas realistas.</p>
-  <h3>Apartahoteles</h3>
-  <p>Suelen venir amueblados, incluyen servicios y normalmente ayudan con el registro policial. Son más caros que un alquiler privado, pero resultan muy prácticos para estancias de uno a tres meses.</p>
+  <p>
+    Si tienes cualquier conexion comercial legitima — reuniones, visitas a proveedores,
+    conferencias — una visa M encaja mejor para periodos mas largos. Suele emitirse con validez de
+    varios anos y estancias por entrada de 90 a 180 dias, lo que hace que vivir varios meses sea
+    mucho menos estresante que ir acumulando prorrogas de turista. Requiere una carta de
+    invitacion de una empresa china o entidad comercial.
+  </p>
+  <h3>Transito sin visa para estancias cortas</h3>
+  <p>
+    Muchas nacionalidades cumplen los requisitos para un transito sin visa de 240 horas (10 dias)
+    al pasar por ciudades designadas de camino a un tercer pais. Esto no es una solucion para
+    vivir, pero si es util para explorar una ciudad antes de comprometerte con una visa mas larga.
+    Consulta nuestro
+    <a href="/tools/visa-free-checker/">verificador de transito y exencion de visa</a> para ver
+    que permite tu pasaporte.
+  </p>
+  <p>
+    Sea cual sea la via que elijas, la regla de oro es planificar tu salida o prorroga mucho antes
+    de que termine tu estancia permitida. Exceder el tiempo autorizado conlleva multas diarias y
+    puede poner en riesgo futuras entradas.
+  </p>
+
+  <h2 id="accommodation">Alojamiento de larga estancia</h2>
+  <p>
+    Donde duermes es la decision — y el costo — mas importante de una larga estancia. Hay tres
+    opciones realistas, cada una con un equilibrio claro entre precio, flexibilidad y papeleo.
+  </p>
+  <h3>Apartamentos con servicios</h3>
+  <p>
+    Diseñados especificamente para estancias medias, los apartamentos con servicios vienen
+    amueblados, incluyen limpieza y suministros, y se encargan del registro policial por ti.
+    Espera pagar una prima frente a un alquiler privado vacio, pero para una estancia de uno a tres
+    meses la comodidad suele compensar. Se concentran en los distritos de negocios de las grandes
+    ciudades y normalmente cotizan tarifas mensuales.
+  </p>
   <h3>Tarifas mensuales de hotel</h3>
-  <p>Muchos hoteles aceptan acuerdos mensuales fuera de temporada alta. Ganas flexibilidad, limpieza y registro automático, aunque renuncias a espacio y cocina.</p>
-  <h3>Alquiler privado</h3>
-  <p>Es la opción más local y, a menudo, la más barata a medio plazo, pero implica depósito, contratos más largos y la obligación de registrar personalmente la dirección en la policía dentro de las 24 horas.</p>
-  <blockquote>Registra siempre tu dirección en la policía local dentro de las 24 horas. En hoteles y apartahoteles suele hacerse automáticamente; en un alquiler privado, la responsabilidad es tuya.</blockquote>
-  <h2 id="monthly-cost">Coste mensual de vida</h2>
-  <p>El presupuesto cambia mucho según la ciudad. Estas cifras orientativas incluyen alquiler, comida, transporte local y datos móviles.</p>
-  <table><thead><tr><th>Nivel de ciudad</th><th>Ejemplos</th><th>Alquiler (1 dormitorio)</th><th>Presupuesto mensual total</th></tr></thead><tbody><tr><td>Primer nivel</td><td>Shanghái, Shenzhen</td><td>7.000-12.000 RMB</td><td>12.000-18.000 RMB</td></tr><tr><td>Nuevo primer nivel</td><td>Chengdu, Hangzhou</td><td>3.500-6.000 RMB</td><td>7.000-11.000 RMB</td></tr><tr><td>Pequeña / turística</td><td>Dali, Sanya</td><td>2.000-4.000 RMB</td><td>5.500-8.500 RMB</td></tr></tbody></table>
-  <p>La vivienda marca la diferencia. Comida, transporte y datos suelen ser asequibles; el coste sube si dependes mucho de productos importados, vuelos frecuentes o servicios internacionales.</p>
-  <h2 id="daily-life">Aspectos básicos del día a día</h2>
-  <ul><li><strong>Pagos.</strong> Alipay y WeChat Pay sostienen casi toda la vida diaria; conviene dejarlos listos antes de llegar.</li><li><strong>Conectividad.</strong> Una eSIM resuelve el aterrizaje; para varios meses puede compensar una SIM local.</li><li><strong>Transporte.</strong> Metro, DiDi y trenes de alta velocidad cubren casi todas las necesidades.</li><li><strong>Salud.</strong> Las grandes ciudades cuentan con clínicas internacionales; lleva un seguro que cubra China de forma realista.</li></ul>
-  <h2 id="cities">Ciudades recomendadas</h2>
-  <h3>Shanghái</h3><p>La ciudad más internacional, con más servicios en inglés y mejor infraestructura para extranjeros, aunque también con alquileres altos. Ver la <a href="/es/posts/shanghai-city-guide-for-foreigners/">guía de Shanghái</a>.</p>
-  <h3>Chengdu</h3><p>Base relajada y más asequible en el suroeste, conocida por su comida, sus casas de té y un ritmo mucho menos agresivo. Ver la <a href="/es/posts/chengdu-city-guide-for-foreigners/">guía de Chengdu</a>.</p>
-  <h3>Dali</h3><p>Ciudad lacustre en Yunnan, muy apreciada por viajeros de larga estancia por su coste más bajo, el clima agradable y una escena creativa bastante viva.</p>
-  <h3>Sanya</h3><p>Destino tropical de Hainan, especialmente atractivo para pasar el invierno con tiempo cálido. Ver la <a href="/es/posts/sanya-city-guide-for-foreigners/">guía de Sanya</a>.</p>
-  <h2 id="next">¿Piensas trabajar durante tu estancia?</h2>
-  <p>Si además de vivir en China vas a trabajar en remoto, hay más variables que importan: internet, huso horario, coworking y límites del visado. La <a href="/es/digital-nomads/">guía completa para nómadas digitales en China</a> retoma el tema desde ese punto.</p>
+  <p>
+    Muchos hoteles de gama media ofrecen discretamente tarifas mensuales muy rebajadas,
+    especialmente fuera de temporada alta. Obtienes registro policial automatico, limpieza diaria o
+    semanal y cero compromiso de contrato, a cambio de un espacio mas pequeno y sin cocina. Esta
+    es la opcion con menos friccion si valoras mas la flexibilidad que los metros cuadrados.
+  </p>
+  <h3>Alquileres de apartamentos privados</h3>
+  <p>
+    La opcion mas barata por mes, y la mas "local", es alquilar un apartamento privado a traves de
+    agentes o plataformas populares entre los residentes. Los propietarios suelen preferir
+    contratos de 6 o 12 meses y un deposito, y tu pasas a ser responsable de registrar tu propia
+    direccion en la comisaria dentro de las 24 horas. Es mejor para estancias que se acercan o
+    superan los seis meses, o para cualquiera que quiera una cocina y un barrio de verdad.
+  </p>
+  <blockquote>
+    Dondequiera que acabes, registra tu direccion ante la policia local dentro de las 24 horas
+    posteriores a la mudanza. Los hoteles y los apartamentos con servicios lo hacen
+    automaticamente; con un alquiler privado te corresponde a ti.
+  </blockquote>
+
+  <h2 id="monthly-cost">Costo de vida mensual</h2>
+  <p>
+    El costo de vida en China varia enormemente segun el nivel de la ciudad. A continuacion se
+    muestran presupuestos mensuales realistas para una sola persona que cubren alquiler, comida,
+    transporte local y datos moviles, asumiendo un estilo de vida comodo pero no lujoso.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Nivel de ciudad</th>
+        <th>Ciudades de ejemplo</th>
+        <th>Alquiler (1 dormitorio)</th>
+        <th>Presupuesto mensual total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Primer nivel</td>
+        <td>Shanghai, Shenzhen</td>
+        <td>7,000-12,000 RMB</td>
+        <td>12,000-18,000 RMB</td>
+      </tr>
+      <tr>
+        <td>Nuevo primer nivel</td>
+        <td>Chengdu, Hangzhou</td>
+        <td>3,500-6,000 RMB</td>
+        <td>7,000-11,000 RMB</td>
+      </tr>
+      <tr>
+        <td>Pequena / turistica</td>
+        <td>Dali, Sanya</td>
+        <td>2,000-4,000 RMB</td>
+        <td>5,500-8,500 RMB</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    El patron es constante: el alquiler lo determina todo. La comida, ya sea que cocines o comas
+    en restaurantes locales, es barata en todas partes, y el transporte local rara vez supera unos
+    pocos cientos de RMB al mes incluso con uso diario de metro y ride-hailing. Presupuesta un
+    extra si dependes de productos importados, colegios internacionales o vuelos nacionales
+    frecuentes.
+  </p>
+
+  <h2 id="daily-life">Aspectos esenciales de la vida diaria</h2>
+  <p>
+    Cuatro sistemas cubren casi todo lo que usaras en el dia a dia. Configuralos en tu primera
+    semana y el resto de tu estancia funcionara en piloto automatico.
+  </p>
+  <ul>
+    <li>
+      <strong>Pagos.</strong> Alipay y WeChat Pay mueven la vida diaria, y ambos ahora permiten a
+      los extranjeros vincular las principales tarjetas internacionales. Configuralos antes de
+      llegar. Nuestra <a href="/digital-nomads/payment/">guia de pagos</a> cubre la configuracion
+      completa y los limites.
+    </li>
+    <li>
+      <strong>Conectividad.</strong> Una eSIM te conecta en el momento en que aterrizas; para una
+      estancia de varios meses puede que cambies a una SIM local para tener un numero nacional.
+      Consulta las <a href="/esim/">guias de eSIM</a> para ver opciones.
+    </li>
+    <li>
+      <strong>Transporte.</strong> Los metros de las grandes ciudades son baratos, rapidos y tienen
+      senalizacion en ingles, y el ride-hailing a traves de DiDi funciona con una tarjeta
+      extranjera. Añade el codigo QR del transporte local a tu app de pagos para entrar y salir con
+      un toque.
+    </li>
+    <li>
+      <strong>Atencion medica basica.</strong> Las grandes ciudades tienen clinicas internacionales
+      privadas con personal que habla ingles; los hospitales publicos son mas baratos, pero esperan
+      pago por adelantado y mandarin. Lleva un seguro que cubra China y conserva una pequena
+      reserva de cualquier medicamento con receta.
+    </li>
+  </ul>
+
+  <h2 id="cities">Ciudades populares para largas estancias</h2>
+  <p>
+    Cuatro ciudades atraen de forma constante a extranjeros de larga estancia, cada una con un
+    caracter distinto. Cada una enlaza con nuestra guia completa de la ciudad para obtener detalles
+    sobre el terreno.
+  </p>
+  <h3>Shanghai</h3>
+  <p>
+    La ciudad mas internacional de China: la mayor cobertura en ingles, la comunidad expatriada mas
+    profunda y la mayor cantidad de servicios orientados a extranjeros, equilibrados por los
+    alquileres mas altos del pais. Ideal si quieres comodidad y una llegada facil. Consulta la
+    <a href="/posts/shanghai-city-guide-for-foreigners/">guia de Shanghai</a>.
+  </p>
+  <h3>Chengdu</h3>
+  <p>
+    Una base relajada y asequible en el suroeste, famosa por la comida, las casas de te y un ritmo
+    mas lento, con una comunidad extranjera en crecimiento y buenas conexiones de transporte.
+    Consulta la <a href="/posts/chengdu-city-guide-for-foreigners/">guia de Chengdu</a>.
+  </p>
+  <h3>Dali</h3>
+  <p>
+    Una pequena ciudad junto al lago en Yunnan que se ha convertido en un iman para viajeros de
+    larga estancia que buscan costos muy bajos, clima suave y una comunidad consolidada de
+    trabajadores remotos y creativos. Es mejor para quienes priorizan el estilo de vida y el
+    presupuesto por encima de las comodidades de una gran ciudad.
+  </p>
+  <h3>Sanya</h3>
+  <p>
+    El destino tropical de playa de China en la isla de Hainan, popular para estancias invernales
+    gracias al clima calido cuando el resto del pais tiene frio. Los veranos son calurosos y
+    humedos. Consulta la
+    <a href="/posts/sanya-city-guide-for-foreigners/">guia de Sanya</a>.
+  </p>
+
+  <h2 id="next">Planeas trabajar mientras te quedas?</h2>
+  <p>
+    Si tu larga estancia tambien implica trabajo remoto, la logistica vuelve a cambiar: te
+    importaran la fiabilidad de internet, los husos horarios, los espacios de coworking y la letra
+    pequena de lo que cada visa te permite hacer. Nuestra
+    <a href="/digital-nomads/">guia completa para nomadas digitales en China</a> continua
+    exactamente donde termina esta, cubriendo visas, pagos, conectividad y las mejores ciudades
+    para establecerte como trabajador remoto.
+  </p>
 </GuideLayout>
