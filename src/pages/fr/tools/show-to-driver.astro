@@ -1,23 +1,25 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
 
-const title = 'Carte à montrer au chauffeur';
+const title = 'Montrer au chauffeur : carte d’adresse en chinois';
 const description =
-  'Créez une carte plein écran en chinois à afficher sur votre téléphone pour un chauffeur, un hôtel ou un point de prise en charge. Aucun compte, aucune installation, aucune donnée enregistrée.';
+  'Créez une grande carte de message en chinois sur votre téléphone pour les chauffeurs de taxi, le personnel de l’hôtel et pour demander votre chemin en Chine. Sans connexion, sans installation d’application, sans enregistrement de données personnelles.';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-8 md:py-10">
     <header class="max-w-3xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Outil</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Carte à montrer au chauffeur</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Montrer au chauffeur</h1>
       <p class="mt-3 text-lg text-gray-600">
-        Générez une grande carte en chinois pour les taxis, les VTC, les réceptions d’hôtel ou les
-        demandes d’orientation. Tout fonctionne directement dans le navigateur.
+        Générez une grande carte en chinois pour les taxis, les prises en charge via VTC, les
+        réceptions d’hôtel et pour demander votre chemin. Tout fonctionne dans votre navigateur.
       </p>
     </header>
 
@@ -27,50 +29,53 @@ const description =
       <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
         <div class="grid gap-4">
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Adresse ou nom du lieu en chinois</span>
+            <span class="mb-1 font-medium text-gray-700">Adresse en chinois ou nom du lieu</span>
             <textarea
               id="destination"
               rows="4"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Collez l’adresse chinoise depuis Amap, Trip.com, votre réservation d’hôtel ou un contact local."
+              placeholder="Collez l’adresse en chinois depuis Amap, Trip.com, votre réservation d’hôtel ou un ami."
             ></textarea>
             <span class="mt-1 text-xs text-gray-500">
-              Pour de meilleurs résultats, utilisez le nom ou l’adresse en chinois. Un nom uniquement
-              en anglais est souvent difficile à identifier pour un chauffeur local.
+              Meilleur résultat : collez le nom/l’adresse en chinois. Les noms de lieux uniquement en
+              anglais peuvent être difficiles à identifier pour un chauffeur local.
             </span>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Message complémentaire</span>
+            <span class="mb-1 font-medium text-gray-700">Note facultative</span>
             <select id="note" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-              <option value="route">Merci de suivre la navigation jusqu’à cette adresse.</option>
-              <option value="pickup">Je vous attends ici. Merci de m’appeler ou de m’écrire dans l’application.</option>
-              <option value="hotel">Merci de m’aider à rejoindre cet hôtel ou à contacter la réception.</option>
-              <option value="stop">Merci de vous arrêter ici si c’est autorisé et sans danger.</option>
-              <option value="receipt">Merci de me remettre un reçu si possible.</option>
+              <option value="route">Veuillez suivre la navigation et me conduire à cette adresse.</option>
+              <option value="pickup">Je vous attends ici. Veuillez m’appeler ou m’envoyer un message dans l’application.</option>
+              <option value="hotel">Veuillez m’aider à me rendre à cet hôtel ou contacter la réception.</option>
+              <option value="stop">Veuillez vous arrêter ici si c’est sûr et autorisé.</option>
+              <option value="receipt">Veuillez me donner un reçu si possible.</option>
             </select>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Précision facultative pour le chauffeur</span>
+            <span class="mb-1 font-medium text-gray-700">Détails supplémentaires pour le chauffeur</span>
             <input
               id="extra"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Numéro de porte, hall d’hôtel, point de rendez-vous, bagages, etc."
+              placeholder="Numéro de porte, hall de l’hôtel, point de prise en charge, bagages, etc."
             />
           </label>
 
           <div class="grid gap-3 sm:grid-cols-2">
             <button id="generate-btn" class="btn-primary">Générer la carte</button>
-            <button id="clear-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
+            <button
+              id="clear-btn"
+              class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400"
+            >
               Effacer
             </button>
           </div>
         </div>
 
         <div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-          Cet outil ne réserve pas de trajet et ne contacte pas le chauffeur pour vous. En cas
-          d’urgence, contactez d’abord les services locaux ou votre hôtel.
+          Cet outil ne réserve pas de trajets et ne contacte pas les chauffeurs. En cas d’urgence,
+          contactez d’abord les services d’urgence locaux ou votre hôtel.
         </div>
       </div>
 
@@ -90,7 +95,10 @@ const description =
             <p id="main-line" class="text-center text-2xl font-black leading-tight text-gray-950 sm:text-4xl">
               请帮我去这个地址
             </p>
-            <p id="address-line" class="mt-5 whitespace-pre-wrap break-words text-center text-4xl font-black leading-tight text-gray-950 sm:text-6xl">
+            <p
+              id="address-line"
+              class="mt-5 whitespace-pre-wrap break-words text-center text-4xl font-black leading-tight text-gray-950 sm:text-6xl"
+            >
               在左侧输入地址
             </p>
             <p id="note-line" class="mt-5 text-center text-2xl font-bold leading-snug text-gray-900 sm:text-3xl">
@@ -106,10 +114,25 @@ const description =
             <button id="fullscreen-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
               Plein écran
             </button>
-            <a href="/fr/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
-              Demander de l’aide
+            <a href="/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
+              Demander de l’aide à l’IA
             </a>
           </div>
+        </div>
+
+        <div class="mt-5 grid gap-3 sm:grid-cols-2">
+          <button data-quick="请问这个地址怎么走？谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
+            Demander son chemin
+          </button>
+          <button data-quick="我不会说中文，请用翻译软件和我沟通，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
+            Je ne parle pas chinois
+          </button>
+          <button data-quick="请在安全合法的地方停车，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
+            S’arrêter en sécurité
+          </button>
+          <button data-quick="如果找不到我，请在打车软件里发消息。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
+            Envoyez-moi un message dans l’application
+          </button>
         </div>
       </section>
     </section>
@@ -151,12 +174,18 @@ const description =
   const fullscreenBtn = document.getElementById('fullscreen-btn');
   const generateBtn = document.getElementById('generate-btn');
   const clearBtn = document.getElementById('clear-btn');
+  const quickButtons = document.querySelectorAll<HTMLButtonElement>('.quick');
 
   function cardText() {
     const address = destination?.value.trim() || '在左侧输入地址';
     const noteText = noteMap[note?.value || 'route'];
     const extraText = extra?.value.trim();
-    return ['请帮我去这个地址：', address, noteText, extraText ? `补充说明：${extraText}` : ''].filter(Boolean).join('\n');
+    return [
+      '请帮我去这个地址：',
+      address,
+      noteText,
+      extraText ? `补充说明：${extraText}` : '',
+    ].filter(Boolean).join('\n');
   }
 
   function render() {
@@ -211,6 +240,15 @@ const description =
   document.addEventListener('fullscreenchange', () => {
     if (!fullscreenBtn) return;
     fullscreenBtn.textContent = document.fullscreenElement ? 'Quitter le plein écran' : 'Plein écran';
+  });
+
+  quickButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!extra) return;
+      extra.value = button.dataset.quick || '';
+      render();
+      card?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   });
 
   render();
