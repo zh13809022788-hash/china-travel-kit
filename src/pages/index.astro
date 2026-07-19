@@ -5,7 +5,11 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import AdSlot from '../components/AdSlot.astro';
+<<<<<<< HEAD
 import { TOOLS } from '../config';
+=======
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+>>>>>>> f3e47d9 (fix: constrain newsletter signup to container-page max-width)
 import { Image } from 'astro:assets';
 import heroImage from '../assets/images/city-shanghai.jpg';
 
@@ -406,6 +410,10 @@ const locale = 'en';
       )}
 
       <AdSlot format="banner" />
+
+      <section class="py-8">
+        <NewsletterSignup locale="en" />
+      </section>
     </div>
   </main>
   <NewsletterSignup />
