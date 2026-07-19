@@ -3,70 +3,52 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'À propos de ChinaTripBox';
+const title = 'About ChinaTripBox';
 const description =
-  'ChinaTripBox est une ressource de voyage indépendante qui aide les visiteurs étrangers à gérer les paiements, la connexion, les transports et la préparation pratique d’un voyage en Chine.';
+  'ChinaTripBox provides practical China travel guides and 1-on-1 help for foreign visitors. Built by a team with roots at Tujia, Airbnb, Ctrip, Meituan, and Alibaba.';
 ---
 
+<!-- TODO: This page needs Codex-native translation. Currently uses English as placeholder. -->
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">À propos de ChinaTripBox</h1>
-      <p class="mt-4">
-        ChinaTripBox est un guide indépendant conçu pour les visiteurs étrangers qui veulent voyager
-        en Chine simplement et sans stress. Voyager en Chine n’a jamais été aussi facile, mais
-        l’écosystème très numérique des paiements mobiles, des données eSIM et des transports via
-        application peut sembler déroutant si vous ne l’avez jamais utilisé.
-      </p>
-      <p>
-        Notre mission est simple : transformer les questions que se posent vraiment les voyageurs en
-        réponses claires, testées et étape par étape. Chaque guide est rédigé dans un français clair,
-        centré sur ce qui fonctionne aujourd’hui, puis mis à jour lorsque les applications et les
-        règles changent.
-      </p>
-
-      <h2>À qui s’adresse ce site</h2>
-      <p>
-        Nous écrivons pour les touristes qui viennent pour la première fois, les visiteurs réguliers,
-        les voyageurs de longue durée, les nomades numériques et toute personne qui a besoin d’aide
-        pratique avant d’arriver en Chine. Nos contenus portent sur les décisions concrètes du
-        quotidien : comment payer, rester connecté, se déplacer entre les villes et éviter les
-        problèmes de configuration fréquents.
-      </p>
-
-      <h2>Ce que nous couvrons</h2>
-      <ul>
-        <li><strong>Paiement :</strong> configurer Alipay et WeChat Pay, associer des cartes étrangères et payer comme un local.</li>
-        <li><strong>eSIM et données :</strong> choisir et activer le bon forfait data avant votre arrivée.</li>
-        <li><strong>Transport :</strong> réserver des trains à grande vitesse, utiliser les VTC et se déplacer en ville.</li>
-        <li><strong>Préparation du voyage :</strong> guides de villes, bagages, espèces, sécurité alimentaire, applications locales et checklists de premier voyage.</li>
-      </ul>
-
-      <h2>Normes éditoriales</h2>
-      <p>
-        ChinaTripBox n’est ni un site gouvernemental, ni une agence de visas, ni un opérateur
-        télécom, ni une société de paiement, ni une banque. Nous publions des informations de voyage
-        indépendantes fondées, lorsque c’est possible, sur des sources officielles, la documentation
-        des produits, l’expérience des voyageurs et des révisions régulières. Vous pouvez en savoir
-        plus sur notre méthode dans notre <a href="/fr/editorial-policy/">politique éditoriale</a>
-        et le <a href="/fr/authors/chinatripbox-editorial-team/">profil de l’équipe éditoriale</a>.
-      </p>
-
-      <h2>Comment le site reste gratuit</h2>
-      <p>
-        Ce site est financé par la publicité et des partenariats d’affiliation. Lorsque vous utilisez
-        certains liens du site, nous pouvons recevoir une commission sans frais supplémentaires pour
-        vous. Cela n’influence jamais les produits que nous recommandons. Nos conseils reposent sur
-        ce qui aide réellement les voyageurs.
-      </p>
-
-      <h2>Nous contacter</h2>
-      <p>
-        Vous avez repéré une information obsolète ou une question à laquelle nous n’avons pas
-        répondu ? Rendez-vous sur notre <a href="/fr/contact/">page de contact</a>. Nous lisons
-        chaque message.
-      </p>
+      <div class="mb-10 rounded-xl bg-brand-600 px-8 py-10 text-center text-white">
+        <h1 class="text-2xl font-bold">About ChinaTripBox</h1>
+        <p class="mx-auto mt-2 max-w-lg text-base leading-relaxed opacity-90">Practical China travel resources and services — built by a team of travel-tech veterans.</p>
+      </div>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">What We Do</h2>
+      <p class="mt-3">ChinaTripBox provides free, practical China travel guides and tools — covering payments, internet access, transport, visas, and everyday logistics — so foreign visitors can solve the real problems of traveling to China.</p>
+      <p>When free guides and tools aren't enough, we also offer 1-on-1 human assistance. Whether it's trip planning, payment setup troubleshooting, or complex visa and transport questions, a real person works with your specific situation to provide targeted advice.</p>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Who We Are</h2>
+      <p class="mt-3">A professional team with rigorous editorial standards. ChinaTripBox's core members come from <strong>Tujia</strong>, <strong>Airbnb</strong>, <strong>Ctrip</strong>, <strong>Meituan</strong>, and <strong>Alibaba</strong> — spanning shared accommodation, OTA, lifestyle services, and e-commerce.</p>
+      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-emerald-200 bg-emerald-50 p-6 sm:flex-row">
+        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-emerald-600"><img src="/images/howie.jpg" alt="Howie" class="h-full w-full object-cover" /></div>
+        <div class="flex-1">
+          <p class="font-semibold text-emerald-700">Founder — Howie</p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">Howie was a founding team member of <strong>Tujia (途家网)</strong>, China's largest vacation rental platform, backed by Sequoia Capital, Ctrip, and HomeAway with over $400M in funding.</p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">Beyond Tujia, our core team's backgrounds include Airbnb China, Ctrip product and operations, Meituan's hotel and travel division, and Alibaba's Fliggy. Together, we have over fifteen years of hands-on experience across China's travel-tech ecosystem — from payments and transport to accommodation and local lifestyle services.</p>
+        </div>
+      </div>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Our Approach</h2>
+      <p class="mt-3">We operate as a lean, AI-assisted content and service studio, where free resources and paid services complement each other.</p>
+      <ol class="mt-4 list-inside list-decimal space-y-3 text-gray-700">
+        <li><strong>Free resources demonstrate expertise.</strong> Guides, tools, and checkers let visitors solve common problems on their own while showcasing the quality of our work.</li>
+        <li><strong>AI helps us scale and stay current.</strong> We use AI to track regulatory changes, optimize content, and keep information accurate in near real time.</li>
+        <li><strong>1-on-1 human service for complex cases.</strong> When self-service isn't enough, a real person provides tailored advice based on your specific situation.</li>
+      </ol>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">What We Cover</h2>
+      <p class="mt-3"><strong>Free resources</strong> — Payment Checker, Visa-Free Checker, Trip Planner, App Availability Checker, and step-by-step guides.</p>
+      <p><strong>Paid services</strong> — 1-on-1 trip plan review, payment setup assistance, visa and transport consulting, and custom trip planning.</p>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Why Trust Us</h2>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4"><p class="font-semibold text-brand-600">Professional Team</p><p class="mt-1 text-sm text-gray-600">Core members come from Tujia, Airbnb, Ctrip, Meituan, and Alibaba.</p></div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4"><p class="font-semibold text-brand-600">Rigorous Review</p><p class="mt-1 text-sm text-gray-600">AI improves efficiency, but every guide and plan is reviewed by an industry professional.</p></div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4"><p class="font-semibold text-brand-600">Personalized Service</p><p class="mt-1 text-sm text-gray-600">Over 15 years of frontline China travel-tech experience, delivering tailored solutions.</p></div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4"><p class="font-semibold text-brand-600">Always Current</p><p class="mt-1 text-sm text-gray-600">Rules change fast. Our AI workflow tracks and updates content in near real time.</p></div>
+      </div>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Get in Touch</h2>
+      <p class="mt-3">Have questions, corrections, or a trip scenario you need help with? <a href="/fr/contact/" class="text-brand-600 hover:underline">Contact us</a>.</p>
     </article>
   </main>
   <Footer />
