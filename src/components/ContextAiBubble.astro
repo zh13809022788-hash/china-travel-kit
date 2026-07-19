@@ -279,14 +279,14 @@ function addCtaCard(lang: string): void {
   if (lang === 'en') {
     let html = '<div class="mb-2 font-semibold text-amber-900">📖 Get the Complete Guide</div>';
     for (const guide of GUIDES) {
-      const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${PAYPAL_EMAIL}&item_name=${encodeURIComponent(guide.name)}&amount=${guide.price}&currency_code=USD&return=${encodeURIComponent('https://www.chinatripbox.com/guides/' + guide.file)}`;
+      const paypalUrl = `https://paypal.me/chinatripbox/${guide.price}`;
       html += `<a href="${paypalUrl}" target="_blank" rel="noopener"
         class="mb-2 flex items-center justify-between rounded-md border border-amber-200 bg-white px-3 py-2.5 transition hover:border-amber-400 hover:bg-amber-100 hover:no-underline">
         <span class="text-sm font-semibold text-gray-900">${guide.name}</span>
         <span class="shrink-0 rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-bold text-amber-800">$${guide.price}</span>
       </a>`;
     }
-    html += '<div class="mt-1 text-[10px] text-gray-400">Secure payment via PayPal — instant download after purchase</div>';
+    html += '<div class="mt-1 text-[10px] text-gray-400">Instant PayPal payment — PDF download link sent within 24h</div>';
     wrapper.innerHTML = html;
   } else {
     // Localized "coming soon" for all 7 non-English languages
