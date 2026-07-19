@@ -1,41 +1,43 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
 
 const seriesSlug = 'culture-of-china';
-const posts = (await getCollection('posts-ru'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Культура Китая: традиции и обычаи для путешественников';
-const description = 'Познакомьтесь с культурой Китая глазами иностранного путешественника: чайная церемония, Праздник весны, понятия лица и гуаньси, каллиграфия, кунг-фу, китайский зодиак и традиции, которые формируют повседневную жизнь в Китае.';
+const title = 'Культура Китая — традиции и обычаи для путешественников';
+const description = 'Откройте для себя китайскую культуру глазами иностранного путешественника: чайная церемония, Праздник весны, лицо и guanxi, каллиграфия, кунг-фу, зодиак и традиции, формирующие повседневную жизнь в Китае.';
 
 const relatedTools = [
-  { href: '/ru/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Чаевые и этикет', desc: 'Когда уместно оставлять чаевые, когда нет и почему' },
-  { href: '/ru/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Что взять на праздники', desc: 'Что стоит взять с собой в сезон праздников' },
-  { href: '/ru/posts/how-to-pay-in-china-tourist-guide/', title: 'Как платить в Китае', desc: 'Способы оплаты в праздничный сезон' },
+  { href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Чаевые и этикет', desc: 'Когда оставлять чаевые, когда нет и почему' },
+  { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Что взять на фестивали', desc: 'Что брать с собой в праздничные сезоны' },
+  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Как платить в Китае', desc: 'Платежи в сезон праздников' },
 ];
 
 const relatedCities = [
-  { href: '/ru/posts/beijing-city-guide-for-foreigners/', title: 'Пекин', desc: 'Императорская культура и жизнь в хутунах' },
-  { href: '/ru/posts/hangzhou-city-guide-for-foreigners/', title: 'Ханчжоу', desc: 'Чайная культура и наследие озера Сиху' },
-  { href: '/ru/posts/chengdu-city-guide-for-foreigners/', title: 'Чэнду', desc: 'Культура чайных домов и неспешный ритм жизни' },
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Имперская культура и жизнь в хутунах' },
+  { href: '/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Чайная культура и наследие озера West Lake' },
+  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Культура чайных домов и неспешный образ жизни' },
 ];
 
 const otherSeries = [
-  { href: '/ru/series/food-of-china/', title: 'Кухня Китая' },
-  { href: '/ru/series/history-of-china/', title: 'История Китая' },
-  { href: '/ru/series/modern-china/', title: 'Современный Китай' },
+  { href: '/series/food-of-china/', title: 'Кухня Китая' },
+  { href: '/series/history-of-china/', title: 'История Китая' },
+  { href: '/series/modern-china/', title: 'Современный Китай' },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'ru';
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Серия материалов</p>
@@ -56,7 +58,7 @@ const locale = 'ru';
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/ru/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
@@ -64,14 +66,14 @@ const locale = 'ru';
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Материалы этой серии готовятся. Загляните немного позже.</p>
+          <p class="mt-6 text-gray-500">Статьи этой серии готовятся. Загляните снова в ближайшее время.</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Полезные материалы</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Путешествуйте с пониманием местной культуры</h2>
+          <p class="section-kicker">Практические материалы</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Путешествуйте с учетом культурных особенностей</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
