@@ -1,22 +1,24 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-const title = 'Kontakt';
+const title = 'Kontaktieren Sie uns';
 const description =
-  'Kontaktieren Sie das Team von ChinaTripBox bei Fragen, Korrekturen oder Kooperationsanfragen.';
+  'Kontaktieren Sie das ChinaTripBox-Team bei Fragen, Korrekturen oder Partnerschaftsanfragen.';
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">Kontakt</h1>
+      <h1 class="text-3xl font-bold text-gray-900">Kontaktieren Sie uns</h1>
       <p class="mt-4">
-        Wenn Sie einen Fehler in einem unserer Leitfäden entdeckt haben, eine Frage zum Reisen in
-        China stellen möchten oder eine Zusammenarbeit besprechen wollen, nutzen Sie bitte die
-        folgenden Kontaktdaten.
+        Wir freuen uns, von Ihnen zu hören. Ganz gleich, ob Sie einen Fehler in einem Guide
+        gefunden haben, eine Frage zum Reisen in China haben oder eine Partnerschaft besprechen
+        möchten, nutzen Sie die untenstehenden Informationen.
       </p>
 
       <h2>E-Mail</h2>
@@ -25,37 +27,37 @@ const description =
         <a href="mailto:zh13809022788@gmail.com">zh13809022788@gmail.com</a>
       </p>
       <p>
-        Kooperationen und Werbung:
+        Partnerschaften und Werbung:
         <a href="mailto:zh13809022788@gmail.com">zh13809022788@gmail.com</a>
       </p>
 
       <h2>Antwortzeit</h2>
       <p>
-        Wir bemühen uns, alle Nachrichten innerhalb von 3 bis 5 Werktagen zu beantworten. Bei
-        dringenden Reisefragen schauen Sie bitte zuerst in unsere Leitfäden. Möglicherweise finden Sie
-        die Antwort dort bereits.
+        Wir bemühen uns, alle Nachrichten innerhalb von 3-5 Werktagen zu beantworten. Bei
+        zeitkritischen Reisefragen schauen Sie bitte zuerst in unsere Guides. Die Antwort könnte
+        dort bereits stehen.
       </p>
 
       <h2>Korrekturen</h2>
       <p>
-        Apps, Preise und Vorschriften in China ändern sich regelmäßig. Wenn Ihnen etwas auffällt,
-        das nicht mehr aktuell ist oder Ihrer Erfahrung widerspricht, geben Sie uns bitte Bescheid.
-        Wir prüfen den Hinweis und aktualisieren den entsprechenden Leitfaden.
+        Apps, Preise und Vorschriften in China ändern sich häufig. Wenn Ihnen etwas auffällt, das
+        nicht mehr mit Ihrer Erfahrung übereinstimmt, lassen Sie es uns wissen, und wir prüfen es
+        und aktualisieren den Guide.
       </p>
 
-      <h2>Welche Angaben Sie machen sollten</h2>
+      <h2>Was Sie angeben sollten</h2>
       <p>
-        Wenn Sie ein Problem melden, geben Sie bitte die Seiten-URL, die betroffene Stadt oder den
-        betroffenen Dienst sowie das Datum an, an dem Ihnen das Problem aufgefallen ist. So können
-        wir die Informationen schneller überprüfen.
+        Wenn Sie ein Problem melden, geben Sie bitte die Seiten-URL, die betreffende Stadt oder
+        den betreffenden Dienst sowie das Datum an, an dem Ihnen das Problem aufgefallen ist. Das
+        hilft uns, die Informationen schnell zu überprüfen.
       </p>
 
       <h2>Wichtiger Hinweis</h2>
       <p>
-        ChinaTripBox stellt ausschließlich allgemeine Reiseinformationen bereit. Wir können keine
-        Rechts-, Einwanderungs-, Bank-, Medizin- oder Notfallberatung leisten. Offizielle
-        Anforderungen sollten Sie immer bei der zuständigen Behörde, Fluggesellschaft, Bank, beim
-        Mobilfunkanbieter oder direkt beim jeweiligen Dienst bestätigen.
+        ChinaTripBox stellt nur allgemeine Reiseinformationen bereit. Wir können keine Rechts-,
+        Einwanderungs-, Bank-, medizinische oder Notfallberatung leisten. Bei offiziellen
+        Anforderungen bestätigen Sie diese bitte immer bei der zuständigen Behörde, der
+        Fluggesellschaft, der Bank, dem Telekommunikationsanbieter oder dem Dienstleister.
       </p>
     </article>
   </main>
