@@ -6,9 +6,9 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Conversor de tallas de ropa y calzado de China';
+const title = 'Conversor de tallas de ropa y calzado en China';
 const description =
-  'Convierte tallas de ropa y calzado de EE. UU., Reino Unido y la UE a tallas chinas para comprar con más seguridad en China. Incluye referencias para mujer y para hombre.';
+  'Convierte tallas de ropa y calzado de US, UK y EU a tallas chinas para comprar con más seguridad en China. Incluye referencias para mujer y para hombre.';
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
@@ -22,10 +22,10 @@ const description =
     <AdSlot format="banner" />
 
     <div class="mt-6 flex flex-wrap gap-2 text-sm">
-      <button data-tab="ropa-mujer" class="size-tab btn-primary px-3 py-1.5">Ropa de mujer</button>
-      <button data-tab="ropa-hombre" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Ropa de hombre</button>
-      <button data-tab="calzado-mujer" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Calzado de mujer</button>
-      <button data-tab="calzado-hombre" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Calzado de hombre</button>
+      <button data-tab="women-clothing" class="size-tab btn-primary px-3 py-1.5">Ropa de mujer</button>
+      <button data-tab="men-clothing" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Ropa de hombre</button>
+      <button data-tab="women-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Calzado de mujer</button>
+      <button data-tab="men-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">Calzado de hombre</button>
     </div>
 
     <div class="mt-6 overflow-x-auto">
@@ -33,9 +33,9 @@ const description =
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
             <th class="py-3 pr-4 font-semibold">China</th>
-            <th class="py-3 pr-4 font-semibold">EE. UU.</th>
-            <th class="py-3 pr-4 font-semibold">Reino Unido</th>
-            <th class="py-3 pr-4 font-semibold">UE</th>
+            <th class="py-3 pr-4 font-semibold">US</th>
+            <th class="py-3 pr-4 font-semibold">UK</th>
+            <th class="py-3 pr-4 font-semibold">EU</th>
           </tr>
         </thead>
         <tbody id="size-rows"></tbody>
@@ -43,12 +43,13 @@ const description =
     </div>
 
     <p class="mt-4 text-xs text-gray-400">
-      Las tallas varían según la marca y el corte. La ropa china suele ser más pequeña que sus equivalentes occidentales; si tienes dudas, elige una talla más o pruébatela antes de comprar. Estas tablas son solo una referencia general.
+      Las tallas varían según la marca y el corte. En China, muchas prendas suelen tallar más pequeño que sus equivalentes occidentales.
+      Si dudas entre dos opciones, normalmente conviene subir una talla o probártela antes de pagar. Estas tablas son orientativas.
     </p>
 
     <AffiliateCta
-      title="Compra de forma inteligente en tu viaje"
-      description="Organiza primero tus pagos y tu conectividad para que puedas comprar en cualquier tienda o aplicación en China sin complicaciones."
+      title="Compra con menos fricción durante el viaje"
+      description="Deja listos los pagos y la conectividad para poder comprar en tiendas físicas y apps chinas sin complicaciones."
       buttonText="Ver esenciales de viaje"
       placeholder={AFFILIATE_LINKS.transport}
     />
@@ -57,24 +58,23 @@ const description =
 </BaseLayout>
 
 <script>
-  // Tablas de conversión de referencia. La ropa china usa etiquetas de altura/busto en cm,
-  // que suelen simplificarse en tallas numéricas; el calzado usa tallas en cm basadas en la UE.
+  // Tablas de referencia aproximadas.
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
-    'ropa-mujer': [
+    'women-clothing': [
       { cn: '155/80A (XS)', us: '0-2', uk: '4-6', eu: '32-34' },
       { cn: '160/84A (S)', us: '4', uk: '8', eu: '36' },
       { cn: '165/88A (M)', us: '6-8', uk: '10-12', eu: '38-40' },
       { cn: '170/92A (L)', us: '10-12', uk: '14-16', eu: '42-44' },
       { cn: '175/96A (XL)', us: '14', uk: '18', eu: '46' },
     ],
-    'ropa-hombre': [
+    'men-clothing': [
       { cn: '165/88A (S)', us: '34-36', uk: '34-36', eu: '44-46' },
       { cn: '170/92A (M)', us: '38', uk: '38', eu: '48' },
       { cn: '175/96A (L)', us: '40', uk: '40', eu: '50' },
       { cn: '180/100A (XL)', us: '42-44', uk: '42-44', eu: '52-54' },
       { cn: '185/104A (XXL)', us: '46', uk: '46', eu: '56' },
     ],
-    'calzado-mujer': [
+    'women-shoes': [
       { cn: '35', us: '5', uk: '2.5', eu: '35' },
       { cn: '36', us: '6', uk: '3.5', eu: '36' },
       { cn: '37', us: '6.5', uk: '4.5', eu: '37' },
@@ -82,7 +82,7 @@ const description =
       { cn: '39', us: '8.5', uk: '6.5', eu: '39' },
       { cn: '40', us: '9', uk: '7', eu: '40' },
     ],
-    'calzado-hombre': [
+    'men-shoes': [
       { cn: '39', us: '6.5', uk: '6', eu: '39' },
       { cn: '40', us: '7', uk: '6.5', eu: '40' },
       { cn: '41', us: '8', uk: '7.5', eu: '41' },
@@ -120,5 +120,5 @@ const description =
     });
   });
 
-  render('ropa-mujer');
+  render('women-clothing');
 </script>
