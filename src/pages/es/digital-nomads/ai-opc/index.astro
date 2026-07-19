@@ -1,80 +1,83 @@
 ---
-import GuideLayout from '../../../../layouts/GuideLayout.astro';
+import GuideLayout from '../../../layouts/GuideLayout.astro';
 
-const title = 'Negocio unipersonal de IA en China: guía para extranjeros (2026)';
+const title = "Empresa unipersonal de IA en China: guía para extranjeros (2026)";
 const description =
-  '¿Puede un extranjero gestionar un negocio unipersonal de IA mientras vive en China? Esta guía repasa visados, cumplimiento, infraestructura, cobros internacionales y decisiones prácticas de configuración.';
+  '¿Pueden los extranjeros dirigir un negocio unipersonal de IA mientras viven en China? Esta guía cubre las normas de visado, el cumplimiento normativo, la infraestructura, las herramientas de pago y consejos de configuración.';
 const url = '/digital-nomads/ai-opc/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Nómadas digitales', href: '/es/digital-nomads/' },
-  { label: 'Negocio unipersonal de IA' },
+  { label: 'Home', href: '/' },
+  { label: 'Digital Nomads', href: '/digital-nomads/' },
+  { label: 'AI One-Person Company' },
 ];
 
 const toc = [
-  { id: 'bottom-line', label: 'Conclusión rápida' },
-  { id: 'compliance', label: 'Cumplimiento y visado' },
+  { id: 'bottom-line', label: 'La conclusión' },
+  { id: 'compliance', label: 'Cumplimiento normativo y requisitos de visado' },
   { id: 'infrastructure', label: 'Infraestructura esencial' },
-  { id: 'niches', label: 'Nichos transfronterizos viables' },
-  { id: 'cities', label: 'Ciudades recomendadas' },
-  { id: 'mistakes', label: 'Errores frecuentes' },
+  { id: 'niches', label: 'Nichos transfronterizos adecuados' },
+  { id: 'cities', label: 'Mejores ciudades para fundadores de IA' },
+  { id: 'mistakes', label: 'Errores comunes de cumplimiento normativo' },
   { id: 'faq', label: 'Preguntas frecuentes' },
 ];
 
 const faqs = [
   {
-    question: '¿Puede un extranjero gestionar un negocio de IA mientras vive en China sin registrar una empresa china?',
+    question: '¿Puede un extranjero dirigir un negocio de IA mientras vive en China sin registrar una empresa china?',
     answer:
-      'Sí, siempre que el negocio sea realmente transfronterizo: empresa registrada fuera de China, clientes del extranjero, ningún cliente chino y sin empleados locales. En cuanto empieces a facturar localmente o a contratar en China, necesitarás una entidad registrada y la autorización laboral correspondiente.',
+      'Sí, si el negocio es genuinamente transfronterizo: está registrado en el extranjero, atiende a clientes del exterior, no tiene clientes chinos ni empleados locales. En ese caso, simplemente estás operando un negocio extranjero que casualmente diriges desde China, no una empresa china. El riesgo de cumplimiento aparece en el momento en que cualquier parte de la operación se vuelve local: un cliente chino, contratar localmente o ingresos generados localmente. Si todo se mantiene completamente transfronterizo, el modelo es claro; si se difumina esa línea, entras en un terreno que requiere una entidad registrada y la autorización laboral adecuada.',
   },
   {
-    question: '¿Tengo que pagar impuestos en China por ingresos de IA generados en el extranjero?',
+    question: '¿Tengo que pagar impuestos en China por mis ingresos de IA obtenidos en el extranjero?',
     answer:
-      'Depende de tu residencia fiscal y del tiempo que pases en el país. Una estancia corta con visa turística o de negocios no suele generar residencia fiscal china, pero una presencia más prolongada sí puede hacerlo. En este punto conviene consultar a un asesor fiscal transfronterizo competente.',
+      'Depende de tu condición de residencia fiscal y del tiempo que pases en el país. Las estancias cortas con visado de turista o de negocios, por lo general, no generan residencia fiscal en China, pero permanecer el tiempo suficiente en China a lo largo de un año sí puede hacerlo. Las normas fiscales chinas sobre ingresos de fuente extranjera son complejas y cambian, así que cualquiera que piense quedarse a largo plazo debería buscar el asesoramiento de un profesional cualificado en fiscalidad transfronteriza en lugar de confiar en orientaciones generales.',
   },
   {
-    question: '¿Puedo operar mi negocio con una visa turística o de negocios?',
+    question: '¿Puedo operar mi negocio con un visado de turista o de negocios?',
     answer:
-      'Gestionar en remoto desde China un negocio extranjero con visa turística (L) o de negocios (M) se mueve en una zona gris tolerada, no en una autorización expresa. Solo tiene sentido si toda la actividad, los clientes y los ingresos permanecen fuera del mercado chino.',
+      'Gestionar a distancia desde China un negocio registrado en el extranjero con un visado de turista (L) o de negocios (M) se mueve en una zona gris, más que estar expresamente permitido, y por lo general solo se tolera cuando la actividad es puramente transfronteriza. Conseguir clientes chinos locales, obtener ingresos locales o realizar trabajo local no está permitido con estos visados y requiere la autorización laboral adecuada y una entidad.',
   },
   {
-    question: '¿Cómo cobro a clientes extranjeros mientras estoy en China?',
+    question: '¿Cómo recibo pagos de clientes internacionales mientras estoy en China?',
     answer:
-      'Lo recomendable es mantener el flujo de ingresos fuera del sistema doméstico chino: cuenta bancaria empresarial en el extranjero y procesadores de pago internacionales. A China solo deberías llevar fondos para gastos personales mediante tu tarjeta extranjera vinculada a Alipay o WeChat Pay.',
+      'Mantén el flujo de dinero fuera del sistema doméstico chino: utiliza la cuenta bancaria de tu empresa en el extranjero y procesadores de pago internacionales para cobrar ingresos, y pasa solo lo que necesites para tus gastos de vida mediante tu tarjeta extranjera vinculada a Alipay o WeChat Pay. No canalices los ingresos de tu negocio extranjero a través de canales domésticos orientados a residentes.',
   },
   {
-    question: '¿Necesito una dirección comercial china para un negocio unipersonal transfronterizo?',
+    question: '¿Necesito una dirección comercial o registro en China para una empresa unipersonal transfronteriza?',
     answer:
-      'No, si no estás constituyendo una entidad china. Tu negocio sigue domiciliado en su jurisdicción de origen. Solo necesitarías dirección y licencia chinas si decides montar formalmente una empresa en China.',
+      'No, si no estás operando una entidad china. Tu negocio sigue registrado en su jurisdicción de origen con la dirección que utilice allí. Una dirección registrada y una licencia chinas solo son necesarias si estableces formalmente una empresa en China, lo que conlleva obligaciones laborales, fiscales y de reporte que rara vez tienen sentido para un operador transfronterizo en solitario.',
   },
   {
-    question: '¿Internet en China es suficientemente fiable para un negocio de IA?',
+    question: '¿Es el internet en China lo bastante fiable como para gestionar un negocio de IA?',
     answer:
-      'La conectividad local es rápida y estable, pero muchas plataformas internacionales de IA, consolas cloud y herramientas de desarrollo están bloqueadas o van lentas. Por eso hay que preparar y probar toda la cadena de herramientas antes de instalarse allí.',
+      'La conectividad doméstica es rápida y estable, pero muchas plataformas internacionales de IA, consolas de nube y herramientas para desarrolladores están bloqueadas o son lentas desde una conexión doméstica. Un fundador de IA en solitario debe planificar un acceso fiable y conforme a los servicios del extranjero antes de llegar, y probar toda la cadena de herramientas cuanto antes, ya que toda su operación depende de ello.',
   },
 ];
 
 const related = [
   {
-    title: 'Guía completa para nómadas digitales en China',
-    description: 'Visados, pagos, internet y mejores ciudades: la base antes de montar cualquier operativa.',
-    href: '/es/digital-nomads/',
+    title: 'La guía completa para nómadas digitales en China',
+    description: 'Visados, pagos, internet y mejores ciudades: la base para establecerte en China.',
+    href: '/digital-nomads/',
   },
   {
-    title: 'Visa para nómadas digitales en China (2026)',
-    description: 'Las opciones legales de estancia que marcan lo que puedes y no puedes hacer.',
-    href: '/es/digital-nomads/visa/',
+    title: 'Visado de China para nómadas digitales (2026)',
+    description: 'Las opciones legales de estancia que determinan qué actividad empresarial está permitida.',
+    href: '/digital-nomads/visa/',
   },
   {
-    title: 'Cómo pagar en China siendo extranjero',
-    description: 'Pagos diarios y estructura financiera mínima para vivir allí mientras operas fuera.',
-    href: '/es/digital-nomads/payment/',
+    title: 'Cómo pagar cosas en China siendo extranjero',
+    description: 'Pagos diarios y la configuración de dinero transfronterizo que necesita un fundador en solitario.',
+    href: '/digital-nomads/payment/',
   },
 ];
 ---
-<GuideLayout locale="es"
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<GuideLayout
   title={title}
   description={description}
   url={url}
@@ -84,132 +87,152 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-ai-opc"
-  coverAlt="Horizonte urbano chino moderno asociado a tecnología y negocios"
+  coverAlt="Un moderno horizonte urbano chino que representa tecnología y negocios"
 >
   <p>
-    Cada vez más trabajadores remotos usan China como base temporal mientras gestionan desde un portátil
-    un negocio ligero, transfronterizo y apoyado en IA. Sin oficina, sin plantilla local y con clientes
-    repartidos fuera del país, este modelo puede ser viable, pero solo si se entiende bien el marco en el
-    que te estás moviendo. Esta guía se centra en eso: <strong>cómo hacerlo siendo extranjero y viviendo en China</strong>,
-    con atención a visados, cumplimiento, cobros e infraestructura real.
+    Un nuevo tipo de trabajador remoto está estableciéndose en China: el operador en solitario que
+    dirige un negocio transfronterizo, ajustado y potenciado por IA, enteramente desde un portátil.
+    Bajos costes fijos, sin empleados, clientes todos en el extranjero: la misma estructura que hace
+    viable una empresa unipersonal también la hace portátil. Esta guía trata estrictamente sobre cómo
+    hacerlo <strong>como extranjero viviendo en China</strong>: los límites de cumplimiento
+    normativo, la infraestructura que necesitas y las decisiones de configuración que te mantienen en
+    el lado correcto de las normas. No es un consejo genérico para startups, y todo aquí está
+    planteado para el contexto de China.
   </p>
 
-  <h2 id="bottom-line">Conclusión rápida</h2>
+  <h2 id="bottom-line">La conclusión</h2>
   <p>
-    La idea clave es esta: <strong>no necesitas registrar una empresa china para dirigir desde China un
-    negocio unipersonal de IA orientado al exterior</strong>, siempre que tu empresa ya exista fuera del país,
-    trabaje solo con clientes extranjeros, no facture a clientes chinos y no tenga empleados locales.
-    En ese escenario estás gestionando un negocio extranjero mientras resides temporalmente en China.
-    El problema aparece en cuanto cualquier parte de la operación se vuelve local: clientes chinos,
-    ingresos generados en China o contratación local.
+    Aquí va la respuesta directa: <strong>no necesitas registrar una empresa china para dirigir un
+    negocio unipersonal transfronterizo de IA desde China</strong>, siempre que tu negocio esté
+    registrado en el extranjero, atienda solo a clientes del exterior, no tenga clientes chinos y no
+    emplee a nadie localmente. En esa configuración, simplemente estás dirigiendo tu negocio
+    extranjero ya existente mientras te encuentras físicamente en China. El riesgo de cumplimiento
+    aparece en cuanto cualquier parte de la operación se vuelve local: un cliente chino, ingresos
+    generados localmente o una contratación local. Mantén todo completamente transfronterizo y el
+    modelo será claro; difumina esa línea y entrarás en un terreno que exige una entidad registrada y
+    la autorización laboral adecuada.
   </p>
 
-  <h2 id="compliance">Cumplimiento y visado</h2>
+  <h2 id="compliance">Cumplimiento normativo y requisitos de visado</h2>
   <p>
-    Todo depende de tres preguntas: qué permite realmente tu visa, si puedes activar residencia fiscal
-    china y si existe obligación de crear una entidad local.
+    Tres preguntas determinan si tu configuración es sólida: qué permite tu visado, si debes pagar
+    impuestos en China y si necesitas registrar una entidad local.
   </p>
-  <h3>Qué permite cada visa</h3>
+  <h3>Qué permite cada visado</h3>
   <p>
-    Con una visa turística (L) o de negocios (M), gestionar en remoto un negocio extranjero se tolera
-    solo mientras la actividad siga siendo puramente transfronteriza. Ninguna de estas visas permite
-    prestar servicios al mercado chino, cobrar a clientes locales ni trabajar localmente. No existe una
-    visa que autorice a un extranjero a operar como autónomo en el mercado nacional chino sin un
-    patrocinador local y el permiso correspondiente. Consulta la <a href="/es/digital-nomads/visa/">guía completa de visas</a>
-    para ver cómo funciona cada opción.
+    Con un visado de turista (L) o de negocios (M), dirigir a distancia un negocio registrado en el
+    extranjero es una zona gris tolerada, no un permiso explícito; en la práctica, solo es aceptable
+    cuando la actividad es puramente transfronteriza. Ninguno de estos visados permite trabajo local,
+    clientes locales ni ingresos locales. No existe un visado que permita a un extranjero trabajar
+    como freelance para el mercado interno chino sin un empleador patrocinador y un permiso de
+    trabajo. Lee la <a href="/digital-nomads/visa/">guía completa sobre visados</a> para entender
+    cómo funciona cada opción y cuánto tiempo puedes quedarte.
   </p>
-  <h3>Fiscalidad básica</h3>
+  <h3>Aspectos básicos de fiscalidad</h3>
   <p>
-    La exposición fiscal en China depende del tiempo que pases allí y de tu condición de residencia.
-    Las estancias breves no suelen generar residencia fiscal, pero una presencia prolongada durante el
-    año sí puede hacerlo. Las reglas sobre ingresos del extranjero son lo bastante complejas como para
-    no improvisar: si tu idea es quedarte bastante tiempo, busca asesoramiento fiscal serio.
+    La exposición fiscal en China depende del tiempo que pases en el país y de tu condición de
+    residencia. Las estancias breves por lo general no generan residencia fiscal; una presencia
+    prolongada a lo largo de un año fiscal sí puede hacerlo, y las normas sobre ingresos de fuente
+    extranjera son realmente complejas. Esta es la única área en la que no deberías improvisar: un
+    fundador en solitario que planee una estancia larga debería consultar a un asesor fiscal
+    transfronterizo cualificado en lugar de confiar en lo que diga un foro.
   </p>
-  <h3>Por qué no necesitas una entidad china si todo sigue fuera</h3>
+  <h3>Por qué no se necesita una entidad china (si te mantienes transfronterizo)</h3>
   <p>
-    Registrar una empresa china arrastra obligaciones laborales, fiscales y de reporting que rara vez
-    compensan en una operación individual orientada al exterior. Mientras mantengas la actividad
-    totalmente fuera del mercado local, operar desde una entidad extranjera es la opción más lógica
-    y también la más limpia en términos de cumplimiento.
+    Registrar una empresa china activa obligaciones locales laborales, fiscales y de reporte que casi
+    nunca tienen sentido para una operación transfronteriza de una sola persona. Mientras tu negocio
+    esté registrado en el extranjero, facture a clientes internacionales, no tenga clientes chinos y
+    no cuente con personal local, no existe la obligación de establecer una entidad local. Mantener
+    la operación completamente orientada al exterior es tanto el camino más simple como el camino
+    conforme a las normas.
   </p>
 
   <h2 id="infrastructure">Infraestructura esencial</h2>
-  <p>Tres sistemas determinan si un negocio unipersonal de IA puede funcionar con estabilidad desde China.</p>
-  <h3>Cobros internacionales</h3>
+  <p>Tres sistemas determinan el éxito o el fracaso de una operación de IA en solitario dirigida desde China.</p>
+  <h3>Cobro de pagos transfronterizos</h3>
   <p>
-    Los ingresos deben entrar en tu cuenta bancaria empresarial extranjera y en procesadores de pago
-    internacionales, no en el sistema financiero doméstico chino. A China lleva solo dinero para vivir,
-    usando tu tarjeta extranjera dentro de Alipay o WeChat Pay, como se explica en la
-    <a href="/es/digital-nomads/payment/">guía de pagos</a>.
+    Cobra tus ingresos a través de la cuenta bancaria de tu empresa en el extranjero y de
+    procesadores de pago internacionales, no mediante el sistema doméstico chino. Transfiere solo
+    tus gastos de vida recargando Alipay o WeChat Pay con tu tarjeta extranjera, como se explica en
+    la <a href="/digital-nomads/payment/">guía de pagos</a>. Una cuenta empresarial multimoneda con
+    bajas comisiones suele ser la columna vertebral de este flujo.
   </p>
-  <h3>Acceso fiable a herramientas extranjeras</h3>
+  <h3>Acceso fiable a herramientas del extranjero</h3>
   <p>
-    Muchas plataformas de IA, consolas cloud, repositorios y herramientas de comunicación viven en
-    servicios extranjeros bloqueados o inestables desde una conexión china estándar. Dejar esto para
-    después es un error: prepara una solución fiable antes de llegar y prueba toda la cadena de trabajo
-    el primer día.
+    Toda tu cadena de herramientas, plataformas de IA, consolas de nube, repositorios de código y
+    herramientas de comunicación, suele depender de servicios que están bloqueados o van lentos desde
+    una conexión doméstica china. Organiza un acceso conforme y fiable antes de llegar y prueba cada
+    herramienta crítica en tu primer día. Para un negocio que existe sobre plataformas
+    internacionales, esto no es un extra deseable; es la base.
   </p>
-  <h3>Espacio de trabajo y dirección</h3>
+  <h3>Opciones de oficina y dirección</h3>
   <p>
-    Si tu negocio está registrado fuera, sigues usando la dirección de esa jurisdicción y no necesitas
-    una dirección empresarial china. Para trabajar, los coworkings de grandes ciudades ofrecen una base
-    estable con buena conectividad. Los servicios de dirección virtual o incorporación local rara vez
-    compensan a un operador unipersonal transfronterizo.
+    Para un negocio en solitario registrado en el extranjero, sigues utilizando la dirección
+    registrada de tu jurisdicción de origen; no se requiere una dirección china. En cuanto al espacio
+    de trabajo, las membresías de coworking en las grandes ciudades ofrecen un entorno estable y una
+    conectividad local rápida. Si alguna vez realmente necesitas presencia en China, existen
+    servicios de dirección virtual y de constitución transfronteriza, pero para un operador
+    puramente transfronterizo suelen ser una carga innecesaria.
   </p>
 
-  <h2 id="niches">Nichos transfronterizos viables</h2>
+  <h2 id="niches">Nichos transfronterizos de IA adecuados</h2>
   <p>
-    Los modelos que mejor encajan con esta estructura son los que requieren pocos activos físicos y se
-    venden fuera de China:
+    Los negocios que mejor encajan en este modelo son ligeros en activos, atienden a clientes del
+    extranjero y no necesitan presencia local:
   </p>
   <ul>
     <li><strong>Servicios de contenido y localización asistidos por IA</strong> para clientes internacionales.</li>
-    <li><strong>SaaS de nicho o microherramientas</strong> vendidas a una audiencia global.</li>
-    <li><strong>Consultoría o automatización productizada con IA</strong> entregada en remoto a empresas extranjeras.</li>
-    <li><strong>Productos digitales</strong> como plantillas, cursos o datasets vendidos mediante plataformas internacionales.</li>
+    <li><strong>SaaS de nicho o microherramientas</strong> creados y vendidos a una audiencia global.</li>
+    <li><strong>Consultoría de IA o automatización paquetizada</strong> prestada a distancia a empresas del extranjero.</li>
+    <li><strong>Productos digitales</strong> (plantillas, cursos, conjuntos de datos) vendidos a través de plataformas internacionales.</li>
   </ul>
   <p>
-    La línea roja siempre es la misma: clientes e ingresos deben seguir fuera del mercado chino. En cuanto
-    entras en publicidad local, servicios para clientes chinos o contratación local, dejas de estar en un
-    modelo transfronterizo y cambian por completo tus obligaciones legales.
+    El hilo conductor y la barrera de cumplimiento normativo son claros: los clientes y los ingresos
+    permanecen en el extranjero. Evita cualquier cosa que te arrastre al mercado interno chino:
+    clientes locales, ventas de publicidad local o servicios dirigidos a consumidores chinos, porque
+    eso supone pasar de lo transfronterizo al negocio local y cambia por completo tus obligaciones
+    legales.
   </p>
 
-  <h2 id="cities">Ciudades recomendadas</h2>
-  <p>Tres ciudades destacan especialmente para un fundador o creador que opera en solitario desde China.</p>
-  <h3>Shanghái</h3>
+  <h2 id="cities">Mejores ciudades para fundadores de IA</h2>
+  <p>Tres ciudades destacan para un fundador transfronterizo en solitario, cada una por razones distintas.</p>
+  <h3>Shanghai</h3>
   <p>
-    Es la ciudad más internacional, con mejor cobertura en inglés, más oferta de coworking, mejores
-    servicios profesionales y una operativa diaria muy fluida. Si priorizas comodidad y acceso a
-    asesores o infraestructura internacional, suele ser la mejor base. Consulta la
-    <a href="/es/posts/shanghai-city-guide-for-foreigners/">guía de Shanghái</a>.
+    La ciudad más internacional, con la mejor cobertura en inglés, los servicios profesionales más
+    completos, más opciones de coworking y una fuerte conectividad internacional; ideal si valoras
+    la facilidad operativa y el acceso a asesores. Consulta la
+    <a href="/posts/shanghai-city-guide-for-foreigners/">guía de Shanghai para extranjeros</a>.
   </p>
   <h3>Shenzhen</h3>
   <p>
-    Tiene la ventaja clara de estar pegada a Hong Kong, lo que la hace útil para cruces frecuentes y
-    para quien valora la proximidad a ecosistemas de producto, hardware o finanzas internacionales.
+    La capital china del hardware y la tecnología, justo al lado de Hong Kong; conveniente para
+    cruces fronterizos frecuentes y para cualquiera cuyo trabajo toque el ecosistema tecnológico y de
+    producto. Una base pragmática para fundadores que valoran la proximidad a la infraestructura
+    financiera de Hong Kong.
   </p>
   <h3>Hangzhou</h3>
   <p>
-    Combina entorno tecnológico, cultura de software y costes algo más contenidos que Shanghái. Es una
-    base cómoda para alguien que quiere productividad y ambiente tech sin pagar siempre precios de primer
-    nivel. Consulta la <a href="/es/posts/hangzhou-city-guide-for-foreigners/">guía de Hangzhou</a>.
+    Un importante centro tecnológico y de comercio electrónico, con una sólida cultura del software y
+    un ritmo más tranquilo que Shanghai, además de costes más bajos. Una base cómoda y productiva
+    para un creador en solitario que quiere energía tecnológica sin precios de primer nivel. Consulta la
+    <a href="/posts/hangzhou-city-guide-for-foreigners/">guía de Hangzhou para extranjeros</a>.
   </p>
 
-  <h2 id="mistakes">Errores frecuentes</h2>
+  <h2 id="mistakes">Errores comunes de cumplimiento normativo</h2>
   <ul>
-    <li><strong>Aceptar clientes locales con visa turística.</strong> Es la forma más rápida de convertir una situación tolerada en un problema real.</li>
-    <li><strong>Contratar a alguien en China sin entidad.</strong> El empleo local exige estructura legal y contratos adecuados.</li>
-    <li><strong>Ignorar la residencia fiscal.</strong> Pasar gran parte del año en China sin revisar implicaciones fiscales es una mala idea.</li>
-    <li><strong>Canalizar ingresos por vías domésticas chinas.</strong> Los ingresos del negocio deben quedarse en cuentas extranjeras.</li>
-    <li><strong>Usar mal el visado o apurar la estancia.</strong> Si falla tu base migratoria, cae todo lo demás. Revisa siempre las <a href="/es/digital-nomads/visa/">normas de visado</a>.</li>
-    <li><strong>Dar por hecho que las herramientas funcionarán.</strong> Si no pruebas acceso, sincronización y plataformas al llegar, puedes bloquear el negocio desde el día uno.</li>
+    <li><strong>Aceptar clientes locales con un visado de turista.</strong> La forma más rápida de convertir una configuración tolerada en una ilegal. Mantén a todos tus clientes en el extranjero.</li>
+    <li><strong>Contratar localmente sin una entidad.</strong> Incorporar trabajadores chinos requiere una empresa registrada y contratos adecuados; la contratación local informal no cumple con las normas.</li>
+    <li><strong>Ignorar la residencia fiscal.</strong> Suponer que los ingresos extranjeros están automáticamente exentos mientras pasas la mayor parte del año en China. Busca asesoramiento profesional.</li>
+    <li><strong>Canalizar los ingresos del negocio a través de canales domésticos.</strong> Mantén los ingresos extranjeros en cuentas extranjeras; el sistema doméstico está pensado para residentes y negocios locales.</li>
+    <li><strong>Exceder el tiempo permitido o hacer un uso indebido del visado.</strong> Tu derecho a estar en el país sostiene todo lo demás; un problema de visado también termina con el negocio. Sigue las <a href="/digital-nomads/visa/">normas de visado</a> con precisión.</li>
+    <li><strong>Asumir que tus herramientas simplemente funcionarán.</strong> No organizar un acceso fiable al extranjero antes de llegar puede paralizar tus operaciones desde el primer día.</li>
   </ul>
 
-  <h2 id="next">Empieza por la base</h2>
+  <h2 id="next">Empieza por lo fundamental</h2>
   <p>
-    Antes de afinar un negocio unipersonal, deja bien resueltos los fundamentos de vivir en China:
-    el visado, los pagos, la conectividad y la ciudad base. Vuelve a la
-    <a href="/es/digital-nomads/">guía completa para nómadas digitales en China</a> y asegúrate de que esa
-    estructura esté sólida antes de construir encima.
+    Antes de optimizar el negocio, asegúrate de tener bien resueltos los aspectos básicos de vivir en
+    China: el visado que permite tu estancia, los pagos, la conectividad y la elección de ciudad.
+    Vuelve a la <a href="/digital-nomads/">guía completa para nómadas digitales en China</a> para
+    asegurarte de que tu base sea sólida y luego construye encima la operación unipersonal.
   </p>
 </GuideLayout>
