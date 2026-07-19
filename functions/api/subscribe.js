@@ -59,7 +59,11 @@ export async function onRequestPost(context) {
 async function sendWelcomeEmail(email, subscribedAt) {
   const url = 'https://api.mailchannels.net/tx/v1/send';
   const payload = {
-    personalizations: [{ to: [{ email: email }] }],
+    personalizations: [{
+      to: [{ email: email }],
+      dkim_domain: 'chinatripbox.com',
+      dkim_selector: 'mailchannels',
+    }],
     from: { email: 'newsletter@chinatripbox.com', name: 'ChinaTripBox' },
     reply_to: { email: 'contact@chinatripbox.com', name: 'ChinaTripBox' },
     subject: 'Welcome to ChinaTripBox — your first travel tip inside',
