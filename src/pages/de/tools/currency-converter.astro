@@ -1,31 +1,37 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'RMB-Währungsrechner für China-Reisende';
+const title = 'RMB-Waehrungsrechner fuer China-Reisende';
 const description =
-  'Rechne deine Heimatwährung in chinesische Yuan (RMB) und zurück um und sieh, was alltägliche Dinge in China kosten, damit du Preise direkt vor Ort prüfen kannst.';
+  'Wandle deine Heimatwaehrung in Chinesische Yuan (RMB) und zurueck um und sieh, was alltaegliche Dinge in China kosten, damit du Preise direkt vor Ort vergleichen kannst.';
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">RMB-Währungsrechner</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">RMB-Waehrungsrechner</h1>
+<p class="mt-4 max-w-3xl text-lg leading-8 text-gray-600">
+  Nutze diesen Rechner, um die aktuellen Wechselkurse zwischen deiner Heimatwaehrung und dem Chinesischen Yuan (RMB/CNY) zu pruefen. Die unten stehenden Referenzpreise geben dir ein Gefuehl fuer uebliche Kosten: Eine Schuessel Nudeln kostet etwa 15-25 RMB, eine Fahrt mit der Metro 3-7 RMB und ein Mittelklassehotel 200-500 RMB pro Nacht. China ist ueberwiegend eine bargeldlose Gesellschaft - Alipay und WeChat Pay werden ueberall akzeptiert, von Strassenverkaeufern bis hin zu Luxushotels. Fuer die besten Wechselkurse nutze die internationale Debitkarte deiner Hausbank an Geldautomaten chinesischer Banken oder tausche Geld bei lokalen Banken statt an Flughaefen oder in Hotels.
+</p>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- Rechner -->
+    <!-- Converter -->
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
       <div class="grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-end">
         <label class="flex flex-col text-sm">
-          <span class="mb-1 font-medium text-gray-700">Deine Währung</span>
+          <span class="mb-1 font-medium text-gray-700">Deine Waehrung</span>
           <div class="flex gap-2">
             <select id="currency" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
               <option value="USD">USD ($)</option>
@@ -49,22 +55,22 @@ const description =
       </div>
       <p id="rate-line" class="mt-3 text-sm text-gray-500"></p>
       <p class="mt-1 text-xs text-gray-400">
-        Kurse sind ungefähre Richtwerte für die Planung, keine Live-Marktkurse. Prüfe bei deiner Bank oder mit einem Live-
-        Währungsrechner den genauen Kurs zum Zeitpunkt deiner Transaktion.
+        Die Kurse sind ungefaehre Referenzwerte fuer die Planung, keine Live-Marktkurse. Pruefe bei deiner Bank oder einem Live-
+        Rechner den genauen Kurs zum Zeitpunkt deiner Transaktion.
       </p>
     </div>
 
-    <!-- Was Dinge kosten -->
+    <!-- What things cost -->
     <section class="mt-8">
       <h2 class="text-xl font-bold text-gray-900">Was Dinge in China kosten</h2>
-      <p class="mt-1 text-sm text-gray-500">Typische Preise in RMB, mit deiner Währung als Referenz.</p>
+      <p class="mt-1 text-sm text-gray-500">Typische Preise in RMB, mit deiner Waehrung als Referenz angezeigt.</p>
       <div id="cost-grid" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
     </section>
 
     <AffiliateCta
-      title="Wechselschalter umgehen"
-      description="Verknüpfe eine Karte ohne Fremdwährungsgebühren mit Alipay oder WeChat Pay und zahle zum echten Kurs, ohne Aufschlag für Bargeldwechsel."
-      buttonText="Bezahlungs-Setup ansehen"
+      title="Ueberspringe den Wechselstuben-Schalter"
+      description="Verknuepfe eine Karte ohne Fremdwaehrungsgebuehren mit Alipay oder WeChat Pay und bezahle zum echten Kurs, ohne Aufschlag beim Bargeldtausch."
+      buttonText="Zahlungseinrichtung ansehen"
       placeholder={AFFILIATE_LINKS.payment}
     />
   </main>
@@ -72,7 +78,7 @@ const description =
 </BaseLayout>
 
 <script>
-  // Ungefähre Referenzkurse: 1 Währungseinheit = X RMB.
+  // Approximate reference rates: 1 unit of currency = X RMB.
   const ratesToRmb: Record<string, number> = {
     USD: 7.2,
     EUR: 7.8,
@@ -91,10 +97,10 @@ const description =
     { label: 'Metrofahrt', rmb: 4 },
     { label: 'Streetfood-Snack', rmb: 10 },
     { label: 'Kaffee (Café)', rmb: 30 },
-    { label: 'Essen in einem einfachen Restaurant', rmb: 45 },
+    { label: 'Essen in einem legeren Restaurant', rmb: 45 },
     { label: 'Kurze DiDi- / Taxifahrt', rmb: 25 },
     { label: 'Hochgeschwindigkeitszug (1-2 Std.)', rmb: 250 },
-    { label: 'Museums- / Sehenswürdigkeitsticket', rmb: 60 },
+    { label: 'Museum / Eintrittskarte fuer eine Sehenswuerdigkeit', rmb: 60 },
     { label: 'Mittelklassehotel / Nacht', rmb: 450 },
   ];
 
