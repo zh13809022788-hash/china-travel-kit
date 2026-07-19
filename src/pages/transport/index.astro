@@ -90,6 +90,28 @@ const locale = 'en';
       ))}
       {posts.length === 0 && <p class="text-gray-500">Guides coming soon.</p>}
     </section>
-  </main>
+  
+    <section class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+      <h2 class="text-xl font-bold text-gray-950">Essential Transport Guides</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <a href="/posts/china-high-speed-rail-guide-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">High-Speed Rail Guide</p>
+          <p class="mt-1 text-sm text-gray-600">Seat classes, booking tips, and station navigation</p>
+        </a>
+        <a href="/posts/book-china-train-tickets-12306-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Book Train Tickets</p>
+          <p class="mt-1 text-sm text-gray-600">12306 step-by-step with foreign passport</p>
+        </a>
+        <a href="/posts/didi-china-foreign-tourists-guide/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">DiDi Ride-Hailing</p>
+          <p class="mt-1 text-sm text-gray-600">How to use China ride-hailing as a foreign tourist</p>
+        </a>
+        <a href="/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Shanghai Metro Guide</p>
+          <p class="mt-1 text-sm text-gray-600">QR codes, tickets, and transfer tips</p>
+        </a>
+      </div>
+    </section>
+</main>
   <Footer />
 </BaseLayout>
