@@ -296,8 +296,18 @@ function addCtaCard(lang: string): void {
     html += '<div class="mt-1 text-[10px] text-gray-400">Secure payment via PayPal — instant download after purchase</div>';
     wrapper.innerHTML = html;
   } else {
-    wrapper.innerHTML = '<div class="font-semibold text-amber-900">📖 Guides in your language — coming soon</div>' +
-      '<div class="mt-1 text-xs text-gray-500">We\'re translating our detailed guides. Check back or <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">email us</a> to get notified.</div>';
+    // Localized "coming soon" for all 7 non-English languages
+    const COMING_SOON: Record<string, { title: string; body: string }> = {
+      'zh-TW': { title: '📖 繁中版指南即將推出', body: '我們正在翻譯詳細的指南，請稍候或<a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">寫信給我們</a>收到通知。' },
+      ja:     { title: '📖 日本語版ガイドは近日公開', body: '詳細ガイドの翻訳中です。後ほどご確認ください、または<a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">メール</a>で通知を受け取る。' },
+      ko:     { title: '📖 한국어 가이드 곧 출시', body: '자세한 가이드를 번역 중입니다. 나중에 다시 확인하시거나 <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">이메일</a>로 알림을 받으세요.' },
+      ru:     { title: '📖 Русскоязычные гиды скоро', body: 'Мы переводим подробные гиды. Загляните позже или <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">напишите нам</a> для уведомления.' },
+      fr:     { title: '📖 Guides en français bientôt', body: 'Nous traduisons nos guides détaillés. Revenez bientôt ou <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">envoyez-nous un email</a> pour être notifié.' },
+      de:     { title: '📖 Deutschsprachige Guides folgen', body: 'Wir übersetzen unsere detaillierten Ratgeber. Schauen Sie bald wieder vorbei oder <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">kontaktieren Sie uns per E-Mail</a>.' },
+      es:     { title: '📖 Guías en español próximamente', body: 'Estamos traduciendo nuestras guías detalladas. Vuelve pronto o <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">escríbenos</a> para recibir un aviso.' },
+    };
+    const c = COMING_SOON[lang] || COMING_SOON['zh-TW'];
+    wrapper.innerHTML = `<div class="font-semibold text-amber-900">${c.title}</div><div class="mt-1 text-xs text-gray-500">${c.body}</div>`;
   }
 
   messages.appendChild(wrapper);
