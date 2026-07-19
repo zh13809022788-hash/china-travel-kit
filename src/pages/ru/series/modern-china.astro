@@ -1,41 +1,43 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
 
 const seriesSlug = 'modern-china';
-const posts = (await getCollection('posts-ru'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = 'Современный Китай — что больше всего удивляет иностранцев';
-const description = 'Узнайте, чем современный Китай удивляет иностранного путешественника: общество без наличных, самые быстрые поезда в мире, навигация по мегаполисам, суперприложения, ночные поезда и технологии, которые определяют повседневную жизнь.';
+const description = 'Откройте для себя современный Китай глазами иностранного путешественника: общество без наличных, самые быстрые в мире поезда, навигация по мегаполисам, суперприложения, ночные поезда и технологии, которые определяют повседневную жизнь.';
 
 const relatedTools = [
-  { href: '/ru/posts/how-to-pay-in-china-tourist-guide/', title: 'Как платить в Китае', desc: 'Настройка мобильных платежей для туристов' },
-  { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'Путеводитель по скоростным поездам', desc: 'Как ездить на китайских скоростных поездах' },
-  { href: '/ru/posts/best-esim-for-china-travel-2026/', title: 'Лучшая eSIM для Китая', desc: 'Оставайтесь на связи сразу по прибытии' },
+  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Как платить в Китае', desc: 'Настройка мобильных платежей для туристов' },
+  { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Путеводитель по высокоскоростным железным дорогам', desc: 'Как ездить на китайских скоростных поездах' },
+  { href: '/posts/best-esim-for-china-travel-2026/', title: 'Лучшая eSIM для Китая', desc: 'Оставайтесь на связи сразу по прибытии' },
 ];
 
 const relatedCities = [
-  { href: '/ru/posts/shanghai-city-guide-for-foreigners/', title: 'Шанхай', desc: 'Финансовый мегаполис Китая' },
-  { href: '/ru/posts/beijing-city-guide-for-foreigners/', title: 'Пекин', desc: 'Древняя столица и современный центр' },
-  { href: '/ru/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Метро Шанхая', desc: 'Как ориентироваться в огромной транспортной системе' },
+  { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Финансовый мегаполис Китая' },
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Древняя столица встречается с современным центром' },
+  { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Метро Shanghai', desc: 'Как ориентироваться в огромной транспортной системе' },
 ];
 
 const otherSeries = [
-  { href: '/ru/series/food-of-china/', title: 'Кухня Китая' },
-  { href: '/ru/series/history-of-china/', title: 'История Китая' },
-  { href: '/ru/series/culture-of-china/', title: 'Культура Китая' },
+  { href: '/series/food-of-china/', title: 'Кухня Китая' },
+  { href: '/series/history-of-china/', title: 'История Китая' },
+  { href: '/series/culture-of-china/', title: 'Культура Китая' },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'ru';
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Серия материалов</p>
@@ -56,7 +58,7 @@ const locale = 'ru';
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/ru/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
@@ -64,13 +66,13 @@ const locale = 'ru';
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Статьи этой серии готовятся. Загляните сюда чуть позже.</p>
+          <p class="mt-6 text-gray-500">Статьи этой серии находятся в подготовке. Загляните позже.</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Практические материалы</p>
+          <p class="section-kicker">Практические инструменты</p>
           <h2 class="mt-1 text-xl font-bold text-gray-950">Как ориентироваться в современном Китае</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
