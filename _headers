@@ -1,44 +1,19 @@
-# Cloudflare Pages _headers - Global security and cache headers
+# Cloudflare Pages _headers — KEEP MINIMAL
+#
+# DO NOT add Content-Type rules! Cloudflare Pages auto-detects MIME
+# types perfectly by file extension. Every time someone added
+# Content-Type here, it broke the site. See MEMORY.md for war stories.
 
 /*
-  Cache-Control: public, max-age=300, s-maxage=300
+  Cache-Control: public, max-age=300, s-maxage=3600
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
-# Pin Content-Type per asset extension
-/assets/*.css
-  Content-Type: text/css; charset=utf-8
-
-/assets/*.js
-  Content-Type: text/javascript; charset=utf-8
-
-/assets/*.svg
-  Content-Type: image/svg+xml; charset=utf-8
-
-/assets/*.png
-  Content-Type: image/png
-
-/assets/*.jpg
-  Content-Type: image/jpeg
-
-/assets/*.webp
-  Content-Type: image/webp
-
-/assets/*.woff2
-  Content-Type: font/woff2
-
-/assets/*.json
-  Content-Type: application/json; charset=utf-8
-
-# Sitemap
 /sitemap*.xml
-  Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=3600, s-maxage=3600
 
-# RSS
 /rss.xml
-  Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=3600, s-maxage=3600
