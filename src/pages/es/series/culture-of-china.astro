@@ -1,212 +1,112 @@
 ---
-
 import { getCollection } from 'astro:content';
-
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-
-import Header from '../../../components/Header.astro';
-
-import Footer from '../../../components/Footer.astro';
-
-import AdSlot from '../../../components/AdSlot.astro';
-
-
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
 
 const seriesSlug = 'culture-of-china';
-
-const posts = (await getCollection('posts-es'))
-
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
-
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-
-
-const title = 'Cultura de China — Tradiciones y costumbres para viajeros';
-
-const description = 'Explora la cultura china como viajero extranjero: la ceremonia del té, el Festival de Primavera, el concepto de cara y guanxi, la caligrafía, el kung fu, el zodiaco y las tradiciones que dan forma a la vida cotidiana en China.';
-
-
+const title = 'Cultura de China — Tradiciones y Costumbres para Viajeros';
+const description = 'Explora la cultura china como viajero extranjero: ceremonia del té, Festival de Primavera, face y guanxi, caligrafía, kung fu, el zodiaco y las tradiciones que dan forma a la vida cotidiana en China.';
 
 const relatedTools = [
-
-  { href: '/es/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Propinas y etiqueta', desc: 'Cuándo dar propina, cuándo no y por qué' },
-
-  { href: '/es/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Equipaje para festivales', desc: 'Qué llevar durante las temporadas de festivos' },
-
-  { href: '/es/posts/how-to-pay-in-china-tourist-guide/', title: 'Cómo pagar en China', desc: 'Pagos durante la temporada de festivales' },
-
+  { href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Propinas y etiqueta', desc: 'Cuándo dar propina, cuándo no y por qué' },
+  { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Qué empacar para los festivales', desc: 'Qué llevar durante las temporadas festivas' },
+  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Cómo pagar en China', desc: 'Pagos durante la temporada de festivales' },
 ];
-
-
 
 const relatedCities = [
-
-  { href: '/es/posts/beijing-city-guide-for-foreigners/', title: 'Pekín', desc: 'Cultura imperial y vida en los hutongs' },
-  { href: '/es/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Cultura del té y herencia del Lago del Oeste' },
-
-  { href: '/es/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Cultura de casas de té y vida tranquila' },
-
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Cultura imperial y vida en los hutongs' },
+  { href: '/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Cultura del té y patrimonio del Lago del Oeste' },
+  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Cultura de las casas de té y vida tranquila' },
 ];
-
-
 
 const otherSeries = [
-
-  { href: '/es/series/food-of-china/', title: 'La comida de China' },
-
-  { href: '/es/series/history-of-china/', title: 'Historia de China' },
-
-  { href: '/es/series/modern-china/', title: 'China moderna' },
-
+  { href: '/series/food-of-china/', title: 'Gastronomía de China' },
+  { href: '/series/history-of-china/', title: 'Historia de China' },
+  { href: '/series/modern-china/', title: 'China moderna' },
 ];
-
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
 
-  <Header locale="es" />
-
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-
     <header class="max-w-3xl">
-
       <p class="section-kicker">Serie de contenido</p>
-
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
-
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
-
     </header>
-
-
 
     <AdSlot format="banner" />
 
-
-
     <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
-
       <div>
-
         <div class="section-heading">
-
           <div>
-
             <p class="section-kicker">Artículos</p>
-
             <h2>Serie Cultura de China</h2>
-
           </div>
-
         </div>
-
         {posts.length > 0 ? (
-
           <div class="mt-6 grid gap-5 md:grid-cols-2">
-
             {posts.map((post) => (
-
-              <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
-
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
-
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
-
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
-
               </a>
-
             ))}
-
           </div>
-
         ) : (
-
           <p class="mt-6 text-gray-500">Los artículos de esta serie se están preparando. Vuelve pronto.</p>
-
         )}
-
       </div>
 
-
-
       <aside class="space-y-6">
-
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-
           <p class="section-kicker">Herramientas prácticas</p>
-
           <h2 class="mt-1 text-xl font-bold text-gray-950">Viaja con conciencia cultural</h2>
-
           <div class="mt-4 grid gap-3">
-
             {relatedTools.map((item) => (
-
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-
                 <h3 class="text-sm font-semibold text-gray-950">{item.title}</h3>
-
                 <p class="mt-1 text-sm leading-6 text-gray-600">{item.desc}</p>
-
               </a>
-
             ))}
-
           </div>
-
         </div>
 
-
-
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-
           <p class="section-kicker">Guías de ciudades</p>
-
           <h2 class="mt-1 text-xl font-bold text-gray-950">Ciudades culturales</h2>
-
           <div class="mt-4 grid gap-3">
-
             {relatedCities.map((item) => (
-
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-
                 <h3 class="text-sm font-semibold text-gray-950">{item.title}</h3>
-
                 <p class="mt-1 text-sm leading-6 text-gray-600">{item.desc}</p>
-
               </a>
-
             ))}
-
           </div>
-
         </div>
-
-
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-
           <p class="section-kicker">Más series</p>
-
           <div class="mt-3 grid gap-2">
-
             {otherSeries.map((s) => (
-
               <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
-
             ))}
-
           </div>
-
         </div>
-
       </aside>
-
     </section>
-
   </main>
-
   <Footer />
-
 </BaseLayout>
