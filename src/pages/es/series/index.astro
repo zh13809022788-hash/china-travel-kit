@@ -4,44 +4,41 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
 const title = 'Series de contenido sobre viajes por China';
-const description = 'Explora China a traves de cinco series tematicas: gastronomia, historia, vida moderna, naturaleza y cultura; cada una pensada para inspirar e informar a viajeros extranjeros.';
+const description = 'Explora China a través de cinco series temáticas: gastronomía, historia, vida moderna, naturaleza y cultura. Cada una está pensada para inspirar e informar a viajeros extranjeros.';
 
 const seriesList = [
   {
     href: '/es/series/food-of-china/',
-    title: 'Gastronomia de China',
-    desc: 'De los puestos callejeros a los salones de banquetes: un viaje culinario para extranjeros por las ocho grandes cocinas, desayunos regionales, estilos de hot pot y platos por los que vale la pena cruzar una ciudad.',
+    title: 'Gastronomía de China',
+    desc: 'De los puestos callejeros a los salones de banquetes: un recorrido culinario por las ocho grandes cocinas, los desayunos regionales, los distintos estilos de hot pot y los platos por los que merece la pena cruzar una ciudad.',
     icon: 'Comida y bebida',
   },
   {
     href: '/es/series/history-of-china/',
     title: 'Historia de China',
-    desc: 'Sitios antiguos explicados para viajeros: la Gran Muralla, el Ejercito de Terracota, la Ciudad Prohibida, la Ruta de la Seda y las historias detras de lo que estas viendo.',
+    desc: 'Lugares históricos explicados para viajeros: la Gran Muralla, el Ejército de Terracota, la Ciudad Prohibida, la Ruta de la Seda y el contexto de lo que estás viendo.',
     icon: 'Historia',
   },
   {
     href: '/es/series/modern-china/',
     title: 'China moderna',
-    desc: 'Lo que mas sorprende a los extranjeros: calles sin efectivo, los trenes mas rapidos del mundo, megaciudades, superapps y la tecnologia cotidiana que define la vida en China hoy.',
+    desc: 'Lo que más sorprende a muchos visitantes: calles donde manda el QR, algunos de los trenes más rápidos del mundo, megaciudades, superapps y la tecnología cotidiana que marca la vida en China hoy.',
     icon: 'Vida moderna',
   },
   {
     href: '/es/series/nature-of-china/',
     title: 'Naturaleza de China',
-    desc: 'Montanas de Avatar, lagos de cuento, paisajes karsticos y la meseta tibetana: los sitios naturales mas espectaculares de China con guias practicas para visitantes extranjeros.',
+    desc: 'Montañas que recuerdan a Avatar, lagos de postal, paisajes kársticos y la meseta tibetana: algunos de los entornos naturales más espectaculares de China, con guías prácticas para visitantes extranjeros.',
     icon: 'Naturaleza',
   },
   {
     href: '/es/series/culture-of-china/',
     title: 'Cultura de China',
-    desc: 'Ceremonia del te, Fiesta de Primavera, mianzi y guanxi, caligrafia, kung fu y zodiaco: tradiciones culturales explicadas para viajeros que quieren ir mas alla del turismo superficial.',
+    desc: 'Ceremonia del té, Fiesta de Primavera, mianzi y guanxi, caligrafía, kung fu y zodiaco: tradiciones culturales explicadas para viajeros que quieren ir más allá de lo superficial.',
     icon: 'Cultura',
   },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'es';
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main class="container-page py-10">
