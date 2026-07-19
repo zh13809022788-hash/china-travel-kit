@@ -34,7 +34,7 @@ const credit = credits[name];
 
 {
   img && (
-    <figure class="mx-auto my-6 max-w-2xl">
+    <figure class="my-6">
       <Image
         src={img}
         alt={alt}
@@ -45,6 +45,7 @@ const credit = credits[name];
         quality={65}
         loading={loading}
         class="w-full rounded-xl object-cover"
+        style="max-height: 320px"
       />
       {credit?.photographer && (
         <figcaption class="mt-1.5 text-xs text-gray-400">
