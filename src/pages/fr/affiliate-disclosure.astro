@@ -1,71 +1,58 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-const title = 'Divulgation d’affiliation';
+const title = 'Divulgation d affiliation';
 const description =
-  'Découvrez comment ChinaTripBox gère les liens d’affiliation, la publicité, l’indépendance éditoriale et les recommandations de produits liés au voyage.';
+  'Comment ChinaTripBox gere les liens d affiliation, les relations publicitaires, l independance editoriale et les recommandations de produits de voyage.';
 const lastUpdated = '14 juillet 2026';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">Divulgation d’affiliation</h1>
-      <p class="mt-2 text-sm text-gray-500">Dernière mise à jour : {lastUpdated}</p>
+      <h1 class="text-3xl font-bold text-gray-900">Divulgation d affiliation</h1>
+      <p class="mt-2 text-sm text-gray-500">Derniere mise a jour : {lastUpdated}</p>
 
       <p class="mt-4">
-        ChinaTripBox est un site indépendant dédié à la préparation du voyage. Certaines pages
-        peuvent inclure des liens d’affiliation, des emplacements publicitaires ou des références à
-        des partenaires. Si vous cliquez sur un lien d’affiliation puis effectuez un achat, nous
-        pouvons recevoir une commission sans frais supplémentaires pour vous.
+        ChinaTripBox est un site independant de planification de voyages. Certaines pages peuvent inclure des liens d affiliation, des emplacements publicitaires ou des references a des partenaires. Si vous cliquez sur un lien d affiliation et effectuez un achat, nous pouvons percevoir une commission sans frais supplementaires pour vous.
       </p>
 
-      <h2>Ce que cela implique pour les lecteurs</h2>
+      <h2>Ce que cela signifie pour les lecteurs</h2>
       <p>
-        Les revenus d’affiliation nous permettent de maintenir nos guides et nos outils gratuits. Ils
-        ne changent pas le prix que vous payez et ne donnent aucun droit de regard éditorial à un
-        partenaire.
+        Les revenus d affiliation nous aident a maintenir nos guides et nos outils gratuits. Ils ne changent pas le prix que vous payez et ne donnent pas a un partenaire le controle de nos conseils editoriaux.
       </p>
 
-      <h2>Indépendance éditoriale</h2>
+      <h2>Independance editoriale</h2>
       <p>
-        Nos recommandations doivent d’abord être utiles, puis éventuellement commerciales. Nous
-        privilégions les besoins concrets des voyageurs : savoir si un moyen de paiement fonctionne,
-        si une eSIM s’active facilement, si une réservation accepte les passeports étrangers et quel
-        plan de secours prévoir.
+        Nos recommandations doivent etre utiles avant d etre commerciales. Nous privilegions les besoins pratiques des voyageurs : si un mode de paiement fonctionne, si une eSIM est facile a activer, si un processus de reservation prend en charge les passeports etrangers, et quel plan de secours un visiteur doit preparer.
       </p>
 
-      <h2>Ce qui peut générer des revenus</h2>
+      <h2>Ce dont nous pouvons tirer des revenus</h2>
       <ul>
-        <li>Des partenaires eSIM, data mobile ou connectivité.</li>
-        <li>Des partenaires de réservation de voyage, de train, de transfert ou de billetterie.</li>
-        <li>Les publicités affichées sur le site.</li>
-        <li>D’éventuels services payants d’aide au voyage ou de planification, s’ils sont clairement annoncés.</li>
+        <li>Partenaires eSIM, donnees mobiles ou connectivite.</li>
+        <li>Partenaires de reservation de voyage, de train, de transfert ou de billetterie.</li>
+        <li>Publicites affichees sur le site.</li>
+        <li>Futurs produits payants d aide au voyage ou de planification, s ils sont clairement proposes.</li>
       </ul>
 
       <h2>Ce que nous ne faisons pas</h2>
       <p>
-        Nous ne vendons pas de visas officiels, d’autorisations d’immigration, de services
-        gouvernementaux, de services bancaires ni d’assistance d’urgence. Nous ne garantissons pas
-        qu’un produit tiers fonctionnera pour chaque voyageur, appareil, passeport, banque ou
-        itinéraire.
+        Nous ne vendons pas de visas officiels, d autorisations d immigration, de services gouvernementaux, de services bancaires ni d assistance d urgence. Nous ne garantissons pas qu un produit tiers fonctionnera pour chaque voyageur, appareil, passeport, banque ou itineraire.
       </p>
 
-      <h2>Comment lire nos recommandations</h2>
+      <h2>Comment lire nos mentions de produits</h2>
       <p>
-        Considérez les mentions de produits et services comme des points de départ utiles, pas comme
-        des garanties. Avant d’acheter, vérifiez toujours les conditions en vigueur, la couverture,
-        les remboursements, la compatibilité de votre appareil, les limites de paiement et les
-        critères d’éligibilité.
+        Considerez les mentions de produits et de services comme des points de depart pratiques, et non comme des garanties. Verifiez toujours les conditions actuelles du fournisseur, la couverture, la politique de remboursement, la compatibilite des appareils, les limites de paiement et l admissibilite des voyageurs avant d acheter.
       </p>
 
       <h2>Questions</h2>
       <p>
-        Pour toute question sur les liens d’affiliation, la publicité ou une recommandation, utilisez
-        notre <a href="/fr/contact/">page de contact</a>.
+        Pour toute question concernant les liens d affiliation, la publicite ou une correction a apporter a une recommandation, veuillez utiliser notre <a href="/contact/">page de contact</a>.
       </p>
     </article>
   </main>
