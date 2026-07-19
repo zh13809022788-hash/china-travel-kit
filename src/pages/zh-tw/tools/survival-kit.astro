@@ -4,7 +4,6 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import ShowToLocal from '../../../components/ShowToLocal.astro';
 import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
-import ContextAiBubble from '../../../components/ContextAiBubble.astro';
 import survivalKits from '../../../data/survival-kits-zh-tw.json';
 
 const title = '中國旅行生存工具包：翻譯卡與行程清單';
@@ -65,6 +64,5 @@ const description =
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="幫我使用中國旅行生存工具包，涵蓋抵達、餐廳、翻譯卡和清單準備。" />
   <Footer />
 </BaseLayout>

@@ -5,6 +5,7 @@
 // DO NOT remove or move <slot /> — see MEMORY.md for details.
 import '../styles/global.css';
 import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID, GA4_MEASUREMENT_ID } from '../config';
+import ContextAiBubble from '../components/ContextAiBubble.astro';
 
 type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
 
@@ -276,5 +277,6 @@ const jsonLd = {
         if(tp2&&window.location.pathname!==tp2){goTo(alt);}
       }
     })();`} />
+    <ContextAiBubble />
   </body>
 </html>

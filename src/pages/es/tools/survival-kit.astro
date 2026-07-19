@@ -4,7 +4,6 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import ShowToLocal from '../../../components/ShowToLocal.astro';
 import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
-import ContextAiBubble from '../../../components/ContextAiBubble.astro';
 import survivalKits from '../../../data/survival-kits-es.json';
 
 const title = 'Kit de supervivencia para China: tarjetas de traducción y listas de viaje';
@@ -81,6 +80,5 @@ const getKitLabel = (slug: string) => kitLabels[slug] ?? slug.replace(/-/g, ' ')
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="Ayúdame a usar el kit de supervivencia para China para la llegada, restaurantes, tarjetas de traducción y preparación de listas." />
   <Footer />
 </BaseLayout>

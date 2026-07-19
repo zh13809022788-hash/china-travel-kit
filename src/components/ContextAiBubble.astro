@@ -3,62 +3,345 @@ interface Props {
   defaultPrompt?: string;
 }
 
-const { defaultPrompt = 'Help me plan the practical setup for my China trip.' } = Astro.props;
+const { defaultPrompt = 'Help me plan my China trip.' } = Astro.props;
 ---
 
-<aside class="fixed bottom-4 right-4 z-40 max-w-[calc(100vw-2rem)]">
+<!-- Floating AI assistant — article search first, DeepSeek fallback -->
+<aside id="ctb-chat-bubble" class="fixed bottom-4 right-4 z-50 flex flex-col items-end">
+  <!-- Minimized toggle button -->
   <button
-    id="ai-bubble-toggle"
-    class="rounded-full bg-brand-600 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-brand-700"
+    id="ctb-toggle"
+    class="flex items-center gap-2 rounded-full bg-brand-600 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-brand-700 transition-shadow hover:shadow-xl"
     type="button"
-    data-clarity-click="context-ai-bubble-open"
+    aria-label="Open AI assistant"
   >
-    Ask AI
+    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+    <span>Ask</span>
   </button>
-  <div id="ai-bubble-panel" class="mt-3 hidden w-[min(360px,calc(100vw-2rem))] rounded-lg border border-gray-200 bg-white p-4 shadow-xl">
-    <div class="flex items-start justify-between gap-3">
-      <div>
-        <p class="section-kicker">Context help</p>
-        <h2 class="mt-1 text-base font-bold text-gray-950">Ask about this topic</h2>
+
+  <!-- Chat panel -->
+  <div id="ctb-panel" class="mt-3 hidden w-[min(380px,calc(100vw-2rem))] flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl">
+    <!-- Header -->
+    <div class="flex items-center justify-between border-b border-gray-200 bg-brand-600 px-4 py-3 text-white">
+      <div class="flex items-center gap-2">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        <span class="text-sm font-bold">ChinaTripBox Help</span>
       </div>
-      <button id="ai-bubble-close" class="text-sm font-semibold text-gray-500" type="button">Close</button>
+      <button id="ctb-close" class="text-sm font-semibold text-white/80 hover:text-white" type="button">✕</button>
     </div>
-    <p id="ai-bubble-context" class="mt-2 text-sm leading-6 text-gray-600">{defaultPrompt}</p>
-    <div class="mt-3 grid gap-2">
-      <button class="ai-preset rounded-lg border border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-700 hover:border-brand-200" type="button">What should I do first?</button>
-      <button class="ai-preset rounded-lg border border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-700 hover:border-brand-200" type="button">What mistakes should I avoid?</button>
-      <button class="ai-preset rounded-lg border border-gray-200 px-3 py-2 text-left text-sm font-semibold text-gray-700 hover:border-brand-200" type="button">Give me a simple checklist.</button>
+
+    <!-- Messages area -->
+    <div id="ctb-messages" class="flex max-h-[420px] min-h-[200px] flex-col gap-3 overflow-y-auto px-4 py-4 text-sm leading-relaxed">
+      <div class="max-w-[90%] rounded-lg bg-gray-50 px-4 py-3 text-gray-700">
+        Ask about China travel — I'll search our guides first. If I can't find anything, I'll bring in the AI expert.
+        <ul class="mt-2 space-y-1">
+          <li class="flex items-start gap-1.5 text-xs text-gray-500"><span class="mt-0.5 text-brand-600">✓</span> Search 300+ articles</li>
+          <li class="flex items-start gap-1.5 text-xs text-gray-500"><span class="mt-0.5 text-amber-500">⚡</span> AI expert (if needed)</li>
+        </ul>
+      </div>
     </div>
-    <a id="ai-bubble-link" href={`/travel-help/?q=${encodeURIComponent(defaultPrompt)}`} class="btn-primary mt-4 w-full">Open travel help</a>
+
+    <!-- Quick prompts -->
+    <div id="ctb-quick" class="flex gap-2 overflow-x-auto border-t border-gray-100 px-4 py-2">
+      <button class="ctb-quick-btn shrink-0 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-600 hover:border-brand-300 hover:text-brand-700">eSIM or SIM?</button>
+      <button class="ctb-quick-btn shrink-0 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-600 hover:border-brand-300 hover:text-brand-700">Alipay setup</button>
+      <button class="ctb-quick-btn shrink-0 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-600 hover:border-brand-300 hover:text-brand-700">Lost passport</button>
+      <button class="ctb-quick-btn shrink-0 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-600 hover:border-brand-300 hover:text-brand-700">Cash vs card</button>
+    </div>
+
+    <!-- Input area -->
+    <div class="border-t border-gray-200 px-4 py-3">
+      <form id="ctb-form" class="flex gap-2">
+        <input
+          id="ctb-input"
+          type="text"
+          class="min-w-0 flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
+          placeholder="Ask a China travel question..."
+          autocomplete="off"
+        />
+        <button id="ctb-submit" type="submit" class="shrink-0 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 disabled:opacity-50" disabled>
+          Search
+        </button>
+      </form>
+      <p id="ctb-status" class="mt-1 text-xs text-gray-400">Try: "How do I pay in China?"</p>
+    </div>
   </div>
 </aside>
 
 <script>
-  const toggle = document.getElementById('ai-bubble-toggle');
-  const panel = document.getElementById('ai-bubble-panel');
-  const close = document.getElementById('ai-bubble-close');
-  const context = document.getElementById('ai-bubble-context');
-  const link = document.getElementById('ai-bubble-link') as HTMLAnchorElement | null;
+// ---- Simple keyword matcher ----
+interface SearchEntry {
+  slug: string;
+  url: string;
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+  pubDate: string;
+}
 
-  const path = window.location.pathname;
-  const promptMap = [
-    { test: '/food/', prompt: 'Help me order food in China, explain allergies, spice level, and restaurant etiquette.' },
-    { test: '/payment/', prompt: 'Help me choose a payment setup for China using Alipay, WeChat Pay, cards, and cash backup.' },
-    { test: '/transport/', prompt: 'Help me plan China transport, trains, metro, airport transfer, and ride-hailing.' },
-    { test: '/tools/survival-kit/', prompt: 'Help me use a China survival kit for arrival, food, payment, and local communication.' },
-  ];
-  const matched = promptMap.find((item) => path.includes(item.test));
-  const basePrompt = matched?.prompt || context?.textContent || 'Help me plan my China trip.';
+interface SearchIndex {
+  [lang: string]: SearchEntry[];
+}
 
-  if (context) context.textContent = basePrompt;
-  if (link) link.href = `/travel-help/?q=${encodeURIComponent(basePrompt)}`;
+// Detect current page language from URL
+function detectLang(): string {
+  const p = window.location.pathname.toLowerCase();
+  for (const lang of ['zh-tw', 'ja', 'ko', 'ru', 'fr', 'de', 'es']) {
+    if (p.startsWith('/' + lang + '/')) return lang;
+  }
+  return 'en';
+}
 
-  toggle?.addEventListener('click', () => panel?.classList.toggle('hidden'));
-  close?.addEventListener('click', () => panel?.classList.add('hidden'));
-  document.querySelectorAll<HTMLButtonElement>('.ai-preset').forEach((button) => {
-    button.addEventListener('click', () => {
-      const q = `${basePrompt} ${button.textContent?.trim() ?? ''}`;
-      if (link) link.href = `/travel-help/?q=${encodeURIComponent(q)}`;
+function escapeHtml(text: string): string {
+  const div = document.createElement('div');
+  div.appendChild(document.createTextNode(text));
+  return div.innerHTML;
+}
+
+// ---- DOM refs ----
+const toggle = document.getElementById('ctb-toggle') as HTMLButtonElement | null;
+const panel = document.getElementById('ctb-panel') as HTMLElement | null;
+const closeBtn = document.getElementById('ctb-close') as HTMLButtonElement | null;
+const messages = document.getElementById('ctb-messages') as HTMLElement | null;
+const form = document.getElementById('ctb-form') as HTMLFormElement | null;
+const input = document.getElementById('ctb-input') as HTMLInputElement | null;
+const submit = document.getElementById('ctb-submit') as HTMLButtonElement | null;
+const status = document.getElementById('ctb-status') as HTMLElement | null;
+const quickBtns = document.querySelectorAll<HTMLButtonElement>('.ctb-quick-btn');
+
+// ---- State ----
+let index: SearchIndex | null = null;
+const currentLang = detectLang();
+
+// ---- Load search index once ----
+async function loadIndex(): Promise<SearchIndex | null> {
+  if (index) return index;
+  try {
+    const res = await fetch('/search-index.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    index = await res.json() as SearchIndex;
+    return index;
+  } catch (e) {
+    console.warn('Search index unavailable:', e);
+    return null;
+  }
+}
+
+// ---- Keyword scoring ----
+function scoreArticle(entry: SearchEntry, keywords: string[]): number {
+  let score = 0;
+  const searchText = [entry.title, entry.description, ...entry.tags, entry.category].join(' ').toLowerCase();
+
+  for (const kw of keywords) {
+    if (entry.title.toLowerCase().includes(kw)) score += 10;
+    if (entry.description.toLowerCase().includes(kw)) score += 5;
+    if (entry.tags.some(t => t.toLowerCase().includes(kw))) score += 8;
+    if (entry.category.toLowerCase().includes(kw)) score += 6;
+    // Generic match in full text
+    const count = (searchText.match(new RegExp(kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length;
+    score += count;
+  }
+  return score;
+}
+
+// ---- Search ----
+function searchIndex(query: string, lang: string, idx: SearchIndex): SearchEntry[] {
+  const keywords = query.toLowerCase()
+    .replace(/[.,!?;:"]/g, '')
+    .split(/\s+/)
+    .filter(w => w.length > 1 && !['the', 'a', 'an', 'in', 'on', 'at', 'to', 'for', 'of', 'is', 'it', 'my', 'i', 'do', 'how', 'what', 'can', 'with', 'and', 'or', 'me', 'need', 'get', 'have'].includes(w));
+
+  if (keywords.length === 0) return [];
+
+  // Score entries for current language, fall back to English
+  const candidates = [...(idx[lang] || []), ...(lang !== 'en' ? (idx['en'] || []) : [])];
+
+  const scored = candidates
+    .map(entry => ({ entry, score: scoreArticle(entry, keywords) }))
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 6);
+
+  return scored.map(item => item.entry);
+}
+
+// ---- Add message bubble ----
+function addBubble(html: string, isUser = false, isFallback = false): void {
+  if (!messages) return;
+  const div = document.createElement('div');
+  if (isUser) {
+    div.className = 'ml-auto max-w-[90%] rounded-lg bg-brand-600 px-4 py-2.5 text-sm text-white';
+  } else {
+    div.className = `max-w-[90%] rounded-lg px-4 py-2.5 text-sm leading-relaxed ${
+      isFallback ? 'bg-amber-50 text-amber-800 border border-amber-200' : 'bg-gray-50 text-gray-700'
+    }`;
+  }
+  div.innerHTML = html;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function addArticleCards(entries: SearchEntry[]): void {
+  if (!messages) return;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'max-w-full rounded-lg bg-gray-50 px-4 py-3 text-sm leading-relaxed text-gray-700';
+
+  let html = `<div class="mb-2 font-semibold text-gray-900 text-xs uppercase tracking-wide">Found ${entries.length} relevant guides:</div>`;
+  for (const entry of entries) {
+    html += `<a href="${entry.url}"
+      class="mb-2 block rounded-md border border-gray-200 bg-white px-3 py-2.5 transition hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+      <div class="text-sm font-semibold text-gray-900">${escapeHtml(entry.title || entry.slug)}</div>
+      <div class="mt-0.5 text-xs text-gray-500 line-clamp-2">${escapeHtml(entry.description || '')}</div>
+      <div class="mt-1 flex gap-2">
+        <span class="inline-block rounded-full bg-brand-100 px-2 py-0.5 text-[10px] font-medium text-brand-700">${escapeHtml(entry.category)}</span>
+      </div>
+    </a>`;
+  }
+
+  html += `<div class="mt-2 text-center">
+    <button id="ctb-ai-fallback" class="rounded-full bg-amber-100 px-4 py-1.5 text-xs font-semibold text-amber-800 hover:bg-amber-200 transition-colors">
+      Not what you need? Ask AI expert →
+    </button>
+  </div>`;
+
+  wrapper.innerHTML = html;
+  messages.appendChild(wrapper);
+  messages.scrollTop = messages.scrollHeight;
+
+  // Wire up the AI fallback button
+  const fallbackBtn = document.getElementById('ctb-ai-fallback');
+  if (fallbackBtn) {
+    fallbackBtn.addEventListener('click', () => {
+      const lastMsg = input?.value || '';
+      addBubble('OK, asking the AI expert...');
+      callDeepSeek(lastMsg);
     });
+  }
+}
+
+// ---- DeepSeek fallback (only when user clicks) ----
+async function callDeepSeek(query: string): Promise<void> {
+  const thinking = addBubble('AI is thinking...');
+  if (submit) submit.disabled = true;
+  if (status) status.textContent = 'Asking AI expert...';
+
+  try {
+    const res = await fetch('/api/travel-help', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        message: query,
+        stage: 'General inquiry',
+        topic: 'General trip setup',
+        location: '',
+      }),
+    });
+
+    const data = await res.json() as { answer?: string; error?: string };
+    const bubble = messages?.lastElementChild;
+    if (bubble && data.answer) {
+      bubble.innerHTML = `<div class="font-semibold text-gray-900 mb-1">AI expert</div>
+        <div>${escapeHtml(data.answer).replace(/\n/g, '<br>')}</div>
+        <div class="mt-2 text-[10px] text-gray-400">Powered by DeepSeek · one-time query</div>`;
+    } else if (bubble) {
+      bubble.innerHTML = `<div class="font-semibold text-amber-900">Temporarily unavailable</div>
+        <div>Please try again later or email us at <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">zh13809022788@gmail.com</a>.</div>`;
+    }
+    if (status) status.textContent = 'AI answer ready.';
+  } catch {
+    const bubble = messages?.lastElementChild;
+    if (bubble) {
+      bubble.innerHTML = `<div class="font-semibold text-amber-900">Temporarily unavailable</div>
+        <div>Please try again later or email us.</div>`;
+    }
+    if (status) status.textContent = 'AI expert unavailable.';
+  } finally {
+    if (submit) submit.disabled = false;
+  }
+}
+
+// ---- Main search flow ----
+async function handleQuery(query: string): Promise<void> {
+  const trimmed = query.trim();
+  if (!trimmed) return;
+
+  // Clear input
+  if (input) input.value = '';
+  if (status) status.textContent = 'Searching guides...';
+
+  // Show user message
+  addBubble(escapeHtml(trimmed), true);
+
+  // Load index
+  const idx = await loadIndex();
+  if (!idx) {
+    addBubble('Guide search is loading... trying AI expert.', false, true);
+    callDeepSeek(trimmed);
+    return;
+  }
+
+  // Search
+  const results = searchIndex(trimmed, currentLang, idx);
+  if (results.length > 0) {
+    addArticleCards(results);
+    if (status) status.textContent = `Found ${results.length} guides.`;
+  } else {
+    addBubble(`I couldn't find matching guides. Let me ask the AI expert.`, false, true);
+    callDeepSeek(trimmed);
+  }
+}
+
+// ---- Event wiring ----
+toggle?.addEventListener('click', () => {
+  panel?.classList.remove('hidden');
+  panel?.classList.add('flex');
+  toggle?.classList.add('hidden');
+  // Preload index
+  loadIndex();
+  input?.focus();
+});
+
+closeBtn?.addEventListener('click', () => {
+  panel?.classList.add('hidden');
+  panel?.classList.remove('flex');
+  toggle?.classList.remove('hidden');
+});
+
+input?.addEventListener('input', () => {
+  if (submit) submit.disabled = !(input.value.trim().length > 0);
+});
+
+input?.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    form?.requestSubmit();
+  }
+});
+
+form?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const val = input?.value?.trim();
+  if (val && val.length > 0) {
+    handleQuery(val);
+  }
+});
+
+quickBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    handleQuery(btn.textContent?.trim() || '');
   });
+});
+
+// ---- Auto-open on first visit hint (only on desktop, not if user has seen it) ----
+(function() {
+  const SEEN = 'ctb-seen';
+  try {
+    if (!sessionStorage.getItem(SEEN) && window.innerWidth >= 768) {
+      // Don't auto-open, just preload
+      loadIndex();
+      sessionStorage.setItem(SEEN, '1');
+    }
+  } catch {}
+})();
 </script>

@@ -4,7 +4,6 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import ShowToLocal from '../../../components/ShowToLocal.astro';
 import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
-import ContextAiBubble from '../../../components/ContextAiBubble.astro';
 import survivalKits from '../../../data/survival-kits-ru.json';
 
 const title = 'Набор выживания для China: карточки перевода и чек-листы поездки';
@@ -66,6 +65,5 @@ const description =
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="Помогите мне использовать набор выживания для China: прибытие, рестораны, карточки перевода и подготовка чек-листа." />
   <Footer />
 </BaseLayout>
