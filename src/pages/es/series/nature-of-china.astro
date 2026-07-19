@@ -10,13 +10,13 @@ const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Naturaleza de China — Paisajes y lugares salvajes';
+const title = 'Naturaleza de China — Paisajes y espacios salvajes';
 const description = 'Explora las maravillas naturales de China como viajero extranjero: las montañas Avatar de Zhangjiajie, los lagos de cuento de hadas de Jiuzhaigou, el mar de nubes de Huangshan, los picos kársticos de Guilin y la meseta tibetana.';
 
 const relatedTools = [
   { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Lista de equipaje', desc: 'Equipo por temporada para viajes al aire libre' },
-  { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'Guía de visa y entrada', desc: 'Permisos y reglas de entrada para regiones remotas' },
-  { href: '/trip-planner/', title: 'Planificador de viaje', desc: 'Crea tu itinerario de naturaleza por China' },
+  { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'Guía de visa y entrada', desc: 'Permisos y normas de entrada para regiones remotas' },
+  { href: '/trip-planner/', title: 'Planificador de viajes', desc: 'Crea tu itinerario de naturaleza por China' },
 ];
 
 const relatedCities = [
