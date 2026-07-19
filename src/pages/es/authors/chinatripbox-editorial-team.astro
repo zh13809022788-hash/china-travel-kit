@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 
 const title = 'Equipo editorial de ChinaTripBox';
 const description =
-  'Sobre el equipo editorial de ChinaTripBox, como investigamos guias practicas para viajar por China y como los lectores pueden solicitar correcciones.';
+  'Acerca del equipo editorial de ChinaTripBox, cómo investigamos guías prácticas de viaje por China y cómo los lectores pueden solicitar correcciones.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -19,16 +19,19 @@ const jsonLd = {
     url: new URL('/', Astro.site).toString(),
   },
   knowsAbout: [
-    'planificacion de viajes por China',
-    'pagos moviles en China',
-    'eSIM y acceso a internet en China',
+    'planificación de viajes por China',
+    'pagos móviles en China',
+    'eSIM de China y acceso a internet',
     'tren de alta velocidad en China',
-    'logistica para visitantes extranjeros en China',
+    'logística para visitantes extranjeros en China',
   ],
 };
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
-  <Header locale="es" />
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
       <p class="section-kicker">Autor</p>
@@ -37,29 +40,29 @@ const jsonLd = {
 
       <h2>Enfoque editorial</h2>
       <p>
-        El equipo editorial de ChinaTripBox escribe guías prácticas para visitantes extranjeros en China, con
-        foco en configurar pagos, eSIM y acceso a internet, tren de alta velocidad, VTC, traslados
-        desde aeropuertos, planificación urbana, pedidos de comida y problemas comunes del primer viaje.
+        El equipo editorial de ChinaTripBox redacta guías prácticas para visitantes extranjeros en China, con
+        un enfoque en la configuración de pagos, eSIM y acceso a internet, trenes de alta velocidad, servicios de transporte por aplicación, traslados
+        al aeropuerto, planificación urbana, pedidos de comida y problemas comunes del primer viaje.
       </p>
 
       <h2>Cómo elaboramos las guías</h2>
       <p>
         Combinamos fuentes oficiales, documentación de proveedores, materiales de ayuda de apps, preguntas de lectores,
-        informes de viajeros y comprobaciones prácticas cuando es posible. Para temas que cambian rápido, como
-        entrada sin visado, límites de pago, disponibilidad de apps y normas de transporte, tratamos las páginas
-        oficiales del gobierno o del proveedor como la fuente definitiva.
+        reportes de viajeros y comprobaciones prácticas cuando es posible. Para temas que cambian rápidamente, como
+        la entrada sin visa, los límites de pago, la disponibilidad de apps y las normas de transporte, consideramos las páginas oficiales
+        del gobierno o de los proveedores como la fuente definitiva.
       </p>
 
       <h2>Correcciones</h2>
       <p>
-        La logística de viaje en China cambia rápido. Si encuentras un paso desactualizado, una política modificada, un enlace
-        roto o una advertencia que falta, envía la URL de la página a través de nuestra <a href="/es/contact/">página de contacto</a>.
+        La logística de viaje en China cambia rápidamente. Si encuentras un paso desactualizado, una política modificada, un enlace roto
+        o una aclaración importante que falta, envía la URL de la página a través de nuestra <a href="/contact/">página de contacto</a>.
         Revisamos las correcciones y actualizamos las guías afectadas cuando la evidencia es clara.
       </p>
 
       <h2>Política editorial</h2>
       <p>
-        Lee nuestra <a href="/es/editorial-policy/">política editorial</a> para conocer detalles sobre investigación,
+        Lee nuestra <a href="/editorial-policy/">política editorial</a> para conocer los detalles sobre investigación,
         actualizaciones, divulgación de afiliados, independencia y limitaciones.
       </p>
 
