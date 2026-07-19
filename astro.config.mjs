@@ -44,7 +44,7 @@ export default defineConfig({
         const excludedPrefixes = ['/authors/'];
         // All 7 non-English locales confirmed 100% native - released for Google indexing
         if (excludedPrefixes.some((prefix) => path.startsWith(prefix))) return false;
-        if (path === '/404' || path === '/404/') return false;
+        if (path === '/404' || path === '/404/' || path.endsWith('/404/') || path.endsWith('/404')) return false;
         return true;
       },
     }),
