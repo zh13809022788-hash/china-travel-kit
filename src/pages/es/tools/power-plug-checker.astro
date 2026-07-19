@@ -1,28 +1,31 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'Comprobador de enchufes y voltaje para China';
+const title = 'Verificador de Enchufes y Voltaje en China';
 const description =
-  'Averigua si necesitas un adaptador de enchufe o un convertidor de voltaje para China segun tu pais de origen. China usa 220 V y enchufes de tipo A, C e I.';
+  'Descubre si necesitas un adaptador de enchufe o un convertidor de voltaje para China según tu país de origen. China utiliza 220V y los tipos de enchufe A, C e I.';
 
 const countries = [
-  'Estados Unidos', 'Reino Unido', 'Canada', 'Australia', 'Alemania',
-  'Francia', 'Italia', 'Espana', 'Paises Bajos', 'Japon', 'Corea del Sur',
+  'Estados Unidos', 'Reino Unido', 'Canadá', 'Australia', 'Alemania',
+  'Francia', 'Italia', 'España', 'Países Bajos', 'Japón', 'Corea del Sur',
   'Singapur', 'India', 'Brasil', 'Nueva Zelanda', 'Suiza',
-  'Sudafrica', 'Emiratos Arabes Unidos', 'Otro',
+  'Sudáfrica', 'Emiratos Árabes Unidos', 'Otro',
 ];
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
-  <Header locale="es" />
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Comprobador de enchufes y voltaje</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Verificador de Enchufes y Voltaje</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -35,23 +38,23 @@ const countries = [
           {countries.map((c) => <option value={c}>{c}</option>)}
         </select>
       </label>
-      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Comprobar qué necesito</button>
+      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Comprobar lo que necesito</button>
     </div>
 
-    <!-- Referencia: estándar propio de China -->
+    <!-- Reference: China's own standard -->
     <div class="mt-6 grid gap-4 sm:grid-cols-3">
       <div class="card"><dt class="text-sm text-gray-500">Voltaje</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
       <div class="card"><dt class="text-sm text-gray-500">Frecuencia</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
       <div class="card"><dt class="text-sm text-gray-500">Tipos de enchufe</dt><dd class="text-2xl font-bold text-gray-900">A · C · I</dd></div>
     </div>
 
-    <!-- Resultado -->
+    <!-- Result -->
     <div id="result" class="mt-6 hidden">
       <div class="card" id="result-card"></div>
 
       <AffiliateCta
         title="Consigue un adaptador universal para China"
-        description="Un adaptador de viaje compacto todo en uno que encaja en los enchufes de China y carga varios dispositivos a la vez."
+        description="Un adaptador de viaje compacto todo en uno que encaja en los enchufes de China y carga varios dispositivos al mismo tiempo."
         buttonText="Ver adaptador recomendado"
         placeholder={AFFILIATE_LINKS.transport}
       />
@@ -61,7 +64,7 @@ const countries = [
 </BaseLayout>
 
 <script>
-  // Voltaje doméstico de cada país y tipos de enchufe que usa.
+  // Each country's domestic voltage and the plug types it uses.
   const data: Record<string, { volts: number; plugs: string[] }> = {
     'Estados Unidos': { volts: 120, plugs: ['A', 'B'] },
     'Canadá': { volts: 120, plugs: ['A', 'B'] },
@@ -84,7 +87,7 @@ const countries = [
     'Otro': { volts: 0, plugs: [] },
   };
 
-  // China acepta enchufes de tipo A, C e I.
+  // China accepts plug types A, C, and I.
   const CHINA_PLUGS = ['A', 'C', 'I'];
   const CHINA_VOLTS = 220;
 
@@ -104,36 +107,36 @@ const countries = [
     if (!info || info.volts === 0) {
       tone = 'info';
       heading = 'Comprueba tu enchufe y voltaje específicos';
-      body = 'No tenemos datos para tu selección. Mira la etiqueta de tu cargador: si indica "100-240V", solo necesitas un adaptador de enchufe para tomas de China de tipo A, C o I.';
-      points.push('China usa 220 V, 50 Hz y enchufes de tipo A, C e I.');
-      points.push('La mayoría de cargadores de teléfono y portátil son de doble voltaje (100-240 V) y solo necesitan un adaptador de enchufe.');
+      body = 'No tenemos datos para tu selección. Mira la etiqueta de tu cargador: si dice "100–240V", solo necesitas un adaptador de enchufe para las tomas tipo A, C o I de China.';
+      points.push('China utiliza 220V, 50Hz y los tipos de enchufe A, C e I.');
+      points.push('La mayoría de los cargadores de teléfonos y portátiles son de doble voltaje (100–240V) y solo necesitan un adaptador de enchufe.');
     } else {
       const plugMatch = info.plugs.some((p) => CHINA_PLUGS.includes(p));
       const voltMatch = Math.abs(info.volts - CHINA_VOLTS) <= 20;
 
       if (plugMatch && voltMatch) {
         tone = 'good';
-        heading = 'Probablemente no necesitas adaptador';
-        body = `${country} usa tipos de enchufe compatibles (${info.plugs.join(', ')}) y un voltaje similar (${info.volts}V). Tus enchufes deberían encajar directamente en las tomas de China.`;
-        points.push('Comprueba cada enchufe; lleva un adaptador por si alguna toma encaja demasiado justa.');
+        heading = 'Probablemente no necesites un adaptador';
+        body = `${country} utiliza tipos de enchufe compatibles (${info.plugs.join(', ')}) y un voltaje similar (${info.volts}V). Tus enchufes deberían encajar directamente en las tomas de China.`;
+        points.push('Verifica cada enchufe: lleva un adaptador por si acaso alguna toma queda demasiado ajustada.');
       } else if (!plugMatch && voltMatch) {
         tone = 'warn';
-        heading = 'Necesitas un adaptador de enchufe, pero no un convertidor de voltaje';
-        body = `${country} usa un voltaje similar (${info.volts}V), así que tus dispositivos son seguros. Pero tu tipo de enchufe (${info.plugs.join(', ')}) no encaja en las tomas de China; lleva un adaptador de enchufe.`;
-        points.push('Solo necesitas un adaptador de enchufe sencillo y barato para tipo A/C/I.');
-        points.push('No hace falta un convertidor de voltaje voluminoso.');
+        heading = 'Necesitas un adaptador de enchufe (pero no un convertidor de voltaje)';
+        body = `${country} funciona con un voltaje similar (${info.volts}V), así que tus dispositivos están seguros. Pero tu tipo de enchufe (${info.plugs.join(', ')}) no encaja en las tomas de China, así que lleva un adaptador de enchufe.`;
+        points.push('Un adaptador de enchufe sencillo y económico para tipo A/C/I es todo lo que necesitas.');
+        points.push('No hace falta un voluminoso convertidor de voltaje.');
       } else if (plugMatch && !voltMatch) {
         tone = 'warn';
-        heading = 'Vigila el voltaje en dispositivos de un solo voltaje';
-        body = `Tus enchufes (${info.plugs.join(', ')}) pueden encajar, pero el voltaje de ${country} (${info.volts}V) difiere de los 220 V de China.`;
-        points.push('Teléfonos, portátiles y cámaras etiquetados como 100-240 V funcionan bien en cualquier lugar.');
-        points.push('Los artículos de un solo voltaje (algunos secadores y planchas de pelo) necesitan un convertidor de voltaje o conviene dejarlos en casa.');
+        heading = 'Vigila el voltaje en los dispositivos de voltaje único';
+        body = `Tus enchufes (${info.plugs.join(', ')}) pueden encajar, pero el voltaje de ${country} (${info.volts}V) es diferente de los 220V de China.`;
+        points.push('Los teléfonos, portátiles y cámaras con la etiqueta 100–240V funcionan bien en cualquier lugar.');
+        points.push('Los artículos de voltaje único (algunos secadores de pelo y planchas) necesitan un convertidor de voltaje o es mejor dejarlos en casa.');
       } else {
         tone = 'warn';
-        heading = 'Necesitas adaptador de enchufe y comprobar el voltaje';
-        body = `${country} usa enchufes distintos (${info.plugs.join(', ')}) y un voltaje diferente (${info.volts}V) al de China, 220 V. Lleva un adaptador para tipo A/C/I.`;
-        points.push('Los cargadores de doble voltaje (100-240 V) solo necesitan el adaptador de enchufe.');
-        points.push('Los dispositivos de alto consumo y un solo voltaje también necesitan un convertidor de voltaje, o puedes comprar un equivalente local.');
+        heading = 'Necesitas un adaptador de enchufe y comprobar el voltaje';
+        body = `${country} utiliza enchufes diferentes (${info.plugs.join(', ')}) y un voltaje diferente (${info.volts}V) a los 220V de China. Lleva un adaptador de enchufe para tipo A/C/I.`;
+        points.push('Los cargadores de doble voltaje (100–240V) solo necesitan el adaptador de enchufe.');
+        points.push('Los dispositivos monovoltaje de alta potencia también necesitan un convertidor de voltaje, o comprar en su lugar un equivalente local.');
       }
     }
 
@@ -147,7 +150,7 @@ const countries = [
       warn: 'bg-amber-500 text-white',
       info: 'bg-blue-600 text-white',
     } as const;
-    const toneLabel = { good: 'No necesitas adaptador', warn: 'Necesitas adaptador', info: 'Comprueba tu cargador' } as const;
+    const toneLabel = { good: 'No necesitas adaptador', warn: 'Necesitas adaptador', info: 'Revisa tu cargador' } as const;
 
     card.className = `card border ${toneStyles[tone]}`;
     card.innerHTML = `
