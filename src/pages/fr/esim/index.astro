@@ -12,36 +12,33 @@ const posts = (await getCollection('posts-fr'))
   .filter((p) => p.data.category === CATEGORY)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'eSIM et données en Chine : rester connecté dès l’arrivée';
-const description = 'Comparez et configurez les meilleurs forfaits eSIM pour voyager en Chine. Connectez-vous dès votre arrivée, sans remplacer votre carte SIM physique.';
+const title = 'eSIM et données en Chine : rester connecté à l’arrivée';
+const description = 'Comparez et configurez les meilleurs forfaits de données eSIM pour voyager en Chine. Connectez-vous dès votre arrivée, sans changer de carte SIM physique.';
 
 const connectionChoices = [
   {
     title: 'eSIM',
-    desc: "Idéale pour la plupart des courts séjours si votre téléphone prend en charge l’eSIM et que vous voulez avoir vos données prêtes avant l’atterrissage.",
+    desc: "Idéal pour la plupart des courts séjours lorsque votre téléphone prend en charge l'eSIM et que vous voulez des données prêtes avant l'atterrissage.",
   },
   {
     title: 'Itinérance',
-    desc: "Pratique comme solution de secours pour les SMS bancaires et la connexion des premières heures, mais souvent plus coûteuse pour un usage intensif des données.",
+    desc: "Utile comme solution de secours pour les SMS bancaires et la connexion de la première heure, mais souvent plus cher pour une utilisation intensive de données.",
   },
   {
     title: 'Pocket Wi-Fi ou carte SIM locale',
-    desc: "À envisager pour les groupes, les séjours prolongés ou les téléphones qui ne peuvent pas utiliser d’eSIM de voyage.",
+    desc: "À envisager pour les groupes, les séjours prolongés ou les téléphones ne pouvant pas installer d'eSIM de voyage.",
   },
 ];
 
 const internetTools = [
-  { href: '/fr/tools/esim-comparison/', title: 'Comparateur de forfaits eSIM', desc: 'Comparez les forfaits de données de voyage, leur durée de validité et les usages auxquels ils conviennent.' },
-  { href: '/fr/tools/app-availability-checker/', title: 'Vérificateur de disponibilité des applications', desc: 'Vérifiez si les applications courantes fonctionnent en Chine et quelles alternatives préparer.' },
-  { href: '/fr/posts/internet-access-china-apps-that-work-2026/', title: 'Guide d’accès à internet', desc: 'Comprenez l’accès aux applications, les attentes concernant les VPN et les réglages utiles avant le départ.' },
+  { href: '/fr/tools/esim-comparison/', title: 'eSIM plan comparator', desc: 'Compare travel data plans, validity, and expected use cases.' },
+  { href: '/fr/tools/app-availability-checker/', title: 'App availability checker', desc: 'Check whether common apps work in China and what alternatives to prepare.' },
+  { href: '/fr/posts/internet-access-china-apps-that-work-2026/', title: 'Internet access guide', desc: 'Understand app access, VPN expectations, and practical setup before arrival.' },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'fr';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr"
-  title="Meilleur eSIM pour voyager en Chine 2026 | Comparatif"
-  description="Comparez les meilleurs forfaits eSIM pour la Chine : réseaux China Unicom et China Mobile, prix à partir de 3$, activation instantanée.">
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />
   <main class="container-page py-10">
     <header class="max-w-2xl">
@@ -50,27 +47,27 @@ const locale = 'fr';
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="hub-esim" alt="Options de réseau mobile et de connexion de données pour un voyage en Chine" loading="lazy" />
+    <CoverImage name="hub-esim" alt="Mobile network and data connectivity options for China travel" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-esim">
       <h2 id="featured-esim" class="sr-only">Guides internet à lire</h2>
       <a href="/fr/posts/best-esim-for-china-travel-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Meilleure eSIM 2026</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Comparez Airalo, Holafly et Nomad pour un voyage en Chine</p>
+        <span class="font-semibold text-gray-950">Best eSIM 2026</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Compare Airalo, Holafly, Nomad for China travel</p>
       </a>
       <a href="/fr/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">eSIM ou itinérance</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Comparaison réelle des coûts sur 10 jours pour les touristes</p>
+        <span class="font-semibold text-gray-950">eSIM vs Roaming</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Real 10-day cost comparison for tourists</p>
       </a>
       <a href="/fr/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Guide VPN 2026</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Les touristes ont-ils encore besoin d’un VPN en Chine ?</p>
+        <span class="font-semibold text-gray-950">VPN Guide 2026</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Do tourists still need a VPN in China?</p>
       </a>
       <a href="/fr/posts/pocket-wifi-vs-esim-vs-sim-china/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Pocket WiFi ou eSIM</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Comparez toutes les options de connexion</p>
+        <span class="font-semibold text-gray-950">Pocket WiFi vs eSIM</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Compare all connectivity options</p>
       </a>
     </section>
 
@@ -78,7 +75,7 @@ const locale = 'fr';
       <div class="rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Choisissez votre solution internet pour la Chine</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Pour la plupart des visiteurs, la solution la plus fiable consiste à prévoir une option de données principale, ainsi qu’une solution de secours pour la banque, les cartes, la traduction et les applications de VTC pendant la première journée.
+          La solution la plus sûre pour les visiteurs consiste généralement à prévoir une option de données principale, plus une solution de secours pour la banque, les cartes, la traduction et les applications de VTC pendant le premier jour.
         </p>
         <div class="mt-5 grid gap-3">
           {connectionChoices.map((choice) => (
@@ -91,7 +88,7 @@ const locale = 'fr';
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">Outils internet</h2>
+        <h2 class="text-lg font-bold text-gray-900">Internet tools</h2>
         <div class="mt-4 grid gap-3">
           {internetTools.map((tool) => (
             <a href={tool.href} class="rounded-lg border border-brand-100 bg-white p-4 hover:border-brand-200 hover:no-underline">
@@ -107,7 +104,7 @@ const locale = 'fr';
       {posts.map((post, i) => (
         <>
           <a href={`/fr/posts/${post.slug}/`} class="card block hover:no-underline">
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">
