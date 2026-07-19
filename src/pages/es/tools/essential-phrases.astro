@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'Frases esenciales en chino para viajar';
+const title = 'Frases esenciales en chino para viajeros';
 const description =
-  'Una lista práctica e imprimible de frases básicas en mandarín para turistas en China, con pinyin y traducción al español. Incluye saludos, pagos, transporte, comida y emergencias.';
+  'Una lista practica e imprimible de frases esenciales en chino mandarin para turistas en China, con pinyin e ingles. Incluye saludos, pagos, transporte, comida y emergencias.';
 
 interface Phrase {
   en: string;
@@ -24,66 +24,69 @@ interface Group {
 
 const groups: Group[] = [
   {
-    id: 'basics', label: 'Saludos y básico', icon: '👋',
+    id: 'basics', label: 'Saludos y conceptos basicos', icon: '👋',
     phrases: [
       { en: 'Hola', zh: '你好', pinyin: 'nǐ hǎo' },
       { en: 'Gracias', zh: '谢谢', pinyin: 'xièxie' },
       { en: 'De nada', zh: '不客气', pinyin: 'bú kèqi' },
-      { en: 'Perdón / disculpa', zh: '对不起', pinyin: 'duìbuqǐ' },
-      { en: 'Sí / correcto', zh: '对', pinyin: 'duì' },
-      { en: 'No / no es así', zh: '不是', pinyin: 'bú shì' },
-      { en: 'No entiendo', zh: '我不明白', pinyin: 'wǒ bù míngbai' },
-      { en: '¿Hablas inglés?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
+      { en: 'Lo siento / Disculpe', zh: '对不起', pinyin: 'duìbuqǐ' },
+      { en: 'Si / Correcto', zh: '对', pinyin: 'duì' },
+      { en: 'No / No es', zh: '不是', pinyin: 'bú shì' },
+      { en: 'No entiendo', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
+      { en: 'Habla ingles?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
     ],
   },
   {
     id: 'payment', label: 'Dinero y pagos', icon: '💳',
     phrases: [
-      { en: '¿Cuánto cuesta?', zh: '多少钱？', pinyin: 'duōshao qián?' },
-      { en: '¿Puedo usar Alipay?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
-      { en: '¿Puedo usar WeChat Pay?', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng Wēixìn zhīfù ma?' },
-      { en: 'Es demasiado caro', zh: '太贵了', pinyin: 'tài guì le' },
-      { en: '¿Puedo pagar con tarjeta?', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
-      { en: 'Yo escaneo tu QR', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
+      { en: 'Cuanto cuesta?', zh: '多少钱？', pinyin: 'duōshao qián?' },
+      { en: 'Puedo usar Alipay?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
+      { en: 'Puedo usar WeChat Pay?', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng wēixìn zhīfù ma?' },
+      { en: 'Demasiado caro', zh: '太贵了', pinyin: 'tài guì le' },
+      { en: 'Puedo pagar con tarjeta?', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
+      { en: 'Escaneare su codigo', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
     ],
   },
   {
-    id: 'transport', label: 'Moverse por la ciudad', icon: '🚇',
+    id: 'transport', label: 'Como desplazarse', icon: '🚕',
     phrases: [
-      { en: '¿Dónde está el metro?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
-      { en: 'Por favor, lléveme a esta dirección', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
-      { en: 'Pare aquí, por favor', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
-      { en: 'Estación de tren', zh: '火车站', pinyin: 'huǒchē zhàn' },
+      { en: 'Donde esta el metro?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
+      { en: 'Por favor, lleveme a esta direccion', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
+      { en: 'Pare aqui, por favor', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
+      { en: 'Estacion de tren', zh: '火车站', pinyin: 'huǒchē zhàn' },
       { en: 'Aeropuerto', zh: '机场', pinyin: 'jīchǎng' },
-      { en: '¿Cómo llego a...?', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
+      { en: 'Como llego a...?', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
     ],
   },
   {
-    id: 'food', label: 'Comida y restaurante', icon: '🍜',
+    id: 'food', label: 'Comida y restaurantes', icon: '🍜',
     phrases: [
-      { en: 'La carta, por favor', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
-      { en: 'Soy vegetariano/a', zh: '我吃素', pinyin: 'wǒ chī sù' },
+      { en: 'El menu, por favor', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
+      { en: 'Soy vegetariano', zh: '我吃素', pinyin: 'wǒ chī sù' },
       { en: 'Sin picante, por favor', zh: '请不要辣', pinyin: 'qǐng búyào là' },
       { en: 'Agua, por favor', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
       { en: 'La cuenta, por favor', zh: '买单', pinyin: 'mǎidān' },
-      { en: 'Está muy rico', zh: '很好吃', pinyin: 'hěn hǎochī' },
+      { en: 'Esta delicioso', zh: '很好吃', pinyin: 'hěn hǎochī' },
     ],
   },
   {
     id: 'help', label: 'Ayuda y emergencias', icon: '🆘',
     phrases: [
-      { en: '¡Ayuda!', zh: '救命！', pinyin: 'jiùmìng!' },
-      { en: '¿Dónde está el baño?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
-      { en: 'Necesito un médico', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
-      { en: 'Llame a la policía', zh: '请报警', pinyin: 'qǐng bàojǐng' },
-      { en: 'Estoy perdido/a', zh: '我迷路了', pinyin: 'wǒ mílù le' },
-      { en: 'Por favor, escríbalo', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
+      { en: 'Ayuda!', zh: '救命！', pinyin: 'jiùmìng!' },
+      { en: 'Donde esta el bano?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
+      { en: 'Necesito un medico', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
+      { en: 'Llame a la policia', zh: '请报警', pinyin: 'qǐng bàojǐng' },
+      { en: 'Estoy perdido', zh: '我迷路了', pinyin: 'wǒ mílù le' },
+      { en: 'Por favor, escribalo', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
     ],
   },
 ];
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
-  <Header locale="es" />
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
@@ -93,6 +96,7 @@ const groups: Group[] = [
 
     <AdSlot format="banner" />
 
+    <!-- Controls -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
       <button data-filter="all" class="phrase-filter btn-primary text-sm">Todo</button>
       {groups.map((g) => (
@@ -101,10 +105,11 @@ const groups: Group[] = [
         </button>
       ))}
       <button id="print-btn" class="ml-auto rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
-        Imprimir / guardar en PDF
+        🖨️ Imprimir / Guardar PDF
       </button>
     </div>
 
+    <!-- Phrase groups -->
     <div class="mt-6 space-y-8">
       {groups.map((g) => (
         <section class="phrase-group" data-group={g.id}>
@@ -123,9 +128,9 @@ const groups: Group[] = [
     </div>
 
     <AffiliateCta
-      title="Sigue conectado para traducir sobre la marcha"
-      description="Una eSIM para China te permite usar traductores, mapas y apps clave desde el mismo momento en que aterrizas."
-      buttonText="Ver opciones de eSIM"
+      title="Mantente conectado para traducir mientras te desplazas"
+      description="Una eSIM de viaje para China mantiene funcionando las apps de traduccion y los mapas desde el momento en que aterrizas."
+      buttonText="Conectate"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -137,6 +142,7 @@ const groups: Group[] = [
   const sections = document.querySelectorAll<HTMLElement>('.phrase-group');
   const printBtn = document.getElementById('print-btn');
 
+  const activeCls = ['btn-primary'];
   const idleCls = ['rounded-lg', 'border', 'border-gray-300', 'px-3', 'py-1.5', 'text-sm', 'font-medium', 'text-gray-700', 'hover:border-brand-400'];
 
   buttons.forEach((btn) => {
