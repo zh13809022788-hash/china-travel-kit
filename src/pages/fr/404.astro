@@ -1,25 +1,28 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-const title = 'Page introuvable';
-const description = 'Page introuvable sur ChinaTripBox';
+const title = 'Page non trouvee';
+const description = 'La page ChinaTripBox que vous avez demandee est introuvable.';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
   <Header />
   <main class="container-page py-16">
     <section class="mx-auto max-w-2xl">
       <p class="section-kicker">404</p>
-      <h1 class="mt-2 text-4xl font-bold text-gray-950">Page introuvable</h1>
+      <h1 class="mt-2 text-4xl font-bold text-gray-950">Page non trouvee</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">
-        La page demandée n’existe plus, a été déplacée ou l’adresse saisie est incorrecte.
+        La page a peut-etre ete deplacee, ou l'adresse est peut-etre incorrecte. Commencez par le hub
+        des guides ou utilisez un outil de planification ci-dessous.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="/fr/" class="btn-primary">Accueil</a>
-        <a href="/fr/resources/" class="btn-outline">Centre de ressources</a>
-        <a href="/fr/tools/" class="btn-outline">Outils</a>
+        <a href="/" class="btn-primary">Aller a l'accueil</a>
+        <a href="/resources/" class="btn-outline">Commencer ici</a>
+        <a href="/tools/" class="btn-outline">Ouvrir les outils</a>
       </div>
     </section>
   </main>
