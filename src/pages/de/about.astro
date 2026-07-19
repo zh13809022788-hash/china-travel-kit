@@ -1,70 +1,133 @@
-﻿---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const title = 'Über ChinaTripBox';
 const description =
-  'ChinaTripBox ist eine unabhängige Reiseressource, die ausländischen Besuchern hilft, Zahlungen, Konnektivität, Verkehr und praktische Reiseplanung in China zu bewältigen.';
+  'ChinaTripBox bietet praktische China-Reiseführer und 1-on-1-Hilfe für ausländische Besucher. Entwickelt von einem Team mit Wurzeln bei Tujia, Airbnb, Ctrip, Meituan und Alibaba.';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">Über ChinaTripBox</h1>
-      <p class="mt-4">
-        ChinaTripBox ist ein unabhängiger Reiseführer für ausländische Besucher, die eine reibungslose
-        und stressfreie Reise nach China planen. Reisen in China war noch nie einfacher, doch das
-        digital geprägte Ökosystem aus mobilen Zahlungen, eSIM-Daten und appbasiertem Verkehr kann
-        überwältigend wirken, wenn Sie es noch nie zuvor genutzt haben.
+
+      <!-- Hero -->
+      <div class="mb-10 text-center">
+        <img src="/images/logo-wordmark.png?v=2" alt="ChinaTripBox" class="mx-auto h-10 w-auto" />
+        <h1 class="mt-5 text-3xl font-bold text-gray-900">Über uns</h1>
+        <p class="mx-auto mt-2 max-w-xl text-base leading-relaxed text-gray-600">
+          Praktische China-Reiseressourcen und Dienstleistungen — entwickelt von einem Team aus Travel-Tech-Veteranen.
+        </p>
+      </div>
+
+      <!-- What We Do -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Was wir tun</h2>
+      <p class="mt-3">
+        ChinaTripBox bietet kostenlose, praktische China-Reiseführer und Tools — zu
+        Zahlungen, Internetzugang, Transport, Visa und alltäglicher Logistik — damit ausländische
+        Besucher die echten Probleme beim Reisen nach China lösen können.
       </p>
       <p>
-        Unsere Mission ist einfach: Wir verwandeln die Fragen, die Reisende tatsächlich stellen, in
-        klare, geprüfte Schritt-für-Schritt-Antworten. Jeder Leitfaden ist in verständlichem Deutsch
-        geschrieben, konzentriert sich auf das, was aktuell funktioniert, und wird aktualisiert, wenn
-        sich Apps und Vorschriften ändern.
+        Wenn kostenlose Reiseführer und Tools nicht ausreichen, bieten wir auch 1-on-1-Hilfe durch Menschen an.
+        Ob es um Reiseplanung, Fehlerbehebung bei der Einrichtung von Zahlungen oder komplexe Visa- und
+        Transportfragen geht, eine echte Person arbeitet mit deiner konkreten Situation, um
+        gezielte Beratung zu bieten.
       </p>
 
-      <h2>Für wen diese Website gedacht ist</h2>
+      <!-- Who We Are -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Wer wir sind</h2>
+      <p class="mt-3">
+        Ein professionelles Team mit strengen redaktionellen Standards. Die Kernmitglieder von ChinaTripBox
+        kommen von <strong>Tujia</strong>, <strong>Airbnb</strong>, <strong>Ctrip</strong>,
+        <strong>Meituan</strong> und <strong>Alibaba</strong> — aus den Bereichen Gemeinschaftsunterkünfte,
+        OTA, Lifestyle-Services und E-Commerce.
+      </p>
+
+      <!-- Team Card -->
+      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-brand-100 bg-brand-50 p-6 sm:flex-row">
+        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-brand-400">
+          <img src="/images/howie.jpg" alt="Howie" class="h-full w-full object-cover" />
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold text-brand-700">Gründer &mdash; Howie</p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            Howie war ein Gründungsmitglied des Teams von <strong>Tujia (途家网)</strong>, Chinas
+            größter Plattform für Ferienunterkünfte, unterstützt von Sequoia Capital, Ctrip und HomeAway
+            mit mehr als 400 Mio. US-Dollar Finanzierung.
+          </p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            Über Tujia hinaus umfasst der Hintergrund unseres Kernteams Airbnb China, Produkt-
+            und Betriebsbereiche von Ctrip, Meituans Hotel- und Reisesparte sowie Alibabas Fliggy.
+            Zusammen verfügen wir über mehr als fünfzehn Jahre praktische Erfahrung im gesamten
+            chinesischen Travel-Tech-Ökosystem — von Zahlungen und Transport bis hin zu Unterkünften und
+            lokalen Lifestyle-Services.
+          </p>
+        </div>
+      </div>
+
+      <!-- Our Approach -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Unser Ansatz</h2>
+      <p class="mt-3">
+        Wir arbeiten als schlankes, KI-gestütztes Content- und Service-Studio, in dem kostenlose Ressourcen
+        und bezahlte Dienstleistungen einander ergänzen.
+      </p>
+      <ol class="mt-4 list-inside list-decimal space-y-3 text-gray-700">
+        <li>
+          <strong>Kostenlose Ressourcen zeigen Fachkompetenz.</strong> Reiseführer, Tools und Checker
+          ermöglichen es Besuchern, häufige Probleme selbst zu lösen, und zeigen zugleich die Qualität
+          unserer Arbeit.
+        </li>
+        <li>
+          <strong>KI hilft uns, zu skalieren und aktuell zu bleiben.</strong> Wir nutzen KI, um regulatorische
+          Änderungen zu verfolgen, Inhalte zu optimieren und Informationen nahezu in Echtzeit korrekt zu halten.
+        </li>
+        <li>
+          <strong>1-on-1-Service durch Menschen für komplexe Fälle.</strong> Wenn Self-Service nicht
+          ausreicht, bietet eine echte Person maßgeschneiderte Beratung auf Basis deiner konkreten Situation.
+        </li>
+      </ol>
+
+      <!-- What We Cover -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Was wir abdecken</h2>
+      <p class="mt-3">
+        <strong>Kostenlose Ressourcen</strong> &mdash; Payment Checker, Visa-Free Checker, Trip Planner,
+        App Availability Checker und Schritt-für-Schritt-Reiseführer.
+      </p>
       <p>
-        Wir schreiben für Erstreisende, wiederkehrende Besucher, Langzeitreisende, digitale Nomaden
-        und alle, die vor ihrer Ankunft in China praktische Hilfe benötigen. Unsere Inhalte
-        konzentrieren sich auf alltägliche Reiseentscheidungen: wie man bezahlt, wie man verbunden
-        bleibt, wie man zwischen Städten reist und wie man häufige Einrichtungsprobleme vermeidet.
+        <strong>Bezahlte Dienstleistungen</strong> &mdash; 1-on-1-Überprüfung von Reiseplänen, Unterstützung bei der Zahlungseinrichtung,
+        Visa- und Transportberatung sowie individuelle Reiseplanung.
       </p>
 
-      <h2>Was wir abdecken</h2>
-      <ul>
-        <li><strong>Bezahlung:</strong> Alipay und WeChat Pay einrichten, ausländische Karten verknüpfen und wie Einheimische bezahlen.</li>
-        <li><strong>eSIM &amp; Daten:</strong> den passenden Datentarif vor der Ankunft auswählen und aktivieren.</li>
-        <li><strong>Verkehr:</strong> Hochgeschwindigkeitszüge buchen, Fahrdienste nutzen und sich in Städten zurechtfinden.</li>
-        <li><strong>Reiseplanung:</strong> Stadtführer, Packen, Bargeld, Lebensmittelsicherheit, lokale Apps und Checklisten für die erste Reise.</li>
-      </ul>
+      <!-- Why Trust Us -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Warum Sie uns vertrauen können</h2>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Professionelles Team</p>
+          <p class="mt-1 text-sm text-gray-600">Kernmitglieder kommen von Tujia, Airbnb, Ctrip, Meituan und Alibaba.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Strenge Prüfung</p>
+          <p class="mt-1 text-sm text-gray-600">KI verbessert die Effizienz, aber jeder Reiseführer und jeder Plan wird von einem Branchenprofi geprüft.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Personalisierter Service</p>
+          <p class="mt-1 text-sm text-gray-600">Über 15 Jahre China-Travel-Tech-Erfahrung an vorderster Front, mit maßgeschneiderten Lösungen.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Immer aktuell</p>
+          <p class="mt-1 text-sm text-gray-600">Regeln ändern sich schnell. Unser KI-Workflow verfolgt und aktualisiert Inhalte nahezu in Echtzeit.</p>
+        </div>
+      </div>
 
-      <h2>Redaktionelle Standards</h2>
-      <p>
-        ChinaTripBox ist keine Regierungswebsite, Visaagentur, kein Telekommunikationsanbieter, kein
-        Zahlungsunternehmen und keine Bank. Wir veröffentlichen unabhängige Reiseinformationen auf
-        Grundlage offizieller Quellen, sofern verfügbar, sowie Produktdokumentationen,
-        Reiseerfahrungen und regelmäßiger Inhaltsprüfungen. Mehr über unseren Prozess erfahren Sie in
-        unserer <a href="/de/editorial-policy/">Redaktionsrichtlinie</a> und im
-        <a href="/authors/chinatripbox-editorial-team/">Profil des Redaktionsteams</a>.
+      <!-- Contact -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Kontakt aufnehmen</h2>
+      <p class="mt-3">
+        Haben Sie Fragen, Korrekturen oder ein Reiseszenario, bei dem Sie Hilfe brauchen?
+        <a href="/contact/" class="text-brand-600 hover:underline">Kontaktieren Sie uns</a> und wir melden uns bei Ihnen.
       </p>
 
-      <h2>Wie wir kostenlos bleiben</h2>
-      <p>
-        Diese Website finanziert sich durch Werbung und Affiliate-Partnerschaften. Wenn Sie einige
-        der Links auf unserer Website nutzen, erhalten wir möglicherweise eine Provision, ohne dass
-        Ihnen zusätzliche Kosten entstehen. Dies beeinflusst niemals, welche Produkte wir empfehlen.
-        Unsere Empfehlungen basieren darauf, was Reisenden wirklich hilft.
-      </p>
-
-      <h2>Kontakt aufnehmen</h2>
-      <p>
-        Haben Sie etwas Veraltetes entdeckt oder eine Frage, die wir noch nicht beantwortet haben?
-        Besuchen Sie unsere <a href="/de/contact/">Kontaktseite</a>. Wir lesen jede Nachricht.
-      </p>
     </article>
   </main>
   <Footer />
