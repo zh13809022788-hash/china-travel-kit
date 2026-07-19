@@ -22,7 +22,7 @@ const t = (key: string) => {
 
 <div
   id="newsletter-sticky"
-  class="fixed bottom-0 left-0 right-0 z-40 translate-y-full border-t border-gray-200 bg-white px-4 py-3 shadow-lg transition-transform duration-300 sm:hidden"
+  class="fixed bottom-0 left-0 right-0 z-[60] translate-y-full border-t border-gray-200 bg-white px-4 py-3 shadow-lg transition-transform duration-300 sm:hidden"
   aria-hidden="true"
 >
   <form id="newsletter-sticky-form" class="flex items-center gap-2">
@@ -63,13 +63,19 @@ const t = (key: string) => {
     }
 
     let shown = false;
+    function pushAskUp(doPush) {
+      var ask = document.getElementById('ctb-chat-bubble');
+      if (!ask) return;
+      ask.style.bottom = doPush ? '5rem' : '1rem';
+    }
     function checkScroll() {
       if (shown) return;
-      const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+      var scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
       if (scrollPercent > 0.3) {
         shown = true;
         el.classList.remove('translate-y-full');
         el.setAttribute('aria-hidden', 'false');
+        pushAskUp(true);
         window.removeEventListener('scroll', checkScroll);
       }
     }
@@ -79,6 +85,7 @@ const t = (key: string) => {
     document.getElementById('newsletter-sticky-close')?.addEventListener('click', function() {
       localStorage.setItem('newsletter-sticky-dismissed', String(Date.now()));
       el.classList.add('translate-y-full');
+      pushAskUp(false);
       setTimeout(function() { el.remove(); }, 300);
       shown = true; // prevent re-show on scroll
     });
