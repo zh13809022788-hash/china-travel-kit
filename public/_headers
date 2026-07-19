@@ -1,19 +1,26 @@
-# Cloudflare Pages _headers — KEEP MINIMAL
-#
-# DO NOT add Content-Type rules! Cloudflare Pages auto-detects MIME
-# types perfectly by file extension. Every time someone added
-# Content-Type here, it broke the site. See MEMORY.md for war stories.
+# Cloudflare Pages _headers - Global security and cache headers
+# NOTE: Do NOT set Content-Type here — Cloudflare auto-detects MIME types.
+#       Setting Content-Type on /* breaks CSS/JS by returning text/html for everything.
 
 /*
-  Cache-Control: public, max-age=300, s-maxage=3600
+  Cache-Control: public, max-age=3600, s-maxage=86400
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
+# Cache static assets longer
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+# Sitemap should be fresh
 /sitemap*.xml
   Cache-Control: public, max-age=3600, s-maxage=3600
 
+# RSS feeds should be fresh
 /rss.xml
   Cache-Control: public, max-age=3600, s-maxage=3600
