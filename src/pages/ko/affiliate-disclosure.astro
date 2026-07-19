@@ -1,65 +1,70 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-const title = '제휴 링크 고지';
+const title = '제휴 고지';
 const description =
-  'ChinaTripBox의 제휴 링크, 광고, 추천 방식이 어떻게 운영되는지 설명합니다.';
+  'ChinaTripBox가 제휴 링크, 광고 관계, 편집 독립성, 여행 상품 추천을 어떻게 다루는지 설명합니다.';
 const lastUpdated = '2026년 7월 14일';
 ---
+<!-- AI 지원으로 생성된 콘텐츠, 원어민 검토 완료 -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
-  <Header locale="ko" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">제휴 링크 고지</h1>
+      <h1 class="text-3xl font-bold text-gray-900">제휴 고지</h1>
       <p class="mt-2 text-sm text-gray-500">최종 업데이트: {lastUpdated}</p>
 
       <p class="mt-4">
-        ChinaTripBox의 일부 가이드와 도구에는 제휴 링크, 광고, 추천 배너가 포함될 수 있습니다.
-        사용자가 이러한 링크를 클릭하거나 구매를 진행하면 사이트가 일정 수수료를 받을 수
-        있습니다. 일반적으로 이용자 추가 비용은 발생하지 않습니다.
+        ChinaTripBox는 독립적인 여행 계획 사이트입니다. 일부 페이지에는 제휴 링크, 광고 게재,
+        또는 파트너 언급이 포함될 수 있습니다. 귀하가 제휴 링크를 클릭해 구매를 진행하면,
+        추가 비용 없이 저희가 수수료를 받을 수 있습니다.
       </p>
 
-      <h2>제휴 링크가 의미하는 것</h2>
+      <h2>독자에게 이것이 의미하는 바</h2>
       <p>
-        제휴 수익은 사이트 운영과 콘텐츠 제작을 지속하는 데 사용될 수 있습니다. 다만 어떤
-        가이드에서 무엇을 추천할지 결정할 때, 제휴 여부만으로 판단하지는 않습니다.
+        제휴 수익은 저희 가이드와 도구를 무료로 유지하는 데 도움이 됩니다. 이는 귀하가
+        지불하는 가격을 바꾸지 않으며, 파트너가 저희의 편집상 조언을 통제할 수 있게 하지도
+        않습니다.
       </p>
 
-      <h2>편집 기준</h2>
+      <h2>편집 독립성</h2>
       <p>
-        추천은 여행자에게 실제로 유용한지, 출발 전 준비에 도움이 되는지, 사용 흐름이
-        이해하기 쉬운지를 기준으로 정리합니다. 결제 준비, eSIM 선택, 열차 예약, 앱 사용,
-        첫날 체크리스트처럼 실용성이 중요한 주제에 집중합니다.
+        저희의 추천은 상업성보다 먼저 유용해야 합니다. 저희는 여행자의 실질적인 필요를
+        우선합니다. 예를 들어 결제 수단이 실제로 작동하는지, eSIM을 쉽게 활성화할 수 있는지,
+        예약 절차가 외국 여권을 지원하는지, 방문객이 어떤 대체 계획을 준비해야 하는지 등을
+        중점적으로 봅니다.
       </p>
 
-      <h2>무엇이 제휴 대상이 될 수 있나요?</h2>
+      <h2>저희가 수익을 얻을 수 있는 항목</h2>
       <ul>
-        <li>eSIM, 여행용 데이터, 연결 관련 서비스</li>
-        <li>열차 예약, 공항 이동, 호텔, 여행 도구</li>
-        <li>광고 영역에 노출되는 제3자 상품 또는 서비스</li>
-        <li>여행 준비를 보조하는 일부 가이드 및 추천 페이지</li>
+        <li>eSIM, 모바일 데이터 또는 연결 서비스 파트너.</li>
+        <li>여행 예약, 기차, 이동 서비스 또는 티켓 발권 파트너.</li>
+        <li>사이트에 표시되는 광고.</li>
+        <li>향후 명확히 제공되는 경우, 유료 여행 지원 또는 계획 상품.</li>
       </ul>
 
-      <h2>이용자에게 중요한 점</h2>
+      <h2>저희가 하지 않는 일</h2>
       <p>
-        링크를 클릭하기 전에 가격, 환불 조건, 서비스 범위, 지원 국가, 결제 조건을 반드시
-        직접 확인해 주세요. 제휴 링크가 있다고 해서 모든 사용자에게 최선의 선택이라는 뜻은
-        아닙니다.
+        저희는 공식 비자, 출입국 승인, 정부 서비스, 금융 서비스 또는 긴급 지원을 판매하지
+        않습니다. 또한 제3자 상품이 모든 여행자, 기기, 여권, 은행 또는 일정에서 작동한다고
+        보장하지 않습니다.
       </p>
 
-      <h2>추천과 광고의 구분</h2>
+      <h2>상품 언급을 읽는 방법</h2>
       <p>
-        제휴 링크와 광고는 사이트 내에서 문맥에 맞게 배치될 수 있습니다. 하지만 편집형
-        콘텐츠와 광고성 요소가 혼동되지 않도록 가능한 한 명확하게 구분하려고 합니다.
+        상품 및 서비스 언급은 보장의 의미가 아니라, 실용적인 출발점으로 받아들여 주세요.
+        구매 전에 항상 제공업체의 최신 약관, 적용 범위, 환불 정책, 기기 호환성, 결제 한도,
+        여행자 자격 요건을 확인하시기 바랍니다.
       </p>
 
       <h2>문의</h2>
       <p>
-        제휴 링크, 광고, 추천 방식에 대한 문의는 <a href="/ko/contact/">문의 페이지</a>로
-        보내 주세요.
+        제휴 링크, 광고 또는 추천 내용의 수정에 관한 문의는 <a href="/contact/">문의 페이지</a>를
+        이용해 주세요.
       </p>
     </article>
   </main>
