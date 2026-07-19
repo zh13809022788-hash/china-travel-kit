@@ -6,14 +6,14 @@
 const { locale = 'en' } = Astro.props;
 const t = (key: string) => {
   const i18n: Record<string, Record<string, string>> = {
-    en: { cta: 'Never miss a China travel update', btn: 'Subscribe', close: 'Dismiss' },
-    'zh-tw': { cta: '不錯過任何中國旅遊更新', btn: '訂閱', close: '稍後' },
-    ja: { cta: '中国旅行情報を見逃さない', btn: '購読', close: '後で' },
-    ko: { cta: '중국 여행 정보를 놓치지 마세요', btn: '구독', close: '나중에' },
-    ru: { cta: 'Не пропустите обновления', btn: 'Подписаться', close: 'Позже' },
-    fr: { cta: 'Ne manquez aucune mise à jour', btn: 'Abonner', close: 'Plus tard' },
-    de: { cta: 'Keine Updates verpassen', btn: 'Abonnieren', close: 'Später' },
-    es: { cta: 'No te pierdas actualizaciones', btn: 'Suscribirse', close: 'Luego' },
+    en: { cta: 'Never miss a China travel update', btn: 'Subscribe', close: 'Dismiss', success: 'Subscribed!', already: 'Already subscribed!', error: 'Error, try again.' },
+    'zh-tw': { cta: '不錯過任何中國旅遊更新', btn: '訂閱', close: '稍後', success: '訂閱成功！', already: '已訂閱！', error: '錯誤，請重試。' },
+    ja: { cta: '中国旅行情報を見逃さない', btn: '購読', close: '後で', success: '購読しました！', already: '既に購読済みです！', error: 'エラー、もう一度お試しください。' },
+    ko: { cta: '중국 여행 정보를 놓치지 마세요', btn: '구독', close: '나중에', success: '구독 완료!', already: '이미 구독 중입니다!', error: '오류, 다시 시도.' },
+    ru: { cta: 'Не пропустите обновления', btn: 'Подписаться', close: 'Позже', success: 'Подписка оформлена!', already: 'Уже подписаны!', error: 'Ошибка, попробуйте снова.' },
+    fr: { cta: 'Ne manquez aucune mise à jour', btn: 'Abonner', close: 'Plus tard', success: 'Abonné !', already: 'Déjà abonné !', error: 'Erreur, réessayez.' },
+    de: { cta: 'Keine Updates verpassen', btn: 'Abonnieren', close: 'Später', success: 'Abonniert!', already: 'Bereits angemeldet!', error: 'Fehler, erneut versuchen.' },
+    es: { cta: 'No te pierdas actualizaciones', btn: 'Suscribirse', close: 'Luego', success: '¡Suscrito!', already: '¡Ya suscrito!', error: 'Error, inténtalo de nuevo.' },
   };
   const lang = i18n[locale as string] || i18n['en'];
   return lang[key] || i18n['en'][key] || '';
@@ -47,6 +47,9 @@ const t = (key: string) => {
 <script is:inline define:vars={{
   newsletterCta: t('cta'),
   newsletterBtn: t('btn'),
+  newsletterSuccess: t('success'),
+  newsletterAlready: t('already'),
+  newsletterError: t('error'),
 }}>
   (function() {
     const el = document.getElementById('newsletter-sticky');
@@ -108,9 +111,9 @@ const t = (key: string) => {
         msg.className = data.message === 'subscribed' || data.message === 'already_subscribed'
           ? 'mt-1 block text-center text-xs font-medium text-green-600'
           : 'mt-1 block text-center text-xs text-red-600';
-        msg.textContent = data.message === 'already_subscribed' ? 'Already subscribed!' :
-          data.message === 'subscribed' ? 'Subscribed!' :
-          data.error || 'Error, please try again.';
+        msg.textContent = data.message === 'already_subscribed' ? newsletterAlready :
+          data.message === 'subscribed' ? newsletterSuccess :
+          data.error || newsletterError;
         if (data.message === 'subscribed' || data.message === 'already_subscribed') {
           form.style.display = 'none';
         } else {
