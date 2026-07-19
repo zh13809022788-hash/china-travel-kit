@@ -1,6 +1,7 @@
 ---
 
 import { getCollection } from 'astro:content';
+import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -8,29 +9,24 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
+const LOCALE = 'ru';
+const LOCALE_TAG = 'ru';
 const allPosts = await getCollection('posts-ru');
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
-const cityPosts = allPosts
-  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
-  .sort((a, b) => a.data.title.localeCompare(b.data.title));
-
 const title = 'Города Китая для иностранных путешественников';
 const description = 'Планируйте поездки по городам Китая с практичными гидами по Пекину, Шанхаю, Гуанчжоу, Чэнду, Сианю, Ханчжоу, Чунцину и Санье: аэропорты, метро, еда, транспорт и удобные следующие шаги.';
 
-const mapCities = [
-  { name: 'Пекин', x: 470, y: 80, href: '#beijing' },
-  { name: 'Сиань', x: 340, y: 155, href: '#xian' },
-  { name: 'Нанкин', x: 490, y: 180, href: '' },
-  { name: 'Шанхай', x: 540, y: 200, href: '#shanghai' },
-  { name: 'Чэнду', x: 250, y: 220, href: '#chengdu' },
-  { name: 'Ханчжоу', x: 520, y: 205, href: '#hangzhou' },
-  { name: 'Чунцин', x: 310, y: 260, href: '#chongqing' },
-  { name: 'Гуйлинь', x: 370, y: 300, href: '' },
-  { name: 'Куньмин', x: 210, y: 335, href: '' },
-  { name: 'Гуанчжоу', x: 400, y: 370, href: '#guangzhou' },
-  { name: 'Шэньчжэнь', x: 430, y: 390, href: '' },
-  { name: 'Санья', x: 360, y: 440, href: '#sanya' },
-];
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
+const cityPosts = allPosts
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+// Dynamic map data from shared CITY_GUIDES
+const postedSlugs = new Set(cityPosts.map(p => p.slug));
+const mapCities = CITY_GUIDES.map((g) => ({
+  name: cityName(g, 'ru'),
+  x: g.mapX,
+  y: g.mapY,
+  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
+}));
 
 const cities = [
   {

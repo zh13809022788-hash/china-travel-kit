@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,30 +8,24 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
+const LOCALE = 'es';
+const LOCALE_TAG = 'es';
 const allPosts = await getCollection('posts-es');
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
+const title = 'Guías de ciudades de China para viajeros internacionales';
+const description = 'Elige tu destino en China según tu estilo de viaje con guías prácticas de Pekín, Shanghái, Cantón, Chengdu, Xi\'an, Hangzhou, Chongqing y Sanya: aeropuertos, metro, comida, transporte y siguientes pasos.';
+
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
 const cityPosts = allPosts
-  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-const title = 'Guías de ciudades de China para viajeros internacionales';
-const description =
-  'Organiza tu ruta por China con guías prácticas de Pekín, Shanghái, Cantón, Chengdu, Xi\'an, Hangzhou, Chongqing y Sanya, además de consejos sobre aeropuertos, metro, comida y transporte local.';
-
-const mapCities = [
-  { name: 'Pekín', x: 470, y: 80, href: '#beijing' },
-  { name: 'Xi\'an', x: 340, y: 155, href: '#xian' },
-  { name: 'Nanjing', x: 490, y: 180, href: '' },
-  { name: 'Shanghái', x: 540, y: 200, href: '#shanghai' },
-  { name: 'Chengdu', x: 250, y: 220, href: '#chengdu' },
-  { name: 'Hangzhou', x: 520, y: 205, href: '#hangzhou' },
-  { name: 'Chongqing', x: 310, y: 260, href: '#chongqing' },
-  { name: 'Guilin', x: 370, y: 300, href: '' },
-  { name: 'Kunming', x: 210, y: 335, href: '' },
-  { name: 'Cantón', x: 400, y: 370, href: '#guangzhou' },
-  { name: 'Shenzhen', x: 430, y: 390, href: '' },
-  { name: 'Sanya', x: 360, y: 440, href: '#sanya' },
-];
+// Dynamic map data from shared CITY_GUIDES
+const postedSlugs = new Set(cityPosts.map(p => p.slug));
+const mapCities = CITY_GUIDES.map((g) => ({
+  name: cityName(g, 'es'),
+  x: g.mapX,
+  y: g.mapY,
+  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
+}));
 
 const cities = [
   {

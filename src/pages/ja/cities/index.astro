@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,30 +8,24 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
+const LOCALE = 'ja';
+const LOCALE_TAG = 'ja';
 const allPosts = await getCollection('posts-ja');
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
+const title = '外国人旅行者向け 中国の主要都市ガイド';
+const description = '北京、上海、広州、成都、西安、杭州、重慶、三亜など、旅行スタイルに合った都市を選べる実践的なガイド。空港、地下鉄、食事、交通から次のステップまで役立つ情報を掲載。';
+
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
 const cityPosts = allPosts
-  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-const title = '外国人旅行者向け 中国の主要都市ガイド';
-const description =
-  '北京、上海、広州、成都、西安、杭州、重慶、三亜のガイドをもとに、中国旅行で無理なく回りやすい都市滞在を計画していただけます。空港アクセス、地下鉄、食事、移動準備まで、次に確認したい情報もあわせてご覧ください。';
-
-const mapCities = [
-  { name: '北京', x: 470, y: 80, href: '#北京' },
-  { name: '西安', x: 340, y: 155, href: '#西安' },
-  { name: '南京', x: 490, y: 180, href: '' },
-  { name: '上海', x: 540, y: 200, href: '#上海' },
-  { name: '成都', x: 250, y: 220, href: '#成都' },
-  { name: '杭州', x: 520, y: 205, href: '#杭州' },
-  { name: '重慶', x: 310, y: 260, href: '#重慶' },
-  { name: '桂林', x: 370, y: 300, href: '' },
-  { name: '昆明', x: 210, y: 335, href: '' },
-  { name: '広州', x: 400, y: 370, href: '#広州' },
-  { name: '深圳', x: 430, y: 390, href: '' },
-  { name: '三亜', x: 360, y: 440, href: '#三亜' },
-];
+// Dynamic map data from shared CITY_GUIDES
+const postedSlugs = new Set(cityPosts.map(p => p.slug));
+const mapCities = CITY_GUIDES.map((g) => ({
+  name: cityName(g, 'ja'),
+  x: g.mapX,
+  y: g.mapY,
+  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
+}));
 
 const cities = [
   {

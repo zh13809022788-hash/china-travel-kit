@@ -1,6 +1,7 @@
 ---
 
 import { getCollection } from 'astro:content';
+import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -8,29 +9,24 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
+const LOCALE = 'ko';
+const LOCALE_TAG = 'ko';
 const allPosts = await getCollection('posts-ko');
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
-const cityPosts = allPosts
-  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
-  .sort((a, b) => a.data.title.localeCompare(b.data.title));
-
 const title = '중국 주요 도시 여행 가이드';
 const description = '베이징, 상하이, 광저우, 청두, 시안, 항저우, 충칭, 싼야까지 여행 스타일에 맞는 도시를 고르고 추천 일정, 계절, 이동 난이도를 한눈에 확인해 보세요.';
 
-const mapCities = [
-  { name: '베이징', x: 470, y: 80, href: '#beijing' },
-  { name: '시안', x: 340, y: 155, href: '#xian' },
-  { name: '난징', x: 490, y: 180, href: '' },
-  { name: '상하이', x: 540, y: 200, href: '#shanghai' },
-  { name: '청두', x: 250, y: 220, href: '#chengdu' },
-  { name: '항저우', x: 520, y: 205, href: '#hangzhou' },
-  { name: '충칭', x: 310, y: 260, href: '#chongqing' },
-  { name: '구이린', x: 370, y: 300, href: '' },
-  { name: '쿤밍', x: 210, y: 335, href: '' },
-  { name: '광저우', x: 400, y: 370, href: '#guangzhou' },
-  { name: '선전', x: 430, y: 390, href: '' },
-  { name: '싼야', x: 360, y: 440, href: '#sanya' },
-];
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
+const cityPosts = allPosts
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+// Dynamic map data from shared CITY_GUIDES
+const postedSlugs = new Set(cityPosts.map(p => p.slug));
+const mapCities = CITY_GUIDES.map((g) => ({
+  name: cityName(g, 'ko'),
+  x: g.mapX,
+  y: g.mapY,
+  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
+}));
 
 const cities = [
   {

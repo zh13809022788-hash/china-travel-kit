@@ -1,12 +1,12 @@
 ---
 // China city location map — no borders, no political boundaries.
-// Cities shown at real geographic positions (equirectangular projection).
-// Each marker is clickable and links to its city guide page.
+// Cities shown at real geographic positions.
+// Smart label placement avoids overlap in dense clusters (e.g. Shanghai-Nanjing-Hangzhou).
 
 export interface CityMarker {
   name: string;
-  x: number;  // SVG x coordinate (equirectangular projection)
-  y: number;  // SVG y coordinate (equirectangular projection)
+  x: number;
+  y: number;
   href: string;
 }
 
@@ -15,6 +15,22 @@ export interface Props {
 }
 
 const { cities } = Astro.props;
+
+// Alternate label positions when cities are close (< 35px)
+function labelOff(i: number, tight: boolean): { dx: number; dy: number; anchor: string } {
+  if (!tight) return { dx: 0, dy: -14, anchor: 'middle' };
+  const opts = [
+    { dx: -8, dy: -14, anchor: 'end' },
+    { dx: 8, dy: -14, anchor: 'start' },
+    { dx: 0, dy: 16, anchor: 'middle' },
+    { dx: 8, dy: 16, anchor: 'start' },
+  ];
+  return opts[i % opts.length];
+}
+
+function isTight(city: CityMarker, i: number): boolean {
+  return cities.some((c, j) => j !== i && Math.abs(c.x - city.x) < 35 && Math.abs(c.y - city.y) < 35);
+}
 ---
 
 <figure class="my-8 overflow-hidden rounded-xl border border-gray-200 bg-white">
@@ -35,7 +51,10 @@ const { cities } = Astro.props;
     <line x1="80" y1="430" x2="640" y2="430" stroke="#e8e4dd" stroke-width="0.5" stroke-dasharray="3,5" />
 
     <!-- City markers and labels -->
-    {cities.map((city) => (
+    {cities.map((city, i) => {
+      const tight = isTight(city, i);
+      const pos = labelOff(i, tight);
+      return (
       <g>
         {city.href ? (
           <a href={city.href} class="cursor-pointer">
@@ -47,20 +66,21 @@ const { cities } = Astro.props;
             <!-- Marker dot -->
             <circle cx={city.x} cy={city.y} r="5" fill="#534AB7" stroke="#fff" stroke-width="2" filter="url(#dot-shadow)" />
             <!-- City label -->
-            <text x={city.x} y={city.y - 14} text-anchor="middle" style="font:500 12px/1.2 sans-serif;fill:#2C2C2A">
+            <text x={city.x + pos.dx} y={city.y + pos.dy} text-anchor={pos.anchor} style="font:500 12px/1.2 sans-serif;fill:#2C2C2A">
               {city.name}
             </text>
           </a>
         ) : (
           <g opacity="0.4">
             <circle cx={city.x} cy={city.y} r="4" fill="#b0a898" stroke="#fff" stroke-width="1.5" />
-            <text x={city.x} y={city.y - 12} text-anchor="middle" style="font:400 11px sans-serif;fill:#888780">
+            <text x={city.x + pos.dx} y={city.y + pos.dy} text-anchor={pos.anchor} style="font:400 11px sans-serif;fill:#888780">
               {city.name}
             </text>
           </g>
         )}
       </g>
-    ))}
+      );
+    })}
 
     <!-- Compass rose (minimal) -->
     <g transform="translate(50, 45)" opacity="0.35">

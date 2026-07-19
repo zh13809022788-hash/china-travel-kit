@@ -6,6 +6,12 @@ export interface CityGuideEntry {
   slug: string;
   name: string;
   nameZh: string;
+  nameJa: string;
+  nameKo: string;
+  nameDe: string;
+  nameEs: string;
+  nameFr: string;
+  nameRu: string;
   desc: string;
   days: string;
   bestSeason: string;
@@ -17,10 +23,19 @@ export interface CityGuideEntry {
   mapY: number;
 }
 
+export function cityName(guide: CityGuideEntry, locale: string): string {
+  const map: Record<string, string> = {
+    en: guide.name, 'zh-tw': guide.nameZh, ja: guide.nameJa,
+    ko: guide.nameKo, de: guide.nameDe, es: guide.nameEs,
+    fr: guide.nameFr, ru: guide.nameRu,
+  };
+  return map[locale] ?? guide.name;
+}
+
 export const CITY_GUIDES: CityGuideEntry[] = [
   {
     slug: 'beijing-city-guide-for-foreigners',
-    name: 'Beijing', nameZh: '北京',
+    name: 'Beijing', nameZh: '北京', nameJa: '北京', nameKo: '베이징', nameDe: 'Peking', nameEs: 'Pekín', nameFr: 'Pékin', nameRu: 'Пекин',
     desc: 'Best for history, hutongs, the Great Wall, and first-time classic sightseeing.',
     days: '4-5 days', bestSeason: 'September-October', difficulty: 'Medium',
     whyGo: 'Imperial history, museums, and the easiest Great Wall access.',

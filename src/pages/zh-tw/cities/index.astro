@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,7 +8,11 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const allPosts = await getCollection('posts-zh-tw');
+const POSTS_COLLECTION = 'posts-zh-tw';
+const LOCALE = 'zh-TW';
+const LOCALE_TAG = 'zh-tw';
+
+const allPosts = await getCollection(POSTS_COLLECTION);
 const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
 const cityPosts = allPosts
   .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
@@ -17,20 +22,14 @@ const title = '外籍旅客的中國城市指南';
 const description =
   '透過北京、上海、廣州、成都、西安、杭州、南京、桂林、重慶與三亞等城市指南，規劃更順暢的中國行程，並掌握機場、地鐵、美食與市區交通安排。';
 
-const mapCities = [
-  { name: '北京', x: 460, y: 208, href: '#beijing' },
-  { name: '西安', x: 387, y: 283, href: '#xian' },
-  { name: '南京', x: 483, y: 312, href: '#nanjing' },
-  { name: '上海', x: 509, y: 324, href: '#shanghai' },
-  { name: '成都', x: 341, y: 332, href: '#chengdu' },
-  { name: '杭州', x: 497, y: 336, href: '#hangzhou' },
-  { name: '重慶', x: 364, y: 345, href: '#chongqing' },
-  { name: '桂林', x: 401, y: 403, href: '#guilin' },
-  { name: '昆明', x: 327, y: 407, href: '' },
-  { name: '廣州', x: 430, y: 432, href: '#guangzhou' },
-  { name: '深圳', x: 438, y: 440, href: '' },
-  { name: '三亞', x: 393, y: 496, href: '#sanya' },
-];
+// Dynamic map data from shared CITY_GUIDES
+const postedSlugs = new Set(cityPosts.map(p => p.slug));
+const mapCities = CITY_GUIDES.map((g) => ({
+  name: cityName(g, LOCALE_TAG),
+  x: g.mapX,
+  y: g.mapY,
+  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
+}));
 
 const cities = [
   {

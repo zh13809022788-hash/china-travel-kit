@@ -191,6 +191,38 @@ const locale = 'en';
   title="ChinaTripBox - Payment, eSIM & Transport Guides for China Travel"
   description="Practical, up-to-date guides for foreign visitors to China: Alipay and WeChat Pay setup, eSIM data plans, high-speed trains, DiDi ride-hailing, and visa information."
   <Header />
+
+  <!-- Language picker for first-time visitors (English homepage only) -->
+  <div id="lang-picker" class="border-b border-brand-100 bg-brand-50 py-2.5 text-center text-sm">
+    <div class="container-page flex flex-wrap items-center justify-center gap-x-1 gap-y-1">
+      <span class="mr-1 font-medium text-gray-700">🌐 选择语言:</span>
+      <a href="/zh-tw/" class="rounded px-2 py-0.5 font-medium text-brand-700 hover:bg-brand-100">繁體中文</a>
+      <span class="text-gray-300">|</span>
+      <a href="/ja/" class="rounded px-2 py-0.5 font-medium text-brand-700 hover:bg-brand-100">日本語</a>
+      <span class="text-gray-300">|</span>
+      <a href="/ko/" class="rounded px-2 py-0.5 font-medium text-brand-700 hover:bg-brand-100">한국어</a>
+      <span class="text-gray-300">|</span>
+      <a href="/ru/" class="rounded px-2 py-0.5 font-medium text-brand-700 hover:bg-brand-100">Русский</a>
+      <span class="text-gray-300">|</span>
+      <a href="/fr/" class="rounded px-2 py-0.5 font-medium text-brand-700 hover:bg-brand-100">Français</a>
+      <span class="text-gray-300">|</span>
+      <a href="/de/" class="rounded px-2 py-0.5 font-medium text-brand-700 hover:bg-brand-100">Deutsch</a>
+      <span class="text-gray-300">|</span>
+      <a href="/es/" class="rounded px-2 py-0.5 font-medium text-brand-700 hover:bg-brand-100">Español</a>
+      <button id="lang-picker-close" class="ml-2 rounded p-1 text-gray-400 hover:bg-brand-100 hover:text-gray-600" aria-label="Close" type="button">✕</button>
+    </div>
+  </div>
+  <script is:inline>
+    try { if (localStorage.getItem('ctb-lang-hide')) { document.getElementById('lang-picker').style.display = 'none'; } } catch(e){}
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('lang-picker-close');
+      if (btn) btn.addEventListener('click', function() {
+        try { localStorage.setItem('ctb-lang-hide', '1'); } catch(e){}
+        document.getElementById('lang-picker').style.display = 'none';
+      });
+    });
+  </script>
+
   <main>
     <section class="border-b border-gray-200 bg-[radial-gradient(circle_at_top_left,#fff1f2,transparent_30%),linear-gradient(180deg,#f8fafc_0%,#ffffff_80%)]">
       <div class="container-page grid gap-10 py-12 lg:grid-cols-[1fr_360px] lg:items-center lg:py-16">
