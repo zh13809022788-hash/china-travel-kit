@@ -1,21 +1,24 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
 
-const title = 'Mostrar al conductor: tarjeta de dirección en chino';
+const title = 'Muéstrale al conductor: tarjeta de dirección en chino';
 const description =
-  'Crea en tu teléfono una tarjeta grande con un mensaje en chino para taxistas, personal del hotel y para pedir indicaciones en China. Sin inicio de sesión, sin instalar apps y sin guardar datos personales.';
+  'Crea en tu teléfono una tarjeta con un mensaje grande en chino para taxistas, personal del hotel y para pedir indicaciones en China. Sin inicio de sesión, sin instalar apps y sin guardar datos personales.';
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
-  <Header locale="es" />
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-8 md:py-10">
     <header class="max-w-3xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Mostrar al conductor</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Muéstrale al conductor</h1>
       <p class="mt-3 text-lg text-gray-600">
-        Genera una tarjeta grande en chino para taxis, recogidas de DiDi, recepciones de hotel y para pedir
+        Genera una tarjeta grande en chino para taxis, recogidas de transporte por app, recepciones de hotel y para pedir
         indicaciones. Todo funciona en tu navegador.
       </p>
     </header>
@@ -26,16 +29,16 @@ const description =
       <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
         <div class="grid gap-4">
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Dirección o nombre del lugar en chino</span>
+            <span class="mb-1 font-medium text-gray-700">Dirección en chino o nombre del lugar</span>
             <textarea
               id="destination"
               rows="4"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Pega la dirección en chino desde Amap, Trip.com, tu reserva de hotel o un amigo."
+              placeholder="Pega la dirección en chino desde Amap, Trip.com, la reserva de tu hotel o un amigo."
             ></textarea>
             <span class="mt-1 text-xs text-gray-500">
-              Mejor resultado: pega el nombre o la dirección en chino. Los nombres solo en inglés pueden ser difíciles de
-              identificar para un conductor local.
+              Mejor resultado: pega el nombre o la dirección en chino. Puede que a un conductor local le
+              cueste identificar nombres de lugares solo en inglés.
             </span>
           </label>
 
@@ -43,19 +46,19 @@ const description =
             <span class="mb-1 font-medium text-gray-700">Nota opcional</span>
             <select id="note" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
               <option value="route">Por favor, siga la navegación y lléveme a esta dirección.</option>
-              <option value="pickup">Estoy esperando aquí. Por favor, llámeme o escríbame en la aplicación.</option>
+              <option value="pickup">Estoy esperando aquí. Por favor, llámeme o envíeme un mensaje en la app.</option>
               <option value="hotel">Por favor, ayúdeme a llegar a este hotel o contacte con la recepción.</option>
-              <option value="stop">Por favor, pare aquí si es seguro y legal.</option>
+              <option value="stop">Por favor, deténgase aquí si es seguro y legal hacerlo.</option>
               <option value="receipt">Por favor, deme un recibo si es posible.</option>
             </select>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Detalles adicionales para el conductor</span>
+            <span class="mb-1 font-medium text-gray-700">Detalles extra para el conductor</span>
             <input
               id="extra"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
-              placeholder="Número de puerta, vestíbulo del hotel, punto de recogida, equipaje, etc."
+              placeholder="Número de puerta, lobby del hotel, punto de recogida, equipaje, etc."
             />
           </label>
 
@@ -71,8 +74,8 @@ const description =
         </div>
 
         <div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-          Esta herramienta no reserva viajes ni contacta con conductores. En emergencias, contacta primero con los servicios locales de emergencia
-          o con tu hotel.
+          Esta herramienta no reserva viajes ni contacta a conductores. En caso de emergencia, contacta primero con los
+          servicios de emergencia locales o con tu hotel.
         </div>
       </div>
 
@@ -111,8 +114,8 @@ const description =
             <button id="fullscreen-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
               Pantalla completa
             </button>
-            <a href="/es/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
-              Pedir ayuda de IA
+            <a href="/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
+              Pedir ayuda a la IA
             </a>
           </div>
         </div>
@@ -125,10 +128,10 @@ const description =
             No hablo chino
           </button>
           <button data-quick="请在安全合法的地方停车，谢谢。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Parar con seguridad
+            Detenerse de forma segura
           </button>
           <button data-quick="如果找不到我，请在打车软件里发消息。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Escríbeme en la aplicación
+            Envíame un mensaje en la app
           </button>
         </div>
       </section>
