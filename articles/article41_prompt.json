@@ -1,0 +1,39 @@
+{"model": "gpt-5.5", "input": "Write a 1200-1500 word English article for chinatripbox.com. Title: 'How to Use Chinese Public Toilets Without Panic: A Tourist's Survival Guide'. Category: essentials. Target audience: foreign visitors to China who are nervous about the bathroom situation.
+
+Requirements:
+1. Natural, personal tone — use 'you'll find', 'one thing that surprises most visitors', 'here's the reality' etc. NOT AI template language
+2. Include REAL data: mention specific costs (free vs ¥1-2), locations (gas stations, subway stations, malls), specific app names (Baidu Maps toilet finder)
+3. Compare east vs west differences
+4. End with a 'Quick Reference' checklist of 5+ actionable tips
+5. Link to at least 2 existing chinatripbox.com articles
+6. Vary sentence length — no 3 consecutive same-length sentences
+7. Include at least 1 specific cultural detail (e.g. squat vs seated difference by region)
+8. DO NOT use 'In conclusion', 'In summary', 'Whether you're a seasoned traveler'
+9. DO NOT use 'Nestled in the heart of' or similar cliches
+
+Frontmatter:
+---
+title: \"How to Use Chinese Public Toilets Without Panic: A Tourist's Survival Guide\"
+description: \"A practical guide to public toilets in China: where to find clean restrooms, what to expect inside, squat vs seated options, and emergency tips for foreign visitors.\"
+pubDate: 2026-07-19
+category: essentials
+tags: [\"public toilets China\", \"bathroom tips China\", \"China travel essentials\"]
+featured: false
+cover: \"topic-predeparture-setup\"
+coverAlt: \"Clean public restroom in China with modern facilities\"
+faqs:
+  - question: \"Are there public toilets in China?\"
+    answer: \"Yes — they're everywhere. Subway stations, shopping malls, gas stations, parks, tourist attractions, and even specific public toilet buildings on streets. Unlike many Western countries, China has an extensive network of free public restrooms, especially in cities.\"
+  - question: \"Are Chinese public toilets clean?\"
+    answer: \"It varies wildly. High-end malls and luxury hotels have spotless facilities with attendants cleaning constantly. Subway stations and tourist spots are hit-or-miss. Gas stations and older public toilets can be rough. Always carry tissues and hand sanitizer.\"
+  - question: \"What is a squat toilet and how do I use it?\"
+    answer: \"Most public toilets in China are squat toilets — a porcelain fixture at floor level. You squat over it, facing the hood. It's not as hard as it looks: keep your balance, aim carefully. Many tourist-friendly places now have seated options too.\"
+  - question: \"Is toilet paper provided?\"
+    answer: \"Not reliably. Many public toilets do not provide toilet paper. Some have a dispenser outside that's empty. Others require you to buy a small pack from an attendant for ¥1-2. Always carry your own tissues — this is the #1 rule of bathroom survival in China.\"
+  - question: \"What about toilets in rural areas?\"
+    answer: \"Rural toilets are more basic — usually squat-style with less frequent cleaning. Some are 'long drops' with a trough design. Carry stronger disinfectant wipes and use with caution. Rest stops on highways between cities are a common weak point.\"
+  - question: \"Can I use my smartphone in a Chinese toilet?\"
+    answer: \"Be very careful. Many business toilets have weak or no signal. Also, if you're using English mapping apps like Google Maps (with a VPN), the signal might not penetrate concrete walls. Download offline maps before you go in.\"
+---
+
+Write the full article body now. Use markdown with ## for level-2 headings.", "temperature": 0.35, "max_output_tokens": 4000}

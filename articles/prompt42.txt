@@ -1,0 +1,38 @@
+Write a 1200-1500 word English article for chinatripbox.com about Guangzhou.
+Title: "Guangzhou City Guide 2026: What Foreign Visitors Should Know"
+Category: cities. Target: foreign visitors planning to visit Guangzhou.
+
+REQUIREMENTS:
+1. Natural personal tone - use "you will find", "one thing most visitors notice", "heres the reality" etc
+2. Real data: Canton Tower height (600m), Chen Clan Academy entry (10 yuan), Cantonese vs Mandarin differences
+3. Compare Guangzhou vs Shenzhen vs Hong Kong briefly
+4. End with Quick Reference checklist of 5+ items
+5. Link to /posts/guangzhou-city-guide-for-foreigners/ and /posts/shenzhen-city-guide/
+6. No AI cliches - no "In conclusion", "Nestled in", "Whether you are"
+
+Frontmatter:
+---
+title: "Guangzhou City Guide 2026: What Foreign Visitors Should Know"
+description: "A practical Guangzhou travel guide for foreign visitors: top attractions, Cantonese food, transport from airports, best districts to stay, and day trips to Shenzhen and Hong Kong."
+pubDate: 2026-07-19
+category: cities
+tags: ["Guangzhou travel", "Cantonese food", "China city guides", "Guangdong"]
+featured: false
+cover: "city-guangzhou"
+coverAlt: "Guangzhou skyline from the Pearl River"
+faqs:
+  - question: "How many days should I spend in Guangzhou?"
+    answer: "Two to three days is enough to see the main sights. Day 1: Chen Clan Academy, Shamian Island, Canton Tower. Day 2: Yuexiu Park, Beijing Road shopping, dim sum. Day 3: day trip to Shenzhen or spend more time on Cantonese food tours."
+  - question: "Is Guangzhou cheaper than Shanghai or Beijing?"
+    answer: "Generally yes. Accommodation and food in Guangzhou cost 20-30% less than in Shanghai. Street food is particularly affordable - a full Cantonese meal can cost as little as 25-40 yuan. Mid-range hotels average 300-500 yuan per night compared to Shanghai's 500-800 yuan."
+  - question: "Can I use Mandarin in Guangzhou?"
+    answer: "Yes, most people understand Mandarin, especially younger Cantonese. But Cantonese is the local language - older residents and market vendors prefer it. You will get by fine with Mandarin, and English is common in tourist areas and modern malls."
+  - question: "How do I get from Guangzhou Baiyun Airport to the city?"
+    answer: "The Airport Express line connects to the metro system - takes about 40 minutes to the city center (7-9 yuan). Taxi costs 100-150 yuan depending on destination. Didi ride-hailing works well. Avoid unlicensed touts at the arrival hall."
+  - question: "What is Guangzhou food famous for?"
+    answer: "Dim sum is the star - har gow (shrimp dumplings), siu mai, char siu bao (BBQ pork buns). Guangzhou also has exceptional Cantonese roast duck, congee, and claypot rice. The evening street food scene on Beijing Road and around Chen Clan Academy is legendary."
+  - question: "Is a visa needed for Hong Kong if I am in Guangzhou?"
+    answer: "Yes - even though Guangzhou is close to Hong Kong, you need a separate visa or entry permit depending on your nationality. The high-speed train from Guangzhou South to Hong Kong West Kowloon takes about 50 minutes. Check your China visa allows multiple entries before planning a cross-border day trip."
+---
+
+Write the full article. Use ## subheadings.
