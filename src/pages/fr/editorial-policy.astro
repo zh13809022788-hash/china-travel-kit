@@ -1,81 +1,61 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const title = 'Politique éditoriale';
 const description =
-  'Découvrez comment ChinaTripBox recherche, rédige, vérifie et met à jour ses guides de voyage pour les visiteurs étrangers en Chine.';
+  'Comment ChinaTripBox recherche, rédige, révise et met à jour des guides de voyage pour les visiteurs étrangers en Chine.';
 const lastUpdated = '10 juillet 2026';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
       <h1 class="text-3xl font-bold text-gray-900">Politique éditoriale</h1>
       <p class="mt-2 text-sm text-gray-500">Dernière mise à jour : {lastUpdated}</p>
 
       <p class="mt-4">
-        ChinaTripBox publie des guides de voyage indépendants pour les visiteurs étrangers en Chine.
-        Notre objectif est de rendre plus simples les sujets pratiques, notamment les paiements,
-        l’internet mobile, les transports, la préparation de l’arrivée et la logistique du
-        quotidien.
+        ChinaTripBox publie des guides de voyage indépendants pour les visiteurs étrangers en Chine. Notre objectif est de rendre les sujets pratiques plus faciles à comprendre, notamment les paiements, l’internet mobile, les transports, la planification des villes et la logistique quotidienne du voyage.
       </p>
 
       <h2>Comment nous faisons nos recherches</h2>
       <p>
-        Nous utilisons en priorité les sources officielles lorsqu’elles existent, mais aussi la
-        documentation des fournisseurs, les centres d’aide des applications, les textes publics, les
-        retours de voyageurs et, lorsque c’est possible, des vérifications pratiques. Pour les
-        sujets qui changent souvent, comme les limites de paiement, les eSIM, l’entrée sans visa ou
-        la disponibilité des applications, nous essayons de revérifier les points clés avant chaque
-        publication ou mise à jour.
+        Nous utilisons des sources officielles lorsque c’est possible, la documentation des fournisseurs, les centres d’aide des applications, les pages de politique publique, les témoignages de voyageurs et des vérifications pratiques lorsque cela est possible. Pour les sujets qui changent fréquemment, comme les plafonds de paiement, la disponibilité des eSIM, les règles d’entrée sans visa et la prise en charge par les applications, nous cherchons à vérifier les détails avant de publier ou de mettre à jour un guide.
       </p>
 
-      <h2>Comment nous écrivons</h2>
+      <h2>Comment nous rédigeons</h2>
       <p>
-        Nos articles sont écrits pour de vrais voyageurs, pas uniquement pour les moteurs de
-        recherche. Nous privilégions les étapes claires, les erreurs fréquentes, les limites
-        concrètes et les explications simples plutôt que les généralités touristiques.
+        Nos articles sont écrits pour de vrais voyageurs, et pas seulement pour les moteurs de recherche. Nous privilégions des étapes claires, les erreurs courantes, des réserves réalistes et des explications en français simple plutôt qu’un contenu générique d’inspiration au voyage.
       </p>
 
       <h2>Mises à jour et corrections</h2>
       <p>
-        Les informations de voyage en Chine peuvent évoluer vite. Nous révisons régulièrement les
-        guides prioritaires et mettons les pages à jour lorsqu’une procédure devient obsolète, qu’un
-        prix change, qu’une application évolue ou qu’une règle est modifiée. Si vous repérez un
-        problème, contactez-nous avec l’URL de la page et l’élément à corriger.
+        Les informations de voyage sur la Chine peuvent changer rapidement. Nous révisons périodiquement les guides importants et mettons à jour les pages lorsque nous constatons des étapes obsolètes, des prix modifiés, un nouveau comportement des applications ou des règles révisées. Si vous repérez un problème, veuillez nous contacter avec l’URL de la page et ce qui, selon vous, doit être corrigé.
       </p>
 
       <h2>Publicité et liens d’affiliation</h2>
       <p>
-        ChinaTripBox peut générer des revenus via la publicité et les liens d’affiliation. Les
-        relations commerciales ne dictent pas notre ligne éditoriale. Lorsqu’une page contient des
-        liens d’affiliation, leur utilisation peut nous rapporter une commission sans frais
-        supplémentaires pour vous.
+        ChinaTripBox peut gagner de l’argent grâce à la publicité et aux liens d’affiliation. Les relations commerciales ne déterminent pas nos conseils éditoriaux de fond. Lorsqu’une page contient des liens d’affiliation, leur utilisation peut nous rapporter une commission sans frais supplémentaires pour vous.
       </p>
 
       <h2>Indépendance</h2>
       <p>
-        ChinaTripBox n’est affilié ni au gouvernement chinois, ni à Google, Apple, Alipay, WeChat,
-        China Railway, aux opérateurs télécoms, aux compagnies aériennes, aux banques ou à un bureau
-        des visas, sauf mention explicite. Les marques citées le sont uniquement à des fins
-        d’identification et de conseil pratique.
+        ChinaTripBox n’est affilié ni au gouvernement chinois, ni à Google, Apple, Alipay, WeChat, China Railway, aux opérateurs télécoms, aux compagnies aériennes, aux banques ou à tout bureau des visas, sauf indication claire du contraire. Les noms de marque sont utilisés à des fins d’identification et de conseils pratiques pour les voyageurs.
       </p>
 
       <h2>Limites</h2>
       <p>
-        Nos contenus fournissent des informations générales de voyage. Ils ne constituent pas un
-        conseil juridique, migratoire, financier, médical, fiscal ou d’urgence. Vérifiez toujours
-        les exigences officielles auprès de l’administration, de la compagnie aérienne, du
-        prestataire de paiement, de la banque, de l’opérateur télécom ou du service concerné.
+        Notre contenu fournit des informations générales sur le voyage. Il ne constitue pas un conseil juridique, en matière d’immigration, financier, médical, fiscal ou d’urgence. Confirmez toujours les exigences officielles auprès de l’organisme gouvernemental, de la compagnie aérienne, du prestataire de paiement, de la banque, du fournisseur télécom ou de l’opérateur de service concerné.
       </p>
 
       <h2>Contact</h2>
       <p>
-        Pour suggérer une correction ou poser une question sur notre méthode éditoriale, utilisez
-        notre <a href="/fr/contact/">page de contact</a>.
+        Pour suggérer une correction ou poser une question sur notre processus éditorial, veuillez utiliser notre
+        <a href="/contact/">page de contact</a>.
       </p>
     </article>
   </main>
