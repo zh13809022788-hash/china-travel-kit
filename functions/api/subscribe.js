@@ -53,10 +53,10 @@ async function sendBrevo(to, subscribedAt) {
     const res = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
-        'api-key': _k,
+        'Authorization': 'Bearer ' + _k,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'User-Agent': 'ChinaTripBox/1.0 (Cloudflare Pages Function)',
+        'User-Agent': 'ChinaTripBox/1.0',
       },
       body: JSON.stringify({
         sender: { name: 'ChinaTripBox', email: 'zh13809022788@gmail.com' },
