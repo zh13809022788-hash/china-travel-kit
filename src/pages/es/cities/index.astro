@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -8,24 +7,30 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const LOCALE = 'es';
-const LOCALE_TAG = 'es';
 const allPosts = await getCollection('posts-es');
-const title = 'Guías de ciudades de China para viajeros internacionales';
-const description = 'Elige tu destino en China según tu estilo de viaje con guías prácticas de Pekín, Shanghái, Cantón, Chengdu, Xi\'an, Hangzhou, Chongqing y Sanya: aeropuertos, metro, comida, transporte y siguientes pasos.';
-
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
 const cityPosts = allPosts
+  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-// Dynamic map data from shared CITY_GUIDES
-const postedSlugs = new Set(cityPosts.map(p => p.slug));
-const mapCities = CITY_GUIDES.map((g) => ({
-  name: cityName(g, 'es'),
-  x: g.mapX,
-  y: g.mapY,
-  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
-}));
+const title = 'Guías de ciudades de China para viajeros internacionales';
+const description =
+  'Organiza tu ruta por China con guías prácticas de Pekín, Shanghái, Cantón, Chengdu, Xi\'an, Hangzhou, Chongqing y Sanya, además de consejos sobre aeropuertos, metro, comida y transporte local.';
+
+const mapCities = [
+  { name: 'Pekín', x: 470, y: 80, href: '#beijing' },
+  { name: 'Xi\'an', x: 340, y: 155, href: '#xian' },
+  { name: 'Nanjing', x: 490, y: 180, href: '' },
+  { name: 'Shanghái', x: 540, y: 200, href: '#shanghai' },
+  { name: 'Chengdu', x: 250, y: 220, href: '#chengdu' },
+  { name: 'Hangzhou', x: 520, y: 205, href: '#hangzhou' },
+  { name: 'Chongqing', x: 310, y: 260, href: '#chongqing' },
+  { name: 'Guilin', x: 370, y: 300, href: '' },
+  { name: 'Kunming', x: 210, y: 335, href: '' },
+  { name: 'Cantón', x: 400, y: 370, href: '#guangzhou' },
+  { name: 'Shenzhen', x: 430, y: 390, href: '' },
+  { name: 'Sanya', x: 360, y: 440, href: '#sanya' },
+];
 
 const cities = [
   {
@@ -42,7 +47,7 @@ const cities = [
   {
     name: 'Shanghái',
     href: '/es/posts/shanghai-city-guide-for-foreigners/',
-    desc: 'Muy recomendable para una llegada cómoda, perfil urbano moderno, gastronomía internacional y excelente red de metro.',
+    desc: 'Muy recomendable para una llegada cómoda, skyline moderno, gastronomía internacional y excelente red de metro.',
     days: '3-4 días',
     bestSeason: 'Marzo-mayo, octubre-noviembre',
     difficulty: 'Fácil',
@@ -86,11 +91,11 @@ const cities = [
   {
     name: 'Chongqing',
     href: '/es/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    desc: 'Muy atractiva para amantes de la olla caliente, paisajes urbanos futuristas y una ciudad vertical con mucha personalidad.',
+    desc: 'Muy atractiva para amantes del hot pot, paisajes urbanos futuristas y una ciudad vertical con mucha personalidad.',
     days: '3-4 días',
     bestSeason: 'Marzo-mayo, septiembre-noviembre',
     difficulty: 'Difícil',
-    whyGo: 'Olla caliente intensa, vistas nocturnas espectaculares, teleférico sobre el Yangtsé y una geografía urbana única.',
+    whyGo: 'Hot pot intenso, vistas nocturnas espectaculares, teleférico sobre el Yangtsé y una geografía urbana única.',
     next: '/es/food/',
     nextLabel: 'Ideas para comer bien en Chongqing',
   },
@@ -108,11 +113,11 @@ const cities = [
   {
     name: 'Sanya',
     href: '/es/posts/sanya-city-guide-for-foreigners/',
-    desc: 'La mejor base para playa, complejos turísticos, descanso invernal y estancias cálidas en Hainan.',
+    desc: 'La mejor base para playa, resorts, descanso invernal y estancias cálidas en Hainan.',
     days: '3-7 días',
     bestSeason: 'Noviembre-abril',
     difficulty: 'Media',
-    whyGo: 'Playa, sol en invierno, marisco, complejos turísticos y buen ambiente para quedarse más tiempo.',
+    whyGo: 'Playa, sol en invierno, marisco, resorts y buen ambiente para quedarse más tiempo.',
     next: '/es/posts/what-to-pack-for-china-a-season-by-season-checklist/',
     nextLabel: 'Qué llevar según la temporada',
   },
@@ -127,7 +132,7 @@ const routes = [
   {
     name: 'Gastronomía y ritmo tranquilo, 7-9 días',
     plan: 'Chengdu 4 días, Pekín o Shanghái 3-4 días',
-    fit: 'Muy buena opción si buscas pandas, casas de té, olla caliente y una gran ciudad como punto de entrada.',
+    fit: 'Muy buena opción si buscas pandas, casas de té, hot pot y una gran ciudad como punto de entrada.',
   },
   {
     name: 'Escapada de invierno, 6-10 días',
@@ -166,10 +171,7 @@ const faqJsonLd = {
     },
   })),
 };
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'es';
 ---
-
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
   <Header locale="es" />
   <main class="container-page py-10">
@@ -179,7 +181,7 @@ const locale = 'es';
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="city-shanghai" alt="Perfil urbano de Shanghái y el Bund al atardecer como símbolo de un viaje urbano por China" loading="eager" />
+    <CoverImage name="city-shanghai" alt="Skyline de Shanghái y el Bund al atardecer como símbolo de un viaje urbano por China" loading="eager" />
 
     <ChinaMap cities={mapCities} />
 
@@ -280,7 +282,7 @@ const locale = 'es';
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {cityPosts.map((post) => (
             <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
             </a>
@@ -294,7 +296,7 @@ const locale = 'es';
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
           <li><a href="/es/payment/" class="font-semibold text-brand-700">Pagos:</a> deja configurados Alipay, WeChat Pay y algo de efectivo antes de salir de las grandes ciudades.</li>
           <li><a href="/es/esim/" class="font-semibold text-brand-700">Internet:</a> elige eSIM, roaming o SIM local antes de depender de mapas y traducción.</li>
-          <li><a href="/es/transport/" class="font-semibold text-brand-700">Transporte:</a> compara trenes, traslados aeroportuarios, DiDi y códigos QR del metro.</li>
+          <li><a href="/es/transport/" class="font-semibold text-brand-700">Transporte:</a> compara trenes, traslados aeroportuarios, DiDi y QR de metro.</li>
           <li><a href="/es/tools/best-time-to-visit/" class="font-semibold text-brand-700">Fechas:</a> revisa clima, festivos y nivel de afluencia según el mes.</li>
         </ul>
       </aside>
