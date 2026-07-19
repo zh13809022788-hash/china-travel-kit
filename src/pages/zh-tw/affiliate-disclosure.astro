@@ -1,56 +1,58 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-const title = '聯盟揭露';
+const title = '聯盟揭露聲明';
 const description =
-  'ChinaTripBox 如何處理聯盟連結、廣告合作、編輯獨立性與旅遊產品推薦。';
-const lastUpdated = '2026 年 7 月 14 日';
+  'ChinaTripBox 如何處理聯盟連結、廣告合作關係、編輯獨立性，以及旅遊產品推薦。';
+const lastUpdated = '2026年7月14日';
 ---
+<!-- AI輔助生成內容，經母語者審校 -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
-  <Header locale="zh-TW" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">聯盟揭露</h1>
-      <p class="mt-2 text-sm text-gray-500">最後更新： {lastUpdated}</p>
+      <h1 class="text-3xl font-bold text-gray-900">聯盟揭露聲明</h1>
+      <p class="mt-2 text-sm text-gray-500">最後更新：{lastUpdated}</p>
 
       <p class="mt-4">
-        ChinaTripBox 是獨立旅遊規劃網站。部分頁面可能包含聯盟連結、廣告版位或合作夥伴提及。如果你點擊聯盟連結並完成購買，我們可能會獲得佣金，且不會增加你的費用。
+        ChinaTripBox 是一個獨立的旅遊規劃網站。部分頁面可能包含聯盟連結、廣告版位或合作夥伴提及。若你點擊聯盟連結並完成購買，我們可能會因此獲得佣金，且不會向你額外收取任何費用。
       </p>
 
       <h2>這對讀者代表什麼</h2>
       <p>
-        聯盟收入有助於讓我們的指南與工具維持免費。它不會改變你支付的價格，也不會讓合作夥伴控制我們的編輯建議。
+        聯盟收入有助於我們持續免費提供指南與工具。這不會改變你支付的價格，也不會讓合作夥伴左右我們的編輯建議。
       </p>
 
       <h2>編輯獨立性</h2>
       <p>
-        我們的推薦首先必須有用，其次才是商業考量。我們優先考慮旅客的實際需求：付款方式是否可用、eSIM 是否容易啟用、訂票流程是否支援外國護照，以及旅客應準備什麼備用方案。
+        我們的推薦應該先具備實用價值，之後才談商業性。我們優先考量旅客的實際需求：付款方式是否可用、eSIM 是否容易啟用、預訂流程是否支援外國護照，以及訪客應該準備哪些備案。
       </p>
 
-      <h2>我們可能從哪些項目獲得收入</h2>
+      <h2>我們可能從哪些項目獲得收益</h2>
       <ul>
         <li>eSIM、行動數據或連線服務合作夥伴。</li>
         <li>旅遊預訂、火車、接送或票務合作夥伴。</li>
         <li>網站上顯示的廣告。</li>
-        <li>未來明確提供的付費旅遊協助或規劃產品。</li>
+        <li>未來若有明確提供的付費旅遊協助或規劃產品。</li>
       </ul>
 
-      <h2>我們不做什麼</h2>
+      <h2>我們不會做的事</h2>
       <p>
-        我們不銷售官方簽證、移民核准、政府服務、銀行服務或緊急支援。我們也不保證第三方產品適用於每位旅客、每台裝置、每本護照、每家銀行或每個行程。
+        我們不販售官方簽證、移民核准、政府服務、銀行服務或緊急支援。我們也不保證第三方產品一定適用於每位旅客、每台裝置、每本護照、每家銀行或每一種行程安排。
       </p>
 
-      <h2>如何理解我們提到的產品</h2>
+      <h2>如何看待我們提及的產品</h2>
       <p>
-        請將產品與服務提及視為實用起點，而不是保證。購買前務必查看服務商最新條款、覆蓋範圍、退款政策、裝置相容性、付款限制與旅客資格。
+        請將文中提及的產品與服務視為實用的起點，而非保證。在購買前，請務必確認供應商目前的條款、涵蓋範圍、退款政策、裝置相容性、付款限制，以及旅客資格。
       </p>
 
       <h2>問題</h2>
       <p>
-        如對聯盟連結、廣告或推薦內容更正有疑問，請使用我們的 <a href="/zh-tw/contact/">聯絡頁面</a>。
+        若你對聯盟連結、廣告，或推薦內容的更正有任何疑問，請使用我們的 <a href="/contact/">聯絡頁面</a>。
       </p>
     </article>
   </main>
