@@ -12,21 +12,17 @@ const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
 
 const categoryLabels: Record<string, string> = {
   payment: '결제',
-  esim: 'eSIM·인터넷',
+  esim: 'eSIM',
   transport: '교통',
   essentials: '여행 준비',
   food: '음식',
 };
-import { getCategoryLabel } from '../../i18n/categories';
-const locale = 'ko';
 ---
 
 <BaseLayout
-  title="ChinaTripBox 한국어 가이드 | 중국 여행 결제·통신·교통"
-  description="중국을 방문하는 한국인 여행객을 위한 실용 가이드: Alipay, WeChat Pay, eSIM, 고속철도, DiDi, 비자부터 도착 후 준비까지."
+  title="ChinaTripBox 한국어 가이드 | 중국 여행 결제·eSIM·교통 준비"
+  description="중국 여행 전에 꼭 알아야 할 실전 가이드를 한국어로 정리했습니다. Alipay, WeChat Pay, eSIM, 고속철도, DiDi, 첫날 체크리스트까지 한 번에 준비하세요."
   locale="ko"
-  title="ChinaTripBox 한국어 | 중국 여행 결제·인터넷·교통 가이드"
-  description="중국 방문 외국인 여행자를 위한 실용 가이드: Alipay·WeChat Pay 설정, eSIM 데이터, 고속철도, DiDi, 비자 정보까지 한 번에."
   alternates={{ en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' }}
 >
   <Header locale="ko" />
@@ -36,13 +32,14 @@ const locale = 'ko';
         <div>
           <p class="text-sm font-semibold uppercase tracking-wide text-brand-700">ChinaTripBox 한국어</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            중국 여행 전에 결제·통신·교통·입국 준비를 완료하세요
+            중국 여행 전에 필요한 결제·통신·교통 정보를 한곳에서 정리하세요
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            한국인 여행객을 위한 중국 여행 실용 가이드입니다. Alipay, WeChat Pay, eSIM, 고속철도, DiDi 등 가장 막히기 쉬운 부분을 미리 해결하세요.
+            처음 중국을 가는 여행자도 바로 이해할 수 있도록 핵심 준비만 추려서 설명합니다.
+            Alipay, WeChat Pay, eSIM, 고속철도, DiDi 같은 실전 정보를 빠르게 확인해 보세요.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="/ko/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">결제 가이드 보기</a>
+            <a href="/ko/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">결제 가이드부터 보기</a>
             <a href="/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">출발 전 체크리스트</a>
           </div>
         </div>
@@ -50,7 +47,7 @@ const locale = 'ko';
         <aside class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <Image
             src={heroImage}
-            alt="상하이 도시 스카이라인, 중국 여행 계획 이미지"
+            alt="중국 여행 준비에 참고할 수 있는 상하이 도시 풍경"
             widths={[360, 720]}
             sizes="(max-width: 1024px) 100vw, 360px"
             quality={65}
@@ -58,10 +55,11 @@ const locale = 'ko';
             class="h-52 w-full object-cover"
           />
           <div class="p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">추천 읽기 순서</p>
-            <h2 class="mt-2 text-lg font-bold text-gray-950">도착 첫날 필요한 것부터 시작하세요</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">여행 전 빠른 시작</p>
+            <h2 class="mt-2 text-lg font-bold text-gray-950">무엇부터 준비해야 하는지 헷갈릴 때</h2>
             <p class="mt-2 text-sm leading-6 text-gray-600">
-              결제, 통신, 택시, 기차표 네 가지가 사전 준비 가치가 가장 높습니다.
+              결제, 통신, 교통, 필수 앱, 공항 도착 직후 동선까지 우선순위에 맞춰 필요한 정보를
+              차례대로 확인할 수 있습니다.
             </p>
           </div>
         </aside>
@@ -75,9 +73,9 @@ const locale = 'ko';
         <div class="section-heading">
           <div>
             <p class="section-kicker">최신 한국어 가이드</p>
-            <h2>중국 여행 실용 기사</h2>
+            <h2>중국 여행 실전 글 모음</h2>
           </div>
-          <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">영어 버전으로</a>
+          <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">전체 보기</a>
         </div>
 
         <div class="mt-6 divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white">

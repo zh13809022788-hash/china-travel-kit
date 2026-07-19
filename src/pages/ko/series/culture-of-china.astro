@@ -10,28 +10,26 @@ const posts = (await getCollection('posts-ko'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '중국 문화: 여행자를 위한 전통과 관습';
-const description = '외국인 여행자의 시선으로 중국 문화를 살펴보세요. 다도, 춘절, 체면과 꽌시, 서예, 쿵푸, 띠 문화까지, 중국인의 일상을 이루는 전통을 소개합니다.';
+const title = '중국의 문화 시리즈';
+const description = '차 문화, 춘절, 체면과 관계, 서예, 무술, 띠 문화처럼 여행자가 이해하면 더 깊게 보이는 중국의 문화를 설명합니다.';
 
 const relatedTools = [
-  { href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '팁과 예절', desc: '팁을 줘야 할 때와 그렇지 않을 때, 그리고 그 이유' },
-  { href: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '축제 시즌 짐 꾸리기', desc: '명절과 휴가철에 챙기면 좋은 준비물' },
-  { href: '/ko/posts/how-to-pay-in-china-tourist-guide/', title: '중국에서 결제하는 방법', desc: '축제 시즌에 알아두면 좋은 결제 수단' },
+  { href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '팁과 식사 예절', desc: '언제 팁을 주지 않는지, 왜 그런지 설명합니다.' },
+  { href: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '명절 시즌 짐 준비', desc: '휴일과 계절 변화에 맞춰 챙기면 좋은 물건' },
+  { href: '/ko/posts/how-to-pay-in-china-tourist-guide/', title: '중국 결제 가이드', desc: '명절이나 지역 행사 때도 흔히 쓰는 결제 방식 정리' },
 ];
 
 const relatedCities = [
-  { href: '/ko/posts/beijing-city-guide-for-foreigners/', title: '베이징', desc: '황실 문화와 후퉁의 일상' },
-  { href: '/ko/posts/hangzhou-city-guide-for-foreigners/', title: '항저우', desc: '차 문화와 서호의 유산' },
-  { href: '/ko/posts/chengdu-city-guide-for-foreigners/', title: '청두', desc: '찻집 문화와 느긋한 삶의 리듬' },
+  { href: '/ko/posts/beijing-city-guide-for-foreigners/', title: '베이징', desc: '황실 문화와 후퉁 생활' },
+  { href: '/ko/posts/hangzhou-city-guide-for-foreigners/', title: '항저우', desc: '차 문화와 서호의 전통' },
+  { href: '/ko/posts/chengdu-city-guide-for-foreigners/', title: '청두', desc: '찻집 문화와 느린 일상' },
 ];
 
 const otherSeries = [
-  { href: '/ko/series/food-of-china/', title: '중국 음식' },
-  { href: '/ko/series/history-of-china/', title: '중국 역사' },
+  { href: '/ko/series/food-of-china/', title: '중국의 음식' },
+  { href: '/ko/series/history-of-china/', title: '중국의 역사' },
   { href: '/ko/series/modern-china/', title: '현대 중국' },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'ko';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
@@ -50,14 +48,14 @@ const locale = 'ko';
         <div class="section-heading">
           <div>
             <p class="section-kicker">글 목록</p>
-            <h2>중국 문화 시리즈</h2>
+            <h2>중국의 문화 시리즈</h2>
           </div>
         </div>
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
               <a href={`/ko/posts/${post.slug}/`} class="card block hover:no-underline">
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
               </a>
@@ -70,8 +68,8 @@ const locale = 'ko';
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">실용 정보</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">문화를 이해하며 여행하기</h2>
+          <p class="section-kicker">실용 가이드</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">문화를 알고 여행하기</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -84,7 +82,7 @@ const locale = 'ko';
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">도시 가이드</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">문화를 느낄 수 있는 도시</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">문화가 잘 보이는 도시</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">

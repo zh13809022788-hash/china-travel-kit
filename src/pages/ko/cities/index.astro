@@ -1,7 +1,6 @@
 ---
 
 import { getCollection } from 'astro:content';
-import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -9,56 +8,61 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const LOCALE = 'ko';
-const LOCALE_TAG = 'ko';
 const allPosts = await getCollection('posts-ko');
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
+const cityPosts = allPosts
+  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
 const title = '중국 주요 도시 여행 가이드';
 const description = '베이징, 상하이, 광저우, 청두, 시안, 항저우, 충칭, 싼야까지 여행 스타일에 맞는 도시를 고르고 추천 일정, 계절, 이동 난이도를 한눈에 확인해 보세요.';
 
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
-const cityPosts = allPosts
-  .sort((a, b) => a.data.title.localeCompare(b.data.title));
-
-// Dynamic map data from shared CITY_GUIDES
-const postedSlugs = new Set(cityPosts.map(p => p.slug));
-const mapCities = CITY_GUIDES.map((g) => ({
-  name: cityName(g, 'ko'),
-  x: g.mapX,
-  y: g.mapY,
-  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
-}));
+const mapCities = [
+  { name: '베이징', x: 470, y: 80, href: '#beijing' },
+  { name: '시안', x: 340, y: 155, href: '#xian' },
+  { name: '난징', x: 490, y: 180, href: '' },
+  { name: '상하이', x: 540, y: 200, href: '#shanghai' },
+  { name: '청두', x: 250, y: 220, href: '#chengdu' },
+  { name: '항저우', x: 520, y: 205, href: '#hangzhou' },
+  { name: '충칭', x: 310, y: 260, href: '#chongqing' },
+  { name: '구이린', x: 370, y: 300, href: '' },
+  { name: '쿤밍', x: 210, y: 335, href: '' },
+  { name: '광저우', x: 400, y: 370, href: '#guangzhou' },
+  { name: '선전', x: 430, y: 390, href: '' },
+  { name: '싼야', x: 360, y: 440, href: '#sanya' },
+];
 
 const cities = [
   {
     name: '베이징',
     href: '/ko/posts/beijing-city-guide-for-foreigners/',
-    desc: '왕궁과 유적, 박물관, 현대적인 동네가 함께 어우러져 있어서 처음 중국을 방문하시는 분들께 특히 잘 맞는 도시예요.',
+    desc: '왕궁과 유적, 박물관, 현대적인 동네가 함께 있어 처음 중국을 방문하는 여행자에게 특히 잘 맞는 도시예요.',
     days: '4-5일',
     bestSeason: '9월-10월',
     difficulty: '보통',
-    whyGo: '자금성, 만리장성, 후퉁, 대형 박물관까지 대표 명소를 폭넓게 경험하실 수 있어요.',
+    whyGo: '자금성, 만리장성, 후퉁, 대형 박물관까지 대표 명소를 폭넓게 경험할 수 있어요.',
     next: '/ko/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
     nextLabel: '베이징 공항 이동 가이드',
   },
   {
     name: '상하이',
     href: '/ko/posts/shanghai-city-guide-for-foreigners/',
-    desc: '세련된 스카이라인, 편리한 교통, 감각적인 카페와 쇼핑이 강점인 국제적인 대도시예요.',
+    desc: '세련된 스카이라인, 쉬운 교통, 감각적인 카페와 쇼핑이 강점인 국제적인 대도시예요.',
     days: '3-4일',
     bestSeason: '3월-5월, 10월-11월',
     difficulty: '쉬움',
-    whyGo: '도시 풍경, 미식, 야경, 쇼핑을 효율적으로 즐기고 싶으시다면 가장 무난한 선택이에요.',
+    whyGo: '도시 풍경, 미식, 야경, 쇼핑을 효율적으로 즐기고 싶다면 가장 무난한 선택이에요.',
     next: '/ko/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
-    nextLabel: '상하이 지하철 이용 가이드',
+    nextLabel: '상하이 지하철 이용법',
   },
   {
     name: '청두',
     href: '/ko/posts/chengdu-city-guide-for-foreigners/',
-    desc: '판다, 사천 음식, 느긋한 분위기, 근교 여행까지 균형 있게 즐기실 수 있는 도시예요.',
+    desc: '판다, 사천 음식, 느긋한 분위기, 근교 여행까지 균형 있게 즐길 수 있는 도시예요.',
     days: '3-5일',
     bestSeason: '3월-6월, 9월-11월',
     difficulty: '보통',
-    whyGo: '판다 기지와 훠궈, 찻집 문화, 여유로운 템포를 좋아하신다면 만족도가 높은 도시예요.',
+    whyGo: '판다 기지와 훠궈, 찻집 문화, 여유로운 템포를 좋아한다면 만족도가 높아요.',
     next: '/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
     nextLabel: '청두 음식 주문 팁',
   },
@@ -69,7 +73,7 @@ const cities = [
     days: '3-4일',
     bestSeason: '3월-5월, 9월-11월',
     difficulty: '보통',
-    whyGo: '병마용과 성벽, 오래된 거리 풍경을 통해 역사 여행의 밀도를 높이실 수 있어요.',
+    whyGo: '병마용과 성벽, 오래된 거리 풍경을 통해 역사 여행의 밀도를 높일 수 있어요.',
     next: '/ko/posts/china-high-speed-rail-guide-foreigners/',
     nextLabel: '중국 고속철도 가이드',
   },
@@ -87,11 +91,11 @@ const cities = [
   {
     name: '충칭',
     href: '/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    desc: '입체적인 지형, 강렬한 야경, 매운 음식으로 오래 기억에 남는 개성 강한 도시예요.',
+    desc: '입체적인 지형, 강렬한 야경, 매운 음식으로 기억에 남는 개성 강한 도시예요.',
     days: '3-4일',
     bestSeason: '3월-5월, 9월-11월',
     difficulty: '어려움',
-    whyGo: '언덕과 모노레일, 야경, 훠궈까지 다른 도시와는 확실히 다른 분위기를 느끼실 수 있어요.',
+    whyGo: '언덕과 모노레일, 야경, 훠궈까지 다른 도시와 확실히 다른 분위기를 느낄 수 있어요.',
     next: '/ko/food/',
     nextLabel: '중국 음식 가이드',
   },
@@ -109,11 +113,11 @@ const cities = [
   {
     name: '싼야',
     href: '/ko/posts/sanya-city-guide-for-foreigners/',
-    desc: '해변 휴양, 리조트, 따뜻한 날씨를 중심으로 편하게 쉬어 가기 좋은 남국의 여행지예요.',
+    desc: '해변 휴양, 리조트, 따뜻한 날씨를 중심으로 쉬어 가기 좋은 남국의 여행지예요.',
     days: '3-7일',
     bestSeason: '11월-4월',
     difficulty: '보통',
-    whyGo: '중국 안에서 비교적 편하게 휴양 분위기를 즐기고 싶으실 때 잘 맞는 여행지예요.',
+    whyGo: '중국 안에서 비교적 편하게 휴양 분위기를 즐기고 싶을 때 적합해요.',
     next: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/',
     nextLabel: '계절별 짐 싸기 체크리스트',
   },
@@ -128,30 +132,30 @@ const routes = [
   {
     name: '미식과 개성 중심 루트, 7-9일',
     plan: '청두 4일 + 충칭 또는 시안 3-4일',
-    fit: '판다, 사천 음식, 강한 도시 개성을 선호하시고 로컬한 체험을 많이 하고 싶으실 때 좋아요.',
+    fit: '판다, 사천 음식, 강한 도시 개성을 선호하고 로컬한 체험을 많이 하고 싶을 때 좋아요.',
   },
   {
     name: '휴양과 산책 중심 루트, 6-10일',
     plan: '싼야 4-6일 + 항저우 2-3일',
-    fit: '빠듯한 이동보다 쉬는 시간을 넉넉하게 두고 풍경과 휴식을 함께 챙기고 싶으시다면 추천해요.',
+    fit: '빠듯한 이동보다 쉬는 시간을 넉넉하게 두고 풍경과 휴식을 함께 챙기고 싶다면 추천해요.',
   },
 ];
 
 const faqItems = [
   {
-    question: '처음 중국에 가신다면 어느 도시부터 시작하는 것이 좋을까요?',
+    question: '처음 중국에 가면 어느 도시부터 시작하는 것이 좋나요?',
     answer:
-      '처음 방문하신다면 상하이와 베이징처럼 교통이 비교적 쉽고 정보가 많은 도시부터 시작하시는 편이 편해요. 도시 인프라에 익숙해진 뒤 청두, 광저우, 충칭처럼 개성이 더 뚜렷한 도시로 넓혀 가시면 일정을 짜기가 훨씬 수월해져요.',
+      '처음 방문이라면 상하이와 베이징처럼 교통이 비교적 쉽고 정보가 많은 도시부터 시작하는 편이 편합니다. 도시 인프라에 익숙해진 뒤 청두, 광저우, 충칭처럼 성격이 더 뚜렷한 도시로 넓혀 가면 일정 짜기가 수월해요.',
   },
   {
-    question: '여러 도시를 한 번에 묶어서 여행해도 괜찮을까요?',
+    question: '여러 도시를 한 번에 묶어서 여행해도 괜찮나요?',
     answer:
-      '보통 8-10일 이상이라면 두세 도시를 묶어서 여행하셔도 괜찮아요. 다만 이동 시간이 길어질 수 있으니 고속철이나 항공편 연결이 좋은 도시끼리 조합하시고, 도시마다 최소 2박 이상은 잡아 두시는 편이 훨씬 안정적이에요.',
+      '보통 8-10일 이상이라면 두세 도시를 묶어도 괜찮습니다. 다만 이동 시간이 길어질 수 있으니 고속철이나 항공편 연결이 좋은 도시끼리 조합하고, 도시마다 최소 2박 이상은 두는 편이 훨씬 안정적이에요.',
   },
   {
     question: '가족 여행이나 휴양 여행에 더 잘 맞는 도시는 어디인가요?',
     answer:
-      '가족 여행에는 이동이 편하고 볼거리가 다양한 상하이, 베이징, 항저우가 무난해요. 휴양 성격이 더 중요하시다면 싼야가 가장 잘 맞고, 음식과 여유로운 분위기를 함께 원하신다면 청두도 좋은 선택이에요.',
+      '가족 여행에는 이동이 편하고 볼거리가 다양한 상하이, 베이징, 항저우가 무난합니다. 휴양 성격이 더 중요하다면 싼야가 가장 잘 맞고, 음식과 여유로운 분위기를 함께 원하면 청두도 좋은 선택이에요.',
   },
 ];
 
@@ -167,9 +171,8 @@ const faqJsonLd = {
     },
   })),
 };
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'ko';
 ---
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
   <Header locale="ko" />
@@ -254,7 +257,7 @@ const locale = 'ko';
         <p class="section-kicker">추천 루트</p>
         <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">도시 조합 예시</h2>
         <p class="mt-3 leading-7 text-gray-600">
-          중국 여행은 도시마다 성격 차이가 커서 어떤 분위기를 우선할지 먼저 정해 두시면 일정이 훨씬 쉬워져요. 세련된 대도시 감성을 원하시면 상하이와 베이징이 잘 맞고, 음식과 로컬 체험을 중시하신다면 청두나 충칭이 좋아요. 휴식과 풍경을 더 챙기고 싶으시다면 항저우나 싼야를 섞어서 여유 있는 루트를 만드는 편이 만족도가 높아요.
+          중국 여행은 도시마다 성격 차이가 커서, 어떤 분위기를 우선할지 먼저 정하면 일정이 훨씬 쉬워집니다. 세련된 대도시 감성을 원하면 상하이와 베이징이 잘 맞고, 음식과 로컬 체험을 중시하면 청두나 충칭이 좋습니다. 휴식과 풍경을 더 챙기고 싶다면 항저우나 싼야를 섞어 여유 있는 루트를 만드는 편이 만족도가 높아요.
         </p>
       </div>
       <div class="grid gap-4">
@@ -273,13 +276,13 @@ const locale = 'ko';
         <div class="section-heading">
           <div>
             <p class="section-kicker">관련 도시 콘텐츠</p>
-            <h2>도시별로 함께 읽기 좋은 글</h2>
+            <h2>도시별로 함께 읽으면 좋은 글</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {cityPosts.map((post) => (
             <a href={`/ko/posts/${post.slug}/`} class="card block hover:no-underline">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
             </a>
@@ -288,12 +291,12 @@ const locale = 'ko';
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <p class="section-kicker">도시 선택 전에 체크하세요</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">먼저 읽어 두시면 좋은 가이드</h2>
+        <p class="section-kicker">도시 선택 전 체크</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">먼저 보면 좋은 가이드</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
           <li><a href="/ko/payment/" class="font-semibold text-brand-700">결제:</a> Alipay, WeChat Pay, 현금 사용 범위를 먼저 확인해 두세요.</li>
           <li><a href="/ko/esim/" class="font-semibold text-brand-700">통신:</a> eSIM과 물리 SIM 중 어떤 방식이 여행 스타일에 맞는지 비교해 보세요.</li>
-          <li><a href="/ko/transport/" class="font-semibold text-brand-700">교통:</a> 고속철, 공항 이동, DiDi, 지하철 QR 이용법을 미리 익혀 두시면 편해요.</li>
+          <li><a href="/ko/transport/" class="font-semibold text-brand-700">교통:</a> 고속철, 공항 이동, DiDi, 지하철 QR 이용법을 미리 익혀 두면 편합니다.</li>
           <li><a href="/ko/tools/best-time-to-visit/" class="font-semibold text-brand-700">계절:</a> 날씨와 성수기를 함께 보고 방문 시기를 정해 보세요.</li>
         </ul>
       </aside>
@@ -302,8 +305,8 @@ const locale = 'ko';
     <section class="mt-12" aria-labelledby="city-faq">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">도시 자주 묻는 질문</p>
-          <h2 id="city-faq">중국 도시를 고르기 전에 자주 묻는 질문</h2>
+          <p class="section-kicker">도시 FAQ</p>
+          <h2 id="city-faq">중국 도시 선택 전에 자주 묻는 질문</h2>
         </div>
       </div>
       <div class="mt-6 grid gap-4 md:grid-cols-3">

@@ -3,85 +3,85 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = '외국인 여행자를 위한 중국 여행 자료';
+const title = '중국 여행 자료 모음';
 const description =
-  '중국을 방문하는 외국인 여행자를 위한 실용적인 자료 허브예요. 결제, eSIM, 기차, 비자, 도시 가이드, 도구, 첫 여행 계획 링크를 한곳에 모았어요.';
+  '중국 여행 준비에 필요한 핵심 가이드를 주제별로 모아둔 페이지입니다. 결제, eSIM, 교통, 도시 준비, 음식, 장기 체류까지 한눈에 살펴보세요.';
 
 const resourceGroups = [
   {
-    title: '30분밖에 없을 때',
-    description: '중국 여행 준비를 빠르게 마쳐야 하는 분들을 위한 짧고 효율적인 읽기 경로예요.',
+    title: '30분 안에 끝내는 출발 전 준비',
+    description: '출국 전에 빠르게 체크해야 할 핵심 가이드만 먼저 보고 싶다면 여기부터 시작하세요.',
     links: [
-      { href: '/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '출발 전 설정 체크리스트' },
-      { href: '/ko/tools/survival-kit/', title: '중국 생존 키트 카드와 체크리스트' },
-      { href: '/ko/tools/payment-checker/', title: '결제 백업 계획 확인하기' },
-      { href: '/ko/tools/visa-free-checker/', title: '비자 면제 입국 또는 환승 가능 여부 확인하기' },
-      { href: '/ko/posts/china-high-speed-rail-guide-foreigners/', title: '기차 예약과 역 이용 방법 알아보기' },
+      { href: '/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '출발 전 체크리스트' },
+      { href: '/ko/tools/survival-kit/', title: '중국 여행 생존 키트' },
+      { href: '/ko/tools/payment-checker/', title: '결제 호환성 확인기' },
+      { href: '/ko/tools/visa-free-checker/', title: '무비자·환승 가능 여부 확인기' },
+      { href: '/ko/posts/china-high-speed-rail-guide-foreigners/', title: '중국 고속철도 기본 가이드' },
     ],
   },
   {
-    title: '여기서 시작하세요: 첫 여행 준비',
-    description: '"중국에 가야지"라는 생각에서 실제로 바로 쓸 수 있는 도착 계획까지 이어지는 가장 빠른 경로예요.',
+    title: '처음 가는 중국 여행',
+    description: '처음 중국에 가는 여행자가 가장 많이 묻는 준비 순서를 모았습니다.',
     links: [
-      { href: '/ko/trip-planner/', title: '무료 중국 여행 플래너' },
-      { href: '/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: '처음 가는 분들을 위한 중국 여행 플래너' },
-      { href: '/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '중국 여행 전에 미리 설정할 것들' },
-      { href: '/ko/posts/china-visa-free-entry-transit-guide-2026/', title: '중국 비자 면제 입국 및 환승 가이드' },
-      { href: '/ko/tools/best-time-to-visit/', title: '중국 여행하기 가장 좋은 시기' },
-      { href: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '중국 여행 짐 챙기기' },
+      { href: '/ko/trip-planner/', title: '중국 여행 플래너' },
+      { href: '/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: '초보 여행자용 전체 플랜' },
+      { href: '/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '출발 전 꼭 해둘 설정' },
+      { href: '/ko/posts/china-visa-free-entry-transit-guide-2026/', title: '중국 무비자·환승 입국 가이드' },
+      { href: '/ko/tools/best-time-to-visit/', title: '중국 여행 시기 플래너' },
+      { href: '/ko/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: '계절별 짐 싸기 가이드' },
     ],
   },
   {
-    title: '결제와 화폐',
-    description: '모바일 결제, 현금 예비 수단, 카드 사용, 일상적인 결제 문제까지 정리했어요.',
+    title: '결제와 현금',
+    description: '모바일 결제, 카드 연결, 수수료, 예비 현금까지 결제 준비만 따로 정리했습니다.',
     links: [
-      { href: '/ko/posts/how-to-pay-in-china-tourist-guide/', title: '관광객으로 중국에서 결제하는 방법' },
-      { href: '/ko/posts/alipay-foreign-credit-card-step-by-step/', title: '해외 카드로 Alipay 설정하기' },
-      { href: '/ko/posts/wechat-pay-foreign-visitors-guide/', title: '외국인 방문객을 위한 WeChat Pay 가이드' },
-      { href: '/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '출발 전 결제와 앱 체크리스트' },
-      { href: '/ko/tools/payment-checker/', title: '결제 호환성 확인하기' },
+      { href: '/ko/posts/how-to-pay-in-china-tourist-guide/', title: '중국 결제 전체 가이드' },
+      { href: '/ko/posts/alipay-foreign-credit-card-step-by-step/', title: 'Alipay 설정 방법' },
+      { href: '/ko/posts/wechat-pay-foreign-visitors-guide/', title: 'WeChat Pay 사용 가이드' },
+      { href: '/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: '출발 전 결제 준비 체크' },
+      { href: '/ko/tools/payment-checker/', title: '결제 점검 도구' },
     ],
   },
   {
-    title: '인터넷과 앱',
-    description: '계속 온라인 상태를 유지하는 방법, eSIM 선택법, 출발 전에 작동하는 앱을 확인하는 방법을 안내해요.',
+    title: 'eSIM과 인터넷',
+    description: 'eSIM 선택, 데이터 전략, 앱 접속성, 도착 직후 인터넷 준비에 필요한 자료입니다.',
     links: [
-      { href: '/ko/posts/best-esim-for-china-travel-2026/', title: '중국 여행에 가장 좋은 eSIM' },
-      { href: '/ko/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: '중국 eSIM과 로밍 비용 비교' },
-      { href: '/ko/posts/internet-access-china-apps-that-work-2026/', title: '중국 인터넷 접속과 사용 가능한 앱' },
-      { href: '/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'eSIM과 앱으로 준비하는 첫 중국 여행 계획' },
-      { href: '/ko/tools/app-availability-checker/', title: '내 앱이 중국에서 작동하는지 확인하기' },
+      { href: '/ko/posts/best-esim-for-china-travel-2026/', title: '중국 여행 eSIM 추천' },
+      { href: '/ko/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'eSIM vs 로밍 비교' },
+      { href: '/ko/posts/internet-access-china-apps-that-work-2026/', title: '중국 인터넷·앱 사용 가이드' },
+      { href: '/ko/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: '인터넷 준비 전체 흐름' },
+      { href: '/ko/tools/app-availability-checker/', title: '앱 사용 가능 여부 확인기' },
     ],
   },
   {
-    title: '교통과 도시 가이드',
-    description: '기차, 지하철, 공항, 차량 호출 서비스, 그리고 실용적인 도시 이동 계획까지 다뤄요.',
+    title: '교통과 이동',
+    description: '고속철도, 공항 이동, 지하철, DiDi, 도시 간 이동 팁을 모았습니다.',
     links: [
-      { href: '/ko/cities/', title: '중국 도시 가이드 허브' },
-      { href: '/ko/posts/china-high-speed-rail-guide-foreigners/', title: '외국인을 위한 중국 고속철도 가이드' },
-      { href: '/ko/posts/book-china-train-tickets-12306-foreigners/', title: '12306에서 중국 기차표 예약하기' },
-      { href: '/ko/posts/didi-china-foreign-tourists-guide/', title: '외국인 관광객이 DiDi 사용하는 방법' },
-      { href: '/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: '공항에서 시내까지 가는 교통 가이드' },
+      { href: '/ko/cities/', title: '중국 도시 가이드 모음' },
+      { href: '/ko/posts/china-high-speed-rail-guide-foreigners/', title: '외국인용 고속철도 가이드' },
+      { href: '/ko/posts/book-china-train-tickets-12306-foreigners/', title: '12306 열차 예매 방법' },
+      { href: '/ko/posts/didi-china-foreign-tourists-guide/', title: 'DiDi 사용 가이드' },
+      { href: '/ko/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: '공항에서 시내 이동하기' },
     ],
   },
   {
-    title: '음식, 예절, 일상생활',
-    description: '식사 예절, 팁 문화, 배달 앱, 길거리 음식, 그리고 현지에서 불편을 줄이는 실용적인 습관을 소개해요.',
+    title: '음식, 식당, 식문화',
+    description: '주문 방법, 길거리 음식, 향신료, 식당 예절 같은 주제를 모았습니다.',
     links: [
-      { href: '/ko/food/', title: '중국 음식과 식사 가이드 허브' },
+      { href: '/ko/food/', title: '중국 음식 가이드 모음' },
       { href: '/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: '중국어 없이 음식 주문하기' },
-      { href: '/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: '청두 길거리 음식 안전과 매운맛 가이드' },
-      { href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '중국에서 팁을 줘야 하는 경우와 아닌 경우' },
+      { href: '/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: '청두 길거리 음식 가이드' },
+      { href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: '중국 팁 문화 이해하기' },
     ],
   },
   {
     title: '장기 체류와 원격 근무',
-    description: '몇 주 또는 몇 달 머무를 예정이라면, 합법성, 숙소, 결제, 업무 도구의 안정성부터 먼저 확인해 보세요.',
+    description: '장기 체류자, 디지털 노마드, 생활형 여행자를 위한 준비 자료입니다.',
     links: [
       { href: '/ko/long-stay/', title: '중국 장기 체류 가이드' },
       { href: '/ko/digital-nomads/', title: '중국 디지털 노마드 가이드' },
-      { href: '/ko/digital-nomads/visa/', title: '디지털 노마드를 위한 중국 비자 가이드' },
-      { href: '/ko/digital-nomads/payment/', title: '장기 체류를 위한 결제 설정' },
+      { href: '/ko/digital-nomads/visa/', title: '장기 체류와 비자 정보' },
+      { href: '/ko/digital-nomads/payment/', title: '장기 체류 결제 준비' },
     ],
   },
 ];
