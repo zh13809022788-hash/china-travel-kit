@@ -1,88 +1,90 @@
 ---
-import GuideLayout from '../../../layouts/GuideLayout.astro';
+import GuideLayout from '../../layouts/GuideLayout.astro';
 
-const title = 'Langzeitaufenthalt in China: Der komplette Leitfaden für Ausländer (2026)';
+const title = "Langfristiger Aufenthalt in China: Der vollständige Leitfaden für Ausländer (2026)";
 const description =
-  'Planen Sie einen Aufenthalt in China für 1 bis 6 Monate? Unser Leitfaden behandelt Langzeitunterkünfte, Visaregeln, monatliche Kosten und Alltagstipps für Langsamreisende und Auswanderer.';
+  'Planen Sie, 1-6 Monate in China zu bleiben? Unser Leitfaden behandelt langfristige Unterkünfte, Visaregeln, monatliche Kosten und Alltagstipps für Slow Traveler und Expats.';
 const url = '/long-stay/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
   { label: 'Startseite', href: '/' },
-  { label: 'Langzeitaufenthalt' },
+  { label: 'Langfristiger Aufenthalt' },
 ];
 
 const toc = [
-  { id: 'short-vs-long', label: 'Kurzreise vs. Langzeitaufenthalt' },
-  { id: 'legal-stay', label: 'Legaler Aufenthalt für 1 bis 6 Monate' },
-  { id: 'accommodation', label: 'Langzeitunterkunft' },
+  { id: 'short-vs-long', label: 'Kurzreise vs. Langfristiger Aufenthalt' },
+  { id: 'legal-stay', label: '1-6 Monate legal bleiben' },
+  { id: 'accommodation', label: 'Langfristige Unterkunft' },
   { id: 'monthly-cost', label: 'Monatliche Lebenshaltungskosten' },
-  { id: 'daily-life', label: 'Wichtige Grundlagen für den Alltag' },
-  { id: 'cities', label: 'Beliebte Städte für Langzeitaufenthalte' },
+  { id: 'daily-life', label: 'Wesentliches für den Alltag' },
+  { id: 'cities', label: 'Beliebte Städte für langfristige Aufenthalte' },
   { id: 'faq', label: 'FAQ' },
 ];
 
 const faqs = [
   {
-    question: 'Wie lange darf sich ein Ausländer ohne Aufenthaltserlaubnis legal in China aufhalten?',
+    question: 'Wie lange kann ein Ausländer ohne Aufenthaltserlaubnis legal in China bleiben?',
     answer:
-      'Das hängt von Ihrem Visum ab. Ein Touristenvisum (L) wird in der Regel für 30, 60 oder 90 Tage pro Einreise ausgestellt, und einige Nationalitäten können es einmal bei der lokalen Ein- und Ausreisebehörde verlängern. Ein Geschäftsvisum (M) kann bei mehrjähriger Gültigkeit 90 bis 180 Tage pro Einreise erlauben. Alles, was über etwa sechs Monate durchgehenden Aufenthalt hinausgeht, oder jede lokale Arbeit erfordert eine Aufenthaltserlaubnis, die an ein Arbeits- oder Familienvisum gebunden ist.',
+      'Das hängt von Ihrem Visum ab. Ein Touristenvisum (L) wird in der Regel für einen Aufenthalt von 30, 60 oder 90 Tagen pro Einreise ausgestellt, und einige Nationalitäten können es einmal beim örtlichen Ausreise- und Einreisebüro verlängern. Ein Geschäftsvisum (M) kann 90 bis 180 Tage pro Einreise bei einer mehrjährigen Gültigkeit erlauben. Alles, was über ungefähr sechs Monate ununterbrochenes Leben hinausgeht, oder jede lokale Arbeit, erfordert eine Aufenthaltserlaubnis, die an ein Arbeits- oder Familienvisum gebunden ist.',
   },
   {
-    question: 'Können Ausländer in China für einige Monate eine normale Wohnung mieten?',
+    question: 'Können Ausländer für ein paar Monate eine normale Wohnung in China mieten?',
     answer:
-      'Ja. Ausländer können private Wohnungen mieten, auch wenn Vermieter oft Mietverträge über 6 oder 12 Monate bevorzugen. Für 1 bis 3 Monate sind Apartmenthotels und monatliche Hotelraten einfacher, weil sie die Formalitäten übernehmen. Egal, was Sie mieten: Sie müssen Ihre Adresse innerhalb von 24 Stunden nach dem Einzug bei der lokalen Polizei registrieren.',
+      'Ja. Ausländer können private Wohnungen mieten, auch wenn Vermieter oft Mietverträge über 6 oder 12 Monate bevorzugen. Für 1 bis 3 Monate sind Serviced Apartments und monatliche Hotelraten einfacher, weil sie den Papierkram übernehmen. Unabhängig davon, was Sie mieten, müssen Sie Ihre Adresse innerhalb von 24 Stunden nach dem Einzug bei der örtlichen Polizei registrieren.',
   },
   {
     question: 'Muss ich mich bei der Polizei registrieren, wenn ich privat miete?',
     answer:
-      'Ja. Hotels registrieren Sie automatisch, aber wenn Sie in einer privaten Wohnung oder bei Freunden wohnen, müssen Sie sich innerhalb von 24 Stunden nach der Ankunft bei der lokalen Polizeistation anmelden und erneut nach jeder Wiedereinreise. Bringen Sie Ihren Reisepass sowie den Mietvertrag oder die Angaben Ihres Gastgebers mit. Wer dies versäumt, riskiert Geldstrafen.',
+      'Ja. Hotels registrieren Sie automatisch, aber wenn Sie in einer privaten Wohnung oder bei Freunden wohnen, müssen Sie sich innerhalb von 24 Stunden nach der Ankunft bei der örtlichen Polizeistation registrieren, und erneut jedes Mal, wenn Sie wieder ins Land einreisen. Bringen Sie Ihren Reisepass und den Mietvertrag oder die Daten des Gastgebers mit. Wenn Sie das auslassen, kann das zu Geldstrafen führen.',
   },
   {
-    question: 'Wie viel kostet ein Monat Leben in China als Ausländer?',
+    question: 'Wie viel kostet es einen Ausländer, einen Monat lang in China zu leben?',
     answer:
-      'Ein komfortables Budget für eine Einzelperson reicht von etwa 6.000 RMB pro Monat in einer kleineren Stadt wie Dali bis zu 15.000 RMB oder mehr im Zentrum von Shanghai. Die Miete ist der größte variable Faktor. Essen, Verkehr und mobile Daten sind im Vergleich zu westlichen Städten günstig, daher fließt der größte Teil des Budgets in die Unterkunft.',
+      'Ein komfortables Budget für eine Einzelperson reicht von etwa 6.000 RMB pro Monat in einer kleinen Stadt wie Dali bis zu 15.000 RMB oder mehr im Zentrum von Shanghai. Die Miete ist die größte Variable. Essen, Transport und mobile Daten sind im Vergleich zu westlichen Städten günstig, sodass der größte Teil Ihres Budgets auf die Unterkunft entfällt.',
   },
   {
     question: 'Gibt es bei längeren Aufenthalten eine Sprachbarriere?',
     answer:
-      'Außerhalb großer internationaler Viertel ist Englisch nur begrenzt verbreitet. Übersetzungs-Apps, Offline-Karten sowie Alipay- oder WeChat-Mini-Programme decken die meisten Alltagssituationen ab. Ein paar Mandarin-Sätze und einige Schriftzeichen lesen zu können, macht einen Langzeitaufenthalt deutlich einfacher, ist aber keine Voraussetzung.',
+      'Außerhalb großer internationaler Viertel sind Englischkenntnisse begrenzt. Übersetzungs-Apps, Offline-Karten und Mini-Programme in Alipay oder WeChat decken die meisten Alltagssituationen ab. Ein paar Mandarin-Phrasen zu lernen und einige Schriftzeichen lesen zu können, macht einen längeren Aufenthalt deutlich reibungsloser, ist aber keine Voraussetzung.',
   },
   {
-    question: 'Kann ich meine Krankenversicherung aus dem Heimatland nutzen, und brauche ich lokalen Schutz?',
+    question: 'Kann ich meine Krankenversicherung aus dem Heimatland nutzen, und brauche ich lokalen Versicherungsschutz?',
     answer:
-      'China verlangt von Besuchern keine lokale Krankenversicherung, aber öffentliche Krankenhäuser erwarten Vorauszahlung, und die meisten heimischen Policen zahlen chinesische Anbieter nicht direkt. Für einen mehrmonatigen Aufenthalt ist eine internationale Reisekrankenversicherung oder Auslandsversicherung mit Deckung für China dringend zu empfehlen, idealerweise einschließlich privater internationaler Kliniken in Großstädten.',
+      'China verlangt von Besuchern nicht, eine lokale Krankenversicherung zu haben, aber öffentliche Krankenhäuser erwarten Vorauszahlung, und die meisten Policen aus dem Heimatland zahlen chinesische Anbieter nicht direkt. Für einen mehrmonatigen Aufenthalt wird eine internationale Reisekranken- oder Expat-Versicherung, die China abdeckt, dringend empfohlen, idealerweise einschließlich privater internationaler Kliniken in großen Städten.',
   },
   {
-    question: 'Kann ich für einen Langzeitaufenthalt ein chinesisches Bankkonto eröffnen?',
+    question: 'Kann ich für einen langfristigen Aufenthalt ein chinesisches Bankkonto eröffnen?',
     answer:
-      'Es ist möglich, für Nichtansässige aber zunehmend papierintensiv. Viele Langzeitreisende verzichten ganz darauf, weil Alipay und WeChat Pay inzwischen wichtige ausländische Karten für Alltagsausgaben akzeptieren. Ein lokales Konto hilft vor allem, wenn Sie vor Ort RMB empfangen oder bestimmte Vermieter per Banküberweisung bezahlen müssen.',
+      'Es ist möglich, aber für Nichtansässige mit zunehmend viel Papierkram verbunden. Viele Reisende mit längerem Aufenthalt verzichten inzwischen ganz darauf, weil Alipay und WeChat Pay jetzt große ausländische Karten für alltägliche Ausgaben akzeptieren. Ein lokales Konto hilft vor allem dann, wenn Sie RMB vor Ort empfangen oder bestimmte Vermieter per Banküberweisung bezahlen müssen.',
   },
   {
     question: 'Was passiert, wenn ich länger bleiben möchte, als mein Visum erlaubt?',
     answer:
-      'Beantragen Sie vor Ablauf Ihres aktuellen Aufenthalts eine Verlängerung bei der Ein- und Ausreisestelle des lokalen Amts für öffentliche Sicherheit, oder reisen Sie aus und mit einer neuen Einreise wieder ein, wenn Ihr Visum mehrere Einreisen erlaubt. Eine Überziehung führt zu täglichen Geldstrafen und kann künftige Visumanträge beeinträchtigen. Planen Sie Ausreise oder Verlängerung daher rechtzeitig vor dem Ablaufdatum.',
+      'Beantragen Sie eine Verlängerung beim örtlichen Ausreise- und Einreisebüro des Public Security Bureau, bevor Ihr aktueller Aufenthalt abläuft, oder reisen Sie aus und mit einer neuen Einreise wieder ein, falls Ihr Visum mehrere Einreisen erlaubt. Ein Overstay zieht eine tägliche Geldstrafe nach sich und kann sich auf zukünftige Visaanträge auswirken, daher sollten Sie Ihre Ausreise oder Verlängerung lange vor dem Ablaufdatum planen.',
   },
 ];
 
 const related = [
   {
-    title: 'Der komplette China-Leitfaden für digitale Nomaden (2026)',
-    description: 'In China leben und aus der Ferne arbeiten: Visa, Bezahlen, beste Städte und Internetzugang.',
-    href: '/de/digital-nomads/',
+    title: 'Der vollständige Leitfaden für digitale Nomaden in China (2026)',
+    description: 'In China leben und remote arbeiten: Visa, Bezahlung, beste Städte und Internetzugang.',
+    href: '/digital-nomads/',
   },
   {
     title: 'China-Visum für digitale Nomaden (2026)',
-    description: 'Alle legalen Optionen für längere Aufenthalte: Touristenvisa, Geschäftsvisa, Transitregeln und Grenzreisen.',
-    href: '/de/digital-nomads/visa/',
+    description: 'Jede legale Option für einen längeren Aufenthalt: Touristenvisa, Geschäftsvisa, Transitregeln und Border Runs.',
+    href: '/digital-nomads/visa/',
   },
   {
     title: 'Wie man als Ausländer in China bezahlt',
-    description: 'Alipay und WeChat Pay einrichten, Bargeldbedarf verstehen und ausländische Karten im Alltag nutzen.',
-    href: '/de/digital-nomads/payment/',
+    description: 'Richten Sie Alipay und WeChat Pay ein, verstehen Sie den Bargeldbedarf und nutzen Sie ausländische Karten im Alltag.',
+    href: '/digital-nomads/payment/',
   },
 ];
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
 
 <GuideLayout
   title={title}
@@ -94,139 +96,139 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-long-stay"
-  coverAlt="Ein Ausländer richtet sich für ein längeres Leben in einer chinesischen Stadt ein"
- locale="de">
+  coverAlt="Ein Ausländer, der sich auf ein langfristiges Leben in einer chinesischen Stadt einrichtet"
+>
   <p>
     Einen Monat oder länger in China zu bleiben, ist eine völlig andere Erfahrung als eine
-    einwöchige Reise. Man optimiert nicht mehr jeden Tag für Sehenswürdigkeiten, sondern beginnt
-    zu leben: selbst kochen, ein Café in der Nachbarschaft finden, herausfinden, welcher
-    U-Bahn-Ausgang am nächsten zur Wohnung liegt. Dieser Leitfaden richtet sich an Langsamreisende,
-    Menschen im Sabbatical, Fernarbeitende und angehende Auswanderer, die sich für ein bis sechs Monate
-    irgendwo in China niederlassen möchten. Er erklärt, wie Sie legal bleiben, wo Sie wohnen
-    können, was es kostet und wie Sie die Alltagslogistik bewältigen, über die man bei einem
-    kurzen Touristenbesuch nie nachdenken muss.
+    einwöchige Rundreise. Sie optimieren nicht mehr jeden Tag fürs Sightseeing, sondern beginnen zu
+    leben: einige Ihrer Mahlzeiten selbst kochen, ein Café im Viertel finden, lernen, welcher
+    Metroausgang dem Zuhause am nächsten ist. Dieser Leitfaden ist für Slow Traveler, Menschen im
+    Sabbatical, Remote-Arbeiter und angehende Expats, die planen, sich irgendwo in China für
+    einen Zeitraum von einem bis sechs Monaten niederzulassen. Er führt Sie durch alles Wichtige:
+    wie Sie legal bleiben, wo Sie wohnen, was es kostet und wie Sie die alltägliche Logistik
+    bewältigen, über die man bei einem kurzen Touristenbesuch nie nachdenken muss.
   </p>
 
-  <h2 id="short-vs-long">Kurzreise vs. Langzeitaufenthalt: Was sich wirklich ändert</h2>
+  <h2 id="short-vs-long">Kurzreise vs. langfristiger Aufenthalt: Was sich tatsächlich ändert</h2>
   <p>
-    Auf einer Kurzreise nimmt Ihnen ein Hotel fast jedes logistische Problem ab: Es registriert Sie
-    bei der Polizei, reinigt Ihr Zimmer und liegt in der Nähe der Sehenswürdigkeiten. Bei einem
-    Langzeitaufenthalt verschwinden diese Annehmlichkeiten entweder oder werden teuer. Dafür
-    erhalten Sie niedrigere Tageskosten und eine echte Routine. Am stärksten ändern sich drei
-    Dinge: <strong>Ihr rechtlicher Status</strong> (eine einzelne touristische Einreise deckt
-    möglicherweise nicht den gesamten Zeitraum ab), <strong>Ihre Unterkunft</strong> (Hotelpreise
-    pro Nacht ergeben nach einigen Wochen kaum noch Sinn) und <strong>Ihr Umgang mit
-    Bürokratie</strong> (Adressregistrierung, mögliche Visaverlängerungen und längerfristige
-    Versicherung werden zu Ihrer Verantwortung). Wenn diese drei Punkte stimmen, läuft der Rest
-    des Langzeitaufenthalts in China erstaunlich reibungslos.
+    Auf einer kurzen Reise nimmt Ihnen ein Hotel fast jedes logistische Problem ab: Es registriert
+    Sie bei der Polizei, reinigt Ihr Zimmer und liegt in der Nähe der Sehenswürdigkeiten. Bei einem
+    langfristigen Aufenthalt verschwinden diese Bequemlichkeiten entweder oder werden teuer, sodass
+    Sie sie gegen niedrigere Tageskosten und eine echte Routine eintauschen. Die drei Dinge, die
+    sich am stärksten ändern, sind <strong>Ihr rechtlicher Status</strong> (eine einzelne
+    Touristen-Einreise deckt möglicherweise nicht den gesamten Zeitraum ab),
+    <strong>Ihre Unterkunft</strong> (nächtliche Hotelpreise ergeben nach ein paar Wochen keinen
+    Sinn mehr) und <strong>Ihre Beziehung zur Bürokratie</strong> (Adressregistrierung, mögliche
+    Visaverlängerungen und längerfristige Versicherungen werden alle zu Ihrer Verantwortung). Wenn
+    Sie diese drei Dinge richtig machen, verläuft der Rest des langfristigen Lebens in China
+    bemerkenswert reibungslos.
   </p>
 
-  <h2 id="legal-stay">Legaler Aufenthalt für 1 bis 6 Monate</h2>
+  <h2 id="legal-stay">1-6 Monate legal bleiben</h2>
   <p>
-    Es gibt kein einheitliches "Langzeitvisum" für einen privaten Aufenthalt in China. Die meisten
-    Menschen kombinieren oder verlängern daher die Standardoptionen. Ihre Wahl hängt davon ab,
-    wie lange Sie bleiben möchten und ob es einen geschäftlichen Grund für Ihren Aufenthalt gibt.
+    Es gibt kein einzelnes „Langzeitvisum“ für ein lockeres Leben in China, daher kombinieren oder
+    verlängern die meisten Menschen die Standardoptionen. Ihre Wahl hängt davon ab, wie lange Sie
+    bleiben möchten und ob Sie irgendeinen geschäftlichen Grund haben, dort zu sein.
   </p>
   <h3>Touristenvisum (L) und Verlängerungen</h3>
   <p>
-    Das L-Visum ist die Standardoption für touristische Aufenthalte. Je nach Nationalität wird es
-    für 30, 60 oder 90 Tage pro Einreise ausgestellt. Wenn Sie etwas länger bleiben müssen,
-    können Sie in der Regel einmal eine 30-tägige Verlängerung bei der lokalen
-    Ein- und Ausreisebehörde beantragen, sofern Sie den Antrag vor Ablauf Ihres aktuellen
-    Aufenthalts stellen und finanzielle Mittel sowie eine Unterkunft nachweisen können. Für viele
-    Reisende deckt das Aufenthalte von zwei bis drei Monaten bequem ab.
+    Das L-Visum ist die Standardoption für Freizeitreisen. Je nach Ihrer Nationalität wird es für
+    30, 60 oder 90 Tage Aufenthalt pro Einreise ausgestellt. Wenn Sie etwas länger bleiben müssen,
+    können Sie in der Regel einmal eine 30-tägige Verlängerung beim örtlichen Ausreise- und
+    Einreisebüro beantragen, vorausgesetzt, Sie stellen den Antrag vor Ablauf Ihres aktuellen
+    Aufenthalts und können finanzielle Mittel sowie eine Unterkunft nachweisen. Damit lassen sich
+    Aufenthalte von bis zu zwei oder drei Monaten für viele Reisende problemlos abdecken.
   </p>
-  <h3>Geschäftsvisum (M) für 3 bis 6 Monate</h3>
+  <h3>Geschäftsvisum (M) für 3-6 Monate</h3>
   <p>
-    Wenn Sie eine legitime geschäftliche Verbindung haben, etwa Besprechungen, Lieferantenbesuche oder
-    Konferenzen, passt ein M-Visum für längere Zeiträume besser. Es wird häufig mit
-    mehrjähriger Gültigkeit und Aufenthalten von 90 bis 180 Tagen pro Einreise ausgestellt, was
-    ein mehrmonatiges Leben deutlich weniger stressig macht als mehrere touristische
-    Verlängerungen. Dafür ist ein Einladungsschreiben eines chinesischen Unternehmens oder
-    Branchenverbands erforderlich.
+    Wenn Sie irgendeine legitime geschäftliche Verbindung haben — Besprechungen, Lieferantenbesuche,
+    Konferenzen — ist ein M-Visum für längere Zeiträume besser geeignet. Es wird häufig mit
+    mehrjähriger Gültigkeit und Aufenthalten von 90 bis 180 Tagen pro Einreise ausgestellt, was ein
+    mehrmonatiges Leben deutlich weniger stressig macht, als Touristenverlängerungen zu stapeln. Es
+    erfordert ein Einladungsschreiben eines chinesischen Unternehmens oder Handelsverbands.
   </p>
-  <h3>Visafreier Transit für kurze Aufenthalte</h3>
+  <h3>Visafreier Transit für kurze Abschnitte</h3>
   <p>
-    Viele Nationalitäten qualifizieren sich für einen visafreien Transit von 240 Stunden
-    (10 Tagen), wenn sie über bestimmte Städte in ein Drittland weiterreisen. Das ist keine
-    Lösung zum Leben vor Ort, aber nützlich, um eine Stadt zu erkunden, bevor man sich für ein
-    längeres Visum entscheidet. Nutzen Sie unseren
-    <a href="/de/tools/visa-free-checker/">Checker für visafreie Einreise und Transit</a>, um zu
-    sehen, was Ihr Reisepass erlaubt.
+    Viele Nationalitäten qualifizieren sich für einen 240-stündigen (10-tägigen) visafreien
+    Transit, wenn sie über ausgewiesene Städte auf dem Weg in ein Drittland reisen. Das ist keine
+    Lösung zum Leben, aber nützlich, um eine Stadt zu erkunden, bevor man sich auf ein längeres
+    Visum festlegt. Prüfen Sie mit unserem
+    <a href="/tools/visa-free-checker/">Checker für visafreie Einreise und Transit</a>, was Ihr
+    Reisepass erlaubt.
   </p>
   <p>
-    Welchen Weg Sie auch wählen: Die wichtigste Regel ist, Ausreise oder Verlängerung lange vor
-    Ablauf Ihres erlaubten Aufenthalts zu planen. Eine Überziehung führt zu täglichen
-    Geldstrafen und kann künftige Einreisen gefährden.
+    Für welchen Weg Sie sich auch entscheiden, die goldene Regel lautet: Planen Sie Ihre Ausreise
+    oder Verlängerung rechtzeitig, lange bevor Ihr erlaubter Aufenthalt endet. Ein Overstay zieht
+    tägliche Geldstrafen nach sich und kann zukünftige Einreisen gefährden.
   </p>
 
-  <h2 id="accommodation">Langzeitunterkunft</h2>
+  <h2 id="accommodation">Langfristige Unterkunft</h2>
   <p>
-    Wo Sie wohnen, ist die größte Einzelentscheidung und der größte Kostenpunkt eines
-    Langzeitaufenthalts. Es gibt drei realistische Optionen, jeweils mit klaren Abwägungen
-    zwischen Preis, Flexibilität und Papierkram.
+    Wo Sie schlafen, ist die wichtigste Entscheidung — und der größte Kostenfaktor — eines
+    langfristigen Aufenthalts. Es gibt drei realistische Optionen, jede mit einem klaren
+    Kompromiss zwischen Preis, Flexibilität und Papierkram.
   </p>
-  <h3>Apartmenthotels</h3>
+  <h3>Serviced Apartments</h3>
   <p>
-    Apartmenthotels sind auf mittlere Aufenthalte ausgelegt, möbliert, enthalten Reinigung und
-    Nebenkosten und übernehmen die Polizeiregistrierung für Sie. Rechnen Sie mit einem Aufpreis
-    gegenüber einer einfachen privaten Mietwohnung, aber bei einem Aufenthalt von ein bis drei
-    Monaten überwiegt meist der Komfort. Sie befinden sich vor allem in Geschäftsvierteln großer
-    Städte und werden typischerweise mit Monatspreisen angeboten.
+    Serviced Apartments sind gezielt für mittellange Aufenthalte konzipiert, möbliert, inklusive
+    Reinigung und Nebenkosten und übernehmen die Polizeiregistrierung für Sie. Rechnen Sie im
+    Vergleich zu einer einfachen privaten Mietwohnung mit einem Aufpreis, aber bei einem Aufenthalt
+    von ein bis drei Monaten überwiegt der Komfort in der Regel. Sie konzentrieren sich in den
+    Geschäftsvierteln großer Städte und nennen normalerweise Monatspreise.
   </p>
   <h3>Monatliche Hotelraten</h3>
   <p>
-    Viele Mittelklassehotels bieten diskret stark reduzierte Monatspreise an, besonders außerhalb
-    der Hauptsaison. Sie erhalten automatische Polizeiregistrierung, tägliche oder wöchentliche
-    Zimmerreinigung und keine Mietvertragsbindung, müssen dafür aber mit weniger Platz und ohne
-    Küche leben. Das ist die unkomplizierteste Option, wenn Ihnen Flexibilität wichtiger ist als
-    Quadratmeter.
+    Viele Mittelklassehotels bieten stillschweigend stark reduzierte Monatspreise an, besonders
+    außerhalb der Hochsaison. Sie erhalten automatische Polizeiregistrierung, tägliches oder
+    wöchentliches Housekeeping und keinerlei Bindung an einen Mietvertrag, zum Preis von weniger
+    Platz und keiner Küche. Das ist die Option mit der geringsten Reibung, wenn Ihnen Flexibilität
+    wichtiger ist als Quadratmeter.
   </p>
-  <h3>Private Mietwohnungen</h3>
+  <h3>Private Wohnungsanmietungen</h3>
   <p>
-    Die günstigste Option pro Monat und zugleich die lokalste ist eine private Wohnung über
-    Makler oder bei Einheimischen beliebte Plattformen. Vermieter bevorzugen meist Mietverträge
-    über 6 oder 12 Monate sowie eine Kaution, und Sie sind selbst dafür verantwortlich, Ihre
-    Adresse innerhalb von 24 Stunden bei der Polizeistation zu registrieren. Am besten geeignet für
-    Aufenthalte nahe oder über sechs Monaten oder für alle, die eine Küche und ein echtes
-    Wohnviertel möchten.
+    Die günstigste Option pro Monat und die „lokalste“ ist die Anmietung einer privaten Wohnung
+    über Makler oder Plattformen, die bei Einheimischen beliebt sind. Vermieter bevorzugen in der
+    Regel Mietverträge über 6 oder 12 Monate sowie eine Kaution, und Sie sind selbst dafür
+    verantwortlich, Ihre Adresse innerhalb von 24 Stunden bei der Polizeistation zu registrieren.
+    Am besten geeignet für Aufenthalte, die sich sechs Monaten nähern oder darüber hinausgehen, oder
+    für alle, die eine Küche und ein echtes Viertel möchten.
   </p>
   <blockquote>
-    Wo auch immer Sie landen: Registrieren Sie Ihre Adresse innerhalb von 24 Stunden nach dem
-    Einzug bei der lokalen Polizei. Hotels und Apartmenthotels erledigen das automatisch; bei
-    einem privaten Mietvertrag liegt es bei Ihnen.
+    Wo auch immer Sie landen, registrieren Sie Ihre Adresse innerhalb von 24 Stunden nach dem
+    Einzug bei der örtlichen Polizei. Hotels und Serviced Apartments tun das automatisch; bei einem
+    privaten Mietvertrag liegt es an Ihnen.
   </blockquote>
 
   <h2 id="monthly-cost">Monatliche Lebenshaltungskosten</h2>
   <p>
-    Die Lebenshaltungskosten in China unterscheiden sich je nach Stadtkategorie enorm. Unten finden
-    Sie realistische Monatsbudgets für eine Einzelperson, die Miete, Essen, lokalen Verkehr und
-    mobile Daten abdecken, bei einem komfortablen, aber nicht luxuriösen Lebensstil.
+    Die Lebenshaltungskosten in China variieren je nach Städtekategorie enorm. Nachfolgend finden
+    Sie realistische monatliche Budgets für eine Einzelperson, die Miete, Essen, lokalen Transport
+    und mobile Daten abdecken, ausgehend von einem komfortablen, aber nicht luxuriösen Lebensstil.
   </p>
   <table>
     <thead>
       <tr>
-        <th>Stadtkategorie</th>
+        <th>Städtekategorie</th>
         <th>Beispielstädte</th>
-        <th>Miete (1-Zimmer-Wohnung)</th>
+        <th>Miete (1 SZ)</th>
         <th>Gesamtes Monatsbudget</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Stadt der ersten Kategorie</td>
+        <td>Erste Kategorie</td>
         <td>Shanghai, Shenzhen</td>
         <td>7,000-12,000 RMB</td>
         <td>12,000-18,000 RMB</td>
       </tr>
       <tr>
-        <td>Neue Stadt der ersten Kategorie</td>
+        <td>Neue erste Kategorie</td>
         <td>Chengdu, Hangzhou</td>
         <td>3,500-6,000 RMB</td>
         <td>7,000-11,000 RMB</td>
       </tr>
       <tr>
-        <td>Kleinere Stadt / Ferienort</td>
+        <td>Kleiner / Ferienort</td>
         <td>Dali, Sanya</td>
         <td>2,000-4,000 RMB</td>
         <td>5,500-8,500 RMB</td>
@@ -234,84 +236,82 @@ const related = [
     </tbody>
   </table>
   <p>
-    Das Muster ist eindeutig: Die Miete bestimmt alles. Essen ist durchweg günstig, egal ob Sie
-    selbst kochen oder in lokalen Restaurants essen, und der lokale Verkehr kostet selbst bei
-    täglicher U-Bahn- und Fahrdienstnutzung selten mehr als ein paar Hundert RMB im Monat. Planen
-    Sie mehr ein, wenn Sie auf importierte Lebensmittel, internationale Schulen oder häufige
-    Inlandsflüge angewiesen sind.
+    Das Muster ist konstant: Die Miete bestimmt alles. Essen ist unabhängig davon, ob Sie selbst
+    kochen oder in lokalen Restaurants essen, durchweg günstig, und lokaler Transport übersteigt
+    selbst bei täglicher Metro- und Ride-Hailing-Nutzung selten ein paar hundert RMB im Monat.
+    Planen Sie zusätzliches Budget ein, wenn Sie auf importierte Lebensmittel, internationale
+    Schulen oder häufige Inlandsflüge angewiesen sind.
   </p>
 
-  <h2 id="daily-life">Wichtige Grundlagen für den Alltag</h2>
+  <h2 id="daily-life">Wesentliches für den Alltag</h2>
   <p>
-    Vier Systeme decken fast alles ab, womit Sie im Alltag zu tun haben. Richten Sie sie in der
-    ersten Woche ein, und der Rest Ihres Aufenthalts läuft weitgehend von selbst.
+    Vier Systeme decken fast alles ab, womit Sie im Alltag zu tun haben werden. Richten Sie sie in
+    Ihrer ersten Woche ein, und der Rest Ihres Aufenthalts läuft wie von selbst.
   </p>
   <ul>
     <li>
-      <strong>Bezahlen.</strong> Alipay und WeChat Pay prägen den Alltag, und beide erlauben
-      Ausländern inzwischen, wichtige ausländische Karten zu verknüpfen. Richten Sie sie vor
-      Ihrer Ankunft ein. Unser <a href="/de/digital-nomads/payment/">Zahlungsleitfaden</a>
-      behandelt die vollständige Einrichtung und die Limits.
+      <strong>Bezahlen.</strong> Alipay und WeChat Pay bestimmen den Alltag, und beide erlauben
+      Ausländern inzwischen, große ausländische Karten zu verknüpfen. Richten Sie sie vor Ihrer
+      Ankunft ein. Unser <a href="/digital-nomads/payment/">Leitfaden zum Bezahlen</a> behandelt
+      die vollständige Einrichtung und die Limits.
     </li>
     <li>
-      <strong>Konnektivität.</strong> Mit einer eSIM sind Sie sofort nach der Landung online; bei
-      einem mehrmonatigen Aufenthalt können Sie für eine inländische Nummer auf eine lokale SIM
-      wechseln. Optionen finden Sie in den <a href="/de/esim/">eSIM-Leitfäden</a>.
+      <strong>Konnektivität.</strong> Eine eSIM bringt Sie online, sobald Sie landen; bei einem
+      mehrmonatigen Aufenthalt können Sie auf eine lokale SIM für eine inländische Nummer
+      umsteigen. In den <a href="/esim/">eSIM-Leitfäden</a> finden Sie Optionen.
     </li>
     <li>
-      <strong>Verkehr.</strong> U-Bahnen in großen Städten sind günstig, schnell und auf Englisch
-      ausgeschildert, und Fahrdienste über DiDi funktionieren mit einer ausländischen Karte.
-      Fügen Sie den lokalen ÖPNV-QR-Code Ihrer Zahlungs-App hinzu, um kontaktlos zu fahren.
+      <strong>Transport.</strong> Metros in großen Städten sind günstig, schnell und auf Englisch
+      ausgeschildert, und Ride-Hailing über DiDi funktioniert mit einer ausländischen Karte. Fügen
+      Sie Ihrer Bezahl-App den lokalen Transit-QR-Code für Tap-and-go hinzu.
     </li>
     <li>
-      <strong>Grundversorgung im Gesundheitswesen.</strong> Große Städte haben private
-      internationale Kliniken mit englischsprachigem Personal; öffentliche Krankenhäuser sind
-      günstiger, erwarten aber Vorauszahlung und Mandarin-Kenntnisse. Führen Sie eine
-      Versicherung mit Deckung für China mit und halten Sie einen kleinen Vorrat verschriebener
-      Medikamente bereit.
+      <strong>Grundlegende Gesundheitsversorgung.</strong> Große Städte haben private internationale
+      Kliniken mit englischsprachigem Personal; öffentliche Krankenhäuser sind günstiger, erwarten
+      aber Vorauszahlung und Mandarin. Führen Sie eine Versicherung mit sich, die China abdeckt,
+      und halten Sie einen kleinen Vorrat an verschreibungspflichtigen Medikamenten bereit.
     </li>
   </ul>
 
-  <h2 id="cities">Beliebte Städte für Langzeitaufenthalte</h2>
+  <h2 id="cities">Beliebte Städte für langfristige Aufenthalte</h2>
   <p>
-    Vier Städte ziehen immer wieder Ausländer für Langzeitaufenthalte an, jede mit eigenem
-    Charakter. Jede verweist auf unseren vollständigen Stadtleitfaden mit Details vor Ort.
+    Vier Städte ziehen beständig Ausländer mit längerem Aufenthalt an, jede mit einem eigenen
+    Charakter. Jede verweist auf unseren vollständigen Stadtführer für Details direkt vor Ort.
   </p>
   <h3>Shanghai</h3>
   <p>
-    Chinas internationalste Stadt: die beste Englisch-Abdeckung, die größte Auswanderer-Gemeinschaft und
-    die meisten Dienstleistungen für Ausländer, allerdings auch die höchsten Mieten des Landes.
-    Ideal, wenn Sie Komfort und einen einfachen Start suchen. Lesen Sie den
-    <a href="/de/posts/shanghai-city-guide-for-foreigners/">Stadtleitfaden für Shanghai</a>.
+    Chinas internationalste Stadt: die größte Englischabdeckung, die tiefste Expat-Community und
+    die meisten auf Ausländer ausgerichteten Dienstleistungen — ausgeglichen durch die höchsten
+    Mieten im Land. Ideal, wenn Sie Komfort und ein leichtes Ankommen möchten. Siehe den
+    <a href="/posts/shanghai-city-guide-for-foreigners/">Shanghai-Stadtführer</a>.
   </p>
   <h3>Chengdu</h3>
   <p>
-    Eine entspannte, erschwingliche Basis im Südwesten, bekannt für Essen, Teehäuser und ein
-    langsameres Tempo, mit wachsender internationaler Gemeinschaft und guten Verkehrsverbindungen.
-    Lesen Sie den <a href="/de/posts/chengdu-city-guide-for-foreigners/">Stadtleitfaden für
-    Chengdu</a>.
+    Eine entspannte, erschwingliche Basis im Südwesten, berühmt für Essen, Teehäuser und ein
+    langsameres Tempo, mit einer wachsenden ausländischen Community und guten Verkehrsverbindungen.
+    Siehe den <a href="/posts/chengdu-city-guide-for-foreigners/">Chengdu-Stadtführer</a>.
   </p>
   <h3>Dali</h3>
   <p>
-    Eine kleine Stadt am See in Yunnan, die zu einem Magneten für Langzeitreisende geworden ist,
-    die sehr niedrige Kosten, mildes Wetter und eine etablierte Gemeinschaft aus Fernarbeitenden und
-    Kreativen suchen. Am besten für alle, die Lebensstil und Budget höher gewichten als die
-    Annehmlichkeiten einer Großstadt.
+    Eine kleine Stadt am See in Yunnan, die zu einem Magneten für Reisende mit längerem Aufenthalt
+    geworden ist, die sehr niedrige Kosten, mildes Wetter und eine etablierte Community aus
+    Remote-Arbeitern und Kreativen suchen. Am besten für diejenigen, die Lebensstil und Budget über
+    Annehmlichkeiten einer Großstadt stellen.
   </p>
   <h3>Sanya</h3>
   <p>
-    Chinas tropisches Strandziel auf der Insel Hainan, beliebt für Winteraufenthalte, weil es
-    warm ist, wenn der Rest des Landes kalt ist. Die Sommer sind heiß und feucht. Lesen Sie den
-    <a href="/de/posts/sanya-city-guide-for-foreigners/">Stadtleitfaden für Sanya</a>.
+    Chinas tropisches Strandziel auf der Insel Hainan, beliebt für Winteraufenthalte dank des
+    warmen Wetters, wenn der Rest des Landes kalt ist. Die Sommer sind heiß und feucht. Siehe den
+    <a href="/posts/sanya-city-guide-for-foreigners/">Sanya-Stadtführer</a>.
   </p>
 
-  <h2 id="next">Planen Sie, während Ihres Aufenthalts zu arbeiten?</h2>
+  <h2 id="next">Planen Sie zu arbeiten, während Sie bleiben?</h2>
   <p>
-    Wenn Ihr Langzeitaufenthalt zugleich Arbeit aus der Ferne bedeutet, verschiebt sich die Logistik erneut:
-    Dann zählen Internetzuverlässigkeit, Zeitzonen, Gemeinschaftsbüros und die Details dessen, was
-    jedes Visum erlaubt. Unser <a href="/de/digital-nomads/">kompletter China-Leitfaden für
-    digitale Nomaden</a> setzt genau dort an, wo dieser Leitfaden endet, und behandelt Visa,
-    Zahlungen, Konnektivität und die besten Städte als Standort für Fernarbeitende.
+    Wenn Ihr langfristiger Aufenthalt gleichzeitig dem Remote-Arbeiten dient, verschiebt sich die
+    Logistik erneut — dann werden Ihnen Internetzuverlässigkeit, Zeitzonen, Coworking-Spaces und
+    das Kleingedruckte dazu wichtig, was jedes Visum Ihnen erlaubt zu tun. Unser
+    <a href="/digital-nomads/">vollständiger Leitfaden für digitale Nomaden in China</a> setzt
+    genau dort an, wo dieser hier endet, und behandelt Visa, Bezahlungen, Konnektivität und die
+    besten Städte, um sich als Remote-Arbeiter niederzulassen.
   </p>
 </GuideLayout>
-
