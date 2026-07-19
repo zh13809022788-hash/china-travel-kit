@@ -42,12 +42,9 @@ const relatedTools = [
 
 const relatedCities = [
 
-  { href: '/es/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'La megaciudad financiera de China' },
-
-  { href: '/es/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Capital antigua que se encuentra con centro moderno' },
-
-  { href: '/es/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Metro de Shanghai', desc: 'Navegar por un sistema de transporte gigante' },
-
+  { href: '/es/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghái', desc: 'La gran metrópolis financiera de China' },
+  { href: '/es/posts/beijing-city-guide-for-foreigners/', title: 'Pekín', desc: 'Donde la capital histórica se cruza con la China contemporánea' },
+  { href: '/es/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Metro de Shanghái', desc: 'Cómo moverse por una red urbana gigantesca' },
 ];
 
 
@@ -61,8 +58,7 @@ const otherSeries = [
   { href: '/es/series/culture-of-china/', title: 'Cultura de China' },
 
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'es';
+
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
@@ -81,7 +77,11 @@ const locale = 'es';
 
     </header>
 
+
+
     <AdSlot format="banner" />
+
+
 
     <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
 
@@ -107,7 +107,7 @@ const locale = 'es';
 
               <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
 
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
 
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
 
@@ -126,6 +126,8 @@ const locale = 'es';
         )}
 
       </div>
+
+
 
       <aside class="space-y-6">
 
@@ -153,6 +155,8 @@ const locale = 'es';
 
         </div>
 
+
+
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
 
           <p class="section-kicker">Guías de ciudades</p>
@@ -176,6 +180,8 @@ const locale = 'es';
           </div>
 
         </div>
+
+
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
 
