@@ -1,69 +1,60 @@
 // Cloudflare Pages Function: Newsletter subscription handler
 // POST /api/subscribe → validates email → stores in KV → returns JSON
-// Rate limited to 5 req/min per IP to prevent abuse
 
-interface Env {
-  NEWSLETTER: KVNamespace;
-}
-
-export async function onRequestPost(context: { request: Request; env: Env }) {
+export async function onRequestPost(context) {
   const { request, env } = context;
 
-  // Only accept POST
-  if (request.method !== 'POST') {
-    return json({ error: 'Method not allowed' }, 405);
-  }
-
-  // Rate limiting (simple IP-based, 5 per minute)
+  // Rate limiting (per IP, 5 per minute)
   const ip = request.headers.get('cf-connecting-ip') || 'unknown';
-  const rateKey = `rate:${ip}`;
-  const recentSubmissions = parseInt(await env.NEWSLETTER.get(rateKey) || '0');
-  if (recentSubmissions >= 5) {
+  const rateKey = 'rate:' + ip;
+  const recentCount = parseInt(await env.NEWSLETTER.get(rateKey) || '0');
+  if (recentCount >= 5) {
     return json({ error: 'Too many requests. Please try again later.' }, 429);
   }
-  await env.NEWSLETTER.put(rateKey, String(recentSubmissions + 1), { expirationTtl: 60 });
+  await env.NEWSLETTER.put(rateKey, String(recentCount + 1), { expirationTtl: 60 });
 
-  // Parse email
-  let email: string;
+  // Parse email from JSON body
+  let email;
   try {
-    const body = await request.json() as { email: string };
+    const body = await request.json();
     email = (body.email || '').trim().toLowerCase();
   } catch {
     return json({ error: 'Invalid request body' }, 400);
   }
 
-  // Validate email format
+  // Validate format
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return json({ error: 'Please enter a valid email address.' }, 400);
   }
 
-  // Block disposable/temp email domains (basic list)
-  const blockedDomains = ['mailinator.com', 'tempmail.com', '10minutemail.com', 'guerrillamail.com', 'sharklasers.com', 'yopmail.com'];
+  // Block disposable domains
+  const blocked = ['mailinator.com', 'tempmail.com', '10minutemail.com', 'guerrillamail.com', 'sharklasers.com', 'yopmail.com'];
   const domain = email.split('@')[1];
-  if (blockedDomains.includes(domain)) {
+  if (blocked.includes(domain)) {
     return json({ error: 'Please use a permanent email address.' }, 400);
   }
 
   // Check duplicate
-  const existing = await env.NEWSLETTER.get(`sub:${email}`);
-  if (existing) {
+  const exists = await env.NEWSLETTER.get('sub:' + email);
+  if (exists) {
     return json({ message: 'already_subscribed' });
   }
 
-  // Store subscriber
-  await env.NEWSLETTER.put(`sub:${email}`, JSON.stringify({
-    email,
+  // Store
+  await env.NEWSLETTER.put('sub:' + email, JSON.stringify({
+    email: email,
     subscribed_at: new Date().toISOString(),
-    ip,
-    lang: request.headers.get('accept-language')?.split(',')[0] || '',
+    ip: ip,
+    lang: (request.headers.get('accept-language') || '').split(',')[0] || '',
   }));
 
   return json({ message: 'subscribed' });
 }
 
-function json(data: Record<string, unknown>, status = 200): Response {
+function json(data, status) {
+  status = status || 200;
   return new Response(JSON.stringify(data), {
-    status,
+    status: status,
     headers: {
       'content-type': 'application/json',
       'access-control-allow-origin': '*',
@@ -73,7 +64,7 @@ function json(data: Record<string, unknown>, status = 200): Response {
   });
 }
 
-// Handle CORS preflight
+// CORS preflight
 export async function onRequestOptions() {
   return new Response(null, {
     status: 204,
