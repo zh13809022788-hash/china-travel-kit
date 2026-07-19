@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'modern-china';
 const posts = (await getCollection('posts'))
@@ -30,7 +30,7 @@ const otherSeries = [
   { href: '/series/history-of-china/', title: 'Geschichte Chinas' },
   { href: '/series/culture-of-china/', title: 'Kultur Chinas' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->

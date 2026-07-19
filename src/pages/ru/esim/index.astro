@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'esim';
 const posts = (await getCollection('posts'))
@@ -35,7 +35,7 @@ const internetTools = [
   { href: '/tools/app-availability-checker/', title: 'Проверка доступности приложений', desc: 'Проверьте, работают ли в China популярные приложения и какие альтернативы стоит подготовить.' },
   { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Руководство по доступу в интернет', desc: 'Узнайте о доступности приложений, ожиданиях по VPN и практической настройке до прибытия.' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Контент создан с помощью ИИ, проверен носителем языка -->

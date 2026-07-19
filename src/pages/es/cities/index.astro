@@ -1,13 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
-import { getCategoryLabel } from '../../i18n/categories';
-import { CITY_GUIDES, type CityGuideEntry } from '../../data/cityGuideData';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import CoverImage from '../../components/CoverImage.astro';
-import ChinaMap from '../../components/ChinaMap.astro';
-import AdSlot from '../../components/AdSlot.astro';
+import { getCategoryLabel } from "../../../i18n/categories";
+import { CITY_GUIDES, type CityGuideEntry } from "../../../data/cityGuideData";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import CoverImage from "../../../components/CoverImage.astro";
+import ChinaMap from "../../../components/ChinaMap.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const allPosts = await getCollection('posts');
 

@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'transport';
 const posts = (await getCollection('posts'))
@@ -21,7 +21,7 @@ const transportPaths = [
   { href: '/posts/didi-china-foreign-tourists-guide/', title: 'Viajes compartidos', desc: 'Configura DiDi, usa puntos de recogida traducidos y reduce la fricción de las llamadas del conductor.' },
   { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Sistemas de metro', desc: 'Aprende sobre billetes QR, transbordos y costumbres en hora punta a través del ejemplo de Shanghai.' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->

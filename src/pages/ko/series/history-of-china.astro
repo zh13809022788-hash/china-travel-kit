@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'history-of-china';
 const posts = (await getCollection('posts'))
@@ -30,7 +30,7 @@ const otherSeries = [
   { href: '/series/culture-of-china/', title: '중국의 문화' },
   { href: '/series/nature-of-china/', title: '중국의 자연' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- AI 지원으로 생성된 콘텐츠, 원어민 검토 완료 -->

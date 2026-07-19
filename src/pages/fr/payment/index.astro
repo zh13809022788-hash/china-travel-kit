@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'payment';
 const posts = (await getCollection('posts'))
@@ -26,7 +26,7 @@ const paymentTools = [
   { href: '/tools/budget-cash-estimator/', title: 'Estimateur de budget et d’espèces', desc: 'Estimez les dépenses du voyage et le montant d’espèces de secours à emporter.' },
   { href: '/tools/currency-converter/', title: 'Convertisseur de devises RMB', desc: 'Convertissez les prix en yuans et comprenez les coûts du quotidien.' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Contenu genere avec assistance IA, revise par un redacteur natif -->

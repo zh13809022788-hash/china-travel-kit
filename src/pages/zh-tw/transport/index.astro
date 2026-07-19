@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'transport';
 const posts = (await getCollection('posts'))
@@ -21,7 +21,7 @@ const transportPaths = [
   { href: '/posts/didi-china-foreign-tourists-guide/', title: '叫車服務', desc: '設定 DiDi、使用已翻譯的上車地點標記，並減少司機來電溝通的不便。' },
   { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '地鐵系統', desc: '以上海為例，了解 QR 車票、轉乘方式與尖峰時段的搭乘習慣。' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- AI輔助生成內容，經母語者審校 -->

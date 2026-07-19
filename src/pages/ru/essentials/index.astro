@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'essentials';
 const posts = (await getCollection('posts'))
@@ -14,7 +14,7 @@ const posts = (await getCollection('posts'))
 const title = 'Путеводители по планированию поездки в ChinaTripBox — визы, сроки и основы';
 const description =
   'Планируйте поездку в Китай уверенно: визы и правила въезда, лучшее время для посещения, что взять с собой, безопасность и всё, что нужно уладить до вылета.';
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Контент создан с помощью ИИ, проверен носителем языка -->

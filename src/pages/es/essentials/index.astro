@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'essentials';
 const posts = (await getCollection('posts'))
@@ -14,7 +14,7 @@ const posts = (await getCollection('posts'))
 const title = 'Guías de planificación de viaje a China — Visas, tiempos y aspectos esenciales';
 const description =
   'Planifica tu viaje a China con confianza: visas y normas de entrada, la mejor época para visitar, qué empacar, seguridad y todo lo que debes organizar antes de volar.';
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->

@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
@@ -44,7 +44,7 @@ const cultureLinks = [
     desc: 'Una guía complementaria más profunda sobre brindis, tragos pequeños y cómo marcar el ritmo en comidas formales.',
   },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->

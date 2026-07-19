@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'payment';
 const posts = (await getCollection('posts'))
@@ -26,7 +26,7 @@ const paymentTools = [
   { href: '/tools/budget-cash-estimator/', title: 'Оценка бюджета и наличных', desc: 'Оцените расходы на поездку и сколько запасных наличных стоит взять с собой.' },
   { href: '/tools/currency-converter/', title: 'Конвертер валют RMB', desc: 'Переводите цены в юани и понимайте повседневные расходы.' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Контент создан с помощью ИИ, проверен носителем языка -->

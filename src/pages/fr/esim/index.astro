@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'esim';
 const posts = (await getCollection('posts'))
@@ -35,7 +35,7 @@ const internetTools = [
   { href: '/tools/app-availability-checker/', title: 'Vérificateur de disponibilité des applications', desc: 'Vérifiez si les applications courantes fonctionnent en Chine et quelles alternatives préparer.' },
   { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Guide d’accès à Internet', desc: 'Comprenez l’accès aux applications, les attentes concernant les VPN et la configuration pratique avant l’arrivée.' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Contenu genere avec assistance IA, revise par un redacteur natif -->

@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
-import CoverImage from '../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'essentials';
 const posts = (await getCollection('posts'))
@@ -14,7 +14,7 @@ const posts = (await getCollection('posts'))
 const title = 'Reiseführer zur China-Reiseplanung — Visa, Timing und Grundlagen';
 const description =
   'Plane deine Reise nach China mit Zuversicht: Visa- und Einreisebestimmungen, die beste Reisezeit, was du einpacken solltest, Sicherheit und alles, was du vor dem Abflug erledigen musst.';
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->

@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'nature-of-china';
 const posts = (await getCollection('posts'))
@@ -30,7 +30,7 @@ const otherSeries = [
   { href: '/series/culture-of-china/', title: 'Cultura de China' },
   { href: '/series/food-of-china/', title: 'Gastronomía de China' },
 ];
-import { getCategoryLabel } from '../../i18n/categories';
+import { getCategoryLabel } from "../../../i18n/categories";
 const locale = 'en';
 ---
 <!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
