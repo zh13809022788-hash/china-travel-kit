@@ -1,56 +1,56 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import AdSlot from '../components/AdSlot.astro';
 
-const title = 'Planificateur de voyage en Chine gratuit';
+const title = 'Planificateur de voyage gratuit pour la Chine';
 const description =
-  'Préparez un plan concret pour un premier voyage en Chine avec des recommandations sur les paiements, l’eSIM, les transports, les applications, les espèces et la check-list du premier jour.';
+  'Créez un plan pratique pour un premier voyage en Chine avec des recommandations sur le paiement, l’eSIM, les transports, la configuration des applications, l’argent liquide et la checklist du premier jour.';
 
 const needOptions = [
-  { value: 'payment', label: 'Configurer les paiements' },
-  { value: 'esim', label: 'eSIM et Internet' },
+  { value: 'payment', label: 'Configuration du paiement' },
+  { value: 'esim', label: 'eSIM et internet' },
   { value: 'transport', label: 'Aéroport et trains' },
-  { value: 'hotel', label: 'Choisir le bon quartier pour l’hôtel' },
+  { value: 'hotel', label: 'Logique de choix du quartier d’hôtel' },
   { value: 'apps', label: 'Applications et traduction' },
-  { value: 'cash', label: 'Prévoir des espèces' },
-  { value: 'visa', label: 'Vérifier l’entrée sans visa' },
-  { value: 'food', label: 'Repas et livraison' },
+  { value: 'cash', label: 'Argent liquide de secours' },
+  { value: 'visa', label: 'Entrée sans visa' },
+  { value: 'food', label: 'Nourriture et livraison' },
 ];
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main>
     <section class="border-b border-gray-200 bg-white">
       <div class="container-page grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
         <div>
-          <p class="section-kicker">Outil gratuit</p>
+          <p class="section-kicker">Outil de planification gratuit</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            Préparez un plan d’arrivée concret en Chine avant le départ
+            Élaborez un plan d’arrivée pratique en Chine avant de prendre l’avion
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            Obtenez un premier plan pour les paiements, les données eSIM, le trajet depuis
-            l’aéroport, la configuration des applications, la réserve d’espèces et le rythme des
-            premiers jours. L’outil fonctionne dans votre navigateur et n’enregistre pas vos
-            réponses.
+            Obtenez un premier plan pour les paiements, les données eSIM, les transports depuis l’aéroport, la configuration des applications,
+            une solution de secours en espèces et le rythme quotidien. Il fonctionne dans votre navigateur et n’enregistre pas vos réponses.
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#planner" class="btn-primary">Commencer</a>
-            <a href="/fr/travel-help/" class="btn-outline">Demander de l’aide</a>
-            <a href="/fr/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Lire le guide premier voyage</a>
+            <a href="#planner" class="btn-primary">Commencer à planifier</a>
+            <a href="/travel-help/" class="btn-outline">Demander de l’aide voyage</a>
+            <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Lire le guide pour débutants</a>
           </div>
         </div>
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
-          <p class="section-kicker">Pour qui ?</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Idéal pour un premier séjour</h2>
+          <p class="section-kicker">Idéal pour</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Préparation d’un premier voyageur</h2>
           <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-            <li>Préparer les paiements avant l’arrivée</li>
-            <li>Choisir entre eSIM, itinérance et accès aux applications</li>
-            <li>Anticiper le premier trajet entre l’aéroport et la ville</li>
-            <li>Poser une base simple, ville par ville</li>
+            <li>Être prêt à payer avant l’arrivée</li>
+            <li>Décisions sur l’eSIM, l’itinérance et l’accès aux applications</li>
+            <li>Planification de la première étape entre l’aéroport et la ville</li>
+            <li>Cadre simple de voyage ville par ville</li>
           </ul>
         </aside>
       </div>
@@ -63,12 +63,12 @@ const needOptions = [
         <form id="trip-planner-form" class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm md:p-6">
           <div class="border-b border-gray-200 pb-5">
             <p class="section-kicker">Détails du voyage</p>
-            <h2 class="mt-2 text-2xl font-bold text-gray-950">Indiquez ce que vous savez déjà</h2>
+            <h2 class="mt-2 text-2xl font-bold text-gray-950">Dites-nous ce que vous savez</h2>
           </div>
 
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Pays ou région de départ
+              Pays ou région d’origine
               <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="États-Unis, Royaume-Uni, Singapour..." />
             </label>
 
@@ -76,8 +76,8 @@ const needOptions = [
               Ville d’arrivée
               <select id="arrival-city" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
                 <option>Shanghai</option>
-                <option>Pékin</option>
-                <option>Canton</option>
+                <option>Beijing</option>
+                <option>Guangzhou</option>
                 <option>Shenzhen</option>
                 <option>Chengdu</option>
                 <option>Hangzhou</option>
@@ -86,8 +86,8 @@ const needOptions = [
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800 md:col-span-2">
-              Villes prévues
-              <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="Shanghai, Hangzhou, Pékin" />
+              Villes de destination
+              <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="Shanghai, Hangzhou, Beijing" />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
@@ -115,7 +115,7 @@ const needOptions = [
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              Niveau de budget
+              Gamme de budget
               <select id="budget-range" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
                 <option>Économique</option>
                 <option selected>Confort</option>
@@ -131,13 +131,13 @@ const needOptions = [
                 <option selected>Confort</option>
                 <option>En famille</option>
                 <option>Affaires</option>
-                <option>Gastronomie</option>
+                <option>Axé sur la nourriture</option>
               </select>
             </label>
           </div>
 
           <fieldset class="mt-6">
-            <legend class="text-sm font-semibold text-gray-800">Sur quoi avez-vous besoin d’aide ?</legend>
+            <legend class="text-sm font-semibold text-gray-800">Pour quoi avez-vous besoin d’aide ?</legend>
             <div class="mt-3 grid gap-3 sm:grid-cols-2">
               {needOptions.map((option) => (
                 <label class="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700">
@@ -149,33 +149,30 @@ const needOptions = [
           </fieldset>
 
           <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p id="planner-status" class="text-sm text-gray-500">Aucun compte ni donnée sensible n’est nécessaire.</p>
+            <p id="planner-status" class="text-sm text-gray-500">Aucun compte ni donnée sensible nécessaires.</p>
             <button class="btn-primary" type="submit">Générer le plan</button>
           </div>
         </form>
 
         <aside class="space-y-6">
           <section class="rounded-lg border border-gray-200 bg-white p-5">
-            <p class="section-kicker">Validation humaine</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">Besoin d’une relecture humaine ?</h2>
+            <p class="section-kicker">Option supérieure</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">Besoin d’une vérification humaine ?</h2>
             <p class="mt-3 text-sm leading-6 text-gray-600">
-              Si votre itinéraire, votre calendrier, votre configuration de paiement ou votre
-              premier jour vous semblent fragiles, envoyez le plan généré par e-mail et demandez une
-              liste de corrections relue par une personne.
+              Si votre itinéraire, votre timing, votre configuration de paiement ou votre premier jour vous semblent risqués, envoyez le plan généré
+              par e-mail et demandez une liste de corrections revue par une personne.
             </p>
             <a id="planner-email-link" class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 hover:border-brand-600 hover:text-brand-600 hover:no-underline" href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Trip%20Review%20Request">
-              Préparer l’e-mail de relecture
+              Préparer l’e-mail de vérification
             </a>
           </section>
 
           <section class="rounded-lg border border-amber-200 bg-amber-50 p-5">
             <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">Limites</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">À utiliser comme aide à l’organisation</h2>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">Utilisez ceci comme aide à la planification</h2>
             <p class="mt-3 text-sm leading-6 text-gray-700">
-              Cet outil ne remplace pas un conseil juridique, d’immigration, médical, bancaire ou
-              d’urgence. Vérifiez toujours les règles importantes liées à l’entrée, à la compagnie
-              aérienne, à l’hôtel, aux cartes, aux télécoms et aux applications auprès de sources
-              officielles.
+              Cet outil ne constitue pas un conseil juridique, d’immigration, médical, bancaire ou d’urgence. Vérifiez
+              les règles importantes d’entrée, de compagnie aérienne, d’hôtel, de carte, de télécom et d’application auprès de sources officielles.
             </p>
           </section>
         </aside>
@@ -184,40 +181,40 @@ const needOptions = [
       <section id="plan-output" class="mt-10 hidden rounded-lg border border-brand-100 bg-brand-50 p-5 md:p-6" aria-live="polite">
         <div class="border-b border-brand-100 pb-4">
           <p class="section-kicker">Plan généré</p>
-          <h2 class="mt-2 text-2xl font-bold text-gray-950">Votre première trame de voyage en Chine</h2>
+          <h2 class="mt-2 text-2xl font-bold text-gray-950">Brouillon de préparation de votre voyage en Chine</h2>
         </div>
         <div id="plan-content" class="mt-5 grid gap-5"></div>
       </section>
 
       <section class="mt-12 grid gap-5 md:grid-cols-3">
-        <a href="/fr/payment/" class="card block hover:no-underline">
+        <a href="/payment/" class="card block hover:no-underline">
           <p class="section-kicker">Paiement</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">Préparez Alipay et WeChat Pay</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Configurez au moins un portefeuille mobile et un moyen de secours avant l’arrivée.</p>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Configurez au moins un portefeuille et un moyen de paiement de secours avant l’arrivée.</p>
         </a>
-        <a href="/fr/esim/" class="card block hover:no-underline">
+        <a href="/esim/" class="card block hover:no-underline">
           <p class="section-kicker">Internet</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Choisissez votre solution eSIM ou itinérance</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Assurez-vous de pouvoir ouvrir vos cartes, traduire, écrire et commander un VTC dès le premier jour.</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Choisissez une configuration eSIM ou itinérance</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Assurez-vous de pouvoir charger les cartes, traduire, envoyer des messages et appeler un véhicule dès le premier jour.</p>
         </a>
-        <a href="/fr/transport/" class="card block hover:no-underline">
+        <a href="/transport/" class="card block hover:no-underline">
           <p class="section-kicker">Transport</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">Planifiez votre premier trajet</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">Sachez comment aller de l’aéroport à l’hôtel et quand choisir métro, taxi, DiDi ou train.</p>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Connaissez votre trajet de l’aéroport à l’hôtel et quand utiliser le métro, le taxi, DiDi ou le train.</p>
         </a>
       </section>
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
         <p class="section-kicker">Avant d’utiliser le planificateur</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">Lisez les guides de base si c’est votre premier voyage en Chine</h2>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">Lisez les guides de configuration s’il s’agit de votre premier voyage en Chine</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
-          <a href="/fr/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">Planifier un premier voyage en Chine</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Suivez le même ordre que dans l’outil : Internet, paiements, trajet depuis l’aéroport, applications, ordre des villes et check-list du premier jour.</p>
+          <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+            <h3 class="font-bold text-gray-950">Planificateur de voyage en Chine pour les visiteurs débutants</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Suivez le même ordre de planification que cet outil : internet, paiement, trajet depuis l’aéroport, applications, ordre des villes et checklist du premier jour.</p>
           </a>
-          <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">Ce qu’il faut configurer avant de partir en Chine</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Une check-list concrète pour Alipay, WeChat Pay, eSIM, DiDi, billets de train, cartes et réserve d’espèces.</p>
+          <a href="/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+            <h3 class="font-bold text-gray-950">Ce qu’il faut configurer avant de voyager en Chine</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Une checklist pratique avant le départ pour Alipay, WeChat Pay, eSIM, DiDi, les billets de train, les cartes et une solution de secours en espèces.</p>
           </a>
         </div>
       </section>
@@ -263,7 +260,7 @@ const needOptions = [
   `;
 
   const buildPlan = () => {
-    const home = getValue('home-country') || 'votre pays ou région de départ';
+    const home = getValue('home-country') || 'votre pays d’origine';
     const arrival = getValue('arrival-city') || 'Shanghai';
     const cities = splitCities(getValue('destination-cities'), arrival);
     const days = Number(getValue('trip-length') || '7');
@@ -276,79 +273,79 @@ const needOptions = [
     const preDeparture = [
       `Installez Alipay, WeChat, DiDi, une application de traduction et une carte hors ligne avant de quitter ${escapeHtml(home)}.`,
       needs.includes('payment')
-        ? 'Associez une carte Visa ou Mastercard étrangère à Alipay et vérifiez que la configuration aboutit avant le départ.'
-        : 'Gardez une configuration simple : un portefeuille mobile, une carte physique et un peu d’espèces en RMB.',
+        ? 'Associez une carte Visa ou Mastercard étrangère à Alipay et essayez une petite vérification avant le départ.'
+        : 'Gardez une configuration de paiement simple : un portefeuille mobile, une carte physique et un peu de RMB en espèces.',
       needs.includes('esim')
-        ? 'Achetez et activez une eSIM ou un forfait d’itinérance avant le vol, puis gardez le QR d’activation accessible hors ligne.'
-        : 'Vérifiez que votre téléphone aura bien des données à l’arrivée avant de compter sur les cartes ou le VTC.',
+        ? 'Achetez et activez une eSIM ou un forfait d’itinérance avant le vol, puis gardez le QR code accessible hors ligne.'
+        : 'Vérifiez que votre téléphone aura des données à l’arrivée avant de compter sur les cartes ou les applications de VTC.',
       'Enregistrez l’adresse de votre hôtel en anglais et en chinois, ainsi que la station de métro la plus proche.',
     ];
 
     const payment = [
-      'Configuration principale : Alipay avec une carte étrangère, car c’est souvent le portefeuille le plus simple à utiliser pour un visiteur.',
-      'Configuration de secours : WeChat Pay si votre carte s’y associe correctement, plus une carte Visa ou Mastercard physique.',
-      budget === 'Économique'
-        ? 'Réserve d’espèces : prévoyez une petite somme en RMB pour les stands, les dépôts ou un problème temporaire de carte ou de portefeuille.'
-        : 'Réserve d’espèces : gardez assez de RMB pour un taxi, quelques snacks et un repas simple si le paiement mobile tombe en panne.',
-      'Ne comptez pas sur Apple Pay ou Google Pay comme moyen principal de paiement en Chine continentale.',
+      'Configuration principale : Alipay avec une carte étrangère, car c’est généralement le premier portefeuille le plus pratique pour les visiteurs.',
+      'Configuration de secours : WeChat Pay si votre carte s’associe correctement, plus une carte Visa ou Mastercard physique.',
+      budget === 'Budget'
+        ? 'Solution de secours en espèces : emportez une petite somme en RMB pour les stands, les cautions ou les problèmes de carte/portefeuille.'
+        : 'Solution de secours en espèces : gardez assez de RMB pour un taxi, des snacks et un repas simple au cas où le paiement mobile échouerait.',
+      'Ne comptez pas sur Apple Pay ou Google Pay comme principal moyen de paiement en Chine continentale.',
     ];
 
     const internet = [
-      'Pour un court séjour, une eSIM de voyage reste souvent la solution la plus simple si votre téléphone est compatible.',
-      'Pour un séjour plus long ou une forte consommation de données, comparez itinérance, eSIM, pocket WiFi et SIM locale avant l’arrivée.',
-      'Testez les données mobiles avant de quitter l’aéroport, car vos applications de paiement, de VTC, de traduction et de cartes en dépendent.',
-      'Conservez hors ligne les informations de l’hôtel et les détails de transport au cas où votre première connexion serait instable.',
+      'Pour les courts séjours, une eSIM de voyage est généralement la solution la plus simple si votre téléphone prend en charge l’eSIM.',
+      'Pour les séjours plus longs ou une utilisation intensive des données, comparez avant l’arrivée l’itinérance, l’eSIM, le WiFi de poche et les options de SIM locale.',
+      'Testez les données mobiles avant de quitter l’aéroport, car les applications de paiement, de VTC, de traduction et les cartes en dépendent toutes.',
+      'Enregistrez hors ligne les informations de l’hôtel et du transport au cas où votre première connexion serait instable.',
     ];
 
     const transport = [
-      `Premier trajet : préparez le transfert entre l’aéroport ou la gare de ${escapeHtml(arrival)} et votre hôtel avant l’atterrissage.`,
-      'Utilisez le métro pour les trajets urbains prévisibles, DiDi pour le porte-à-porte et le train à grande vitesse pour les déplacements entre villes.',
+      `Premier trajet : planifiez le trajet de l’aéroport ou de la gare de ${escapeHtml(arrival)} jusqu’à l’hôtel avant d’atterrir.`,
+      'Utilisez le métro pour les trajets urbains prévisibles, DiDi pour les trajets porte à porte et le train à grande vitesse pour les déplacements entre les villes.',
       needs.includes('transport')
-        ? 'Pour les journées de train, réservez le plus tôt possible et vérifiez que les informations du passeport correspondent exactement à la plateforme de billets.'
-        : 'Évitez les correspondances trop serrées entre un vol international et un train longue distance le même jour.',
-      'Gardez une carte d’adresse en chinois prête à montrer à un taxi ou à une réception d’hôtel.',
+        ? 'Pour les jours de train, réservez plus tôt si possible et gardez des informations de passeport cohérentes avec la plateforme de billets.'
+        : 'Évitez les correspondances trop serrées le même jour entre des vols internationaux et des trains longue distance.',
+      'Gardez une fiche avec une adresse en chinois prête pour les taxis ou les comptoirs d’hôtel.',
     ];
 
     const dayPlan = cities.map((city, index) => {
       const start = index * perCity + 1;
       const end = index === cities.length - 1 ? days : Math.min(days, start + perCity - 1);
-      return `Jours ${start}-${end} : ${escapeHtml(city)} - allégez la première demi-journée, vérifiez paiements et données, puis regroupez les visites par quartier.`;
+      return `Jours ${start}-${end} : ${escapeHtml(city)} - gardez la première demi-journée plus légère, confirmez le paiement/les données, puis regroupez les visites par quartier.`;
     });
 
     const mistakes = [
-      'N’attendez pas l’arrivée pour configurer vos applications, vos cartes et votre forfait de données.',
-      'Ne chargez pas votre première journée de visites juste après un long-courrier.',
-      'Ne dépendez jamais d’un seul moyen de paiement.',
-      purpose === 'Affaires'
-        ? 'Pour un voyage d’affaires, prévoyez plus de marge pour le trafic, les contrôles de sécurité, les factures et l’accès aux immeubles.'
-        : 'Pour un voyage de loisirs, gardez un créneau souple tous les deux ou trois jours pour la météo, la foule ou la fatigue.',
-      style === 'Gastronomie'
-        ? 'Pour un voyage centré sur la gastronomie, enregistrez les noms de restaurants en chinois et vérifiez les horaires avant de traverser toute la ville.'
-        : 'Gardez toujours un plan simple pour manger près de l’hôtel.',
+      'N’attendez pas d’être arrivé pour configurer toutes les applications, cartes et forfaits de données.',
+      'Ne programmez pas une journée de visites chargée immédiatement après un vol long-courrier.',
+      'Ne dépendez pas d’un seul moyen de paiement.',
+      purpose === 'Business'
+        ? 'Pour les voyages d’affaires, prévoyez plus de temps pour le trafic, les contrôles de sécurité, les factures et l’accès aux bâtiments.'
+        : 'Pour les voyages de loisirs, laissez un créneau flexible tous les deux ou trois jours pour la météo, la foule ou la fatigue.',
+      style === 'Food-focused'
+        ? 'Pour les voyages axés sur la nourriture, enregistrez les noms des restaurants en chinois et vérifiez les horaires d’ouverture avant de traverser la ville.'
+        : 'Gardez un plan de secours simple pour les repas près de votre hôtel.',
     ];
 
     const html = [
-      panel('Check-list avant le départ', preDeparture),
-      panel('Paiements et espèces', payment),
-      panel('Internet et applications', internet),
+      panel('Checklist avant le départ', preDeparture),
+      panel('Configuration des paiements et des espèces', payment),
+      panel('Configuration d’internet et des applications', internet),
       panel('Transport et premier jour', transport),
-      panel('Trame simple jour par jour', dayPlan),
-      panel('Erreurs à éviter', mistakes),
+      panel('Cadre simple jour par jour', dayPlan),
+      panel('Avertissements sur les erreurs courantes', mistakes),
     ].join('');
 
     const emailBody = [
-      'Demande de relecture ChinaTripBox',
+      'ChinaTripBox Trip Review Request',
       '',
-      `Pays ou région de départ : ${home}`,
-      `Ville d’arrivée : ${arrival}`,
-      `Villes prévues : ${cities.join(', ')}`,
-      `Durée du voyage : ${days} jours`,
-      `Motif : ${purpose}`,
-      `Budget : ${budget}`,
-      `Style : ${style}`,
-      `Besoins : ${needs.join(', ') || 'non précisés'}`,
+      `Home country or region: ${home}`,
+      `Arrival city: ${arrival}`,
+      `Destination cities: ${cities.join(', ')}`,
+      `Trip length: ${days} days`,
+      `Purpose: ${purpose}`,
+      `Budget: ${budget}`,
+      `Style: ${style}`,
+      `Needs: ${needs.join(', ') || 'not specified'}`,
       '',
-      'Merci de relire ma préparation de voyage en Chine : paiements, eSIM, transport, rythme et erreurs possibles du premier jour.',
+      'Please review my China trip setup for payment, eSIM, transport, timing, and first-day mistakes.',
     ].join('\n');
 
     if (emailLink) {
@@ -366,6 +363,6 @@ const needOptions = [
     content.innerHTML = buildPlan();
     output.classList.remove('hidden');
     output.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (status) status.textContent = 'Plan généré. Vous pouvez modifier vos réponses et le régénérer à tout moment.';
+    if (status) status.textContent = 'Plan généré. Ajustez vos réponses et régénérez à tout moment.';
   });
 </script>
