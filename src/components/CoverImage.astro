@@ -49,15 +49,11 @@ const credit = credits[name];
         style={`max-height: 320px; object-position: ${objectPosition}`}
       />
       {credit?.photographer && (
-        <figcaption class="mt-1.5 text-xs text-gray-400">
-          Photo by{' '}
-          <a href={credit.photographer_url} rel="nofollow noopener" target="_blank" class="hover:text-brand-600">
+        <figcaption class="mt-0.5 text-[10px] text-gray-300">
+          <a href={credit.photographer_url} rel="nofollow noopener" target="_blank" class="hover:text-gray-400">
             {credit.photographer}
-          </a>{' '}
-          on{' '}
-          <a href={credit.unsplash_url} rel="nofollow noopener" target="_blank" class="hover:text-brand-600">
-            Unsplash
           </a>
+          on <a href={credit.unsplash_url} rel="nofollow noopener" target="_blank" class="hover:text-gray-400">Unsplash</a>
         </figcaption>
       )}
     </figure>
