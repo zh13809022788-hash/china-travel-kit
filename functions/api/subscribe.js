@@ -35,7 +35,7 @@ export async function onRequestPost(context) {
 
   // Send welcome email
   const r = await sendBrevo(email, now);
-  return json({ message: 'subscribed', email_sent: r.ok });
+  return json({ message: 'subscribed', email_sent: r.ok, error: r.error });
 }
 
 async function sendBrevo(to, subscribedAt) {
@@ -60,7 +60,8 @@ async function sendBrevo(to, subscribedAt) {
         textContent: text,
       }),
     });
-    return res.ok ? { ok: true } : { ok: false };
+    const body = await res.text();
+    return res.ok ? { ok: true } : { ok: false, error: 'Brevo ' + res.status + ': ' + body.slice(0,300) };
   } catch { return { ok: false }; }
 }
 
