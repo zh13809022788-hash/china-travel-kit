@@ -9,6 +9,7 @@ import type { FaqItem } from '../components/FaqSection.astro';
 import CoverImage from '../components/CoverImage.astro';
 import RelatedReading from '../components/RelatedReading.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
+import NewsletterInline from '../components/NewsletterInline.astro';
 import Mermaid from '../components/Mermaid.astro';
 import type { RelatedItem } from '../components/RelatedReading.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -192,7 +193,10 @@ const homeLabel = ui.home[locale] ?? 'Home';
         </div>
       </header>
 
-      {cover && <CoverImage name={cover} alt={coverAlt ?? title} />}
+      {cover && <CoverImage name={cover} alt={coverAlt ?? title} objectPosition={cover === 'city-shanghai' ? 'center 25%' : undefined} />}
+
+      <NewsletterInline locale={locale} />
+
       <div class="article-body max-w-none">
         <slot />
         <Mermaid />

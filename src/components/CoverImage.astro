@@ -13,9 +13,10 @@ export interface Props {
   name: string; // e.g. "city-shanghai" -> src/assets/images/city-shanghai.jpg
   alt: string;
   loading?: 'eager' | 'lazy';
+  objectPosition?: string; // e.g. 'center 20%' to shift focal point
 }
 
-const { name, alt, loading = 'eager' } = Astro.props;
+const { name, alt, loading = 'eager', objectPosition = 'center' } = Astro.props;
 
 // Eagerly map every jpg in the images dir so we can look up by name.
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -45,7 +46,7 @@ const credit = credits[name];
         quality={65}
         loading={loading}
         class="w-full rounded-xl object-cover"
-        style="max-height: 320px"
+        style={`max-height: 320px; object-position: ${objectPosition}`}
       />
       {credit?.photographer && (
         <figcaption class="mt-1.5 text-xs text-gray-400">

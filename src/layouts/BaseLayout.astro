@@ -6,6 +6,7 @@
 import '../styles/global.css';
 import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID, GA4_MEASUREMENT_ID } from '../config';
 import ContextAiBubble from '../components/ContextAiBubble.astro';
+import NewsletterSticky from '../components/NewsletterSticky.astro';
 
 type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
 
@@ -278,5 +279,6 @@ const jsonLd = {
       }
     })();`} />
     <ContextAiBubble locale={locale} />
+    <NewsletterSticky locale={locale} />
   </body>
 </html>

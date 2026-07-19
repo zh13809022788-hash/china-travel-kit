@@ -1,0 +1,130 @@
+---
+// Sticky bottom newsletter bar — appears on mobile after scrolling 30%
+// Tucked away below screen initially, slides up after user engages
+// Dismissible, doesn't come back for 7 days
+
+const { locale = 'en' } = Astro.props;
+const t = (key: string) => {
+  const i18n: Record<string, Record<string, string>> = {
+    en: { cta: 'Never miss a China travel update', btn: 'Subscribe', close: 'Dismiss' },
+    'zh-tw': { cta: '不錯過任何中國旅遊更新', btn: '訂閱', close: '稍後' },
+    ja: { cta: '中国旅行情報を見逃さない', btn: '購読', close: '後で' },
+    ko: { cta: '중국 여행 정보를 놓치지 마세요', btn: '구독', close: '나중에' },
+    ru: { cta: 'Не пропустите обновления', btn: 'Подписаться', close: 'Позже' },
+    fr: { cta: 'Ne manquez aucune mise à jour', btn: 'Abonner', close: 'Plus tard' },
+    de: { cta: 'Keine Updates verpassen', btn: 'Abonnieren', close: 'Später' },
+    es: { cta: 'No te pierdas actualizaciones', btn: 'Suscribirse', close: 'Luego' },
+  };
+  const lang = i18n[locale as string] || i18n['en'];
+  return lang[key] || i18n['en'][key] || '';
+};
+---
+
+<div
+  id="newsletter-sticky"
+  class="fixed bottom-0 left-0 right-0 z-40 translate-y-full border-t border-gray-200 bg-white px-4 py-3 shadow-lg transition-transform duration-300 sm:hidden"
+  aria-hidden="true"
+>
+  <form id="newsletter-sticky-form" class="flex items-center gap-2">
+    <input
+      type="email"
+      name="email"
+      placeholder="your@email.com"
+      required
+      autocomplete="email"
+      class="min-w-0 flex-1 rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm placeholder-gray-400 focus:border-brand-400 focus:outline-none"
+    />
+    <button type="submit" class="shrink-0 rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-700 disabled:opacity-50">
+      {t('btn')}
+    </button>
+    <button type="button" id="newsletter-sticky-close" class="shrink-0 rounded-lg px-2 py-2.5 text-xs text-gray-400 hover:text-gray-600" aria-label={t('close')}>
+      ✕
+    </button>
+  </form>
+  <p id="newsletter-sticky-msg" class="mt-1 hidden text-center text-xs font-medium"></p>
+</div>
+
+<script is:inline define:vars={{
+  newsletterCta: t('cta'),
+  newsletterBtn: t('btn'),
+}}>
+  (function() {
+    const el = document.getElementById('newsletter-sticky');
+    if (!el) return;
+
+    // Check if dismissed in last 7 days
+    const dismissed = localStorage.getItem('newsletter-sticky-dismissed');
+    if (dismissed && Date.now() - parseInt(dismissed) < 7 * 24 * 60 * 60 * 1000) {
+      el.remove();
+      return;
+    }
+
+    let shown = false;
+    function checkScroll() {
+      if (shown) return;
+      const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+      if (scrollPercent > 0.3) {
+        shown = true;
+        el.classList.remove('translate-y-full');
+        el.setAttribute('aria-hidden', 'false');
+        window.removeEventListener('scroll', checkScroll);
+      }
+    }
+    window.addEventListener('scroll', checkScroll, { passive: true });
+
+    // Dismiss button
+    document.getElementById('newsletter-sticky-close')?.addEventListener('click', function() {
+      localStorage.setItem('newsletter-sticky-dismissed', String(Date.now()));
+      el.classList.add('translate-y-full');
+      setTimeout(function() { el.remove(); }, 300);
+      shown = true; // prevent re-show on scroll
+    });
+
+    // Form submit
+    const form = document.getElementById('newsletter-sticky-form');
+    const btn = form?.querySelector('button[type="submit"]');
+    const msg = document.getElementById('newsletter-sticky-msg');
+    const input = form?.querySelector('input');
+    if (!form || !btn || !msg || !input) return;
+
+    let submitted = false;
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      if (submitted) return;
+      const email = input.value.trim();
+      if (!email) return;
+
+      submitted = true;
+      btn.disabled = true;
+      btn.textContent = '...';
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        const data = await res.json();
+        msg.className = data.message === 'subscribed' || data.message === 'already_subscribed'
+          ? 'mt-1 block text-center text-xs font-medium text-green-600'
+          : 'mt-1 block text-center text-xs text-red-600';
+        msg.textContent = data.message === 'already_subscribed' ? 'Already subscribed!' :
+          data.message === 'subscribed' ? 'Subscribed!' :
+          data.error || 'Error, please try again.';
+        if (data.message === 'subscribed' || data.message === 'already_subscribed') {
+          form.style.display = 'none';
+        } else {
+          submitted = false;
+          btn.disabled = false;
+          btn.textContent = newsletterBtn;
+        }
+      } catch {
+        msg.className = 'mt-1 block text-center text-xs text-red-600';
+        msg.textContent = 'Network error. Try again.';
+        submitted = false;
+        btn.disabled = false;
+        btn.textContent = newsletterBtn;
+      }
+    });
+  })();
+</script>
