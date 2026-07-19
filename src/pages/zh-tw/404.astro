@@ -1,11 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const title = '找不到頁面';
-const description = '找不到頁面 - ChinaTripBox';
+const description = '您請求的 ChinaTripBox 頁面無法找到。';
 ---
+<!-- AI輔助生成內容，經母語者審校 -->
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
   <Header />
@@ -13,11 +15,13 @@ const description = '找不到頁面 - ChinaTripBox';
     <section class="mx-auto max-w-2xl">
       <p class="section-kicker">404</p>
       <h1 class="mt-2 text-4xl font-bold text-gray-950">找不到頁面</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">您要查詢的頁面可能已被移動或地址不正確。</p>
+      <p class="mt-4 text-lg leading-8 text-gray-600">
+        此頁面可能已移動，或網址可能不正確。請從指南總覽開始，或使用下方的規劃工具。
+      </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="/zh-tw/" class="btn-primary">回首頁</a>
-        <a href="/zh-tw/resources/" class="btn-outline">開始探索</a>
-        <a href="/zh-tw/tools/" class="btn-outline">開啟工具</a>
+        <a href="/" class="btn-primary">回到首頁</a>
+        <a href="/resources/" class="btn-outline">從這裡開始</a>
+        <a href="/tools/" class="btn-outline">開啟工具</a>
       </div>
     </section>
   </main>
