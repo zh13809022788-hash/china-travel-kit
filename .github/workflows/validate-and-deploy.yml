@@ -24,7 +24,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20'
+          cache: npm
       - name: Install dependencies
         run: npm ci
       - name: Build site
@@ -32,7 +33,11 @@ jobs:
       - name: Verify build output
         run: |
           if [ ! -f dist/index.html ]; then echo "::error::dist/index.html not found"; exit 1; fi
-          echo "✓ Build output verified"
+          if [ ! -f public/search-index.json ]; then echo "::error::public/search-index.json not found"; exit 1; fi
+          PAGE_COUNT=$(find dist -name index.html -o -name 404.html | wc -l)
+          echo "Generated ${PAGE_COUNT} HTML pages"
+          if [ "$PAGE_COUNT" -lt 700 ]; then echo "::error::Expected at least 700 HTML pages"; exit 1; fi
+          echo "Build output verified"
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
@@ -55,10 +60,10 @@ jobs:
           name: dist
           path: dist/
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-          directory: './dist'
-      - run: echo "✅ Deployed successfully"
+          command: pages deploy dist --project-name=china-travel-kit --branch=main
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo "Deployed successfully"
