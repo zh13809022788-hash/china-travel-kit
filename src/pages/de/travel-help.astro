@@ -3,31 +3,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = 'China-Reisehilfe';
+const title = 'China Travel Help';
 const description =
-  'Stelle individuelle Fragen zu China-Reisen zu Zahlungen, eSIMs, Transport, Apps und der Einrichtung am ersten Tag mit KI-gestutzter Ersteinschatzung und optionaler menschlicher Hilfe.';
+  'Stellen Sie individuelle Fragen zu China-Reisen zu Zahlungen, eSIMs, Verkehr, Apps und der Einrichtung am ersten Tag mit KI-gestuetzter Triage und optionaler menschlicher Hilfe.';
 
 const quickPrompts = [
-  'Meine Alipay- oder WeChat Pay-Karte lasst sich nicht verknupfen.',
-  'Ich brauche einen eSIM- und App-Zugriffsplan fur meine Reise.',
+  'Meine Karte in Alipay oder WeChat Pay laesst sich nicht verknuepfen.',
+  'Ich brauche einen Plan fuer eSIM und App-Zugang fuer meine Reise.',
   'Ich brauche Hilfe, um vom Flughafen zu meinem Hotel zu kommen.',
   'Ich bin mir nicht sicher, wie viel Bargeld ich mitbringen soll.',
 ];
 
 const supportAreas = [
-  'Zahlungseinrichtung: Alipay, WeChat Pay, Karten, Gebuhren und Bargeld als Reserve',
-  'Konnektivitat: eSIMs, Roaming, VPN-sensitive Apps und Datenzugang bei der Ankunft am Flughafen',
-  'Transport: Flughafenrouten, Metro, DiDi, Taxis und Grundlagen zum Hochgeschwindigkeitszug',
-  'App-Nutzung: Ubersetzung, Essenslieferung, Karten, Ride-Hailing und Screenshots',
-  'Reisevorbereitung: Checkliste fur den ersten Tag, stadtspezifische Vorbereitung und praktische nachste Schritte',
-  'Weitergabe an Menschen: komplexe Falle, die Ruckfragen und Kontext brauchen',
+  'Einrichtung von Zahlungen: Alipay, WeChat Pay, Karten, Gebuehren und Bargeld als Reserve',
+  'Konnektivitaet: eSIMs, Roaming, VPN-sensible Apps und mobile Daten bei der Ankunft am Flughafen',
+  'Verkehr: Routen vom Flughafen, Metro, DiDi, Taxis und Grundlagen zum Hochgeschwindigkeitszug',
+  'App-Nutzung: Uebersetzung, Essenslieferung, Karten, Fahrdienste und Screenshots',
+  'Reisevorbereitung: Checkliste fuer den ersten Tag, stadtspezifische Vorbereitung und praktische naechste Schritte',
+  'Menschliche Eskalation: komplexe Faelle, die Rueckfragen und Kontext brauchen',
 ];
 
 const safetyRules = [
-  'Sende keine Passfotos, vollstandigen Kartennummern, Passworter, PINs oder Einmalcodes.',
-  'Bitte niemanden darum, sich in deine Konten einzuloggen oder Identitatsprufungen fur dich abzuschliessen.',
-  'Nutze dies nicht fur rechtliche, Einwanderungs-, medizinische, Bank- oder Notfallberatung.',
-  'Prufe wichtige Regeln bei offiziellen Quellen, Fluggesellschaften, Banken, Telekommunikationsanbietern oder App-Betreibern.',
+  'Senden Sie keine Passfotos, vollstaendigen Kartennummern, Passwoerter, PINs oder Einmalcodes.',
+  'Bitten Sie niemanden, sich in Ihre Konten einzuloggen oder Identitaetspruefungen fuer Sie durchzufuehren.',
+  'Nutzen Sie dies nicht fuer Rechts-, Einwanderungs-, Medizin-, Bank- oder Notfallberatung.',
+  'Pruefen Sie wichtige Regeln bei offiziellen Quellen, Fluggesellschaften, Banken, Telekommunikationsanbietern oder App-Betreibern.',
 ];
 ---
 <!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
@@ -39,14 +39,13 @@ const safetyRules = [
     <section class="border-b border-gray-200 bg-white">
       <div class="container-page grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
         <div>
-          <p class="section-kicker">Individuelle Reiseunterstutzung</p>
+          <p class="section-kicker">Individuelle Reiseunterstuetzung</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            Stelle eine Frage zu deiner China-Reise, bevor sie dich ausbremst
+            Stellen Sie eine Frage zu Ihrer China-Reise, bevor sie Sie ausbremst
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            Starte mit kostenloser KI-Hilfe fur praktische Probleme bei China-Reisen. Wenn deine
-            Frage menschliches Urteilsvermogen, Screenshots oder Ruckfragen mit Kontext braucht,
-            wandle sie in eine Prufungsanfrage um.
+            Beginnen Sie mit kostenloser KI-Hilfe fuer praktische Probleme bei China-Reisen. Wenn Ihre Frage
+            menschliches Urteilsvermoegen, Screenshots oder Rueckfragen mit Kontext braucht, machen Sie daraus eine Pruefungsanfrage.
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
             <a href="#travel-help-chat" class="btn-primary">Anfrage starten</a>
@@ -59,22 +58,22 @@ const safetyRules = [
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
           <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Pilotstatus</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Zuerst KI, spater menschliche Prufung</h2>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Zuerst KI, spaeter menschliche Pruefung</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            Kostenlose Antworten werden von KI erzeugt. Menschlich geprufte Reisehilfe wird noch
-            per E-Mail weitergeleitet, wahrend wir den Ablauf testen.
+            Kostenlose Antworten werden von KI generiert. Menschlich gepruefte Reisehilfe wird waehrend wir den Ablauf testen
+            weiterhin per E-Mail weitergeleitet.
           </p>
           <dl class="mt-5 grid gap-3 text-sm">
             <div class="flex items-center justify-between gap-4">
-              <dt class="text-gray-500">Am besten geeignet fur</dt>
+              <dt class="text-gray-500">Am besten fuer</dt>
               <dd class="font-semibold text-gray-900">Praktische Reisevorbereitung</dd>
             </div>
             <div class="flex items-center justify-between gap-4">
               <dt class="text-gray-500">Antwortweg</dt>
-              <dd class="font-semibold text-gray-900">KI + Nachverfolgung per E-Mail</dd>
+              <dd class="font-semibold text-gray-900">KI + E-Mail-Nachverfolgung</dd>
             </div>
             <div class="flex items-center justify-between gap-4">
-              <dt class="text-gray-500">Bezahlung</dt>
+              <dt class="text-gray-500">Zahlung</dt>
               <dd class="font-semibold text-gray-900">Nicht aktiv</dd>
             </div>
           </dl>
@@ -94,10 +93,9 @@ const safetyRules = [
             <div class="flex min-h-[560px] flex-col">
               <div id="chat-log" class="flex-1 space-y-4 overflow-y-auto p-5" aria-live="polite">
                 <div class="max-w-[88%] rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm leading-6 text-gray-700">
-                  <strong class="block text-gray-950">ChinaTripBox-Hilfe</strong>
-                  Erzahl uns, was du tun willst, wo du dich in der Reise befindest und was bereits
-                  passiert ist. Die KI-Hilfe schlagt nachste Schritte vor und weist darauf hin, wann
-                  eine menschliche Prufung besser ist.
+                  <strong class="block text-gray-950">ChinaTripBox Hilfe</strong>
+                  Sagen Sie uns, was Sie tun moechten, an welcher Stelle der Reise Sie sich befinden und was bereits
+                  passiert ist. Die KI-Hilfe schlaegt naechste Schritte vor und weist darauf hin, wann eine menschliche Pruefung besser ist.
                 </div>
               </div>
 
@@ -114,17 +112,17 @@ const safetyRules = [
                   ))}
                 </div>
                 <form id="travel-help-form" class="grid gap-3">
-                  <label class="sr-only" for="help-message">Deine Reisefrage</label>
+                  <label class="sr-only" for="help-message">Ihre Reisefrage</label>
                   <textarea
                     id="help-message"
                     name="message"
                     rows="5"
                     class="w-full resize-y rounded-lg border border-gray-300 px-4 py-3 text-sm leading-6 text-gray-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
-                    placeholder="Beispiel: Ich komme morgen in Shanghai an. Meine Mastercard lasst sich nicht mit WeChat Pay verknupfen, aber Alipay funktioniert. Kann ich trotzdem Metro, DiDi und Essenslieferung nutzen?"
+                    placeholder="Beispiel: Ich komme morgen in Shanghai an. Meine Mastercard laesst sich nicht mit WeChat Pay verknuepfen, aber Alipay funktioniert. Kann ich trotzdem Metro, DiDi und Essenslieferung nutzen?"
                     required
                   ></textarea>
                   <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <p id="form-status" class="text-sm text-gray-500">Vermeide sensible personliche Daten.</p>
+                    <p id="form-status" class="text-sm text-gray-500">Vermeiden Sie sensible personenbezogene Daten.</p>
                     <button id="help-submit" type="submit" class="btn-primary">KI fragen</button>
                   </div>
                 </form>
@@ -140,7 +138,7 @@ const safetyRules = [
                     <option>Vor der Abreise</option>
                     <option>Am Flughafen</option>
                     <option>Bereits in China</option>
-                    <option>Planung fur Langzeitaufenthalt</option>
+                    <option>Planung fuer einen laengeren Aufenthalt</option>
                   </select>
                 </label>
                 <label class="grid gap-1 text-sm font-semibold text-gray-800">
@@ -148,7 +146,7 @@ const safetyRules = [
                   <select id="help-topic" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
                     <option>Zahlungs-Apps</option>
                     <option>Internet und eSIM</option>
-                    <option>Transportroute</option>
+                    <option>Verkehrsroute</option>
                     <option>Essen, Lieferung oder lokale Apps</option>
                     <option>Allgemeine Reisevorbereitung</option>
                   </select>
@@ -158,7 +156,7 @@ const safetyRules = [
                   <input
                     id="help-location"
                     class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700"
-                    placeholder="Shanghai, Beijing, Flughafen zum Hotel..."
+                    placeholder="Shanghai, Beijing, vom Flughafen zum Hotel..."
                   />
                 </label>
               </div>
@@ -166,9 +164,8 @@ const safetyRules = [
               <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4">
                 <p class="text-sm font-bold text-gray-950">Menschliches Upgrade</p>
                 <p class="mt-2 text-sm leading-6 text-gray-700">
-                  Nutze dies, wenn eine einfache Anleitung nicht ausreicht. Die vorbereitete E-Mail
-                  enthalt dein Thema, Stadium, deinen Ort und deine Frage, damit eine Person mit
-                  Kontext antworten kann.
+                  Nutzen Sie dies, wenn ein einfacher Leitfaden nicht ausreicht. Die vorbereitete E-Mail enthaelt Ihr Thema,
+                  Reisestadium, Ihren Ort und Ihre Frage, damit eine Person mit Kontext antworten kann.
                 </p>
               </div>
 
@@ -186,7 +183,7 @@ const safetyRules = [
         <aside class="space-y-6">
           <section class="rounded-lg border border-gray-200 bg-white p-5">
             <p class="section-kicker">Umfang</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">Wobei das helfen kann</h2>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">Wobei dies helfen kann</h2>
             <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
               {supportAreas.map((area) => (
                 <li class="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0">{area}</li>
@@ -196,7 +193,7 @@ const safetyRules = [
 
           <section class="rounded-lg border border-amber-200 bg-amber-50 p-5">
             <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">Sicherheitsregeln</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">Halte sensible Daten heraus</h2>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">Halten Sie sensible Daten heraus</h2>
             <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
               {safetyRules.map((rule) => (
                 <li>{rule}</li>
@@ -209,38 +206,38 @@ const safetyRules = [
       <section class="mt-12 grid gap-5 md:grid-cols-3">
         <div class="card">
           <p class="section-kicker">Schritt 1</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Beschreibe das Problem</h2>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Beschreiben Sie das Problem</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            Teile die Stadt, App, Route, Frist und mit, was du bereits versucht hast.
+            Teilen Sie die Stadt, die App, die Route, die Frist und mit, was Sie bereits versucht haben.
           </p>
         </div>
         <div class="card">
           <p class="section-kicker">Schritt 2</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">Erhalte einen nachsten Schritt</h2>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">Erhalten Sie einen naechsten Schritt</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            Die Seite gibt eine praktische erste Antwort und verweist dich auf relevante Leitfaden.
+            Die Seite gibt eine praktische erste Antwort und verweist Sie auf passende Leitfaeden.
           </p>
         </div>
         <div class="card">
           <p class="section-kicker">Schritt 3</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">Per E-Mail eskalieren</h2>
           <p class="mt-3 text-sm leading-6 text-gray-600">
-            Fur individuelle Hilfe sende die vorbereitete E-Mail und setze das Gesprach privat fort.
+            Fuer individuelle Hilfe senden Sie die vorbereitete E-Mail und fuehren das Gespraech privat weiter.
           </p>
         </div>
       </section>
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
         <p class="section-kicker">Zuerst Selbstbedienung</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">Leitfaden, die haufige Fragen zur ersten Reise beantworten</h2>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">Leitfaeden, die haeufige Fragen bei der ersten Reise beantworten</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
           <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">China-Reiseplaner fur Erstbesucher</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Nutze dies, wenn du noch Zahlung, Daten, Transport und deinen ersten Ankunftstag organisierst.</p>
+            <h3 class="font-bold text-gray-950">Reiseplaner fuer die erste China-Reise</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Nutzen Sie dies, wenn Sie noch Zahlungen, mobile Daten, Verkehr und Ihren ersten Ankunftstag organisieren.</p>
           </a>
           <a href="/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">Checkliste fur die Vorbereitung vor der Abreise</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Prufe Alipay, WeChat Pay, eSIM, DiDi, Zugtickets, Ubersetzung, Adressen und Bargeldreserve, bevor du fliegst.</p>
+            <h3 class="font-bold text-gray-950">Checkliste fuer die Einrichtung vor der Abreise</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">Pruefen Sie Alipay, WeChat Pay, eSIM, DiDi, Zugtickets, Uebersetzung, Adressen und Bargeldreserve, bevor Sie fliegen.</p>
           </a>
         </div>
       </section>
@@ -261,11 +258,11 @@ const safetyRules = [
   const submitButton = document.getElementById('help-submit') as HTMLButtonElement | null;
 
   const guideLinks: Record<string, { label: string; href: string }> = {
-    'Payment apps': { label: 'Anleitung zur Zahlungseinrichtung', href: '/payment/' },
-    'Internet and eSIM': { label: 'eSIM-Anleitung', href: '/esim/' },
-    'Transport route': { label: 'Transport-Anleitung', href: '/transport/' },
+    'Payment apps': { label: 'Leitfaden zur Zahlungseinrichtung', href: '/payment/' },
+    'Internet and eSIM': { label: 'eSIM-Leitfaden', href: '/esim/' },
+    'Transport route': { label: 'Verkehrsleitfaden', href: '/transport/' },
     'Food, delivery, or local apps': {
-      label: 'Anleitung zur Essenslieferung',
+      label: 'Leitfaden fuer Essenslieferung',
       href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
     },
     'General trip setup': { label: 'Tool-Seite', href: '/tools/' },
@@ -332,18 +329,18 @@ const safetyRules = [
       );
 
     const placeLine = place
-      ? `Weil dies <strong>${escapeHtml(place)}</strong> betrifft, gib in deiner E-Mail den genauen Flughafen, Bahnhof, Hotelbereich, App-Namen und das Datum an.`
-      : 'Erganz deine Stadt, deinen Flughafen, Bahnhof, Hotelbereich oder App-Namen, bevor du dies fur individuelle Hilfe abschickst.';
+      ? `Da dies <strong>${escapeHtml(place)}</strong> betrifft, geben Sie in Ihrer E-Mail den genauen Flughafen, Bahnhof, Hotelbereich, App-Namen und das Datum an.`
+      : 'Fuegen Sie Ihre Stadt, Ihren Flughafen, Bahnhof, Hotelbereich oder App-Namen hinzu, bevor Sie dies fuer individuelle Hilfe absenden.';
 
     const escalation = needsHuman
-      ? 'Das sieht nach einem guten Fall fur menschliche Nachverfolgung aus, weil es Kontext oder Ruckfragen brauchen konnte.'
-      : 'Das lasst sich moglicherweise zuerst mit dem Leitfaden beantworten; nutze menschliche Nachverfolgung, wenn der Leitfaden nicht zu deiner genauen Situation passt.';
+      ? 'Dies sieht nach einem guten Fall fuer menschliche Nachverfolgung aus, weil moeglicherweise Kontext oder Rueckfragen noetig sind.'
+      : 'Dies laesst sich moeglicherweise zuerst ueber den Leitfaden beantworten; nutzen Sie menschliche Nachverfolgung, wenn der Leitfaden nicht zu Ihrer genauen Situation passt.';
 
     return `
-      <strong class="block text-gray-950">Vorgeschlagener nachster Schritt</strong>
+      <strong class="block text-gray-950">Vorgeschlagener naechster Schritt</strong>
       <span class="block mt-1">Thema: ${escapeHtml(selectedTopic)}. Stadium: ${escapeHtml(selectedStage)}.</span>
       <span class="block mt-2">${placeLine}</span>
-      <span class="block mt-2">Starte mit der <a href="${guide.href}" class="font-semibold text-brand-700">${guide.label}</a> und nutze dann die Schaltflache fur die vorbereitete E-Mail, wenn du weiterhin individuelle Hilfe brauchst.</span>
+      <span class="block mt-2">Beginnen Sie mit dem <a href="${guide.href}" class="font-semibold text-brand-700">${guide.label}</a> und nutzen Sie dann den Button fuer die vorbereitete E-Mail, wenn Sie weiterhin individuelle Hilfe benoetigen.</span>
       <span class="block mt-2">${escalation}</span>
     `;
   };
@@ -385,11 +382,11 @@ const safetyRules = [
     event.preventDefault();
     const question = message?.value.trim() ?? '';
     if (!question) {
-      if (status) status.textContent = 'Fuge zuerst deine Frage hinzu.';
+      if (status) status.textContent = 'Fuegen Sie zuerst Ihre Frage hinzu.';
       return;
     }
     addBubble(escapeHtml(question), true);
-    const thinking = addBubble('Die KI pruft gerade deine Reisefrage...');
+    const thinking = addBubble('Die KI prueft gerade Ihre Reisefrage...');
     if (status) status.textContent = 'KI-Reisehilfe wird gefragt...';
     if (submitButton) submitButton.disabled = true;
 
@@ -399,13 +396,13 @@ const safetyRules = [
         thinking.innerHTML = `
           <strong class="block text-gray-950">KI-Reisehilfe</strong>
           <span class="mt-2 block">${formatAiAnswer(answer)}</span>
-          <span class="mt-3 block text-xs text-gray-500">Bei komplexen Konto-, Zahlungs-, Visum-, Rechts-, Medizin- oder Notfallthemen prufe dies beim offiziellen Anbieter oder fordere eine menschliche Prufung an.</span>
+          <span class="mt-3 block text-xs text-gray-500">Bei komplexen Konto-, Zahlungs-, Visa-, Rechts-, medizinischen oder Notfallfragen pruefen Sie dies bitte beim offiziellen Anbieter oder fordern Sie eine menschliche Pruefung an.</span>
         `;
       }
-      if (status) status.textContent = 'KI-Antwort ist bereit. Nutze E-Mail, wenn du menschliche Prufung willst.';
+      if (status) status.textContent = 'KI-Antwort bereit. Nutzen Sie E-Mail, wenn Sie eine menschliche Pruefung moechten.';
     } catch {
       if (thinking) thinking.innerHTML = buildReply(question);
-      if (status) status.textContent = 'Die KI ist nicht verfugbar, daher wurde eine lokale Ausweichantwort vorbereitet.';
+      if (status) status.textContent = 'Die KI ist nicht verfuegbar, daher wurde eine lokale Ausweichantwort vorbereitet.';
     } finally {
       if (submitButton) submitButton.disabled = false;
     }
