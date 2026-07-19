@@ -1,55 +1,49 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import ShowToLocal from '../../../components/ShowToLocal.astro';
-import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
-import ContextAiBubble from '../../../components/ContextAiBubble.astro';
-import survivalKits from '../../../data/survival-kits.json';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ShowToLocal from '../../components/ShowToLocal.astro';
+import SurvivalChecklist from '../../components/SurvivalChecklist.astro';
+import survivalKits from '../../data/survival-kits.json';
 
-const title = 'Kit de survie pour la Chine : cartes de traduction et listes de voyage';
+const title = 'Kit de survie pour la Chine : cartes de traduction et check-lists de voyage';
 const description =
-  'Kits de survie interactifs pour les voyageurs étrangers en Chine : cartes de traduction en plein écran, listes d’arrivée, cartes pour les allergies alimentaires et outils pour mieux communiquer sur place.';
+  'Kits de survie interactifs pour la Chine destinés aux visiteurs étrangers : cartes de traduction en plein écran, check-lists de préparation à l’arrivée, cartes pour allergies alimentaires et outils de communication locale.';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Kit de survie</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">Kit de survie pour la Chine</h1>
+<p class="mt-4 max-w-3xl text-lg leading-8 text-gray-600">
+  Notre kit de survie pour la Chine vous aide a preparer votre voyage en toute confiance. Il comprend des check-lists interactives couvrant chaque etape de la preparation avant le depart : demande de visa, assurance voyage, configuration des paiements (Alipay/WeChat Pay), achat d’une eSIM ou d’une carte SIM, reservation d’hebergement et essentiels a emporter. La section des cartes de phrases vous permet de montrer du texte chinois aux habitants dans des situations courantes comme commander a manger, demander son chemin et negocier le prix d’un taxi. Vous pouvez egalement ajouter des cartes personnalisees avec vos propres phrases. Tout est enregistre dans votre navigateur, afin que vous puissiez y revenir a tout moment pendant votre voyage sans creer de compte.
+</p>
       <p class="mt-3 text-lg leading-8 text-gray-600">
-        Utilisez des cartes de traduction en plein écran et des listes sauvegardées quand vous
-        n’avez pas le temps de parcourir un long guide : arrivée à l’aéroport, enregistrement à
-        l’hôtel, taxis, restaurants, allergies et préparation du premier jour.
+        Utilisez des cartes de traduction en plein ecran et des check-lists enregistrees dans les moments ou lire un long guide est trop lent :
+        arrivee a l’aeroport, enregistrement a l’hotel, taxis, restaurants, allergies et installation du premier jour.
       </p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="#arrival" class="btn-primary">Commencer par l’arrivée</a>
-        <a href="#food" class="btn-outline">Ouvrir les cartes pour les repas</a>
+        <a href="#arrival" class="btn-primary">Commencer par l’arrivee</a>
+        <a href="#food" class="btn-outline">Ouvrir les cartes alimentaires</a>
       </div>
     </header>
 
     <section class="mt-8 grid gap-4 md:grid-cols-3">
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Cartes en plein écran</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">
-          Touchez une carte pour afficher un texte en grand en chinois à montrer à un chauffeur, à
-          la réception de l’hôtel ou au personnel du restaurant.
-        </p>
+        <h2 class="text-lg font-bold text-gray-950">Cartes en plein ecran</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Touchez une carte et montrez un grand texte chinois a un chauffeur, au comptoir de l’hotel ou au personnel d’un restaurant.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Listes sauvegardées</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">
-          Votre progression est enregistrée dans le navigateur afin que vous puissiez fermer la page
-          et revenir plus tard.
-        </p>
+        <h2 class="text-lg font-bold text-gray-950">Check-lists enregistrees</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">La progression de la check-list est stockee dans votre navigateur, vous pouvez donc fermer la page et y revenir plus tard.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Aide IA contextuelle</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">
-          Utilisez l’assistant flottant pour ouvrir l’aide au voyage ChinaTripBox avec une question
-          adaptée au sujet affiché.
-        </p>
+        <h2 class="text-lg font-bold text-gray-950">Entree IA contextuelle</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Utilisez l’assistant flottant pour ouvrir l’aide au voyage de ChinaTripBox avec une invite adaptee au sujet.</p>
       </div>
     </section>
 
@@ -57,13 +51,13 @@ const description =
       {survivalKits.map((kit) => (
         <section id={kit.slug} class="grid gap-5 rounded-xl border border-gray-200 bg-gray-50 p-5">
           <div class="max-w-3xl">
-            <p class="section-kicker">Kit {kit.slug}</p>
+            <p class="section-kicker">{kit.slug} kit</p>
             <h2 class="mt-1 text-2xl font-bold text-gray-950">{kit.title}</h2>
             <p class="mt-2 text-sm leading-6 text-gray-600">{kit.description}</p>
             <div class="mt-3 flex flex-wrap gap-2">
               {kit.related_paths.map((path) => (
                 <a href={path} class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-brand-700 hover:border-brand-300 hover:no-underline">
-                  Guide correspondant
+                  Guide associe
                 </a>
               ))}
             </div>
@@ -76,6 +70,5 @@ const description =
       ))}
     </div>
   </main>
-  <ContextAiBubble defaultPrompt="Aidez-moi à utiliser le kit de survie pour la Chine concernant l’arrivée, les restaurants, les cartes de traduction et la préparation des listes." />
   <Footer />
 </BaseLayout>
