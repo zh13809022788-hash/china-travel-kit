@@ -1,104 +1,79 @@
-﻿---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const title = 'Nutzungsbedingungen';
 const description =
-  'Bedingungen für die Nutzung von ChinaTripBox, einschließlich informativer Nutzung, externer Links, Werbung und Haftungsbeschränkungen.';
+  'Bedingungen fur die Nutzung von ChinaTripBox, einschliesslich informativer Nutzung, externer Links, Werbung und Haftungsbeschrankungen.';
 const lastUpdated = '10. Juli 2026';
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
       <h1 class="text-3xl font-bold text-gray-900">Nutzungsbedingungen</h1>
       <p class="mt-2 text-sm text-gray-500">Zuletzt aktualisiert: {lastUpdated}</p>
 
       <p class="mt-4">
-        Durch die Nutzung von ChinaTripBox stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie nicht
-        einverstanden sind, nutzen Sie diese Website bitte nicht.
+        Durch die Nutzung von ChinaTripBox stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie nicht zustimmen, nutzen Sie diese Website bitte nicht.
       </p>
 
       <h2>Informationszweck</h2>
       <p>
-        ChinaTripBox stellt allgemeine Reiseinformationen für ausländische Besucher in China bereit. Wir
-        bemühen uns, unsere Leitfäden korrekt und nützlich zu halten, doch Informationen zu Apps,
-        Preisen, Routen, Richtlinien, Einreisebestimmungen und Serviceverfügbarkeit können sich ohne
-        vorherige Ankündigung ändern.
+        ChinaTripBox stellt allgemeine Reiseinformationen fur auslandische Besucher in China bereit. Wir bemuhen uns, unsere Leitfaden korrekt und nutzlich zu halten, aber Informationen uber Apps, Preise, Routen, Richtlinien, Einreisebestimmungen und die Verfugbarkeit von Dienstleistungen konnen sich ohne vorherige Ankundigung andern.
       </p>
 
       <h2>Keine professionelle Beratung</h2>
       <p>
-        Die Inhalte auf dieser Website stellen keine Rechts-, Einwanderungs-, Finanz-, medizinische,
-        Steuer-, Sicherheits- oder Notfallberatung dar. Sie sind selbst dafür verantwortlich,
-        offizielle Anforderungen zu prüfen und Ihre eigenen Reiseentscheidungen zu treffen.
+        Die Inhalte dieser Website stellen keine Rechts-, Einwanderungs-, Finanz-, Medizin-, Steuer-, Sicherheits- oder Notfallberatung dar. Sie sind dafur verantwortlich, offizielle Anforderungen zu bestatigen und Ihre eigenen Reiseentscheidungen zu treffen.
       </p>
 
       <h2>KI- und Reisehilfe-Funktionen</h2>
       <p>
-        ChinaTripBox kann KI-gestützte oder von Menschen unterstützte Reisehilfe für praktische Fragen
-        anbieten. Diese Funktionen dienen ausschließlich der allgemeinen Reiseunterstützung.
-        KI-Antworten können ungenau oder unvollständig sein, und menschliche Helfer sind keine
-        offiziellen Vertreter, Rechtsberater, Einwanderungsberater, medizinischen Fachkräfte,
-        Finanzberater, Banken, Telekommunikationsanbieter, Fluggesellschaften oder Zahlungsplattformen.
+        ChinaTripBox kann KI-gestutzte oder von Menschen unterstutzte Reisehilfe fur praktische Fragen anbieten. Diese Funktionen dienen ausschliesslich der allgemeinen Reiseunterstutzung. KI-Antworten konnen ungenau oder unvollstandig sein, und menschliche Helfer sind keine offiziellen Vertreter, Rechtsberater, Einwanderungsberater, medizinischen Fachkrafte, Finanzberater, Banken, Telekommunikationsanbieter, Fluggesellschaften oder Zahlungsplattformen.
       </p>
       <p>
-        Übermitteln Sie keine Passfotos, Bankkartennummern, Passwörter, PINs, einmaligen
-        Verifizierungscodes oder andere sensible Informationen. Wir können Anfragen ablehnen,
-        entfernen oder ignorieren, die unsicher, rechtswidrig, missbräuchlich oder außerhalb des
-        Rahmens praktischer Reiseunterstützung erscheinen.
+        Ubermitteln Sie keine Passfotos, Bankkartennummern, Passworter, PINs, einmaligen Bestatigungscodes oder andere sensible Informationen. Wir konnen Anfragen ablehnen, entfernen oder ignorieren, die unsicher, rechtswidrig, missbrauchlich oder ausserhalb des Rahmens praktischer Reiseunterstutzung erscheinen.
       </p>
 
       <h2>Externe Links</h2>
       <p>
-        Wir verlinken auf Websites, Tools, Apps, Produkte und Dienstleistungen Dritter. Wir kontrollieren
-        diese Dritten nicht und sind nicht für deren Inhalte, Preise, Datenschutzpraktiken,
-        Verfügbarkeit oder Entscheidungen verantwortlich.
+        Wir verlinken auf Websites, Tools, Apps, Produkte und Dienstleistungen Dritter. Wir kontrollieren diese Dritten nicht und sind nicht fur deren Inhalte, Preise, Datenschutzpraktiken, Verfugbarkeit oder Entscheidungen verantwortlich.
       </p>
 
       <h2>Werbung und Affiliate-Beziehungen</h2>
       <p>
-        ChinaTripBox kann Werbung anzeigen und Affiliate-Links verwenden. Wir können eine Vergütung
-        erhalten, wenn Sie auf einen Affiliate-Link klicken oder über einen dieser Links einen Kauf
-        tätigen. Dadurch entstehen Ihnen keine zusätzlichen Kosten.
+        ChinaTripBox kann Werbung anzeigen und kann Affiliate-Links verwenden. Wir konnen eine Vergutung erhalten, wenn Sie auf einen Affiliate-Link klicken oder uber einen dieser Links einen Kauf tatigen. Dadurch entstehen Ihnen keine zusatzlichen Kosten.
       </p>
 
       <h2>Trinkgelder und bezahlte Hilfe</h2>
       <p>
-        Falls optionale Trinkgelder, bezahlte Anfragen oder Eins-zu-eins-Hilfe eingeführt werden,
-        werden Zahlungsbedingungen, Erstattungsregeln, Plattformgebühren und Verantwortlichkeiten der
-        Helfer vor der Zahlung angezeigt. Trinkgelder sind freiwillig, sofern nicht eindeutig ein
-        kostenpflichtiger Dienst angeboten und angenommen wird.
+        Falls optionale Trinkgelder, kostenpflichtige Anfragen oder individuelle Hilfe eingefuhrt werden, werden Zahlungsbedingungen, Erstattungsregeln, Plattformgebuhren und Verantwortlichkeiten der Helfer vor der Zahlung angezeigt. Trinkgelder sind freiwillig, sofern nicht eindeutig ein kostenpflichtiger Service angeboten und angenommen wird.
       </p>
 
-      <h2>Zulässige Nutzung</h2>
+      <h2>Zulassige Nutzung</h2>
       <p>
-        Sie dürfen diese Website für persönliche, nicht kommerzielle Reiseplanung nutzen. Sie dürfen
-        die Website nicht missbrauchen, nicht versuchen, sie zu stören, sie nicht in großem Umfang
-        scrapen und wesentliche Teile unserer Inhalte nicht ohne Erlaubnis erneut veröffentlichen.
+        Sie durfen diese Website fur die personliche, nicht kommerzielle Reiseplanung nutzen. Sie durfen die Website nicht missbrauchen, nicht versuchen, sie zu storen, sie nicht in grossem Umfang scrapen und keine wesentlichen Teile unserer Inhalte ohne Genehmigung erneut veroffentlichen.
       </p>
 
-      <h2>Haftungsbeschränkung</h2>
+      <h2>Haftungsbeschrankung</h2>
       <p>
-        ChinaTripBox wird auf der Grundlage "wie besehen" und "wie verfügbar" bereitgestellt. Soweit
-        gesetzlich zulässig, haften wir nicht für Verluste oder Schäden, die aus Ihrer Nutzung der
-        Website, dem Vertrauen auf Informationen, Reiseunterbrechungen, Serviceänderungen oder
-        Handlungen Dritter entstehen.
+        ChinaTripBox wird auf einer "wie besehen"- und "wie verfugbar"-Basis bereitgestellt. Soweit gesetzlich zulassig, haften wir nicht fur Verluste oder Schaden, die aus Ihrer Nutzung der Website, dem Vertrauen auf Informationen, Reisestorungen, Anderungen von Dienstleistungen oder Handlungen Dritter entstehen.
       </p>
 
-      <h2>Änderungen dieser Bedingungen</h2>
+      <h2>Anderungen dieser Bedingungen</h2>
       <p>
-        Wir können diese Nutzungsbedingungen von Zeit zu Zeit aktualisieren. Die weitere Nutzung der
-        Website nach Veröffentlichung von Änderungen bedeutet, dass Sie die aktualisierten Bedingungen
-        akzeptieren.
+        Wir konnen diese Nutzungsbedingungen von Zeit zu Zeit aktualisieren. Die fortgesetzte Nutzung der Website nach Veroffentlichung von Anderungen bedeutet, dass Sie die aktualisierten Bedingungen akzeptieren.
       </p>
 
       <h2>Kontakt</h2>
       <p>
-        Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte über unsere
-        <a href="/de/contact/">Kontaktseite</a>.
+        Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte uber unsere
+        <a href="/contact/">Kontaktseite</a>.
       </p>
     </article>
   </main>
