@@ -1,7 +1,6 @@
 ---
 
 import { getCollection } from 'astro:content';
-import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -9,24 +8,29 @@ import CoverImage from '../../../components/CoverImage.astro';
 import ChinaMap from '../../../components/ChinaMap.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 
-const LOCALE = 'fr';
-const LOCALE_TAG = 'fr';
 const allPosts = await getCollection('posts-fr');
+const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
+const cityPosts = allPosts
+  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
 const title = 'Guides des villes de Chine pour les voyageurs étrangers';
 const description = 'Préparez facilement vos étapes urbaines en Chine grâce à nos guides sur Pékin, Shanghai, Canton, Chengdu, Xi\'an, Hangzhou, Chongqing et Sanya, avec des conseils concrets pour l\'aéroport, le métro, les repas et les transports.';
 
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
-const cityPosts = allPosts
-  .sort((a, b) => a.data.title.localeCompare(b.data.title));
-
-// Dynamic map data from shared CITY_GUIDES
-const postedSlugs = new Set(cityPosts.map(p => p.slug));
-const mapCities = CITY_GUIDES.map((g) => ({
-  name: cityName(g, 'fr'),
-  x: g.mapX,
-  y: g.mapY,
-  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
-}));
+const mapCities = [
+  { name: 'Pékin', x: 470, y: 80, href: '#beijing' },
+  { name: 'Xi\'an', x: 340, y: 155, href: '#xian' },
+  { name: 'Nanjing', x: 490, y: 180, href: '' },
+  { name: 'Shanghai', x: 540, y: 200, href: '#shanghai' },
+  { name: 'Chengdu', x: 250, y: 220, href: '#chengdu' },
+  { name: 'Hangzhou', x: 520, y: 205, href: '#hangzhou' },
+  { name: 'Chongqing', x: 310, y: 260, href: '#chongqing' },
+  { name: 'Guilin', x: 370, y: 300, href: '' },
+  { name: 'Kunming', x: 210, y: 335, href: '' },
+  { name: 'Canton', x: 400, y: 370, href: '#guangzhou' },
+  { name: 'Shenzhen', x: 430, y: 390, href: '' },
+  { name: 'Sanya', x: 360, y: 440, href: '#sanya' },
+];
 
 const cities = [
   {
@@ -60,7 +64,7 @@ const cities = [
     difficulty: 'Moyen',
     whyGo: 'Pour les pandas, la cuisine du Sichuan, les maisons de thé, un coût de vie plus doux et les excursions vers l\'ouest de la Chine.',
     next: '/fr/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
-    nextLabel: 'Guide de la street food à Chengdu',
+    nextLabel: 'Guide de la cuisine de rue à Chengdu',
   },
   {
     name: 'Xi\'an',
@@ -87,11 +91,11 @@ const cities = [
   {
     name: 'Chongqing',
     href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    desc: 'Idéale pour le hotpot, une skyline futuriste, une ville en relief et les croisières sur le Yangtsé.',
+    desc: 'Idéale pour la fondue épicée, une silhouette urbaine futuriste, une ville en relief et les croisières sur le Yangtsé.',
     days: '3-4 jours',
     bestSeason: 'Mars-mai, septembre-novembre',
     difficulty: 'Difficile',
-    whyGo: 'Pour le hotpot de Chongqing, Hongyadong, les vues de nuit, le téléphérique du Yangtsé et une ville spectaculaire à plusieurs niveaux.',
+    whyGo: 'Pour la fondue épicée de Chongqing, Hongyadong, les vues de nuit, le téléphérique du Yangtsé et une ville spectaculaire à plusieurs niveaux.',
     next: '/fr/food/',
     nextLabel: 'Explorer la cuisine de Chongqing',
   },
@@ -109,7 +113,7 @@ const cities = [
   {
     name: 'Sanya',
     href: '/fr/posts/sanya-city-guide-for-foreigners/',
-    desc: 'Idéale pour un hiver doux, les séjours en resort, la plage et les escapades à Hainan.',
+    desc: 'Idéale pour un hiver doux, les séjours en station balnéaire, la plage et les escapades à Hainan.',
     days: '3-7 jours',
     bestSeason: 'Novembre-avril',
     difficulty: 'Moyen',
@@ -128,7 +132,7 @@ const routes = [
   {
     name: 'Cuisine et rythme détendu, 7 à 9 jours',
     plan: 'Chengdu 4 jours, Pékin ou Shanghai 3 à 4 jours',
-    fit: 'Un bon choix pour les voyageurs qui veulent des pandas, des maisons de thé, du hotpot et une grande ville d\'arrivée.',
+    fit: 'Un bon choix pour les voyageurs qui veulent des pandas, des maisons de thé, de la fondue épicée et une grande ville d\'arrivée.',
   },
   {
     name: 'Parenthèse hivernale, 6 à 10 jours',
@@ -179,7 +183,7 @@ const faqJsonLd = {
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="city-shanghai" alt="Vue de la skyline de Shanghai et du Bund au crépuscule, symbole d'un voyage urbain en Chine" loading="eager" />
+    <CoverImage name="city-shanghai" alt="Vue de la silhouette urbaine de Shanghai et du Bund au crépuscule, symbole d\'un voyage urbain en Chine" loading="eager" />
 
     <ChinaMap cities={mapCities} />
 
@@ -301,7 +305,7 @@ const faqJsonLd = {
     <section class="mt-12" aria-labelledby="city-faq">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">FAQ des villes</p>
+          <p class="section-kicker">Foire aux questions des villes</p>
           <h2 id="city-faq">Questions fréquentes sur l'organisation d'un séjour urbain en Chine</h2>
         </div>
       </div>
