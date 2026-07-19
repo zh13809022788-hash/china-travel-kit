@@ -15,7 +15,7 @@ const t = (key: string) => {
     de: { cta: 'Keine Updates verpassen', btn: 'Abonnieren', close: 'Später', success: 'Abonniert!', already: 'Bereits angemeldet!', error: 'Fehler, erneut versuchen.' },
     es: { cta: 'No te pierdas actualizaciones', btn: 'Suscribirse', close: 'Luego', success: '¡Suscrito!', already: '¡Ya suscrito!', error: 'Error, inténtalo de nuevo.' },
   };
-  const lang = i18n[locale as string] || i18n['en'];
+  const lang = i18n[(locale as string).toLowerCase()] || i18n['en'];
   return lang[key] || i18n['en'][key] || '';
 };
 ---

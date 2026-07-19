@@ -86,7 +86,7 @@ const t = (key: string) => {
       error: 'Inténtalo de nuevo',
     },
   };
-  const lang = i18n[locale as string] || i18n['en'];
+  const lang = i18n[(locale as string).toLowerCase()] || i18n['en'];
   return lang[key] || (i18n['en'])[key] || '';
 };
 ---
