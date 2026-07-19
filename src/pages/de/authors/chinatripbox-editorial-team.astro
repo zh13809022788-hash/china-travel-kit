@@ -1,73 +1,73 @@
----
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-
-const title = 'ChinaTripBox Redaktionsteam';
-const description =
-  'Über das Redaktionsteam von ChinaTripBox, wie wir praktische China-Reiseführer recherchieren und wie Leser Korrekturen einreichen können.';
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': new URL('/authors/chinatripbox-editorial-team/#person', Astro.site).toString(),
-  name: title,
-  url: new URL('/authors/chinatripbox-editorial-team/', Astro.site).toString(),
-  affiliation: {
-    '@type': 'Organization',
-    name: 'ChinaTripBox',
-    url: new URL('/', Astro.site).toString(),
-  },
-  knowsAbout: [
-    'China-Reiseplanung',
-    'mobiles Bezahlen in China',
-    'China eSIM und Internetzugang',
-    'Hochgeschwindigkeitszüge in China',
-    'Reiselogistik für ausländische Besucher in China',
-  ],
-};
----
-
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
-  <main class="container-page py-12">
-    <article class="prose-content article-body">
-      <p class="section-kicker">Autor</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
-
-      <h2>Redaktioneller Schwerpunkt</h2>
-      <p>
-        Das Redaktionsteam von ChinaTripBox erstellt praktische Leitfäden für ausländische Besucher
-        in China, mit Schwerpunkt auf Zahlungseinrichtung, eSIM und Internetzugang,
-        Hochgeschwindigkeitszügen, Fahrdienst-Apps, Flughafentransfers, Stadtplanung,
-        Essensbestellungen und typischen Problemen bei der ersten Reise.
-      </p>
-
-      <h2>Wie wir Leitfäden erstellen</h2>
-      <p>
-        Wir kombinieren offizielle Quellen, Anbieterdokumentationen, Hilfematerialien von Apps,
-        Leserfragen, Reiseberichte und, wo möglich, eigene Praxistests. Bei schnell wechselnden
-        Themen wie visumfreier Einreise, Zahlungslimits, App-Verfügbarkeit und Verkehrsregeln
-        betrachten wir offizielle Regierungs- oder Anbieterseiten als maßgebliche Quelle.
-      </p>
-
-      <h2>Korrekturen</h2>
-      <p>
-        Die Reiselogistik in China ändert sich schnell. Wenn Sie einen veralteten Schritt, eine
-        geänderte Richtlinie, einen defekten Link oder einen fehlenden Hinweis finden, senden Sie
-        uns bitte die Seiten-URL über unsere <a href="/de/contact/">Kontaktseite</a>. Wir prüfen
-        Korrekturen und aktualisieren betroffene Leitfäden, wenn die Nachweise eindeutig sind.
-      </p>
-
-      <h2>Redaktionsrichtlinie</h2>
-      <p>
-        Lesen Sie unsere <a href="/de/editorial-policy/">Redaktionsrichtlinie</a> für Details zu
-        Recherche, Aktualisierungen, Affiliate-Offenlegung, Unabhängigkeit und Einschränkungen.
-      </p>
-
-      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    </article>
-  </main>
-  <Footer />
-</BaseLayout>
+﻿---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'ChinaTripBox Redaktionsteam';
+const description =
+  'Über das Redaktionsteam von ChinaTripBox, wie wir praktische China-Reiseführer recherchieren und wie Leser Korrekturen einreichen können.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': new URL('/authors/chinatripbox-editorial-team/#person', Astro.site).toString(),
+  name: title,
+  url: new URL('/authors/chinatripbox-editorial-team/', Astro.site).toString(),
+  affiliation: {
+    '@type': 'Organization',
+    name: 'ChinaTripBox',
+    url: new URL('/', Astro.site).toString(),
+  },
+  knowsAbout: [
+    'China-Reiseplanung',
+    'mobiles Bezahlen in China',
+    'China eSIM und Internetzugang',
+    'Hochgeschwindigkeitszüge in China',
+    'Reiselogistik für ausländische Besucher in China',
+  ],
+};
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
+  <Header locale="de" />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <p class="section-kicker">Autor</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+
+      <h2>Redaktioneller Schwerpunkt</h2>
+      <p>
+        Das Redaktionsteam von ChinaTripBox erstellt praktische Leitfäden für ausländische Besucher
+        in China, mit Schwerpunkt auf Zahlungseinrichtung, eSIM und Internetzugang,
+        Hochgeschwindigkeitszügen, Fahrdienst-Apps, Flughafentransfers, Stadtplanung,
+        Essensbestellungen und typischen Problemen bei der ersten Reise.
+      </p>
+
+      <h2>Wie wir Leitfäden erstellen</h2>
+      <p>
+        Wir kombinieren offizielle Quellen, Anbieterdokumentationen, Hilfematerialien von Apps,
+        Leserfragen, Reiseberichte und, wo möglich, eigene Praxistests. Bei schnell wechselnden
+        Themen wie visumfreier Einreise, Zahlungslimits, App-Verfügbarkeit und Verkehrsregeln
+        betrachten wir offizielle Regierungs- oder Anbieterseiten als maßgebliche Quelle.
+      </p>
+
+      <h2>Korrekturen</h2>
+      <p>
+        Die Reiselogistik in China ändert sich schnell. Wenn Sie einen veralteten Schritt, eine
+        geänderte Richtlinie, einen defekten Link oder einen fehlenden Hinweis finden, senden Sie
+        uns bitte die Seiten-URL über unsere <a href="/de/contact/">Kontaktseite</a>. Wir prüfen
+        Korrekturen und aktualisieren betroffene Leitfäden, wenn die Nachweise eindeutig sind.
+      </p>
+
+      <h2>Redaktionsrichtlinie</h2>
+      <p>
+        Lesen Sie unsere <a href="/de/editorial-policy/">Redaktionsrichtlinie</a> für Details zu
+        Recherche, Aktualisierungen, Affiliate-Offenlegung, Unabhängigkeit und Einschränkungen.
+      </p>
+
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
