@@ -204,5 +204,11 @@
     "photographer": "Drew Hays",
     "photographer_url": "https://unsplash.com/@drew_hays",
     "source": "Unsplash"
+  },
+  "topic-chinese-cuisine": {
+    "photographer": "Louis Hansel",
+    "photographer_url": "https://unsplash.com/@louishansel",
+    "unsplash_url": "https://unsplash.com/photos/5mZ_GxVl3dc",
+    "source": "Unsplash"
   }
 }
