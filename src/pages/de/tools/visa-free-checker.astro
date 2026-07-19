@@ -6,14 +6,14 @@ import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'China Visafrei- und Transit-Checker';
+const title = 'China Visa-Free & Transit Checker';
 const description =
-  'Prufe, ob du visafrei nach China einreisen kannst, den 240-Stunden-Transit ohne Visum nutzen kannst oder je nach deiner Staatsangehorigkeit und Art der Reise ein Visum beantragen musst.';
+  'Prufe, ob du visumfrei nach China einreisen kannst, den 240-stundigen visumfreien Transit nutzen kannst oder je nach deiner Staatsangehorigkeit und Reiseart ein Visum beantragen musst.';
 
 const lastReviewed = '13. Juli 2026';
 
 // Reprasentative Richtliniendaten fur 2026. Dies ist eine Orientierungshilfe, keine Rechtsberatung;
-// Reisende mussen dies vor der Buchung bei einer Botschaft bestatigen.
+// Reisende mussen sich vor der Buchung bei einer Botschaft vergewissern.
 const countries = [
   'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
   'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
@@ -29,10 +29,10 @@ const countries = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Visafrei- und Transit-Checker</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Visumfrei- & Transit-Checker</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <p class="mt-3 text-sm text-gray-500">
-        Zuletzt gepruft: {lastReviewed}. Dieser Checker ist eine Planungshilfe, keine offizielle Entscheidung zur Berechtigung.
+        Zuletzt gepruft: {lastReviewed}. Dieser Checker ist eine Planungshilfe, keine offizielle Entscheidung uber die Berechtigung.
       </p>
     </header>
 
@@ -47,10 +47,10 @@ const countries = [
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Art der Reise</span>
+        <span class="mb-1 font-medium text-gray-700">Reiseart</span>
         <select id="trip" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           <option value="tourism">Tourismus / Besuch</option>
-          <option value="business">Geschaftsreise</option>
+          <option value="business">Geschaftlich</option>
           <option value="transit">Nur Durchreise in ein anderes Land</option>
         </select>
       </label>
@@ -63,52 +63,52 @@ const countries = [
     <div id="result" class="mt-6 hidden">
       <div class="card" id="result-card"></div>
       <p class="mt-3 text-xs text-gray-400">
-        Richtlinien andern sich haufig und hangen von deinen spezifischen Umstanden ab. Bestatige dies immer bei einer
+        Richtlinien andern sich haufig und hangen von deinen konkreten Umstanden ab. Bestatige dies immer bei einer
         chinesischen Botschaft oder einem Konsulat, bevor du eine Reise buchst. Dieses Tool bietet nur allgemeine Orientierung.
       </p>
 
       <AffiliateCta
         title="Plane den Rest deiner Reise"
-        description="Kummere dich vor der Landung in China um Konnektivitat, Zahlungen und Transport."
+        description="Kummere dich um Konnektivitat, Zahlungen und Transport, bevor du in China landest."
         buttonText="Reise-Essentials ansehen"
         placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
 
     <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="official-sources">
-      <h2 id="official-sources" class="text-xl font-bold text-gray-950">Offizielle Quellen zur Uberprufung vor der Buchung</h2>
+      <h2 id="official-sources" class="text-xl font-bold text-gray-950">Offizielle Quellen, die du vor der Buchung prufen solltest</h2>
       <p class="mt-2 text-sm leading-6 text-gray-600">
-        Listen visafreier Lander, Einreisehafen, erlaubte Reisegebiete und Boarding-Prufungen der Fluggesellschaften konnen sich andern.
-        Betrachte die offiziellen Regeln von Behorden und Fluggesellschaften als verbindlich.
+        Listen visumfreier Lander, Einreisehafen, erlaubte Reisegebiete und Boarding-Kontrollen der Fluggesellschaften konnen sich andern.
+        Betrachte offizielle Regierungs- und Fluglinienregeln als verbindlich.
       </p>
       <ul class="mt-4 grid gap-2 text-sm leading-6 text-gray-700">
         <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">National Immigration Administration</a> fur Aktualisierungen zu Grenzkontrollen und Transitbefreiungen.</li>
-        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Informationsportal des Staatsrats</a> fur englischsprachige Richtlinienankundigungen.</li>
-        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministerium fur Auswartige Angelegenheiten</a> sowie Websites chinesischer Botschaften oder Konsulate fur passspezifische Regeln.</li>
+        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">State Council information portal</a> fur englischsprachige Bekanntmachungen zu Richtlinien.</li>
+        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministry of Foreign Affairs</a> sowie Websites chinesischer Botschaften oder Konsulate fur passspezifische Regeln.</li>
       </ul>
     </section>
 
     <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">So vermeidest du Fehler bei der visafreien Einreise</h2>
+        <h2 class="text-2xl font-bold text-gray-900">So vermeidest du Fehler bei der visumfreien Einreise</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Der haufigste Fehler besteht darin, die normale visafreie Einreise mit dem visafreien Transit zu verwechseln. Eine
+          Der haufigste Fehler besteht darin, die normale visumfreie Einreise mit dem visumfreien Transit zu verwechseln. Eine
           normale Hin- und Ruckreise und ein Zwischenstopp auf dem Weg in ein Drittland sind nicht dieselbe Reiseroute. Fluggesellschaften
-          prufen die Dokumente vor dem Boarding, daher kann ein Missverstandnis die Reise stoppen, bevor du
+          prufen Dokumente vor dem Boarding, daher kann ein Missverstandnis die Reise stoppen, noch bevor du
           China erreichst.
         </p>
         <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
-          <li><strong class="text-gray-900">Prufe zuerst die Staatsangehorigkeit des Reisepasses.</strong> Wohnsitzland und Abrechnungsland der Karte entscheiden nicht uber die visafreie Berechtigung.</li>
-          <li><strong class="text-gray-900">Trenne Einreise und Transit.</strong> Transit erfordert in der Regel eine bestatigte Weiterreise in ein Drittland oder eine dritte Region.</li>
-          <li><strong class="text-gray-900">Bestatige die Einreisehafen.</strong> Transitregelungen hangen von ausgewiesenen Hafen und erlaubten Reisegebieten ab.</li>
+          <li><strong class="text-gray-900">Prufe zuerst die Staatsangehorigkeit des Reisepasses.</strong> Wohnsitzland und Kartenabrechnungsland entscheiden nicht uber die visumfreie Berechtigung.</li>
+          <li><strong class="text-gray-900">Trenne Einreise von Transit.</strong> Transit erfordert in der Regel eine bestatigte Weiterreise in ein Drittland oder eine Drittregion.</li>
+          <li><strong class="text-gray-900">Bestatige die Einreisehafen.</strong> Transitrichtlinien hangen von ausgewiesenen Hafen und erlaubten Reisegebieten ab.</li>
           <li><strong class="text-gray-900">Halte Nachweise bereit.</strong> Fluggesellschaften und Grenzbeamte konnen nach Weiterflugticket, Hotel, Reiseplan oder Einladungsdetails fragen.</li>
         </ul>
       </div>
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
         <h2 class="text-lg font-bold text-gray-900">Plane den Rest deiner Ankunft</h2>
         <div class="mt-4 grid gap-3">
-          <a href="/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Den vollstandigen Leitfaden zur visafreien Einreise lesen</a>
-          <a href="/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Die Ankunfts-Checkliste verwenden</a>
+          <a href="/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Den vollstandigen Leitfaden zur visumfreien Einreise lesen</a>
+          <a href="/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Die Ankunfts-Checkliste nutzen</a>
           <a href="/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Flughafentransport planen</a>
         </div>
       </aside>
@@ -120,15 +120,15 @@ const countries = [
 <script>
   type TripKey = 'tourism' | 'business' | 'transit';
 
-  // Staatsangehorigkeiten, die fur die einseitige visafreie Einreise fur 30 Tage berechtigt sind (Programm 2026).
+  // Staatsangehorigkeiten, die fur die einseitige 30-tagige visumfreie Einreise infrage kommen (Programm 2026).
   const visaFree30 = new Set([
     'Germany', 'France', 'Italy', 'Spain', 'Netherlands', 'Switzerland',
     'Ireland', 'Norway', 'Japan', 'South Korea', 'Brazil', 'New Zealand',
     'Malaysia', 'Thailand', 'Australia',
   ]);
 
-  // Staatsangehorigkeiten, die fur den 240-stundigen (10-tagigen) visafreien Transit uber
-  // ausgewiesene Hafen berechtigt sind, wenn sie in ein Drittland/eine Drittregion weiterreisen.
+  // Staatsangehorigkeiten, die fur den 240-stundigen (10-tagigen) visumfreien Transit uber
+  // ausgewiesene Hafen infrage kommen, wenn die Weiterreise in ein Drittland/eine Drittregion erfolgt.
   const transit240 = new Set([
     'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
     'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
@@ -150,36 +150,36 @@ const countries = [
       if (hasTransit) {
         return {
           tone: 'good',
-          heading: 'Du qualifizierst dich wahrscheinlich fur den 240-stundigen visafreien Transit',
-          body: `Als Inhaber eines Reisepasses aus ${country} kannst du bei einer Durchreise durch China in ein Drittland in der Regel bis zu 240 Stunden (10 Tage) ohne Visum bleiben, wenn du uber einen berechtigten Hafen einreist.`,
+          heading: 'Du erfullst wahrscheinlich die Voraussetzungen fur den 240-stundigen visumfreien Transit',
+          body: `Als Inhaber eines Reisepasses aus ${country} kannst du bei der Durchreise durch China in ein Drittland in der Regel bis zu 240 Stunden (10 Tage) ohne Visum bleiben, wenn du uber einen zulassigen Hafen einreist.`,
           points: [
-            'Du musst ein bestatigtes Weiterreiseticket in ein Drittland oder eine dritte Region innerhalb von 240 Stunden haben.',
-            'Ein- und Ausreise mussen uber ausgewiesene Transithafen erfolgen (die meisten groSen internationalen Flughafen sind berechtigt).',
+            'Du musst innerhalb von 240 Stunden ein bestatigtes Weiterreiseticket in ein Drittland oder eine Drittregion haben.',
+            'Ein- und Ausreise mussen uber ausgewiesene Transithafen erfolgen (die meisten grossen internationalen Flughafen kommen infrage).',
             'Du bist in der Regel auf die Provinz/Region der Einreise beschrankt - prufe die spezifischen Regeln des jeweiligen Hafens.',
           ],
         };
       }
       return {
         tone: 'warn',
-        heading: 'Die visafreie Transitregelung gilt moglicherweise nicht fur deine Staatsangehorigkeit',
-        body: `${country} steht in unseren Daten nicht auf der ublichen Liste fur den 240-stundigen Transit. Moglicherweise qualifizierst du dich trotzdem fur die visafreie Einreise, wenn du berechtigt bist, oder du benotigst ein Transitvisum (G).`,
+        heading: 'Die Transit-Visumbefreiung gilt moglicherweise nicht fur deine Staatsangehorigkeit',
+        body: `${country} steht in unseren Daten nicht auf der Standardliste fur den 240-stundigen Transit. Moglicherweise kommst du dennoch fur die visumfreie Einreise infrage, falls berechtigt, oder du benotigst ein Transitvisum (G).`,
         points: [
-          'Prufe, ob deine Staatsangehorigkeit stattdessen fur die vollstandige visafreie Einreise berechtigt ist.',
+          'Prufe, ob deine Staatsangehorigkeit stattdessen fur die vollstandige visumfreie Einreise infrage kommt.',
           'Falls nicht, beantrage vor der Reise das passende Visum.',
         ],
       };
     }
 
-    // Tourismus oder Geschaftsreise
+    // tourism or business
     if (has30) {
       return {
         tone: 'good',
-        heading: 'Du qualifizierst dich wahrscheinlich fur die 30-tagige visafreie Einreise',
-        body: `Als Inhaber eines Reisepasses aus ${country} kannst du unter der aktuellen einseitigen Regelung in der Regel fur bis zu 30 Tage visafrei nach China einreisen, fur Tourismus, Geschaftsreisen, Familienbesuche oder Transit.`,
+        heading: 'Du erfullst wahrscheinlich die Voraussetzungen fur die 30-tagige visumfreie Einreise',
+        body: `Als Inhaber eines Reisepasses aus ${country} kannst du nach der aktuellen einseitigen Regelung in der Regel fur bis zu 30 Tage visumfrei nach China einreisen, fur Tourismus, Geschaftsreisen, Familienbesuche oder Transit.`,
         points: [
-          'Dein Reisepass sollte noch mindestens 6 Monate gultig sein und freie Seiten haben.',
-          'Halte fur die Einreisekontrolle Nachweise uber Weiter- oder Ruckreise sowie Unterkunft bereit.',
-          'Die 30 Tage gelten pro Einreise - bestatige die aktuelle Zahlweise, bevor du buchst.',
+          'Dein Reisepass sollte noch mindestens 6 Monate gultig sein und leere Seiten haben.',
+          'Halte fur die Einwanderungsbehorde Nachweise uber Weiter-/Ruckreise und Unterkunft bereit.',
+          'Die 30 Tage gelten pro Einreise - bestatige die aktuelle Berechnung, bevor du buchst.',
         ],
       };
     }
@@ -187,19 +187,19 @@ const countries = [
       return {
         tone: 'info',
         heading: 'Ein Visum ist wahrscheinlich erforderlich - aber die Transitbefreiung kann helfen',
-        body: `${country} steht fur Tourismus/Geschaftsreisen nicht auf unserer 30-Tage-Liste fur visafreie Einreise, daher ist in der Regel ein Visum erforderlich. Wenn du jedoch in ein Drittland weiterreist, kannst du stattdessen moglicherweise den 240-stundigen visafreien Transit nutzen.`,
+        body: `${country} steht fur Tourismus/Geschaftsreisen nicht auf unserer Liste fur die 30-tagige visumfreie Einreise, daher ist in der Regel ein Visum erforderlich. Wenn du jedoch auf dem Weg in ein Drittland nur durchreist, kannst du stattdessen den 240-stundigen visumfreien Transit nutzen.`,
         points: [
-          'Fur einen gezielten Besuch beantrage im Voraus ein Visum L (Tourismus) oder M (Geschaft).',
-          'Fur einen Zwischenstopp auf dem Weg an einen anderen Ort kannst du dich moglicherweise fur den 240-stundigen Transit qualifizieren - wechsle bei "Art der Reise" zu Transit, um dies zu prufen.',
+          'Fur einen gezielten Besuch beantrage im Voraus ein L-Visum (Tourismus) oder M-Visum (Geschaft).',
+          'Fur einen Zwischenstopp auf dem Weg anderswohin kannst du fur den 240-stundigen Transit infrage kommen - wechsle bei "Reiseart" zu Transit, um das zu prufen.',
         ],
       };
     }
     return {
       tone: 'warn',
       heading: 'Ein Visum ist wahrscheinlich erforderlich',
-      body: `Basierend auf unseren Daten benotigen Inhaber eines Reisepasses aus ${country} fur diese Art der Reise in der Regel ein Visum fur die Einreise nach China. Beantrage es vor der Reise uber eine chinesische Botschaft, ein Konsulat oder ein autorisiertes Visazentrum.`,
+      body: `Nach unseren Daten benotigen Inhaber eines Reisepasses aus ${country} fur diese Reiseart in der Regel ein Visum fur die Einreise nach China. Beantrage es vor der Reise uber eine chinesische Botschaft, ein Konsulat oder ein autorisiertes Visazentrum.`,
       points: [
-        'Beantrage ein Visum L (Tourismus) oder M (Geschaft) rechtzeitig vor deiner Reise.',
+        'Beantrage ein L-Visum (Tourismus) oder M-Visum (Geschaft) rechtzeitig vor deiner Reise.',
         'Zu den Anforderungen gehoren in der Regel eine Einladung oder ein Reiseplan, Hotelbuchungen und Ruckflugtickets.',
       ],
     };
@@ -217,8 +217,8 @@ const countries = [
   };
   const toneLabel: Record<Verdict['tone'], string> = {
     good: 'Wahrscheinlich berechtigt',
-    warn: 'Visum wahrscheinlich notig',
-    info: 'Hangt von deinem Plan ab',
+    warn: 'Visum wahrscheinlich erforderlich',
+    info: 'Hangt von deinem Reiseplan ab',
   };
 
   const btn = document.getElementById('check-btn');
