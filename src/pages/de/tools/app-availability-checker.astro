@@ -6,38 +6,38 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Laufen meine Apps in China? App-Verfügbarkeitscheck';
+const title = 'Funktionieren meine Apps in China? App-Verfügbarkeitsprüfer';
 const description =
-  'Prüfen Sie, ob Google, WhatsApp, Instagram und andere Apps in China ohne VPN funktionieren, und sehen Sie für jeden gesperrten Dienst eine passende lokale Alternative.';
+  'Prüfen Sie, ob Google, WhatsApp, Instagram und andere Apps in China ohne VPN funktionieren — und sehen Sie die lokale Alternative für jeden gesperrten Dienst.';
 
 interface AppInfo {
   name: string;
   category: string;
-  status: 'funktioniert' | 'gesperrt' | 'teilweise';
+  status: 'works' | 'blocked' | 'partial';
   note: string;
   alt?: string;
 }
 
 const apps: AppInfo[] = [
-  { name: 'Google-Suche', category: 'Google', status: 'gesperrt', note: 'Ohne VPN gesperrt.', alt: 'Bing (funktioniert) oder Baidu' },
-  { name: 'Google Maps', category: 'Google', status: 'teilweise', note: 'Lädt, aber die Daten auf dem chinesischen Festland sind ungenau oder verschoben.', alt: 'Apple Karten, Amap oder Baidu Maps' },
-  { name: 'Gmail', category: 'Google', status: 'gesperrt', note: 'Ohne VPN gesperrt.', alt: 'Outlook oder ein E-Mail-Dienst ohne Google' },
-  { name: 'YouTube', category: 'Google', status: 'gesperrt', note: 'Ohne VPN gesperrt.', alt: 'Bilibili (lokal)' },
-  { name: 'WhatsApp', category: 'Nachrichten', status: 'gesperrt', note: 'Ohne VPN gesperrt.', alt: 'WeChat' },
-  { name: 'Facebook', category: 'Soziale Medien', status: 'gesperrt', note: 'Ohne VPN gesperrt.', alt: 'WeChat Moments oder RED' },
-  { name: 'Instagram', category: 'Soziale Medien', status: 'gesperrt', note: 'Ohne VPN gesperrt.', alt: 'RED (Xiaohongshu)' },
-  { name: 'X (Twitter)', category: 'Soziale Medien', status: 'gesperrt', note: 'Ohne VPN gesperrt.', alt: 'Weibo' },
-  { name: 'Telegram', category: 'Nachrichten', status: 'gesperrt', note: 'Ohne VPN gesperrt.', alt: 'WeChat' },
-  { name: 'WeChat', category: 'Nachrichten', status: 'funktioniert', note: 'Funktioniert vollständig und ist in China der Standard.' },
-  { name: 'Apple-Dienste (iMessage, App Store)', category: 'Apple', status: 'funktioniert', note: 'Funktioniert normal.' },
-  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'funktioniert', note: 'Funktioniert normal.' },
-  { name: 'Booking.com', category: 'Reise', status: 'funktioniert', note: 'Funktioniert normal.' },
-  { name: 'Airbnb', category: 'Reise', status: 'funktioniert', note: 'Funktioniert normal.' },
-  { name: 'Trip.com', category: 'Reise', status: 'funktioniert', note: 'Funktioniert vollständig und ist ideal für Züge und Hotels.' },
-  { name: 'Alipay', category: 'Bezahlen', status: 'funktioniert', note: 'Funktioniert vollständig und unterstützt ausländische Karten.' },
-  { name: 'Uber', category: 'Verkehr', status: 'gesperrt', note: 'Auf dem chinesischen Festland nicht verfügbar.', alt: 'DiDi' },
-  { name: 'Netflix', category: 'Medien', status: 'gesperrt', note: 'Auf dem chinesischen Festland nicht verfügbar.', alt: 'Lokale Streaming-Dienste oder Inhalte vorher herunterladen' },
-  { name: 'Spotify', category: 'Medien', status: 'gesperrt', note: 'Auf dem chinesischen Festland nicht verfügbar.', alt: 'QQ Music oder Musik vorher offline herunterladen' },
+  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Bing (funktioniert) oder Baidu' },
+  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Lädt, aber Daten sind im chinesischen Festland ungenau/verschoben.', alt: 'Apple Maps, Amap oder Baidu Maps' },
+  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Outlook / eine Nicht-Google-E-Mail' },
+  { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Bilibili (lokal)' },
+  { name: 'WhatsApp', category: 'Nachrichten', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat' },
+  { name: 'Facebook', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat Moments / RED' },
+  { name: 'Instagram', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'RED (Xiaohongshu)' },
+  { name: 'X (Twitter)', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Weibo' },
+  { name: 'Telegram', category: 'Nachrichten', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat' },
+  { name: 'WeChat', category: 'Nachrichten', status: 'works', note: 'Funktioniert vollständig — der Standard in China.' },
+  { name: 'Apple-Dienste (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Funktioniert normal.' },
+  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: 'Funktioniert normal.' },
+  { name: 'Booking.com', category: 'Reise', status: 'works', note: 'Funktioniert normal.' },
+  { name: 'Airbnb', category: 'Reise', status: 'works', note: 'Funktioniert normal.' },
+  { name: 'Trip.com', category: 'Reise', status: 'works', note: 'Funktioniert vollständig — toll für Züge und Hotels.' },
+  { name: 'Alipay', category: 'Bezahlung', status: 'works', note: 'Funktioniert vollständig — unterstützt ausländische Karten.' },
+  { name: 'Uber', category: 'Verkehr', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'DiDi' },
+  { name: 'Netflix', category: 'Medien', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'Lokales Streaming oder vorher herunterladen' },
+  { name: 'Spotify', category: 'Medien', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'QQ Music / zuerst offline herunterladen' },
 ];
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
@@ -45,7 +45,7 @@ const apps: AppInfo[] = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Laufen meine Apps in China?</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Funktionieren meine Apps in China?</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -58,19 +58,19 @@ const apps: AppInfo[] = [
           class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
       </label>
       <div class="mt-3 flex flex-wrap gap-2 text-sm">
-        <button data-status="alle" class="status-filter btn-primary px-3 py-1">Alle</button>
-        <button data-status="funktioniert" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Funktioniert</button>
-        <button data-status="teilweise" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Teilweise</button>
-        <button data-status="gesperrt" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Gesperrt</button>
+        <button data-status="all" class="status-filter btn-primary px-3 py-1">Alle</button>
+        <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Funktioniert</button>
+        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Teilweise</button>
+        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Gesperrt</button>
       </div>
     </div>
 
     <div id="app-list" class="mt-6 grid gap-3 sm:grid-cols-2"></div>
-    <p id="no-results" class="hidden py-8 text-center text-gray-500">Keine Apps passen zu Ihrer Suche.</p>
+    <p id="no-results" class="hidden py-8 text-center text-gray-500">Keine Apps entsprechen Ihrer Suche.</p>
 
     <AffiliateCta
-      title="Halten Sie Ihre Apps mit einer Reise-eSIM online"
-      description="Mit einer China-Reise-eSIM, die lokale Einschränkungen umgeht, bleiben Ihre gewohnten Apps erreichbar, ganz ohne separate VPN-Einrichtung."
+      title="Halten Sie Ihre Apps mit einer Reise-eSIM funktionsfähig"
+      description="Eine China-Reise-eSIM, die lokale Einschränkungen umgeht, hält Ihre gewohnten Apps online — keine separate VPN-Einrichtung erforderlich."
       buttonText="eSIM-Optionen ansehen"
       placeholder={AFFILIATE_LINKS.esim}
     />
@@ -83,18 +83,18 @@ const apps: AppInfo[] = [
   const noResults = document.getElementById('no-results');
   const searchEl = document.getElementById('search');
   const filters = document.querySelectorAll('.status-filter');
-  let activeStatus = 'alle';
+  let activeStatus = 'all';
 
   const badge = {
-    funktioniert: { cls: 'bg-green-100 text-green-800', label: '✅ Funktioniert' },
-    teilweise: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Teilweise' },
-    gesperrt: { cls: 'bg-red-100 text-red-800', label: '🚫 Gesperrt' },
+    works: { cls: 'bg-green-100 text-green-800', label: '✅ Funktioniert' },
+    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Teilweise' },
+    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Gesperrt' },
   };
 
   function render() {
     const q = searchEl.value.trim().toLowerCase();
     const list = apps.filter((a) => {
-      const matchStatus = activeStatus === 'alle' || a.status === activeStatus;
+      const matchStatus = activeStatus === 'all' || a.status === activeStatus;
       const matchQuery = !q || a.name.toLowerCase().includes(q) || a.category.toLowerCase().includes(q);
       return matchStatus && matchQuery;
     });
@@ -110,7 +110,7 @@ const apps: AppInfo[] = [
             <span class="whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ${badge[a.status].cls}">${badge[a.status].label}</span>
           </div>
           <p class="mt-2 text-sm text-gray-600">${a.note}</p>
-          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">Stattdessen nutzen:</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
+          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">Stattdessen verwenden:</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
         </div>`)
       .join('');
 
