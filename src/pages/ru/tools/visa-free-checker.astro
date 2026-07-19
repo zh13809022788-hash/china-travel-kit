@@ -1,36 +1,38 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'Проверка безвизового въезда и транзита в China';
+const title = 'Проверка безвизового въезда и транзита в Китай';
 const description =
-  'Проверьте, можете ли вы въехать в China без визы, воспользоваться 240-часовым безвизовым транзитом или вам нужно подавать заявление с учётом гражданства и типа поездки.';
+  'Проверьте, можете ли вы въехать в Китай без визы, воспользоваться 240-часовым безвизовым транзитом или вам нужно подавать заявление в зависимости от вашего гражданства и типа поездки.';
 
 const lastReviewed = '13 июля 2026 г.';
 
-// Репрезентативные данные о правилах на 2026 год. Это справочная информация, не юридическая консультация;
-// путешественникам нужно подтверждать условия в посольстве до бронирования.
+// Representative policy data for 2026. This is guidance, not legal advice;
+// travelers must confirm with an embassy before booking.
 const countries = [
-  'США', 'Великобритания', 'Канада', 'Австралия', 'Германия',
-  'Франция', 'Италия', 'Испания', 'Нидерланды', 'Япония', 'Южная Корея',
-  'Сингапур', 'Малайзия', 'Таиланд', 'Бразилия', 'Новая Зеландия',
-  'Швейцария', 'Ирландия', 'Норвегия', 'Другое',
+  'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
+  'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
+  'Singapore', 'Malaysia', 'Thailand', 'Brazil', 'New Zealand',
+  'Switzerland', 'Ireland', 'Norway', 'Other',
 ];
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Инструмент</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Проверка безвизового въезда и транзита</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <p class="mt-3 text-sm text-gray-500">
-        Последняя проверка: {lastReviewed}. Этот чекер помогает планировать поездку, но не является официальным решением о праве на въезд.
+        Последняя проверка: {lastReviewed}. Этот инструмент помогает с планированием, но не является официальным решением о праве на въезд.
       </p>
     </header>
 
@@ -47,7 +49,7 @@ const countries = [
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Тип поездки</span>
         <select id="trip" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="tourism">Туризм / посещение</option>
+          <option value="tourism">Туризм / визит</option>
           <option value="business">Бизнес</option>
           <option value="transit">Только транзит в другую страну</option>
         </select>
@@ -61,28 +63,28 @@ const countries = [
     <div id="result" class="mt-6 hidden">
       <div class="card" id="result-card"></div>
       <p class="mt-3 text-xs text-gray-400">
-        Правила часто меняются и зависят от ваших конкретных обстоятельств. Всегда уточняйте их в
-        посольстве или консульстве China перед бронированием поездки. Этот инструмент даёт только общие рекомендации.
+        Правила часто меняются и зависят от ваших конкретных обстоятельств. Всегда уточняйте информацию
+        в посольстве или консульстве Китая перед бронированием поездки. Этот инструмент предоставляет только общие рекомендации.
       </p>
 
       <AffiliateCta
         title="Спланируйте остальную часть поездки"
-        description="Разберитесь с интернетом, оплатой и транспортом до прилёта в China."
-        buttonText="Смотреть важное для поездки"
+        description="Заранее решите вопросы со связью, оплатой и транспортом до прибытия в Китай."
+        buttonText="Посмотреть всё необходимое для поездки"
         placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
 
     <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="official-sources">
-      <h2 id="official-sources" class="text-xl font-bold text-gray-950">Официальные источники для проверки перед бронированием</h2>
+      <h2 id="official-sources" class="text-xl font-bold text-gray-950">Официальные источники, которые нужно проверить перед бронированием</h2>
       <p class="mt-2 text-sm leading-6 text-gray-600">
-        Списки безвизовых стран, пункты въезда, разрешённые зоны поездок и проверки авиакомпаний
-        перед посадкой могут меняться. Официальные правила правительства и авиакомпаний являются решающими.
+        Списки стран с безвизовым режимом, пункты въезда, разрешённые зоны поездок и проверки посадки авиакомпаниями могут меняться.
+        Считайте окончательными правила официальных государственных органов и авиакомпаний.
       </p>
       <ul class="mt-4 grid gap-2 text-sm leading-6 text-gray-700">
-        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">National Immigration Administration</a> — обновления по пограничному контролю и транзитным исключениям.</li>
-        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">информационный портал Государственного совета</a> — объявления о правилах на английском языке.</li>
-        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministry of Foreign Affairs</a> и сайты посольств или консульств China — правила для конкретного паспорта.</li>
+        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">National Immigration Administration</a> для обновлений о пограничном контроле и транзитных исключениях.</li>
+        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Государственный информационный портал</a> для англоязычных объявлений об изменениях политики.</li>
+        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministry of Foreign Affairs</a>, а также сайты посольств и консульств Китая, чтобы уточнить правила для конкретного паспорта.</li>
       </ul>
     </section>
 
@@ -90,24 +92,24 @@ const countries = [
       <div class="rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Как избежать ошибок с безвизовым въездом</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Самая частая ошибка — путать обычный безвизовый въезд с безвизовым транзитом. Обычная
-          поездка туда и обратно и остановка по пути в третью страну — не один и тот же маршрут.
-          Авиакомпании проверяют документы до посадки, поэтому ошибка может остановить поездку ещё
-          до прибытия в China.
+          Самая распространённая ошибка — путать обычный безвизовый въезд с безвизовым транзитом.
+          Обычная поездка туда и обратно и пересадка по пути в третью страну — это не один и тот же маршрут. Авиакомпании
+          проверяют документы перед посадкой, поэтому недоразумение может сорвать поездку ещё до прибытия
+          в Китай.
         </p>
         <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
           <li><strong class="text-gray-900">Сначала проверьте гражданство по паспорту.</strong> Страна проживания и страна выставления счёта по карте не определяют право на безвизовый въезд.</li>
-          <li><strong class="text-gray-900">Разделяйте въезд и транзит.</strong> Для транзита обычно нужен подтверждённый дальнейший выезд в третью страну или регион.</li>
-          <li><strong class="text-gray-900">Подтвердите пункты въезда.</strong> Транзитные правила зависят от назначенных портов и разрешённых зон поездок.</li>
-          <li><strong class="text-gray-900">Держите подтверждения под рукой.</strong> Авиакомпания и пограничники могут запросить следующий билет, отель, маршрут или данные приглашения.</li>
+          <li><strong class="text-gray-900">Разделяйте въезд и транзит.</strong> Для транзита обычно требуется подтверждённый дальнейший выезд в третью страну или регион.</li>
+          <li><strong class="text-gray-900">Подтвердите пункты въезда.</strong> Транзитные правила зависят от назначенных пунктов въезда и разрешённых зон поездок.</li>
+          <li><strong class="text-gray-900">Держите подтверждения под рукой.</strong> Авиакомпания и сотрудники пограничного контроля могут запросить билет на дальнейший маршрут, бронь отеля, маршрут поездки или сведения о приглашении.</li>
         </ul>
       </div>
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">Спланируйте остальное прибытие</h2>
+        <h2 class="text-lg font-bold text-gray-900">Спланируйте остальное по прибытии</h2>
         <div class="mt-4 grid gap-3">
-          <a href="/ru/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Прочитать полное руководство по безвизовому въезду</a>
-          <a href="/ru/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Использовать чек-лист прибытия</a>
-          <a href="/ru/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Спланировать транспорт из аэропорта</a>
+          <a href="/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Прочитать полный гид по безвизовому въезду</a>
+          <a href="/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Воспользоваться чек-листом по прибытии</a>
+          <a href="/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Спланировать транспорт из аэропорта</a>
         </div>
       </aside>
     </section>
@@ -120,17 +122,17 @@ const countries = [
 
   // Nationalities eligible for the 30-day unilateral visa-free entry (2026 program).
   const visaFree30 = new Set([
-    'Германия', 'Франция', 'Италия', 'Испания', 'Нидерланды', 'Швейцария',
-    'Ирландия', 'Норвегия', 'Япония', 'Южная Корея', 'Бразилия', 'Новая Зеландия',
-    'Малайзия', 'Таиланд', 'Австралия',
+    'Germany', 'France', 'Italy', 'Spain', 'Netherlands', 'Switzerland',
+    'Ireland', 'Norway', 'Japan', 'South Korea', 'Brazil', 'New Zealand',
+    'Malaysia', 'Thailand', 'Australia',
   ]);
 
   // Nationalities eligible for 240-hour (10-day) visa-free transit through
   // designated ports when travelling onward to a third country/region.
   const transit240 = new Set([
-    'США', 'Великобритания', 'Канада', 'Австралия', 'Германия',
-    'Франция', 'Италия', 'Испания', 'Нидерланды', 'Япония', 'Южная Корея',
-    'Сингапур', 'Швейцария', 'Ирландия', 'Норвегия', 'Бразилия', 'Новая Зеландия',
+    'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
+    'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
+    'Singapore', 'Switzerland', 'Ireland', 'Norway', 'Brazil', 'New Zealand',
   ]);
 
   interface Verdict {
@@ -148,22 +150,22 @@ const countries = [
       if (hasTransit) {
         return {
           tone: 'good',
-          heading: 'Скорее всего, вам доступен 240-часовой безвизовый транзит',
-          body: `Как владелец паспорта ${country}, следующий через China в третью страну, вы обычно можете находиться до 240 часов (10 дней) без визы при въезде через подходящий порт.`,
+          heading: 'Вы, вероятно, имеете право на 240-часовой безвизовый транзит',
+          body: `Если у вас паспорт страны ${country} и вы следуете через Китай транзитом в третью страну, вы, как правило, можете находиться в стране до 240 часов (10 дней) без визы при въезде через подходящий пункт пропуска.`,
           points: [
-            'У вас должен быть подтверждённый следующий билет в третью страну или регион в пределах 240 часов.',
-            'Въезд и выезд должны проходить через назначенные транзитные порты; большинство крупных международных аэропортов подходят.',
-            'Обычно вы ограничены провинцией или регионом въезда — проверьте правила конкретного порта.',
+            'У вас должен быть подтверждённый билет в третью страну или регион в пределах 240 часов.',
+            'Въезд и выезд должны осуществляться через назначенные транзитные пункты (обычно подходят большинство крупных международных аэропортов).',
+            'Обычно ваше перемещение ограничено провинцией или регионом въезда — уточняйте правила для конкретного пункта.',
           ],
         };
       }
       return {
         tone: 'warn',
-        heading: 'Транзитное освобождение от визы может не применяться к вашему гражданству',
-        body: `${country} отсутствует в нашем стандартном списке 240-часового транзита. Возможно, вам доступен обычный безвизовый въезд, если вы подходите, или потребуется транзитная виза (G).`,
+        heading: 'Безвизовый транзит может не применяться к вашему гражданству',
+        body: `${country} отсутствует в стандартном списке стран для 240-часового транзита в наших данных. Вы всё ещё можете иметь право на безвизовый въезд, если соответствуете условиям, либо вам может понадобиться транзитная виза (G).`,
         points: [
-          'Проверьте, подходит ли ваше гражданство для полноценного безвизового въезда.',
-          'Если нет, оформите подходящую визу до поездки.',
+          'Проверьте, даёт ли ваше гражданство право на полный безвизовый въезд.',
+          'Если нет, заранее оформите соответствующую визу перед поездкой.',
         ],
       };
     }
@@ -172,33 +174,33 @@ const countries = [
     if (has30) {
       return {
         tone: 'good',
-        heading: 'Скорее всего, вам доступен 30-дневный безвизовый въезд',
-        body: `Как владелец паспорта ${country}, по текущей односторонней политике вы обычно можете въехать в China без визы на срок до 30 дней для туризма, бизнеса, семейных визитов или транзита.`,
+        heading: 'Вы, вероятно, имеете право на 30-дневный безвизовый въезд',
+        body: `Если у вас паспорт страны ${country}, вы, как правило, можете въехать в Китай без визы на срок до 30 дней для туризма, бизнеса, семейного визита или транзита в рамках текущей односторонней политики.`,
         points: [
-          'Ваш паспорт должен быть действителен минимум 6 месяцев и иметь чистые страницы.',
-          'Подготовьте подтверждение дальнейшего/обратного билета и проживания для пограничного контроля.',
-          '30 дней считаются на один въезд — уточните актуальный порядок подсчёта перед бронированием.',
+          'Ваш паспорт должен быть действителен не менее 6 месяцев и иметь пустые страницы.',
+          'Подготовьте подтверждение дальнейшей или обратной поездки и проживания для иммиграционного контроля.',
+          '30 дней предоставляются на один въезд — уточняйте актуальный порядок подсчёта перед бронированием.',
         ],
       };
     }
     if (hasTransit) {
       return {
         tone: 'info',
-        heading: 'Скорее всего, нужна виза, но транзитное освобождение может помочь',
-        body: `${country} отсутствует в нашем 30-дневном безвизовом списке для туризма/бизнеса, поэтому обычно требуется виза. Однако если вы следуете через China в третью страну, возможно, получится использовать 240-часовой безвизовый транзит.`,
+        heading: 'Виза, скорее всего, нужна, но может помочь транзитное исключение',
+        body: `${country} отсутствует в нашем списке 30-дневного безвизового въезда для туризма и бизнеса, поэтому виза обычно требуется. Однако если вы следуете транзитом в третью страну, вы можете воспользоваться 240-часовым безвизовым транзитом.`,
         points: [
-          'Для отдельной поездки заранее подайте заявление на визу L (туристическую) или M (деловую).',
-          'Для остановки по пути в другую страну вам может подойти 240-часовой транзит — переключите «Тип поездки» на транзит для проверки.',
+          'Для целенаправленной поездки заранее оформите визу L (туристическую) или M (деловую).',
+          'Для остановки по пути в другую страну вы можете подходить под 240-часовой транзит — переключите "Тип поездки" на Transit, чтобы проверить.',
         ],
       };
     }
     return {
       tone: 'warn',
-      heading: 'Скорее всего, требуется виза',
-      body: `По нашим данным, владельцам паспорта ${country} для этого типа поездки обычно нужна виза для въезда в China. Подайте заявление через посольство, консульство или авторизованный визовый центр China до поездки.`,
+      heading: 'Виза, скорее всего, требуется',
+      body: `Согласно нашим данным, владельцам паспортов ${country}, как правило, требуется виза для въезда в Китай при таком типе поездки. Подайте заявление через посольство, консульство или авторизованный визовый центр Китая до поездки.`,
       points: [
-        'Подайте заявление на визу L (туристическую) или M (деловую) заблаговременно.',
-        'Обычно требуются приглашение или маршрут, бронирования отелей и обратные билеты.',
+        'Оформляйте визу L (туристическую) или M (деловую) заблаговременно до поездки.',
+        'Обычно требуются приглашение или маршрут поездки, брони отелей и обратные билеты.',
       ],
     };
   }
@@ -214,9 +216,9 @@ const countries = [
     info: 'bg-blue-600 text-white',
   };
   const toneLabel: Record<Verdict['tone'], string> = {
-    good: 'Скорее всего, подходит',
-    warn: 'Скорее всего, нужна виза',
-    info: 'Зависит от плана',
+    good: 'Вероятно подходит',
+    warn: 'Виза, вероятно, нужна',
+    info: 'Зависит от вашего плана',
   };
 
   const btn = document.getElementById('check-btn');
@@ -240,4 +242,3 @@ const countries = [
     result.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 </script>
-
