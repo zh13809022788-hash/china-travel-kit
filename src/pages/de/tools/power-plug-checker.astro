@@ -1,28 +1,31 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'China Steckdosen- und Spannungsprüfer';
+const title = 'Steckdosen- & Spannungs-Checker für China';
 const description =
-  'Finden Sie anhand Ihres Heimatlandes heraus, ob Sie für China einen Reiseadapter oder Spannungswandler brauchen. China verwendet 220 V und die Steckertypen A, C und I.';
+  'Finde heraus, ob du für China einen Steckdosenadapter oder Spannungswandler brauchst, basierend auf deinem Heimatland. In China werden 220 V und die Steckdosentypen A, C und I verwendet.';
 
 const countries = [
-  'Vereinigte Staaten', 'Vereinigtes Königreich', 'Kanada', 'Australien',
-  'Deutschland', 'Frankreich', 'Italien', 'Spanien', 'Niederlande', 'Japan',
-  'Südkorea', 'Singapur', 'Indien', 'Brasilien', 'Neuseeland', 'Schweiz',
+  'Vereinigte Staaten', 'Vereinigtes Königreich', 'Kanada', 'Australien', 'Deutschland',
+  'Frankreich', 'Italien', 'Spanien', 'Niederlande', 'Japan', 'Südkorea',
+  'Singapur', 'Indien', 'Brasilien', 'Neuseeland', 'Schweiz',
   'Südafrika', 'Vereinigte Arabische Emirate', 'Andere',
 ];
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Steckdosen- und Spannungsprüfer</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Steckdosen- & Spannungs-Checker</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -38,20 +41,20 @@ const countries = [
       <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Prüfen, was ich brauche</button>
     </div>
 
-    <!-- Referenz: Standard in China -->
+    <!-- Reference: China's own standard -->
     <div class="mt-6 grid gap-4 sm:grid-cols-3">
       <div class="card"><dt class="text-sm text-gray-500">Spannung</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
       <div class="card"><dt class="text-sm text-gray-500">Frequenz</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
-      <div class="card"><dt class="text-sm text-gray-500">Steckertypen</dt><dd class="text-2xl font-bold text-gray-900">A · C · I</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">Steckdosentypen</dt><dd class="text-2xl font-bold text-gray-900">A · C · I</dd></div>
     </div>
 
-    <!-- Ergebnis -->
+    <!-- Result -->
     <div id="result" class="mt-6 hidden">
       <div class="card" id="result-card"></div>
 
       <AffiliateCta
-        title="Universaladapter für China besorgen"
-        description="Ein kompakter Universal-Reiseadapter, der in Steckdosen in China passt und mehrere Geräte gleichzeitig lädt."
+        title="Hol dir einen Universaladapter für China"
+        description="Ein kompakter All-in-one-Reiseadapter, der in Chinas Steckdosen passt und mehrere Geräte gleichzeitig lädt."
         buttonText="Empfohlenen Adapter ansehen"
         placeholder={AFFILIATE_LINKS.transport}
       />
@@ -61,7 +64,7 @@ const countries = [
 </BaseLayout>
 
 <script>
-  // Inländische Spannung und verwendete Steckertypen je Land.
+  // Each country's domestic voltage and the plug types it uses.
   const data: Record<string, { volts: number; plugs: string[] }> = {
     'Vereinigte Staaten': { volts: 120, plugs: ['A', 'B'] },
     'Kanada': { volts: 120, plugs: ['A', 'B'] },
@@ -84,7 +87,7 @@ const countries = [
     'Andere': { volts: 0, plugs: [] },
   };
 
-  // China akzeptiert die Steckertypen A, C und I.
+  // China accepts plug types A, C, and I.
   const CHINA_PLUGS = ['A', 'C', 'I'];
   const CHINA_VOLTS = 220;
 
@@ -103,37 +106,37 @@ const countries = [
 
     if (!info || info.volts === 0) {
       tone = 'info';
-      heading = 'Prüfen Sie Ihren konkreten Stecker und die Spannung';
-      body = 'Für Ihre Auswahl liegen uns keine Daten vor. Schauen Sie auf das Etikett Ihres Ladegeräts: Wenn dort "100-240V" steht, brauchen Sie für Steckdosen in China der Typen A, C oder I nur einen Reiseadapter.';
-      points.push('China verwendet 220 V, 50 Hz und die Steckertypen A, C und I.');
-      points.push('Die meisten Handy- und Laptop-Ladegeräte sind für zwei Spannungsbereiche ausgelegt (100-240 V) und brauchen nur einen Reiseadapter.');
+      heading = 'Prüfe deinen spezifischen Steckertyp und die Spannung';
+      body = 'Wir haben keine Daten für deine Auswahl. Schau auf das Etikett deines Ladegeräts — wenn dort "100–240V" steht, brauchst du nur einen Steckdosenadapter für Chinas Steckdosen vom Typ A, C oder I.';
+      points.push('In China werden 220V, 50Hz sowie die Steckdosentypen A, C und I verwendet.');
+      points.push('Die meisten Handy- und Laptop-Ladegeräte sind für mehrere Spannungen ausgelegt (100–240V) und benötigen nur einen Steckdosenadapter.');
     } else {
       const plugMatch = info.plugs.some((p) => CHINA_PLUGS.includes(p));
       const voltMatch = Math.abs(info.volts - CHINA_VOLTS) <= 20;
 
       if (plugMatch && voltMatch) {
         tone = 'good';
-        heading = 'Sie brauchen wahrscheinlich keinen Adapter';
-        body = `${country} verwendet kompatible Steckertypen (${info.plugs.join(', ')}) und eine ähnliche Spannung (${info.volts} V). Ihre Stecker sollten direkt in Steckdosen in China passen.`;
-        points.push('Prüfen Sie jeden Stecker noch einmal und nehmen Sie vorsichtshalber einen Adapter mit, falls eine Steckdose eng sitzt.');
+        heading = 'Du brauchst wahrscheinlich keinen Adapter';
+        body = `${country} verwendet kompatible Steckertypen (${info.plugs.join(', ')}) und eine ähnliche Spannung (${info.volts}V). Deine Stecker sollten direkt in Chinas Steckdosen passen.`;
+        points.push('Prüfe trotzdem jeden Stecker noch einmal — nimm vorsichtshalber einen Adapter mit, falls eine Steckdose eng sitzt.');
       } else if (!plugMatch && voltMatch) {
         tone = 'warn';
-        heading = 'Sie brauchen einen Reiseadapter, aber keinen Spannungswandler';
-        body = `${country} nutzt eine ähnliche Spannung (${info.volts} V), daher sind Ihre Geräte sicher. Ihr Steckertyp (${info.plugs.join(', ')}) passt jedoch nicht in Steckdosen in China. Packen Sie einen Reiseadapter ein.`;
-        points.push('Ein einfacher, günstiger Reiseadapter für Typ A/C/I reicht aus.');
+        heading = 'Du brauchst einen Steckdosenadapter (aber keinen Spannungswandler)';
+        body = `${country} verwendet eine ähnliche Spannung (${info.volts}V), daher sind deine Geräte sicher. Aber dein Steckertyp (${info.plugs.join(', ')}) passt nicht in Chinas Steckdosen — pack einen Steckdosenadapter ein.`;
+        points.push('Ein einfacher, günstiger Steckdosenadapter für Typ A/C/I ist alles, was du brauchst.');
         points.push('Kein sperriger Spannungswandler erforderlich.');
       } else if (plugMatch && !voltMatch) {
         tone = 'warn';
-        heading = 'Achten Sie bei Geräten mit nur einer Spannung auf die Voltzahl';
-        body = `Ihre Stecker (${info.plugs.join(', ')}) passen möglicherweise, aber die Spannung in ${country} (${info.volts} V) unterscheidet sich von 220 V in China.`;
-        points.push('Handys, Laptops und Kameras mit der Kennzeichnung 100-240 V funktionieren überall problemlos.');
-        points.push('Geräte mit nur einer Spannung (einige Föne oder Glätteisen) brauchen einen Spannungswandler oder sollten zu Hause bleiben.');
+        heading = 'Achte bei Geräten mit nur einer Spannung auf die Spannung';
+        body = `Deine Stecker (${info.plugs.join(', ')}) passen möglicherweise, aber die Spannung in ${country} (${info.volts}V) unterscheidet sich von Chinas 220V.`;
+        points.push('Handys, Laptops und Kameras mit der Kennzeichnung 100–240V funktionieren überall.');
+        points.push('Geräte mit nur einer Spannung (einige Haartrockner, Glätteisen) benötigen einen Spannungswandler oder sollten zu Hause bleiben.');
       } else {
         tone = 'warn';
-        heading = 'Sie brauchen einen Reiseadapter und sollten die Spannung prüfen';
-        body = `${country} verwendet andere Stecker (${info.plugs.join(', ')}) und eine andere Spannung (${info.volts} V) als 220 V in China. Nehmen Sie einen Reiseadapter für Typ A/C/I mit.`;
-        points.push('Ladegeräte mit zwei Spannungsbereichen (100-240 V) brauchen nur den Reiseadapter.');
-        points.push('Leistungsstarke Geräte mit nur einer Spannung brauchen ebenfalls einen Spannungswandler. Alternativ kaufen Sie vor Ort ein passendes Gerät.');
+        heading = 'Du brauchst einen Steckdosenadapter — und solltest die Spannung prüfen';
+        body = `${country} verwendet andere Stecker (${info.plugs.join(', ')}) und eine andere Spannung (${info.volts}V) als Chinas 220V. Bring einen Steckdosenadapter für Typ A/C/I mit.`;
+        points.push('Ladegeräte mit mehreren Spannungen (100–240V) benötigen nur den Steckdosenadapter.');
+        points.push('Geräte mit nur einer Spannung und hoher Wattzahl benötigen zusätzlich einen Spannungswandler — oder du kaufst stattdessen ein lokales Äquivalent.');
       }
     }
 
