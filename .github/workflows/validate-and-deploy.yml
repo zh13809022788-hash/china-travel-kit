@@ -59,11 +59,14 @@ jobs:
         with:
           name: dist
           path: dist/
+      - name: Include Pages Functions
+        run: cp -r functions/ dist/functions/ 2>/dev/null || true
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=china-travel-kit --branch=main
+          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          directory: ./dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "Deployed successfully"
