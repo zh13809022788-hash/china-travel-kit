@@ -40,19 +40,18 @@ async function sendEmail(to, subscribedAt) {
   const name = to.split('@')[0];
   const date = new Date(subscribedAt).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
   const subject = 'Welcome to ChinaTripBox';
-  const body = 'From: ChinaTripBox <' + FROM + '>\r\n'
-    + 'To: ' + name + ' <' + to + '>\r\n'
-    + 'Subject: ' + subject + '\r\n'
-    + 'MIME-Version: 1.0\r\n'
-    + 'Content-Type: text/plain; charset="UTF-8"\r\n'
-    + '\r\n'
-    + 'Welcome to ChinaTripBox!\r\n\r\nHi ' + name + ',\r\n\r\n'
+  const textBody = 'Welcome to ChinaTripBox!\r\n\r\nHi ' + name + ',\r\n\r\n'
     + "You're subscribed. Every week you'll get:\r\n"
     + '- New city guides & travel tips\r\n- Policy changes for foreign visitors\r\n'
     + '- Tool updates & seasonal advice\r\n\r\n'
     + 'First tip: Set up Alipay before you fly.\r\n'
     + 'https://www.chinatripbox.com/posts/alipay-foreign-credit-card-step-by-step/\r\n\r\n'
-    + 'Subscribed: ' + date + '\r\nUnsubscribe: https://www.chinatripbox.com/contact/\r\n';
+    + 'Subscribed: ' + date + '\r\nUnsubscribe: https://www.chinatripbox.com/contact/';
+  const smtpBody = 'From: ChinaTripBox <' + FROM + '>\r\n'
+    + 'To: ' + name + ' <' + to + '>\r\n'
+    + 'Subject: ' + subject + '\r\n'
+    + 'MIME-Version: 1.0\r\nContent-Type: text/plain; charset="UTF-8"\r\n\r\n'
+    + textBody + '\r\n';
 
   // Try API first (it's free), fall back to SMTP relay
   try {
@@ -63,18 +62,18 @@ async function sendEmail(to, subscribedAt) {
         sender: { name: 'ChinaTripBox', email: FROM },
         to: [{ email: to, name }],
         subject: subject,
-        textContent: body,
+        textContent: textBody,
       }),
     });
     if (res.ok) return { ok: true };
     const errBody = await res.text();
     // If API fails with CF network block (401 nginx), try SMTP relay
     if (res.status === 401) {
-      return await sendViaSmtp(to, body);
+      return await sendViaSmtp(to, smtpBody);
     }
     return { ok: false, error: 'Brevo ' + res.status + ': ' + errBody.slice(0,200) };
   } catch (e) {
-    return await sendViaSmtp(to, body);
+    return await sendViaSmtp(to, smtpBody);
   }
 }
 
