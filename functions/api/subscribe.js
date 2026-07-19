@@ -50,9 +50,14 @@ async function sendBrevo(to, subscribedAt) {
     + 'Subscribed: ' + date + '\r\nUnsubscribe: https://www.chinatripbox.com/contact/';
 
   try {
-    const res = await fetch('https://api.sendinblue.com/v3/smtp/email', {
+    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
-      headers: { 'api-key': _k, 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      headers: {
+        'api-key': _k,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'User-Agent': 'ChinaTripBox/1.0 (Cloudflare Pages Function)',
+      },
       body: JSON.stringify({
         sender: { name: 'ChinaTripBox', email: 'zh13809022788@gmail.com' },
         to: [{ email: to, name }],
