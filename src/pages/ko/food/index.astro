@@ -11,23 +11,23 @@ const posts = (await getCollection('posts-ko'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '중국 음식, 식사, 예절 가이드';
-const description = '외국인 방문객을 위한 실용적인 중국 음식 가이드예요. 배달 주문 방법, 길거리 음식 안전, 매운맛 단계, 팁 문화, 식당 예절, 식문화를 한눈에 정리했어요.';
+const title = '중국 음식·식당·식사 예절 가이드';
+const description = '중국 여행자를 위한 음식 가이드 모음입니다. 주문 방법, 길거리 음식, 매운맛, 팁 문화, 식당 이용 흐름을 정리했습니다.';
 
 const pathways = [
   {
-    title: '중국어 없이도 주문하기',
-    desc: '배달 앱을 설정하고, 호텔 주소를 저장하고, 배달 기사 전화 때문에 생기는 혼선을 피하는 방법을 알려드려요.',
+    title: '중국어 없이 주문하기',
+    desc: '배달 앱을 준비하고, 호텔 주소를 저장하고, 배달 기사 연락 문제를 줄이는 방법을 확인하세요.',
     href: '/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
     title: '길거리 음식 안전하게 먹기',
-    desc: '회전율, 눈에 보이는 가열 상태, 물 섭취 습관, 매운맛 표현을 활용해 더 나은 노점을 고르는 방법이에요.',
+    desc: '손님 회전율, 조리 온도, 물 사용 습관, 매운맛 표현을 기준으로 더 안전하게 고르는 방법입니다.',
     href: '/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: '식사 예절 익히기',
-    desc: '팁을 주지 않는 상황, 서비스 요금이 중요한 경우, 현지 식당 문화가 어떻게 돌아가는지 알려드려요.',
+    title: '식당 예절 이해하기',
+    desc: '중국에서 언제 팁이 필요 없는지, 서비스 요금은 어떻게 보아야 하는지, 기본적인 식당 문화를 정리했습니다.',
     href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
@@ -35,31 +35,28 @@ const pathways = [
 const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
-    title: 'Baijiu 기초 가이드',
-    desc: '연회나 초대받은 식사 자리에서 중국의 대표 증류주가 나올 때 알아두면 좋은 배경지식이에요.',
+    title: 'Baijiu 101',
+    desc: '연회나 초대 식사에서 중국식 증류주를 접하게 될 때 배경지식으로 참고하기 좋습니다.',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: '예의 있게 baijiu 마시는 법',
-    desc: '건배 예절, 소량으로 따르는 방식, 격식 있는 식사 자리에서 페이스를 조절하는 법까지 더 깊이 다룬 안내예요.',
+    title: 'How to drink baijiu politely',
+    desc: '건배 문화, 잔 비우는 속도, 격식 있는 식사 자리에서의 기본 예절을 더 자세히 볼 수 있습니다.',
   },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'ko';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko"
-  title="중국 미식 가이드 | 추천 요리와 맛집 정보"
-  description="중국 미식 탐험: 베이징 덕부터 쓰촨 훠궈까지 지역별 명물 요리와 외국인을 위한 식사 팁.">
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
   <Header locale="ko" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">음식과 식사</p>
+      <p class="section-kicker">음식과 식문화</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chinese-cuisine" alt="중국 야시장의 매콤한 쓰촨 길거리 음식" loading="lazy" />
+    <CoverImage name="topic-chengdu-food" alt="중국 야시장의 매콤한 쓰촨 길거리 음식" loading="lazy" />
 
     <AdSlot format="banner" />
 
@@ -79,13 +76,13 @@ const locale = 'ko';
         <div class="section-heading">
           <div>
             <p class="section-kicker">가이드</p>
-            <h2>음식과 식사 예절 관련 글</h2>
+            <h2>음식과 식당 관련 글</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {posts.map((post) => (
             <a href={`/ko/posts/${post.slug}/`} class="card block hover:no-underline">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
             </a>
@@ -94,12 +91,12 @@ const locale = 'ko';
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">문화 함께 보기</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">baijiu가 등장할 때</h2>
+        <p class="section-kicker">문화 참고 자료</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">바이주를 마주할 때</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          대부분의 여행자 식사에서는 술에 대한 지식이 꼭 필요하지는 않아요. 하지만 초대받은 연회, 비즈니스 저녁 식사,
-          지방의 가정 식사에서는 baijiu 건배가 나오는 경우가 있어요. 아래 자료는 이런 상황을 더 깊이 다루고,
-          ChinaTripBox는 여행 실무 정보에 집중해 안내해드려요.
+          대부분의 관광객 식사에서는 술 지식이 꼭 필요하지 않지만, 연회나 비즈니스 식사,
+          지방 가정식 초대에서는 바이주 건배 문화가 나올 수 있습니다. ChinaTripBox는 여행
+          실무에 집중하고, 아래 자료는 문화적 배경을 더 깊게 알고 싶을 때 참고하기 좋습니다.
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
