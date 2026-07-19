@@ -11,22 +11,18 @@ const posts = await getCollection('posts-fr');
 const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const categoryLabels: Record<string, string> = {
-  payment: 'Paiement',
-  esim: 'eSIM et Internet',
+  payment: 'Paiements',
+  esim: 'eSIM et internet',
   transport: 'Transport',
   essentials: 'Préparation',
-  food: 'Gastronomie',
+  food: 'Cuisine',
 };
-import { getCategoryLabel } from '../../i18n/categories';
-const locale = 'fr';
 ---
 
 <BaseLayout
-  title="ChinaTripBox en français | Paiement, Internet et transport en Chine"
-  description="Guides pratiques pour les voyageurs francophones en Chine : Alipay, WeChat Pay, eSIM, trains à grande vitesse, DiDi, visas et préparation au voyage."
+  title="ChinaTripBox en français | Paiements, internet et transport en Chine"
+  description="Guides pratiques pour les voyageurs francophones en Chine : Alipay, WeChat Pay, eSIM, trains à grande vitesse, DiDi, visas et préparation du voyage."
   locale="fr"
-  title="ChinaTripBox en français | Paiement, Internet et transport en Chine"
-  description="Guides pratiques pour les voyageurs francophones en Chine : Alipay, WeChat Pay, eSIM, trains à grande vitesse, DiDi, visas et préparation au voyage."
   alternates={{ en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' }}
 >
   <Header locale="fr" />
@@ -36,21 +32,22 @@ const locale = 'fr';
         <div>
           <p class="text-sm font-semibold uppercase tracking-wide text-brand-700">ChinaTripBox Français</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            Configurez le paiement, Internet et le transport avant d'arriver en Chine
+            Préparez vos paiements, votre connexion et vos transports avant d’arriver en Chine
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            Guides pratiques pour les voyageurs francophones : Alipay, WeChat Pay, eSIM, trains à grande vitesse, DiDi — tout ce qu'il faut régler avant le départ.
+            Des guides concrets pour les voyageurs francophones : Alipay, WeChat Pay, eSIM, trains
+            à grande vitesse, DiDi et tout ce qu’il vaut mieux régler avant le départ.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="/fr/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">Guide de paiement</a>
-            <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">Checklist avant le départ</a>
+            <a href="/fr/posts/how-to-pay-in-china-tourist-guide/" class="btn-primary">Guide des paiements</a>
+            <a href="/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-outline">Checklist avant départ</a>
           </div>
         </div>
 
         <aside class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <Image
             src={heroImage}
-            alt="Skyline de Shanghai, planification de voyage en Chine"
+            alt="Skyline de Shanghai pour préparer un voyage en Chine"
             widths={[360, 720]}
             sizes="(max-width: 1024px) 100vw, 360px"
             quality={65}
@@ -58,10 +55,11 @@ const locale = 'fr';
             class="h-52 w-full object-cover"
           />
           <div class="p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Ordre de lecture</p>
-            <h2 class="mt-2 text-lg font-bold text-gray-950">Commencez par ce dont vous aurez besoin le premier jour</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-700">Par où commencer</p>
+            <h2 class="mt-2 text-lg font-bold text-gray-950">Commencez par ce qui vous servira dès le premier jour</h2>
             <p class="mt-2 text-sm leading-6 text-gray-600">
-              Paiement, Internet, taxi et billets de train : les quatre choses qui valent la peine d'être préparées à l'avance.
+              Paiements, internet, taxi et billets de train : ce sont les quatre points à préparer
+              en priorité.
             </p>
           </div>
         </aside>
@@ -75,7 +73,7 @@ const locale = 'fr';
         <div class="section-heading">
           <div>
             <p class="section-kicker">Nouveaux articles en français</p>
-            <h2>Guides pratiques pour la Chine</h2>
+            <h2>Guides pratiques pour voyager en Chine</h2>
           </div>
           <a href="/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">Version anglaise</a>
         </div>
@@ -98,7 +96,7 @@ const locale = 'fr';
           </div>
         ) : (
           <div class="mt-6 rounded-lg border border-gray-200 bg-gray-50 p-8 text-center">
-            <p class="text-gray-500">Les traductions françaises arrivent bientôt. <a href="/" class="text-brand-600 hover:underline">Lire en anglais</a>.</p>
+            <p class="text-gray-500">Les articles en français arrivent bientôt. <a href="/" class="text-brand-600 hover:underline">Lire en anglais</a>.</p>
           </div>
         )}
       </section>
