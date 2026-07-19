@@ -225,7 +225,7 @@ const jsonLd = {
       var pref=null;
       try{pref=localStorage.getItem(PREF_KEY);}catch(e){}
       function hasLocalePrefix(p){
-        var parts=p.replace(/\/$/,'').split('/');
+        var parts=p.replace(/\\/$/,'').split('/');
         if(parts.length<2)return null;
         var first=parts[1].toLowerCase();
         for(var k=0;k<LOCALE_PREFIXES.length;k++){if(first===LOCALE_PREFIXES[k])return first;}

@@ -8,6 +8,9 @@ export default defineConfig({
   // Production site URL used for sitemap and canonical/SEO absolute links.
   site: 'https://www.chinatripbox.com',
   output: 'static',
+  build: {
+    assets: 'assets',
+  },
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'],
