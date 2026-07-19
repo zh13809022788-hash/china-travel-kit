@@ -149,12 +149,19 @@ interface SearchIndex {
   [lang: string]: SearchEntry[];
 }
 
-// Detect current page language from URL
+// Detect current page language from URL + browser fallback
 function detectLang(): string {
   const p = window.location.pathname.toLowerCase();
   for (const lang of ['zh-tw', 'ja', 'ko', 'ru', 'fr', 'de', 'es']) {
     if (p.startsWith('/' + lang + '/')) return lang;
   }
+  // Fallback: if visitor browser is Chinese but URL has no locale prefix, still treat as Chinese
+  try {
+    const browserLang = (navigator.language || '').toLowerCase();
+    if (browserLang.startsWith('zh')) return 'zh-tw';  // zh-CN/zh-HK → show zh-TW
+    if (browserLang.startsWith('ja')) return 'ja';
+    if (browserLang.startsWith('ko')) return 'ko';
+  } catch {}
   return 'en';
 }
 
@@ -347,11 +354,11 @@ async function callDeepSeek(query: string, articles: SearchEntry[]): Promise<voi
 }
 
 // ---- Main flow: search + DeepSeek ----
-// Greeting detection (don't waste API call for "hi" / "你好")
-const GREETING_PATTERNS = /^(hi|hello|hey|你好|您好|halo|hola|salut|hallo|merhaba|привет|안녕|こんにちは)\W*$/i;
+// Greeting detection — exact match only, no false positives
+const GREETINGS = new Set(['hi', 'hello', 'hey', '你好', '您好', 'halo', 'hola', 'salut', 'hallo', 'merhaba', 'привет', '안녕', '안녕하세요', 'こんにちは', '你好吗', '您好吗']);
 
 function isGreeting(q: string): boolean {
-  return GREETING_PATTERNS.test(q.trim());
+  return GREETINGS.has(q.trim().toLowerCase().replace(/[!?。，！？\s]/g, ''));
 }
 
 const GREETING_REPLIES: Record<string, string> = {
@@ -379,7 +386,7 @@ async function handleQuery(query: string): Promise<void> {
   if (isGreeting(trimmed)) {
     const langKey = currentLang === 'zh-tw' ? 'zh-TW' : currentLang;
     const reply = GREETING_REPLIES[langKey] || GREETING_REPLIES['en'];
-    addBubble(`<div class="font-semibold text-gray-900 mb-1">${reply.split('。')[0].split('!')[0]}</div><div>${escapeHtml(reply)}</div>`);
+    addBubble(`<div>${escapeHtml(reply)}</div>`);
     if (status) status.textContent = 'Ready.';
     return;
   }
