@@ -1,11 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const title = 'Seite nicht gefunden';
-const description = 'Diese Seite konnte bei ChinaTripBox nicht gefunden werden.';
+const description = 'Die von dir angeforderte ChinaTripBox-Seite konnte nicht gefunden werden.';
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
   <Header />
@@ -13,11 +15,13 @@ const description = 'Diese Seite konnte bei ChinaTripBox nicht gefunden werden.'
     <section class="mx-auto max-w-2xl">
       <p class="section-kicker">404</p>
       <h1 class="mt-2 text-4xl font-bold text-gray-950">Seite nicht gefunden</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">Die gesuchte Seite wurde verschoben, gelöscht oder die eingegebene Adresse ist nicht korrekt.</p>
+      <p class="mt-4 text-lg leading-8 text-gray-600">
+        Die Seite wurde moglicherweise verschoben, oder die Adresse ist moglicherweise falsch. Starte im Guide-Hub oder nutze unten ein Planungstool.
+      </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="/de/" class="btn-primary">Startseite</a>
-        <a href="/de/resources/" class="btn-outline">Hier starten</a>
-        <a href="/de/tools/" class="btn-outline">Werkzeuge</a>
+        <a href="/" class="btn-primary">Zur Startseite</a>
+        <a href="/resources/" class="btn-outline">Hier beginnen</a>
+        <a href="/tools/" class="btn-outline">Tools offnen</a>
       </div>
     </section>
   </main>
