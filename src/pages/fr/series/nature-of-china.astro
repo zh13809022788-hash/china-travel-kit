@@ -10,54 +10,50 @@ const posts = (await getCollection('posts-fr'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Nature de la Chine — Paysages et espaces sauvages';
-const description = 'Explorez les merveilles naturelles de la Chine en tant que voyageur étranger : les montagnes Avatar de Zhangjiajie, les lacs féeriques de Jiuzhaigou, la mer de nuages de Huangshan, les pics karstiques de Guilin et le plateau tibétain.';
+const title = 'Nature de Chine : paysages grandioses et espaces sauvages';
+const description = 'Explorez les merveilles naturelles de la Chine : les montagnes de Zhangjiajie, les lacs de Jiuzhaigou, la mer de nuages de Huangshan, les pics karstiques de Guilin et le plateau tibétain.';
 
 const relatedTools = [
-  { href: '/fr/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Liste de bagages', desc: 'Équipement saison par saison pour les voyages en plein air' },
-  { href: '/fr/posts/china-visa-free-entry-transit-guide-2026/', title: 'Guide des visas et de l’entrée', desc: 'Permis et règles d’entrée pour les régions reculées' },
-  { href: '/fr/trip-planner/', title: 'Planificateur de voyage', desc: 'Créez votre itinéraire nature en Chine' },
+  { href: '/fr/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Checklist bagages', desc: 'Préparer son équipement selon la saison' },
+  { href: '/fr/posts/china-visa-free-entry-transit-guide-2026/', title: 'Guide d’entrée et visas', desc: 'Anticiper les règles d’accès pour certaines régions éloignées' },
+  { href: '/fr/trip-planner/', title: 'Planificateur de voyage', desc: 'Construire un itinéraire axé nature en Chine' },
 ];
 
 const relatedCities = [
-  { href: '/fr/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Plages tropicales et forêt tropicale' },
+  { href: '/fr/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Plages tropicales et forêt humide' },
   { href: '/fr/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Lac de l’Ouest et collines de thé' },
-  { href: '/fr/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Porte d’entrée vers les montagnes de l’ouest et les pandas' },
+  { href: '/fr/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Porte d’entrée vers les montagnes de l’Ouest et les pandas' },
 ];
 
 const otherSeries = [
-  { href: '/fr/series/history-of-china/', title: 'Histoire de la Chine' },
-  { href: '/fr/series/culture-of-china/', title: 'Culture de la Chine' },
-  { href: '/fr/series/food-of-china/', title: 'Cuisine de la Chine' },
+  { href: '/fr/series/history-of-china/', title: 'Histoire de Chine' },
+  { href: '/fr/series/culture-of-china/', title: 'Culture de Chine' },
+  { href: '/fr/series/food-of-china/', title: 'La cuisine de Chine' },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'fr';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
   <Header locale="fr" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Série de contenus</p>
+      <p class="section-kicker">Série thématique</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
-
     <AdSlot format="banner" />
-
     <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
       <div>
         <div class="section-heading">
           <div>
             <p class="section-kicker">Articles</p>
-            <h2>Série Nature de la Chine</h2>
+            <h2>Série Nature de Chine</h2>
           </div>
         </div>
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
               <a href={`/fr/posts/${post.slug}/`} class="card block hover:no-underline">
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
               </a>
@@ -67,11 +63,10 @@ const locale = 'fr';
           <p class="mt-6 text-gray-500">Les articles de cette série sont en préparation. Revenez bientôt.</p>
         )}
       </div>
-
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Outils pratiques</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Planifiez votre voyage</h2>
+          <p class="section-kicker">Outils utiles</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Préparer un voyage nature</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -81,10 +76,9 @@ const locale = 'fr';
             ))}
           </div>
         </div>
-
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">Guides de villes</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Villes d’accès</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Villes portes d’entrée</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -94,7 +88,6 @@ const locale = 'fr';
             ))}
           </div>
         </div>
-
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">Autres séries</p>
           <div class="mt-3 grid gap-2">
@@ -108,5 +101,3 @@ const locale = 'fr';
   </main>
   <Footer />
 </BaseLayout>
-
----
