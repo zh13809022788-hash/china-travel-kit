@@ -263,6 +263,40 @@ function addArticleCards(entries: SearchEntry[]): void {
   messages.scrollTop = messages.scrollHeight;
 }
 
+// ---- PayPal CTA card (shown after AI answer) ----
+const PAYPAL_EMAIL = 'zh13809022788@gmail.com';
+const GUIDES: Array<{ id: string; name: string; price: string; file: string }> = [
+  { id: 'arrival-checklist', name: 'China Arrival Checklist', price: '9.90', file: 'China-Arrival-Checklist.pdf' },
+  { id: 'payment-setup', name: 'China Payment Setup Guide', price: '12.90', file: 'China-Payment-Setup-Guide.pdf' },
+  { id: '7-day-trip', name: '7-Day China Trip Plan', price: '14.90', file: '7-Day-China-Trip-Plan.pdf' },
+];
+
+function addCtaCard(lang: string): void {
+  if (!messages) return;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'max-w-full rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed';
+
+  if (lang === 'en') {
+    let html = '<div class="mb-2 font-semibold text-amber-900">📖 Get the Complete Guide</div>';
+    for (const guide of GUIDES) {
+      const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${PAYPAL_EMAIL}&item_name=${encodeURIComponent(guide.name)}&amount=${guide.price}&currency_code=USD&return=${encodeURIComponent('https://www.chinatripbox.com/guides/' + guide.file)}`;
+      html += `<a href="${paypalUrl}" target="_blank" rel="noopener"
+        class="mb-2 flex items-center justify-between rounded-md border border-amber-200 bg-white px-3 py-2.5 transition hover:border-amber-400 hover:bg-amber-100 hover:no-underline">
+        <span class="text-sm font-semibold text-gray-900">${guide.name}</span>
+        <span class="shrink-0 rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-bold text-amber-800">$${guide.price}</span>
+      </a>`;
+    }
+    html += '<div class="mt-1 text-[10px] text-gray-400">Secure payment via PayPal — instant download after purchase</div>';
+    wrapper.innerHTML = html;
+  } else {
+    wrapper.innerHTML = '<div class="font-semibold text-amber-900">📖 Guides in your language — coming soon</div>' +
+      '<div class="mt-1 text-xs text-gray-500">We\'re translating our detailed guides. Check back or <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">email us</a> to get notified.</div>';
+  }
+
+  messages.appendChild(wrapper);
+  messages.scrollTop = messages.scrollHeight;
+}
+
 // ---- DeepSeek primary call (with article context) ----
 async function callDeepSeek(query: string, articles: SearchEntry[]): Promise<void> {
   const thinking = addBubble('Thinking...');
@@ -291,6 +325,8 @@ async function callDeepSeek(query: string, articles: SearchEntry[]): Promise<voi
       bubble.innerHTML = `<div class="font-semibold text-gray-900 mb-1">${escapeHtml(data.answer.split('\n')[0])}</div>
         <div>${escapeHtml(data.answer).replace(/\n/g, '<br>')}</div>
         <div class="mt-2 text-[10px] text-gray-400">DeepSeek · ChinaTripBox guides</div>`;
+      // Show purchase CTA after AI answer
+      addCtaCard(langKey);
     } else if (bubble) {
       bubble.innerHTML = `<div class="font-semibold text-amber-900">Temporarily unavailable</div>
         <div>Please try again later or email us at <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">zh13809022788@gmail.com</a>.</div>`;
