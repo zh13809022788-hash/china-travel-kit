@@ -6,78 +6,78 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Frases esenciales en chino para viajeros';
+const title = 'Frases esenciales en chino para viajar';
 const description =
-  'Una lista práctica e imprimible de frases esenciales en chino mandarín para turistas en China, con pinyin y español. Incluye saludos, pagos, transporte, comida y emergencias.';
+  'Una lista práctica e imprimible de frases básicas en mandarín para turistas en China, con pinyin y traducción al español. Incluye saludos, pagos, transporte, comida y emergencias.';
 
-interface Frase {
-  es: string;
+interface Phrase {
+  en: string;
   zh: string;
   pinyin: string;
 }
-interface Grupo {
+interface Group {
   id: string;
   label: string;
   icon: string;
-  phrases: Frase[];
+  phrases: Phrase[];
 }
 
-const groups: Grupo[] = [
+const groups: Group[] = [
   {
-    id: 'basics', label: 'Saludos y frases básicas', icon: '👋',
+    id: 'basics', label: 'Saludos y básico', icon: '👋',
     phrases: [
-      { es: 'Hola', zh: '你好', pinyin: 'nǐ hǎo' },
-      { es: 'Gracias', zh: '谢谢', pinyin: 'xièxie' },
-      { es: 'De nada', zh: '不客气', pinyin: 'bú kèqi' },
-      { es: 'Perdón / Disculpe', zh: '对不起', pinyin: 'duìbuqǐ' },
-      { es: 'Sí / Correcto', zh: '对', pinyin: 'duì' },
-      { es: 'No', zh: '不是', pinyin: 'bú shì' },
-      { es: 'No entiendo', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
-      { es: '¿Habla inglés?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
+      { en: 'Hola', zh: '你好', pinyin: 'nǐ hǎo' },
+      { en: 'Gracias', zh: '谢谢', pinyin: 'xièxie' },
+      { en: 'De nada', zh: '不客气', pinyin: 'bú kèqi' },
+      { en: 'Perdón / disculpa', zh: '对不起', pinyin: 'duìbuqǐ' },
+      { en: 'Sí / correcto', zh: '对', pinyin: 'duì' },
+      { en: 'No / no es así', zh: '不是', pinyin: 'bú shì' },
+      { en: 'No entiendo', zh: '我不明白', pinyin: 'wǒ bù míngbai' },
+      { en: '¿Hablas inglés?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
     ],
   },
   {
     id: 'payment', label: 'Dinero y pagos', icon: '💳',
     phrases: [
-      { es: '¿Cuánto cuesta?', zh: '多少钱？', pinyin: 'duōshao qián?' },
-      { es: '¿Puedo usar Alipay?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
-      { es: '¿Puedo usar WeChat Pay?', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng wēixìn zhīfù ma?' },
-      { es: 'Es demasiado caro', zh: '太贵了', pinyin: 'tài guì le' },
-      { es: '¿Puedo pagar con tarjeta?', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
-      { es: 'Voy a escanear tu código', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
+      { en: '¿Cuánto cuesta?', zh: '多少钱？', pinyin: 'duōshao qián?' },
+      { en: '¿Puedo usar Alipay?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
+      { en: '¿Puedo usar WeChat Pay?', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng Wēixìn zhīfù ma?' },
+      { en: 'Es demasiado caro', zh: '太贵了', pinyin: 'tài guì le' },
+      { en: '¿Puedo pagar con tarjeta?', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
+      { en: 'Yo escaneo tu QR', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
     ],
   },
   {
-    id: 'transport', label: 'Transporte y desplazamientos', icon: '🚕',
+    id: 'transport', label: 'Moverse por la ciudad', icon: '🚇',
     phrases: [
-      { es: '¿Dónde está el metro?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
-      { es: 'Por favor, lléveme a esta dirección', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
-      { es: 'Pare aquí, por favor', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
-      { es: 'Estación de tren', zh: '火车站', pinyin: 'huǒchē zhàn' },
-      { es: 'Aeropuerto', zh: '机场', pinyin: 'jīchǎng' },
-      { es: '¿Cómo llego a...?', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
+      { en: '¿Dónde está el metro?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
+      { en: 'Por favor, lléveme a esta dirección', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
+      { en: 'Pare aquí, por favor', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
+      { en: 'Estación de tren', zh: '火车站', pinyin: 'huǒchē zhàn' },
+      { en: 'Aeropuerto', zh: '机场', pinyin: 'jīchǎng' },
+      { en: '¿Cómo llego a...?', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
     ],
   },
   {
-    id: 'food', label: 'Comida y restaurantes', icon: '🍜',
+    id: 'food', label: 'Comida y restaurante', icon: '🍜',
     phrases: [
-      { es: 'El menú, por favor', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
-      { es: 'Soy vegetariano/a', zh: '我吃素', pinyin: 'wǒ chī sù' },
-      { es: 'Sin picante, por favor', zh: '请不要辣', pinyin: 'qǐng búyào là' },
-      { es: 'Agua, por favor', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
-      { es: 'La cuenta, por favor', zh: '买单', pinyin: 'mǎidān' },
-      { es: 'Está delicioso', zh: '很好吃', pinyin: 'hěn hǎochī' },
+      { en: 'La carta, por favor', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
+      { en: 'Soy vegetariano/a', zh: '我吃素', pinyin: 'wǒ chī sù' },
+      { en: 'Sin picante, por favor', zh: '请不要辣', pinyin: 'qǐng búyào là' },
+      { en: 'Agua, por favor', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
+      { en: 'La cuenta, por favor', zh: '买单', pinyin: 'mǎidān' },
+      { en: 'Está muy rico', zh: '很好吃', pinyin: 'hěn hǎochī' },
     ],
   },
   {
     id: 'help', label: 'Ayuda y emergencias', icon: '🆘',
     phrases: [
-      { es: '¡Ayuda!', zh: '救命！', pinyin: 'jiùmìng!' },
-      { es: '¿Dónde está el baño?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
-      { es: 'Necesito un médico', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
-      { es: 'Llame a la policía', zh: '请报警', pinyin: 'qǐng bàojǐng' },
-      { es: 'Estoy perdido/a', zh: '我迷路了', pinyin: 'wǒ mílù le' },
-      { es: 'Por favor, escríbalo', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
+      { en: '¡Ayuda!', zh: '救命！', pinyin: 'jiùmìng!' },
+      { en: '¿Dónde está el baño?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
+      { en: 'Necesito un médico', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
+      { en: 'Llame a la policía', zh: '请报警', pinyin: 'qǐng bàojǐng' },
+      { en: 'Estoy perdido/a', zh: '我迷路了', pinyin: 'wǒ mílù le' },
+      { en: 'Por favor, escríbalo', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
     ],
   },
 ];
@@ -87,26 +87,24 @@ const groups: Grupo[] = [
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Frases esenciales en chino para viajeros</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Frases esenciales en chino</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- Controles -->
     <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
-      <button data-filter="all" class="phrase-filter btn-primary text-sm">Todas</button>
+      <button data-filter="all" class="phrase-filter btn-primary text-sm">Todo</button>
       {groups.map((g) => (
         <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
           {g.icon} {g.label}
         </button>
       ))}
       <button id="print-btn" class="ml-auto rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
-        🖨️ Imprimir / Guardar como PDF
+        Imprimir / guardar en PDF
       </button>
     </div>
 
-    <!-- Grupos de frases -->
     <div class="mt-6 space-y-8">
       {groups.map((g) => (
         <section class="phrase-group" data-group={g.id}>
@@ -114,7 +112,7 @@ const groups: Grupo[] = [
           <div class="grid gap-3 sm:grid-cols-2">
             {g.phrases.map((p) => (
               <div class="card flex flex-col">
-                <span class="text-sm text-gray-500">{p.es}</span>
+                <span class="text-sm text-gray-500">{p.en}</span>
                 <span class="mt-1 text-2xl font-bold text-gray-900">{p.zh}</span>
                 <span class="mt-0.5 text-sm italic text-brand-600">{p.pinyin}</span>
               </div>
@@ -125,9 +123,9 @@ const groups: Grupo[] = [
     </div>
 
     <AffiliateCta
-      title="Mantente conectado para traducir mientras te desplazas"
-      description="Una eSIM de viaje para China mantiene funcionando las aplicaciones de traducción y los mapas desde el momento en que aterrizas."
-      buttonText="Conéctate"
+      title="Sigue conectado para traducir sobre la marcha"
+      description="Una eSIM para China te permite usar traductores, mapas y apps clave desde el mismo momento en que aterrizas."
+      buttonText="Ver opciones de eSIM"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -135,25 +133,25 @@ const groups: Grupo[] = [
 </BaseLayout>
 
 <script>
-  const botones = document.querySelectorAll<HTMLButtonElement>('.phrase-filter');
-  const secciones = document.querySelectorAll<HTMLElement>('.phrase-group');
-  const botonImprimir = document.getElementById('print-btn');
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.phrase-filter');
+  const sections = document.querySelectorAll<HTMLElement>('.phrase-group');
+  const printBtn = document.getElementById('print-btn');
 
-  const clasesInactivas = ['rounded-lg', 'border', 'border-gray-300', 'px-3', 'py-1.5', 'text-sm', 'font-medium', 'text-gray-700', 'hover:border-brand-400'];
+  const idleCls = ['rounded-lg', 'border', 'border-gray-300', 'px-3', 'py-1.5', 'text-sm', 'font-medium', 'text-gray-700', 'hover:border-brand-400'];
 
-  botones.forEach((boton) => {
-    boton.addEventListener('click', () => {
-      const filtro = boton.dataset.filter;
-      secciones.forEach((seccion) => {
-        seccion.classList.toggle('hidden', filtro !== 'all' && seccion.dataset.group !== filtro);
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      sections.forEach((s) => {
+        s.classList.toggle('hidden', filter !== 'all' && s.dataset.group !== filter);
       });
-      botones.forEach((b) => {
-        const estaActivo = b === boton;
-        b.classList.toggle('btn-primary', estaActivo);
-        clasesInactivas.forEach((clase) => b.classList.toggle(clase, !estaActivo));
+      buttons.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('btn-primary', on);
+        idleCls.forEach((c) => b.classList.toggle(c, !on));
       });
     });
   });
 
-  botonImprimir?.addEventListener('click', () => window.print());
+  printBtn?.addEventListener('click', () => window.print());
 </script>
