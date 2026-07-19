@@ -1,116 +1,120 @@
-﻿---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-const title = 'China-Reiseressourcen für ausländische Besucher';
+const title = 'China-Reiseressourcen fur auslandische Besucher';
 const description =
-  'Ein praktischer Ressourcenbereich für ausländische Besucher in China: Zahlungen, eSIMs, Züge, Visa, Stadtleitfäden, Tools und hilfreiche Links für die erste Reiseplanung.';
+  'Ein praktisches Ressourcenportal fur auslandische Besucher in China: Zahlungen, eSIMs, Zuge, Visa, Stadtfuhrer, Tools und Links fur die Planung der ersten Reise.';
 
 const resourceGroups = [
   {
-    title: 'Wenn du nur 30 Minuten hast',
-    description: 'Ein kurzer Lesepfad für Reisende, die schnell eine funktionierende China-Einrichtung brauchen.',
+    title: 'Wenn Sie nur 30 Minuten haben',
+    description: 'Ein kurzer Lesepfad fur Reisende, die schnell ein funktionierendes China-Setup brauchen.',
     links: [
-      { href: '/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Checkliste für die Einrichtung vor der Abreise' },
-      { href: '/de/tools/survival-kit/', title: 'China-Überlebenskit-Karten und Checklisten' },
-      { href: '/de/tools/payment-checker/', title: 'Prüfe deinen Zahlungsplan für den Notfall' },
-      { href: '/de/tools/visa-free-checker/', title: 'Visumfreie Einreise oder Transit prüfen' },
-      { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'Zugbuchung und Bahnhofseinstieg verstehen' },
+      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Checkliste fur die Vorbereitung vor der Abreise' },
+      { href: '/tools/survival-kit/', title: 'China-Survival-Kit-Karten und Checklisten' },
+      { href: '/tools/payment-checker/', title: 'Prufen Sie Ihren Zahlungs-Notfallplan' },
+      { href: '/tools/visa-free-checker/', title: 'Visafreie Einreise oder Transit prufen' },
+      { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Verstehen, wie Zugbuchung und Zutritt zum Bahnhof funktionieren' },
     ],
   },
   {
-    title: 'Hier starten: Einrichtung für die erste Reise',
-    description: 'Der kürzeste Weg von „Ich fahre nach China“ zu einem funktionierenden Plan für die Ankunft.',
+    title: 'Hier beginnen: Vorbereitung fur die erste Reise',
+    description: 'Der kurzeste Weg von "Ich reise nach China" zu einem funktionierenden Ankunftsplan.',
     links: [
-      { href: '/de/trip-planner/', title: 'Kostenloser China-Reiseplaner' },
-      { href: '/de/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'China-Reiseplaner für Erstbesucher' },
-      { href: '/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Was du vor einer Reise nach China einrichten solltest' },
-      { href: '/de/posts/china-visa-free-entry-transit-guide-2026/', title: 'Leitfaden für visumfreie Einreise und Transit in China' },
-      { href: '/de/tools/best-time-to-visit/', title: 'Beste Reisezeit für China' },
-      { href: '/de/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Was du für China einpacken solltest' },
+      { href: '/trip-planner/', title: 'Kostenloser China-Reiseplaner' },
+      { href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'China-Reiseplaner fur Erstbesucher' },
+      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Was Sie vor der Reise nach China einrichten sollten' },
+      { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'Leitfaden zur visafreien Einreise und zum Transit in China' },
+      { href: '/tools/best-time-to-visit/', title: 'Beste Reisezeit fur China' },
+      { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Was Sie fur China einpacken sollten' },
     ],
   },
   {
-    title: 'Bezahlung und Geld',
-    description: 'Mobile Zahlungen, Bargeld-Backup, Karten und alltägliche Probleme an der Kasse.',
+    title: 'Zahlungen und Geld',
+    description: 'Mobile Zahlungen, Bargeld als Reserve, Karten und alltagliche Probleme beim Bezahlen.',
     links: [
-      { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'Als Tourist in China bezahlen' },
-      { href: '/de/posts/alipay-foreign-credit-card-step-by-step/', title: 'Alipay mit ausländischer Karte einrichten' },
-      { href: '/de/posts/wechat-pay-foreign-visitors-guide/', title: 'WeChat Pay-Leitfaden für ausländische Besucher' },
-      { href: '/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Checkliste für Bezahlung und Apps vor der Abreise' },
-      { href: '/de/tools/payment-checker/', title: 'Prüfe die Kompatibilität deiner Zahlungen' },
+      { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Wie man als Tourist in China bezahlt' },
+      { href: '/posts/alipay-foreign-credit-card-step-by-step/', title: 'Alipay mit einer auslandischen Karte einrichten' },
+      { href: '/posts/wechat-pay-foreign-visitors-guide/', title: 'WeChat Pay-Leitfaden fur auslandische Besucher' },
+      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Checkliste fur Zahlungen und Apps vor der Abreise' },
+      { href: '/tools/payment-checker/', title: 'Prufung der Zahlungskompatibilitat' },
     ],
   },
   {
     title: 'Internet und Apps',
-    description: 'Bleib online, wähle eine eSIM und wisse, welche Apps vor der Ankunft funktionieren.',
+    description: 'Online bleiben, eine eSIM auswahlen und wissen, welche Apps vor der Ankunft funktionieren.',
     links: [
-      { href: '/de/posts/best-esim-for-china-travel-2026/', title: 'Beste eSIM für China-Reisen' },
-      { href: '/de/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'China eSIM vs. Roaming-Kosten' },
-      { href: '/de/posts/internet-access-china-apps-that-work-2026/', title: 'Internetzugang und Apps in China' },
-      { href: '/de/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'Erstreise-Planung mit eSIM und Apps' },
-      { href: '/de/tools/app-availability-checker/', title: 'Funktionieren meine Apps in China?' },
+      { href: '/posts/best-esim-for-china-travel-2026/', title: 'Beste eSIM fur Reisen nach China' },
+      { href: '/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'Kosten von China-eSIM im Vergleich zu Roaming' },
+      { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Internetzugang und Apps in China' },
+      { href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'Reiseplanung fur Erstbesucher mit eSIM und Apps' },
+      { href: '/tools/app-availability-checker/', title: 'Funktionieren meine Apps in China?' },
     ],
   },
   {
-    title: 'Verkehr und Stadtführer',
-    description: 'Züge, U-Bahn, Flughäfen, Fahrdienste und praktische Stadtplanung.',
+    title: 'Transport und Stadtfuhrer',
+    description: 'Zuge, U-Bahn, Flughafen, Ride-Hailing und praktische Stadtplanung.',
     links: [
-      { href: '/de/cities/', title: 'Stadtführer für China' },
-      { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'Leitfaden für Chinas Hochgeschwindigkeitszüge' },
-      { href: '/de/posts/book-china-train-tickets-12306-foreigners/', title: 'China-Zugtickets auf 12306 buchen' },
-      { href: '/de/posts/didi-china-foreign-tourists-guide/', title: 'DiDi als ausländischer Tourist nutzen' },
-      { href: '/de/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Vom Flughafen in die Stadt gelangen' },
+      { href: '/cities/', title: 'Portal fur China-Stadtfuhrer' },
+      { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Leitfaden fur Chinas Hochgeschwindigkeitsbahn fur Auslander' },
+      { href: '/posts/book-china-train-tickets-12306-foreigners/', title: 'China-Zugtickets auf 12306 buchen' },
+      { href: '/posts/didi-china-foreign-tourists-guide/', title: 'DiDi als auslandischer Tourist nutzen' },
+      { href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Leitfaden fur den Transport vom Flughafen in die Stadt' },
     ],
   },
   {
     title: 'Essen, Etikette und Alltag',
-    description: 'Essen, Trinkgeld, Liefer-Apps, Streetfood und praktische Gewohnheiten, die vor Ort Reibung verringern.',
+    description: 'Essen gehen, Trinkgeld, Liefer-Apps, Streetfood und praktische Gewohnheiten, die vor Ort Reibung verringern.',
     links: [
-      { href: '/de/food/', title: 'China-Essen und Gastronomie' },
-      { href: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Essen ohne Chinesisch bestellen' },
-      { href: '/de/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: 'Chengdu Streetfood-Sicherheit und Gewürzleitfaden' },
-      { href: '/de/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Trinkgeld in China: wann es erwartet wird' },
+      { href: '/food/', title: 'Portal fur Essen und Dining in China' },
+      { href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Essen ohne Chinesisch bestellen' },
+      { href: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: 'Leitfaden zu Streetfood-Sicherheit und Scharfegrad in Chengdu' },
+      { href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Trinkgeld in China: wann es erwartet wird' },
     ],
   },
   {
-    title: 'Längere Aufenthalte und Fernarbeit',
-    description: 'Für Reisen in Wochen oder Monaten beginne mit Legalität, Unterkunft, Zahlung und Zuverlässigkeit der Arbeitstools.',
+    title: 'Langere Aufenthalte und Remote-Arbeit',
+    description: 'Fur Reisen, die sich uber Wochen oder Monate erstrecken, beginnen Sie mit Rechtslage, Unterkunft, Zahlung und der Zuverlassigkeit Ihrer Arbeitstools.',
     links: [
-      { href: '/de/long-stay/', title: 'Leitfaden für Langzeitaufenthalt in China' },
-      { href: '/de/digital-nomads/', title: 'Leitfaden für digitale Nomaden in China' },
-      { href: '/de/digital-nomads/visa/', title: 'China-Visa-Leitfaden für digitale Nomaden' },
-      { href: '/de/digital-nomads/payment/', title: 'Zahlungseinrichtung für längere Aufenthalte' },
+      { href: '/long-stay/', title: 'Leitfaden fur einen langfristigen Aufenthalt in China' },
+      { href: '/digital-nomads/', title: 'Leitfaden fur digitale Nomaden in China' },
+      { href: '/digital-nomads/visa/', title: 'China-Visaleitfaden fur digitale Nomaden' },
+      { href: '/digital-nomads/payment/', title: 'Zahlungseinrichtung fur langere Aufenthalte' },
     ],
   },
 ];
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <section class="max-w-3xl">
-      <p class="section-kicker">Ressourcen</p>
+      <p class="section-kicker">Ressourcenportal</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </section>
 
     <section class="mt-10 grid gap-5 md:grid-cols-2">
       {resourceGroups.map((group) => (
-        <article class="card">
+        <div class="card">
           <h2 class="text-xl font-bold text-gray-950">{group.title}</h2>
           <p class="mt-2 text-sm leading-6 text-gray-600">{group.description}</p>
-          <ul class="mt-5 grid gap-3">
+          <ul class="mt-5 grid gap-2">
             {group.links.map((link) => (
               <li>
-                <a href={link.href} class="font-semibold text-brand-700 hover:text-brand-800">
+                <a href={link.href}
+                   class="block rounded-lg border border-gray-200 px-4 py-3 text-sm font-semibold
+                          text-brand-700 transition-colors hover:border-brand-300 hover:bg-brand-50">
                   {link.title}
                 </a>
               </li>
             ))}
           </ul>
-        </article>
+        </div>
       ))}
     </section>
   </main>
