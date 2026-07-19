@@ -3,8 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'Page non trouvée';
-const description = 'Page non trouvée - ChinaTripBox';
+const title = 'Page introuvable';
+const description = 'Page introuvable sur ChinaTripBox';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} noindex>
@@ -12,17 +12,16 @@ const description = 'Page non trouvée - ChinaTripBox';
   <main class="container-page py-16">
     <section class="mx-auto max-w-2xl">
       <p class="section-kicker">404</p>
-      <h1 class="mt-2 text-4xl font-bold text-gray-950">Page non trouvée</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">La page demandée a été déplacée ou l’adresse est incorrecte.</p>
+      <h1 class="mt-2 text-4xl font-bold text-gray-950">Page introuvable</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">
+        La page demandée n’existe plus, a été déplacée ou l’adresse saisie est incorrecte.
+      </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="/fr/" class="btn-primary">Accueil</a>
-        <a href="/fr/resources/" class="btn-outline">Commencer</a>
+        <a href="/fr/resources/" class="btn-outline">Centre de ressources</a>
         <a href="/fr/tools/" class="btn-outline">Outils</a>
       </div>
     </section>
   </main>
   <Footer />
 </BaseLayout>
-
----
----
