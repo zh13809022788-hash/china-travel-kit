@@ -1,237 +1,146 @@
 ---
-
 import { getCollection } from 'astro:content';
-
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-
-import Header from '../../../components/Header.astro';
-
-import Footer from '../../../components/Footer.astro';
-
-import AdSlot from '../../../components/AdSlot.astro';
-
-import CoverImage from '../../../components/CoverImage.astro';
-
-
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import CoverImage from '../../components/CoverImage.astro';
 
 const CATEGORY = 'esim';
-
-const posts = (await getCollection('posts-es'))
-
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === CATEGORY)
-
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-
-
-const title = 'eSIM y datos en China: conexión al llegar';
-
+const title = 'Guías de eSIM y datos para China — Mantente conectado al llegar';
 const description =
-
-  'Compara y configura los mejores planes de datos eSIM para viajar por China. Conéctate en el momento de aterrizar, sin cambiar de SIM física.';
-
-
+  'Compara y configura los mejores planes de datos eSIM para viajar a China. Conéctate en el mismo momento en que aterrizas, sin necesidad de cambiar la SIM física.';
 
 const connectionChoices = [
-
   {
-
     title: 'eSIM',
-
-    desc: 'Ideal para la mayoría de los viajes cortos cuando tu teléfono admite eSIM y quieres tener datos listos antes de aterrizar.',
-
+    desc: 'La mejor opción para la mayoría de los viajes cortos cuando tu teléfono es compatible con eSIM y quieres tener datos listos antes de aterrizar.',
   },
-
   {
-
     title: 'Roaming',
-
-    desc: 'Útil como respaldo para SMS bancarios y conectividad de la primera hora, pero a menudo más caro para uso intensivo de datos.',
-
+    desc: 'Útil como respaldo para SMS bancarios y conectividad durante la primera hora, pero a menudo más caro para un uso intensivo de datos.',
   },
-
   {
-
     title: 'Pocket Wi-Fi o SIM local',
-
-    desc: 'Vale la pena considerar para grupos, estancias más largas o teléfonos que no pueden instalar eSIM de viaje.',
-
+    desc: 'Vale la pena considerarlo para grupos, estancias más largas o teléfonos que no pueden instalar eSIM de viaje.',
   },
-
 ];
-
-
 
 const internetTools = [
-
-  { href: '/es/tools/esim-comparison/', title: 'Comparador de planes eSIM', desc: 'Compara planes de datos para viajar, validez y casos de uso previstos.' },
-
-  { href: '/es/tools/app-availability-checker/', title: 'Comprobador de disponibilidad de apps', desc: 'Comprueba si las apps habituales funcionan en China y qué alternativas preparar.' },
-
-  { href: '/es/posts/internet-access-china-apps-that-work-2026/', title: 'Guía de acceso a internet', desc: 'Entiende el acceso a apps, las expectativas de VPN y la configuración práctica antes de llegar.' },
-
+  { href: '/tools/esim-comparison/', title: 'Comparador de planes eSIM', desc: 'Compara planes de datos para viaje, vigencia y casos de uso previstos.' },
+  { href: '/tools/app-availability-checker/', title: 'Comprobador de disponibilidad de apps', desc: 'Comprueba si las apps más comunes funcionan en China y qué alternativas conviene preparar.' },
+  { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Guía de acceso a internet', desc: 'Comprende el acceso a las apps, qué esperar de una VPN y la configuración práctica antes de llegar.' },
 ];
-
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
 
-  <Header locale="es" />
-
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-
     <header class="max-w-2xl">
-
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">eSIM</span>
-
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Guías de eSIM &amp; datos</h1>
-
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Guías de eSIM y datos</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
-
     </header>
-
-
 
     <CoverImage name="hub-esim" alt="Opciones de red móvil y conectividad de datos para viajar a China" loading="lazy" />
 
-
-
     <AdSlot format="banner" />
 
-
-
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-esim">
-
-      <h2 id="featured-esim" class="sr-only">Guías destacadas de internet</h2>
-
-      <a href="/es/posts/best-esim-for-china-travel-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-
+      <h2 id="featured-esim" class="sr-only">Guías destacadas sobre internet</h2>
+      <a href="/posts/best-esim-for-china-travel-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">Mejor eSIM 2026</span>
-
-        <p class="mt-1 text-xs leading-5 text-gray-600">Compara Airalo, Holafly, Nomad para viajar a China</p>
-
+        <p class="mt-1 text-xs leading-5 text-gray-600">Compara Airalo, Holafly y Nomad para viajar a China</p>
       </a>
-
-      <a href="/es/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-
+      <a href="/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">eSIM vs roaming</span>
-
-        <p class="mt-1 text-xs leading-5 text-gray-600">Comparación de costes reales de 10 días para turistas</p>
-
+        <p class="mt-1 text-xs leading-5 text-gray-600">Comparación real de costes de 10 días para turistas</p>
       </a>
-
-      <a href="/es/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-
+      <a href="/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">Guía de VPN 2026</span>
-
-        <p class="mt-1 text-xs leading-5 text-gray-600">¿Los turistas todavía necesitan una VPN en China?</p>
-
+        <p class="mt-1 text-xs leading-5 text-gray-600">¿Los turistas siguen necesitando una VPN en China?</p>
       </a>
-
-      <a href="/es/posts/pocket-wifi-vs-esim-vs-sim-china/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-
+      <a href="/posts/pocket-wifi-vs-esim-vs-sim-china/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">Pocket WiFi vs eSIM</span>
-
         <p class="mt-1 text-xs leading-5 text-gray-600">Compara todas las opciones de conectividad</p>
-
       </a>
-
     </section>
-
-
 
     <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
-
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-
         <h2 class="text-2xl font-bold text-gray-900">Elige tu configuración de internet para China</h2>
-
         <p class="mt-3 text-sm leading-6 text-gray-600">
-
-          La configuración más segura para visitantes suele ser una opción principal de datos más un respaldo para banca, mapas, traducción y servicios de transporte durante el primer día.
-
+          La configuración más segura para los visitantes suele ser una opción principal de datos más un respaldo para la banca, los mapas, la traducción y las apps de transporte durante el primer día.
         </p>
-
         <div class="mt-5 grid gap-3">
-
           {connectionChoices.map((choice) => (
-
             <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
-
               <h3 class="text-sm font-bold text-gray-900">{choice.title}</h3>
-
               <p class="mt-1 text-sm leading-6 text-gray-600">{choice.desc}</p>
-
             </div>
-
           ))}
-
         </div>
-
       </div>
 
-
-
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-
         <h2 class="text-lg font-bold text-gray-900">Herramientas de internet</h2>
-
         <div class="mt-4 grid gap-3">
-
           {internetTools.map((tool) => (
-
             <a href={tool.href} class="rounded-lg border border-brand-100 bg-white p-4 hover:border-brand-200 hover:no-underline">
-
               <h3 class="text-sm font-semibold text-gray-900 hover:text-brand-700">{tool.title}</h3>
-
               <p class="mt-1 text-sm leading-6 text-gray-600">{tool.desc}</p>
-
             </a>
-
           ))}
-
         </div>
-
       </aside>
-
     </section>
-
-
 
     <section class="mt-8 grid gap-6 md:grid-cols-2">
-
       {posts.map((post, i) => (
-
         <>
-
-          <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
-
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
-
+          <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
-
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
-
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">
-
-              {post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}
-
+              {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
             </time>
-
           </a>
-
           {(i + 1) % 3 === 0 && <div class="md:col-span-2"><AdSlot format="in-article" /></div>}
-
         </>
-
       ))}
-
       {posts.length === 0 && <p class="text-gray-500">Guías próximamente.</p>}
-
     </section>
-
-  </main>
-
+  
+    <section class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+      <h2 class="text-xl font-bold text-gray-950">Guías relacionadas sobre internet</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <a href="/posts/best-esim-for-china-travel-2026/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Mejores planes eSIM 2026</p>
+          <p class="mt-1 text-sm text-gray-600">Compara los principales proveedores de eSIM para viajar a China</p>
+        </a>
+        <a href="/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Coste de eSIM vs roaming</p>
+          <p class="mt-1 text-sm text-gray-600">Comparación real de costes de 10 días para viajeros a China</p>
+        </a>
+        <a href="/posts/do-you-need-a-vpn-in-china-2026/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Guía de VPN para China</p>
+          <p class="mt-1 text-sm text-gray-600">¿Necesitas una VPN? ¿Cuáles funcionan en 2026?</p>
+        </a>
+        <a href="/posts/internet-access-china-apps-that-work-2026/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Guía de acceso a internet</p>
+          <p class="mt-1 text-sm text-gray-600">Qué apps funcionan sin VPN en China</p>
+        </a>
+      </div>
+    </section>
+</main>
   <Footer />
-
 </BaseLayout>
