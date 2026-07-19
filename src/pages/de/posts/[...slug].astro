@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogPost from '../../../layouts/BlogPost.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('posts-de');
+  const posts = await getCollection('posts');
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
@@ -14,26 +14,42 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 const { data } = post;
 
+// Zuordnung der Affiliate-CTA nach Kategorie
 const affiliateByCategory: Record<string, { title: string; description: string; buttonText: string }> = {
   payment: {
-    title: 'Zahlung vorbereiten',
-    description: 'Richte Alipay und WeChat Pay möglichst schon vor dem Abflug mit einer geeigneten Reisekarte ein.',
-    buttonText: 'Jetzt vorbereiten',
+    title: 'Zahlungssetup für die Reise',
+    description: 'Hol dir eine Prepaid-Reisekarte, die in China reibungslos mit Alipay und WeChat Pay funktioniert.',
+    buttonText: 'Jetzt starten',
   },
   esim: {
-    title: 'Empfohlene China-eSIM',
-    description: 'Aktiviere mobiles Internet vor der Abreise, damit du nach der Landung sofort online bist.',
+    title: 'Empfohlene China eSIM',
+    description: 'Überspringe die Warteschlange am Flughafen — aktiviere einen Highspeed-Datentarif, bevor du landest.',
     buttonText: 'Tarife ansehen',
   },
   transport: {
-    title: 'Zugtickets und Transfers',
-    description: 'Buche Hochgeschwindigkeitszüge und Flughafentransfers auf Englisch, damit die Ankunft entspannter läuft.',
+    title: 'Züge & Fahrten einfach buchen',
+    description: 'Reserviere Hochgeschwindigkeitszug-Tickets und Flughafentransfers auf Englisch, ganz ohne Aufwand.',
     buttonText: 'Jetzt buchen',
   },
 };
 
 const affiliate = affiliateByCategory[data.category];
-const allPosts = await getCollection('posts-de');
+const allPosts = await getCollection('posts');
+const zhTwPosts = await getCollection('posts-zh-tw');
+const jaPosts = await getCollection('posts-ja');
+const koPosts = await getCollection('posts-ko');
+const ruPosts = await getCollection('posts-ru');
+const frPosts = await getCollection('posts-fr');
+const dePosts = await getCollection('posts-de');
+const esPosts = await getCollection('posts-es');
+const alternates: Record<string, string> = { en: `/posts/${post.slug}/` };
+if (zhTwPosts.some((candidate) => candidate.slug === post.slug)) alternates['zh-TW'] = `/zh-tw/posts/${post.slug}/`;
+if (jaPosts.some((candidate) => candidate.slug === post.slug)) alternates.ja = `/ja/posts/${post.slug}/`;
+if (koPosts.some((candidate) => candidate.slug === post.slug)) alternates.ko = `/ko/posts/${post.slug}/`;
+if (ruPosts.some((candidate) => candidate.slug === post.slug)) alternates.ru = `/ru/posts/${post.slug}/`;
+if (frPosts.some((candidate) => candidate.slug === post.slug)) alternates.fr = `/fr/posts/${post.slug}/`;
+if (dePosts.some((candidate) => candidate.slug === post.slug)) alternates.de = `/de/posts/${post.slug}/`;
+if (esPosts.some((candidate) => candidate.slug === post.slug)) alternates.es = `/es/posts/${post.slug}/`;
 const related = allPosts
   .filter((candidate) => candidate.slug !== post.slug)
   .map((candidate) => {
@@ -53,9 +69,11 @@ const related = allPosts
   .map(({ candidate }) => ({
     title: candidate.data.title,
     description: candidate.data.description,
-    href: `/de/posts/${candidate.slug}/`,
+    href: `/posts/${candidate.slug}/`,
   }));
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
 
 <BlogPost
   title={data.title}
@@ -67,8 +85,7 @@ const related = allPosts
   cover={data.cover}
   coverAlt={data.coverAlt}
   related={related}
-  locale="de"
-  alternates={{ en: `/posts/${post.slug}/`, de: `/de/posts/${post.slug}/` }}
+  alternates={alternates}
   affiliate={affiliate}
 >
   <Content />
