@@ -7,7 +7,20 @@ interface TravelHelpRequest {
   stage?: string;
   topic?: string;
   location?: string;
+  language?: string;   // en / zh-TW / ja / ko / ru / fr / de / es
+  articles?: string;   // JSON string of search results from local index
 }
+
+const LANG_NAMES: Record<string, string> = {
+  en: 'English',
+  'zh-TW': 'Traditional Chinese (used in Taiwan)',
+  ja: 'Japanese',
+  ko: 'Korean',
+  ru: 'Russian',
+  fr: 'French',
+  de: 'German',
+  es: 'Spanish',
+};
 
 const json = (body: unknown, init: ResponseInit = {}) =>
   new Response(JSON.stringify(body), {
@@ -48,25 +61,46 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const stage = sanitize(payload.stage, 80) || 'Not specified';
   const topic = sanitize(payload.topic, 80) || 'General trip setup';
   const location = sanitize(payload.location, 160) || 'Not specified';
+  const language = sanitize(payload.language, 10) || 'en';
+  const langName = LANG_NAMES[language] || 'English';
 
-  if (message.length < 8) {
-    return json({ error: 'Please add a more detailed travel question.' }, { status: 400 });
+  // Parse articles context
+  let articlesContext = '';
+  if (payload.articles) {
+    try {
+      const articles = JSON.parse(payload.articles);
+      if (Array.isArray(articles) && articles.length > 0) {
+        articlesContext = '\n\nRelevant guides from our site:\n' +
+          articles.slice(0, 5).map((a: { title?: string; description?: string; url?: string }, i: number) =>
+            `${i + 1}. ${a.title || ''}\n   ${a.description || ''}\n   URL: https://www.chinatripbox.com${a.url || ''}`
+          ).join('\n');
+      }
+    } catch { /* ignore invalid json */ }
+  }
+
+  if (message.length < 4) {
+    return json({ error: 'Please enter your travel question.' }, { status: 400 });
   }
 
   const systemPrompt = [
-    'You are ChinaTripBox Travel Help, a practical assistant for foreign visitors to China.',
-    'Give concise, step-by-step travel guidance in English.',
-    'Focus on payment apps, eSIM/internet, transport, local apps, arrival setup, cash backup, and simple trip logistics.',
-    'Do not ask for passport photos, full bank card numbers, passwords, PINs, one-time codes, or account logins.',
-    'Do not provide legal, immigration, medical, banking, emergency, or official government advice.',
-    'When a question is high-risk or account-specific, explain what to check with the official provider and suggest human review.',
-    'Keep the answer practical, calm, and under 220 words.',
+    `You are ChinaTripBox Travel Help, a practical assistant for foreign visitors to China.`,
+    `You MUST respond in ${langName}. This is mandatory — do not switch to English or any other language.`,
+    `Give concise, step-by-step travel guidance. Use the provided guides from our site when relevant.`,
+    `Focus on payment apps, eSIM/internet, transport, local apps, arrival setup, cash backup, and simple trip logistics.`,
+    `Do not ask for passport photos, full bank card numbers, passwords, PINs, one-time codes, or account logins.`,
+    `Do not provide legal, immigration, medical, banking, emergency, or official government advice.`,
+    `When a question is high-risk or account-specific, explain what to check with the official provider and suggest human review.`,
+    `Keep the answer practical, calm, and under 300 words.`,
+    `If our site has relevant guides, reference them in your answer.`,
+    `Use natural ${langName} without markdown tables unless necessary.`,
   ].join(' ');
 
   const userPrompt = [
     `Trip stage: ${stage}`,
     `Topic: ${topic}`,
     `City or route: ${location}`,
+    `Language: ${langName}`,
+    articlesContext,
     '',
     'Question:',
     message,
@@ -81,7 +115,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     body: JSON.stringify({
       model: 'deepseek-chat',
       temperature: 0.3,
-      max_tokens: 420,
+      max_tokens: 600,
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt },
