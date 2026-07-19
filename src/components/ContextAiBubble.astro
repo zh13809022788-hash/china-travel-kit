@@ -149,19 +149,12 @@ interface SearchIndex {
   [lang: string]: SearchEntry[];
 }
 
-// Detect current page language from URL + browser fallback
+// Detect current page language from URL only
 function detectLang(): string {
   const p = window.location.pathname.toLowerCase();
   for (const lang of ['zh-tw', 'ja', 'ko', 'ru', 'fr', 'de', 'es']) {
     if (p.startsWith('/' + lang + '/')) return lang;
   }
-  // Fallback: if visitor browser is Chinese but URL has no locale prefix, still treat as Chinese
-  try {
-    const browserLang = (navigator.language || '').toLowerCase();
-    if (browserLang.startsWith('zh')) return 'zh-tw';  // zh-CN/zh-HK → show zh-TW
-    if (browserLang.startsWith('ja')) return 'ja';
-    if (browserLang.startsWith('ko')) return 'ko';
-  } catch {}
   return 'en';
 }
 
