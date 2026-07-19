@@ -1,9 +1,9 @@
 ---
-import GuideLayout from '../../../layouts/GuideLayout.astro';
+import GuideLayout from '../../layouts/GuideLayout.astro';
 
-const title = 'Guía completa para nómadas digitales en China (2026)';
+const title = 'La guía completa para nómadas digitales en China (2026)';
 const description =
-  'Todo lo necesario para vivir y trabajar en remoto desde China: visados, pagos, mejores ciudades, internet, coste de vida y consejos prácticos.';
+  'Todo lo que necesitas para vivir y trabajar de forma remota desde China: opciones de visa, métodos de pago, mejores ciudades, acceso a internet, costo de vida y consejos prácticos.';
 const url = '/digital-nomads/';
 const datePublished = '2026-07-09';
 
@@ -16,57 +16,221 @@ const toc = [
   { id: 'overview', label: 'China para nómadas digitales' },
   { id: 'guides', label: 'Guías principales' },
   { id: 'internet', label: 'Internet y trabajo remoto' },
-  { id: 'cost', label: 'Coste de vida por ciudad' },
-  { id: 'english', label: 'Idioma y calidad de vida' },
+  { id: 'cost', label: 'Costo de vida por ciudad' },
+  { id: 'english', label: 'Inglés y habitabilidad' },
   { id: 'faq', label: 'Preguntas frecuentes' },
-  { id: 'next', label: 'Siguiente paso: negocio de IA' },
+  { id: 'next', label: 'Siguiente paso: negocio con IA' },
 ];
 
 const faqs = [
-  { question: '¿China es un buen destino para nómadas digitales?', answer: 'Sí, siempre que prepares bien visado e internet. Ofrece datos móviles rápidos, trenes de alta velocidad, ciudades seguras, pagos móviles casi universales y costes diarios razonables. Los principales retos son la ausencia de visa específica y el Great Firewall.' },
-  { question: '¿Cuánto cuesta vivir un mes en China como nómada?', answer: 'Puedes calcular unos 5.500-8.500 RMB en ciudades pequeñas como Dali, 7.000-11.000 RMB en Chengdu o Hangzhou y 12.000-18.000 RMB en zonas céntricas de Shanghái o Shenzhen. El alquiler es el factor principal.' },
-  { question: '¿Se puede usar Google, Gmail y otras apps occidentales en China?', answer: 'En una conexión doméstica china, Google, Gmail, WhatsApp, Instagram y muchas otras apps están bloqueadas. Conviene preparar una eSIM internacional adecuada o una solución de acceso fiable antes de llegar.' },
-  { question: '¿Internet es lo bastante rápido para trabajar en remoto?', answer: 'Sí para servicios locales y conexión nacional. El problema no es la velocidad interna, sino el acceso a plataformas internacionales bloqueadas o lentas.' },
-  { question: '¿La gente habla inglés en China?', answer: 'En aeropuertos, hoteles internacionales y ciertos distritos sí suele haber bastante inglés para salir del paso. Fuera de esos entornos, mucho menos, aunque con traducción y mini-programas puedes resolver casi todo.' },
-  { question: '¿China es segura para trabajadores remotos extranjeros?', answer: 'La delincuencia violenta es poco común y las ciudades suelen sentirse seguras. Los riesgos reales son administrativos: visado, registro de dirección y evitar trabajo local no autorizado.' },
-  { question: '¿Cuánto tiempo puedo quedarme en China como nómada?', answer: 'Con visa turística, lo normal es entre 30 y 90 días por entrada; con visa de negocios, a menudo entre 90 y 180 días. No existe una fórmula para vivir indefinidamente en China de manera informal.' },
-  { question: '¿Cuál es la mejor época del año?', answer: 'Primavera y otoño suelen ser las estaciones más cómodas en buena parte del país. El verano puede ser muy caluroso y húmedo; el norte se enfría mucho en invierno, mientras Sanya sigue templada.' },
-  { question: '¿Puedo gestionar mi negocio o trabajar con clientes desde China?', answer: 'Trabajar para clientes extranjeros o para tu propia empresa extranjera suele tolerarse si todo sigue siendo transfronterizo. Trabajar para clientes chinos con una visa turística no está permitido.' },
-  { question: '¿Necesito una cuenta bancaria china?', answer: 'Normalmente no. Alipay y WeChat Pay aceptan tarjetas extranjeras para el gasto diario. Una cuenta local solo es útil en algunos alquileres largos o para operaciones específicas en RMB.' },
+  {
+    question: '¿China es un buen lugar para nómadas digitales?',
+    answer:
+      'China es excelente en infraestructura: datos móviles rápidos, trenes de alta velocidad baratos, ciudades seguras, pagos móviles casi universales y bajos costos del día a día. Las contrapartidas son la falta de una visa específica para nómadas y el Gran Cortafuegos, que bloquea muchas herramientas de trabajo occidentales a menos que planifiques cómo sortearlo. Para los nómadas que se preparan, es una de las bases más cómodas y asequibles de Asia.',
+  },
+  {
+    question: '¿Cuánto cuesta al mes vivir en China como nómada?',
+    answer:
+      'Calcula aproximadamente entre 5,500 y 8,500 RMB al mes en una ciudad pequeña como Dali, entre 7,000 y 11,000 RMB en una nueva ciudad de primer nivel como Chengdu o Hangzhou, y entre 12,000 y 18,000 RMB en zonas céntricas de Shanghai o Shenzhen. El alquiler es el principal factor; la comida, el transporte y los datos son baratos en todas partes.',
+  },
+  {
+    question: '¿Se puede usar Google, Gmail y otras apps occidentales en China?',
+    answer:
+      'En una conexión china doméstica, Google, Gmail, WhatsApp, Instagram y muchas otras están bloqueadas. Los nómadas lo resuelven principalmente de dos maneras: algunas eSIM internacionales de viaje enrutan el tráfico a través de una red extranjera para que estos servicios carguen con normalidad, o bien organizas tu propio acceso compatible antes de llegar. Prueba siempre tus herramientas de trabajo críticas desde el principio.',
+  },
+  {
+    question: '¿Es lo bastante rápido el internet para trabajar en remoto en China?',
+    answer:
+      'Sí. La banda ancha nacional y los datos móviles son rápidos y están ampliamente disponibles, y las videollamadas con contactos nacionales funcionan sin problemas. El cuello de botella es el enrutamiento internacional hacia servicios bloqueados o en el extranjero, que puede ser más lento o requerir una solución alternativa. Si tu trabajo depende sobre todo de plataformas internacionales, elige tu configuración de conectividad con intención.',
+  },
+  {
+    question: '¿La gente habla inglés en China?',
+    answer:
+      'En los distritos internacionales de las grandes ciudades, hay suficiente inglés como para arreglártelas, y la señalización en el metro y en los aeropuertos es bilingüe. Fuera de esas zonas, el inglés es limitado. Las apps de traducción y los mini-programas dentro de Alipay y WeChat salvan casi cualquier situación, así que puedes desenvolverte bien sin hablar mandarín, aunque saber algunas frases ayuda mucho.',
+  },
+  {
+    question: '¿Es China segura para trabajadores remotos extranjeros?',
+    answer:
+      'Los delitos violentos son raros y las ciudades se sienten muy seguras por la noche según los estándares internacionales. Los principales riesgos son administrativos más que físicos: respetar las condiciones de tu visa, registrar tu dirección y no hacer trabajo local para el que no estás autorizado. Si gestionas bien el papeleo, la vida diaria es cómoda y de bajo estrés.',
+  },
+  {
+    question: '¿Cuánto tiempo puedes quedarte en China como nómada?',
+    answer:
+      'Con una visa de turista (L), normalmente entre 30 y 90 días por entrada con una posible extensión; con una visa de negocios (M), a menudo entre 90 y 180 días por entrada dentro de una validez de varios años. No existe una visa que permita vivir de forma casual e indefinida. Nuestra guía de visas desglosa cada opción y cómo combinarlas legalmente.',
+  },
+  {
+    question: '¿Cuál es la mejor época del año para establecerte en China?',
+    answer:
+      'La primavera (abril-mayo) y el otoño (septiembre-octubre) son las estaciones más cómodas en todo el país, con clima templado y cielos despejados. Los veranos son calurosos y húmedos en la mayor parte del país; los inviernos del norte son fríos, mientras que el sur tropical, como Sanya, es cálido. Haz coincidir tu ciudad con la estación: Sanya en invierno, Chengdu o Shanghai en primavera y otoño.',
+  },
+  {
+    question: '¿Puedo dirigir mi propio negocio o aceptar clientes mientras estoy en China?',
+    answer:
+      'Trabajar en remoto para clientes del extranjero o para tu propio negocio registrado fuera de China desde China se sitúa en una zona gris más que en una situación claramente permitida, y hacer trabajo local para clientes chinos con una visa de turista no está permitido. Si planeas llevar una operación transfronteriza unipersonal, lee nuestra guía específica sobre empresas unipersonales con IA para entender los límites de cumplimiento.',
+  },
+  {
+    question: '¿Necesito una cuenta bancaria china?',
+    answer:
+      'Normalmente no. Alipay y WeChat Pay aceptan las principales tarjetas extranjeras para los gastos cotidianos, lo que cubre la vida diaria sin necesidad de efectivo para la mayoría de los nómadas. Una cuenta local solo resulta útil si necesitas recibir RMB dentro de China o pagar a ciertos caseros por transferencia bancaria en un alquiler de larga duración.',
+  },
 ];
 
 const related = [
-  { title: 'Visa para nómadas digitales en China (2026)', description: 'Visa turística, de negocios, tránsito y salidas a frontera: todas las vías legales para quedarse.', href: '/es/digital-nomads/visa/' },
-  { title: 'Cómo pagar en China siendo extranjero', description: 'Alipay, WeChat Pay, efectivo y tarjetas para el día a día.', href: '/es/digital-nomads/payment/' },
-  { title: 'Estancia larga en China: guía para extranjeros', description: 'Alojamiento, costes mensuales y vida diaria para pasar de uno a seis meses.', href: '/es/long-stay/' },
+  {
+    title: 'Visa china para nómadas digitales (2026)',
+    description: 'Visas de turista, visas de negocios, reglas de tránsito y salidas del país para renovar estancia: todas las formas legales de quedarse.',
+    href: '/digital-nomads/visa/',
+  },
+  {
+    title: 'Cómo pagar cosas en China siendo extranjero',
+    description: 'Alipay, WeChat Pay, efectivo y tarjetas extranjeras: configura tus pagos diarios y tu banca.',
+    href: '/digital-nomads/payment/',
+  },
+  {
+    title: 'Estancia de larga duración en China: guía para extranjeros',
+    description: 'Alojamiento, costos mensuales y vida diaria para estancias de uno a seis meses.',
+    href: '/long-stay/',
+  },
 ];
 ---
-<GuideLayout title={title} description={description} url={url} datePublished={datePublished} breadcrumbs={breadcrumbs} toc={toc} faqs={faqs} related={related} cover="cover-digital-nomads" coverAlt="Nómada digital trabajando desde una cafetería en China" locale="es">
-  <h2 id="overview">China para nómadas digitales: una visión realista</h2>
-  <p>China no suele salir la primera en las listas clásicas de destinos para nómadas digitales, pero ofrece una infraestructura difícil de igualar: trenes rápidos, pagos móviles omnipresentes, reparto barato, transporte muy eficiente y calles seguras incluso de noche. Para quien valora más la comodidad operativa que una comunidad expatriada prefabricada, la experiencia puede ser sorprendentemente fluida.</p>
-  <p>Los dos grandes desafíos son el visado y el acceso a internet internacional. No existe una visa específica para nómadas, así que hay que usar con cuidado las categorías disponibles. Además, muchas herramientas occidentales requieren una estrategia de conectividad preparada antes de aterrizar.</p>
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<GuideLayout
+  title={title}
+  description={description}
+  url={url}
+  datePublished={datePublished}
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  related={related}
+  cover="cover-digital-nomads"
+  coverAlt="Un nómada digital trabajando en remoto desde una cafetería en China"
+>
+  <h2 id="overview">China para nómadas digitales: la realidad sin adornos</h2>
+  <p>
+    China rara vez encabeza las típicas listas de nómadas digitales, y precisamente por eso recompensa a quienes miran más de cerca. Frente a los habituales centros del Sudeste Asiático, ofrece algo que pocos de ellos pueden igualar: trenes bala que convierten un país del tamaño de un continente en una serie de trayectos de una tarde, pagos móviles tan universales que puedes pasar semanas sin tocar efectivo, entrega de comida y transporte por app baratos e inmediatos, y calles que de verdad se sienten seguras a las 2 de la mañana. Para un trabajador remoto que valora la infraestructura y la baja fricción por encima de una escena social de expatriados ya montada, la calidad de vida diaria es difícil de superar.
+  </p>
+  <p>
+    El contrapunto honesto son dos desafíos reales que debes planificar. Primero, no existe una visa específica para nómadas digitales, así que quedarse legalmente implica usar con criterio visas de turista o de negocios en lugar de depender de un permiso diseñado para ese fin. Segundo, el Gran Cortafuegos bloquea una gran parte de las herramientas occidentales de las que dependen muchos trabajadores remotos, como Google Workspace, WhatsApp y muchas plataformas sociales, a menos que tu conectividad esté configurada para sortearlo. Ninguno de los dos es un obstáculo insalvable, pero ambos premian la preparación. Los nómadas que llegan con su visa y su acceso a internet ya resueltos prosperan; quienes improvisan se frustran en la primera semana.
+  </p>
+  <p>
+    Esta guía es el centro de todo lo demás. Enlaza con guías profundas sobre los dos temas que más suelen complicar a la gente, visas y pagos, y luego cubre las realidades prácticas del internet, el costo de vida y la habitabilidad que determinan dónde te conviene establecerte. Tanto si estás considerando una prueba de un mes como si quieres construir una vida más larga aquí, empieza con el panorama de abajo y sigue los enlaces hacia los detalles.
+  </p>
 
   <h2 id="guides">Guías principales</h2>
-  <p>Hay tres cuestiones que definen casi toda la experiencia de un nómada digital en China.</p>
-  <h3>Visado y estancia legal</h3>
-  <p>No existe una visa nómada como tal, así que entender bien las opciones es imprescindible. La <a href="/es/digital-nomads/visa/">guía de visas para nómadas digitales</a> cubre visa turística, visa de negocios, tránsito sin visa y salidas a Hong Kong o Macao.</p>
-  <h3>Pagos y operativa diaria</h3>
-  <p>El pago móvil no es opcional. La <a href="/es/digital-nomads/payment/">guía de pagos para extranjeros</a> explica cómo vincular tarjetas extranjeras a Alipay y WeChat Pay, cuándo conviene llevar efectivo y cómo gestionar alquiler o coworking.</p>
-  <h3>Elección de ciudad base</h3>
-  <p>La mejor ciudad depende de tu presupuesto, del tipo de ritmo que quieras y de cuánto valores la conectividad internacional. Shanghái, Chengdu, Hangzhou y Sanya son algunos de los perfiles más interesantes.</p>
+  <p>Tres guías profundas cubren los temas que más afectan la experiencia de un nómada en China.</p>
+  <h3>Visa y estancia legal</h3>
+  <p>
+    No existe una visa para nómadas, así que entender tus opciones es lo más importante que puedes
+    hacer antes de reservar un vuelo. Nuestra
+    <a href="/digital-nomads/visa/">guía de visas chinas para nómadas digitales</a> desglosa las visas de turista,
+    las visas de negocios, el tránsito sin visa, por qué la visa de trabajo no encaja con los
+    freelancers y cómo funcionan realmente las salidas del país para renovar estancia en 2026.
+  </p>
+  <h3>Pagos y banca diaria</h3>
+  <p>
+    El pago móvil no es opcional en China: es la forma en que compras casi todo. Nuestra
+    <a href="/digital-nomads/payment/">guía de pagos para extranjeros</a> cubre cómo vincular
+    tarjetas extranjeras a Alipay y WeChat Pay, cuándo todavía necesitas efectivo, los límites de
+    transacción y cómo manejan los nómadas el alquiler, las cuotas de coworking y el dinero
+    transfronterizo.
+  </p>
+  <h3>Mejores ciudades para establecerse</h3>
+  <p>
+    La ciudad adecuada depende de tu presupuesto, de tu tolerancia a la intensidad de las grandes
+    ciudades y de si necesitas acceso frecuente a la frontera. Consulta la
+    <a href="#cost">comparación de costo de vida</a> más abajo, y profundiza en guías individuales de ciudades para
+    <a href="/posts/shanghai-city-guide-for-foreigners/">Shanghai</a>,
+    <a href="/posts/chengdu-city-guide-for-foreigners/">Chengdu</a>,
+    <a href="/posts/hangzhou-city-guide-for-foreigners/">Hangzhou</a> y
+    <a href="/posts/sanya-city-guide-for-foreigners/">Sanya</a>.
+  </p>
 
   <h2 id="internet">Internet y entorno de trabajo remoto</h2>
-  <p>La red doméstica china es rápida, asequible y muy extendida. Fibra, 5G y WiFi público resuelven bien el uso local. El problema empieza cuando dependes de plataformas extranjeras bloqueadas o con acceso irregular.</p>
-  <p>Por eso conviene dejar lista una eSIM internacional o una solución fiable para tus herramientas antes de viajar. El primer día deberías probar correo, videollamadas, repositorios, sincronización de archivos y cualquier servicio crítico para tu trabajo.</p>
-  <p>En ciudades de primer nivel y de nuevo primer nivel hay bastante oferta de coworking. En destinos más pequeños, las cafeterías y espacios híbridos cubren parte de esa necesidad.</p>
+  <p>
+    La red nacional de China es rápida, barata y está en todas partes. La banda ancha por fibra
+    llega incluso a apartamentos modestos, el 5G cubre las ciudades y el transporte público y las
+    cafeterías ofrecen Wi-Fi fiable. Para trabajos que interactúan con servicios chinos nacionales,
+    rara vez tendrás que pensar en la conectividad.
+  </p>
+  <p>
+    La complicación es el acceso internacional. Como muchas plataformas occidentales están bloqueadas
+    en las conexiones nacionales, tu configuración importa. Predominan dos enfoques: elegir una eSIM
+    internacional que haga roaming en una red extranjera para que las apps bloqueadas carguen con
+    normalidad, o gestionar un acceso compatible a tus herramientas de trabajo antes de llegar. Sea
+    cual sea la opción que elijas, prueba tu conjunto esencial de herramientas, correo electrónico,
+    videollamadas, sincronización de archivos y repositorios de código, en tu primer día, no la
+    noche antes de una fecha límite.
+  </p>
+  <p>
+    En el aspecto físico, los espacios de coworking están bien establecidos en las ciudades de primer
+    nivel y de nuevo primer nivel, con pases diarios y membresías mensuales ampliamente disponibles.
+    En pueblos más pequeños como Dali, las cafeterías y un número creciente de espacios orientados a
+    nómadas cubren ese vacío. Si una infraestructura presencial fiable te importa, inclina tu
+    elección de ciudad hacia Shanghai, Shenzhen, Chengdu o Hangzhou.
+  </p>
 
-  <h2 id="cost">Coste de vida por ciudad</h2>
-  <p>Los presupuestos mensuales cambian mucho según el nivel de la ciudad e incluyen alquiler, comida, transporte local y datos.</p>
-  <table><thead><tr><th>Nivel</th><th>Ciudades</th><th>Presupuesto mensual (RMB)</th><th>Encaja mejor para</th></tr></thead><tbody><tr><td>Primer nivel</td><td>Shanghái, Shenzhen</td><td>12.000-18.000</td><td>Comodidad, inglés, coworking y conexiones internacionales</td></tr><tr><td>Nuevo primer nivel</td><td>Chengdu, Hangzhou</td><td>7.000-11.000</td><td>Buen equilibrio entre coste, servicios y calidad de vida</td></tr><tr><td>Pequeña / resort</td><td>Dali, Sanya</td><td>5.500-8.500</td><td>Coste menor, ritmo relajado y estilo de vida</td></tr></tbody></table>
+  <h2 id="cost">Costo de vida por ciudad</h2>
+  <p>
+    Los presupuestos mensuales para una persona varían mucho según el nivel de la ciudad. Estas
+    cifras cubren alquiler, comida, transporte local y datos para un estilo de vida cómodo.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Nivel</th>
+        <th>Ciudades</th>
+        <th>Presupuesto mensual (RMB)</th>
+        <th>Mejor para</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Primer nivel</td>
+        <td>Shanghai, Shenzhen</td>
+        <td>12,000-18,000</td>
+        <td>Comodidad, inglés, coworking, acceso a la frontera</td>
+      </tr>
+      <tr>
+        <td>Nuevo primer nivel</td>
+        <td>Chengdu, Hangzhou</td>
+        <td>7,000-11,000</td>
+        <td>Equilibrio entre costo, servicios y ritmo de vida</td>
+      </tr>
+      <tr>
+        <td>Más pequeñas / turísticas</td>
+        <td>Dali, Sanya</td>
+        <td>5,500-8,500</td>
+        <td>Bajo costo, estilo de vida, comunidad</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <h2 id="english">Idioma y calidad de vida</h2>
-  <p>El inglés varía mucho según la ciudad y el barrio. En Shanghái o Shenzhen puedes funcionar parcialmente en inglés; en zonas menos internacionales, bastante menos. Aun así, la traducción por app y los mini-programas dentro de Alipay y WeChat resuelven transporte, compras, pedidos y muchas gestiones. La calidad de vida es alta por seguridad, transporte, comida abundante e infraestructura pública.</p>
+  <h2 id="english">Facilidad con el inglés y habitabilidad</h2>
+  <p>
+    La presencia del inglés sigue el nivel y el distrito de cada ciudad. En la antigua Concesión
+    Francesa de Shanghai o en los polos tecnológicos de Shenzhen, puedes vivir en gran medida en
+    inglés; en un suburbio de Chengdu o una aldea de Dali, mucho menos. El gran igualador es la
+    tecnología: las apps de traducción en tiempo real y los mini-programas dentro de Alipay y
+    WeChat permiten gestionar pedidos, transporte, citas y compras. Combinados con la señalización
+    bilingüe del metro y los servicios de transporte por app con soporte en inglés, un recién
+    llegado motivado puede desenvolverse desde el primer día. La habitabilidad es alta en general:
+    transporte barato, abundante entrega de comida, calles seguras y una excelente infraestructura
+    pública, siendo la calidad del aire y el frío invernal las principales variables regionales que
+    conviene sopesar al elegir dónde establecerse.
+  </p>
 
-  <h2 id="next">Siguiente paso: operar un negocio de IA desde China</h2>
-  <p>Algunos trabajadores remotos no solo hacen freelance: operan negocios unipersonales de IA mientras viven temporalmente en China. Si ese es tu caso, sigue con la <a href="/es/digital-nomads/ai-opc/">guía para dirigir un negocio unipersonal de IA en China</a>.</p>
+  <h2 id="next">Siguiente paso: gestionar un negocio de IA desde China</h2>
+  <p>
+    Algunos trabajadores remotos van un paso más allá del trabajo freelance y gestionan sus propias
+    operaciones ligeras de una sola persona, cada vez más impulsadas por IA, negocios
+    transfronterizos operados enteramente desde un portátil. Ese camino añade una capa de preguntas
+    de cumplimiento relacionadas con visas, impuestos y si necesitas una entidad local. Si esa es tu
+    dirección, nuestra
+    <a href="/digital-nomads/ai-opc/">guía para gestionar una empresa unipersonal con IA en China</a> cubre
+    los límites legales, la configuración de pagos transfronterizos y la infraestructura específica
+    para extranjeros que operan desde dentro de China.
+  </p>
 </GuideLayout>
