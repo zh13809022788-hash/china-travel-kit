@@ -1,46 +1,51 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 
-const title = 'China-Reise-Inhaltsreihen';
-const description = 'Entdecke China in fünf Themenreihen: Essen, Geschichte, modernes Leben, Natur und Kultur - jede davon soll ausländische Reisende inspirieren und informieren.';
+const title = 'Inhaltsreihe über China-Reisen';
+const description = 'Entdecke China in fünf thematischen Reihen: Essen, Geschichte, modernes Leben, Natur und Kultur — jeweils darauf ausgelegt, ausländische Reisende zu inspirieren und zu informieren.';
 
 const seriesList = [
   {
-    href: '/de/series/food-of-china/',
+    href: '/series/food-of-china/',
     title: 'Essen in China',
-    desc: 'Von Straßenständen bis zu Bankettsälen - eine kulinarische Reise für Ausländer durch acht große Küchen, regionale Frühstücke, Hotpot-Stile und Gerichte, für die sich der Weg ans andere Ende der Stadt lohnt.',
+    desc: 'Von Straßenständen bis zu Bankettsälen — die kulinarische Reise eines Ausländers durch die acht großen Küchen, regionale Frühstücke, Hotpot-Stile und die Gerichte, für die es sich lohnt, eine Stadt zu durchqueren.',
     icon: 'Essen & Trinken',
   },
   {
-    href: '/de/series/history-of-china/',
+    href: '/series/history-of-china/',
     title: 'Geschichte Chinas',
-    desc: 'Antike Stätten für Reisende verständlich erklärt - die Große Mauer, die Terrakotta-Armee, die Verbotene Stadt, die Seidenstraße und die Geschichten hinter dem, was du wirklich vor dir siehst.',
+    desc: 'Antike Stätten für Reisende entschlüsselt — die Große Mauer, die Terrakotta-Armee, die Verbotene Stadt, die Seidenstraße und die Geschichten hinter dem, was du dir tatsächlich ansiehst.',
     icon: 'Geschichte',
   },
   {
-    href: '/de/series/modern-china/',
+    href: '/series/modern-china/',
     title: 'Modernes China',
-    desc: 'Was Ausländer am meisten überrascht - bargeldlose Straßen, die schnellsten Züge der Welt, Megacity-Dimensionen, Super-Apps und die Alltagstechnologie, die das Leben in China heute prägt.',
+    desc: 'Was Ausländer am meisten überrascht — bargeldlose Straßen, die schnellsten Züge der Welt, das Ausmaß von Megastädten, Super-Apps und die Alltagstechnologie, die das Leben im heutigen China prägt.',
     icon: 'Modernes Leben',
   },
   {
-    href: '/de/series/nature-of-china/',
-    title: 'Natur in China',
-    desc: 'Avatar-Berge, märchenhafte Seen, Karstlandschaften und das tibetische Hochplateau - Chinas spektakulärste Naturorte mit praktischen Reiseführern für ausländische Besucher.',
+    href: '/series/nature-of-china/',
+    title: 'Natur Chinas',
+    desc: 'Avatar-Berge, märchenhafte Seen, Karstlandschaften und das tibetische Hochland — Chinas spektakulärste Naturstätten mit praktischen Reiseführern für ausländische Besucher.',
     icon: 'Natur',
   },
   {
-    href: '/de/series/culture-of-china/',
-    title: 'Kultur in China',
-    desc: 'Teezeremonie, Frühlingsfest, Gesicht und Guanxi, Kalligrafie, Kung Fu und Tierkreiszeichen - kulturelle Traditionen erklärt für Reisende, die über oberflächlichen Tourismus hinausgehen möchten.',
+    href: '/series/culture-of-china/',
+    title: 'Kultur Chinas',
+    desc: 'Teezeremonie, Frühlingsfest, Gesicht und Guanxi, Kalligrafie, Kung-Fu und der Tierkreis — kulturelle Traditionen erklärt für Reisende, die über oberflächlichen Tourismus hinausgehen möchten.',
     icon: 'Kultur',
   },
 ];
+import { getCategoryLabel } from '../../i18n/categories';
+const locale = 'en';
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Inhaltsreihen</p>
