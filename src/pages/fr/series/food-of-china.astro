@@ -10,11 +10,11 @@ const posts = (await getCollection('posts-fr'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'La cuisine de Chine — un voyage culinaire pour les étrangers';
-const description = 'Explorez la culture culinaire chinoise en tant que voyageur étranger : les huit grandes cuisines, le hotpot régional, la sécurité de la cuisine de rue, les dim sum, le petit-déjeuner, les options végétariennes et les plats qui méritent de traverser une ville.';
+const title = 'La cuisine de Chine — un voyage culinaire pour étrangers';
+const description = 'Explorez la culture culinaire chinoise en tant que voyageur étranger : les huit grandes cuisines, le hotpot régional, la sécurité de la street food, les dim sum, le petit-déjeuner, les options végétariennes et les plats qui méritent de traverser une ville.';
 
 const relatedTools = [
-  { href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Commander à manger sans chinois', desc: 'Configuration de Meituan et Ele.me pour les étrangers' },
+  { href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Commander à manger sans chinois', desc: 'Configuration de Meituan & Ele.me pour les étrangers' },
   { href: '/fr/posts/how-to-pay-in-china-tourist-guide/', title: 'Comment payer en Chine', desc: 'Alipay, WeChat Pay et espèces pour la restauration' },
   { href: '/fr/food/', title: 'Guides cuisine et restaurants', desc: 'Tous les articles liés à la nourriture sur ChinaTripBox' },
 ];
@@ -30,8 +30,6 @@ const otherSeries = [
   { href: '/fr/series/culture-of-china/', title: 'Culture de Chine' },
   { href: '/fr/series/modern-china/', title: 'Chine moderne' },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'fr';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
@@ -57,14 +55,14 @@ const locale = 'fr';
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
               <a href={`/fr/posts/${post.slug}/`} class="card block hover:no-underline">
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
               </a>
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Les articles de cette série sont en cours de préparation. Revenez bientôt.</p>
+          <p class="mt-6 text-gray-500">Les articles de cette série sont en préparation. Revenez bientôt.</p>
         )}
       </div>
 
@@ -108,5 +106,3 @@ const locale = 'fr';
   </main>
   <Footer />
 </BaseLayout>
-
----
