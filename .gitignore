@@ -56,5 +56,3 @@ ssh_key.txt
 # Lockfiles (keep if you prefer a package manager)
 # package-lock.json
 # pnpm-lock.yaml
-# Paid PDF guides (not committed to GitHub to prevent free downloads)
-public/guides/
