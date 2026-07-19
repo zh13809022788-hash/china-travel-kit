@@ -1,19 +1,12 @@
 ---
-// Email newsletter signup form.
-// Sends subscriber email via mailto; replace with Mailchimp/Formspree later.
-
-const MAILCHIMP_URL = '';
-const FORMSPREE_URL = '';
-
-const actionUrl = MAILCHIMP_URL || FORMSPREE_URL;
-const isMailchimp = !!MAILCHIMP_URL;
-const isFormspree = !!FORMSPREE_URL;
-const isMailto = !MAILCHIMP_URL && !FORMSPREE_URL;
+// Email newsletter signup form
+// Submits to Cloudflare Worker at /api/subscribe → stores in KV
+// Shows inline success/error feedback, no page reload
 
 const { locale = 'en' } = Astro.props;
 const normalizedLocale = (locale as string).toLowerCase();
 
-const UI = {
+const UI: Record<string, Record<string, string>> = {
   title: {
     en: 'China Travel Tips — Weekly Newsletter',
     'zh-tw': '中國旅遊秘訣 — 每週電子報',
@@ -44,7 +37,47 @@ const UI = {
     de: 'Abonnieren',
     es: 'Suscribirse',
   },
-  powered: {
+  subscribing: {
+    en: 'Subscribing...',
+    'zh-tw': '訂閱中...',
+    ja: '購読中...',
+    ko: '구독 중...',
+    ru: 'Подписка...',
+    fr: 'Abonnement...',
+    de: 'Abonniere...',
+    es: 'Suscribiendo...',
+  },
+  success: {
+    en: 'You\'re subscribed! Check your inbox for a confirmation.',
+    'zh-tw': '訂閱成功！請查看收件箱確認。',
+    ja: '購読完了！確認メールをお送りしました。',
+    ko: '구독 완료! 확인 이메일을 확인하세요.',
+    ru: 'Вы подписаны! Проверьте почту для подтверждения.',
+    fr: 'Abonné ! Vérifiez votre boîte de réception.',
+    de: 'Angemeldet! Prüfen Sie Ihren Posteingang.',
+    es: 'Suscrito! Revise su bandeja de entrada.',
+  },
+  already: {
+    en: 'You\'re already subscribed.',
+    'zh-tw': '您已訂閱。',
+    ja: '既に購読済みです。',
+    ko: '이미 구독 중입니다.',
+    ru: 'Вы уже подписаны.',
+    fr: 'Déjà abonné.',
+    de: 'Bereits angemeldet.',
+    es: 'Ya está suscrito.',
+  },
+  error: {
+    en: 'Something went wrong. Please try again.',
+    'zh-tw': '發生錯誤，請再試一次。',
+    ja: 'エラーが発生しました。もう一度お試しください。',
+    ko: '오류가 발생했습니다. 다시 시도해 주세요.',
+    ru: 'Произошла ошибка. Попробуйте снова.',
+    fr: 'Une erreur est survenue. Réessayez.',
+    de: 'Fehler aufgetreten. Bitte erneut versuchen.',
+    es: 'Error. Inténtelo de nuevo.',
+  },
+  free: {
     en: 'Free, unsubscribe anytime',
     'zh-tw': '免費，隨時可取消訂閱',
     ja: '無料、いつでも購読解除可能',
@@ -56,9 +89,9 @@ const UI = {
   },
 };
 
-const t = (key: string) => UI[key]?.[normalizedLocale] || UI[key]?.['en'] || '';
+const t = (key: string) => UI[key]?.[normalizedLocale] || UI[key]?.en || '';
 
-const PLACEHOLDERS: Record<string, string> = {
+const placeholders: Record<string, string> = {
   en: 'your@email.com',
   'zh-tw': 'your@email.com',
   ja: 'your@email.com',
@@ -68,49 +101,99 @@ const PLACEHOLDERS: Record<string, string> = {
   de: 'ihre@email.com',
   es: 'tu@email.com',
 };
-
-const POWERED_BY: Record<string, string> = {
-  en: 'Powered by Formspree',
-  'zh-tw': '由 Formspree 支援',
-  ja: 'Formspree 提供',
-  ko: 'Formspree 제공',
-  ru: 'На платформе Formspree',
-  fr: 'Propulsé par Formspree',
-  de: 'Bereitgestellt von Formspree',
-  es: 'Con tecnología de Formspree',
-};
+const placeholder = placeholders[normalizedLocale] || 'your@email.com';
 ---
 
-<div class="rounded-xl border border-brand-100 bg-brand-50 p-6">
+<div class="rounded-xl border border-brand-100 bg-brand-50 p-6" data-newsletter-form>
   <div class="max-w-lg">
     <h3 class="text-lg font-bold text-gray-950">{t('title')}</h3>
-    <p class="mt-1.5 text-sm leading-6 text-gray-600">
-      {t('desc')}
-    </p>
-    <form
-      action={isMailto ? `mailto:zh13809022788@gmail.com?subject=${encodeURIComponent('ChinaTripBox Newsletter Subscription')}` : actionUrl}
-      method={isMailto ? 'get' : 'post'}
-      target="_blank"
-      class="mt-4 flex flex-col gap-3 sm:flex-row"
-    >
+    <p class="mt-1.5 text-sm leading-6 text-gray-600">{t('desc')}</p>
+
+    <form class="mt-4 flex flex-col gap-3 sm:flex-row" data-newsletter-form-el>
       <input
         type="email"
-        name="body"
-        placeholder="your@email.com"
+        name="email"
+        placeholder={placeholder}
         required
+        autocomplete="email"
         class="min-w-0 flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-100"
       />
-      {isMailchimp && <input type="hidden" name="u" value="" />}
-      {isMailchimp && <input type="hidden" name="id" value="" />}
       <button
         type="submit"
-        class="shrink-0 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+        class="shrink-0 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-50"
+        data-newsletter-btn
       >
         {t('subscribe')}
       </button>
     </form>
-    <p class="mt-2 text-xs text-gray-500">
-      {isMailchimp ? 'Powered by Mailchimp' : isFormspree ? 'Powered by Formspree' : `Sent to zh13809022788@gmail.com`} &middot; {t('powered')}
+
+    <p class="mt-2 min-h-[20px] text-xs text-gray-500" data-newsletter-msg>
+      {t('free')}
     </p>
   </div>
 </div>
+
+<script>
+  function initNewsletter() {
+    const containers = document.querySelectorAll('[data-newsletter-form]');
+    containers.forEach(function(container) {
+      const form = container.querySelector('[data-newsletter-form-el]') as HTMLFormElement | null;
+      const btn = container.querySelector('[data-newsletter-btn]') as HTMLButtonElement | null;
+      const msg = container.querySelector('[data-newsletter-msg]') as HTMLElement | null;
+      const input = container.querySelector('input[name="email"]') as HTMLInputElement | null;
+
+      if (!form || !btn || !msg || !input) return;
+
+      let submitted = false;
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        if (submitted) return;
+
+        const email = input.value.trim();
+        if (!email) return;
+
+        submitted = true;
+        btn.disabled = true;
+        btn.textContent = '{t("subscribing")}';
+        msg.textContent = '';
+
+        try {
+          const res = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email }),
+          });
+
+          const data = await res.json();
+
+          if (data.message === 'subscribed') {
+            msg.textContent = '{t("success")}';
+            msg.className = 'mt-2 text-xs text-green-600 font-medium';
+            form.style.display = 'none';
+          } else if (data.message === 'already_subscribed') {
+            msg.textContent = '{t("already")}';
+            msg.className = 'mt-2 text-xs text-amber-600 font-medium';
+            form.style.display = 'none';
+          } else {
+            msg.textContent = data.error || '{t("error")}';
+            msg.className = 'mt-2 text-xs text-red-600';
+            submitted = false;
+            btn.disabled = false;
+            btn.textContent = '{t("subscribe")}';
+          }
+        } catch {
+          msg.textContent = '{t("error")}';
+          msg.className = 'mt-2 text-xs text-red-600';
+          submitted = false;
+          btn.disabled = false;
+          btn.textContent = '{t("subscribe")}';
+        }
+      });
+    });
+  }
+
+  // Run on load and after Astro view transitions
+  initNewsletter();
+  document.addEventListener('astro:after-swap', initNewsletter);
+</script>

@@ -11,9 +11,13 @@
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
-import { resolve, basename } from 'node:path';
+import { resolve, basename, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const PROJECT_ROOT = resolve(import.meta.dirname, '..');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const PROJECT_ROOT = resolve(__dirname, '..');
 
 // Language → content directory mapping
 const LANG_DIRS = {
