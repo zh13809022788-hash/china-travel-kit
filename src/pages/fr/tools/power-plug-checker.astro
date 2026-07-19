@@ -1,38 +1,166 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'Vérificateur de prises et de tension pour la Chine';
+const title = 'Vérificateur de prise électrique et de tension pour la Chine';
 const description =
-  'Vérifiez si vous avez besoin d’un adaptateur de prise ou d’un convertisseur de tension pour la Chine selon votre pays de départ.';
----
+  'Découvrez si vous avez besoin d’un adaptateur de prise ou d’un convertisseur de tension pour la Chine en fonction de votre pays d’origine. La Chine utilise du 220V et les types de prises A, C et I.';
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+const countries = [
+  'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
+  'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
+  'Singapore', 'India', 'Brazil', 'New Zealand', 'Switzerland',
+  'South Africa', 'United Arab Emirates', 'Other',
+];
+---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Outil</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Vérificateur de prises et de tension</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Vérificateur de prise électrique et de tension</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
+
     <AdSlot format="banner" />
-    <div class="mt-6 rounded-lg border border-gray-200 bg-gray-50 p-5">
-      <p class="text-sm leading-6 text-gray-600">
-        La Chine fonctionne en 220 V / 50 Hz et utilise généralement des prises de type A, C et I.
-        Vérifiez toujours l’étiquette de votre chargeur : s’il indique « 100-240V », un simple
-        adaptateur suffit la plupart du temps.
-      </p>
+
+    <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
+      <label class="flex flex-col text-sm sm:max-w-sm">
+        <span class="mb-1 font-medium text-gray-700">Vous voyagez depuis</span>
+        <select id="country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {countries.map((c) => <option value={c}>{c}</option>)}
+        </select>
+      </label>
+      <button id="check-btn" class="btn-primary mt-4 w-full sm:w-auto">Vérifier ce dont j’ai besoin</button>
     </div>
-    <AffiliateCta
-      title="Prévoir le bon adaptateur"
-      description="Un adaptateur universel compact suffit dans la plupart des cas pour la Chine."
-      buttonText="Voir un adaptateur recommandé"
-      placeholder={AFFILIATE_LINKS.transport}
-    />
+
+    <!-- Reference: China's own standard -->
+    <div class="mt-6 grid gap-4 sm:grid-cols-3">
+      <div class="card"><dt class="text-sm text-gray-500">Tension</dt><dd class="text-2xl font-bold text-gray-900">220 V</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">Fréquence</dt><dd class="text-2xl font-bold text-gray-900">50 Hz</dd></div>
+      <div class="card"><dt class="text-sm text-gray-500">Types de prises</dt><dd class="text-2xl font-bold text-gray-900">A · C · I</dd></div>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="mt-6 hidden">
+      <div class="card" id="result-card"></div>
+
+      <AffiliateCta
+        title="Obtenez un adaptateur universel pour la Chine"
+        description="Un adaptateur de voyage compact tout-en-un qui s’adapte aux prises chinoises et recharge plusieurs appareils à la fois."
+        buttonText="Voir l’adaptateur recommandé"
+        placeholder={AFFILIATE_LINKS.transport}
+      />
+    </div>
   </main>
   <Footer />
 </BaseLayout>
+
+<script>
+  // Each country's domestic voltage and the plug types it uses.
+  const data: Record<string, { volts: number; plugs: string[] }> = {
+    'United States': { volts: 120, plugs: ['A', 'B'] },
+    'Canada': { volts: 120, plugs: ['A', 'B'] },
+    'Japan': { volts: 100, plugs: ['A', 'B'] },
+    'Brazil': { volts: 127, plugs: ['C', 'N'] },
+    'United Kingdom': { volts: 230, plugs: ['G'] },
+    'Australia': { volts: 230, plugs: ['I'] },
+    'New Zealand': { volts: 230, plugs: ['I'] },
+    'Germany': { volts: 230, plugs: ['C', 'F'] },
+    'France': { volts: 230, plugs: ['C', 'E'] },
+    'Italy': { volts: 230, plugs: ['C', 'F', 'L'] },
+    'Spain': { volts: 230, plugs: ['C', 'F'] },
+    'Netherlands': { volts: 230, plugs: ['C', 'F'] },
+    'Switzerland': { volts: 230, plugs: ['C', 'J'] },
+    'South Korea': { volts: 220, plugs: ['C', 'F'] },
+    'Singapore': { volts: 230, plugs: ['G'] },
+    'India': { volts: 230, plugs: ['C', 'D', 'M'] },
+    'South Africa': { volts: 230, plugs: ['C', 'D', 'M', 'N'] },
+    'United Arab Emirates': { volts: 230, plugs: ['C', 'D', 'G'] },
+    'Other': { volts: 0, plugs: [] },
+  };
+
+  // China accepts plug types A, C, and I.
+  const CHINA_PLUGS = ['A', 'C', 'I'];
+  const CHINA_VOLTS = 220;
+
+  const btn = document.getElementById('check-btn');
+  const result = document.getElementById('result');
+  const card = document.getElementById('result-card');
+  const countryEl = document.getElementById('country') as HTMLSelectElement;
+
+  btn?.addEventListener('click', () => {
+    if (!card || !result) return;
+    const country = countryEl.value;
+    const info = data[country];
+
+    let heading: string, body: string, tone: 'good' | 'warn' | 'info';
+    const points: string[] = [];
+
+    if (!info || info.volts === 0) {
+      tone = 'info';
+      heading = 'Vérifiez votre prise et votre tension spécifiques';
+      body = 'Nous n’avons pas de données pour votre sélection. Regardez l’étiquette de votre chargeur — si elle indique "100–240V", vous avez seulement besoin d’un adaptateur de prise pour les prises chinoises de type A, C ou I.';
+      points.push('La Chine utilise du 220V, 50Hz avec les types de prises A, C et I.');
+      points.push('La plupart des chargeurs de téléphone et d’ordinateur portable sont bi-tension (100–240V) et nécessitent seulement un adaptateur de prise.');
+    } else {
+      const plugMatch = info.plugs.some((p) => CHINA_PLUGS.includes(p));
+      const voltMatch = Math.abs(info.volts - CHINA_VOLTS) <= 20;
+
+      if (plugMatch && voltMatch) {
+        tone = 'good';
+        heading = 'Vous n’avez probablement pas besoin d’adaptateur';
+        body = `${country} utilise des types de prises compatibles (${info.plugs.join(', ')}) et une tension similaire (${info.volts}V). Vos prises devraient entrer directement dans les prises chinoises.`;
+        points.push('Vérifiez quand même chaque prise — emportez un adaptateur au cas où une prise serait un peu serrée.');
+      } else if (!plugMatch && voltMatch) {
+        tone = 'warn';
+        heading = 'Vous avez besoin d’un adaptateur de prise (mais pas d’un convertisseur de tension)';
+        body = `${country} fonctionne avec une tension similaire (${info.volts}V), donc vos appareils ne risquent rien. Mais votre type de prise (${info.plugs.join(', ')}) n’est pas compatible avec les prises chinoises — emportez un adaptateur de prise.`;
+        points.push('Un adaptateur de prise simple et peu coûteux pour le type A/C/I est tout ce qu’il vous faut.');
+        points.push('Aucun convertisseur de tension encombrant n’est nécessaire.');
+      } else if (plugMatch && !voltMatch) {
+        tone = 'warn';
+        heading = 'Surveillez la tension de vos appareils à tension unique';
+        body = `Vos prises (${info.plugs.join(', ')}) peuvent convenir, mais la tension de ${country} (${info.volts}V) est différente des 220V de la Chine.`;
+        points.push('Les téléphones, ordinateurs portables et appareils photo indiquant 100–240V fonctionnent partout sans problème.');
+        points.push('Les appareils à tension unique (certains sèche-cheveux, lisseurs) nécessitent un convertisseur de tension ou doivent rester à la maison.');
+      } else {
+        tone = 'warn';
+        heading = 'Vous avez besoin d’un adaptateur de prise — et vous devez vérifier la tension';
+        body = `${country} utilise des prises différentes (${info.plugs.join(', ')}) et une tension différente (${info.volts}V) des 220V de la Chine. Emportez un adaptateur de prise pour le type A/C/I.`;
+        points.push('Les chargeurs bi-tension (100–240V) ont seulement besoin de l’adaptateur de prise.');
+        points.push('Les appareils à tension unique et forte puissance nécessitent aussi un convertisseur de tension — ou achetez plutôt un équivalent sur place.');
+      }
+    }
+
+    const toneStyles = {
+      good: 'border-green-200 bg-green-50',
+      warn: 'border-amber-200 bg-amber-50',
+      info: 'border-blue-200 bg-blue-50',
+    } as const;
+    const toneBadge = {
+      good: 'bg-green-600 text-white',
+      warn: 'bg-amber-500 text-white',
+      info: 'bg-blue-600 text-white',
+    } as const;
+    const toneLabel = { good: 'Aucun adaptateur nécessaire', warn: 'Adaptateur nécessaire', info: 'Vérifiez votre chargeur' } as const;
+
+    card.className = `card border ${toneStyles[tone]}`;
+    card.innerHTML = `
+      <span class="inline-block rounded-full px-3 py-0.5 text-xs font-semibold ${toneBadge[tone]}">${toneLabel[tone]}</span>
+      <h2 class="mt-3 text-xl font-bold text-gray-900">${heading}</h2>
+      <p class="mt-2 text-gray-700">${body}</p>
+      <ul class="mt-4 list-disc space-y-1.5 pl-5 text-sm text-gray-600">
+        ${points.map((p) => `<li>${p}</li>`).join('')}
+      </ul>`;
+    result.classList.remove('hidden');
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
