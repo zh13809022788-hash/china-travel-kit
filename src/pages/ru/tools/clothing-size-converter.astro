@@ -1,18 +1,20 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'Конвертер размеров одежды и обуви в Китае';
+const title = 'Конвертер размеров одежды и обуви для Китая';
 const description =
-  'Переводите размеры одежды и обуви из систем US, UK и EU в китайские размеры, чтобы уверенно делать покупки в Китае. Включает женскую и мужскую одежду, а также обувь.';
+  'Конвертируйте размеры одежды и обуви US, UK и EU в китайские размеры, чтобы уверенно делать покупки в Китае. Включает мужскую и женскую одежду и обувь.';
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Инструмент</span>
@@ -34,9 +36,9 @@ const description =
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
             <th class="py-3 pr-4 font-semibold">Китай</th>
-            <th class="py-3 pr-4 font-semibold">США</th>
-            <th class="py-3 pr-4 font-semibold">Великобритания</th>
-            <th class="py-3 pr-4 font-semibold">Европа</th>
+            <th class="py-3 pr-4 font-semibold">US</th>
+            <th class="py-3 pr-4 font-semibold">UK</th>
+            <th class="py-3 pr-4 font-semibold">EU</th>
           </tr>
         </thead>
         <tbody id="size-rows"></tbody>
@@ -44,15 +46,14 @@ const description =
     </div>
 
     <p class="mt-4 text-xs text-gray-400">
-      Размеры различаются в зависимости от бренда и посадки. Китайская одежда часто маломерит по сравнению
-      с западными аналогами — если сомневаетесь, выбирайте на размер больше или примеряйте перед покупкой.
-      Эти таблицы даны только для общего ориентира.
+      Размеры различаются в зависимости от бренда и посадки. Китайская одежда часто маломерит по сравнению с западными аналогами —
+      если сомневаетесь, берите на размер больше или примерьте перед покупкой. Это общие справочные таблицы.
     </p>
 
     <AffiliateCta
-      title="Подготовьтесь к покупкам в поездке"
-      description="Сначала настройте оплату и связь, чтобы без проблем покупать в любом магазине или приложении в Китае."
-      buttonText="Посмотреть полезное для поездки"
+      title="Покупайте с умом во время поездки"
+      description="Сначала разберитесь с платежами и связью, чтобы без проблем покупать в любом магазине или приложении в Китае."
+      buttonText="Смотреть товары для поездки"
       placeholder={AFFILIATE_LINKS.transport}
     />
   </main>
@@ -60,8 +61,8 @@ const description =
 </BaseLayout>
 
 <script>
-  // Reference conversion charts. China clothing uses height/bust cm labels,
-  // commonly simplified to numeric sizes; shoes use EU-based cm sizing.
+  // Справочные таблицы конвертации. Китайская одежда использует маркировку
+  // по росту/обхвату груди в см, которую часто упрощают до числовых размеров; обувь использует см-размеры на основе EU.
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
     'women-clothing': [
       { cn: '155/80A (XS)', us: '0–2', uk: '4–6', eu: '32–34' },
