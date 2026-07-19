@@ -1,11 +1,11 @@
-﻿---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 
-const title = 'ChinaTripBox Redaktionsteam';
+const title = 'Redaktionsteam von ChinaTripBox';
 const description =
-  'Über das Redaktionsteam von ChinaTripBox, wie wir praktische China-Reiseführer recherchieren und wie Leser Korrekturen einreichen können.';
+  'Über das Redaktionsteam von ChinaTripBox, wie wir praktische Reiseführer für China recherchieren und wie Leser Korrekturen anfordern können.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -19,17 +19,19 @@ const jsonLd = {
     url: new URL('/', Astro.site).toString(),
   },
   knowsAbout: [
-    'China-Reiseplanung',
-    'mobiles Bezahlen in China',
+    'Reiseplanung für China',
+    'mobile Zahlungen in China',
     'China eSIM und Internetzugang',
     'Hochgeschwindigkeitszüge in China',
-    'Reiselogistik für ausländische Besucher in China',
+    'Logistik für ausländische Besucher in China',
   ],
 };
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
       <p class="section-kicker">Autor</p>
@@ -38,32 +40,30 @@ const jsonLd = {
 
       <h2>Redaktioneller Schwerpunkt</h2>
       <p>
-        Das Redaktionsteam von ChinaTripBox erstellt praktische Leitfäden für ausländische Besucher
-        in China, mit Schwerpunkt auf Zahlungseinrichtung, eSIM und Internetzugang,
-        Hochgeschwindigkeitszügen, Fahrdienst-Apps, Flughafentransfers, Stadtplanung,
-        Essensbestellungen und typischen Problemen bei der ersten Reise.
+        Das Redaktionsteam von ChinaTripBox verfasst praktische Leitfäden für ausländische Besucher in China, mit
+        einem Schwerpunkt auf der Einrichtung von Zahlungsmethoden, eSIM und Internetzugang, Hochgeschwindigkeitszügen, Fahrdiensten, Flughafentransfers,
+        Stadtplanung, Essensbestellungen und häufigen Problemen auf der ersten Reise.
       </p>
 
       <h2>Wie wir Leitfäden erstellen</h2>
       <p>
-        Wir kombinieren offizielle Quellen, Anbieterdokumentationen, Hilfematerialien von Apps,
-        Leserfragen, Reiseberichte und, wo möglich, eigene Praxistests. Bei schnell wechselnden
-        Themen wie visumfreier Einreise, Zahlungslimits, App-Verfügbarkeit und Verkehrsregeln
-        betrachten wir offizielle Regierungs- oder Anbieterseiten als maßgebliche Quelle.
+        Wir kombinieren offizielle Quellen, Dokumentation von Anbietern, Hilfematerialien von Apps, Fragen von Lesern,
+        Reiseberichte und praktische Überprüfungen, wo dies möglich ist. Bei sich schnell ändernden Themen wie
+        visumfreier Einreise, Zahlungslimits, App-Verfügbarkeit und Verkehrsregeln betrachten wir offizielle
+        Regierungs- oder Anbieterseiten als maßgebliche Quelle.
       </p>
 
       <h2>Korrekturen</h2>
       <p>
-        Die Reiselogistik in China ändert sich schnell. Wenn Sie einen veralteten Schritt, eine
-        geänderte Richtlinie, einen defekten Link oder einen fehlenden Hinweis finden, senden Sie
-        uns bitte die Seiten-URL über unsere <a href="/de/contact/">Kontaktseite</a>. Wir prüfen
-        Korrekturen und aktualisieren betroffene Leitfäden, wenn die Nachweise eindeutig sind.
+        Die Reiselogistik in China ändert sich schnell. Wenn Sie einen veralteten Schritt, eine geänderte Richtlinie, einen defekten
+        Link oder einen fehlenden Hinweis finden, senden Sie bitte die URL der Seite über unsere <a href="/contact/">Kontaktseite</a>.
+        Wir prüfen Korrekturen und aktualisieren betroffene Leitfäden, wenn die Belege eindeutig sind.
       </p>
 
       <h2>Redaktionsrichtlinie</h2>
       <p>
-        Lesen Sie unsere <a href="/de/editorial-policy/">Redaktionsrichtlinie</a> für Details zu
-        Recherche, Aktualisierungen, Affiliate-Offenlegung, Unabhängigkeit und Einschränkungen.
+        Lesen Sie unsere <a href="/editorial-policy/">Redaktionsrichtlinie</a> für Einzelheiten zu Recherche,
+        Aktualisierungen, Affiliate-Offenlegung, Unabhängigkeit und Einschränkungen.
       </p>
 
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
