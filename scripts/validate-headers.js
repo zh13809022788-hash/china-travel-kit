@@ -39,7 +39,7 @@ for (let i = 0; i < lines.length; i++) {
   }
 
   // DETECT: Content-Type inside /* block
-  if (inStarBlock && /Content-Type/i.test(trimmed)) {
+  if (inStarBlock && /^\s*Content-Type\s*:/i.test(trimmed)) {
     errors.push(
       `Line ${i + 1}: Content-Type inside /* block \u2014 THIS BREAKS CSS/JS MIME types. Remove it.`
     );
@@ -48,7 +48,7 @@ for (let i = 0; i < lines.length; i++) {
   // DETECT: bare wildcard Content-Type rules like *.css / *.js
   if (/^\*\.[a-z]+\s*$/.test(trimmed) && !inStarBlock) {
     const nextLine = lines[i + 1] || "";
-    if (/Content-Type/i.test(nextLine)) {
+    if (/^\s*Content-Type\s*:/i.test(nextLine)) {
       errors.push(
         `Line ${i + 1}: Bare wildcard rule "${trimmed}" \u2014 will match root / incorrectly. Use /assets/*.css instead.`
       );
