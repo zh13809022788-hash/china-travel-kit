@@ -1,13 +1,70 @@
 # Cloudflare Pages _headers - Global security and cache headers
+#
+# NOTE: Do NOT set `Content-Type: text/html` at `/*` — Cloudflare Pages
+# already serves each static asset with the correct MIME type by extension.
+# Forcing `text/html` on everything pollutes .css/.js responses and causes
+# Chrome/Edge strict-MIME checking to reject every stylesheet and module
+# script, which collapses the whole site's layout. (regression fixed 2026-07-20)
+#
+# ALSO NOTE: Cloudflare Pages does NOT auto-detect MIME by file extension
+# when no Content-Type rule is set — without an explicit rule, every
+# static asset falls back to `text/html; charset=utf-8`. We MUST pin each
+# asset type explicitly.
+#
+# Pages _headers URL matching rule: a path may contain at most ONE splat
+# (`*`). So `/*.css` is INVALID (two stars). Use a named placeholder
+# (`:filename`) instead — they are not splats and the .css suffix stays
+# literal, so `/:filename.css` correctly matches `/foo.css`, `/a/b.css`.
 
 /*
-  Content-Type: text/html; charset=utf-8
   Cache-Control: public, max-age=3600, s-maxage=86400
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Explicitly pin HTML so we never depend on sniffing for the main document
+/*.html
+  Content-Type: text/html; charset=utf-8
+
+# Pin MIME types via named placeholders (works because :f is not a splat)
+/:f.css
+  Content-Type: text/css; charset=utf-8
+/f.js
+  Content-Type: application/javascript; charset=utf-8
+/f.mjs
+  Content-Type: application/javascript; charset=utf-8
+/f.json
+  Content-Type: application/json; charset=utf-8
+/f.svg
+  Content-Type: image/svg+xml; charset=utf-8
+/f.xml
+  Content-Type: application/xml; charset=utf-8
+/f.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+/f.webp
+  Content-Type: image/webp
+/f.png
+  Content-Type: image/png
+/f.jpg
+  Content-Type: image/jpeg
+/f.jpeg
+  Content-Type: image/jpeg
+/f.gif
+  Content-Type: image/gif
+/f.ico
+  Content-Type: image/x-icon
+/f.txt
+  Content-Type: text/plain; charset=utf-8
+/f.woff
+  Content-Type: font/woff
+/f.woff2
+  Content-Type: font/woff2
+
+# Cache Astro hashed assets with long TTL (fingerprinted URLs)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
 
 # Cache static assets longer
 /assets/*
@@ -18,8 +75,10 @@
 
 # Sitemap should be fresh
 /sitemap*.xml
+  Content-Type: application/xml
   Cache-Control: public, max-age=3600, s-maxage=3600
 
-# RSS feeds should be fresh  
+# RSS feeds should be fresh
 /rss.xml
+  Content-Type: application/rss+xml
   Cache-Control: public, max-age=3600, s-maxage=3600
