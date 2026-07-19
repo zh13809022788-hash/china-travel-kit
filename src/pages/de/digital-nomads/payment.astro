@@ -1,7 +1,7 @@
 ---
 import GuideLayout from '../../../layouts/GuideLayout.astro';
 
-const title = 'Wie Ausländer in China bezahlen (2026)';
+const title = 'So bezahlen Ausländer in China (2026)';
 const description =
   'Können Ausländer Alipay und WeChat Pay nutzen? Braucht man noch Bargeld? Dieser Leitfaden erklärt alle Zahlungsmethoden für Touristen, Expats und digitale Nomaden in China.';
 const url = '/digital-nomads/payment/';
@@ -10,7 +10,7 @@ const datePublished = '2026-07-09';
 const breadcrumbs = [
   { label: 'Startseite', href: '/' },
   { label: 'Digitale Nomaden', href: '/de/digital-nomads/' },
-  { label: 'Zahlungsleitfaden' },
+  { label: 'Zahlungsguide' },
 ];
 
 const toc = [
@@ -19,8 +19,8 @@ const toc = [
   { id: 'wechat', label: 'WeChat Pay für Ausländer' },
   { id: 'cash', label: 'Braucht man noch Bargeld?' },
   { id: 'cards', label: 'Ausländische Kreditkarten nutzen' },
-  { id: 'scenarios', label: 'Bezahlen je nach Situation' },
-  { id: 'nomad', label: 'Für Nomaden: Miete & grenzüberschreitende Zahlungen' },
+  { id: 'scenarios', label: 'Bezahlen nach Situation' },
+  { id: 'nomad', label: 'Für Nomaden: Miete & grenzüberschreitend' },
   { id: 'pitfalls', label: 'Häufige Fallstricke vermeiden' },
   { id: 'faq', label: 'FAQ' },
 ];
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: 'Können Ausländer Alipay und WeChat Pay in China nutzen?',
     answer:
-      'Ja. Beide Apps ermöglichen ausländischen Besuchern inzwischen die Registrierung mit einer ausländischen Telefonnummer und das Verknüpfen einer internationalen Visa-, Mastercard- oder American-Express-Karte. Bei der großen Mehrheit der Händler können Sie wie Einheimische per QR-Code bezahlen. Die Einrichtung dauert nur wenige Minuten und sollte idealerweise vor der Ankunft erledigt werden.',
+      'Ja. Beide Apps ermöglichen ausländischen Besuchern inzwischen die Registrierung mit einer ausländischen Telefonnummer und das Verknüpfen einer internationalen Visa-, Mastercard- oder American-Express-Karte. Bei der großen Mehrheit der Händler können Sie wie Einheimische per QR-Code bezahlen. Die Einrichtung dauert nur wenige Minuten und sollte am besten vor der Ankunft erledigt werden.',
   },
   {
     question: 'Brauche ich ein chinesisches Bankkonto, um mobil zu bezahlen?',
@@ -39,12 +39,12 @@ const faqs = [
   {
     question: 'Gibt es Ausgabenlimits für Ausländer bei Alipay und WeChat Pay?',
     answer:
-      'Ja. Konten mit ausländischen Karten haben Limits pro Transaktion und kumulative Obergrenzen. Kleine Alltagszahlungen unter etwa 200 RMB sind meist gebührenfrei, während größere oder häufige Zahlungen eine kleine Bearbeitungsgebühr verursachen können und jährlichen Obergrenzen unterliegen. Da sich Limits ändern, sollten Sie die App prüfen, bevor Sie sich bei einer großen Zahlung darauf verlassen.',
+      'Ja. Konten mit ausländischen Karten haben Limits pro Transaktion und kumulative Obergrenzen. Kleine Alltagszahlungen unter etwa 200 RMB sind meist gebührenfrei, während größere oder häufige Zahlungen eine kleine Bearbeitungsgebühr verursachen können und jährlichen Obergrenzen unterliegen. Limits ändern sich, prüfen Sie daher die App, bevor Sie sich bei einer großen Zahlung darauf verlassen.',
   },
   {
     question: 'Wird Bargeld in China noch akzeptiert?',
     answer:
-      'Ja, Bargeld bleibt gesetzliches Zahlungsmittel und Händler müssen es rechtlich akzeptieren. Viele sind darauf jedoch nicht vorbereitet und haben oft Probleme mit Wechselgeld. Tragen Sie ein paar hundert RMB in kleinen Scheinen für Taxis, ländliche Gebiete, kleine Händler und als Reserve bei App-Problemen bei sich, rechnen Sie aber damit, fast alles mobil zu bezahlen.',
+      'Ja, Bargeld bleibt gesetzliches Zahlungsmittel und Händler müssen es rechtlich akzeptieren. Viele sind darauf jedoch nicht vorbereitet und haben oft Probleme mit Wechselgeld. Tragen Sie ein paar hundert RMB in kleinen Scheinen für Taxis, ländliche Gebiete, kleine Händler und als Backup bei App-Problemen bei sich, rechnen Sie aber damit, fast alles mobil zu bezahlen.',
   },
   {
     question: 'Funktioniert meine ausländische Kreditkarte direkt in Geschäften?',
@@ -59,14 +59,14 @@ const faqs = [
   {
     question: 'Kann ich als Nomade in China Geld empfangen oder bezahlt werden?',
     answer:
-      'Für grenzüberschreitende Einnahmen sollten Sie weiterhin Ihre bestehende ausländische Bank und Zahlungsplattformen nutzen, statt das chinesische System zu verwenden, das auf inländische Überweisungen und Einwohner ausgelegt ist. Für lokale Kosten wie Miete können Sie Ihr Alipay- oder WeChat-Guthaben mit Ihrer ausländischen Karte aufladen oder eine Banküberweisung nutzen, falls Sie ein lokales Konto eröffnet haben.',
+      'Für grenzüberschreitende Einnahmen sollten Sie weiter Ihre bestehende ausländische Bank und Zahlungsplattformen nutzen, statt das chinesische System zu verwenden, das auf inländische Überweisungen und Einwohner ausgelegt ist. Für lokale Kosten wie Miete können Sie Ihr Alipay- oder WeChat-Guthaben mit Ihrer ausländischen Karte aufladen oder eine Banküberweisung nutzen, falls Sie ein lokales Konto eröffnet haben.',
   },
 ];
 
 const related = [
   {
     title: 'China-Visum für digitale Nomaden (2026)',
-    description: 'Alle legalen Aufenthaltswege: Touristenvisa, Geschäftsvisa, Transit und Visa-Runs.',
+    description: 'Alle legalen Aufenthaltswege: Touristenvisa, Geschäftsvisa, Transit und Grenzläufe.',
     href: '/de/digital-nomads/visa/',
   },
   {
@@ -95,11 +95,11 @@ const related = [
   coverAlt="Mobile QR-Code-Zahlung auf einem Smartphone in China"
  locale="de">
   <p>
-    Bezahlen funktioniert in China anders als fast überall sonst, und das überrascht viele beim ersten
+    Geld funktioniert in China anders als fast überall sonst, und das überrascht viele beim ersten
     Besuch. Die Bargeldwirtschaft ist in den Städten weitgehend verschwunden, ausländische
     Kreditkarten sind in den meisten Geschäften nutzlos, und trotzdem ist Bezahlen erstaunlich
     einfach, sobald alles eingerichtet ist: Ein einziger QR-Scan reicht für einen Straßensnack, ein
-    Ticket für den Hochgeschwindigkeitszug oder Ihre monatliche Coworking-Gebühr. Der entscheidende Punkt ist,
+    Hochgeschwindigkeitszugticket oder Ihre monatliche Coworking-Gebühr. Der entscheidende Punkt ist,
     dass fast alles über zwei Super-Apps läuft, Alipay und WeChat Pay, und beide stehen inzwischen
     auch Ausländern offen. Dieser Leitfaden zeigt Ihnen, wie Sie wie Einheimische bezahlen, und behandelt
     anschließend nomadenspezifische Fragen wie Miete und grenzüberschreitende Geldflüsse, die
@@ -136,7 +136,7 @@ const related = [
     als soziales und kommunikatives Werkzeug. Auch ausländische Karten lassen sich verknüpfen.
   </p>
   <ul>
-    <li><strong>Unterstützte Karten:</strong> Große internationale Visa- und Mastercard-Kreditkarten; die Unterstützung kann etwas eingeschränkter sein als bei Alipay.</li>
+    <li><strong>Unterstützte Karten:</strong> Große internationale Visa- und Mastercard-Kreditkarten; die Unterstützung kann etwas enger sein als bei Alipay.</li>
     <li><strong>Einrichtung:</strong> Installieren Sie WeChat, registrieren Sie sich und fügen Sie dann im Menü Ich → Dienste → Geldbörse → Karten eine Karte hinzu.</li>
     <li><strong>Alipay vs. WeChat Pay:</strong> Alipay bietet Ausländern meist die reibungslosere Kartenverknüpfung und ist für reine Zahlungen oft besser; WeChat Pay lohnt sich trotzdem, weil viele kleine Händler, Gruppenchats und Mini-Programme es voraussetzen. Richten Sie nach Möglichkeit beide ein.</li>
   </ul>
@@ -164,7 +164,7 @@ const related = [
     <li><strong>Unterschiede bei der Abdeckung:</strong> Visa und Mastercard haben dort, wo Kartenzahlung überhaupt möglich ist, die breiteste Terminalakzeptanz; American Express ist eingeschränkter; UnionPay ist der inländische Standard. Die praktische Lösung ist fast immer dieselbe: Karte in einer App verknüpfen und scannen.</li>
   </ul>
 
-  <h2 id="scenarios">Bezahlen je nach Situation</h2>
+  <h2 id="scenarios">Bezahlen nach Situation</h2>
   <p>So funktioniert Bezahlen in den Situationen, denen Sie am häufigsten begegnen:</p>
   <ul>
     <li><strong>Taxi &amp; Fahrdienst:</strong> DiDi belastet Ihre verknüpfte Karte automatisch; Straßentaxis akzeptieren oft QR-Zahlung, Bargeld dient als Reserve.</li>
@@ -175,14 +175,14 @@ const related = [
     <li><strong>Mobilfunk aufladen:</strong> Laden Sie eine lokale SIM direkt in Alipay oder WeChat in wenigen Sekunden auf.</li>
   </ul>
 
-  <h2 id="nomad">Für Nomaden: Miete, Coworking &amp; grenzüberschreitende Zahlungen</h2>
+  <h2 id="nomad">Für Nomaden: Miete, Coworking &amp; grenzüberschreitendes Geld</h2>
   <p>
-    Neben den täglichen Ausgaben haben Remote-Arbeiter, die länger bleiben, einige Geldfragen, die
+    Neben den täglichen Ausgaben haben länger bleibende Remote-Arbeiter einige Geldfragen, die
     Touristen nie betreffen.
   </p>
   <ul>
     <li><strong>Miete bezahlen:</strong> Serviced Apartments und Hotels akzeptieren meist mobile Zahlung oder Karte; private Vermieter möchten eventuell eine Banküberweisung, was mit lokalem Konto am einfachsten ist, oder ein aufgeladenes Alipay-Guthaben.</li>
-    <li><strong>Coworking-Gebühren:</strong> Coworking-Spaces rechnen monatlich über Alipay/WeChat oder Karte ab; bewahren Sie Belege auf, falls Sie sie für die Buchhaltung benötigen.</li>
+    <li><strong>Coworking-Gebühren:</strong> Coworking-Flächen rechnen monatlich über Alipay/WeChat oder Karte ab; bewahren Sie Belege auf, falls Sie sie für die Buchhaltung benötigen.</li>
     <li><strong>Grenzüberschreitende Einnahmen:</strong> Empfangen Sie Geld weiterhin über Ihre bestehende ausländische Bank und Plattformen; versuchen Sie nicht, ausländische Einnahmen durch das inländische chinesische System zu leiten.</li>
     <li><strong>Währungswechsel:</strong> Vergleichen Sie den Kurs Ihrer Hausbank mit Geldautomatenabhebungen und Kartenentgelten in der App; bei größeren Beträgen ist ein günstiges Mehrwährungskonto oft besser als Wechselstuben am Flughafen.</li>
   </ul>
@@ -191,8 +191,8 @@ const related = [
   <ul>
     <li><strong>QR-Code-Betrug:</strong> Scannen Sie nur den angezeigten Code des Händlers oder lassen Sie Ihren Code scannen; scannen Sie nie einen Code, den Ihnen ein Fremder gibt, oder einen Code, der über einen anderen geklebt wurde.</li>
     <li><strong>Transaktionslimits:</strong> Kennen Sie die Obergrenzen Ihrer ausländischen Karte vor einem größeren Kauf, damit die Zahlung an der Kasse nicht fehlschlägt.</li>
-    <li><strong>Wechselkanäle:</strong> Vermeiden Sie inoffizielle Geldwechsler; nutzen Sie Geldautomaten von Banken, offizielle Wechselstellen oder die in Ihrer App verknüpfte Karte.</li>
-    <li><strong>App-Ausfälle:</strong> Installieren Sie beide Apps und behalten Sie etwas Bargeld bei sich, damit eine abgelehnte Zahlung Sie nicht handlungsunfähig macht.</li>
+    <li><strong>Wechselkanäle:</strong> Vermeiden Sie inoffizielle Geldwechsler; nutzen Sie Bankautomaten, offizielle Wechselstellen oder die in Ihrer App verknüpfte Karte.</li>
+    <li><strong>App-Ausfälle:</strong> Installieren Sie beide Apps und behalten Sie etwas Bargeld bei sich, damit eine abgelehnte Zahlung Sie nicht festsetzt.</li>
   </ul>
 
   <h2 id="next">Weiter: Wo Sie sich niederlassen sollten</h2>
@@ -202,5 +202,3 @@ const related = [
     Lebenshaltungskosten zu vergleichen und Städteempfehlungen für Remote-Arbeit zu finden.
   </p>
 </GuideLayout>
-
----
