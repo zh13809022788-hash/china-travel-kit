@@ -1,10 +1,5 @@
 // Cloudflare Pages Function: Newsletter subscription handler
-// POST /api/subscribe → validate → store in KV → send welcome email via Gmail SMTP → JSON response
-
-import { connect } from 'cloudflare:connect';
-
-const GMAIL_USER = 'zh13809022788@gmail.com';
-const GMAIL_PASS = 'fhncstamtfwgchww';
+// POST /api/subscribe → validate → store in KV → send welcome email via Brevo API → JSON response
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -51,125 +46,58 @@ export async function onRequestPost(context) {
     lang: (request.headers.get('accept-language') || '').split(',')[0] || '',
   }));
 
-  // Send welcome email via Gmail SMTP
-  const emailResult = await sendGmail(email, subscribedAt);
+  // Send welcome email via Brevo API
+  const emailResult = await sendBrevo(email, subscribedAt, env);
 
   return json({ message: 'subscribed', email_status: emailResult });
 }
 
-async function sendGmail(to, subscribedAt) {
+async function sendBrevo(to, subscribedAt, env) {
   const date = new Date(subscribedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
   const name = to.split('@')[0];
   const subject = 'Welcome to ChinaTripBox';
 
-  const body = 'From: ChinaTripBox <' + GMAIL_USER + '>\r\n'
-    + 'To: ' + name + ' <' + to + '>\r\n'
-    + 'Subject: ' + subject + '\r\n'
-    + 'MIME-Version: 1.0\r\n'
-    + 'Content-Type: text/plain; charset="UTF-8"\r\n'
-    + '\r\n'
-    + 'Welcome to ChinaTripBox!\r\n'
-    + '\r\n'
-    + 'Hi ' + name + ',\r\n'
-    + '\r\n'
-    + "You're subscribed to the ChinaTripBox newsletter. Every week you'll get:\r\n"
-    + '- New city guides & travel tips\r\n'
-    + '- Policy changes for foreign visitors\r\n'
-    + '- Tool updates & seasonal advice\r\n'
-    + '\r\n'
-    + 'First tip: Set up Alipay before you fly.\r\n'
-    + 'https://www.chinatripbox.com/posts/alipay-foreign-credit-card-step-by-step/\r\n'
-    + '\r\n'
-    + 'Subscribed on ' + date + '.\r\n'
-    + 'Unsubscribe: https://www.chinatripbox.com/contact/\r\n';
+  const htmlContent = '<p>Welcome to ChinaTripBox!</p>'
+    + '<p>Hi ' + escapeHtml(name) + ',</p>'
+    + '<p>You\'re subscribed to the ChinaTripBox newsletter. Every week you\'ll get:</p>'
+    + '<ul>'
+    + '<li>New city guides & travel tips</li>'
+    + '<li>Policy changes for foreign visitors</li>'
+    + '<li>Tool updates & seasonal advice</li>'
+    + '</ul>'
+    + '<p>First tip: <a href="https://www.chinatripbox.com/posts/alipay-foreign-credit-card-step-by-step/">Set up Alipay before you fly</a>.</p>'
+    + '<p style="color:#888;font-size:12px">Subscribed on ' + escapeHtml(date) + '.<br>'
+    + '<a href="https://www.chinatripbox.com/contact/">Unsubscribe</a></p>';
 
   try {
-    const result = await smtpSend(to, subject, body);
-    return { ok: true, detail: result };
+    const resp = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'api-key': env.BREVO_KEY,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        sender: { name: 'ChinaTripBox', email: 'zh13809022788@gmail.com' },
+        to: [{ email: to, name: name }],
+        subject: subject,
+        htmlContent: htmlContent,
+      }),
+    });
+
+    if (!resp.ok) {
+      const errBody = await resp.text();
+      return { ok: false, error: 'Brevo API ' + resp.status + ': ' + errBody };
+    }
+
+    return { ok: true, detail: 'sent' };
   } catch (err) {
     return { ok: false, error: err.message };
   }
 }
 
-async function smtpSend(to, subject, body) {
-  const socket = await connect({
-    host: 'smtp.gmail.com',
-    port: 587,
-    tls: false, // STARTTLS
-  });
-
-  const reader = socket.readable.getReader();
-  const writer = socket.writable.getWriter();
-
-  async function read() {
-    const { value, done } = await reader.read();
-    return new TextDecoder().decode(value || new Uint8Array());
-  }
-  async function write(cmd) {
-    await writer.write(new TextEncoder().encode(cmd + '\r\n'));
-  }
-  async function expect(code) {
-    const resp = await read();
-    if (!resp.startsWith(String(code))) {
-      throw new Error('SMTP ' + code + ' expected, got: ' + resp.trim());
-    }
-    return resp;
-  }
-
-  await expect(220); // SMTP greeting
-  await write('EHLO chinatripbox.com');
-  await expect(250);
-  await write('STARTTLS');
-  await expect(220);
-
-  // Upgrade to TLS
-  const tlsSocket = await connect({
-    host: 'smtp.gmail.com',
-    port: 587,
-    tls: true,
-    allowHalfOpen: true,
-  });
-
-  // Re-authenticate after TLS upgrade
-  const tlsReader = tlsSocket.readable.getReader();
-  const tlsWriter = tlsSocket.writable.getWriter();
-
-  async function tlsRead() {
-    const { value, done } = await tlsReader.read();
-    return new TextDecoder().decode(value || new Uint8Array());
-  }
-  async function tlsWrite(cmd) {
-    await tlsWriter.write(new TextEncoder().encode(cmd + '\r\n'));
-  }
-  async function tlsExpect(code) {
-    const resp = await tlsRead();
-    if (!resp.startsWith(String(code))) {
-      throw new Error('SMTP TLS ' + code + ' expected, got: ' + resp.trim());
-    }
-    return resp;
-  }
-
-  await tlsExpect(220); // After STARTTLS upgrade
-  await tlsWrite('EHLO chinatripbox.com');
-  await tlsExpect(250);
-  await tlsWrite('AUTH LOGIN');
-  await tlsExpect(334);
-  await tlsWrite(btoa(GMAIL_USER));
-  await tlsExpect(334);
-  await tlsWrite(btoa(GMAIL_PASS));
-  await tlsExpect(235);
-  await tlsWrite('MAIL FROM:<' + GMAIL_USER + '>');
-  await tlsExpect(250);
-  await tlsWrite('RCPT TO:<' + to + '>');
-  await tlsExpect(250);
-  await tlsWrite('DATA');
-  await tlsExpect(354);
-  await tlsWrite(body);
-  await tlsWrite('.');
-  await tlsExpect(250);
-  await tlsWrite('QUIT');
-
-  return 'sent';
+function escapeHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 function json(data, status) {
