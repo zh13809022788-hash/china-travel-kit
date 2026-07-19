@@ -1,64 +1,129 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const title = 'ChinaTripBox 소개';
 const description =
-  'ChinaTripBox가 어떤 사이트인지, 누구를 위해 정보를 만들고 어떤 방식으로 중국 여행 준비를 돕는지 소개합니다.';
+  'ChinaTripBox는 해외 방문객을 위해 실용적인 중국 여행 가이드와 1-on-1 도움을 제공합니다. Tujia, Airbnb, Ctrip, Meituan, Alibaba 출신 팀이 만들었습니다.';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
-  <Header locale="ko" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">ChinaTripBox 소개</h1>
-      <p class="mt-4">
-        ChinaTripBox는 중국을 처음 방문하는 해외 여행자가 실제로 부딪히는 문제를 더 쉽게
-        해결할 수 있도록 돕는 실전형 여행 가이드입니다. 결제, eSIM, 교통, 앱 사용, 공항
-        도착 직후 준비 같은 주제를 중심으로, 복잡한 정보를 바로 써먹을 수 있게 정리합니다.
+
+      <!-- Hero -->
+      <div class="mb-10 text-center">
+        <img src="/images/logo-wordmark.png?v=2" alt="ChinaTripBox" class="mx-auto h-10 w-auto" />
+        <h1 class="mt-5 text-3xl font-bold text-gray-900">회사 소개</h1>
+        <p class="mx-auto mt-2 max-w-xl text-base leading-relaxed text-gray-600">
+          중국 여행 테크 업계 베테랑 팀이 만든 실용적인 중국 여행 리소스와 서비스.
+        </p>
+      </div>
+
+      <!-- What We Do -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">우리가 하는 일</h2>
+      <p class="mt-3">
+        ChinaTripBox는 결제, 인터넷 접속, 교통, 비자, 일상적인 이동 및 준비를 아우르는
+        무료이면서 실용적인 중국 여행 가이드와 도구를 제공하여, 해외 방문객이 중국 여행에서
+        마주하는 실제 문제를 해결할 수 있도록 돕습니다.
       </p>
       <p>
-        이 사이트는 막연한 여행 영감보다 "지금 무엇을 준비해야 하는지"에 집중합니다.
-        Alipay와 WeChat Pay 연결, DiDi 사용, 고속철도 예약, 주소 보여주기, 현금 예비금,
-        도시별 동선처럼 실제 여행 흐름에서 중요한 내용을 우선순위에 맞춰 안내합니다.
+        무료 가이드와 도구만으로 충분하지 않을 때는 1-on-1 사람 지원도 제공합니다.
+        여행 계획 수립, 결제 설정 문제 해결, 복잡한 비자 및 교통 관련 질문 등에서
+        실제 사람이 당신의 구체적인 상황에 맞춰 함께 검토하고 맞춤형 조언을 제공합니다.
       </p>
 
-      <h2>무엇을 다루나요?</h2>
+      <!-- Who We Are -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">우리는 누구인가</h2>
+      <p class="mt-3">
+        엄격한 편집 기준을 갖춘 전문 팀입니다. ChinaTripBox의 핵심 멤버들은
+        <strong>Tujia</strong>, <strong>Airbnb</strong>, <strong>Ctrip</strong>,
+        <strong>Meituan</strong>, <strong>Alibaba</strong> 출신으로, 공유 숙박,
+        OTA, 생활 서비스, 전자상거래 분야를 아우릅니다.
+      </p>
+
+      <!-- Team Card -->
+      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-brand-100 bg-brand-50 p-6 sm:flex-row">
+        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-brand-400">
+          <img src="/images/howie.jpg" alt="Howie" class="h-full w-full object-cover" />
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold text-brand-700">창립자 &mdash; Howie</p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            Howie는 중국 최대의 휴가용 임대 플랫폼인 <strong>Tujia (途家网)</strong>의
+            창립 팀 멤버였으며, 이 회사는 Sequoia Capital, Ctrip, HomeAway의 지원을 받아
+            4억 달러 이상을 투자받았습니다.
+          </p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            Tujia 외에도 우리 핵심 팀은 Airbnb China, Ctrip의 제품 및 운영,
+            Meituan의 호텔 및 여행 부문, Alibaba의 Fliggy에서 경력을 쌓았습니다.
+            우리는 함께 중국 여행 테크 생태계 전반에서 15년이 넘는 실무 경험을 보유하고 있으며,
+            결제와 교통부터 숙박과 현지 생활 서비스까지 폭넓게 다뤄 왔습니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Our Approach -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">우리의 접근 방식</h2>
+      <p class="mt-3">
+        우리는 무료 리소스와 유료 서비스가 서로를 보완하는, 슬림한 AI 지원 콘텐츠 및 서비스 스튜디오로 운영됩니다.
+      </p>
+      <ol class="mt-4 list-inside list-decimal space-y-3 text-gray-700">
+        <li>
+          <strong>무료 리소스로 전문성을 보여줍니다.</strong> 가이드, 도구, 체커를 통해
+          방문객은 일반적인 문제를 스스로 해결할 수 있고, 동시에 우리 작업의 품질도 확인할 수 있습니다.
+        </li>
+        <li>
+          <strong>AI가 확장성과 최신성을 돕습니다.</strong> 우리는 AI를 사용해 규정 변화를 추적하고,
+          콘텐츠를 최적화하며, 정보를 거의 실시간에 가깝게 정확하게 유지합니다.
+        </li>
+        <li>
+          <strong>복잡한 사례에는 1-on-1 사람 서비스.</strong> 셀프서비스만으로 충분하지 않을 때는
+          실제 사람이 당신의 구체적인 상황에 맞춘 조언을 제공합니다.
+        </li>
+      </ol>
+
+      <!-- What We Cover -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">우리가 다루는 내용</h2>
+      <p class="mt-3">
+        <strong>무료 리소스</strong> &mdash; Payment Checker, Visa-Free Checker, Trip Planner,
+        App Availability Checker, 그리고 단계별 가이드.
+      </p>
       <p>
-        ChinaTripBox는 중국 여행에서 반복해서 나오는 실용 주제를 다룹니다. 출발 전 준비,
-        입국과 환승, 모바일 결제, 인터넷 연결, 도시 간 이동, 음식 주문, 첫날 체크리스트,
-        장기 체류 준비까지 한 흐름으로 연결해 설명합니다.
+        <strong>유료 서비스</strong> &mdash; 1-on-1 여행 계획 검토, 결제 설정 지원,
+        비자 및 교통 컨설팅, 맞춤형 여행 계획 수립.
       </p>
 
-      <h2>핵심 주제</h2>
-      <ul>
-        <li><strong>결제:</strong> Alipay, WeChat Pay, 해외 카드 연결, 수수료, 현금 예비금</li>
-        <li><strong>eSIM 및 인터넷:</strong> 여행용 eSIM 비교, 앱 접속성, 데이터 준비</li>
-        <li><strong>교통:</strong> DiDi, 지하철, 공항 이동, 고속철도, 역 이용 팁</li>
-        <li><strong>여행 필수 정보:</strong> 비자·무비자 확인, 짐 준비, 주소 카드, 필수 표현</li>
-      </ul>
+      <!-- Why Trust Us -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">왜 우리를 신뢰할 수 있나요</h2>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">전문 팀</p>
+          <p class="mt-1 text-sm text-gray-600">핵심 멤버들은 Tujia, Airbnb, Ctrip, Meituan, Alibaba 출신입니다.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">엄격한 검토</p>
+          <p class="mt-1 text-sm text-gray-600">AI는 효율성을 높여주지만, 모든 가이드와 계획은 업계 전문가가 검토합니다.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">맞춤형 서비스</p>
+          <p class="mt-1 text-sm text-gray-600">15년 이상의 최전선 중국 여행 테크 경험을 바탕으로, 맞춤형 해결책을 제공합니다.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">항상 최신 상태</p>
+          <p class="mt-1 text-sm text-gray-600">규정은 빠르게 바뀝니다. 우리의 AI 워크플로는 콘텐츠를 거의 실시간에 가깝게 추적하고 업데이트합니다.</p>
+        </div>
+      </div>
 
-      <h2>콘텐츠는 어떻게 만드나요?</h2>
-      <p>
-        ChinaTripBox는 여행자에게 바로 도움이 되는 정보를 우선합니다. 공식 안내 페이지,
-        서비스 제공업체 문서, 실제 사용 흐름, 자주 생기는 실수 사례를 함께 검토해
-        가이드를 작성합니다. 더 자세한 기준은 <a href="/ko/editorial-policy/">편집 정책</a>과
-        <a href="/authors/chinatripbox-editorial-team/">에디토리얼 팀 소개</a>에서 확인할 수 있습니다.
+      <!-- Contact -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">문의하기</h2>
+      <p class="mt-3">
+        질문, 수정 제안, 또는 도움이 필요한 여행 상황이 있으신가요?
+        <a href="/contact/" class="text-brand-600 hover:underline">문의해 주세요</a>. 답변드리겠습니다.
       </p>
 
-      <h2>누구에게 적합한가요?</h2>
-      <p>
-        중국 여행이 처음인 사람, 앱과 결제 준비가 낯선 사람, 공항 도착 후 바로 이동과
-        통신을 해결해야 하는 사람에게 특히 유용합니다. 짧은 여행뿐 아니라 장기 체류나
-        디지털 노마드 준비에도 참고할 수 있도록 실전 중심으로 구성합니다.
-      </p>
-
-      <h2>문의</h2>
-      <p>
-        오류 제보, 제휴 문의, 콘텐츠 관련 의견은 <a href="/ko/contact/">문의 페이지</a>를
-        이용해 주세요.
-      </p>
     </article>
   </main>
   <Footer />
