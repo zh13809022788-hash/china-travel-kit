@@ -133,14 +133,15 @@ const placeholder = placeholders[normalizedLocale] || 'your@email.com';
   </div>
 </div>
 
-<script>
+<script is:inline define:vars={{ i18n: { subscribing: t('subscribing'), success: t('success'), already: t('already'), error: t('error'), subscribe: t('subscribe') } }}>
   function initNewsletter() {
+    const I18N = i18n;
     const containers = document.querySelectorAll('[data-newsletter-form]');
     containers.forEach(function(container) {
-      const form = container.querySelector('[data-newsletter-form-el]') as HTMLFormElement | null;
-      const btn = container.querySelector('[data-newsletter-btn]') as HTMLButtonElement | null;
-      const msg = container.querySelector('[data-newsletter-msg]') as HTMLElement | null;
-      const input = container.querySelector('input[name="email"]') as HTMLInputElement | null;
+      const form = container.querySelector('[data-newsletter-form-el]');
+      const btn = container.querySelector('[data-newsletter-btn]');
+      const msg = container.querySelector('[data-newsletter-msg]');
+      const input = container.querySelector('input[name="email"]');
 
       if (!form || !btn || !msg || !input) return;
 
@@ -155,7 +156,7 @@ const placeholder = placeholders[normalizedLocale] || 'your@email.com';
 
         submitted = true;
         btn.disabled = true;
-        btn.textContent = '{t("subscribing")}';
+        btn.textContent = I18N.subscribing;
         msg.textContent = '';
 
         try {
@@ -168,32 +169,31 @@ const placeholder = placeholders[normalizedLocale] || 'your@email.com';
           const data = await res.json();
 
           if (data.message === 'subscribed') {
-            msg.textContent = '{t("success")}';
+            msg.textContent = I18N.success;
             msg.className = 'mt-2 text-xs text-green-600 font-medium';
             form.style.display = 'none';
           } else if (data.message === 'already_subscribed') {
-            msg.textContent = '{t("already")}';
+            msg.textContent = I18N.already;
             msg.className = 'mt-2 text-xs text-amber-600 font-medium';
             form.style.display = 'none';
           } else {
-            msg.textContent = data.error || '{t("error")}';
+            msg.textContent = data.error || I18N.error;
             msg.className = 'mt-2 text-xs text-red-600';
             submitted = false;
             btn.disabled = false;
-            btn.textContent = '{t("subscribe")}';
+            btn.textContent = I18N.subscribe;
           }
         } catch {
-          msg.textContent = '{t("error")}';
+          msg.textContent = I18N.error;
           msg.className = 'mt-2 text-xs text-red-600';
           submitted = false;
           btn.disabled = false;
-          btn.textContent = '{t("subscribe")}';
+          btn.textContent = I18N.subscribe;
         }
       });
     });
   }
 
-  // Run on load and after Astro view transitions
   initNewsletter();
   document.addEventListener('astro:after-swap', initNewsletter);
 </script>
