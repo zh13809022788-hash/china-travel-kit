@@ -1,0 +1,25 @@
+# Cloudflare Pages _headers - Global security and cache headers
+
+/*
+  Content-Type: text/html; charset=utf-8
+  Cache-Control: public, max-age=3600, s-maxage=86400
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Cache static assets longer
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+# Sitemap should be fresh
+/sitemap*.xml
+  Cache-Control: public, max-age=3600, s-maxage=3600
+
+# RSS feeds should be fresh  
+/rss.xml
+  Cache-Control: public, max-age=3600, s-maxage=3600
