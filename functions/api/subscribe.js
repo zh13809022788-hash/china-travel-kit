@@ -50,7 +50,7 @@ async function sendBrevo(to, subscribedAt) {
     + 'Subscribed: ' + date + '\r\nUnsubscribe: https://www.chinatripbox.com/contact/';
 
   try {
-    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+    const res = await fetch('https://api.sendinblue.com/v3/smtp/email', {
       method: 'POST',
       headers: { 'api-key': _k, 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
