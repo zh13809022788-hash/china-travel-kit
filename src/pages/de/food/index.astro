@@ -1,4 +1,5 @@
 ---
+
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
@@ -10,23 +11,23 @@ const posts = (await getCollection('posts-de'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'China-Leitfaden zu Essen, Restaurants und Etikette';
-const description = 'Praktische China-Leitfäden rund ums Essen für ausländische Besucher: Essenslieferung bestellen, Sicherheit bei Streetfood, Schärfegrade, Trinkgeld, Restaurantetikette und Esskultur.';
+const title = 'China-Leitfäden zu Essen, Restaurants und Etikette';
+const description = 'Praktische Inhalte für ausländische Besucher in China: Essen bestellen, Streetfood sicher einschätzen, Schärfegrade verstehen, Trinkgeldfragen klären und Restaurantetikette besser einordnen.';
 
 const pathways = [
   {
     title: 'Ohne Chinesisch bestellen',
-    desc: 'Liefer-Apps einrichten, Hoteladressen speichern und Missverständnisse bei Anrufen vom Kurier vermeiden.',
+    desc: 'Richte Liefer-Apps ein, speichere Hoteladressen und reduziere Missverständnisse bei Anrufen vom Kurier.',
     href: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
     title: 'Streetfood sicher genießen',
-    desc: 'Anhand von Andrang, sichtbarer Hitze, Wasserbedingungen und Formulierungen zur Schärfe bessere Stände auswählen.',
+    desc: 'Achte auf Umsatz, sichtbare Hitze, Wasserhygiene und passende Schärfehinweise, um bessere Stände zu wählen.',
     href: '/de/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: 'Restaurantetikette beherrschen',
-    desc: 'Wissen, wann kein Trinkgeld erwartet wird, wann Servicegebühren zählen und wie lokale Restaurantregeln funktionieren.',
+    title: 'Restaurantetikette verstehen',
+    desc: 'Lerne, wann kein Trinkgeld üblich ist, wann Servicegebühren zählen und wie sich Restaurants in China im Alltag unterscheiden.',
     href: '/de/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
@@ -35,16 +36,14 @@ const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
     title: 'Baijiu 101',
-    desc: 'Hilfreicher Hintergrund, wenn bei einem Bankett oder Essen mit Gästen die chinesische Nationalspirituose ins Spiel kommt.',
+    desc: 'Hilfreicher Hintergrund, wenn bei einem Bankett oder Gastessen Chinas Nationalschnaps auf den Tisch kommt.',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: 'Baijiu höflich trinken',
-    desc: 'Ein vertiefender Begleitfaden zu Trinksprüchen, kleinen Einschenkungen und dem Tempo bei formellen Mahlzeiten.',
+    title: 'Wie man Baijiu höflich trinkt',
+    desc: 'Vertiefende Hinweise zu Trinksprüchen, kleinen Gläsern und dem Tempo bei formelleren Mahlzeiten.',
   },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'de';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
@@ -56,17 +55,17 @@ const locale = 'de';
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chinese-cuisine" alt="Scharfe Sichuan-Gerichte von einem Streetfood-Markt in China" loading="lazy" />
+    <CoverImage name="topic-chengdu-food" alt="Scharfe Sichuan-Gerichte auf einem Nachtmarkt in China" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">Wege zur Essensplanung</h2>
+      <h2 id="food-pathways" class="sr-only">Einstieg in die Essensplanung</h2>
       {pathways.map((item) => (
         <a href={item.href} class="card block hover:no-underline">
           <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Leitfaden lesen</span>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Artikel lesen</span>
         </a>
       ))}
     </section>
@@ -75,14 +74,14 @@ const locale = 'de';
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Reiseführer</p>
+            <p class="section-kicker">Leitfäden</p>
             <h2>Artikel zu Essen und Etikette</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {posts.map((post) => (
             <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
             </a>
@@ -91,12 +90,13 @@ const locale = 'de';
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">Kulturbegleiter</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">Wenn Baijiu auftaucht</h2>
+        <p class="section-kicker">Kultureller Zusatz</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Wenn Baijiu ins Spiel kommt</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Die meisten Mahlzeiten für Touristen erfordern kein Wissen über Alkohol, aber offizielle Bankette, Geschäftsessen
-          und Mahlzeiten bei Familien auf dem Land beinhalten manchmal Baijiu-Trinksprüche. Diese Begleitressourcen gehen tiefer,
-          während ChinaTripBox auf die Reiselogistik fokussiert bleibt.
+          Für die meisten Touristenmahlzeiten musst du über Alkohol nicht viel wissen. Bei
+          Banketten, Geschäftsessen oder Einladungen im privaten Rahmen tauchen jedoch manchmal
+          Baijiu-Trinksprüche und feste Abläufe auf. Die folgenden Quellen gehen darauf tiefer ein,
+          während ChinaTripBox beim praktischen Reisealltag bleibt.
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
@@ -111,4 +111,3 @@ const locale = 'de';
   </main>
   <Footer />
 </BaseLayout>
----
