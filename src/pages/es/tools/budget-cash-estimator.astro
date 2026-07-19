@@ -14,11 +14,11 @@ import { AFFILIATE_LINKS } from '../../../config';
 
 
 
-const title = 'Calculadora de presupuesto y efectivo para China';
+const title = 'Estimador de presupuesto y efectivo para viaje a China';
 
 const description =
 
-  'Calcula tu presupuesto diario y cuánto efectivo conviene llevar a China según la duración del viaje, el estilo de viaje y el tipo de ciudad. Obtén un desglose claro en RMB y USD.';
+  'Estima tu presupuesto diario y cuánto efectivo llevar a China según la duración del viaje, el estilo de viaje y la categoría de ciudad. Obtén un desglose claro en RMB y USD.';
 
 ---
 
@@ -32,7 +32,7 @@ const description =
 
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
 
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Calculadora de presupuesto y efectivo</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Estimador de presupuesto y efectivo</h1>
 
       <p class="mt-3 text-lg text-gray-600">{description}</p>
 
@@ -60,7 +60,7 @@ const description =
 
       <label class="flex flex-col text-sm">
 
-        <span class="mb-1 font-medium text-gray-700">Cantidad de viajeros</span>
+        <span class="mb-1 font-medium text-gray-700">Número de viajeros</span>
 
         <input id="travelers" type="number" min="1" max="10" value="1"
 
@@ -74,11 +74,11 @@ const description =
 
         <select id="style" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
 
-          <option value="budget">Económico (hostales, comida callejera y metro)</option>
+          <option value="budget">Económico (hostales, comida callejera, metro)</option>
 
-          <option value="mid" selected>Intermedio (hoteles de 3 a 4 estrellas y restaurantes)</option>
+          <option value="mid" selected>Gama media (hoteles de 3–4★, restaurantes)</option>
 
-          <option value="comfort">Cómodo (hoteles de 4 a 5 estrellas, taxis y más comidas fuera)</option>
+          <option value="comfort">Comodidad (hoteles de 4–5★, taxis, comidas fuera)</option>
 
         </select>
 
@@ -86,15 +86,14 @@ const description =
 
       <label class="flex flex-col text-sm">
 
-        <span class="mb-1 font-medium text-gray-700">Tipo de ciudad</span>
+        <span class="mb-1 font-medium text-gray-700">Categoría de ciudad</span>
 
         <select id="tier" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
 
-          <option value="tier1">Nivel 1 (Beijing, Shanghai, Shenzhen)</option>
+          <option value="tier1">Categoría 1 (Pekín, Shanghái, Shenzhen)</option>
+          <option value="tier2" selected>Categoría 2 (Chengdu, Xi'an, Hangzhou)</option>
 
-          <option value="tier2" selected>Nivel 2 (Chengdu, Xi'an, Hangzhou)</option>
-
-          <option value="tier3">Ciudades pequeñas y pueblos</option>
+          <option value="tier3">Ciudades y pueblos más pequeños</option>
 
         </select>
 
@@ -102,7 +101,7 @@ const description =
 
       <div class="sm:col-span-2">
 
-        <button id="calc-btn" class="btn-primary w-full sm:w-auto">Calcular presupuesto</button>
+        <button id="calc-btn" class="btn-primary w-full sm:w-auto">Estimar mi presupuesto</button>
 
       </div>
 
@@ -126,9 +125,9 @@ const description =
 
       <p class="mt-3 text-xs text-gray-400">
 
-        Las estimaciones son orientativas y no incluyen vuelos internacionales. Los costos reales varían según la temporada,
+        Las estimaciones son aproximadas y excluyen los vuelos internacionales. Los costos reales varían según la temporada,
 
-        el tipo de cambio y tus decisiones personales. Se asume un tipo de cambio aproximado de 7.2 RMB por USD.
+        el tipo de cambio y las elecciones personales. Tipo de cambio asumido en ~7.2 RMB por USD.
 
       </p>
 
@@ -136,11 +135,11 @@ const description =
 
       <AffiliateCta
 
-        title="Paga como un local y ahorra en comisiones"
+        title="Paga como un local, ahorra en comisiones"
 
-        description="Configura un método de pago preparado para viajar para que la mayor parte de tus gastos no dependa del efectivo."
+        description="Configura un método de pago listo para viajar para que la mayor parte de tus gastos no requiera efectivo."
 
-        buttonText="Ver opciones de pago"
+        buttonText="Ver opciones de Pagos"
 
         placeholder={AFFILIATE_LINKS.payment}
 
@@ -169,19 +168,21 @@ const description =
 
 
   // Gasto diario por persona en RMB, sin incluir alojamiento.
-  const dailySpend: Record<StyleKey, { comida: number; transporte: number; actividades: number; varios: number }> = {
 
-    budget: { comida: 80, transporte: 30, actividades: 40, varios: 30 },
+  const dailySpend: Record<StyleKey, { food: number; transport: number; activities: number; misc: number }> = {
 
-    mid: { comida: 180, transporte: 70, actividades: 100, varios: 60 },
+    budget: { food: 80, transport: 30, activities: 40, misc: 30 },
 
-    comfort: { comida: 400, transporte: 200, actividades: 220, varios: 130 },
+    mid: { food: 180, transport: 70, activities: 100, misc: 60 },
+
+    comfort: { food: 400, transport: 200, activities: 220, misc: 130 },
 
   };
 
 
 
-  // Alojamiento por noche en RMB (por habitación; se asume compartida por hasta 2 personas).
+  // Alojamiento por noche en RMB (por habitación, se asume compartida por hasta 2).
+
   const lodging: Record<StyleKey, number> = {
 
     budget: 150,
@@ -194,7 +195,8 @@ const description =
 
 
 
-  // Multiplicador de costo según el tipo de ciudad.
+  // Multiplicador de costo por categoría de ciudad.
+
   const tierMult: Record<TierKey, number> = {
 
     tier1: 1.25,
@@ -255,11 +257,12 @@ const description =
 
     const spend = dailySpend[style];
 
-    const perPersonDaily = (spend.comida + spend.transporte + spend.actividades + spend.varios) * mult;
+    const perPersonDaily = (spend.food + spend.transport + spend.activities + spend.misc) * mult;
 
 
 
-    // Alojamiento: 1 habitación por cada 2 viajeros, redondeando hacia arriba.
+    // Alojamiento: 1 habitación por cada 2 viajeros, redondeado hacia arriba.
+
     const rooms = Math.ceil(travelers / 2);
 
     const lodgingTotal = lodging[style] * mult * rooms * nights;
@@ -272,7 +275,8 @@ const description =
 
 
 
-    // Efectivo recomendado: aproximadamente el 10 % del gasto diario, con un límite de reserva razonable.
+    // Efectivo recomendado: ~10% del gasto diario, limitado a una reserva razonable.
+
     const dailyCashFloat = Math.min(perPersonDaily * 0.15 * travelers, 200 * travelers);
 
     const cashRecommended = Math.min(dailyCashFloat * nights, 2000 + 100 * travelers);
@@ -285,7 +289,7 @@ const description =
 
       <p class="mt-2 text-3xl font-bold text-brand-600">${rmb(grandTotal)}</p>
 
-      <p class="text-sm text-gray-500">≈ ${usd(grandTotal)} para ${travelers} viajero(s) y ${nights} noche(s)</p>
+      <p class="text-sm text-gray-500">≈ ${usd(grandTotal)} para ${travelers} viajero(s), ${nights} noche(s)</p>
 
       <dl class="mt-4 space-y-2 text-sm">
 
@@ -301,19 +305,19 @@ const description =
 
     cashCard.innerHTML = `
 
-      <h3 class="text-lg font-bold text-gray-900">Efectivo recomendado para llevar</h3>
+      <h3 class="text-lg font-bold text-gray-900">Efectivo para llevar</h3>
 
       <p class="mt-2 text-3xl font-bold text-gray-900">${rmb(cashRecommended)}</p>
 
-      <p class="text-sm text-gray-500">≈ ${usd(cashRecommended)} en efectivo</p>
+      <p class="text-sm text-gray-500">≈ ${usd(cashRecommended)} en RMB físico</p>
 
       <p class="mt-4 text-sm text-gray-600">
 
-        En China predominan los pagos móviles: pagarás casi todo con Alipay o WeChat Pay vinculados a una
+        China prioriza el pago móvil — pagarás casi todo con Alipay o WeChat Pay vinculado a una
 
-        tarjeta extranjera. Este efectivo sirve como respaldo para taxis sin lector QR, vendedores pequeños en zonas rurales y
+        tarjeta extranjera. Este efectivo es una red de seguridad para taxis sin lectores QR, pequeños vendedores rurales y
 
-        máquinas que solo aceptan billetes. Lleva denominaciones pequeñas (¥10, ¥20 y ¥50).
+        máquinas que solo aceptan billetes. Lleva denominaciones pequeñas (¥10, ¥20, ¥50).
 
       </p>`;
 
@@ -325,13 +329,13 @@ const description =
 
       <dl class="mt-4 grid gap-3 sm:grid-cols-4 text-sm">
 
-        <div><dt class="text-gray-500">Comida</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.comida * mult)}</dd></div>
+        <div><dt class="text-gray-500">Comida</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.food * mult)}</dd></div>
 
-        <div><dt class="text-gray-500">Transporte local</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.transporte * mult)}</dd></div>
+        <div><dt class="text-gray-500">Transporte local</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.transport * mult)}</dd></div>
 
-        <div><dt class="text-gray-500">Actividades</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.actividades * mult)}</dd></div>
+        <div><dt class="text-gray-500">Actividades</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.activities * mult)}</dd></div>
 
-        <div><dt class="text-gray-500">Varios</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.varios * mult)}</dd></div>
+        <div><dt class="text-gray-500">Varios</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.misc * mult)}</dd></div>
 
       </dl>`;
 
