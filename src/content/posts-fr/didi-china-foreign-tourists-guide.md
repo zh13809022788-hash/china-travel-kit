@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DiDi en Chine pour touristes étrangers 2026 : utiliser l'application VTC"
 description: "Guide 2026 pour utiliser DiDi en Chine : installation, interface anglaise, paiement, réservation, aéroports, sécurité et conseils pour voyageurs étrangers."
 pubDate: 2026-07-03

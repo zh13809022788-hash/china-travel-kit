@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Consulter un médecin ou une clinique de médecine chinoise en Chine 2026"
 description: "Guide pratique pour étrangers : choisir une clinique de médecine traditionnelle chinoise, prendre rendez-vous, coûts, traduction, acupuncture, plantes et sécurité."
 pubDate: 2026-07-15

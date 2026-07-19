@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Guide de Sanya 2026 pour étrangers : plages, resorts et conseils à Hainan"
 description: "Guide pratique de Sanya pour visiteurs étrangers : meilleures plages, zones hôtelières, activités nautiques, saison, transport et conseils pour un séjour soleil en Chine."
 pubDate: 2026-07-09

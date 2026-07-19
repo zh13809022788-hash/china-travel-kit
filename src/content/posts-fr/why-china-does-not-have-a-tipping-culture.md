@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Pourquoi la Chine n'a pas de culture du pourboire : guide d'étiquette pour étrangers"
 description: "Comprendre pourquoi le pourboire n'est pas habituel en Chine : prix affichés, service, exceptions, frais de service et façons naturelles de remercier."
 pubDate: 2026-07-11

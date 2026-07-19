@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Aéroport vers centre-ville en Chine 2026 : guide transport Pékin, Shanghai et Canton"
 description: "Comment rejoindre le centre depuis les aéroports de Pékin, Shanghai et Canton en 2026 : métro, train express, taxi, DiDi, coûts, durées et conseils pratiques."
 pubDate: 2026-07-08

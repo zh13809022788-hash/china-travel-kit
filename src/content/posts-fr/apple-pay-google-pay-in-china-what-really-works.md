@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Apple Pay fonctionne-t-il en Chine ? La réalité pour voyageurs en 2026"
 description: "Apple Pay et Google Pay en Chine en 2026 : où le paiement sans contact fonctionne, où il échoue, et quelle méthode utiliser vraiment au quotidien."
 pubDate: 2026-07-08

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "外国Visa・MastercardをWeChat Payに登録する方法 2026"
 description: "外国発行のVisaやMastercardをWeChat Payに紐づける手順、本人確認、手数料、限度額、失敗時の対処を解説します。"
 pubDate: 2026-07-09

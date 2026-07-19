@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Beste eSIM für China 2026: Auswahl, Kosten und Einrichtung"
 description: "So wählen Reisende eine China-eSIM: Gerätecheck, Datenmenge, Routing über Hongkong, Airalo, Holafly, Nomad, Aktivierung und Fehlerbehebung."
 pubDate: 2026-07-05

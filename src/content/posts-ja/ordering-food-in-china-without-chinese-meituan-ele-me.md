@@ -1,4 +1,4 @@
-﻿---
+---
 title: "中国語なしで中国の出前を頼む方法 2026：Meituan・Ele.me・店頭注文"
 description: "中国語が苦手な旅行者向けに、Meituan、Ele.me、Alipayミニプログラム、住所入力、配達員対応、支払いを解説します。"
 pubDate: 2026-07-08

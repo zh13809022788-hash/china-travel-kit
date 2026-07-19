@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Pourboire en Chine 2026 : quand donner et quand ne pas donner"
 description: "Guide pratique du pourboire en Chine : restaurants, taxis, hôtels, guides privés, frais de service, Hong Kong, Macao et étiquette pour éviter les malaises."
 pubDate: 2026-07-09

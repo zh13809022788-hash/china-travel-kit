@@ -1,4 +1,4 @@
-﻿---
+---
 title: "WeChat Pay in China 2026: Ausländische Visa oder Mastercard verknüpfen"
 description: "Schritt-für-Schritt-Anleitung für WeChat Pay mit ausländischer Karte: Wallet, Passprüfung, Gebühren, Limits und typische Probleme für China-Reisende."
 pubDate: 2026-07-09

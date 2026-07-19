@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Carte bancaire étrangère en Chine 2026 : où Visa et Mastercard fonctionnent"
 description: "Où utiliser une carte étrangère en Chine en 2026 : hôtels, distributeurs, chaînes internationales, limites, frais, et pourquoi Alipay ou WeChat Pay restent nécessaires."
 pubDate: 2026-07-08

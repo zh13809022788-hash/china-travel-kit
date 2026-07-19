@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Guide de la cuisine chinoise 2026 pour étrangers : régions, commandes et sécurité"
 description: "Guide pratique de la cuisine régionale chinoise : quoi manger par région, comment commander sans chinois, éviter les erreurs, payer et manger en sécurité."
 pubDate: 2026-07-15

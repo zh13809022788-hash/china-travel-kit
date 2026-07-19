@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Pocket WiFi, eSIM ou SIM locale en Chine 2026 : meilleure option pour touristes"
 description: "Comparatif 2026 entre Pocket WiFi, eSIM et carte SIM locale pour voyager en Chine : couverture, vitesse, installation, coût, blocages et choix selon le profil."
 pubDate: 2026-07-08

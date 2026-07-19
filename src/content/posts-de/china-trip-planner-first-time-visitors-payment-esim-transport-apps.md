@@ -1,4 +1,4 @@
-﻿---
+---
 title: "China-Reise planen 2026: Zahlung, eSIM, Verkehr und Apps für Erstbesucher"
 description: "Praktische China-Planung für die erste Reise: was vor Abflug eingerichtet sein sollte, welche Apps wichtig sind und wie die ersten 24 Stunden stressfrei laufen."
 pubDate: 2026-07-13

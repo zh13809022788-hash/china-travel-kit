@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Réserver un billet de train en Chine sur 12306 en 2026 avec un passeport étranger"
 description: "Guide étape par étape pour réserver des trains chinois sur 12306 : inscription, passeport, vérification, paiement, e-billet et alternatives pour voyageurs étrangers."
 pubDate: 2026-07-04

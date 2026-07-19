@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Essen bestellen in China ohne Chinesisch 2026: Meituan, Ele.me und Restauranttipps"
 description: "So bestellen Reisende in China Essen ohne Mandarin: Meituan, Ele.me, Alipay-Mini-Programme, Adressen, Bezahlung, Kuriernotizen und Fehlerbehebung."
 pubDate: 2026-07-08

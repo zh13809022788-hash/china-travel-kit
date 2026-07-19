@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Combien d'espèces emporter en Chine en 2026 : guide argent pour touristes"
 description: "Conseils pratiques sur les espèces en Chine : combien de RMB garder, où changer, distributeurs, frais, petites coupures et équilibre avec Alipay ou WeChat Pay."
 pubDate: 2026-07-08

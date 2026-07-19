@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Braucht man 2026 in China ein VPN? Internet-Guide für Reisende"
 description: "Praktischer China-Internetguide 2026: blockierte Apps, eSIM und Roaming, VPN-Vorbereitung, rechtliche Vorsicht und robuste Backups für Touristen."
 pubDate: 2026-07-14

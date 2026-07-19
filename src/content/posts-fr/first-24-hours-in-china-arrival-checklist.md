@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Premières 24 heures en Chine 2026 : checklist d'arrivée pour visiteurs étrangers"
 description: "Checklist pratique pour les premières 24 heures en Chine : internet, paiement, aéroport, DiDi, hôtel, espèces, applications et premiers tests indispensables."
 pubDate: 2026-07-14

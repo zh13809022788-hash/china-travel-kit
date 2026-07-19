@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Entrée sans visa et transit en Chine 2026 : faut-il un visa ?"
 description: "Guide 2026 de l'entrée sans visa en Chine, du transit 240 heures, des documents nécessaires, du passage frontière et des erreurs fréquentes pour voyageurs étrangers."
 pubDate: 2026-07-08

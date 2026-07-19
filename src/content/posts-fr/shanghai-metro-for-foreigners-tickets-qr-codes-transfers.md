@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Métro de Shanghai pour étrangers 2026 : QR codes, tickets et correspondances"
 description: "Guide du métro de Shanghai pour touristes : paiement Alipay, tickets, QR codes, transferts, aéroports, erreurs fréquentes et conseils pour non sinophones."
 pubDate: 2026-07-09

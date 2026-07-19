@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Peut-on encore payer en espèces en Chine en 2026 ? Guide pour visiteurs étrangers"
 description: "La Chine est presque sans cash, mais les espèces restent utiles. Où payer en RMB, combien emporter, comment obtenir de petites coupures et quand utiliser Alipay ou WeChat Pay."
 pubDate: 2026-07-09

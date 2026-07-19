@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Guide de Hangzhou 2026 pour étrangers : lac de l'Ouest, thé et week-end depuis Shanghai"
 description: "Guide pratique de Hangzhou pour touristes étrangers : lac de l'Ouest, thé Longjing, temples, transports, excursions depuis Shanghai et conseils de week-end."
 pubDate: 2026-07-09

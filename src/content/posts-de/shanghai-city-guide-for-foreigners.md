@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Shanghai City Guide 2026: Praktische Tipps für ausländische Besucher"
 description: "Shanghai-Guide für Touristen und längere Aufenthalte: Metro, Stadtviertel, Essen, Zahlung, Flughäfen, Tagesausflüge und Planungstipps."
 pubDate: 2026-07-09

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "WeChat Pay pour visiteurs étrangers 2026 : installation et utilisation complète"
 description: "Comment configurer WeChat Pay en Chine avec une carte étrangère : inscription, portefeuille, vérification passeport, paiement, limites, frais et problèmes fréquents."
 pubDate: 2026-07-06

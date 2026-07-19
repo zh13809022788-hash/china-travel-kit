@@ -1,4 +1,4 @@
-﻿---
+---
 title: "China High-Speed Rail 2026: Zugfahren mit Reisepass, 12306 und Trip.com"
 description: "Guide für ausländische Reisende im chinesischen Hochgeschwindigkeitszug: Buchung, Sitzklassen, Pass-Boarding, Bahnhof, Sicherheit und praktische Tipps."
 pubDate: 2026-07-08

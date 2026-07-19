@@ -1,4 +1,4 @@
-﻿---
+---
 title: "中国でApple Payは使える？2026年旅行者向けの現実的ガイド"
 description: "中国でApple PayやGoogle Payが使える場所、使えない場面、旅行者が本当に準備すべき支払い方法を整理します。"
 pubDate: 2026-07-08

@@ -51,26 +51,18 @@ export async function onRequestPost(context) {
   }));
 
   // Send welcome email (synchronous - wait for it to ensure delivery)
-  const emailSent = await sendWelcomeEmail(email, subscribedAt);
+  const emailResult = await sendWelcomeEmail(email, subscribedAt);
 
-  return json({ message: 'subscribed', email_sent: emailSent });
+  return json({ message: 'subscribed', email_status: emailResult });
 }
 
 async function sendWelcomeEmail(email, subscribedAt) {
   const url = 'https://api.mailchannels.net/tx/v1/send';
   const payload = {
-    personalizations: [{
-      to: [{ email: email }],
-      dkim_domain: 'chinatripbox.com',
-      dkim_selector: 'mailchannels',
-    }],
-    from: { email: 'newsletter@chinatripbox.com', name: 'ChinaTripBox' },
-    reply_to: { email: 'contact@chinatripbox.com', name: 'ChinaTripBox' },
+    personalizations: [{ to: [{ email: email }] }],
+    from: { email: 'noreply@chinatripbox.com', name: 'ChinaTripBox' },
     subject: 'Welcome to ChinaTripBox',
-    content: [{
-      type: 'text/plain',
-      value: welcomeText(email, subscribedAt),
-    }],
+    content: [{ type: 'text/plain', value: 'You are subscribed.\nhttps://www.chinatripbox.com' }],
   };
 
   try {
@@ -79,12 +71,11 @@ async function sendWelcomeEmail(email, subscribedAt) {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload),
     });
-    const result = await resp.text();
-    console.log('MailChannels status:', resp.status, 'body:', result);
-    return resp.ok;
+    const status = resp.status;
+    const body = await resp.text();
+    return { ok: resp.ok, status: status, body: body };
   } catch (err) {
-    console.error('MailChannels error:', err.message);
-    return false;
+    return { ok: false, error: err.message };
   }
 }
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Que mettre dans sa valise pour la Chine 2026 : checklist par saison"
 description: "Checklist de bagages pour voyager en Chine en 2026 : vêtements par saison, applications, documents, médicaments, adaptateur, paiement et erreurs à éviter."
 pubDate: 2026-07-09

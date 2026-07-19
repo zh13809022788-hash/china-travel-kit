@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Internet en Chine 2026 : quelles applications fonctionnent sans VPN ?"
 description: "Guide pratique de l'accès internet en Chine : applications accessibles, services bloqués, eSIM, roaming, cartes, messagerie et préparation avant le départ."
 pubDate: 2026-07-08

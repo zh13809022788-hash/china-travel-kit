@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Alipay と WeChat Pay 2026：外国人旅行者はどちらを使うべき？"
 description: "中国旅行で使うAlipayとWeChat Payを、設定のしやすさ、外国カード対応、手数料、日常の使いやすさで比較します。"
 pubDate: 2026-07-14

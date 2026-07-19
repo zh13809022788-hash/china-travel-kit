@@ -1,4 +1,4 @@
-﻿---
+---
 title: "À configurer avant de voyager en Chine 2026 : applis, paiements et documents"
 description: "Checklist avant départ pour la Chine : Alipay, WeChat Pay, eSIM, DiDi, 12306, traduction, adresses chinoises, documents hors ligne et cash de secours."
 pubDate: 2026-07-13

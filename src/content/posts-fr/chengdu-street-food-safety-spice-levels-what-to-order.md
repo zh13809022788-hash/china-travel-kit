@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Street food à Chengdu 2026 : sécurité, niveau de piment et plats à commander"
 description: "Guide pratique de la street food à Chengdu : manger sans se tromper, gérer le piment du Sichuan, choisir les stands sûrs et commander sans parler chinois."
 pubDate: 2026-07-09

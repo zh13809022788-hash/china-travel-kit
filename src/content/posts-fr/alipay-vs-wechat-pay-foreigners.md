@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Alipay ou WeChat Pay pour étrangers en 2026 : quelle application choisir en Chine ?"
 description: "Comparatif Alipay vs WeChat Pay pour voyager en Chine en 2026 : installation, cartes étrangères, frais, limites et meilleur choix pour les touristes."
 pubDate: 2026-07-14

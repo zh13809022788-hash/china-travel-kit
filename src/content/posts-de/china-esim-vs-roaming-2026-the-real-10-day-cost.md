@@ -1,4 +1,4 @@
-﻿---
+---
 title: "China eSIM vs. Roaming 2026: Was 10 Tage wirklich kosten"
 description: "Kostenvergleich für China-Reisende: eSIM, Roaming, Datenbedarf, Great Firewall, Nummer behalten und konkrete Empfehlung für eine 10-Tage-Reise."
 pubDate: 2026-07-08

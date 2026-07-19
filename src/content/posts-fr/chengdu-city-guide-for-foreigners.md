@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Guide de Chengdu 2026 pour étrangers : pandas, cuisine du Sichuan et conseils voyage"
 description: "Guide pratique de Chengdu pour visiteurs étrangers : pandas, hotpot, maisons de thé, transports, excursions, budget et conseils pour profiter de la capitale gastronomique du Sichuan."
 pubDate: 2026-07-09

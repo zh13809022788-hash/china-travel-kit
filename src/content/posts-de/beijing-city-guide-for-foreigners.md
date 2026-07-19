@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Beijing City Guide 2026: Was ausländische Besucher wissen sollten"
 description: "Praktischer Beijing-Guide für Erstbesucher: Top-Sehenswürdigkeiten, Great Wall, Metro, Stadtviertel, Essen, Zahlung, Wetter und Planungstipps."
 pubDate: 2026-07-09

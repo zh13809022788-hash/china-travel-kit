@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Comment payer en Chine en 2026 : Alipay, WeChat Pay, carte et espèces"
 description: "Guide des moyens de paiement en Chine pour touristes : Alipay, WeChat Pay, cartes étrangères, cash, commerçants, transports et méthode à choisir selon la situation."
 pubDate: 2026-07-07

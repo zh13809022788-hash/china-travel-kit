@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Aéroport Pékin Daxing vers centre-ville 2026 : guide transport pour première visite"
 description: "Guide 2026 pour rejoindre Pékin depuis l'aéroport Daxing : train express, métro, taxi, DiDi, navettes de nuit, coûts et conseils pratiques."
 pubDate: 2026-07-08
