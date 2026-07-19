@@ -1,71 +1,73 @@
-﻿---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-const title = 'Partner-Offenlegung';
+const title = 'Affiliate-Hinweis';
 const description =
   'Wie ChinaTripBox mit Affiliate-Links, Werbebeziehungen, redaktioneller Unabhängigkeit und Empfehlungen für Reiseprodukte umgeht.';
 const lastUpdated = '14. Juli 2026';
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">Partner-Offenlegung</h1>
+      <h1 class="text-3xl font-bold text-gray-900">Affiliate-Hinweis</h1>
       <p class="mt-2 text-sm text-gray-500">Zuletzt aktualisiert: {lastUpdated}</p>
 
       <p class="mt-4">
         ChinaTripBox ist eine unabhängige Website für Reiseplanung. Einige Seiten können
-        Affiliate-Links, Werbeplatzierungen oder Partnerhinweise enthalten. Wenn Sie auf einen
-        Affiliate-Link klicken und einen Kauf tätigen, erhalten wir möglicherweise eine Provision,
-        ohne dass Ihnen zusätzliche Kosten entstehen.
+        Affiliate-Links, Werbeplatzierungen oder Hinweise auf Partner enthalten. Wenn du auf einen
+        Affiliate-Link klickst und einen Kauf tätigst, erhalten wir möglicherweise eine Provision,
+        ohne dass dir dadurch zusätzliche Kosten entstehen.
       </p>
 
       <h2>Was Das Für Leser Bedeutet</h2>
       <p>
-        Affiliate-Einnahmen helfen dabei, unsere Reiseführer und Tools kostenlos anzubieten. Sie
-        ändern nicht den Preis, den Sie zahlen, und geben einem Partner keine Kontrolle über unsere
-        redaktionellen Empfehlungen.
+        Affiliate-Einnahmen helfen dabei, unsere Reiseführer und Tools kostenlos zu halten. Sie
+        ändern nichts an dem Preis, den du zahlst, und sie geben einem Partner keine Kontrolle über
+        unsere redaktionellen Empfehlungen.
       </p>
 
       <h2>Redaktionelle Unabhängigkeit</h2>
       <p>
-        Unsere Empfehlungen sollen in erster Linie nützlich sein, bevor sie kommerziell sind. Wir
-        priorisieren praktische Bedürfnisse von Reisenden: ob eine Zahlungsmethode funktioniert, ob
-        eine eSIM einfach zu aktivieren ist, ob ein Buchungsprozess ausländische Reisepässe
-        unterstützt und welchen Notfallplan Besucher vorbereiten sollten.
+        Unsere Empfehlungen sollen nützlich sein, bevor sie kommerziell sind. Wir priorisieren die
+        praktischen Bedürfnisse von Reisenden: ob eine Zahlungsmethode funktioniert, ob sich eine
+        eSIM leicht aktivieren lässt, ob ein Buchungsablauf ausländische Reisepässe unterstützt und
+        welchen Backup-Plan ein Besucher vorbereiten sollte.
       </p>
 
-      <h2>Womit Wir Einnahmen Erzielen Können</h2>
+      <h2>Womit Wir Möglicherweise Geld Verdienen</h2>
       <ul>
-        <li>Partner für eSIM, mobile Daten oder Konnektivität.</li>
-        <li>Partner für Reisebuchungen, Bahn, Transfers oder Tickets.</li>
+        <li>eSIM-, mobile Daten- oder Konnektivitätspartner.</li>
+        <li>Partner für Reisebuchungen, Züge, Transfers oder Ticketing.</li>
         <li>Werbung, die auf der Website angezeigt wird.</li>
-        <li>Künftige kostenpflichtige Reisehilfe- oder Planungsprodukte, sofern sie klar angeboten werden.</li>
+        <li>Zukünftige kostenpflichtige Reisehilfe- oder Reiseplanungsprodukte, sofern klar angeboten.</li>
       </ul>
 
       <h2>Was Wir Nicht Tun</h2>
       <p>
-        Wir verkaufen keine offiziellen Visa, Einreisegenehmigungen, staatlichen Dienstleistungen,
-        Bankdienstleistungen oder Notfallunterstützung. Wir garantieren nicht, dass ein Produkt
-        eines Drittanbieters für jeden Reisenden, jedes Gerät, jeden Reisepass, jede Bank oder jede
-        Reiseroute funktioniert.
+        Wir verkaufen keine offiziellen Visa, Einwanderungsgenehmigungen, staatlichen
+        Dienstleistungen, Bankdienstleistungen oder Notfallhilfe. Wir garantieren nicht, dass ein
+        Produkt eines Drittanbieters für jeden Reisenden, jedes Gerät, jeden Reisepass, jede Bank
+        oder jede Reiseroute funktioniert.
       </p>
 
-      <h2>Wie Sie Unsere Produkthinweise Verstehen Sollten</h2>
+      <h2>Wie Du Unsere Produkterwähnungen Lesen Solltest</h2>
       <p>
-        Betrachten Sie Hinweise auf Produkte und Dienstleistungen als praktische Ausgangspunkte,
-        nicht als Garantien. Prüfen Sie vor dem Kauf immer die aktuellen Bedingungen, die Abdeckung,
-        die Erstattungsrichtlinien, die Gerätekompatibilität, die Zahlungslimits und die
-        Reiseberechtigung des Anbieters.
+        Betrachte Erwähnungen von Produkten und Dienstleistungen als praktische Ausgangspunkte,
+        nicht als Garantien. Prüfe vor dem Kauf immer die aktuellen Bedingungen des Anbieters, die
+        Abdeckung, die Rückerstattungsrichtlinie, die Gerätekompatibilität, Zahlungslimits und die
+        Eignung für Reisende.
       </p>
 
       <h2>Fragen</h2>
       <p>
-        Bei Fragen zu Affiliate-Links, Werbung oder einer Korrektur einer Empfehlung nutzen Sie
-        bitte unsere <a href="/de/contact/">Kontaktseite</a>.
+        Bei Fragen zu Affiliate-Links, Werbung oder einer Korrektur zu einer Empfehlung nutze
+        bitte unsere <a href="/contact/">Kontaktseite</a>.
       </p>
     </article>
   </main>
