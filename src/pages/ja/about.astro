@@ -3,62 +3,111 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'ChinaTripBoxについて';
+const title = 'About ChinaTripBox';
 const description =
-  'ChinaTripBox は、海外から中国を訪れる旅行者の方が、決済、通信、交通、旅行準備をスムーズに進められるようサポートする独立系の旅行情報サイトです。';
+  'ChinaTripBox provides practical China travel guides and 1-on-1 help for foreign visitors. Built by a team with roots at Tujia, Airbnb, Ctrip, Meituan, and Alibaba.';
 ---
 
+<!-- TODO: This page needs Codex-native translation. Currently uses English as placeholder. -->
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
   <Header locale="ja" />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">ChinaTripBoxについて</h1>
-      <p class="mt-4">
-        ChinaTripBox は、中国旅行をできるだけスムーズで負担の少ないものにしたい海外旅行者の方のために作られた独立系ガイドです。
-        中国での旅行は以前よりもずっと便利になっていますが、モバイル決済、eSIM によるデータ通信、アプリ中心の交通サービスなど、
-        デジタル前提の仕組みは、初めて利用する方にとってわかりにくく感じられることがあります。
+
+      <div class="mb-10 rounded-xl bg-brand-600 px-8 py-10 text-center text-white">
+        <h1 class="text-2xl font-bold">About ChinaTripBox</h1>
+        <p class="mx-auto mt-2 max-w-lg text-base leading-relaxed opacity-90">
+          Practical China travel resources and services — built by a team of travel-tech veterans.
+        </p>
+      </div>
+
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">What We Do</h2>
+      <p class="mt-3">
+        ChinaTripBox provides free, practical China travel guides and tools — covering
+        payments, internet access, transport, visas, and everyday logistics — so foreign
+        visitors can solve the real problems of traveling to China.
       </p>
       <p>
-        私たちの目的は明確です。旅行者の方が実際に感じる疑問を、わかりやすく、確認しやすい手順付きの情報に変えることです。
-        すべてのガイドは自然で読みやすい日本語で作成しており、今すぐ役立つ実用性を重視しながら、アプリや制度の変化に合わせて更新しています。
+        When free guides and tools aren't enough, we also offer 1-on-1 human assistance.
+        Whether it's trip planning, payment setup troubleshooting, or complex visa and
+        transport questions, a real person works with your specific situation to provide
+        targeted advice.
       </p>
 
-      <h2>このサイトが役立つ方</h2>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Who We Are</h2>
+      <p class="mt-3">
+        A professional team with rigorous editorial standards. ChinaTripBox's core members
+        come from <strong>Tujia</strong>, <strong>Airbnb</strong>, <strong>Ctrip</strong>,
+        <strong>Meituan</strong>, and <strong>Alibaba</strong> — spanning shared accommodation,
+        OTA, lifestyle services, and e-commerce.
+      </p>
+
+      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-emerald-200 bg-emerald-50 p-6 sm:flex-row">
+        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-emerald-600">
+          <img src="/images/howie.jpg" alt="Howie" class="h-full w-full object-cover" />
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold text-emerald-700">Founder — Howie</p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            Howie was a founding team member of <strong>Tujia (途家网)</strong>, China's
+            largest vacation rental platform, backed by Sequoia Capital, Ctrip, and HomeAway
+            with over $400M in funding.
+          </p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            Beyond Tujia, our core team's backgrounds include Airbnb China, Ctrip product
+            and operations, Meituan's hotel and travel division, and Alibaba's Fliggy.
+            Together, we have over fifteen years of hands-on experience across China's
+            travel-tech ecosystem — from payments and transport to accommodation and
+            local lifestyle services.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Our Approach</h2>
+      <p class="mt-3">
+        We operate as a lean, AI-assisted content and service studio, where free resources
+        and paid services complement each other.
+      </p>
+      <ol class="mt-4 list-inside list-decimal space-y-3 text-gray-700">
+        <li><strong>Free resources demonstrate expertise.</strong> Guides, tools, and checkers let visitors solve common problems on their own while showcasing the quality of our work.</li>
+        <li><strong>AI helps us scale and stay current.</strong> We use AI to track regulatory changes, optimize content, and keep information accurate in near real time.</li>
+        <li><strong>1-on-1 human service for complex cases.</strong> When self-service isn't enough, a real person provides tailored advice based on your specific situation.</li>
+      </ol>
+
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">What We Cover</h2>
+      <p class="mt-3">
+        <strong>Free resources</strong> — Payment Checker, Visa-Free Checker, Trip Planner, App Availability Checker, and step-by-step guides.
+      </p>
       <p>
-        初めて中国を訪れる方はもちろん、リピーターの方、長期滞在を予定している方、デジタルノマドの方、
-        そして渡航前に実用的な情報を必要としているすべての方に向けて発信しています。
-        内容は、支払い方法、通信手段の確保、都市間の移動、初期設定で起こりやすいトラブルの回避など、
-        日々の旅行判断に直結するテーマを中心にしています。
+        <strong>Paid services</strong> — 1-on-1 trip plan review, payment setup assistance, visa and transport consulting, and custom trip planning.
       </p>
 
-      <h2>掲載している主な内容</h2>
-      <ul>
-        <li><strong>決済:</strong> Alipay と WeChat Pay の設定方法、海外発行カードとの連携方法、現地で一般的な支払い方法をご案内しています。</li>
-        <li><strong>eSIM とデータ通信:</strong> 到着前に自分に合ったデータプランを選び、使い始める方法をご案内しています。</li>
-        <li><strong>交通:</strong> 高速鉄道の予約方法、配車サービスの使い方、都市内での移動方法をまとめています。</li>
-        <li><strong>旅行準備:</strong> 都市ガイド、持ち物、現金、食の安全、現地で使うアプリ、初めての中国旅行に向けたチェックリストを掲載しています。</li>
-      </ul>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Why Trust Us</h2>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Professional Team</p>
+          <p class="mt-1 text-sm text-gray-600">Core members come from Tujia, Airbnb, Ctrip, Meituan, and Alibaba.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Rigorous Review</p>
+          <p class="mt-1 text-sm text-gray-600">AI improves efficiency, but every guide and plan is reviewed by an industry professional.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Personalized Service</p>
+          <p class="mt-1 text-sm text-gray-600">Over 15 years of frontline China travel-tech experience, delivering tailored solutions.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Always Current</p>
+          <p class="mt-1 text-sm text-gray-600">Rules change fast. Our AI workflow tracks and updates content in near real time.</p>
+        </div>
+      </div>
 
-      <h2>編集方針について</h2>
-      <p>
-        ChinaTripBox は、政府機関の公式サイトでも、ビザ代行会社、通信事業者、決済会社、銀行でもありません。
-        私たちは、公開されている公式情報、製品ドキュメント、旅行者の体験、定期的な内容の見直しをもとに、
-        独立した旅行情報を提供しています。制作体制の詳細については、<a href="/ja/editorial-policy/">編集方針</a>と
-        <a href="/authors/chinatripbox-editorial-team/">編集チームのプロフィール</a>をご覧ください。
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Get in Touch</h2>
+      <p class="mt-3">
+        Have questions, corrections, or a trip scenario you need help with?
+        <a href="/ja/contact/" class="text-brand-600 hover:underline">Contact us</a>.
       </p>
 
-      <h2>無料で利用できる理由</h2>
-      <p>
-        このサイトは、広告収益とアフィリエイト提携によって運営されています。サイト内の一部リンクをご利用いただくと、
-        追加費用なしで私たちに手数料が発生する場合があります。ただし、それによって掲載内容やおすすめするサービスが左右されることはありません。
-        ご紹介する内容は、旅行者の方に本当に役立つかどうかを基準にしています。
-      </p>
-
-      <h2>お問い合わせ</h2>
-      <p>
-        情報が古くなっている箇所を見つけた場合や、まだ取り上げていないご質問がある場合は、
-        <a href="/ja/contact/">お問い合わせページ</a>からご連絡ください。いただいたメッセージはすべて確認しています。
-      </p>
     </article>
   </main>
   <Footer />

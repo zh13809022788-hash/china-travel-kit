@@ -5,48 +5,93 @@ import Footer from '../../components/Footer.astro';
 
 const title = '關於 ChinaTripBox';
 const description =
-  'ChinaTripBox 是獨立旅遊資源，協助外國旅客處理在中國的付款、連線、交通與實用行程規劃。';
+  'ChinaTripBox 提供免費的中國旅行實用指南和工具，以及一對一人工協助。由來自途家網、Airbnb、攜程、美團、阿里巴巴的專業團隊打造。';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
   <Header locale="zh-TW" />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">關於 ChinaTripBox</h1>
-      <p class="mt-4">
-        ChinaTripBox 是為希望順利、少壓力暢遊中國的外國旅客打造的獨立指南。現在到中國旅行比以往更容易，但以數位優先為核心的行動支付、eSIM 網路與應用程式交通生態，如果你從未使用過，仍可能讓人感到不知從何開始。
+
+      <div class="mb-10 rounded-xl bg-brand-600 px-8 py-10 text-center text-white">
+        <h1 class="text-2xl font-bold">關於 ChinaTripBox</h1>
+        <p class="mx-auto mt-2 max-w-lg text-base leading-relaxed opacity-90">
+          旅遊科技專業團隊打造，實用的中國旅行資源與服務平台。
+        </p>
+      </div>
+
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">我們在做什麼</h2>
+      <p class="mt-3">
+        ChinaTripBox 提供免費的中國旅行實用指南和工具，幫助外國旅客解決來中國的核心問題——支付、網路、交通、簽證和日常後勤。
       </p>
       <p>
-        我們的使命很簡單：把旅客真正會問的問題，整理成清楚、經過檢查、可一步步執行的答案。每篇指南都使用清楚直白的繁體中文，聚焦目前真正可行的方法，並隨著應用程式與規定變動而更新。
+        當免費工具和指南還不夠用時，我們也提供一對一人工協助。無論是行程規劃、支付設定疑難排解，還是複雜的簽證與交通問題，都有真人根據你的具體情況提供針對性建議。
       </p>
 
-      <h2>這個網站適合誰</h2>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">我們是誰</h2>
+      <p class="mt-3">
+        專業團隊，嚴格審核。ChinaTripBox 的核心團隊成員來自途家網、Airbnb、攜程、美團、阿里巴巴等中國頂尖旅行與生活服務類科技公司，橫跨共享住宿、OTA、生活服務、電商等領域。
+      </p>
+
+      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-emerald-200 bg-emerald-50 p-6 sm:flex-row">
+        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-emerald-600">
+          <img src="/images/howie.jpg" alt="Howie" class="h-full w-full object-cover" />
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold text-emerald-700">創辦人 Howie</p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            出身途家網（Tujia）創始團隊——途家是中國最大的度假租賃平台，獲紅杉資本、攜程、HomeAway 等機構超過 4 億美元融資。
+          </p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            途家之外，團隊核心成員的背景涵蓋 Airbnb 中國、攜程產品與運營、美團酒旅事業群、阿里飛豬等多個關鍵節點。我們在中國旅遊科技生態圈有超過十五年的累積，從支付、交通、住宿到本地生活，每個環節都有一手實戰經驗。
+          </p>
+        </div>
+      </div>
+
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">我們的做法</h2>
+      <p class="mt-3">
+        我們以精實的 AI 輔助模式運作，讓免費內容和付費服務相輔相成。
+      </p>
+      <ol class="mt-4 list-inside list-decimal space-y-3 text-gray-700">
+        <li><strong>免費資源展現專業。</strong>指南、工具和檢查器幫助旅客自助解決常見問題，同時展現我們的專業水準。</li>
+        <li><strong>AI 輔助保持規模與時效。</strong>我們用 AI 追蹤法規變更、優化內容、確保資訊即時準確。</li>
+        <li><strong>一對一人類服務解決複雜問題。</strong>當自助方案不夠用時，由真人根據你的具體情況提供針對性協助。</li>
+      </ol>
+
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">我們的服務範圍</h2>
+      <p class="mt-3">
+        <strong>免費資源</strong> — 支付相容性檢查、免簽查詢、行程規劃器、App 可用性檢查、逐步指南。
+      </p>
       <p>
-        我們為第一次到訪的觀光客、回訪旅客、長住旅客、數位遊牧者，以及所有抵達中國前需要實用協助的人撰寫內容。我們聚焦日常旅行決策：如何付款、如何保持網路連線、如何在城市之間移動，以及如何避免常見的設定問題。
+        <strong>付費服務</strong> — 一對一行程審查、支付設定協助、簽證與交通諮詢、客製化旅遊規劃。
       </p>
 
-      <h2>我們涵蓋的內容</h2>
-      <ul>
-        <li><strong>付款:</strong> 設定 Alipay 與 WeChat Pay、綁定外國銀行卡，並像本地人一樣付款。</li>
-        <li><strong>eSIM 與數據：</strong> 在抵達前選擇並啟用合適的數據方案。</li>
-        <li><strong>交通:</strong> 預訂高鐵、使用叫車服務，以及在城市內移動。</li>
-        <li><strong>行程規劃：</strong> 城市指南、行李準備、現金、飲食安全、本地應用程式與首次旅行清單。</li>
-      </ul>
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">為什麼值得信賴</h2>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">專業團隊</p>
+          <p class="mt-1 text-sm text-gray-600">核心成員來自途家、Airbnb、攜程、美團、阿里等专业平台。</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">嚴格審核</p>
+          <p class="mt-1 text-sm text-gray-600">AI 提升效率，但每個方案和指南都由行業专业人士審核。</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">個性化服務</p>
+          <p class="mt-1 text-sm text-gray-600">超過十五年在中國旅遊科技生態圈的一線經驗，能針對性出具個性化方案。</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">即時更新</p>
+          <p class="mt-1 text-sm text-gray-600">規則變化快速，我們的 AI 工作流程能即時追蹤並更新內容。</p>
+        </div>
+      </div>
 
-      <h2>編輯標準</h2>
-      <p>
-        ChinaTripBox 不是政府網站、簽證代辦、電信商、支付公司或銀行。我們根據可取得的官方來源、產品文件、旅客經驗與定期內容審查，發布獨立旅遊資訊。你可以在我們的 <a href="/zh-tw/editorial-policy/">編輯政策</a> 與 <a href="/authors/chinatripbox-editorial-team/">編輯團隊簡介</a> 中了解更多流程。
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">聯絡我們</h2>
+      <p class="mt-3">
+        有問題、發現內容過時，還是需要協助規劃行程？
+        <a href="/zh-tw/contact/" class="text-brand-600 hover:underline">聯絡我們</a>。
       </p>
 
-      <h2>我們如何維持免費</h2>
-      <p>
-        本站由廣告與聯盟合作支持。當你使用本站某些連結時，我們可能會獲得佣金，且不會增加你的費用。這絕不會影響我們推薦哪些產品。我們的建議以真正能幫助旅客為依據。
-      </p>
-
-      <h2>與我們聯絡</h2>
-      <p>
-        發現內容過時，或有我們尚未回答的問題？請前往我們的 <a href="/zh-tw/contact/">聯絡頁面</a>。我們會閱讀每一則訊息。
-      </p>
     </article>
   </main>
   <Footer />
