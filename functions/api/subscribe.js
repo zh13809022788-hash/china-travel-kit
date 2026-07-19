@@ -50,10 +50,10 @@ export async function onRequestPost(context) {
     lang: (request.headers.get('accept-language') || '').split(',')[0] || '',
   }));
 
-  // Send welcome email (non-blocking - don't wait for it)
-  context.waitUntil(sendWelcomeEmail(email, subscribedAt));
+  // Send welcome email (synchronous - wait for it to ensure delivery)
+  const emailSent = await sendWelcomeEmail(email, subscribedAt);
 
-  return json({ message: 'subscribed' });
+  return json({ message: 'subscribed', email_sent: emailSent });
 }
 
 async function sendWelcomeEmail(email, subscribedAt) {
@@ -66,10 +66,10 @@ async function sendWelcomeEmail(email, subscribedAt) {
     }],
     from: { email: 'newsletter@chinatripbox.com', name: 'ChinaTripBox' },
     reply_to: { email: 'contact@chinatripbox.com', name: 'ChinaTripBox' },
-    subject: 'Welcome to ChinaTripBox — your first travel tip inside',
+    subject: 'Welcome to ChinaTripBox',
     content: [{
-      type: 'text/html',
-      value: welcomeHtml(email, subscribedAt),
+      type: 'text/plain',
+      value: welcomeText(email, subscribedAt),
     }],
   };
 
@@ -80,10 +80,32 @@ async function sendWelcomeEmail(email, subscribedAt) {
       body: JSON.stringify(payload),
     });
     const result = await resp.text();
-    console.log('MailChannels response:', resp.status, result);
+    console.log('MailChannels status:', resp.status, 'body:', result);
+    return resp.ok;
   } catch (err) {
-    console.error('Failed to send welcome email:', err.message);
+    console.error('MailChannels error:', err.message);
+    return false;
   }
+}
+
+function welcomeText(email, subscribedAt) {
+  const date = new Date(subscribedAt).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric',
+  });
+  return 'Welcome to ChinaTripBox!\n'
+    + '\n'
+    + 'Hi ' + email.split('@')[0] + ',\n'
+    + '\n'
+    + "You're subscribed to the ChinaTripBox newsletter. Every week you'll get:\n"
+    + '- New city guides & travel tips\n'
+    + '- Policy changes for foreign visitors\n'
+    + '- Tool updates & seasonal advice\n'
+    + '\n'
+    + 'First tip: Set up Alipay before you fly.\n'
+    + 'https://www.chinatripbox.com/posts/alipay-foreign-credit-card-step-by-step/\n'
+    + '\n'
+    + 'Subscribed on ' + date + '.\n'
+    + 'Unsubscribe: https://www.chinatripbox.com/contact/\n';
 }
 
 function welcomeHtml(email, subscribedAt) {
