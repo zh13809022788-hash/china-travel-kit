@@ -61,13 +61,26 @@ const locale = 'en';
   When eating out in China, a few practical tips help: major cities accept Alipay and WeChat Pay everywhere, but cash is useful for small street vendors. English menus are common in tourist areas but having a translation app handy helps at local restaurants. Tipping is not expected in China. Food safety is generally good in popular restaurants, though sticking to busy places with high turnover is wise. For those with dietary restrictions, note that Chinese cooking uses MSG widely, and many dishes contain soybean oil. Vegetarian options exist but communicating clearly helps avoid misunderstandings.
 </p>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+          <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chinese-cuisine" alt="Spicy Sichuan street food dishes at a night market in China" loading="lazy" />
+    <div class="mt-6">
+      <CoverImage name="topic-chinese-cuisine" alt="Spicy Sichuan street food dishes at a night market in China" loading="lazy" />
+    </div>
+
+    <div class="mt-8 max-w-3xl space-y-4 text-lg leading-8 text-gray-600">
+      <p>
+  Chinese cuisine is one of the world’s great culinary traditions, with eight major regional styles. From fiery Sichuan hotpot to delicate Cantonese dim sum, from Beijing’s legendary Peking duck to Xi’an’s hand-pulled noodles — each region offers unique flavors and experiences. As a foreign visitor, you’ll find an incredible range of dining options, from street stalls and noodle shops to high-end restaurants and food courts in every mall. Modern China also offers food delivery apps like Meituan and Ele.me, making it easy to order meals to your hotel. Most cities have international food options too, though the real adventure is diving into local Chinese cuisine.
+      </p>
+      <p>
+  When eating out in China, a few practical tips help: major cities accept Alipay and WeChat Pay everywhere, but cash is useful for small street vendors. English menus are common in tourist areas but having a translation app handy helps at local restaurants. Tipping is not expected in China. Food safety is generally good in popular restaurants, though sticking to busy places with high turnover is wise. For those with dietary restrictions, note that Chinese cooking uses MSG widely, and many dishes contain soybean oil. Vegetarian options exist but communicating clearly helps avoid misunderstandings.
+      </p>
+    </div>
 
     <AdSlot format="banner" />
 
-    <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
+    <section class="mt-8 grid gap-5 md:grid-cols-3 auto-rows-fr" aria-labelledby="food-pathways">
       <h2 id="food-pathways" class="sr-only">Food planning pathways</h2>
       {pathways.map((item) => (
         <a href={item.href} class="card block hover:no-underline">
@@ -86,7 +99,7 @@ const locale = 'en';
             <h2>Food and etiquette articles</h2>
           </div>
         </div>
-        <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="mt-6 grid gap-5 md:grid-cols-2 auto-rows-fr">
           {posts.map((post) => (
             <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
