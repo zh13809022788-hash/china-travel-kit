@@ -1,18 +1,20 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'Convertisseur de tailles de vêtements et de chaussures pour la Chine';
+const title = 'Convertisseur de tailles de vêtements et de chaussures Chine';
 const description =
-  'Convertissez les tailles US, UK et EU en tailles chinoises pour acheter en toute confiance en Chine. Couvre les vêtements et les chaussures pour hommes et femmes.';
+  'Convertissez les tailles américaines, britanniques et européennes de vêtements et de chaussures en tailles chinoises afin de faire vos achats en toute confiance en Chine. Couvre les vêtements et chaussures pour hommes et pour femmes.';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Outil</span>
@@ -44,13 +46,13 @@ const description =
     </div>
 
     <p class="mt-4 text-xs text-gray-400">
-      Les tailles varient selon les marques et les coupes. Les vêtements chinois taillent souvent plus petit que les équivalents occidentaux -
-      en cas de doute, prenez une taille au-dessus ou essayez avant d'acheter. Ces tableaux sont donnés à titre indicatif.
+      Les tailles varient selon les marques et la coupe. Les vêtements chinois taillent souvent plus petit que leurs équivalents occidentaux —
+      en cas de doute, prenez une taille au-dessus ou essayez avant d’acheter. Il s’agit de tableaux de référence généraux.
     </p>
 
     <AffiliateCta
       title="Achetez malin pendant votre voyage"
-      description="Organisez d'abord vos paiements et votre connexion pour pouvoir acheter sans friction dans n'importe quel magasin ou application en Chine."
+      description="Réglez d’abord vos paiements et votre connectivité afin de pouvoir acheter sans difficulté dans n’importe quelle boutique ou application en Chine."
       buttonText="Voir les essentiels de voyage"
       placeholder={AFFILIATE_LINKS.transport}
     />
@@ -59,8 +61,8 @@ const description =
 </BaseLayout>
 
 <script>
-  // Tableaux de conversion de référence. Les vêtements chinois utilisent des repères de taille basés sur la taille/le buste en cm,
-  // souvent simplifiés en tailles numériques ; les chaussures utilisent un dimensionnement en cm basé sur l'EU.
+  // Tableaux de conversion de référence. Les vêtements en Chine utilisent des étiquettes taille/tour de poitrine en cm,
+  // souvent simplifiées en tailles numériques ; les chaussures utilisent un système en cm basé sur les tailles EU.
   const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
     'women-clothing': [
       { cn: '155/80A (XS)', us: '0–2', uk: '4–6', eu: '32–34' },
