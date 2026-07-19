@@ -12,8 +12,15 @@ const description =
   'Comprueba si tu tarjeta de crédito funciona con Alipay y WeChat Pay en China. Consulta compatibilidad, límites, comisiones y configuración por nacionalidad y red de tarjeta.';
 
 const nationalities = [
-  'United States', 'United Kingdom', 'Canada', 'Australia',
-  'Germany', 'France', 'Japan', 'Singapore', 'Other',
+  { value: 'Estados Unidos', label: 'Estados Unidos' },
+  { value: 'Reino Unido', label: 'Reino Unido' },
+  { value: 'Canadá', label: 'Canadá' },
+  { value: 'Australia', label: 'Australia' },
+  { value: 'Alemania', label: 'Alemania' },
+  { value: 'Francia', label: 'Francia' },
+  { value: 'Japón', label: 'Japón' },
+  { value: 'Singapur', label: 'Singapur' },
+  { value: 'Otro', label: 'Otro' },
 ];
 const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
 
@@ -73,7 +80,7 @@ const faqItems = [
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Tu nacionalidad</span>
         <select id="nationality" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          {nationalities.map((n) => <option value={n}>{n}</option>)}
+          {nationalities.map((n) => <option value={n.value}>{n.label}</option>)}
         </select>
       </label>
       <label class="flex flex-col text-sm">
@@ -183,12 +190,12 @@ const faqItems = [
     wechat: { status: string; single: string; daily: string; fee: string; how: string };
   }> = {
     Visa: {
-      alipay: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Añade la tarjeta en Alipay Wallet y verifica el pasaporte' },
-      wechat: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Añade la tarjeta en WeChat Wallet y verifica el pasaporte' },
+      alipay: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Añade la tarjeta en la billetera de Alipay y verifica el pasaporte' },
+      wechat: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Añade la tarjeta en la billetera de WeChat y verifica el pasaporte' },
     },
     Mastercard: {
-      alipay: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Añade la tarjeta en Alipay Wallet y verifica el pasaporte' },
-      wechat: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Añade la tarjeta en WeChat Wallet y verifica el pasaporte' },
+      alipay: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Añade la tarjeta en la billetera de Alipay y verifica el pasaporte' },
+      wechat: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Añade la tarjeta en la billetera de WeChat y verifica el pasaporte' },
     },
     Amex: {
       alipay: { status: 'Parcialmente compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% sobre 200 RMB', how: 'Amex funciona en Alipay en la mayoría de casos; lleva respaldo Visa/MC' },
