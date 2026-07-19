@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../config';
 
-const title = 'Mes applications fonctionneront-elles en Chine ? V\u00e9rificateur de disponibilit\u00e9 des applis';
+const title = 'Mes apps fonctionneront-elles en Chine ? Vérificateur de disponibilité des apps';
 const description =
-  'V\u00e9rifiez si Google, WhatsApp, Instagram et d\u2019autres applis fonctionnent en Chine sans VPN, et d\u00e9couvrez l\u2019alternative locale pour chaque service bloqu\u00e9.';
+  'Vérifiez si Google, WhatsApp, Instagram et d’autres apps fonctionnent en Chine sans VPN — et découvrez l’alternative locale pour chaque service bloqué.';
 
 interface AppInfo {
   name: string;
@@ -19,34 +19,36 @@ interface AppInfo {
 }
 
 const apps: AppInfo[] = [
-  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Bloqu\u00e9 sans VPN.', alt: 'Bing (fonctionne) ou Baidu' },
-  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Se charge, mais les donn\u00e9es sont inexactes ou d\u00e9cal\u00e9es en Chine continentale.', alt: 'Apple Maps, Amap ou Baidu Maps' },
-  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Bloqu\u00e9 sans VPN.', alt: 'Outlook ou une messagerie non Google' },
-  { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Bloqu\u00e9 sans VPN.', alt: 'Bilibili (local)' },
-  { name: 'WhatsApp', category: 'Messagerie', status: 'blocked', note: 'Bloqu\u00e9 sans VPN.', alt: 'WeChat' },
-  { name: 'Facebook', category: 'R\u00e9seaux sociaux', status: 'blocked', note: 'Bloqu\u00e9 sans VPN.', alt: 'Moments sur WeChat / RED' },
-  { name: 'Instagram', category: 'R\u00e9seaux sociaux', status: 'blocked', note: 'Bloqu\u00e9 sans VPN.', alt: 'RED (Xiaohongshu)' },
-  { name: 'X (Twitter)', category: 'R\u00e9seaux sociaux', status: 'blocked', note: 'Bloqu\u00e9 sans VPN.', alt: 'Weibo' },
-  { name: 'Telegram', category: 'Messagerie', status: 'blocked', note: 'Bloqu\u00e9 sans VPN.', alt: 'WeChat' },
-  { name: 'WeChat', category: 'Messagerie', status: 'works', note: 'Fonctionne pleinement, c\u2019est l\u2019application par d\u00e9faut en Chine.' },
-  { name: 'Apple services (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Fonctionnent normalement.' },
-  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: 'Fonctionnent normalement.' },
-  { name: 'Booking.com', category: 'Voyage', status: 'works', note: 'Fonctionne normalement.' },
-  { name: 'Airbnb', category: 'Voyage', status: 'works', note: 'Fonctionne normalement.' },
-  { name: 'Trip.com', category: 'Voyage', status: 'works', note: 'Fonctionne pleinement, excellent pour les trains et les h\u00f4tels.' },
-  { name: 'Alipay', category: 'Paiement', status: 'works', note: 'Fonctionne pleinement et prend en charge les cartes \u00e9trang\u00e8res.' },
-  { name: 'Uber', category: 'Transport', status: 'blocked', note: 'N\u2019est pas op\u00e9rationnel en Chine continentale.', alt: 'DiDi' },
-  { name: 'Netflix', category: 'M\u00e9dias', status: 'blocked', note: 'Non disponible en Chine continentale.', alt: 'Streaming local ou t\u00e9l\u00e9chargement avant le d\u00e9part' },
-  { name: 'Spotify', category: 'M\u00e9dias', status: 'blocked', note: 'Non disponible en Chine continentale.', alt: 'QQ Music / t\u00e9l\u00e9chargement hors ligne au pr\u00e9alable' },
+  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Bloqué sans VPN.', alt: 'Bing (fonctionne) ou Baidu' },
+  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Se charge, mais les données sont inexactes/décalées en Chine continentale.', alt: 'Apple Maps, Amap ou Baidu Maps' },
+  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Bloqué sans VPN.', alt: 'Outlook / un e-mail non-Google' },
+  { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Bloqué sans VPN.', alt: 'Bilibili (local)' },
+  { name: 'WhatsApp', category: 'Messaging', status: 'blocked', note: 'Bloqué sans VPN.', alt: 'WeChat' },
+  { name: 'Facebook', category: 'Social', status: 'blocked', note: 'Bloqué sans VPN.', alt: 'WeChat Moments / RED' },
+  { name: 'Instagram', category: 'Social', status: 'blocked', note: 'Bloqué sans VPN.', alt: 'RED (Xiaohongshu)' },
+  { name: 'X (Twitter)', category: 'Social', status: 'blocked', note: 'Bloqué sans VPN.', alt: 'Weibo' },
+  { name: 'Telegram', category: 'Messaging', status: 'blocked', note: 'Bloqué sans VPN.', alt: 'WeChat' },
+  { name: 'WeChat', category: 'Messaging', status: 'works', note: 'Fonctionne entièrement — c’est l’app par défaut en Chine.' },
+  { name: 'Apple services (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Fonctionne normalement.' },
+  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: 'Fonctionne normalement.' },
+  { name: 'Booking.com', category: 'Travel', status: 'works', note: 'Fonctionne normalement.' },
+  { name: 'Airbnb', category: 'Travel', status: 'works', note: 'Fonctionne normalement.' },
+  { name: 'Trip.com', category: 'Travel', status: 'works', note: 'Fonctionne entièrement — excellent pour les trains et les hôtels.' },
+  { name: 'Alipay', category: 'Payment', status: 'works', note: 'Fonctionne entièrement — prend en charge les cartes étrangères.' },
+  { name: 'Uber', category: 'Transport', status: 'blocked', note: 'N’est pas opérationnel en Chine continentale.', alt: 'DiDi' },
+  { name: 'Netflix', category: 'Media', status: 'blocked', note: 'Non disponible en Chine continentale.', alt: 'Streaming local ou téléchargement à l’avance' },
+  { name: 'Spotify', category: 'Media', status: 'blocked', note: 'Non disponible en Chine continentale.', alt: 'QQ Music / télécharger hors ligne d’abord' },
 ];
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Outil</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Mes applications fonctionneront-elles en Chine&nbsp;?</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Mes apps fonctionneront-elles en Chine ?</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -54,28 +56,24 @@ const apps: AppInfo[] = [
 
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-4">
       <label class="flex flex-col text-sm sm:max-w-sm">
-        <span class="mb-1 font-medium text-gray-700">Rechercher ou filtrer des applis</span>
-        <input
-          id="search"
-          type="text"
-          placeholder="Ex.&nbsp;: WhatsApp, Google, Netflix"
-          class="rounded-lg border border-gray-300 px-3 py-2 text-sm"
-        />
+        <span class="mb-1 font-medium text-gray-700">Rechercher ou filtrer des apps</span>
+        <input id="search" type="text" placeholder="ex. WhatsApp, Google, Netflix"
+          class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
       </label>
       <div class="mt-3 flex flex-wrap gap-2 text-sm">
         <button data-status="all" class="status-filter btn-primary px-3 py-1">Toutes</button>
-        <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">Fonctionne</button>
-        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">Partiel</button>
-        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">Bloqu&eacute;</button>
+        <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Fonctionne</button>
+        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Partiel</button>
+        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Bloqué</button>
       </div>
     </div>
 
     <div id="app-list" class="mt-6 grid gap-3 sm:grid-cols-2"></div>
-    <p id="no-results" class="hidden py-8 text-center text-gray-500">Aucune appli ne correspond &agrave; votre recherche.</p>
+    <p id="no-results" class="hidden py-8 text-center text-gray-500">Aucune app ne correspond à votre recherche.</p>
 
     <AffiliateCta
-      title="Gardez vos applis actives avec une eSIM de voyage"
-      description="Une eSIM de voyage pour la Chine qui contourne les restrictions locales permet &agrave; vos applis habituelles de rester en ligne, sans configuration VPN s&eacute;par&eacute;e."
+      title="Gardez vos apps actives avec une eSIM de voyage"
+      description="Une eSIM de voyage pour la Chine qui contourne les restrictions locales permet à vos apps habituelles de rester en ligne — sans configuration VPN séparée."
       buttonText="Voir les options eSIM"
       placeholder={AFFILIATE_LINKS.esim}
     />
@@ -91,9 +89,9 @@ const apps: AppInfo[] = [
   let activeStatus = 'all';
 
   const badge = {
-    works: { cls: 'bg-green-100 text-green-800', label: 'Fonctionne' },
-    partial: { cls: 'bg-amber-100 text-amber-800', label: 'Partiel' },
-    blocked: { cls: 'bg-red-100 text-red-800', label: 'Bloqu\u00e9' },
+    works: { cls: 'bg-green-100 text-green-800', label: '✅ Fonctionne' },
+    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Partiel' },
+    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Bloqué' },
   };
 
   function render() {
@@ -115,7 +113,7 @@ const apps: AppInfo[] = [
             <span class="whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ${badge[a.status].cls}">${badge[a.status].label}</span>
           </div>
           <p class="mt-2 text-sm text-gray-600">${a.note}</p>
-          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">Utilisez plut\u00f4t :</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
+          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">À utiliser à la place :</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
         </div>`)
       .join('');
 
