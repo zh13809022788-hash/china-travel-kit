@@ -6,7 +6,7 @@ import AdSlot from '../../../components/AdSlot.astro';
 
 const title = 'Dem Fahrer zeigen: Chinesische Adresskarte';
 const description =
-  'Erstelle auf deinem Smartphone eine gut lesbare chinesische Adresskarte für Taxifahrer, Hotelpersonal und Wegbeschreibungen in China. Kein Login, keine App-Installation, keine Speicherung persönlicher Daten.';
+  'Erstelle auf deinem Smartphone eine große chinesische Hinweiskarte für Taxifahrer, Hotelpersonal und Wegfragen in China. Kein Login, keine App-Installation, keine Speicherung persönlicher Daten.';
 ---
 
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
@@ -17,7 +17,7 @@ const description =
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Dem Fahrer zeigen</h1>
       <p class="mt-3 text-lg text-gray-600">
         Erstelle eine große chinesische Karte für Taxis, Fahrdienst-Abholungen, Hotelrezeptionen und
-        Wegfragen. Alles funktioniert direkt im Browser.
+        Wegfragen. Alles läuft in deinem Browser.
       </p>
     </header>
 
@@ -35,8 +35,8 @@ const description =
               placeholder="Füge die chinesische Adresse aus Amap, Trip.com, deiner Hotelbuchung oder von einem Freund ein."
             ></textarea>
             <span class="mt-1 text-xs text-gray-500">
-              Am besten funktioniert es mit dem chinesischen Namen oder der vollständigen chinesischen Adresse.
-              Ortsnamen nur auf Englisch sind für lokale Fahrer oft schwer zu erkennen.
+              Bestes Ergebnis: Füge den chinesischen Namen bzw. die chinesische Adresse ein. Ortsnamen nur auf Englisch
+              können für lokale Fahrer schwer zu erkennen sein.
             </span>
           </label>
 
@@ -46,13 +46,13 @@ const description =
               <option value="route">Bitte folge der Navigation und bringe mich zu dieser Adresse.</option>
               <option value="pickup">Ich warte hier. Bitte rufe mich an oder schreibe mir in der App.</option>
               <option value="hotel">Bitte hilf mir, zu diesem Hotel zu kommen, oder kontaktiere die Rezeption.</option>
-              <option value="stop">Bitte halte hier an, wenn es sicher und erlaubt ist.</option>
-              <option value="receipt">Bitte gib mir wenn möglich eine Quittung.</option>
+              <option value="stop">Bitte halte hier, wenn es sicher und erlaubt ist.</option>
+              <option value="receipt">Bitte gib mir nach Möglichkeit eine Quittung.</option>
             </select>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Zusätzliche Hinweise für den Fahrer</span>
+            <span class="mb-1 font-medium text-gray-700">Zusätzliche Angaben für den Fahrer</span>
             <input
               id="extra"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
@@ -66,14 +66,14 @@ const description =
               id="clear-btn"
               class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400"
             >
-              Zurücksetzen
+              Leeren
             </button>
           </div>
         </div>
 
         <div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-          Dieses Tool bucht keine Fahrten und kontaktiert keine Fahrer. In Notfällen wende dich zuerst
-          an den lokalen Rettungsdienst oder an dein Hotel.
+          Dieses Tool bucht keine Fahrten und kontaktiert keine Fahrer. Wende dich in Notfällen zuerst
+          an lokale Rettungsdienste oder dein Hotel.
         </div>
       </div>
 
@@ -81,11 +81,11 @@ const description =
         <div id="driver-card" class="rounded-xl border border-gray-900 bg-white p-5 shadow-sm">
           <div class="flex items-center justify-between gap-3 border-b border-gray-200 pb-3">
             <div>
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Diesen Bildschirm vorzeigen</p>
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Diesen Bildschirm zeigen</p>
               <h2 class="text-lg font-bold text-gray-900">给司机看的中文小条</h2>
             </div>
             <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
-              Offline nutzbar
+              Offline
             </span>
           </div>
 
@@ -97,7 +97,7 @@ const description =
               id="address-line"
               class="mt-5 whitespace-pre-wrap break-words text-center text-4xl font-black leading-tight text-gray-950 sm:text-6xl"
             >
-              Gib links eine Adresse ein
+              在左侧输入地址
             </p>
             <p id="note-line" class="mt-5 text-center text-2xl font-bold leading-snug text-gray-900 sm:text-3xl">
               请按照导航路线行驶，谢谢。
@@ -113,7 +113,7 @@ const description =
               Vollbild
             </button>
             <a href="/de/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
-              KI um Hilfe bitten
+              KI-Hilfe fragen
             </a>
           </div>
         </div>
@@ -129,7 +129,7 @@ const description =
             Sicher anhalten
           </button>
           <button data-quick="如果找不到我，请在打车软件里发消息。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Schreib mir in der App
+            Mir in der App schreiben
           </button>
         </div>
       </section>
@@ -175,7 +175,7 @@ const description =
   const quickButtons = document.querySelectorAll<HTMLButtonElement>('.quick');
 
   function cardText() {
-    const address = destination?.value.trim() || 'Gib links eine Adresse ein';
+    const address = destination?.value.trim() || '在左侧输入地址';
     const noteText = noteMap[note?.value || 'route'];
     const extraText = extra?.value.trim();
     return [
@@ -190,7 +190,7 @@ const description =
     const address = destination?.value.trim();
     const extraText = extra?.value.trim();
     if (mainLine) mainLine.textContent = '请帮我去这个地址：';
-    if (addressLine) addressLine.textContent = address || 'Gib links eine Adresse ein';
+    if (addressLine) addressLine.textContent = address || '在左侧输入地址';
     if (noteLine) noteLine.textContent = noteMap[note?.value || 'route'];
     if (extraLine) {
       extraLine.textContent = extraText ? `补充说明：${extraText}` : '';
@@ -228,7 +228,7 @@ const description =
     if (!card) return;
     if (!document.fullscreenElement) {
       await card.requestFullscreen?.();
-      fullscreenBtn.textContent = 'Vollbild schließen';
+      fullscreenBtn.textContent = 'Vollbild beenden';
     } else {
       await document.exitFullscreen?.();
       fullscreenBtn.textContent = 'Vollbild';
@@ -237,7 +237,7 @@ const description =
 
   document.addEventListener('fullscreenchange', () => {
     if (!fullscreenBtn) return;
-    fullscreenBtn.textContent = document.fullscreenElement ? 'Vollbild schließen' : 'Vollbild';
+    fullscreenBtn.textContent = document.fullscreenElement ? 'Vollbild beenden' : 'Vollbild';
   });
 
   quickButtons.forEach((button) => {
