@@ -4,21 +4,23 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import ShowToLocal from '../../../components/ShowToLocal.astro';
 import SurvivalChecklist from '../../../components/SurvivalChecklist.astro';
-import survivalKits from '../../../data/survival-kits-de.json';
+import ContextAiBubble from '../../../components/ContextAiBubble.astro';
+import survivalKits from '../../../data/survival-kits.json';
 
-const title = 'China-Notfallset: Übersetzungskarten und Reise-Checklisten';
+const title = 'China-Überlebenskit: Übersetzungskarten und Reise-Checklisten';
 const description =
-  'Interaktive China-Notfallsets für internationale Reisende: Vollbild-Übersetzungskarten, Ankunfts-Checklisten, Karten für Lebensmittelallergien und praktische Hilfsmittel für die Kommunikation vor Ort.';
+  'Interaktive Hilfen für ausländische Besucher in China: große Übersetzungskarten, Checklisten für die Ankunft, Allergiehinweise und praktische Kommunikationstools für unterwegs.';
 ---
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
   <Header locale="de" />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Notfallset</p>
-      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">China-Notfallset</h1>
+      <p class="section-kicker">Überlebenskit</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">China-Überlebenskit</h1>
       <p class="mt-3 text-lg leading-8 text-gray-600">
-        Nutze Vollbild-Übersetzungskarten und gespeicherte Checklisten für Situationen, in denen ein ausführlicher Reiseführer zu unhandlich ist:
-        Ankunft am Flughafen, Hotel-Check-in, Taxi, Restaurant, Allergien und die wichtigsten Erledigungen am ersten Tag.
+        Nutze große Übersetzungskarten und gespeicherte Checklisten für Situationen, in denen ein
+        langer Guide zu langsam wäre: Ankunft am Flughafen, Hotel-Check-in, Taxi, Restaurant,
+        Allergiehinweise und die ersten Schritte am Reisetag.
       </p>
       <div class="mt-5 flex flex-wrap gap-3">
         <a href="#arrival" class="btn-primary">Mit der Ankunft starten</a>
@@ -28,16 +30,16 @@ const description =
 
     <section class="mt-8 grid gap-4 md:grid-cols-3">
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Vollbild-Karten</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Tippe auf eine Karte und zeige den großen chinesischen Text einem Fahrer, dem Hotelpersonal oder dem Restaurantteam.</p>
+        <h2 class="text-lg font-bold text-gray-950">Große Karten fürs Vorzeigen</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Öffne eine Karte im Vollformat und zeige den chinesischen Text direkt Fahrern, Hotelpersonal oder Restaurantmitarbeitern.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Gespeicherte Checklisten</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Dein Fortschritt wird im Browser gespeichert, damit du später genau dort weitermachen kannst, wo du aufgehört hast.</p>
+        <h2 class="text-lg font-bold text-gray-950">Checklisten mit Speicherfunktion</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Der Stand deiner Checklisten bleibt im Browser erhalten, sodass du später genau dort weitermachen kannst.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-5">
-        <h2 class="text-lg font-bold text-gray-950">Kontextbezogener KI-Einstieg</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Nutze den schwebenden Helfer, um die Reisehilfe von ChinaTripBox direkt mit einem passenden Themen-Prompt zu öffnen.</p>
+        <h2 class="text-lg font-bold text-gray-950">Schneller Einstieg per KI-Hilfe</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Mit dem schwebenden Helfer öffnest du die Reisehilfe von ChinaTripBox direkt mit einem passenden Themenvorschlag.</p>
       </div>
     </section>
 
@@ -51,18 +53,19 @@ const description =
             <div class="mt-3 flex flex-wrap gap-2">
               {kit.related_paths.map((path) => (
                 <a href={path} class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-brand-700 hover:border-brand-300 hover:no-underline">
-                  Passender Reiseführer
+                  Passenden Leitfaden öffnen
                 </a>
               ))}
             </div>
           </div>
           <div class="grid gap-5 lg:grid-cols-[1fr_0.85fr]">
-            <ShowToLocal themeId={kit.theme_id} tools={kit.tools} locale="de" />
-            <SurvivalChecklist themeId={kit.theme_id} steps={kit.checklist_steps} locale="de" />
+            <ShowToLocal themeId={kit.theme_id} tools={kit.tools} />
+            <SurvivalChecklist themeId={kit.theme_id} steps={kit.checklist_steps} />
           </div>
         </section>
       ))}
     </div>
   </main>
+  <ContextAiBubble defaultPrompt="Hilf mir dabei, das China-Überlebenskit für Ankunft, Restaurants, Übersetzungskarten und die Checklisten sinnvoll zu nutzen." />
   <Footer />
 </BaseLayout>
