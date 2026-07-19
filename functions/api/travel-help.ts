@@ -78,7 +78,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     } catch { /* ignore invalid json */ }
   }
 
-  if (message.length < 4) {
+  if (message.length < 1) {
     return json({ error: 'Please enter your travel question.' }, { status: 400 });
   }
 

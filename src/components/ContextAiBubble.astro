@@ -327,24 +327,44 @@ async function callDeepSeek(query: string, articles: SearchEntry[]): Promise<voi
         <div class="mt-2 text-[10px] text-gray-400">DeepSeek · ChinaTripBox guides</div>`;
       // Show purchase CTA after AI answer
       addCtaCard(langKey);
+      if (status) status.textContent = 'AI answer ready.';
     } else if (bubble) {
-      bubble.innerHTML = `<div class="font-semibold text-amber-900">Temporarily unavailable</div>
-        <div>Please try again later or email us at <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">zh13809022788@gmail.com</a>.</div>`;
+      const errMsg = data.error || 'AI helper unavailable';
+      bubble.innerHTML = `<div class="font-semibold text-amber-900">Could not answer</div>
+        <div>${escapeHtml(errMsg)}. Please try again later or <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">email us</a>.</div>`;
+      if (status) status.textContent = 'AI helper error.';
     }
-    if (status) status.textContent = 'AI answer ready.';
-  } catch {
+  } catch (e) {
     const bubble = messages?.lastElementChild;
     if (bubble) {
-      bubble.innerHTML = `<div class="font-semibold text-amber-900">Temporarily unavailable</div>
-        <div>Please try again later or <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">email us</a>.</div>`;
+      bubble.innerHTML = `<div class="font-semibold text-amber-900">Network error</div>
+        <div>Could not reach the AI helper. Please try again later or <a href="mailto:zh13809022788@gmail.com" class="font-semibold text-brand-700">email us</a>.</div>`;
     }
-    if (status) status.textContent = 'AI expert unavailable.';
+    if (status) status.textContent = 'Network error.';
   } finally {
     if (submit) submit.disabled = false;
   }
 }
 
 // ---- Main flow: search + DeepSeek ----
+// Greeting detection (don't waste API call for "hi" / "你好")
+const GREETING_PATTERNS = /^(hi|hello|hey|你好|您好|halo|hola|salut|hallo|merhaba|привет|안녕|こんにちは)\W*$/i;
+
+function isGreeting(q: string): boolean {
+  return GREETING_PATTERNS.test(q.trim());
+}
+
+const GREETING_REPLIES: Record<string, string> = {
+  en: 'Hello! I can help you with China travel questions — payments, eSIM, transport, and more. What would you like to know?',
+  'zh-TW': '你好！我可以幫你解答中國旅行的問題——支付、eSIM、交通、應用程式設定等。請問你想了解什麼？',
+  ja: 'こんにちは！中国の旅行について、決済、eSIM、交通、アプリ設定など、なんでもお気軽にどうぞ。',
+  ko: '안녕하세요! 중국 여행 관련 질문 (결제, eSIM, 교통, 앱 설정 등)에 답해드릴 수 있습니다. 무엇이든 물어보세요!',
+  ru: 'Привет! Могу помочь с вопросами о поездке в Китай — оплата, eSIM, транспорт, приложения. Что бы вы хотели узнать?',
+  fr: 'Bonjour ! Je peux répondre à vos questions sur la Chine — paiements, eSIM, transport, applications. Que souhaitez-vous savoir ?',
+  de: 'Hallo! Ich kann Ihnen bei Fragen zu China-Reisen helfen — Zahlung, eSIM, Transport, Apps. Was möchten Sie wissen?',
+  es: '¡Hola! Puedo ayudarte con preguntas sobre viajes a China — pagos, eSIM, transporte, aplicaciones. ¿Qué te gustaría saber?',
+};
+
 async function handleQuery(query: string): Promise<void> {
   const trimmed = query.trim();
   if (!trimmed) return;
@@ -354,6 +374,15 @@ async function handleQuery(query: string): Promise<void> {
 
   // Show user message
   addBubble(escapeHtml(trimmed), true);
+
+  // Quick greeting handler — skip API call
+  if (isGreeting(trimmed)) {
+    const langKey = currentLang === 'zh-tw' ? 'zh-TW' : currentLang;
+    const reply = GREETING_REPLIES[langKey] || GREETING_REPLIES['en'];
+    addBubble(`<div class="font-semibold text-gray-900 mb-1">${reply.split('。')[0].split('!')[0]}</div><div>${escapeHtml(reply)}</div>`);
+    if (status) status.textContent = 'Ready.';
+    return;
+  }
 
   // Search local index (current language only)
   const idx = await loadIndex();
