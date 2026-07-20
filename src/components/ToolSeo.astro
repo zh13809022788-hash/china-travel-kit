@@ -1,0 +1,55 @@
+---
+// ToolSeo.astro — Adds SEO content below interactive tool components.
+// Every tool page imports this once and passes title + description + faqs + relatedLinks.
+export interface Props {
+  toolName: string;
+  toolDescription: string;
+  howToUse: string[];
+  relatedLinks: { title: string; href: string }[];
+  faqs: { question: string; answer: string }[];
+}
+
+const { toolName, toolDescription, howToUse, relatedLinks, faqs } = Astro.props;
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
+---
+
+<!-- Visible SEO content -->
+<div class="mt-16 border-t border-gray-200 pt-12 prose-content article-body">
+  <h2>About This Tool</h2>
+  <p>{toolDescription}</p>
+
+  <h2>How to Use This Tool</h2>
+  <ol class="list-decimal space-y-2 pl-5">
+    {howToUse.map((step) => <li>{step}</li>)}
+  </ol>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="mt-4 space-y-6">
+    {faqs.map((f) => (
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="text-base font-semibold text-gray-900" itemprop="name">{f.question}</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="mt-1 text-sm text-gray-700" itemprop="text">{f.answer}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <h2>Related Guides</h2>
+  <ul class="space-y-1">
+    {relatedLinks.map((link) => (
+      <li><a href={link.href} class="text-brand-600 hover:underline">{link.title}</a></li>
+    ))}
+  </ul>
+</div>
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

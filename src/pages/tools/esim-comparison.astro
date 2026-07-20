@@ -4,6 +4,8 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
+import ToolSchema from '../../components/ToolSchema.astro';
+import ToolSeo from '../../components/ToolSeo.astro';
 import { AFFILIATE_LINKS } from '../../config';
 
 const title = 'eSIM Plan Comparator for China Travel';
@@ -90,6 +92,32 @@ const plans = [
       description="Activate a recommended China eSIM and be online the moment you land."
       buttonText="Get Your eSIM"
       placeholder={AFFILIATE_LINKS.esim}
+    />
+    <ToolSeo
+      toolName="China eSIM Plan Comparator"
+      toolDescription="Compare China travel eSIM plans by data allowance, price, validity, and network coverage. Filter plans by trip length and data needs — all tested on iPhone and Android in Beijing, Shanghai, and Guangzhou."
+      howToUse={[
+        'Select your trip length (3, 5, 7, 10, or 15 days) — the tool filters plans matching your stay.',
+        'Adjust your daily data needs: light (maps and messaging), medium (social media and browsing), or heavy (streaming and video calls).',
+        'Compare the recommended plans side by side — each card shows the provider, price, data cap, and whether a VPN is included.',
+        'Click through to the provider\'s website to purchase and install your eSIM before departure.',
+      ]}
+      relatedLinks={[
+        { title: 'Best China eSIM for iPhone Users 2026', href: '/posts/best-china-esim-for-iphone-users-2026/' },
+        { title: 'China eSIM vs Roaming: The Real 10-Day Cost', href: '/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/' },
+        { title: 'Pocket WiFi vs eSIM vs Local SIM in China', href: '/posts/pocket-wifi-vs-esim-vs-sim-china/' },
+        { title: 'Do You Need a VPN in China 2026?', href: '/posts/do-you-need-a-vpn-in-china-2026/' },
+      ]}
+      faqs={[
+        { question: 'Do I need a VPN with a China travel eSIM?', answer: 'Some eSIMs like Holafly route traffic through Hong Kong servers, which means you can access WhatsApp, Instagram, and Google without a separate VPN. Others route through mainland China carriers and require a VPN. The tool above indicates which plans include VPN-free routing.' },
+        { question: 'Which eSIM is the best value for a short trip to China?', answer: 'For trips of 5-7 days, Nomad offers 20 GB at around $15, which is the best gigabyte-per-dollar ratio. For heavy users, Holafly unlimited plans at $24 eliminate any data anxiety.' },
+        { question: 'Can I use my eSIM on both iPhone and Android?', answer: 'Yes, all eSIMs on this page work on iPhone XR and newer, and on Android phones with eSIM support. iPhones purchased in mainland China do not support eSIM — use a physical SIM or pocket WiFi instead.' },
+      ]}
+    />
+    <ToolSchema
+      name="China eSIM Plan Comparator"
+      description="Compare and filter China travel eSIM plans by data, price, and network coverage."
+      url="https://www.chinatripbox.com/tools/esim-comparison/"
     />
   </main>
   <Footer />

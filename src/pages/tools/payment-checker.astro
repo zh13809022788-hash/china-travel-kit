@@ -6,6 +6,8 @@ import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
 import FaqSection from '../../components/FaqSection.astro';
+import ToolSchema from '../../components/ToolSchema.astro';
+import ToolSeo from '../../components/ToolSeo.astro';
 
 const title = 'Payment Card Compatibility Checker for China';
 const description =
@@ -171,6 +173,33 @@ const faqItems = [
     </section>
 
     <FaqSection items={faqItems} title="Payment checker FAQ" />
+    <ToolSeo
+      toolName="Payment Card Compatibility Checker"
+      toolDescription="Instantly check if your foreign credit card works with Alipay, WeChat Pay, and directly at Chinese merchants. See support status by your nationality and card network — Visa, Mastercard, Amex, and Discover."
+      howToUse={[
+        'Select your country from the dropdown — this determines which payment apps are available for your nationality.',
+        'Choose your card type: Visa, Mastercard, American Express, or Discover. Different networks have different support levels.',
+        'See your result instantly: green means fully supported, yellow means partial or limited, red means the card will not work.',
+        'Follow the linked setup guides to configure Alipay or WeChat Pay before your trip.',
+      ]}
+      relatedLinks={[
+        { title: 'How to Pay in China 2026: Alipay, WeChat Pay and Cash Ranked', href: '/posts/how-to-pay-in-china-tourist-guide/' },
+        { title: 'Alipay for Foreigners: Link a Credit Card Step by Step', href: '/posts/alipay-foreign-credit-card-step-by-step/' },
+        { title: 'WeChat Pay for Foreign Visitors 2026', href: '/posts/wechat-pay-foreign-visitors-guide/' },
+        { title: 'Does Apple Pay Work in China?', href: '/posts/apple-pay-google-pay-in-china-what-really-works/' },
+        { title: 'How Much Cash to Bring to China', href: '/posts/how-much-cash-to-bring-to-china/' },
+      ]}
+      faqs={[
+        { question: 'Can I use my foreign Visa card in China?', answer: 'Yes, foreign Visa cards can be linked to Alipay for QR code payments at millions of Chinese stores. Direct card use is limited to international hotels and major department stores. Mastercard works similarly; Amex and Discover have very limited acceptance.' },
+        { question: 'Do I need a Chinese bank account to use Alipay?', answer: 'No. As of 2026, Alipay allows foreign visitors to register with a foreign passport and link a Visa or Mastercard without needing a Chinese bank account. WeChat Pay requires a Chinese bank account for full payment functionality.' },
+        { question: 'What happens if Alipay stops working during my trip?', answer: 'Always carry a backup: keep at least 500 RMB in cash, load a second card into Alipay as a backup, and have WeChat installed (even without payments, it works for messaging and digital menus).' },
+      ]}
+    />
+    <ToolSchema
+      name="Payment Card Compatibility Checker"
+      description="Check if your foreign credit card works with Alipay and WeChat Pay in China by nationality and card network."
+      url="https://www.chinatripbox.com/tools/payment-checker/"
+    />
   </main>
   <Footer />
 </BaseLayout>
