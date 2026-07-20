@@ -25,19 +25,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-      - name: Purge Cloudflare Cache
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ZONE: f11bf43f0aa363271e2e7f9fe654b4d9
-        run: |
-          echo "Purging Cloudflare cache..."
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
-            "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" \
-            -H "Authorization: Bearer $CF_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d '{"purge_everything":true}')
-          if [ "$STATUS" = "200" ]; then
-            echo "✅ Cloudflare cache purged"
-          else
-            echo "⚠️ Cloudflare purge returned $STATUS (non-critical, ignoring)"
-          fi
