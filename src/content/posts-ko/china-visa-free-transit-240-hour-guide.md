@@ -17,7 +17,7 @@ faqs:
   - question: "항공편이 지연되어 240시간을 초과하면 어떻게 되나요?"
     answer: "초과 체류는 위반에 해당합니다. 240시간 제한이 만료되기 전에 중국을 떠나야 합니다. 항공편이 지연된 경우 즉시 출입국 관리 당국에 연락해 안내를 받으세요."
 cover: "topic-visa-transit"
-coverAlt: ""International airport terminal with passengers walking toward immigration""
+coverAlt: "International airport terminal with passengers walking toward immigration"
 ---
 
 240시간 무비자 경유 제도는 많은 방문객이 비자 신청 없이 중국을 방문할 수 있는 가장 큰 이유입니다. 하지만 항공사 웹사이트나 대사관 공지에 나온 규정이 항상 명확한 것은 아닙니다. 아래에서 이 제도가 정확히 어떻게 적용되는지, 누가 이용할 수 있는지, 어디까지 갈 수 있는지 정리했습니다.

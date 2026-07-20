@@ -27,7 +27,7 @@ faqs:
   - question: "中国ビザは香港とマカオでも有効ですか？"
     answer: "いいえ。中国本土のビザは、香港またはマカオへの入境には有効ではありません。これらは別個のビザ政策を持つ特別行政区です。旅行中に香港またはマカオを訪れる予定がある場合は、それぞれの入境要件を別途確認してください。"
 cover: "topic-visa-free"
-coverAlt: ""Chinese visa page in a passport with entry and exit stamps""
+coverAlt: "Chinese visa page in a passport with entry and exit stamps"
 ---
 
 ## はじめに

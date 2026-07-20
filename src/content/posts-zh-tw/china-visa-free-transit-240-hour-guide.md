@@ -17,7 +17,7 @@ faqs:
   - question: "如果我的航班延誤，導致我超過 240 小時，會怎麼樣？"
     answer: "逾期停留屬於違規。你應在 240 小時期限屆滿前離開中國。如果你的航班延誤，請立即聯絡移民管理機關以取得指引。"
 cover: "topic-visa-transit"
-coverAlt: ""International airport terminal with passengers walking toward immigration""
+coverAlt: "International airport terminal with passengers walking toward immigration"
 ---
 
 240 小時過境免簽，是許多旅客不用申請簽證也能造訪中國的主要原因。不過，航空公司網站或大使館公告上的規則不一定總是清楚。以下會完整說明它如何運作、哪些人符合資格，以及你可以去哪裡。

@@ -17,7 +17,7 @@ faqs:
   - question: "중국에서 어떤 내비게이션 앱이 가장 잘 작동하나요?"
     answer: "Google Maps는 차단되어 있습니다. Apple Maps를 사용하거나 Baidu Maps 또는 Gaode Maps를 다운로드하세요. 이 앱들은 영어 인터페이스를 제공하며 현지 주소에 더 정확합니다."
 cover: "topic-packing-checklist"
-coverAlt: ""Tourist checking apps on smartphone while planning China trip""
+coverAlt: "Tourist checking apps on smartphone while planning China trip"
 ---
 
 중국에 가려고 하시는군요. 출발 전에 앱을 다운로드해야 한다는 말은 들어보셨을 겁니다. 그런데 어떤 앱이 필요할까요? 그리고 실제로 중국 안에서 제대로 작동하는 앱은 무엇일까요?

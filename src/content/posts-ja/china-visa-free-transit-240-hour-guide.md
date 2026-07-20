@@ -17,7 +17,7 @@ faqs:
   - question: "フライトが遅延して240時間を超えた場合はどうなりますか？"
     answer: "滞在超過は違反となります。240時間の期限が切れる前に中国を出国する必要があります。フライトが遅延した場合は、直ちに出入国管理当局に連絡して指示を受けてください。"
 cover: "topic-visa-transit"
-coverAlt: ""International airport terminal with passengers walking toward immigration""
+coverAlt: "International airport terminal with passengers walking toward immigration"
 ---
 
 240時間のビザなしトランジットは、多くの旅行者がビザ申請なしで中国を訪れられる主な理由です。ただし、そのルールは航空会社のウェブサイトや大使館の案内だけでは必ずしも明確ではありません。ここでは、仕組み、対象者、行ける場所を具体的に説明します。

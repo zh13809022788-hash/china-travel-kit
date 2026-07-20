@@ -17,7 +17,7 @@ faqs:
   - question: "中国ではどのナビゲーションアプリが最も使いやすいですか？"
     answer: "Google Mapsはブロックされています。Apple Mapsを使うか、Baidu MapsまたはGaode Mapsをダウンロードしてください。これらは英語インターフェースがあり、現地の住所についてより正確です。"
 cover: "topic-packing-checklist"
-coverAlt: ""Tourist checking apps on smartphone while planning China trip""
+coverAlt: "Tourist checking apps on smartphone while planning China trip"
 ---
 
 中国へ行く予定なのですね。出発前にアプリをダウンロードしておく必要があると聞いたことがあるかもしれません。でも、どのアプリが必要なのでしょうか？そして、中国国内に入ってから実際に使えるものは何なのでしょうか？

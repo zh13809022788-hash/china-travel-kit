@@ -17,7 +17,7 @@ faqs:
   - question: "eSIMは中国到着前と到着後のどちらに購入すべきですか？"
     answer: "必ず出発前にeSIMを購入し、インストールしてください。多くのプロバイダーでは、制限のないインターネットアクセスがあるうちにeSIMプロファイルをダウンロードする必要があります。"
 cover: "topic-esim"
-coverAlt: ""iPhone showing eSIM setup screen with China mobile data options""
+coverAlt: "iPhone showing eSIM setup screen with China mobile data options"
 ---
 
 iPhoneを持って中国へ旅行するなら、eSIMに関する答えはシンプルです。はい、使えます。ただし、どのeSIMを選ぶかによって、速度、安定性、そして道順が必要なときにアプリがきちんと読み込まれるかどうかに、はっきり差が出ます。

@@ -2,7 +2,7 @@
 title: "How to Set Up a VPN for China Travel 2026: Step by Step Guide (Before You Go)"
 description: "Complete step-by-step guide to installing and using a VPN in China in 2026 — what to download before you leave, which protocols work past the Great Firewall, and how to avoid common setup mistakes that leave you without internet."
 pubDate: 2026-07-20
-category: internet
+category: essentials
 tags: ["vpn", "internet access", "great firewall", "china internet", "travel setup"]
 cover: "topic-vpn"
 coverAlt: "Smartphone showing VPN connected status with map of China in background"

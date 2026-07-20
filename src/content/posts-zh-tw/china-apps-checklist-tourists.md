@@ -17,7 +17,7 @@ faqs:
   - question: "哪個導航應用程式在中國最好用？"
     answer: "Google Maps 被封鎖。請使用 Apple Maps，或下載 Baidu Maps 或 Gaode Maps——它們有英文介面，且對當地地址更準確。"
 cover: "topic-packing-checklist"
-coverAlt: ""Tourist checking apps on smartphone while planning China trip""
+coverAlt: "Tourist checking apps on smartphone while planning China trip"
 ---
 
 所以你要去中國了。你聽說出發前需要先下載一些 App，但到底要下載哪些？到了中國境內之後，哪些又真的能用？

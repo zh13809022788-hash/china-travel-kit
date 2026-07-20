@@ -17,7 +17,7 @@ faqs:
   - question: "我應該在抵達中國前還是之後購買 eSIM？"
     answer: "務必在出發前購買並安裝 eSIM。許多供應商要求你在仍可不受限制地上網時下載 eSIM 設定檔。"
 cover: "topic-esim"
-coverAlt: ""iPhone showing eSIM setup screen with China mobile data options""
+coverAlt: "iPhone showing eSIM setup screen with China mobile data options"
 ---
 
 如果你使用 iPhone 並準備前往中國旅行，eSIM 這個問題其實很簡單：可以用。但你選哪一家，會實際影響速度、穩定性，以及當你需要查路線時，App 到底能不能順利載入。
