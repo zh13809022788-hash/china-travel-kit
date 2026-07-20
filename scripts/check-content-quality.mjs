@@ -1,8 +1,11 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const postsDir = join(process.cwd(), 'src', 'content', 'posts');
+const contentDir = join(process.cwd(), 'src', 'content');
 const strict = process.argv.includes('--strict');
+const LANGUAGE_DIRS = ['posts', 'posts-de', 'posts-es', 'posts-fr', 'posts-ja', 'posts-ko', 'posts-ru', 'posts-zh-tw', 'posts-th', 'posts-ms', 'posts-vi'];
+let files = [];
+for (const dir of LANGUAGE_DIRS) { const fullPath = join(contentDir, dir); try { files.push(...readdirSync(fullPath).filter((f) => f.endsWith('.md')).map((f) => join(dir, f))); } catch {} }
 const requiredFields = ['title', 'description', 'pubDate', 'category', 'tags'];
 const allowedCategories = new Set(['payment', 'esim', 'transport', 'essentials', 'food']);
 const issues = [];
@@ -39,7 +42,7 @@ function wordCount(markdown) {
   return (markdown.match(/\b[A-Za-z][A-Za-z0-9'-]*\b/g) || []).length;
 }
 
-const files = readdirSync(postsDir).filter((file) => file.endsWith('.md'));
+
 
 for (const file of files) {
   const source = readFileSync(join(postsDir, file), 'utf8');
