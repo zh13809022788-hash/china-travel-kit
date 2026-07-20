@@ -13,7 +13,7 @@ const posts = (await getCollection('posts-zh-tw'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = '中國 eSIM 與網路使用指南：落地立即連線';
-const description = '比較並設定最適合中國旅遊的 eSIM 數據方案。一下飛機就能上網，無需更換實體 SIM 卡。';
+const description = 'เปรียบเทียบและตั้งค่าแผนข้อมูล eSIM ที่ดีที่สุดสำหรับการเดินทางในจีน เชื่อมต่อได้ทันทีที่เดินทางถึง ไม่ต้องเปลี่ยนซิมจริง';
 
 const connectionChoices = [
   {
@@ -36,11 +36,11 @@ const internetTools = [
   { href: '/zh-tw/posts/internet-access-china-apps-that-work-2026/', title: '中國上網攻略', desc: '出發前先了解應用程式使用情況、VPN 預期，以及實用設定方式。' },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'zh-tw';
+const locale = 'th';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
-  <Header locale="zh-TW" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="th">
+  <Header locale="th" />
   <main class="container-page py-10">
     <header>
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">eSIM 網路連線</span>
@@ -49,6 +49,16 @@ const locale = 'zh-tw';
     </header>
 
     <CoverImage name="hub-esim" alt="中國旅遊可選擇的行動網路與數據連線方式" loading="lazy" />
+
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+  การเชื่อมต่อออนไลน์ในจีนเป็นปัจจัยสำคัญที่สุดต่อคุณภาพการเดินทาง เพราะแอปที่มีประโยชน์เกือบทุกอย่าง — แผนที่ การแปล การเรียก車 การชำระเงิน ตั๋วรถไฟ — ล้วนต้องการการเชื่อมต่อข้อมูล ข่าวดีคือด้วย eSIM พื้นฐาน คุณสามารถเดินทางถึงปักกิ่งและมีโทรศัพท์ที่ใช้งานได้ภายในห้านาที ข่าวร้ายคือไม่ใช่ทุกแผนที่จะทำงานเหมือนกันเมื่อคุณข้ามพรมแดน ดังนั้นการตั้งค่าก่อนเดินทางจึงดีกว่าการจัดการที่สนามบิน
+      </p>
+      <p>
+  คู่มือด้านล่างเปรียบเทียบแผนข้อมูล eSIM โรมมิ่งระหว่างประเทศ Pocket Wi-Fi และซิมการ์ดจริง พร้อมการเปรียบเทียบต้นทุน 10 วันจริง และคำแนะนำสำหรับกรณีที่คุณพบว่าแผนของคุณถูกจำกัดความเร็วทันทีที่เดินทางถึง
+      </p>
+    </div>
 
     <AdSlot format="banner" />
 

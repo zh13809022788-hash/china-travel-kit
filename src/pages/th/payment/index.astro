@@ -27,11 +27,11 @@ const paymentTools = [
   { href: '/zh-tw/tools/currency-converter/', title: '人民幣匯率換算工具', desc: '換算成人民幣價格，快速了解日常花費。' },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'zh-tw';
+const locale = 'th';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
-  <Header locale="zh-TW" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="th">
+  <Header locale="th" />
   <main class="container-page py-10">
     <header>
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">付款</span>
@@ -40,6 +40,16 @@ const locale = 'zh-tw';
     </header>
 
     <CoverImage name="topic-how-to-pay" alt="以智慧型手機展示中國旅遊付款方式的行動支付設定畫面" loading="lazy" />
+
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+  การชำระเงินในจีนในฐานะนักท่องเที่ยวต่างชาติเคยหมายถึงการพกเงินสด RMB เป็นกองหนาและหวังว่าคนขับแท็กซี่จะมีเงินทอน ยุคสมัยนั้นสิ้นสุดลงแล้ว ทุกวันนี้ ร้านค้า รถไฟฟ้าใต้ดิน ร้านอาหาร และร้านสะดวกซื้อทุกแห่งในเมืองใหญ่ของจีนรับ Alipay และ WeChat Pay การตั้งค่าทั้งหมดตั้งแต่ติดตั้งแอปไปจนถึงเชื่อมบัตรต่างประเทศใช้เวลาประมาณ 15 นาที หากทำก่อนเดินทาง เคล็ดลับคือทำก่อนเดินทาง ไม่ใช่หลังจากมาถึง เพราะการยืนยันตัวตนในกระเป๋าเงินดิจิทัลบางครั้งอาจใช้เวลาหนึ่งถึงสองวัน
+      </p>
+      <p>
+  คู่มือด้านล่างอธิบายวิธีการใช้กระเป๋าเงินหลักสองประเภท วิธีเชื่อมบัตร Visa หรือ Mastercard เมื่อใดควรใช้บัตรต่างประเทศโดยตรง และควรพกเงินสดสำรองเท่าใด เริ่มต้นด้วยคำแนะนำทีละขั้นตอนสำหรับ Alipay หากคุณไม่เคยใช้แอปจีนมาก่อน เพราะครอบคลุมขั้นตอนการยืนยันตัวตนที่เป็นอุปสรรค最常见ที่สุดสำหรับนักท่องเที่ยวต่างชาติ
+      </p>
+    </div>
 
     <AdSlot format="banner" />
 

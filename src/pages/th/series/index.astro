@@ -4,7 +4,7 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
 const title = '中國旅遊內容系列';
-const description = '透過五個主題系列探索中國：美食、歷史、現代生活、自然與文化；每個系列都為啟發並協助外國旅客而設計。';
+const description = 'บทความชุดเกี่ยวกับวัฒนธรรมและประวัติศาสตร์จีน';
 
 const seriesList = [
   {
@@ -39,14 +39,14 @@ const seriesList = [
   },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'zh-tw';
+const locale = 'th';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
-  <Header locale="zh-TW" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="th">
+  <Header locale="th" />
   <main class="container-page py-10">
     <header>
-      <p class="section-kicker">內容系列</p>
+      <p class="section-kicker">บทความชุด</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>

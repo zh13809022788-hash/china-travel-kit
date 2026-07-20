@@ -13,13 +13,13 @@ const posts = (await getCollection('posts-zh-tw'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = '中國旅行規劃指南：簽證、時間與行前準備';
-const description = '安心規劃中國之旅：簽證與入境規定、最佳旅遊時間、行李準備、安全事項，以及出發前該安排的一切。';
+const description = 'วางแผนการเดินทางสู่จีนอย่างมั่นใจ: วีซ่าและกฎการเข้าเมือง ช่วงเวลาที่ดีที่สุดในการเที่ยว สิ่งที่ต้องเตรียม ความปลอดภัย และทุกอย่างที่ต้องจัดการก่อนออกเดินทาง';
 import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'zh-tw';
+const locale = 'th';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
-  <Header locale="zh-TW" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="th">
+  <Header locale="th" />
   <main class="container-page py-10">
     <header>
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">行前規劃</span>
@@ -28,6 +28,16 @@ const locale = 'zh-tw';
     </header>
 
     <CoverImage name="hub-essentials" alt="中國旅行必備物品與行前規劃裝備" loading="lazy" />
+
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+  ก่อนขึ้นเครื่อง มีการตัดสินใจสองสามอย่างที่กำหนดว่าสองสามวันแรกในจีนจะราบรื่นเพียงใด วีซ่า แอปชำระเงิน eSIM ความคาดหวังเรื่อง VPN การเตรียมกระเป๋า และรายละเอียดมารยาทเล็กๆ น้อยๆ อย่างการให้ทิปและการต่อคิว ล้วนมีผลกระทบอย่างมากต่อการเดินทางจริง หน้านี้รวบรวมสิ่งที่นักเดินทางทุกคนต้องคิดให้รอบคอบก่อนออกเดินทาง
+      </p>
+      <p>
+  คุณสามารถอ่านคู่มือด้านล่างในลำดับใดก็ได้ นักเดินทางส่วนใหญ่สามารถจัดการการตั้งค่าให้เสร็จภายในบ่ายวันเดียว โดยใช้เพียงโทรศัพท์และร้านค้าแอปที่เกี่ยวข้อง แต่การเริ่มต้นแต่เนิ่นๆ ช่วยให้คุณมีเวลาสำรองในกรณีที่ต้องเปลี่ยนบัตรหรือขั้นตอนการยืนยันใช้เวลาหลายวัน
+      </p>
+    </div>
 
     <AdSlot format="banner" />
 
