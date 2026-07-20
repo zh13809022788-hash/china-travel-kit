@@ -1,112 +1,127 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-const title = 'About ChinaTripBox';
+const title = 'ChinaTripBoxについて';
 const description =
-  'ChinaTripBox provides practical China travel guides and 1-on-1 help for foreign visitors. Built by a team with roots at Tujia, Airbnb, Ctrip, Meituan, and Alibaba.';
+  'ChinaTripBoxは、海外からの旅行者向けに実用的な中国旅行ガイドと1対1のサポートを提供しています。Tujia、Airbnb、Ctrip、Meituan、Alibabaにルーツを持つチームによって運営されています。';
 ---
 
-<!-- TODO: This page needs Codex-native translation. Currently uses English as placeholder. -->
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
-  <Header locale="ja" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
 
+      <!-- Hero -->
       <div class="mb-10 text-center">
         <img src="/images/logo-wordmark.png?v=2" alt="ChinaTripBox" class="mx-auto h-10 w-auto" />
-        <h1 class="mt-5 text-3xl font-bold text-gray-900">About Us</h1>
+        <h1 class="mt-5 text-3xl font-bold text-gray-900">私たちについて</h1>
         <p class="mx-auto mt-2 max-w-xl text-base leading-relaxed text-gray-600">
-          Practical China travel resources and services — built by a team of travel-tech veterans.
+          中国旅行に役立つ実用的な情報とサービスを、旅行テック業界の経験豊富なチームがお届けします。
         </p>
       </div>
 
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">What We Do</h2>
+      <!-- What We Do -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">私たちの取り組み</h2>
       <p class="mt-3">
-        ChinaTripBox provides free, practical China travel guides and tools — covering
-        payments, internet access, transport, visas, and everyday logistics — so foreign
-        visitors can solve the real problems of traveling to China.
+        ChinaTripBoxは、決済、インターネット接続、交通、ビザ、日常的な移動や手配までを網羅した、
+        無料で実用的な中国旅行ガイドとツールを提供し、海外からの旅行者が中国旅行で直面する
+        現実的な問題を解決できるよう支援しています。
       </p>
       <p>
-        When free guides and tools aren't enough, we also offer 1-on-1 human assistance.
-        Whether it's trip planning, payment setup troubleshooting, or complex visa and
-        transport questions, a real person works with your specific situation to provide
-        targeted advice.
+        無料のガイドやツールだけでは足りない場合には、1対1の人的サポートも提供しています。
+        旅行計画の相談、決済設定のトラブル対応、複雑なビザや交通に関する質問まで、
+        実際の担当者がそれぞれの状況に合わせて、的確なアドバイスを行います。
       </p>
 
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">Who We Are</h2>
+      <!-- Who We Are -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">私たちについて</h2>
       <p class="mt-3">
-        A professional team with rigorous editorial standards. ChinaTripBox's core members
-        come from <strong>Tujia</strong>, <strong>Airbnb</strong>, <strong>Ctrip</strong>,
-        <strong>Meituan</strong>, and <strong>Alibaba</strong> — spanning shared accommodation,
-        OTA, lifestyle services, and e-commerce.
+        厳格な編集基準を持つプロフェッショナルチームです。ChinaTripBoxの中核メンバーは
+        <strong>Tujia</strong>、<strong>Airbnb</strong>、<strong>Ctrip</strong>、
+        <strong>Meituan</strong>、<strong>Alibaba</strong>の出身で、
+        民泊、OTA、ライフスタイルサービス、eコマースといった分野にまたがる経験を持っています。
       </p>
 
-      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-emerald-200 bg-emerald-50 p-6 sm:flex-row">
-        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-emerald-600">
+      <!-- Team Card -->
+      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-brand-100 bg-brand-50 p-6 sm:flex-row">
+        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-brand-400">
           <img src="/images/howie.jpg" alt="Howie" class="h-full w-full object-cover" />
         </div>
         <div class="flex-1">
-          <p class="font-semibold text-emerald-700">Founder — Howie</p>
+          <p class="font-semibold text-brand-700">創業者 &mdash; Howie</p>
           <p class="mt-2 text-sm leading-relaxed text-gray-700">
-            Howie was a founding team member of <strong>Tujia (途家网)</strong>, China's
-            largest vacation rental platform, backed by Sequoia Capital, Ctrip, and HomeAway
-            with over $400M in funding.
+            Howieは、<strong>Tujia (途家网)</strong>の創業チームメンバーの一人でした。Tujiaは中国最大級の
+            バケーションレンタルプラットフォームで、Sequoia Capital、Ctrip、HomeAwayの出資を受け、
+            累計4億ドル超の資金調達を実現しています。
           </p>
           <p class="mt-2 text-sm leading-relaxed text-gray-700">
-            Beyond Tujia, our core team's backgrounds include Airbnb China, Ctrip product
-            and operations, Meituan's hotel and travel division, and Alibaba's Fliggy.
-            Together, we have over fifteen years of hands-on experience across China's
-            travel-tech ecosystem — from payments and transport to accommodation and
-            local lifestyle services.
+            Tujiaに加えて、私たちの中核チームはAirbnb China、Ctripのプロダクトおよびオペレーション、
+            Meituanのホテル・旅行部門、AlibabaのFliggyなどで経験を積んできました。
+            決済や交通から宿泊、現地ライフスタイルサービスに至るまで、
+            中国の旅行テック業界において15年以上の実務経験を重ねています。
           </p>
         </div>
       </div>
 
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">Our Approach</h2>
+      <!-- Our Approach -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">私たちのアプローチ</h2>
       <p class="mt-3">
-        We operate as a lean, AI-assisted content and service studio, where free resources
-        and paid services complement each other.
+        私たちは、無料リソースと有料サービスが相互に補完し合う、AI支援型の少数精鋭コンテンツ・サービススタジオとして運営しています。
       </p>
       <ol class="mt-4 list-inside list-decimal space-y-3 text-gray-700">
-        <li><strong>Free resources demonstrate expertise.</strong> Guides, tools, and checkers let visitors solve common problems on their own while showcasing the quality of our work.</li>
-        <li><strong>AI helps us scale and stay current.</strong> We use AI to track regulatory changes, optimize content, and keep information accurate in near real time.</li>
-        <li><strong>1-on-1 human service for complex cases.</strong> When self-service isn't enough, a real person provides tailored advice based on your specific situation.</li>
+        <li>
+          <strong>無料リソースで専門性を示します。</strong> ガイド、ツール、各種チェッカーによって、
+          旅行者はよくある問題を自力で解決できる一方で、私たちの仕事の質も実感できます。
+        </li>
+        <li>
+          <strong>AIを活用して拡張性と最新性を保ちます。</strong> AIを使って制度変更を追跡し、
+          コンテンツを最適化し、ほぼリアルタイムで情報の正確性を維持しています。
+        </li>
+        <li>
+          <strong>複雑なケースには1対1の人的サービスを提供します。</strong> セルフサービスだけでは
+          足りない場合、実際の担当者が個別の状況に応じて、最適なアドバイスを提供します。
+        </li>
       </ol>
 
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">What We Cover</h2>
+      <!-- What We Cover -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">対応内容</h2>
       <p class="mt-3">
-        <strong>Free resources</strong> — Payment Checker, Visa-Free Checker, Trip Planner, App Availability Checker, and step-by-step guides.
+        <strong>無料リソース</strong> &mdash; Payment Checker、Visa-Free Checker、Trip Planner、
+        App Availability Checker、そして手順を追って解説するガイド。
       </p>
       <p>
-        <strong>Paid services</strong> — 1-on-1 trip plan review, payment setup assistance, visa and transport consulting, and custom trip planning.
+        <strong>有料サービス</strong> &mdash; 1対1の旅行プランレビュー、決済設定サポート、
+        ビザおよび交通コンサルティング、カスタム旅行プラン作成。
       </p>
 
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">Why Trust Us</h2>
+      <!-- Why Trust Us -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">私たちが信頼される理由</h2>
       <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
-          <p class="font-semibold text-brand-600">Professional Team</p>
-          <p class="mt-1 text-sm text-gray-600">Core members come from Tujia, Airbnb, Ctrip, Meituan, and Alibaba.</p>
+          <p class="font-semibold text-brand-600">プロフェッショナルチーム</p>
+          <p class="mt-1 text-sm text-gray-600">中核メンバーはTujia、Airbnb、Ctrip、Meituan、Alibabaの出身です。</p>
         </div>
         <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
-          <p class="font-semibold text-brand-600">Rigorous Review</p>
-          <p class="mt-1 text-sm text-gray-600">AI improves efficiency, but every guide and plan is reviewed by an industry professional.</p>
+          <p class="font-semibold text-brand-600">厳格なレビュー体制</p>
+          <p class="mt-1 text-sm text-gray-600">AIで効率を高めつつ、すべてのガイドとプランは業界の専門家が確認しています。</p>
         </div>
         <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
-          <p class="font-semibold text-brand-600">Personalized Service</p>
-          <p class="mt-1 text-sm text-gray-600">Over 15 years of frontline China travel-tech experience, delivering tailored solutions.</p>
+          <p class="font-semibold text-brand-600">個別対応のサービス</p>
+          <p class="mt-1 text-sm text-gray-600">15年以上にわたる中国旅行テックの最前線での経験をもとに、状況に合わせた解決策を提供します。</p>
         </div>
         <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
-          <p class="font-semibold text-brand-600">Always Current</p>
-          <p class="mt-1 text-sm text-gray-600">Rules change fast. Our AI workflow tracks and updates content in near real time.</p>
+          <p class="font-semibold text-brand-600">常に最新</p>
+          <p class="mt-1 text-sm text-gray-600">ルールは素早く変わります。私たちのAIワークフローは、ほぼリアルタイムで内容を追跡し更新しています。</p>
         </div>
       </div>
 
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">Get in Touch</h2>
+      <!-- Contact -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">お問い合わせ</h2>
       <p class="mt-3">
-        Have questions, corrections, or a trip scenario you need help with?
-        <a href="/ja/contact/" class="text-brand-600 hover:underline">Contact us</a>.
+        ご質問、修正のご提案、またはご相談したい旅行ケースはありますか？
+        <a href="/contact/" class="text-brand-600 hover:underline">お問い合わせ</a>いただければご返信いたします。
       </p>
 
     </article>
