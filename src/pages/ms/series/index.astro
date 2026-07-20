@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = '中國旅遊內容系列';
+const description = '透過五個主題系列探索中國：美食、歷史、現代生活、自然與文化；每個系列都為啟發並協助外國旅客而設計。';
+
+const seriesList = [
+  {
+    href: '/zh-tw/series/food-of-china/',
+    title: '中國美食',
+    desc: '從街頭小攤到宴席餐桌：為外國旅客整理八大菜系、地方早餐、火鍋風格，以及值得穿越一座城市去品嚐的菜餚。',
+    icon: '美食與飲品',
+  },
+  {
+    href: '/zh-tw/series/history-of-china/',
+    title: '中國歷史',
+    desc: '為旅客解讀古蹟：長城、兵馬俑、故宮、絲路，以及眼前景點背後真正的故事。',
+    icon: '歷史',
+  },
+  {
+    href: '/zh-tw/series/modern-china/',
+    title: '現代中國',
+    desc: '最讓外國旅客驚訝的事物：無現金街道、全球最快列車、超大城市規模、超級 App，以及定義今日中國生活的日常科技。',
+    icon: '現代生活',
+  },
+  {
+    href: '/zh-tw/series/nature-of-china/',
+    title: '中國自然',
+    desc: '阿凡達山景、童話般湖泊、喀斯特地貌與青藏高原：為外國旅客整理中國最壯觀自然景點的實用指南。',
+    icon: '自然',
+  },
+  {
+    href: '/zh-tw/series/culture-of-china/',
+    title: '中國文化',
+    desc: '茶道、春節、面子與關係、書法、功夫與生肖：為想深入表面觀光之外的旅客解釋文化傳統。',
+    icon: '文化',
+  },
+];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'zh-tw';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
+  <Header locale="zh-TW" />
+  <main class="container-page py-10">
+    <header>
+      <p class="section-kicker">內容系列</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+    </header>
+
+    <section class="mt-10 grid gap-5 md:grid-cols-2">
+      {seriesList.map((s) => (
+        <a href={s.href} class="card block hover:no-underline">
+          <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{s.icon}</span>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">{s.title}</h2>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{s.desc}</p>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">探索系列</span>
+        </a>
+      ))}
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

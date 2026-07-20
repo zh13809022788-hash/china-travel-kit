@@ -1,0 +1,119 @@
+---
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import CoverImage from '../../../components/CoverImage.astro';
+
+const posts = (await getCollection('posts-zh-tw'))
+  .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const title = '中國美食、用餐與餐桌禮儀指南';
+const description = '為外國旅客整理的中國實用飲食指南：外送點餐、街頭小吃安全、辣度、是否給小費、餐廳禮儀與飲食文化。';
+
+const pathways = [
+  {
+    title: '不會中文也能點餐',
+    desc: '先設定好外送 App、儲存飯店地址，避免外送員來電時溝通混亂。',
+    href: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+  },
+  {
+    title: '安心吃街頭小吃',
+    desc: '從攤位翻桌率、是否現場加熱、用水習慣與辣度說法，判斷哪些攤位更值得選。',
+    href: '/zh-tw/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
+  },
+  {
+    title: '掌握用餐禮儀',
+    desc: '了解什麼情況不用給小費、服務費何時重要，以及當地餐廳的常見規矩。',
+    href: '/zh-tw/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
+  },
+];
+
+const cultureLinks = [
+  {
+    href: 'https://baijiu365.com/baijiu-101/',
+    title: '白酒入門',
+    desc: '如果宴席或主人招待的晚餐出現中國白酒，這些背景資訊會很實用。',
+  },
+  {
+    href: 'https://baijiu365.com/how-to-drink-baijiu/',
+    title: '如何有禮貌地喝白酒',
+    desc: '這篇延伸指南更深入介紹正式餐敘中的敬酒、小杯斟酒與飲酒節奏。',
+  },
+];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'zh-tw';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
+  <Header locale="zh-TW" />
+  <main class="container-page py-10">
+    <header>
+      <p class="section-kicker">美食與用餐</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+    </header>
+
+    
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>中國料理是世界上最具影響力的飲食文化之一，涵蓋八大菜系——從四川的麻辣火鍋到廣東的精緻點心，從北京的傳奇烤鴨到西安的手拉麵條，每個地區都展現獨特的風味和飲食體驗。對外國旅客來說，從路邊攤和小麵館到高級餐廳和購物中心的美食廣場，中國提供了豐富多樣的用餐選擇。現代中國的美團（Meituan）和餓了麼（Ele.me）等外送應用程式讓您可以在飯店輕鬆點餐。大多數城市也有國際料理選擇，但真正的冒險在於品嚐道地的中國美食。</p>
+      <p>在中國用餐時，幾個實用技巧可以幫助您：主要城市幾乎所有商家都接受支付寶和微信支付，但小攤販仍以現金為主。觀光區的菜單通常有英文標示，但在本地餐廳準備一個翻譯應用程式會很有幫助。在中國，給小費並不是慣例。熱門餐廳的食品安全普遍良好，但選擇人潮較多、翻桌率高的店家總是比較明智。對於有飲食限制的人，請注意中國烹飪廣泛使用味精，許多菜餚也含有大豆油。素食選擇確實存在，但清楚的溝通能避免誤解。</p>
+    </div>
+
+    <AdSlot format="banner" />
+
+    <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="meishi-guide">
+      <h2 id="meishi-guide" class="sr-only">美食規劃導覽</h2>
+      {pathways.map((item) => (
+        <a href={item.href} class="card block hover:no-underline">
+          <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">閱讀指南</span>
+        </a>
+      ))}
+    </section>
+
+    <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">指南文章</p>
+            <h2>美食與用餐禮儀文章</h2>
+          </div>
+        </div>
+        <div class="mt-6 grid gap-5 md:grid-cols-2">
+          {posts.map((post) => (
+            <a href={`/zh-tw/posts/${post.slug}/`} class="card block hover:no-underline">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+              <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+        <p class="section-kicker">文化延伸閱讀</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">遇到白酒時</h2>
+        <p class="mt-3 text-sm leading-6 text-gray-600">
+          多數觀光客的日常用餐不需要懂酒，但在招待宴、商務餐敘，
+          或鄉村家庭聚餐中，有時會出現白酒敬酒。這些延伸資源提供更深入的說明，
+          而 ChinaTripBox 仍專注於旅行實務與行程安排。
+        </p>
+        <div class="mt-5 grid gap-3">
+          {cultureLinks.map((link) => (
+            <a href={link.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+              <h3 class="text-sm font-semibold text-gray-950">{link.title}</h3>
+              <p class="mt-1 text-sm leading-6 text-gray-600">{link.desc}</p>
+            </a>
+          ))}
+        </div>
+      </aside>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

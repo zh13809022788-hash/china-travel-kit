@@ -8,7 +8,7 @@ import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID, GA4_MEASUREMENT_ID } from '..
 import ContextAiBubble from '../components/ContextAiBubble.astro';
 import NewsletterSticky from '../components/NewsletterSticky.astro';
 
-type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
+type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es' | 'th' | 'vi' | 'ms' | 'th' | 'vi' | 'ms';
 
 export interface Props {
   title?: string;
@@ -32,7 +32,7 @@ const {
 
 // Auto noindex for non-English locales (only unreleased ones) and low-value cluster pages
 const path = Astro.url.pathname;
-const nonEnglishLocales: string[] = [];  // all 7 locales confirmed 100% native - all released
+const nonEnglishLocales: string[] = ["de", "es", "th", "vi", "ms"];  // de/es/th/vi/ms noindex until audited
 const isNonEnglish = nonEnglishLocales.some((loc) => path.startsWith(`/${loc}/`));
 const lowValuePaths = ['/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
 const isLowValue = lowValuePaths.some((prefix) => path.startsWith(prefix));
@@ -44,11 +44,11 @@ const ogImage = new URL(image, Astro.site);
 const siteName = 'ChinaTripBox';
 const siteURL = new URL('/', Astro.site).toString();
 
-const htmlLangMap: Record<string, string> = { en: 'en', 'zh-TW': 'zh-TW', ja: 'ja', ko: 'ko', ru: 'ru', fr: 'fr', de: 'de', es: 'es' };
+const htmlLangMap: Record<string, string> = { en: 'en', 'zh-TW': 'zh-TW', ja: 'ja', ko: 'ko', ru: 'ru', fr: 'fr', de: 'de', es: 'es', th: 'th', vi: 'vi', ms: 'ms', th: 'th', vi: 'vi', ms: 'ms' };
 const htmlLang = htmlLangMap[locale] ?? 'en';
 
-const hreflangCodes: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
-const localePrefixes: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
+const hreflangCodes: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es', 'th', 'vi', 'ms'];
+const localePrefixes: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/', th: '/th/', vi: '/vi/', ms: '/ms/', th: '/th/', vi: '/vi/', ms: '/ms/' };
 
 const stripLocalePrefix = (path: string) => {
   for (const prefix of Object.values(localePrefixes).filter((p) => p !== '/')) {
@@ -221,7 +221,7 @@ const jsonLd = {
     <slot />
     <script is:inline set:html={`(function(){
       var PREF_KEY='ctb-lang-pref';
-      var LOCALE_PREFIXES=['zh-tw','ja','ko','ru','fr','de','es'];
+      var LOCALE_PREFIXES=['zh-tw','ja','ko','ru','fr','de','es','th','vi','ms'];
       var pref=null;
       try{pref=localStorage.getItem(PREF_KEY);}catch(e){}
       function hasLocalePrefix(p){

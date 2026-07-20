@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
+
+const title = '中國旅遊 eSIM 方案比較工具';
+const description =
+  '依據流量、效期、價格與網路比較熱門中國旅遊 eSIM 方案。透過篩選與排序，找出最適合你行程的方案。';
+
+// 8 個預設的中國旅遊 eSIM 產品（具代表性的範例資料）
+const plans = [
+  { id: 1, name: 'China Explorer 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: '可繞過當地 App 限制' },
+  { id: 2, name: 'China Explorer 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: '可繞過當地 App 限制' },
+  { id: 3, name: 'Mainland Lite 3GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: '當地網路，不經 VPN 路由' },
+  { id: 4, name: 'Greater China 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: '涵蓋 CN、HK、MO、TW' },
+  { id: 5, name: 'Unlimited Daily', data: 9999, dataLabel: 'Unlimited*', days: 10, price: 29, network: 'China Unicom', note: '每日 2GB 後採公平使用上限' },
+  { id: 6, name: 'Business 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: '可繞過當地 App 限制' },
+  { id: 7, name: 'Short Trip 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: '最適合短暫轉機停留' },
+  { id: 8, name: 'Family 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: '可透過熱點分享' },
+];
+---
+<!-- AI輔助生成內容，經母語者審校 -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM 方案比較工具</h1>
+<p class="mt-4 max-w-3xl text-lg leading-8 text-gray-600">
+  對於前往中國旅行的人來說，eSIM 是最方便的連線方式。不同於實體 SIM 卡，eSIM 是數位化的，你可以在線上購買方案並立即啟用，無須跑一趟門市，也不用更換原本的 SIM 卡。大多數中國適用的 eSIM 主要使用 China Unicom 或 China Mobile 網路，兩者在城市及大多數鄉村地區都提供優異的 4G 與 5G 覆蓋。選擇方案時，請考量你的旅程長度、流量需求，以及是否需要中國手機號碼來使用 DiDi 和 Meituan 等 App。若是短期旅行（1-7 天），1-3 GB 的小流量方案就足夠應付地圖和傳訊。若停留時間較長或使用量較大，則可考慮支援熱點分享的不限流量或 10 GB 以上方案。
+</p>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <!-- Controls -->
+    <div class="mt-6 flex flex-wrap items-end gap-4 rounded-xl border border-gray-200 bg-gray-50 p-4">
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">排序方式</span>
+        <select id="sort-by" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          <option value="price-asc">價格：由低到高</option>
+          <option value="price-desc">價格：由高到低</option>
+          <option value="data-desc">流量：由高到低</option>
+          <option value="days-desc">效期：由長到短</option>
+        </select>
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">網路</span>
+        <select id="filter-network" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          <option value="all">所有網路</option>
+          <option value="China Unicom">China Unicom</option>
+          <option value="China Mobile">China Mobile</option>
+        </select>
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">最低流量（GB）</span>
+        <select id="filter-data" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          <option value="0">不限</option>
+          <option value="5">5+ GB</option>
+          <option value="10">10+ GB</option>
+          <option value="20">20+ GB</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full min-w-[720px] border-collapse text-sm">
+        <thead>
+          <tr class="border-b-2 border-gray-200 text-left text-gray-500">
+            <th class="py-3 pr-4 font-semibold">方案</th>
+            <th class="py-3 pr-4 font-semibold">流量</th>
+            <th class="py-3 pr-4 font-semibold">效期</th>
+            <th class="py-3 pr-4 font-semibold">價格（USD）</th>
+            <th class="py-3 pr-4 font-semibold">網路</th>
+            <th class="py-3 pr-4 font-semibold">備註</th>
+          </tr>
+        </thead>
+        <tbody id="plan-rows"></tbody>
+      </table>
+      <p id="no-results" class="hidden py-8 text-center text-gray-500">沒有符合你篩選條件的方案。</p>
+    </div>
+
+    <AffiliateCta
+      title="準備好保持連線了嗎？"
+      description="啟用推薦的中國 eSIM，一落地就能立即上網。"
+      buttonText="取得你的 eSIM"
+      placeholder={AFFILIATE_LINKS.esim}
+    />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script define:vars={{ plans }}>
+  const rowsEl = document.getElementById('plan-rows');
+  const noResults = document.getElementById('no-results');
+  const sortBy = document.getElementById('sort-by');
+  const filterNetwork = document.getElementById('filter-network');
+  const filterData = document.getElementById('filter-data');
+
+  function render() {
+    let list = [...plans];
+    const net = filterNetwork.value;
+    const minData = Number(filterData.value);
+
+    if (net !== 'all') list = list.filter((p) => p.network === net);
+    if (minData > 0) list = list.filter((p) => p.data >= minData);
+
+    switch (sortBy.value) {
+      case 'price-asc': list.sort((a, b) => a.price - b.price); break;
+      case 'price-desc': list.sort((a, b) => b.price - a.price); break;
+      case 'data-desc': list.sort((a, b) => b.data - a.data); break;
+      case 'days-desc': list.sort((a, b) => b.days - a.days); break;
+    }
+
+    rowsEl.innerHTML = list
+      .map(
+        (p) => `
+      <tr class="border-b border-gray-100">
+        <td class="py-3 pr-4 font-semibold text-gray-900">${p.name}</td>
+        <td class="py-3 pr-4">${p.dataLabel}</td>
+        <td class="py-3 pr-4">${p.days} 天</td>
+        <td class="py-3 pr-4 font-semibold">$${p.price.toFixed(2)}</td>
+        <td class="py-3 pr-4">${p.network}</td>
+        <td class="py-3 pr-4 text-gray-500">${p.note}</td>
+      </tr>`
+      )
+      .join('');
+
+    noResults.classList.toggle('hidden', list.length > 0);
+  }
+
+  [sortBy, filterNetwork, filterData].forEach((el) => el.addEventListener('change', render));
+  render();
+</script>
