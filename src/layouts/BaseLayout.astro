@@ -7,8 +7,7 @@ import '../styles/global.css';
 import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID, GA4_MEASUREMENT_ID } from '../config';
 import ContextAiBubble from '../components/ContextAiBubble.astro';
 import NewsletterSticky from '../components/NewsletterSticky.astro';
-
-type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es' | 'th' | 'ms' | 'vi';
+import { ALL_LOCALES, HTML_LANG_MAP, LOCALE_PREFIXES, NOINDEX_LOCALES, type LocaleCode } from '../i18n/locales';
 
 export interface Props {
   title?: string;
@@ -30,9 +29,9 @@ const {
   alternates,
 } = Astro.props;
 
-// Auto noindex for non-English locales (only unreleased ones) and low-value cluster pages
+// Auto noindex for unreleased locales and low-value cluster pages
 const path = Astro.url.pathname;
-const nonEnglishLocales: string[] = [];  // all 7 locales confirmed 100% native - all released
+const nonEnglishLocales: string[] = NOINDEX_LOCALES.filter((l) => l !== 'en');
 const isNonEnglish = nonEnglishLocales.some((loc) => path.startsWith(`/${loc}/`));
 const lowValuePaths = ['/apps/', '/authors/', '/cities/', '/series/', '/digital-nomads/', '/long-stay/'];
 const isLowValue = lowValuePaths.some((prefix) => path.startsWith(prefix));
@@ -44,11 +43,10 @@ const ogImage = new URL(image, Astro.site);
 const siteName = 'ChinaTripBox';
 const siteURL = new URL('/', Astro.site).toString();
 
-const htmlLangMap: Record<string, string> = { en: 'en', 'zh-TW': 'zh-TW', ja: 'ja', ko: 'ko', ru: 'ru', fr: 'fr', de: 'de', es: 'es', th: 'th', ms: 'ms', vi: 'vi' };
-const htmlLang = htmlLangMap[locale] ?? 'en';
+const htmlLang = HTML_LANG_MAP[locale] ?? 'en';
 
-const hreflangCodes: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es', 'th', 'ms', 'vi'];
-const localePrefixes: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/', th: '/th/', ms: '/ms/', vi: '/vi/' };
+const hreflangCodes: LocaleCode[] = ALL_LOCALES;
+const localePrefixes: Record<LocaleCode, string> = LOCALE_PREFIXES;
 
 const stripLocalePrefix = (path: string) => {
   for (const prefix of Object.values(localePrefixes).filter((p) => p !== '/')) {
@@ -73,7 +71,7 @@ const samePageAlternates = (() => {
 const pageAlternates = alternates ?? samePageAlternates;
 
 const availableLanguage = locale === 'en'
-  ? ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es', 'th', 'ms', 'vi']
+  ? ALL_LOCALES
   : [locale, 'en'];
 
 const jsonLd = {

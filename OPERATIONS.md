@@ -174,3 +174,58 @@ WorkBuddy ─── 首席运营官
 - `git log -- OPERATIONS.md` 查看所有变更历史
 - 每次重大决策变更需在文件中更新"最后更新"日期
 - 不删除历史条款，使用 `~~删除线~~` 标记废弃内容
+
+---
+
+## 八、多设备协作协议
+
+### 8.1 语言配置中心（单一事实来源）
+
+语言配置统一在 `src/i18n/locales.ts` 管理，**所有 agent 和设备不得在其他文件中硬编码语言列表**。
+
+- 新增语言：只改 `locales.ts` 一个文件
+- `ALL_LOCALES`、`HTML_LANG_MAP`、`LOCALE_PREFIXES`、`NOINDEX_LOCALES`、`SITEMAP_EXCLUDED_PREFIXES` — 五个导出覆盖全部语言相关逻辑
+- BaseLayout.astro / categories.ts / astro.config.mjs 均通过 import 引用
+
+### 8.2 并行工作时的冲突避免
+
+当两台设备同时操作仓库时：
+
+1. **开始任务前** → `git pull` 获取远程最新代码
+2. **有冲突的文件** → 查看冲突内容，如修改目的一致则接受更完整的版本
+3. **新增内容（新文章、新脚本）→ 不会冲突，直接合并**
+4. **修改架构文件（BaseLayout, config, locales）→ 只能一边做**，先在 shared-messages.md 通知另一方暂停相关操作
+5. **大规模批量修改（如质量修复脚本）→ 执行前确认没有人在改同批文件**
+
+### 8.3 共享消息通道
+
+两台设备通过 `shared-messages.md` 文件（项目根目录或共享位置）通信：
+
+- **启动大任务前** → 在 shared-messages.md 宣告 "正在处理 X"
+- **完成任务后** → 写总结 + commit hash
+- **发现架构问题** → 写到这里通知另一方，附解决方案
+- **需要决策的问题** → 写到这里等老板或对方回复
+
+### 8.4 Git 工作流
+
+- commit 粒度：一个逻辑任务 = 一个 commit，不攒批
+- commit message 格式：`[OPS]` 宪法变更 / `[FIX]` 修复 / `[FEAT]` 新功能 / `[CONTENT]` 内容
+- push 前先 pull，冲突当场解决
+- 不 force push，不 amend 已推送的 commit
+- 重大 merge 冲突由 WorkBuddy（首席运营官）裁定
+
+### 8.5 当前设备分工（2026-07-20）
+
+| 设备 | 职责 | 状态 |
+|------|------|------|
+| **电脑（这台）** | 质量门禁、30天增长计划文章、技术架构、GSC分析 | 活跃 |
+| **另一台电脑** | 站点故障修复、Layout全站统一、多语言骨架、GDPR页 | 活跃 |
+| **手机 WorkBuddy** | 协调、决策确认、小任务 | 待命 |
+
+### 8.6 已知技术债
+
+以下问题记录在此，供后续修复：
+
+- `ja/about.astro` import 路径问题（每次构建时可能被覆盖）— 修复：改为 `../../layouts/BaseLayout.astro`
+- `_headers` 规则：绝对不要加 `Content-Type`
+- `lorem` 和 `tryst` 残留文件：确认无引用后删除
