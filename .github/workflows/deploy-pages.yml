@@ -25,3 +25,21 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+      - name: Purge Cloudflare Cache
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ZONE_ID: f11bf43f0aa363271e2e7f9fe654b4d9
+        run: |
+          echo "Purging Cloudflare cache for zone $CF_ZONE_ID..."
+          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"purge_everything":true}' | python3 -c "
+import sys, json
+r = json.load(sys.stdin)
+if r.get('success'):
+    print('✅ Cloudflare cache purged successfully')
+else:
+    print('❌ Purge failed: ' + str(r.get('errors', [{'message': 'unknown'}])))
+    sys.exit(1)
+"
