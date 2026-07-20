@@ -12,7 +12,7 @@ const posts = (await getCollection('posts-zh-tw'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = '中國美食、用餐與餐桌禮儀指南';
-const description = '為外國旅客整理的中國實用飲食指南：外送點餐、街頭小吃安全、辣度、是否給小費、餐廳禮儀與飲食文化。';
+const description = 'คู่มือปฏิบัติจริงสำหรับนักท่องเที่ยวต่างชาติในจีน: การสั่งอาหารเดลิเวอรี่ ความปลอดภัยของอาหารริมทาง ระดับความเผ็ด การให้ทิป มารยาทในร้านอาหาร และวัฒนธรรมการกิน';
 
 const pathways = [
   {
@@ -45,14 +45,14 @@ const cultureLinks = [
   },
 ];
 import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'zh-tw';
+const locale = 'th';
 ---
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
-  <Header locale="zh-TW" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="th">
+  <Header locale="th" />
   <main class="container-page py-10">
     <header>
-      <p class="section-kicker">美食與用餐</p>
+      <p class="section-kicker">บทความแนะนำ</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -60,8 +60,12 @@ const locale = 'zh-tw';
     
 
     <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
-      <p>中國料理是世界上最具影響力的飲食文化之一，涵蓋八大菜系——從四川的麻辣火鍋到廣東的精緻點心，從北京的傳奇烤鴨到西安的手拉麵條，每個地區都展現獨特的風味和飲食體驗。對外國旅客來說，從路邊攤和小麵館到高級餐廳和購物中心的美食廣場，中國提供了豐富多樣的用餐選擇。現代中國的美團（Meituan）和餓了麼（Ele.me）等外送應用程式讓您可以在飯店輕鬆點餐。大多數城市也有國際料理選擇，但真正的冒險在於品嚐道地的中國美食。</p>
-      <p>在中國用餐時，幾個實用技巧可以幫助您：主要城市幾乎所有商家都接受支付寶和微信支付，但小攤販仍以現金為主。觀光區的菜單通常有英文標示，但在本地餐廳準備一個翻譯應用程式會很有幫助。在中國，給小費並不是慣例。熱門餐廳的食品安全普遍良好，但選擇人潮較多、翻桌率高的店家總是比較明智。對於有飲食限制的人，請注意中國烹飪廣泛使用味精，許多菜餚也含有大豆油。素食選擇確實存在，但清楚的溝通能避免誤解。</p>
+      <p>
+  อาหารจีนเป็นหนึ่งในวัฒนธรรมการทำอาหารที่ยิ่งใหญ่ของโลก ครอบคลุมหัวข้ออาหารหลักแปดประการ — ตั้งแต่หม้อไฟเสฉวนที่เผ็ดร้อนไปจนถึงติ่มซำกวางตุ้งอันละเอียดอ่อน ตั้งแต่เป็ดปักกิ่งอันเลื่องชื่อไปจนถึงบะหมี่ฉีกซีอาน แต่ละภูมิภาคมีรสชาติและประสบการณ์การกินที่ไม่เหมือนใคร สำหรับนักท่องเที่ยวต่างชาติ จีนมีตัวเลือกอาหารมากมายตั้งแต่แผงลอยริมทางและร้านบะหมี่ไปจนถึงร้านอาหารชั้นสูงและฟู้ดคอร์ทในห้างสรรพสินค้า แอปพลิเคชันส่งอาหารอย่าง Meituan และ Ele.me ทำให้การสั่งอาหารไปยังโรงแรมเป็นเรื่องง่าย
+      </p>
+      <p>
+  เมื่อรับประทานอาหารนอกบ้านในจีน มีเคล็ดลับที่เป็นประโยชน์บางประการ: เมืองใหญ่รับ Alipay และ WeChat Pay แทบทุกร้าน แต่เงินสดยังมีประโยชน์สำหรับพ่อค้าแม่ค้ารายย่อย เมนูภาษาอังกฤษพบได้ทั่วไปในแหล่งท่องเที่ยว แต่การมีแอปแปลภาษาติดตัวไว้จะช่วยได้มาก การให้ทิปไม่ใช่ธรรมเนียมปฏิบัติในจีน ความปลอดภัยของอาหารในร้านอาหารยอดนิยมโดยทั่วไปดี แต่การเลือกร้านที่มีลูกค้าพลุกพล่านเป็นเรื่องฉลาด สำหรับผู้ที่มีข้อจำกัดด้านอาหาร ควรทราบว่าอาหารจีนใช้ผงชูรสอย่างแพร่หลาย และหลายจานมีน้ำมันถั่วเหลือง
+      </p>
     </div>
 
     <AdSlot format="banner" />
@@ -81,7 +85,7 @@ const locale = 'zh-tw';
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">指南文章</p>
+            <p class="section-kicker">บทความแนะนำ</p>
             <h2>美食與用餐禮儀文章</h2>
           </div>
         </div>
@@ -97,7 +101,7 @@ const locale = 'zh-tw';
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">文化延伸閱讀</p>
+        <p class="section-kicker">บทความแนะนำ</p>
         <h2 class="mt-1 text-xl font-bold text-gray-950">遇到白酒時</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
           多數觀光客的日常用餐不需要懂酒，但在招待宴、商務餐敘，
