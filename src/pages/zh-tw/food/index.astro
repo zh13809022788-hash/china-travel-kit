@@ -51,13 +51,18 @@ const locale = 'zh-tw';
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
   <Header locale="zh-TW" />
   <main class="container-page py-10">
-    <header class="max-w-3xl">
+    <header>
       <p class="section-kicker">美食與用餐</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chinese-cuisine" alt="中國夜市裡香辣的四川街頭小吃" loading="lazy" />
+    
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>中國料理是世界上最具影響力的飲食文化之一，涵蓋八大菜系——從四川的麻辣火鍋到廣東的精緻點心，從北京的傳奇烤鴨到西安的手拉麵條，每個地區都展現獨特的風味和飲食體驗。對外國旅客來說，從路邊攤和小麵館到高級餐廳和購物中心的美食廣場，中國提供了豐富多樣的用餐選擇。現代中國的美團（Meituan）和餓了麼（Ele.me）等外送應用程式讓您可以在飯店輕鬆點餐。大多數城市也有國際料理選擇，但真正的冒險在於品嚐道地的中國美食。</p>
+      <p>在中國用餐時，幾個實用技巧可以幫助您：主要城市幾乎所有商家都接受支付寶和微信支付，但小攤販仍以現金為主。觀光區的菜單通常有英文標示，但在本地餐廳準備一個翻譯應用程式會很有幫助。在中國，給小費並不是慣例。熱門餐廳的食品安全普遍良好，但選擇人潮較多、翻桌率高的店家總是比較明智。對於有飲食限制的人，請注意中國烹飪廣泛使用味精，許多菜餚也含有大豆油。素食選擇確實存在，但清楚的溝通能避免誤解。</p>
+    </div>
 
     <AdSlot format="banner" />
 
