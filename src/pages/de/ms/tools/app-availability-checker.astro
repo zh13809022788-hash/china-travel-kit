@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import AdSlot from '../../../../components/AdSlot.astro';
+import AffiliateCta from '../../../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../../../config';
+
+const title = '我的 App 在中國能用嗎？App 可用性檢查器';
+const description =
+  '檢查 Google、WhatsApp、Instagram 和其他 App 在沒有 VPN 的情況下是否能在中國使用，並查看每個受限服務的在地替代方案。';
+
+interface AppInfo {
+  name: string;
+  category: string;
+  status: 'works' | 'blocked' | 'partial';
+  note: string;
+  alt?: string;
+}
+
+const apps: AppInfo[] = [
+  { name: 'Google Search', category: 'Google', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'Bing（可用）或 Baidu' },
+  { name: 'Google Maps', category: 'Google', status: 'partial', note: '可以載入，但在中國大陸資料不準確或有座標偏移。', alt: 'Apple Maps、Amap 或 Baidu Maps' },
+  { name: 'Gmail', category: 'Google', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'Outlook 或非 Google 信箱' },
+  { name: 'YouTube', category: 'Google', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'Bilibili（在地平台）' },
+  { name: 'WhatsApp', category: '通訊', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'WeChat' },
+  { name: 'Facebook', category: '社群', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'WeChat Moments / RED' },
+  { name: 'Instagram', category: '社群', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'RED（Xiaohongshu）' },
+  { name: 'X (Twitter)', category: '社群', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'Weibo' },
+  { name: 'Telegram', category: '通訊', status: 'blocked', note: '沒有 VPN 時無法使用。', alt: 'WeChat' },
+  { name: 'WeChat', category: '通訊', status: 'works', note: '完整可用，是中國最常用的預設通訊工具。' },
+  { name: 'Apple services (iMessage, App Store)', category: 'Apple', status: 'works', note: '通常可正常使用。' },
+  { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: '通常可正常使用。' },
+  { name: 'Booking.com', category: '旅遊', status: 'works', note: '通常可正常使用。' },
+  { name: 'Airbnb', category: '旅遊', status: 'works', note: '通常可正常使用。' },
+  { name: 'Trip.com', category: '旅遊', status: 'works', note: '完整可用，很適合訂火車票與酒店。' },
+  { name: 'Alipay', category: '付款', status: 'works', note: '完整可用，支援海外銀行卡。' },
+  { name: 'Uber', category: '交通', status: 'blocked', note: '在中國大陸不營運。', alt: 'DiDi' },
+  { name: 'Netflix', category: '媒體', status: 'blocked', note: '中國大陸無法使用。', alt: '在地串流平台，或出發前先下載內容' },
+  { name: 'Spotify', category: '媒體', status: 'blocked', note: '中國大陸無法使用。', alt: 'QQ Music，或先下載離線音樂' },
+];
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
+  <Header locale="zh-TW" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">我的 App 在中國能用嗎？</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-4">
+      <label class="flex flex-col text-sm sm:max-w-sm">
+        <span class="mb-1 font-medium text-gray-700">搜尋或篩選 App</span>
+        <input id="search" type="text" placeholder="e.g. WhatsApp, Google, Netflix"
+          class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+      </label>
+      <div class="mt-3 flex flex-wrap gap-2 text-sm">
+        <button data-status="all" class="status-filter btn-primary px-3 py-1">全部</button>
+        <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ 可用</button>
+        <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ 部分可用</button>
+        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 無法使用</button>
+      </div>
+    </div>
+
+    <div id="app-list" class="mt-6 grid gap-3 sm:grid-cols-2"></div>
+    <p id="no-results" class="hidden py-8 text-center text-gray-500">沒有符合搜尋條件的 App。</p>
+
+    <AffiliateCta
+      title="用旅行 eSIM 讓常用 App 保持連線"
+      description="選擇能繞過在地限制的中國旅行 eSIM，可讓常用 App 持續上線，通常不需要另外設定 VPN。"
+      buttonText="查看 eSIM 選項"
+      placeholder={AFFILIATE_LINKS.esim}
+    />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script define:vars={{ apps }}>
+  const listEl = document.getElementById('app-list');
+  const noResults = document.getElementById('no-results');
+  const searchEl = document.getElementById('search');
+  const filters = document.querySelectorAll('.status-filter');
+  let activeStatus = 'all';
+
+  const badge = {
+    works: { cls: 'bg-green-100 text-green-800', label: '✅ 可用' },
+    partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ 部分可用' },
+    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 無法使用' },
+  };
+
+  function render() {
+    const q = searchEl.value.trim().toLowerCase();
+    const list = apps.filter((a) => {
+      const matchStatus = activeStatus === 'all' || a.status === activeStatus;
+      const matchQuery = !q || a.name.toLowerCase().includes(q) || a.category.toLowerCase().includes(q);
+      return matchStatus && matchQuery;
+    });
+
+    listEl.innerHTML = list
+      .map((a) => `
+        <div class="card">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h3 class="font-bold text-gray-900">${a.name}</h3>
+              <span class="text-xs text-gray-400">${a.category}</span>
+            </div>
+            <span class="whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ${badge[a.status].cls}">${badge[a.status].label}</span>
+          </div>
+          <p class="mt-2 text-sm text-gray-600">${a.note}</p>
+          ${a.alt ? `<p class="mt-1.5 text-sm"><span class="text-gray-500">可改用：</span> <span class="font-medium text-brand-600">${a.alt}</span></p>` : ''}
+        </div>`)
+      .join('');
+
+    noResults.classList.toggle('hidden', list.length > 0);
+  }
+
+  searchEl.addEventListener('input', render);
+  filters.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeStatus = btn.dataset.status;
+      filters.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('btn-primary', on);
+        ['rounded-lg', 'border', 'border-gray-300', 'font-medium', 'text-gray-700'].forEach((c) => b.classList.toggle(c, !on));
+      });
+      render();
+    });
+  });
+
+  render();
+</script>

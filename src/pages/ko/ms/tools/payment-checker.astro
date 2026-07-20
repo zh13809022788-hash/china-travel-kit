@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import AdSlot from '../../../../components/AdSlot.astro';
+import AffiliateCta from '../../../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../../../config';
+import FaqSection from '../../../../components/FaqSection.astro';
+
+const title = '中國付款卡相容性檢查器';
+const description =
+  '檢查你的信用卡是否能在中國搭配 Alipay 和 WeChat Pay 使用。依國籍與卡組織查看支援狀態、額度、費用與設定方式。';
+
+const nationalities = [
+  '美國', '英國', '加拿大', '澳洲',
+  '德國', '法國', '日本', '新加坡', '其他',
+];
+const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
+
+const nextSteps = [
+  { href: '/zh-tw/posts/alipay-foreign-credit-card-step-by-step/', title: '使用外國卡設定 Alipay' },
+  { href: '/zh-tw/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: '將 Visa 或 Mastercard 綁定到 WeChat Pay' },
+  { href: '/zh-tw/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: '了解什麼時候現金仍然有用' },
+  { href: '/zh-tw/payment/', title: '查看所有中國付款指南' },
+];
+
+const faqItems = [
+  {
+    question: '每個外國 Visa 或 Mastercard 都能在中國工作嗎？',
+    answer:
+      '不。Visa 和 Mastercard 是 Alipay 和 WeChat Pay 的最安全起點，但個別銀行仍可能阻止驗證、拒絕線上錢包繫結或標記 中國交易。保留第二張卡和少量現金備用。',
+  },
+  {
+    question: '遊客應該同時設定Alipay和WeChat Pay嗎？',
+    answer:
+      '是的，如果可能的話。Alipay 通常更容易讓訪客設定，而 WeChat Pay 對小程式、餐廳和本地服務很有用。兩者都有可以減少在商家遇到麻煩的可能性。',
+  },
+  {
+    question: '如果可以使用移動支付，我應該帶多少現金？',
+    answer:
+      '帶足夠的小額鈔票用於機場交通、備用餐食和小商店，但不要只依賴現金。許多地方更偏好 QR 付款，有些店員也未必有足夠零錢。',
+  },
+];
+---
+
+<BaseLayout locale="zh-TW" title={`${title} | ChinaTripBox`} description={description}>
+  <Header locale="zh-TW" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">支付相容性檢查器</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <section class="mt-6 grid gap-4 md:grid-cols-3" aria-label="這個付款檢查器可以協助的事項">
+      <div class="rounded-lg border border-gray-200 bg-white p-4">
+        <h2 class="text-base font-bold text-gray-900">檢查錢包支援</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">檢視您的卡網路是否適合 Alipay 和 WeChat Pay。</p>
+      </div>
+      <div class="rounded-lg border border-gray-200 bg-white p-4">
+        <h2 class="text-base font-bold text-gray-900">圍繞限制進行計劃</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">在進行較大金額的購買之前，請檢視常見的交易限額和費用。</p>
+      </div>
+      <div class="rounded-lg border border-gray-200 bg-white p-4">
+        <h2 class="text-base font-bold text-gray-900">制定備份計劃</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">知道何時攜帶現金、切換銀行卡或準備兩種支付App。</p>
+      </div>
+    </section>
+
+    <AdSlot format="banner" />
+
+    <!-- Input controls -->
+    <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">你的國籍</span>
+        <select id="nationality" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {nationalities.map((n) => <option value={n}>{n}</option>)}
+        </select>
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">卡網路</span>
+        <select id="network" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {cardNetworks.map((c) => <option value={c}>{c}</option>)}
+        </select>
+      </label>
+      <div class="sm:col-span-2">
+        <button id="check-btn" class="btn-primary w-full sm:w-auto">檢查相容性</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="result" class="mt-6 hidden">
+      <div class="grid gap-5 md:grid-cols-2">
+        <div class="card" id="alipay-card"></div>
+        <div class="card" id="wechat-card"></div>
+      </div>
+
+      <AffiliateCta
+        title="設定適合旅行使用的卡片"
+        description="準備一張能穩定綁定 Alipay 與 WeChat Pay 的預付旅行卡，方便你的中國行程使用。"
+        buttonText="查看推薦卡片"
+        placeholder={AFFILIATE_LINKS.payment}
+      />
+    </div>
+
+    <section class="mt-12 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div class="rounded-lg border border-gray-200 bg-white p-6">
+        <h2 class="text-2xl font-bold text-gray-900">如何使用這個檢查器</h2>
+        <ol class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
+          <li><strong class="text-gray-900">1. 選擇你的護照或居住國家。</strong> 這有助於框定常見的銀行和驗證問題。</li>
+          <li><strong class="text-gray-900">2. 選擇您的卡網路。</strong> Visa 和 Mastercard 通常是 中國旅行錢包的最佳首選。</li>
+          <li><strong class="text-gray-900">3. 至少準備一個備用方案。</strong> 帶第二張卡，安裝兩個支付App，並保留少量現金以應對特殊情況。</li>
+        </ol>
+        <p class="mt-4 text-sm leading-6 text-gray-600">
+          付款規則、錢包驗證和髮卡行風險檢查可能會發生變化。請將結果視為實際行程規劃指導，然後在出發前確認 Alipay、WeChat Pay 以及您的髮卡行的任何大額交易限額。
+        </p>
+      </div>
+
+      <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
+        <h2 class="text-lg font-bold text-gray-900">下一步付款</h2>
+        <div class="mt-4 grid gap-3">
+          {nextSteps.map((item) => (
+            <a href={item.href} class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">
+              {item.title}
+            </a>
+          ))}
+        </div>
+      </aside>
+    </section>
+
+    <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="payment-checker-seo">
+      <h2 id="payment-checker-seo" class="text-2xl font-bold text-gray-900">這個檢查器能告訴你什麼，不能告訴你什麼</h2>
+      <p class="mt-3 text-sm leading-6 text-gray-600">
+        此工具旨在用於出發前的計劃。它可以幫助您在站在中國結賬櫃檯之前，考慮卡網路、錢包支援、可能的費用點以及備用方式。它無法保證您的個人銀行會批准每一筆付款。
+      </p>
+      <div class="mt-5 overflow-x-auto rounded-lg border border-gray-200">
+        <table class="min-w-full divide-y divide-gray-200 text-sm">
+          <thead class="bg-gray-50 text-left text-gray-700">
+            <tr>
+              <th class="px-4 py-3 font-semibold">風險</th>
+              <th class="px-4 py-3 font-semibold">為什麼會發生</th>
+              <th class="px-4 py-3 font-semibold">最佳備份</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 bg-white text-gray-600">
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">綁卡失敗</td>
+              <td class="px-4 py-3">髮卡行阻止錢包驗證或 3-D 安全認證失敗。</td>
+              <td class="px-4 py-3">試試另一家銀行的Visa/Mastercard。</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">大額付款被拒絕</td>
+              <td class="px-4 py-3">錢包、商戶或發行方的限額會觸發稽核。</td>
+              <td class="px-4 py-3">拆分付款、使用實體卡，或向飯店/商家詢問其他選項。</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">結賬時無訊號</td>
+              <td class="px-4 py-3">移動資料弱，無漫遊，或App無法載入。</td>
+              <td class="px-4 py-3">使用另一個錢包，商戶 Wi-Fi，或小額現金備用。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm leading-6 text-gray-600">
+        若要建立最穩妥的付款設定，請閱讀完整的 <a href="/zh-tw/posts/how-to-pay-in-china-tourist-guide/" class="font-semibold">中國旅客付款指南</a>，比較 <a href="/zh-tw/posts/alipay-vs-wechat-pay-foreigners/" class="font-semibold">Alipay 與 WeChat Pay</a>，並參考我們的 <a href="/zh-tw/posts/how-much-cash-to-bring-to-china/" class="font-semibold">現金指南</a> 保留少量 RMB 備用。
+      </p>
+    </section>
+
+    <FaqSection items={faqItems} title="付款檢查器常見問題" />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  type NetworkKey = 'Visa' | 'Mastercard' | 'Amex' | 'Discover';
+
+  // Static compatibility matrix (representative guidance)
+  const matrix: Record<NetworkKey, {
+    alipay: { status: string; single: string; daily: string; fee: string; how: string };
+    wechat: { status: string; single: string; daily: string; fee: string; how: string };
+  }> = {
+    Visa: {
+      alipay: { status: '支援', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '200 RMB 以上約 3%', how: '在 Alipay 錢包新增卡片並驗證護照' },
+      wechat: { status: '支援', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '200 RMB 以上約 3%', how: '在 WeChat 錢包新增卡片並驗證護照' },
+    },
+    Mastercard: {
+      alipay: { status: '支援', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '200 RMB 以上約 3%', how: '在 Alipay 錢包新增卡片並驗證護照' },
+      wechat: { status: '支援', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '200 RMB 以上約 3%', how: '在 WeChat 錢包新增卡片並驗證護照' },
+    },
+    Amex: {
+      alipay: { status: '部分支援', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '200 RMB 以上約 3%', how: 'Amex 多數情況可在 Alipay 使用；仍建議保留 Visa/Mastercard 備用' },
+      wechat: { status: '支援有限', single: '視情況而定', daily: '視情況而定', fee: '200 RMB 以上約 3%', how: '支援情況不穩定；WeChat 上建議優先使用 Visa/Mastercard' },
+    },
+    Discover: {
+      alipay: { status: '支援有限', single: '視情況而定', daily: '視情況而定', fee: '視情況而定', how: '接受度有限；強烈建議準備 Visa/Mastercard' },
+      wechat: { status: '不建議', single: '—', daily: '—', fee: '—', how: '請改用 Visa 或 Mastercard' },
+    },
+  };
+
+  const statusColor = (status: string) => {
+    if (/^支援$/.test(status)) return 'text-green-700 bg-green-50 border-green-200';
+    if (/部分|有限/.test(status)) return 'text-amber-700 bg-amber-50 border-amber-200';
+    return 'text-red-700 bg-red-50 border-red-200';
+  };
+
+  function cardHtml(wallet: string, d: { status: string; single: string; daily: string; fee: string; how: string }) {
+    return `
+      <h3 class="text-lg font-bold text-gray-900">${wallet}</h3>
+      <span class="mt-2 inline-block rounded-full border px-3 py-0.5 text-xs font-semibold ${statusColor(d.status)}">${d.status}</span>
+      <dl class="mt-4 space-y-2 text-sm">
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">單筆交易</dt><dd class="font-medium text-gray-900">${d.single}</dd></div>
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">每日限額</dt><dd class="font-medium text-gray-900">${d.daily}</dd></div>
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">手續費</dt><dd class="font-medium text-gray-900">${d.fee}</dd></div>
+        <div class="pt-2 text-gray-600"><dt class="text-gray-500">設定方式</dt><dd class="mt-1">${d.how}</dd></div>
+      </dl>`;
+  }
+
+  const btn = document.getElementById('check-btn');
+  const result = document.getElementById('result');
+  const networkEl = document.getElementById('network') as HTMLSelectElement;
+  const alipayCard = document.getElementById('alipay-card');
+  const wechatCard = document.getElementById('wechat-card');
+
+  btn?.addEventListener('click', () => {
+    const net = networkEl.value as NetworkKey;
+    const data = matrix[net];
+    if (!data || !alipayCard || !wechatCard || !result) return;
+    alipayCard.innerHTML = cardHtml('Alipay', data.alipay);
+    wechatCard.innerHTML = cardHtml('WeChat Pay', data.wechat);
+    result.classList.remove('hidden');
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>

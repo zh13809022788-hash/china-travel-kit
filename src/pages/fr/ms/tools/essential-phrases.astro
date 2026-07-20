@@ -1,0 +1,163 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
+
+const title = '旅客必備中文短語';
+const description =
+  '一份實用且可列印的中國旅遊必備中文（普通話）短語清單，附拼音與英文。涵蓋問候、付款、交通、用餐與緊急狀況。';
+
+interface Phrase {
+  en: string;
+  zh: string;
+  pinyin: string;
+}
+interface Group {
+  id: string;
+  label: string;
+  icon: string;
+  phrases: Phrase[];
+}
+
+const groups: Group[] = [
+  {
+    id: 'basics', label: '問候與基礎用語', icon: '👋',
+    phrases: [
+      { en: '你好', zh: '你好', pinyin: 'nǐ hǎo' },
+      { en: '謝謝', zh: '谢谢', pinyin: 'xièxie' },
+      { en: '不客氣', zh: '不客气', pinyin: 'bú kèqi' },
+      { en: '對不起／不好意思', zh: '对不起', pinyin: 'duìbuqǐ' },
+      { en: '是／對', zh: '对', pinyin: 'duì' },
+      { en: '不是／不', zh: '不是', pinyin: 'bú shì' },
+      { en: '我聽不懂', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
+      { en: '你會說英文嗎？', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
+    ],
+  },
+  {
+    id: 'payment', label: '金錢與付款', icon: '💳',
+    phrases: [
+      { en: '多少錢？', zh: '多少钱？', pinyin: 'duōshao qián?' },
+      { en: '可以用支付寶嗎？', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
+      { en: '可以用微信支付嗎？', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng wēixìn zhīfù ma?' },
+      { en: '太貴了', zh: '太贵了', pinyin: 'tài guì le' },
+      { en: '可以刷卡嗎？', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
+      { en: '我掃你的碼', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
+    ],
+  },
+  {
+    id: 'transport', label: '交通出行', icon: '🚕',
+    phrases: [
+      { en: '地鐵站在哪裡？', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
+      { en: '請帶我去這個地址', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
+      { en: '請在這裡停', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
+      { en: '火車站', zh: '火车站', pinyin: 'huǒchē zhàn' },
+      { en: '機場', zh: '机场', pinyin: 'jīchǎng' },
+      { en: '要怎麼去……？', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
+    ],
+  },
+  {
+    id: 'food', label: '飲食與用餐', icon: '🍜',
+    phrases: [
+      { en: '請給我菜單', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
+      { en: '我吃素', zh: '我吃素', pinyin: 'wǒ chī sù' },
+      { en: '請不要辣', zh: '请不要辣', pinyin: 'qǐng búyào là' },
+      { en: '請給我水', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
+      { en: '買單', zh: '买单', pinyin: 'mǎidān' },
+      { en: '很好吃', zh: '很好吃', pinyin: 'hěn hǎochī' },
+    ],
+  },
+  {
+    id: 'help', label: '求助與緊急狀況', icon: '🆘',
+    phrases: [
+      { en: '救命！', zh: '救命！', pinyin: 'jiùmìng!' },
+      { en: '洗手間在哪裡？', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
+      { en: '我需要看醫生', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
+      { en: '請報警', zh: '请报警', pinyin: 'qǐng bàojǐng' },
+      { en: '我迷路了', zh: '我迷路了', pinyin: 'wǒ mílù le' },
+      { en: '請寫下來', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
+    ],
+  },
+];
+---
+<!-- AI輔助生成內容，經母語者審校 -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
+  <Header locale="fr" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">旅客必備中文短語</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <!-- Controls -->
+    <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
+      <button data-filter="all" class="phrase-filter btn-primary text-sm">全部</button>
+      {groups.map((g) => (
+        <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
+          {g.icon} {g.label}
+        </button>
+      ))}
+      <button id="print-btn" class="ml-auto rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
+        🖨️ 列印／儲存為 PDF
+      </button>
+    </div>
+
+    <!-- Phrase groups -->
+    <div class="mt-6 space-y-8">
+      {groups.map((g) => (
+        <section class="phrase-group" data-group={g.id}>
+          <h2 class="mb-3 text-xl font-bold text-gray-900">{g.icon} {g.label}</h2>
+          <div class="grid gap-3 sm:grid-cols-2">
+            {g.phrases.map((p) => (
+              <div class="card flex flex-col">
+                <span class="text-sm text-gray-500">{p.en}</span>
+                <span class="mt-1 text-2xl font-bold text-gray-900">{p.zh}</span>
+                <span class="mt-0.5 text-sm italic text-brand-600">{p.pinyin}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <AffiliateCta
+      title="隨時上網，旅途中即時翻譯"
+      description="中國旅遊 eSIM 讓翻譯 App 和地圖在你落地後立刻可用。"
+      buttonText="立即連線"
+      placeholder={AFFILIATE_LINKS.esim}
+    />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.phrase-filter');
+  const sections = document.querySelectorAll<HTMLElement>('.phrase-group');
+  const printBtn = document.getElementById('print-btn');
+
+  const activeCls = ['btn-primary'];
+  const idleCls = ['rounded-lg', 'border', 'border-gray-300', 'px-3', 'py-1.5', 'text-sm', 'font-medium', 'text-gray-700', 'hover:border-brand-400'];
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      sections.forEach((s) => {
+        s.classList.toggle('hidden', filter !== 'all' && s.dataset.group !== filter);
+      });
+      buttons.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('btn-primary', on);
+        idleCls.forEach((c) => b.classList.toggle(c, !on));
+      });
+    });
+  });
+
+  printBtn?.addEventListener('click', () => window.print());
+</script>

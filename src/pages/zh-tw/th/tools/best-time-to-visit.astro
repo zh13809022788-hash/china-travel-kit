@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import AdSlot from '../../../../components/AdSlot.astro';
+import AffiliateCta from '../../../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../../../config';
+
+const title = '造訪中國的最佳時間 - 城市與月份規劃工具';
+const description =
+  '按月份查看中國主要城市的天氣、人潮與行李建議。規劃造訪北京、上海、西安、成都、廣州和哈爾濱的最佳時間。';
+
+const cities = ['北京', '上海', '西安', '成都', '廣州', '哈爾濱'];
+const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
+  <Header locale="zh-TW" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">造訪中國的最佳時間</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">城市</span>
+        <select id="city" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {cities.map((c) => <option value={c}>{c}</option>)}
+        </select>
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">旅行月份</span>
+        <select id="month" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {months.map((m, i) => <option value={i}>{m}</option>)}
+        </select>
+      </label>
+    </div>
+
+    <div id="result" class="mt-6">
+      <div class="card" id="result-card"></div>
+    </div>
+
+    <!-- 旅遊旺季提醒 -->
+    <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
+      <strong>避開人潮：</strong>中國公共假期，尤其是春節（1月下旬或2月）、勞動節（5月初）以及國慶節／黃金週（10月第一週），
+      會帶來龐大的國內旅遊人潮。火車與飯店常會售罄，價格也會飆升。請提早預訂，或避開這些日期安排行程。
+    </div>
+
+    <AffiliateCta
+      title="提早預訂火車與飯店"
+      description="熱門路線在旺季很快售罄。提前鎖定高鐵車票與住宿。"
+      buttonText="查看預訂選項"
+      placeholder={AFFILIATE_LINKS.transport}
+    />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  interface MonthInfo {
+    temp: string;
+    rating: 'great' | 'good' | 'ok' | 'tough';
+    weather: string;
+    pack: string;
+  }
+
+  // 各城市每月建議（索引 0 = 1 月）。
+  const data: Record<string, MonthInfo[]> = {
+    北京: [
+      { temp: '-8 至 2°C', rating: 'tough', weather: '寒冷乾燥，天氣晴朗。遊客較少。', pack: '厚外套、帽子、手套。' },
+      { temp: '-5 至 5°C', rating: 'tough', weather: '寒冷；可能遇上春節人潮。', pack: '保暖冬季層搭衣物。' },
+      { temp: '2 至 12°C', rating: 'ok', weather: '涼爽多風，偶有沙塵。', pack: '外套、防風衣。' },
+      { temp: '9 至 20°C', rating: 'great', weather: '春季溫和，花季盛開。非常理想。', pack: '層搭衣物、輕薄外套。' },
+      { temp: '15 至 26°C', rating: 'great', weather: '溫暖宜人。5月初有勞動節人潮。', pack: '輕薄層搭衣物。' },
+      { temp: '20 至 31°C', rating: 'good', weather: '炎熱，雨季開始。', pack: '夏季衣物、雨傘。' },
+      { temp: '22 至 31°C', rating: 'ok', weather: '炎熱潮濕，降雨高峰。', pack: '輕便衣物、雨具。' },
+      { temp: '21 至 30°C', rating: 'ok', weather: '炎熱潮濕，暑期人潮多。', pack: '輕便衣物、防曬用品。' },
+      { temp: '15 至 26°C', rating: 'great', weather: '清爽晴朗，舒適宜人。最佳月份。', pack: '層搭衣物、輕薄外套。' },
+      { temp: '8 至 19°C', rating: 'good', weather: '秋景美麗。10月1日至7日黃金週人潮多。', pack: '外套、層搭衣物。' },
+      { temp: '0 至 10°C', rating: 'ok', weather: '寒冷乾燥，較安靜。', pack: '保暖外套。' },
+      { temp: '-6 至 3°C', rating: 'tough', weather: '寒冷乾燥。', pack: '厚重冬季裝備。' },
+    ],
+    上海: [
+      { temp: '1 至 8°C', rating: 'ok', weather: '寒冷潮濕，天色灰暗。', pack: '保暖防水外套。' },
+      { temp: '3 至 10°C', rating: 'ok', weather: '偏冷；春節期間。', pack: '層搭衣物、雨傘。' },
+      { temp: '7 至 14°C', rating: 'good', weather: '春季溫和，偶有降雨。', pack: '外套、雨傘。' },
+      { temp: '12 至 20°C', rating: 'great', weather: '春季宜人。非常理想。', pack: '輕薄層搭衣物。' },
+      { temp: '17 至 25°C', rating: 'great', weather: '溫暖舒適。5月初人潮較多。', pack: '輕便衣物。' },
+      { temp: '21 至 28°C', rating: 'ok', weather: '梅雨季，潮濕。', pack: '雨具、輕便衣物。' },
+      { temp: '25 至 33°C', rating: 'tough', weather: '炎熱潮濕，有颱風風險。', pack: '輕便衣物、防曬與雨具。' },
+      { temp: '25 至 33°C', rating: 'tough', weather: '非常炎熱潮濕。', pack: '輕便衣物、補水用品。' },
+      { temp: '21 至 28°C', rating: 'great', weather: '由溫暖轉為舒適。很適合旅行。', pack: '輕薄層搭衣物。' },
+      { temp: '15 至 23°C', rating: 'great', weather: '溫和晴朗。10月初黃金週人潮多。', pack: '層搭衣物、輕薄外套。' },
+      { temp: '9 至 17°C', rating: 'good', weather: '涼爽舒適。', pack: '外套。' },
+      { temp: '3 至 10°C', rating: 'ok', weather: '寒冷潮濕。', pack: '保暖外套。' },
+    ],
+    西安: [
+      { temp: '-4 至 5°C', rating: 'tough', weather: '寒冷乾燥。', pack: '厚外套。' },
+      { temp: '-1 至 8°C', rating: 'ok', weather: '寒冷；春節期間。', pack: '冬季層搭衣物。' },
+      { temp: '4 至 14°C', rating: 'good', weather: '春季涼爽。', pack: '外套。' },
+      { temp: '10 至 20°C', rating: 'great', weather: '宜人。很適合觀光。', pack: '輕薄層搭衣物。' },
+      { temp: '15 至 26°C', rating: 'great', weather: '溫暖舒適。', pack: '輕便衣物。' },
+      { temp: '20 至 32°C', rating: 'good', weather: '炎熱乾燥。', pack: '夏季衣物、遮陽帽。' },
+      { temp: '23 至 33°C', rating: 'ok', weather: '炎熱，偶有降雨。', pack: '輕便衣物、雨傘。' },
+      { temp: '22 至 31°C', rating: 'ok', weather: '炎熱潮濕。', pack: '輕便衣物。' },
+      { temp: '16 至 26°C', rating: 'great', weather: '溫和晴朗。非常理想。', pack: '層搭衣物。' },
+      { temp: '9 至 19°C', rating: 'good', weather: '秋季涼爽。黃金週人潮多。', pack: '外套。' },
+      { temp: '2 至 11°C', rating: 'ok', weather: '寒冷乾燥。', pack: '保暖外套。' },
+      { temp: '-3 至 5°C', rating: 'tough', weather: '寒冷。', pack: '厚重冬季裝備。' },
+    ],
+    成都: [
+      { temp: '3 至 9°C', rating: 'ok', weather: '涼爽潮濕，多陰天。', pack: '保暖層搭衣物、雨傘。' },
+      { temp: '5 至 11°C', rating: 'ok', weather: '溫和灰暗；春節期間。', pack: '層搭衣物。' },
+      { temp: '9 至 16°C', rating: 'good', weather: '春季溫和。', pack: '外套、雨傘。' },
+      { temp: '13 至 22°C', rating: 'great', weather: '宜人。適合看熊貓。', pack: '輕薄層搭衣物。' },
+      { temp: '17 至 26°C', rating: 'great', weather: '溫暖舒適。', pack: '輕便衣物。' },
+      { temp: '20 至 28°C', rating: 'good', weather: '溫暖多雨。', pack: '雨具。' },
+      { temp: '22 至 30°C', rating: 'ok', weather: '炎熱潮濕，全年最濕月份。', pack: '輕便衣物、雨傘。' },
+      { temp: '22 至 30°C', rating: 'ok', weather: '炎熱潮濕。', pack: '輕便衣物。' },
+      { temp: '19 至 26°C', rating: 'great', weather: '溫暖漸轉舒適。很不錯。', pack: '輕薄層搭衣物。' },
+      { temp: '15 至 21°C', rating: 'great', weather: '秋季溫和。黃金週人潮多。', pack: '外套。' },
+      { temp: '9 至 16°C', rating: 'good', weather: '涼爽舒適。', pack: '外套。' },
+      { temp: '4 至 10°C', rating: 'ok', weather: '涼爽潮濕。', pack: '保暖層搭衣物。' },
+    ],
+    廣州: [
+      { temp: '10 至 18°C', rating: 'great', weather: '溫和乾燥，非常舒適。', pack: '輕薄層搭衣物。' },
+      { temp: '12 至 19°C', rating: 'great', weather: '溫和；春節期間。', pack: '輕薄層搭衣物。' },
+      { temp: '15 至 22°C', rating: 'good', weather: '逐漸轉暖，較潮濕。', pack: '輕便衣物。' },
+      { temp: '19 至 26°C', rating: 'good', weather: '溫暖，雨季開始。', pack: '輕便衣物、雨傘。' },
+      { temp: '23 至 30°C', rating: 'ok', weather: '炎熱潮濕，多雨。', pack: '輕便衣物、雨具。' },
+      { temp: '25 至 32°C', rating: 'tough', weather: '炎熱，非常潮濕，有颱風風險。', pack: '雨具、輕便衣物。' },
+      { temp: '26 至 34°C', rating: 'tough', weather: '炎熱潮濕，多雷雨。', pack: '輕便衣物、補水用品。' },
+      { temp: '26 至 34°C', rating: 'tough', weather: '非常炎熱，颱風季。', pack: '輕便衣物、防曬與雨具。' },
+      { temp: '24 至 32°C', rating: 'ok', weather: '炎熱逐漸緩和。', pack: '輕便衣物。' },
+      { temp: '21 至 29°C', rating: 'great', weather: '溫暖較乾爽。很適合旅行。黃金週人潮多。', pack: '輕便衣物。' },
+      { temp: '16 至 24°C', rating: 'great', weather: '溫暖舒適，天氣乾燥。', pack: '輕薄層搭衣物。' },
+      { temp: '11 至 19°C', rating: 'great', weather: '溫和乾燥。', pack: '輕薄層搭衣物。' },
+    ],
+    哈爾濱: [
+      { temp: '-24 至 -12°C', rating: 'good', weather: '極度寒冷，但有冰雪節！穿對衣物會很夢幻。', pack: '極寒天氣裝備。' },
+      { temp: '-20 至 -6°C', rating: 'good', weather: '非常寒冷；冰雪節持續舉行。', pack: '極寒冬季裝備。' },
+      { temp: '-9 至 4°C', rating: 'ok', weather: '寒冷，開始解凍。', pack: '厚外套。' },
+      { temp: '2 至 14°C', rating: 'good', weather: '春季涼爽。', pack: '外套、層搭衣物。' },
+      { temp: '10 至 22°C', rating: 'great', weather: '溫和宜人。', pack: '輕薄層搭衣物。' },
+      { temp: '16 至 27°C', rating: 'great', weather: '溫暖舒適的夏季。', pack: '輕便衣物。' },
+      { temp: '19 至 29°C', rating: 'great', weather: '溫暖宜人，可避開南方暑熱。', pack: '輕便衣物。' },
+      { temp: '18 至 27°C', rating: 'great', weather: '溫暖舒適。', pack: '輕薄層搭衣物。' },
+      { temp: '11 至 21°C', rating: 'good', weather: '秋季涼爽。', pack: '外套。' },
+      { temp: '2 至 13°C', rating: 'ok', weather: '寒冷，秋色繽紛。', pack: '保暖外套。' },
+      { temp: '-11 至 0°C', rating: 'ok', weather: '寒冷，初雪開始。', pack: '厚重冬季裝備。' },
+      { temp: '-20 至 -9°C', rating: 'good', weather: '非常寒冷；冰雪節於12月下旬開始。', pack: '極寒天氣裝備。' },
+    ],
+  };
+
+  const ratingStyle = {
+    great: { cls: 'border-green-200 bg-green-50', badge: 'bg-green-600', label: '非常適合造訪' },
+    good: { cls: 'border-teal-200 bg-teal-50', badge: 'bg-teal-600', label: '適合造訪' },
+    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: '可行，但需權衡' },
+    tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: '條件較具挑戰' },
+  } as const;
+
+  const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+
+  const cityEl = document.getElementById('city') as HTMLSelectElement;
+  const monthEl = document.getElementById('month') as HTMLSelectElement;
+  const card = document.getElementById('result-card');
+
+  function render() {
+    if (!card) return;
+    const city = cityEl.value;
+    const m = Number(monthEl.value);
+    const info = data[city][m];
+    const style = ratingStyle[info.rating];
+
+    card.className = `card border ${style.cls}`;
+    card.innerHTML = `
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="text-xl font-bold text-gray-900">${city} - ${monthNames[m]}</h2>
+        <span class="whitespace-nowrap rounded-full px-3 py-0.5 text-xs font-semibold text-white ${style.badge}">${style.label}</span>
+      </div>
+      <dl class="mt-4 space-y-3 text-sm">
+        <div><dt class="text-gray-500">典型氣溫</dt><dd class="text-lg font-semibold text-gray-900">${info.temp}</dd></div>
+        <div><dt class="text-gray-500">天氣與人潮</dt><dd class="text-gray-700">${info.weather}</dd></div>
+        <div><dt class="text-gray-500">行李建議</dt><dd class="text-gray-700">${info.pack}</dd></div>
+      </dl>`;
+  }
+
+  cityEl.addEventListener('change', render);
+  monthEl.addEventListener('change', render);
+  render();
+</script>

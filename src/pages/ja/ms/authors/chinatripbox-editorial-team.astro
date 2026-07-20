@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+
+const title = 'ChinaTripBox 編輯團隊';
+const description =
+  '關於 ChinaTripBox 編輯團隊、我們如何研究實用的中國旅行指南，以及讀者如何提出更正請求。';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': new URL('/authors/chinatripbox-editorial-team/#person', Astro.site).toString(),
+  name: title,
+  url: new URL('/authors/chinatripbox-editorial-team/', Astro.site).toString(),
+  affiliation: {
+    '@type': 'Organization',
+    name: 'ChinaTripBox',
+    url: new URL('/', Astro.site).toString(),
+  },
+  knowsAbout: [
+    '中國旅行規劃',
+    '中國的行動支付',
+    '中國 eSIM 與網路連線',
+    '中國高鐵',
+    '外國旅客在中國的行程安排',
+  ],
+};
+---
+<!-- AI輔助生成內容，經母語者審校 -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ja">
+  <Header locale="ja" />
+  <main class="container-page py-12">
+    <article class="prose-content article-body">
+      <p class="section-kicker">作者</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+
+      <h2>編輯重點</h2>
+      <p>
+        ChinaTripBox 編輯團隊為前往中國的外國旅客撰寫實用指南，重點涵蓋支付設定、eSIM
+        與網路連線、高鐵、叫車服務、機場接送、城市行程規劃、餐點訂購，以及首次旅行常見問題。
+      </p>
+
+      <h2>我們如何製作指南</h2>
+      <p>
+        我們結合官方來源、服務提供者文件、App 說明資料、讀者提問、旅客回報，以及在可行情況下的實際查核。
+        對於免簽入境、支付限額、App 可用性與交通規定等變動快速的主題，我們以官方政府或服務提供者頁面作為最終依據。
+      </p>
+
+      <h2>更正</h2>
+      <p>
+        中國旅行相關安排變動很快。若你發現有過時步驟、政策變更、失效連結，或遺漏的重要提醒，請透過我們的
+        <a href="/contact/">聯絡頁面</a>提供該頁面的 URL。
+        我們會審查更正內容，並在證據明確時更新受影響的指南。
+      </p>
+
+      <h2>編輯政策</h2>
+      <p>
+        請閱讀我們的<a href="/editorial-policy/">編輯政策</a>，了解研究方式、更新機制、聯盟揭露、獨立性與限制等詳細資訊。
+      </p>
+
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

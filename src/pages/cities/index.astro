@@ -30,7 +30,7 @@ const mapCities = CITY_GUIDES.map((g) => ({
   name: g.name,
   x: g.mapX,
   y: g.mapY,
-  href: postMap.has(g.slug) ? `#${g.name.toLowerCase().replace(/[^a-z]/g, '')}` : '',
+  href: postMap.has(g.slug) ? `/posts/${g.slug}/` : '',
 }));
 
 // City cards sorted by name

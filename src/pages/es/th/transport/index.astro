@@ -1,0 +1,124 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
+
+const CATEGORY = 'transport';
+const posts = (await getCollection('posts'))
+  .filter((p) => p.data.category === CATEGORY)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const title = '中國交通指南 — 高鐵、叫車與市內移動';
+const description =
+  '了解如何預訂高鐵車票、使用 DiDi 叫車，以及作為外國旅客在中國搭乘大眾運輸。';
+
+const transportPaths = [
+  { href: '/posts/china-high-speed-rail-guide-foreigners/', title: '長途火車', desc: '用這篇規劃城市之間的行程，了解座位等級、護照填寫與車站時間安排。' },
+  { href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: '機場抵達後交通', desc: '比較地鐵、計程車、叫車服務與機場鐵路，安排進城的第一段路程。' },
+  { href: '/posts/didi-china-foreign-tourists-guide/', title: '叫車服務', desc: '設定 DiDi、使用已翻譯的上車地點標記，並減少司機來電溝通的不便。' },
+  { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: '地鐵系統', desc: '以上海為例，了解 QR 車票、轉乘方式與尖峰時段的搭乘習慣。' },
+];
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'th';
+---
+<!-- AI輔助生成內容，經母語者審校 -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
+  <Header locale="es" />
+  <main class="container-page py-10">
+    <header>
+      <p class="section-kicker">คู่มือแนะนำ</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">交通指南</h1>
+      <p class="mt-4 max-w-3xl text-justify text-lg leading-8 text-gray-600">{description}</p>
+    </header>
+
+    <div class="mt-6">
+      <CoverImage name="hub-transport" alt="中國現代高鐵與鐵路系統" loading="lazy" />
+    </div>
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+  จีนมีเครือข่ายการขนส่งที่ทันสมัยและกว้างขวางที่สุดแห่งหนึ่งของโลก ทำให้การเดินทางระหว่างเมืองและภายในเมืองเป็นเรื่องง่าย หัวใจสำคัญคือเครือข่ายรถไฟความเร็วสูงที่ใหญ่ที่สุดในโลก เชื่อมต่อเมืองสำคัญด้วยความเร็วสูงสุด 350 กม./ชม. การเดินทางจากปักกิ่งไปเซี่ยงไฮ้ใช้เวลาเพียง 4.5 ชั่วโมง จากปักกิ่งไปซีอานประมาณ 4 ชั่วโมง รถไฟแบ่งเป็นประเภท G (ความเร็วสูง), D (เร็ว), และ K/T (ธรรมดา) โดยรถไฟ G เป็นที่นิยมและสะดวกสบายที่สุดสำหรับการเดินทางไกล ตั๋วสามารถจองได้ผ่านแอป 12306 อย่างเป็นทางการหรือ Trip.com รองรับภาษาอังกฤษ
+      </p>
+      <p>
+  ภายในเมือง ระบบรถไฟฟ้าใต้ดินมีประสิทธิภาพ ราคาไม่แพง และเป็นมิตรกับนักท่องเที่ยว มีป้ายภาษาอังกฤษในเมืองสำคัญอย่างปักกิ่ง เซี่ยงไฮ้ กว่างโจว และเซินเจิ้น DiDi (UBER ของจีน) ใช้งานได้สะดวกสำหรับชาวต่างชาติ แท็กซี่มีให้บริการทั่วไปแต่การสื่อสารภาษาอังกฤษอาจเป็นอุปสรรค การเขียนปลายทางเป็นภาษาจีนไว้จะช่วยได้มาก เที่ยวบินภายในประเทศเป็นอีกทางเลือกที่ดีสำหรับระยะทางไกล สายการบินสำคัญอย่าง China Southern, Air China และ China Eastern มีราคาที่แข่งขันได้
+      </p>
+    </div>
+
+    <AdSlot format="banner" />
+
+    <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-transport">
+      <h2 id="featured-transport" class="sr-only">精選交通指南</h2>
+      <a href="/posts/china-high-speed-rail-guide-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">高鐵指南</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">預訂車票、選擇座位等級、掌握車站動線</p>
+      </a>
+      <a href="/posts/book-china-train-tickets-12306-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">12306 訂票</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">使用外國護照的逐步教學</p>
+      </a>
+      <a href="/posts/didi-china-foreign-tourists-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">DiDi 叫車</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">外國旅客如何在中國使用叫車服務</p>
+      </a>
+      <a href="/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">機場接駁</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Beijing、Shanghai、Guangzhou 指南</p>
+      </a>
+    </section>
+
+    <section class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4" aria-labelledby="transport-paths">
+      <h2 id="transport-paths" class="sr-only">交通規劃路徑</h2>
+      {transportPaths.map((path) => (
+        <a href={path.href} class="card block hover:no-underline">
+          <h3 class="text-lg font-bold text-gray-950">{path.title}</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{path.desc}</p>
+        </a>
+      ))}
+    </section>
+
+    <section class="mt-8 grid gap-6 md:grid-cols-2">
+      {posts.map((post, i) => (
+        <>
+          <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
+            <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
+            <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
+            <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">
+              {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+            </time>
+          </a>
+          {(i + 1) % 3 === 0 && <div class="md:col-span-2"><AdSlot format="in-article" /></div>}
+        </>
+      ))}
+      {posts.length === 0 && <p class="text-gray-500">指南即將推出。</p>}
+    </section>
+
+    <section class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+      <h2 class="text-xl font-bold text-gray-950">必看交通指南</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <a href="/posts/china-high-speed-rail-guide-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">高鐵指南</p>
+          <p class="mt-1 text-sm text-gray-600">座位等級、訂票技巧與車站動線</p>
+        </a>
+        <a href="/posts/book-china-train-tickets-12306-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">預訂火車票</p>
+          <p class="mt-1 text-sm text-gray-600">使用外國護照的 12306 逐步教學</p>
+        </a>
+        <a href="/posts/didi-china-foreign-tourists-guide/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">DiDi 叫車</p>
+          <p class="mt-1 text-sm text-gray-600">外國旅客如何在中國使用叫車服務</p>
+        </a>
+        <a href="/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Shanghai 地鐵指南</p>
+          <p class="mt-1 text-sm text-gray-600">QR code、車票與轉乘技巧</p>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

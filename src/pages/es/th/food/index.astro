@@ -1,0 +1,123 @@
+---
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import AdSlot from '../../../../components/AdSlot.astro';
+import CoverImage from '../../../../components/CoverImage.astro';
+
+const posts = (await getCollection('posts-zh-tw'))
+  .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const title = '中國美食、用餐與餐桌禮儀指南';
+const description = 'คู่มือปฏิบัติจริงสำหรับนักท่องเที่ยวต่างชาติในจีน: การสั่งอาหารเดลิเวอรี่ ความปลอดภัยของอาหารริมทาง ระดับความเผ็ด การให้ทิป มารยาทในร้านอาหาร และวัฒนธรรมการกิน';
+
+const pathways = [
+  {
+    title: '不會中文也能點餐',
+    desc: '先設定好外送 App、儲存飯店地址，避免外送員來電時溝通混亂。',
+    href: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+  },
+  {
+    title: '安心吃街頭小吃',
+    desc: '從攤位翻桌率、是否現場加熱、用水習慣與辣度說法，判斷哪些攤位更值得選。',
+    href: '/zh-tw/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
+  },
+  {
+    title: '掌握用餐禮儀',
+    desc: '了解什麼情況不用給小費、服務費何時重要，以及當地餐廳的常見規矩。',
+    href: '/zh-tw/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
+  },
+];
+
+const cultureLinks = [
+  {
+    href: 'https://baijiu365.com/baijiu-101/',
+    title: '白酒入門',
+    desc: '如果宴席或主人招待的晚餐出現中國白酒，這些背景資訊會很實用。',
+  },
+  {
+    href: 'https://baijiu365.com/how-to-drink-baijiu/',
+    title: '如何有禮貌地喝白酒',
+    desc: '這篇延伸指南更深入介紹正式餐敘中的敬酒、小杯斟酒與飲酒節奏。',
+  },
+];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'th';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="th">
+  <Header locale="th" />
+  <main class="container-page py-10">
+    <header>
+      <p class="section-kicker">บทความแนะนำ</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+    </header>
+
+    
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+  อาหารจีนเป็นหนึ่งในวัฒนธรรมการทำอาหารที่ยิ่งใหญ่ของโลก ครอบคลุมหัวข้ออาหารหลักแปดประการ — ตั้งแต่หม้อไฟเสฉวนที่เผ็ดร้อนไปจนถึงติ่มซำกวางตุ้งอันละเอียดอ่อน ตั้งแต่เป็ดปักกิ่งอันเลื่องชื่อไปจนถึงบะหมี่ฉีกซีอาน แต่ละภูมิภาคมีรสชาติและประสบการณ์การกินที่ไม่เหมือนใคร สำหรับนักท่องเที่ยวต่างชาติ จีนมีตัวเลือกอาหารมากมายตั้งแต่แผงลอยริมทางและร้านบะหมี่ไปจนถึงร้านอาหารชั้นสูงและฟู้ดคอร์ทในห้างสรรพสินค้า แอปพลิเคชันส่งอาหารอย่าง Meituan และ Ele.me ทำให้การสั่งอาหารไปยังโรงแรมเป็นเรื่องง่าย
+      </p>
+      <p>
+  เมื่อรับประทานอาหารนอกบ้านในจีน มีเคล็ดลับที่เป็นประโยชน์บางประการ: เมืองใหญ่รับ Alipay และ WeChat Pay แทบทุกร้าน แต่เงินสดยังมีประโยชน์สำหรับพ่อค้าแม่ค้ารายย่อย เมนูภาษาอังกฤษพบได้ทั่วไปในแหล่งท่องเที่ยว แต่การมีแอปแปลภาษาติดตัวไว้จะช่วยได้มาก การให้ทิปไม่ใช่ธรรมเนียมปฏิบัติในจีน ความปลอดภัยของอาหารในร้านอาหารยอดนิยมโดยทั่วไปดี แต่การเลือกร้านที่มีลูกค้าพลุกพล่านเป็นเรื่องฉลาด สำหรับผู้ที่มีข้อจำกัดด้านอาหาร ควรทราบว่าอาหารจีนใช้ผงชูรสอย่างแพร่หลาย และหลายจานมีน้ำมันถั่วเหลือง
+      </p>
+    </div>
+
+    <AdSlot format="banner" />
+
+    <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="meishi-guide">
+      <h2 id="meishi-guide" class="sr-only">美食規劃導覽</h2>
+      {pathways.map((item) => (
+        <a href={item.href} class="card block hover:no-underline">
+          <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">閱讀指南</span>
+        </a>
+      ))}
+    </section>
+
+    <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">บทความแนะนำ</p>
+            <h2>美食與用餐禮儀文章</h2>
+          </div>
+        </div>
+        <div class="mt-6 grid gap-5 md:grid-cols-2">
+          {posts.map((post) => (
+            <a href={`/zh-tw/posts/${post.slug}/`} class="card block hover:no-underline">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+              <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+        <p class="section-kicker">บทความแนะนำ</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">遇到白酒時</h2>
+        <p class="mt-3 text-sm leading-6 text-gray-600">
+          多數觀光客的日常用餐不需要懂酒，但在招待宴、商務餐敘，
+          或鄉村家庭聚餐中，有時會出現白酒敬酒。這些延伸資源提供更深入的說明，
+          而 ChinaTripBox 仍專注於旅行實務與行程安排。
+        </p>
+        <div class="mt-5 grid gap-3">
+          {cultureLinks.map((link) => (
+            <a href={link.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+              <h3 class="text-sm font-semibold text-gray-950">{link.title}</h3>
+              <p class="mt-1 text-sm leading-6 text-gray-600">{link.desc}</p>
+            </a>
+          ))}
+        </div>
+      </aside>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

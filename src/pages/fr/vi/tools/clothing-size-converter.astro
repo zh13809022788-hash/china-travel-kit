@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
+
+const title = '中國服裝與鞋碼換算工具';
+const description =
+  '將美國、英國和歐盟的服裝與鞋碼換算為中國尺碼，讓你在中國購物更有把握。涵蓋男女服飾與鞋類。';
+---
+<!-- AI輔助生成內容，經母語者審校 -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
+  <Header locale="fr" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">服裝與鞋碼換算工具</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <div class="mt-6 flex flex-wrap gap-2 text-sm">
+      <button data-tab="women-clothing" class="size-tab btn-primary px-3 py-1.5">女裝</button>
+      <button data-tab="men-clothing" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">男裝</button>
+      <button data-tab="women-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">女鞋</button>
+      <button data-tab="men-shoes" class="size-tab rounded-lg border border-gray-300 px-3 py-1.5 font-medium text-gray-700">男鞋</button>
+    </div>
+
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full min-w-[560px] border-collapse text-sm">
+        <thead>
+          <tr class="border-b-2 border-gray-200 text-left text-gray-500">
+            <th class="py-3 pr-4 font-semibold">中國</th>
+            <th class="py-3 pr-4 font-semibold">美國</th>
+            <th class="py-3 pr-4 font-semibold">英國</th>
+            <th class="py-3 pr-4 font-semibold">歐盟</th>
+          </tr>
+        </thead>
+        <tbody id="size-rows"></tbody>
+      </table>
+    </div>
+
+    <p class="mt-4 text-xs text-gray-400">
+      尺碼會因品牌與版型而異。中國服裝的尺寸通常比西方對應尺碼偏小，
+      如果拿不準，建議選大一號，或先試穿再購買。這些表格僅供一般參考。
+    </p>
+
+    <AffiliateCta
+      title="旅途中也能精明購物"
+      description="先把付款和連線問題安排好，這樣你就能順暢地在中國任何商店或 App 購物。"
+      buttonText="查看旅行必備"
+      placeholder={AFFILIATE_LINKS.transport}
+    />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  // 參考換算表。中國服裝通常以身高／胸圍公分標示，
+  // 並常簡化為數字尺碼；鞋碼則使用以歐碼為基礎的公分制尺寸。
+  const charts: Record<string, { cn: string; us: string; uk: string; eu: string }[]> = {
+    'women-clothing': [
+      { cn: '155/80A (XS)', us: '0–2', uk: '4–6', eu: '32–34' },
+      { cn: '160/84A (S)', us: '4', uk: '8', eu: '36' },
+      { cn: '165/88A (M)', us: '6–8', uk: '10–12', eu: '38–40' },
+      { cn: '170/92A (L)', us: '10–12', uk: '14–16', eu: '42–44' },
+      { cn: '175/96A (XL)', us: '14', uk: '18', eu: '46' },
+    ],
+    'men-clothing': [
+      { cn: '165/88A (S)', us: '34–36', uk: '34–36', eu: '44–46' },
+      { cn: '170/92A (M)', us: '38', uk: '38', eu: '48' },
+      { cn: '175/96A (L)', us: '40', uk: '40', eu: '50' },
+      { cn: '180/100A (XL)', us: '42–44', uk: '42–44', eu: '52–54' },
+      { cn: '185/104A (XXL)', us: '46', uk: '46', eu: '56' },
+    ],
+    'women-shoes': [
+      { cn: '35', us: '5', uk: '2.5', eu: '35' },
+      { cn: '36', us: '6', uk: '3.5', eu: '36' },
+      { cn: '37', us: '6.5', uk: '4.5', eu: '37' },
+      { cn: '38', us: '7.5', uk: '5.5', eu: '38' },
+      { cn: '39', us: '8.5', uk: '6.5', eu: '39' },
+      { cn: '40', us: '9', uk: '7', eu: '40' },
+    ],
+    'men-shoes': [
+      { cn: '39', us: '6.5', uk: '6', eu: '39' },
+      { cn: '40', us: '7', uk: '6.5', eu: '40' },
+      { cn: '41', us: '8', uk: '7.5', eu: '41' },
+      { cn: '42', us: '8.5', uk: '8', eu: '42' },
+      { cn: '43', us: '9.5', uk: '9', eu: '43' },
+      { cn: '44', us: '10.5', uk: '10', eu: '44' },
+      { cn: '45', us: '11', uk: '10.5', eu: '45' },
+    ],
+  };
+
+  const rowsEl = document.getElementById('size-rows');
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.size-tab');
+
+  function render(key: string) {
+    if (!rowsEl) return;
+    rowsEl.innerHTML = charts[key]
+      .map((r) => `
+        <tr class="border-b border-gray-100">
+          <td class="py-3 pr-4 font-semibold text-gray-900">${r.cn}</td>
+          <td class="py-3 pr-4">${r.us}</td>
+          <td class="py-3 pr-4">${r.uk}</td>
+          <td class="py-3 pr-4">${r.eu}</td>
+        </tr>`)
+      .join('');
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.classList.toggle('btn-primary', on);
+        ['rounded-lg', 'border', 'border-gray-300', 'font-medium', 'text-gray-700'].forEach((c) => t.classList.toggle(c, !on));
+      });
+      render(tab.dataset.tab!);
+    });
+  });
+
+  render('women-clothing');
+</script>

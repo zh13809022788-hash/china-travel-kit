@@ -1,0 +1,240 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
+
+const title = 'China Visa-Free & Transit Checker';
+const description =
+  '查詢依據您的國籍與旅遊類型，是否可免簽入境中國、使用 240 小時過境免簽，或需要事先申請簽證。';
+
+const lastReviewed = '2026 年 7 月 13 日';
+
+// Representative policy data for 2026. This is guidance, not legal advice;
+// travelers must confirm with an embassy before booking.
+const countries = [
+  'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
+  'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
+  'Singapore', 'Malaysia', 'Thailand', 'Brazil', 'New Zealand',
+  'Switzerland', 'Ireland', 'Norway', 'Other',
+];
+---
+<!-- AI輔助生成內容，經母語者審校 -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
+  <Header locale="ru" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">免簽與過境資格查詢器</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+      <p class="mt-3 text-sm text-gray-500">
+        最後審閱：{lastReviewed}。本查詢工具僅供行程規劃參考，並非官方資格認定結果。
+      </p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <!-- Input controls -->
+    <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">您的護照國籍</span>
+        <select id="country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          {countries.map((c) => <option value={c}>{c}</option>)}
+        </select>
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">旅遊類型</span>
+        <select id="trip" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          <option value="tourism">觀光 / 探親訪友</option>
+          <option value="business">商務</option>
+          <option value="transit">僅經中國過境前往其他國家</option>
+        </select>
+      </label>
+      <div class="sm:col-span-2">
+        <button id="check-btn" class="btn-primary w-full sm:w-auto">查詢我的資格</button>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="mt-6 hidden">
+      <div class="card" id="result-card"></div>
+      <p class="mt-3 text-xs text-gray-400">
+        政策經常變動，且是否適用仍取決於您的具體情況。預訂行程前，請務必向中國大使館或領事館確認。此工具僅提供一般性參考資訊。
+      </p>
+
+      <AffiliateCta
+        title="規劃您其餘的行程"
+        description="在抵達中國前，先處理好您的網路連線、付款方式與交通安排。"
+        buttonText="查看旅行必備項目"
+        placeholder={AFFILIATE_LINKS.transport}
+      />
+    </div>
+
+    <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="official-sources">
+      <h2 id="official-sources" class="text-xl font-bold text-gray-950">預訂前應查核的官方資訊來源</h2>
+      <p class="mt-2 text-sm leading-6 text-gray-600">
+        免簽國家名單、入境口岸、允許活動區域以及航空公司登機查驗規則都可能變動。
+        請以政府官方規定與航空公司規則為最終依據。
+      </p>
+      <ul class="mt-4 grid gap-2 text-sm leading-6 text-gray-700">
+        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">National Immigration Administration</a>：查詢邊檢與過境免簽最新資訊。</li>
+        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">State Council information portal</a>：查詢英文版政策公告。</li>
+        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministry of Foreign Affairs</a> 以及中國大使館或領事館網站：查詢依護照國籍適用的具體規定。</li>
+      </ul>
+    </section>
+
+    <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div class="rounded-lg border border-gray-200 bg-white p-6">
+        <h2 class="text-2xl font-bold text-gray-900">如何避免免簽判斷錯誤</h2>
+        <p class="mt-3 text-sm leading-6 text-gray-600">
+          最常見的錯誤，是把一般免簽入境和過境免簽混為一談。一般來回行程與前往第三國的中途停留，並不是同一種行程安排。航空公司會在登機前查驗文件，因此一旦判斷錯誤，可能在抵達中國之前就無法成行。
+        </p>
+        <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
+          <li><strong class="text-gray-900">先確認護照國籍。</strong> 居住國家與信用卡帳單國家並不決定您是否符合免簽資格。</li>
+          <li><strong class="text-gray-900">區分入境與過境。</strong> 過境通常需要已確認的前往第三國或地區的續程機票。</li>
+          <li><strong class="text-gray-900">確認入出境口岸。</strong> 過境政策取決於指定口岸與允許活動區域。</li>
+          <li><strong class="text-gray-900">備妥證明文件。</strong> 航空公司與邊檢人員可能要求您出示續程機票、飯店、行程或邀請資料。</li>
+        </ul>
+      </div>
+      <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
+        <h2 class="text-lg font-bold text-gray-900">規劃抵達後的其他安排</h2>
+        <div class="mt-4 grid gap-3">
+          <a href="/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">閱讀完整免簽指南</a>
+          <a href="/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">使用抵達檢查清單</a>
+          <a href="/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">規劃機場交通</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  type TripKey = 'tourism' | 'business' | 'transit';
+
+  // Nationalities eligible for the 30-day unilateral visa-free entry (2026 program).
+  const visaFree30 = new Set([
+    'Germany', 'France', 'Italy', 'Spain', 'Netherlands', 'Switzerland',
+    'Ireland', 'Norway', 'Japan', 'South Korea', 'Brazil', 'New Zealand',
+    'Malaysia', 'Thailand', 'Australia',
+  ]);
+
+  // Nationalities eligible for 240-hour (10-day) visa-free transit through
+  // designated ports when travelling onward to a third country/region.
+  const transit240 = new Set([
+    'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
+    'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
+    'Singapore', 'Switzerland', 'Ireland', 'Norway', 'Brazil', 'New Zealand',
+  ]);
+
+  interface Verdict {
+    tone: 'good' | 'warn' | 'info';
+    heading: string;
+    body: string;
+    points: string[];
+  }
+
+  function evaluate(country: string, trip: TripKey): Verdict {
+    const has30 = visaFree30.has(country);
+    const hasTransit = transit240.has(country);
+
+    if (trip === 'transit') {
+      if (hasTransit) {
+        return {
+          tone: 'good',
+          heading: '您很可能符合 240 小時過境免簽資格',
+          body: `若您持有 ${country} 護照，並經中國過境前往第三國，一般可在符合資格的口岸免簽停留最長 240 小時（10 天）。`,
+          points: [
+            '您必須持有 240 小時內前往第三國或地區的已確認續程機票。',
+            '入境與出境必須經由指定過境口岸（多數主要國際機場通常符合資格）。',
+            '您通常只能在入境所在的省份或區域活動，請查核該口岸的具體規定。',
+          ],
+        };
+      }
+      return {
+        tone: 'warn',
+        heading: '過境免簽可能不適用於您的國籍',
+        body: `${country} 不在我們資料中的標準 240 小時過境名單內。若您符合資格，仍可能可使用一般免簽入境；否則，您可能需要申請過境（G）簽證。`,
+        points: [
+          '請先確認您的國籍是否符合完整免簽入境資格。',
+          '若不符合，請在出發前申請適當簽證。',
+        ],
+      };
+    }
+
+    // tourism or business
+    if (has30) {
+      return {
+        tone: 'good',
+        heading: '您很可能符合 30 天免簽入境資格',
+        body: `若您持有 ${country} 護照，依現行單方面免簽政策，一般可因觀光、商務、探親訪友或過境而免簽入境中國，最長停留 30 天。`,
+        points: [
+          '您的護照應有至少 6 個月以上效期，且有空白頁。',
+          '請備妥續程 / 回程交通證明與住宿資料，以供入境查驗。',
+          '30 天通常是按每次入境計算，預訂前請再次確認最新計算方式。',
+        ],
+      };
+    }
+    if (hasTransit) {
+      return {
+        tone: 'info',
+        heading: '您大概率需要簽證，但過境免簽可能可行',
+        body: `${country} 不在我們的 30 天觀光 / 商務免簽名單中，因此一般需要簽證。不過，若您是經中國前往第三國，則可能可改用 240 小時過境免簽。`,
+        points: [
+          '若是專程造訪，請事先申請 L（旅遊）或 M（商務）簽證。',
+          '若只是前往其他地點途中停留，您可能符合 240 小時過境資格，請將「旅遊類型」切換為 Transit 進一步查詢。',
+        ],
+      };
+    }
+    return {
+      tone: 'warn',
+      heading: '您大概率需要簽證',
+      body: `根據我們的資料，持有 ${country} 護照者通常需要簽證才能因這類行程入境中國。請在出發前透過中國大使館、領事館或授權簽證中心申請。`,
+      points: [
+        '請在出發前充裕時間內申請 L（旅遊）或 M（商務）簽證。',
+        '通常需要提供邀請函或行程、飯店預訂以及回程機票等文件。',
+      ],
+    };
+  }
+
+  const toneStyles: Record<Verdict['tone'], string> = {
+    good: 'border-green-200 bg-green-50',
+    warn: 'border-amber-200 bg-amber-50',
+    info: 'border-blue-200 bg-blue-50',
+  };
+  const toneBadge: Record<Verdict['tone'], string> = {
+    good: 'bg-green-600 text-white',
+    warn: 'bg-amber-500 text-white',
+    info: 'bg-blue-600 text-white',
+  };
+  const toneLabel: Record<Verdict['tone'], string> = {
+    good: '很可能符合資格',
+    warn: '可能需要簽證',
+    info: '取決於您的行程安排',
+  };
+
+  const btn = document.getElementById('check-btn');
+  const result = document.getElementById('result');
+  const card = document.getElementById('result-card');
+  const countryEl = document.getElementById('country') as HTMLSelectElement;
+  const tripEl = document.getElementById('trip') as HTMLSelectElement;
+
+  btn?.addEventListener('click', () => {
+    if (!card || !result) return;
+    const v = evaluate(countryEl.value, tripEl.value as TripKey);
+    card.className = `card border ${toneStyles[v.tone]}`;
+    card.innerHTML = `
+      <span class="inline-block rounded-full px-3 py-0.5 text-xs font-semibold ${toneBadge[v.tone]}">${toneLabel[v.tone]}</span>
+      <h2 class="mt-3 text-xl font-bold text-gray-900">${v.heading}</h2>
+      <p class="mt-2 text-gray-700">${v.body}</p>
+      <ul class="mt-4 list-disc space-y-1.5 pl-5 text-sm text-gray-600">
+        ${v.points.map((p) => `<li>${p}</li>`).join('')}
+      </ul>`;
+    result.classList.remove('hidden');
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>

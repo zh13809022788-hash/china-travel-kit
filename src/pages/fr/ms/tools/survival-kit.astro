@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import ShowToLocal from "../../../components/ShowToLocal.astro";
+import SurvivalChecklist from "../../../components/SurvivalChecklist.astro";
+import survivalKits from "../../../data/survival-kits.json";
+
+const title = '中國生存工具包：翻譯卡與旅行檢查清單';
+const description =
+  '為外國旅客提供的互動式中國生存工具包：全螢幕翻譯卡、抵達後設定檢查清單、食物過敏卡，以及在地溝通工具。';
+---
+<!-- AI輔助生成內容，經母語者審校 -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
+  <Header locale="fr" />
+  <main class="container-page py-10">
+    <header class="max-w-3xl">
+      <p class="section-kicker">生存工具包</p>
+      <h1 class="mt-2 text-3xl font-bold text-gray-950 md:text-4xl">中國生存工具包</h1>
+<p class="mt-4 max-w-3xl text-lg leading-8 text-gray-600">
+  我們的中國生存工具包能幫助你更有信心地為旅程做好準備。它包含涵蓋出發前準備每個步驟的互動式檢查清單：簽證申請、旅遊保險、付款設定（Alipay/WeChat Pay）、eSIM 或 SIM 卡購買、住宿預訂，以及打包必需品。短語卡片區讓你在點餐、問路與協商計程車車資等常見情境中，向當地人出示中文文字。你也可以加入自己的自訂卡片與短語。所有內容都會儲存在你的瀏覽器中，因此你無需建立帳號，也能在旅途中隨時返回使用。
+</p>
+      <p class="mt-3 text-lg leading-8 text-gray-600">
+        當閱讀冗長指南太慢時，使用全螢幕翻譯卡與已儲存的檢查清單來應付這些時刻：
+        機場抵達、飯店入住、搭計程車、餐廳點餐、過敏需求，以及第一天的設定。
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a href="#arrival" class="btn-primary">從抵達開始</a>
+        <a href="#food" class="btn-outline">開啟食物卡片</a>
+      </div>
+    </header>
+
+    <section class="mt-8 grid gap-4 md:grid-cols-3">
+      <div class="rounded-lg border border-gray-200 bg-white p-5">
+        <h2 class="text-lg font-bold text-gray-950">全螢幕卡片</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">點一下卡片，向司機、飯店櫃檯或餐廳工作人員出示大型中文文字。</p>
+      </div>
+      <div class="rounded-lg border border-gray-200 bg-white p-5">
+        <h2 class="text-lg font-bold text-gray-950">已儲存的檢查清單</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">檢查清單進度會儲存在你的瀏覽器中，所以你可以先關閉，之後再回來繼續。</p>
+      </div>
+      <div class="rounded-lg border border-gray-200 bg-white p-5">
+        <h2 class="text-lg font-bold text-gray-950">情境 AI 入口</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">使用浮動助手，以符合主題情境的提示開啟 ChinaTripBox 旅行協助。</p>
+      </div>
+    </section>
+
+    <div class="mt-10 grid gap-8">
+      {survivalKits.map((kit) => (
+        <section id={kit.slug} class="grid gap-5 rounded-xl border border-gray-200 bg-gray-50 p-5">
+          <div class="max-w-3xl">
+            <p class="section-kicker">{kit.slug} 工具包</p>
+            <h2 class="mt-1 text-2xl font-bold text-gray-950">{kit.title}</h2>
+            <p class="mt-2 text-sm leading-6 text-gray-600">{kit.description}</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              {kit.related_paths.map((path) => (
+                <a href={path} class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-brand-700 hover:border-brand-300 hover:no-underline">
+                  相關指南
+                </a>
+              ))}
+            </div>
+          </div>
+          <div class="grid gap-5 lg:grid-cols-[1fr_0.85fr]">
+            <ShowToLocal themeId={kit.theme_id} tools={kit.tools} />
+            <SurvivalChecklist themeId={kit.theme_id} steps={kit.checklist_steps} />
+          </div>
+        </section>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
