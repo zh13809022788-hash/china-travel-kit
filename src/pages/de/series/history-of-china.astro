@@ -1,41 +1,43 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'history-of-china';
-const posts = (await getCollection('posts-de'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = 'Geschichte Chinas — Antike Stätten & Geschichten für Reisende';
-const description = 'Erkunde Chinas historische Stätten als ausländischer Reisender: die Große Mauer, die Terrakotta-Armee, die Verbotene Stadt, die Seidenstraße, alte Hauptstädte und Wasserstädte — entschlüsselt mit den Geschichten hinter dem, was du siehst.';
+const description = 'Entdecken Sie Chinas historische Stätten als ausländischer Reisender: die Große Mauer, die Terrakotta-Armee, die Verbotene Stadt, die Seidenstraße, alte Hauptstädte und Wasserstädte — entschlüsselt mit den Geschichten hinter dem, was Sie sehen.';
 
 const relatedTools = [
-  { href: '/de/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visa- und Einreiseleitfaden', desc: 'Visumfreier Transit und Einreiseanforderungen' },
-  { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'Hochgeschwindigkeitszug-Leitfaden', desc: 'Züge zu historischen Stätten in ganz China' },
-  { href: '/de/posts/book-china-train-tickets-12306-foreigners/', title: 'Zugtickets buchen', desc: '12306-Leitfaden für ausländische Reisepassinhaber' },
+  { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'Visum- & Einreiseführer', desc: 'Visumfreier Transit und Einreisebestimmungen' },
+  { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Hochgeschwindigkeitszug-Führer', desc: 'Züge zu historischen Stätten in ganz China' },
+  { href: '/posts/book-china-train-tickets-12306-foreigners/', title: 'Zugtickets buchen', desc: '12306-Leitfaden für Inhaber ausländischer Reisepässe' },
 ];
 
 const relatedCities = [
-  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Peking', desc: 'Verbotene Stadt, Große Mauer, Himmelstempel' },
-  { href: '/de/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Alte Hauptstadt der Südlichen Song' },
-  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Drei-Reiche-Erbe und alte Straßen' },
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Verbotene Stadt, Große Mauer, Himmelstempel' },
+  { href: '/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'Alte Hauptstadt der Südlichen Song' },
+  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Erbe der Drei Reiche und alte Straßen' },
 ];
 
 const otherSeries = [
-  { href: '/de/series/food-of-china/', title: 'Essen in China' },
-  { href: '/de/series/culture-of-china/', title: 'Kultur Chinas' },
-  { href: '/de/series/nature-of-china/', title: 'Natur Chinas' },
+  { href: '/series/food-of-china/', title: 'Essen in China' },
+  { href: '/series/culture-of-china/', title: 'Kultur Chinas' },
+  { href: '/series/nature-of-china/', title: 'Natur Chinas' },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'de';
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Inhaltsreihe</p>
@@ -56,7 +58,7 @@ const locale = 'de';
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
@@ -64,7 +66,7 @@ const locale = 'de';
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Artikel in dieser Reihe werden vorbereitet. Schauen Sie bald wieder vorbei.</p>
+          <p class="mt-6 text-gray-500">Artikel in dieser Reihe werden derzeit vorbereitet. Schauen Sie bald wieder vorbei.</p>
         )}
       </div>
 

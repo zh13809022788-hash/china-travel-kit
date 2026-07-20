@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
 
-const title = 'Équipe éditoriale ChinaTripBox';
+const title = 'Équipe éditoriale de ChinaTripBox';
 const description =
-  'Présentation de l’équipe éditoriale ChinaTripBox, de sa méthode de recherche sur les voyages en Chine et de la manière de demander une correction.';
+  "À propos de l'équipe éditoriale de ChinaTripBox, de la façon dont nous recherchons des guides pratiques pour voyager en Chine, et de la manière dont les lecteurs peuvent demander des corrections.";
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -19,54 +19,51 @@ const jsonLd = {
     url: new URL('/', Astro.site).toString(),
   },
   knowsAbout: [
-    'préparation d’un voyage en Chine',
+    'planification de voyage en Chine',
     'paiements mobiles en Chine',
-    'eSIM et accès internet en Chine',
+    "eSIM en Chine et accès à Internet",
     'train à grande vitesse en Chine',
-    'logistique des visiteurs étrangers en Chine',
+    'logistique pour les visiteurs étrangers en Chine',
   ],
 };
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
       <p class="section-kicker">Auteur</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-900">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
 
-      <h2>Priorités éditoriales</h2>
+      <h2>Angle éditorial</h2>
       <p>
-        L’équipe éditoriale ChinaTripBox rédige des guides pratiques pour les visiteurs étrangers en
-        Chine, avec un accent particulier sur les paiements, les eSIM et l’accès internet, les
-        trains à grande vitesse, les VTC, les transferts aéroport, les guides de villes, la
-        commande de repas et les difficultés fréquentes d’un premier séjour.
+        L'équipe éditoriale de ChinaTripBox rédige des guides pratiques pour les visiteurs étrangers en Chine, en mettant l'accent sur
+        la configuration des paiements, l'eSIM et l'accès à Internet, le train à grande vitesse, les services de VTC, les transferts
+        depuis l'aéroport, la planification des villes, la commande de repas, et les problèmes courants d'un premier voyage.
       </p>
 
-      <h2>Comment nous construisons nos guides</h2>
+      <h2>Comment nous élaborons nos guides</h2>
       <p>
-        Nous croisons les sources officielles, la documentation des fournisseurs, les centres d’aide
-        des applications, les questions des lecteurs, les retours de voyageurs et, lorsque c’est
-        possible, des vérifications pratiques. Pour les sujets qui changent vite, comme l’entrée sans
-        visa, les plafonds de paiement, la disponibilité des applications et les règles de
-        transport, nous considérons les pages officielles des administrations et des fournisseurs
-        comme la référence principale.
+        Nous combinons des sources officielles, la documentation des prestataires, les documents d'aide des applications, les questions
+        des lecteurs, les retours de voyageurs, et des vérifications pratiques lorsque c'est possible. Pour les sujets qui évoluent
+        rapidement comme l'entrée sans visa, les plafonds de paiement, la disponibilité des applications, et les règles de transport,
+        nous considérons les pages officielles du gouvernement ou des prestataires comme la source finale.
       </p>
 
       <h2>Corrections</h2>
       <p>
-        La logistique de voyage en Chine évolue rapidement. Si vous trouvez une étape obsolète, une
-        règle modifiée, un lien cassé ou une réserve manquante, envoyez l’URL de la page via notre
-        <a href="/fr/contact/">page de contact</a>. Nous examinons les corrections et mettons à jour
-        les guides concernés lorsque les éléments sont suffisamment clairs.
+        La logistique de voyage en Chine évolue rapidement. Si vous trouvez une étape obsolète, une politique modifiée, un lien brisé,
+        ou une réserve manquante, veuillez envoyer l'URL de la page via notre <a href="/contact/">page de contact</a>.
+        Nous examinons les corrections et mettons à jour les guides concernés lorsque les preuves sont claires.
       </p>
 
       <h2>Politique éditoriale</h2>
       <p>
-        Consultez notre <a href="/fr/editorial-policy/">politique éditoriale</a> pour en savoir plus
-        sur la recherche, les mises à jour, la divulgation d’affiliation, l’indépendance et les
-        limites.
+        Consultez notre <a href="/editorial-policy/">politique éditoriale</a> pour en savoir plus sur la recherche,
+        les mises à jour, la divulgation d'affiliation, l'indépendance, et les limites.
       </p>
 
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

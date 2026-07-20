@@ -1,165 +1,94 @@
 ---
-
 import { getCollection } from 'astro:content';
-import { CITY_GUIDES, cityName } from '../../../data/cityGuideData';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import CoverImage from '../../../components/CoverImage.astro';
-import ChinaMap from '../../../components/ChinaMap.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import { getCategoryLabel } from "../../../i18n/categories";
+import { CITY_GUIDES, type CityGuideEntry } from "../../../data/cityGuideData";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import CoverImage from "../../../components/CoverImage.astro";
+import ChinaMap from "../../../components/ChinaMap.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
-const LOCALE = 'ru';
-const LOCALE_TAG = 'ru';
-const allPosts = await getCollection('posts-ru');
-const title = 'Города Китая для иностранных путешественников';
-const description = 'Планируйте поездки по городам Китая с практичными гидами по Пекину, Шанхаю, Гуанчжоу, Чэнду, Сианю, Ханчжоу, Чунцину и Санье: аэропорты, метро, еда, транспорт и удобные следующие шаги.';
+const allPosts = await getCollection('posts');
 
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing', 'guilin'];
-const cityPosts = allPosts
-  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+// Определяем, у каких путеводителей по городам есть опубликованные материалы
+const postMap = new Map<string, typeof allPosts[0]>();
+for (const post of allPosts) {
+  for (const guide of CITY_GUIDES) {
+    if (post.slug === guide.slug || post.slug.includes(guide.slug)) {
+      postMap.set(guide.slug, post);
+    }
+  }
+}
 
-// Dynamic map data from shared CITY_GUIDES
-const postedSlugs = new Set(cityPosts.map(p => p.slug));
+// Показываем только города, для которых есть опубликованный материал-путеводитель
+const activeGuides = CITY_GUIDES.filter((g) => postMap.has(g.slug));
+const activeSlugs = new Set(activeGuides.map((g) => g.slug));
+
+// Координаты на карте с правильными ссылками href
 const mapCities = CITY_GUIDES.map((g) => ({
-  name: cityName(g, 'ru'),
+  name: g.name,
   x: g.mapX,
   y: g.mapY,
-  href: postedSlugs.has(g.slug) ? `#${g.slug.replace(/^(.+?)-city-guide.*$/, '$1')}` : '',
+  href: postMap.has(g.slug) ? `#${g.name.toLowerCase().replace(/[^a-z]/g, '')}` : '',
 }));
 
-const cities = [
-  {
-    name: 'Пекин',
-    slug: 'beijing',
-    href: '/ru/posts/beijing-city-guide-for-foreigners/',
-    desc: 'Лучший выбор для истории, хутунов, Великой китайской стены и первого знакомства с главными достопримечательностями Китая.',
-    days: '4-5 дней',
-    bestSeason: 'сентябрь-октябрь',
-    difficulty: 'средне',
-    whyGo: 'Императорское наследие, музеи и самый удобный доступ к Великой китайской стене.',
-    next: '/ru/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
-    nextLabel: 'Как добраться из аэропорта Дасин',
-  },
-  {
-    name: 'Шанхай',
-    slug: 'shanghai',
-    href: '/ru/posts/shanghai-city-guide-for-foreigners/',
-    desc: 'Лучший вариант для мягкого старта, международной еды, прогулок среди небоскребов и удобного метро.',
-    days: '3-4 дня',
-    bestSeason: 'март-май, октябрь-ноябрь',
-    difficulty: 'легко',
-    whyGo: 'Самый простой город для первого визита: удобно с метро, аэропортами, едой и сервисами для иностранцев.',
-    next: '/ru/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
-    nextLabel: 'Гид по метро Шанхая',
-  },
-  {
-    name: 'Чэнду',
-    slug: 'chengdu',
-    href: '/ru/posts/chengdu-city-guide-for-foreigners/',
-    desc: 'Лучший город для сычуаньской кухни, чайных, панд и более спокойного городского ритма.',
-    days: '3-4 дня',
-    bestSeason: 'март-июнь, сентябрь-ноябрь',
-    difficulty: 'средне',
-    whyGo: 'Панды, сычуаньская кухня, чайные дома, умеренные цены и удобная база для поездок по западному Китаю.',
-    next: '/ru/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
-    nextLabel: 'Гид по уличной еде Чэнду',
-  },
-  {
-    name: 'Сиань',
-    slug: 'xian',
-    href: '/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
-    desc: 'Лучший выбор для древней истории, Терракотовой армии, старых городских стен и глубокого знакомства с культурным наследием Китая.',
-    days: '3-4 дня',
-    bestSeason: 'март-май, сентябрь-ноябрь',
-    difficulty: 'средне',
-    whyGo: 'Терракотовая армия, древняя городская стена, мусульманский квартал и сильное ощущение исторического Китая.',
-    next: '/ru/posts/china-high-speed-rail-guide-foreigners/',
-    nextLabel: 'Гид по скоростным поездам из Сианя',
-  },
-  {
-    name: 'Гуанчжоу',
-    slug: 'guangzhou',
-    href: '/ru/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
-    desc: 'Лучший вариант для кантонской кухни, деловой энергии юга и удобного выхода в сторону Гонконга.',
-    days: '3-4 дня',
-    bestSeason: 'октябрь-декабрь, март-апрель',
-    difficulty: 'средне',
-    whyGo: 'Димсам, южная торговая атмосфера, Canton Tower и более теплый ритм по сравнению с Пекином и Шанхаем.',
-    next: '/ru/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    nextLabel: 'Как разобраться с местной едой в Гуанчжоу',
-  },
-  {
-    name: 'Чунцин',
-    slug: 'chongqing',
-    href: '/ru/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    desc: 'Лучший выбор для острого хот-пота, футуристичных видов, холмистого рельефа и речных панорам.',
-    days: '3-4 дня',
-    bestSeason: 'март-май, сентябрь-ноябрь',
-    difficulty: 'сложнее',
-    whyGo: 'Хот-пот, эффектные ночные виды, многоуровневый транспорт и по-настоящему необычная городская среда.',
-    next: '/ru/food/',
-    nextLabel: 'Гид по еде Чунцина',
-  },
-  {
-    name: 'Ханчжоу',
-    slug: 'hangzhou',
-    href: '/ru/posts/hangzhou-city-guide-for-foreigners/',
-    desc: 'Лучший город для Западного озера, зеленых пейзажей, спокойных выходных и аккуратного городского отдыха.',
-    days: '2-3 дня',
-    bestSeason: 'март-май, сентябрь-ноябрь',
-    difficulty: 'легко-средне',
-    whyGo: 'Западное озеро, чайные деревни, храмы и спокойное дополнение к Шанхаю на скоростном поезде.',
-    next: '/ru/transport/',
-    nextLabel: 'Планирование поездов и местного транспорта',
-  },
-  {
-    name: 'Санья',
-    slug: 'sanya',
-    href: '/ru/posts/sanya-city-guide-for-foreigners/',
-    desc: 'Лучший вариант для теплой зимы, курортного отдыха, пляжей и более медленного темпа поездки.',
-    days: '3-5 дней',
-    bestSeason: 'ноябрь-апрель',
-    difficulty: 'средне',
-    whyGo: 'Пляжный отдых в Китае, зимнее солнце, морепродукты и длинные сезонные остановки.',
-    next: '/ru/posts/what-to-pack-for-china-a-season-by-season-checklist/',
-    nextLabel: 'Что взять с собой по сезонам',
-  },
-];
+// Карточки городов, отсортированные по названию
+const cities = [...activeGuides].sort((a, b) => a.name.localeCompare(b.name));
+
+// Все материалы, связанные с городами (отсортированы по заголовку)
+const cityPosts = allPosts
+  .filter((post) => activeSlugs.has(post.slug) || post.data.tags?.some((t: string) =>
+    [...activeSlugs].some((s) => s.includes(t) || t.includes(s))
+  ))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const title = 'Путеводители по городам Китая для иностранных путешественников';
+const description = `Планируйте практичные остановки в городах Китая с путеводителями по ${activeGuides.map((g) => g.name).join(', ')}.`;
 
 const routes = [
   {
-    name: 'Первая поездка в Китай, 8-10 дней',
-    plan: 'Шанхай 3 дня, Ханчжоу 2 дня, Пекин 4 дня',
-    fit: 'Хороший баланс удобного прилета, классических видов и ключевой исторической программы.',
+    name: 'Первая поездка в Китай, 8–10 дней',
+    plan: 'Shanghai 3 дня, Hangzhou 2 дня, Beijing 4 дня',
+    fit: 'Лучший баланс удобного прибытия, классических пейзажей и ключевых исторических мест.',
   },
   {
-    name: 'Еда и спокойный ритм, 7-8 дней',
-    plan: 'Чэнду 4 дня, Пекин или Шанхай 3-4 дня',
-    fit: 'Подходит тем, кто хочет панд, чайные, хот-пот и один крупный город для удобной логистики.',
+    name: 'Еда и расслабленный темп, 7–9 дней',
+    plan: 'Chengdu 4 дня, Beijing или Shanghai 3–4 дня',
+    fit: 'Подходит путешественникам, которые хотят увидеть панд, чайные дома, попробовать хотпот и посетить один крупный город-ворота.',
   },
   {
-    name: 'Зимний побег, 6-10 дней',
-    plan: 'Санья 4-6 дней, Шанхай 2-4 дня',
-    fit: 'Лучший вариант, когда на севере Китая холодно и хочется совместить пляж и большой город.',
+    name: 'Побег от зимы, 6–10 дней',
+    plan: 'Sanya 4–6 дней, Shanghai 2–3 дня',
+    fit: 'Лучший вариант, когда на севере Китая холодно и вам хочется простого сочетания пляжа и города.',
+  },
+  {
+    name: 'Открытие юга, 10–12 дней',
+    plan: 'Guangzhou 3 дня, Guilin 3 дня, Shanghai 4 дня',
+    fit: 'Отлично подходит для любителей еды, живописных ландшафтов и спокойного темпа путешествия по югу Китая.',
+  },
+  {
+    name: 'Древние столицы, 10–12 дней',
+    plan: 'Beijing 4 дня, Xi\'an 3 дня, Nanjing 2 дня, Shanghai 3 дня',
+    fit: 'Маршрут для любителей истории по императорским столицам Китая с пересадками на скоростных поездах.',
   },
 ];
 
 const faqItems = [
   {
-    question: 'Какой город Китая самый удобный для первой поездки иностранца?',
+    question: 'Какой город Китая самый удобный для иностранных путешественников, которые едут впервые?',
     answer:
-      'Чаще всего это Шанхай: аэропорты, метро, отели, рестораны и международные сервисы там понятнее всего для первого визита. Пекин тоже удобен, но обычно требует более тщательного планирования маршрута и бронирований.',
+      'Shanghai обычно является самым удобным первым городом, потому что аэропорты, указатели в метро, отели, рестораны и международные сервисы там лучше всего приспособлены для иностранцев. Beijing тоже вполне удобен, но требует более раннего бронирования и более тщательного планирования каждого дня.',
   },
   {
-    question: 'Сколько городов стоит включать в одну поездку по Китаю?',
+    question: 'Сколько китайских городов стоит посетить за одну поездку?',
     answer:
-      'Для первой поездки на 8-10 дней обычно достаточно двух или трех городов. Китай большой, а переезды, аэропорты, вокзалы и проверки безопасности отнимают больше времени, чем кажется на этапе планирования.',
+      'Для первой поездки на 8–10 дней достаточно двух или трёх городов. Китай большой, а трансферы в аэропорты, вокзалы, проверки безопасности и смена отелей могут занять больше времени, чем ожидается. Выберите один основной город прибытия, одну культурную или живописную остановку и один дополнительный пункт по желанию.',
   },
   {
-    question: 'Какой город лучше подходит для более долгого пребывания в Китае?',
+    question: 'Какой город лучше всего подходит для более длительного пребывания в Китае?',
     answer:
-      'Шанхай удобен за счет сервиса и общей понятности, Чэнду часто выигрывает по расходам и ритму жизни, а Ханчжоу предлагает сильный компромисс между природой, комфортом и современной городской средой. Санья лучше подходит для сезонной зимней остановки, а не для круглогодичной городской жизни.',
+      'Shanghai — самая удобная база для длительного пребывания с точки зрения сервисов и доступности английского языка, Chengdu лучше по более низким расходам и расслабленному образу жизни, а Hangzhou предлагает золотую середину с красивыми пейзажами и сильной технологической экономикой. Sanya хорошо подходит для зимнего пребывания, но не для круглогодичной городской жизни.',
   },
 ];
 
@@ -175,34 +104,35 @@ const faqJsonLd = {
     },
   })),
 };
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'ru';
+const locale = 'en';
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-    <header class="max-w-3xl">
-      <p class="section-kicker">Планирование городов</p>
+    <header>
+      <p class="section-kicker">Планирование по городам</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="city-shanghai" alt="Небоскребы Шанхая и набережная Вайтань на закате" loading="eager" />
+    <CoverImage name="city-shanghai" alt="Панорама Shanghai и набережная Bund в сумерках, символизирующие путешествия по городам Китая" loading="eager" />
 
     <ChinaMap cities={mapCities} />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
-      <h2 id="city-shortcuts" class="sr-only">Быстрый переход к городам</h2>
+      <h2 id="city-shortcuts" class="sr-only">Быстрые переходы по городам</h2>
       {cities.map((city) => (
-        <article class="card" id={city.slug}>
+        <a href={city.slug ? `/posts/${city.slug}/` : '#'} class="card block hover:no-underline scroll-mt-20" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Рекомендуемая остановка</dt>
+              <dt class="font-semibold text-gray-900">Рекомендуемая продолжительность</dt>
               <dd class="text-right">{city.days}</dd>
             </div>
             <div class="flex justify-between gap-4">
@@ -210,15 +140,12 @@ const locale = 'ru';
               <dd class="text-right">{city.bestSeason}</dd>
             </div>
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Удобство для гостей</dt>
+              <dt class="font-semibold text-gray-900">Удобство для путешественников</dt>
               <dd class="text-right">{city.difficulty}</dd>
             </div>
           </dl>
-          <div class="mt-5 grid gap-2 text-sm font-semibold">
-            <a href={city.href} class="text-brand-700 hover:text-brand-800">Открыть гид по городу</a>
-            <a href={city.next} class="text-gray-700 hover:text-brand-700">{city.nextLabel}</a>
-          </div>
-        </article>
+          <span class="mt-3 inline-block text-sm font-semibold text-brand-700">Открыть путеводитель по городу →</span>
+        </a>
       ))}
     </section>
 
@@ -226,7 +153,7 @@ const locale = 'ru';
       <div class="section-heading">
         <div>
           <p class="section-kicker">Сравнение городов</p>
-          <h2 id="compare-cities">Какой город Китая выбрать?</h2>
+          <h2 id="compare-cities">Какой город Китая вам выбрать?</h2>
         </div>
       </div>
       <div class="mt-6 overflow-hidden rounded-lg border border-gray-200">
@@ -235,7 +162,7 @@ const locale = 'ru';
             <tr>
               <th class="px-4 py-3">Город</th>
               <th class="px-4 py-3">Зачем ехать</th>
-              <th class="px-4 py-3">Остановка</th>
+              <th class="px-4 py-3">Рекомендуемая продолжительность</th>
               <th class="px-4 py-3">Лучший сезон</th>
               <th class="px-4 py-3">Удобство</th>
             </tr>
@@ -244,7 +171,7 @@ const locale = 'ru';
             {cities.map((city) => (
               <tr>
                 <th class="px-4 py-4 font-bold text-gray-950">
-                  <a href={city.href} class="text-brand-700 hover:text-brand-800">{city.name}</a>
+                  <a href={`/posts/${city.slug}/`} class="text-brand-700 hover:text-brand-800">{city.name}</a>
                 </th>
                 <td class="px-4 py-4 leading-6 text-gray-700">{city.whyGo}</td>
                 <td class="px-4 py-4 text-gray-700">{city.days}</td>
@@ -260,9 +187,11 @@ const locale = 'ru';
     <section class="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]" aria-labelledby="route-ideas">
       <div>
         <p class="section-kicker">Планирование маршрута</p>
-        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">Практичные комбинации городов</h2>
+        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">Практичные сочетания городов</h2>
         <p class="mt-3 leading-7 text-gray-600">
-          Сильный маршрут по Китаю обычно получается тогда, когда у каждого города есть своя роль. Используйте Шанхай как удобную точку прилета, Пекин для истории, Ханчжоу для пейзажей, Чэнду для еды и выхода в западный Китай, а Санью для теплого отдыха. Если поездка короткая, лучше избегать лишних перелетов и пересадок между вокзалами и аэропортами.
+          Хороший маршрут по Китаю обычно работает лучше, когда у городов разные роли. Используйте Shanghai как удобную
+          точку прибытия, Beijing для истории, Hangzhou для пейзажей, Chengdu для еды и доступа к западному Китаю, а
+          Sanya для тёплого отдыха. Старайтесь не добавлять слишком много перелётов или пересадок на вокзалах в короткую поездку.
         </p>
       </div>
       <div class="grid gap-4">
@@ -280,13 +209,13 @@ const locale = 'ru';
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Все гиды по городам</p>
+            <p class="section-kicker">Все материалы о городах</p>
             <h2>Статьи о городах и местном транспорте</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {cityPosts.map((post) => (
-            <a href={`/ru/posts/${post.slug}/`} class="card block hover:no-underline">
+            <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
@@ -297,12 +226,12 @@ const locale = 'ru';
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
         <p class="section-kicker">Перед выбором города</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">Проверьте логистику</h2>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Проверьте логистическую базу</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-          <li><a href="/ru/payment/" class="font-semibold text-brand-700">Оплата:</a> настройте Alipay, WeChat Pay и запас наличных до поездок в менее туристические города.</li>
-          <li><a href="/ru/esim/" class="font-semibold text-brand-700">Интернет:</a> выберите eSIM, роуминг или местную SIM-карту до того, как будете полагаться на карты и переводчик.</li>
-          <li><a href="/ru/transport/" class="font-semibold text-brand-700">Транспорт:</a> сравните поезда, трансферы из аэропорта, DiDi и QR-коды в метро.</li>
-          <li><a href="/ru/tools/best-time-to-visit/" class="font-semibold text-brand-700">Время:</a> проверьте погоду, праздники и туристическую нагрузку по месяцам.</li>
+          <li><a href="/payment/" class="font-semibold text-brand-700">Платежи:</a> настройте Alipay, WeChat Pay и запасной вариант с наличными перед поездкой в небольшие города.</li>
+          <li><a href="/esim/" class="font-semibold text-brand-700">Интернет:</a> выберите eSIM, роуминг или местную SIM-карту, прежде чем полагаться на карты и перевод.</li>
+          <li><a href="/transport/" class="font-semibold text-brand-700">Транспорт:</a> сравните поезда, трансферы из аэропорта, DiDi и QR-коды для метро.</li>
+          <li><a href="/tools/best-time-to-visit/" class="font-semibold text-brand-700">Время поездки:</a> проверьте погоду, праздники и уровень загруженности по месяцам.</li>
         </ul>
       </aside>
     </section>
@@ -310,8 +239,8 @@ const locale = 'ru';
     <section class="mt-12" aria-labelledby="city-faq">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">Частые вопросы по городам</p>
-          <h2 id="city-faq">Частые вопросы о планировании городов Китая</h2>
+          <p class="section-kicker">FAQ по городам</p>
+          <h2 id="city-faq">Частые вопросы о планировании поездок по городам Китая</h2>
         </div>
       </div>
       <div class="mt-6 grid gap-4 md:grid-cols-3">

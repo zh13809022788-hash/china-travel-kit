@@ -1,81 +1,79 @@
-﻿---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
 const title = 'Redaktionsrichtlinie';
 const description =
-  'Wie ChinaTripBox Reiseführer für ausländische Besucher in China recherchiert, schreibt, prüft und aktualisiert.';
+  'Wie ChinaTripBox Reiseratgeber fuer auslaendische Besucher Chinas recherchiert, schreibt, prueft und aktualisiert.';
 const lastUpdated = '10. Juli 2026';
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
       <h1 class="text-3xl font-bold text-gray-900">Redaktionsrichtlinie</h1>
       <p class="mt-2 text-sm text-gray-500">Zuletzt aktualisiert: {lastUpdated}</p>
 
       <p class="mt-4">
-        ChinaTripBox veröffentlicht unabhängige Reiseführer für ausländische Besucher in China.
-        Unser Ziel ist es, praktische Themen verständlicher zu machen, darunter Zahlungen, mobiles
-        Internet, Verkehr, Stadtplanung und die alltägliche Reiselogistik.
+        ChinaTripBox veroeffentlicht unabhaengige Reiseratgeber fuer auslaendische Besucher Chinas. Unser Ziel ist
+        es, praktische Themen leichter verstaendlich zu machen, darunter Zahlungen, mobiles Internet,
+        Transport, Stadtplanung und die alltaegliche Reiselogistik.
       </p>
 
       <h2>Wie wir recherchieren</h2>
       <p>
-        Wir nutzen, sofern verfügbar, offizielle Quellen, Anbieter-Dokumentationen, Hilfezentren von
-        Apps, öffentliche Richtlinienseiten, Erfahrungsberichte von Reisenden und, wenn möglich,
-        eigene Praxistests. Bei Themen, die sich häufig ändern, etwa Zahlungslimits,
-        eSIM-Verfügbarkeit, Regeln zur visumfreien Einreise und App-Support, prüfen wir Details nach
-        Möglichkeit vor der Veröffentlichung oder Aktualisierung eines Leitfadens.
+        Wir nutzen, wo verfuegbar, offizielle Quellen, Dokumentationen von Anbietern, Hilfezentren von Apps, oeffentliche
+        Richtlinienseiten, Berichte von Reisenden sowie nach Moeglichkeit praktische Ueberpruefungen. Bei Themen, die sich
+        haeufig aendern, wie Zahlungslimits, eSIM-Verfuegbarkeit, visafreie Einreiseregeln und App-Unterstuetzung,
+        versuchen wir, die Angaben vor der Veroeffentlichung oder Aktualisierung eines Ratgebers zu ueberpruefen.
       </p>
 
       <h2>Wie wir schreiben</h2>
       <p>
-        Unsere Artikel sind für echte Reisende geschrieben, nicht nur für Suchmaschinen. Wir stellen
-        klare Schritte, häufige Fehler, realistische Hinweise und verständliche Erklärungen über
-        allgemeine Reiseinspiration.
+        Unsere Artikel sind fuer echte Reisende geschrieben, nicht allein fuer Suchmaschinen. Wir legen mehr Wert
+        auf klare Schritte, haeufige Fehler, realistische Einschraenkungen und verstaendliche Erklaerungen in
+        einfacher Sprache als auf allgemeine Reiseinspiration.
       </p>
 
       <h2>Aktualisierungen und Korrekturen</h2>
       <p>
-        Reiseinformationen für China können sich schnell ändern. Wir prüfen wichtige Leitfäden
-        regelmäßig und aktualisieren Seiten, wenn wir veraltete Schritte, geänderte Preise, neues
-        App-Verhalten oder überarbeitete Regeln feststellen. Wenn Ihnen ein Problem auffällt,
-        kontaktieren Sie uns bitte mit der Seiten-URL und dem Hinweis, was Ihrer Ansicht nach
-        korrigiert werden sollte.
+        Reiseinformationen zu China koennen sich schnell aendern. Wir ueberpruefen wichtige Ratgeber regelmaessig und
+        aktualisieren Seiten, wenn wir veraltete Schritte, geaenderte Preise, neues App-Verhalten oder ueberarbeitete
+        Regeln feststellen. Wenn dir ein Problem auffaellt, kontaktiere uns bitte mit der URL der Seite und dem,
+        was deiner Meinung nach korrigiert werden muss.
       </p>
 
       <h2>Werbung und Affiliate-Links</h2>
       <p>
-        ChinaTripBox kann Einnahmen durch Werbung und Affiliate-Links erzielen. Geschäftliche
-        Beziehungen bestimmen nicht unsere grundlegenden redaktionellen Empfehlungen. Wenn eine
-        Seite Affiliate-Links enthält, kann uns die Nutzung dieser Links eine Provision einbringen,
-        ohne dass Ihnen zusätzliche Kosten entstehen.
+        ChinaTripBox kann durch Werbung und Affiliate-Links Geld verdienen. Kommerzielle Beziehungen bestimmen
+        nicht unsere grundlegenden redaktionellen Empfehlungen. Wenn eine Seite Affiliate-Links enthaelt, kann uns
+        die Nutzung dieser Links eine Provision einbringen, ohne dass fuer dich zusaetzliche Kosten entstehen.
       </p>
 
-      <h2>Unabhängigkeit</h2>
+      <h2>Unabhaengigkeit</h2>
       <p>
-        ChinaTripBox ist, sofern nicht ausdrücklich angegeben, nicht mit der chinesischen Regierung,
-        Google, Apple, Alipay, WeChat, China Railway, Telekommunikationsanbietern,
-        Fluggesellschaften, Banken oder Visastellen verbunden. Markennamen werden zur Identifikation
-        und für praktische Hinweise für Reisende verwendet.
+        ChinaTripBox ist nicht mit der chinesischen Regierung, Google, Apple, Alipay, WeChat,
+        China Railway, Telekommunikationsanbietern, Fluggesellschaften, Banken oder einer Visastelle verbunden,
+        sofern dies nicht ausdruecklich angegeben ist. Markennamen werden zur Identifizierung und fuer praktische
+        Hinweise fuer Reisende verwendet.
       </p>
 
-      <h2>Einschränkungen</h2>
+      <h2>Einschraenkungen</h2>
       <p>
-        Unsere Inhalte sind allgemeine Reiseinformationen. Sie stellen keine rechtliche,
-        einwanderungsbezogene, finanzielle, medizinische, steuerliche oder Notfallberatung dar.
-        Bestätigen Sie offizielle Anforderungen stets bei der zuständigen Regierungsbehörde,
-        Fluggesellschaft, dem Zahlungsanbieter, der Bank, dem Telekommunikationsanbieter oder dem
-        jeweiligen Dienstleister.
+        Unsere Inhalte sind allgemeine Reiseinformationen. Sie stellen keine rechtliche, einwanderungsbezogene,
+        finanzielle, medizinische, steuerliche oder notfallbezogene Beratung dar. Bestaetige offizielle Anforderungen
+        immer bei der zustaendigen Behoerde, Fluggesellschaft, dem Zahlungsanbieter, der Bank, dem Telekommunikationsanbieter
+        oder dem Dienstleister.
       </p>
 
       <h2>Kontakt</h2>
       <p>
-        Um eine Korrektur vorzuschlagen oder Fragen zu unserem redaktionellen Prozess zu stellen,
-        nutzen Sie bitte unsere <a href="/de/contact/">Kontaktseite</a>.
+        Um eine Korrektur vorzuschlagen oder nach unserem redaktionellen Prozess zu fragen, nutze bitte unsere
+        <a href="/contact/">Kontaktseite</a>.
       </p>
     </article>
   </main>

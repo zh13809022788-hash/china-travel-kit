@@ -13,7 +13,7 @@ export default defineConfig({
   },
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'],
+    locales: ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es', 'th', 'vi', 'ms'],
     routing: {
       prefixDefaultLocale: false,
     },
@@ -34,6 +34,12 @@ export default defineConfig({
           fr: 'fr-FR',
           de: 'de-DE',
           es: 'es-ES',
+          ms: 'ms',
+          vi: 'vi',
+          th: 'th',
+          ms: 'ms',
+          vi: 'vi',
+          th: 'th',
         },
       },
       filter: (page) => {
@@ -41,10 +47,10 @@ export default defineConfig({
         const path = url.pathname;
         // All locales released - only exclude low-value paths
         // Keep only released non-English pages; exclude low-value paths
-        const excludedPrefixes = ['/authors/'];
+        const excludedPrefixes = ['/authors/', '/de/', '/es/', '/th/', '/vi/', '/ms/'];
         // All 7 non-English locales confirmed 100% native - released for Google indexing
         if (excludedPrefixes.some((prefix) => path.startsWith(prefix))) return false;
-        if (path === '/404' || path === '/404/') return false;
+        if (path === '/404' || path === '/404/' || path.endsWith('/404/') || path.endsWith('/404')) return false;
         return true;
       },
     }),

@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
@@ -7,63 +7,65 @@ import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 import FaqSection from '../../../components/FaqSection.astro';
 
-const title = 'Vérificateur de compatibilité des cartes pour la Chine';
+const title = 'Vérificateur de compatibilité des cartes de paiement pour la Chine';
 const description =
-  'Vérifiez si votre carte bancaire a des chances de fonctionner avec Alipay et WeChat Pay en Chine, ainsi que les plafonds, frais et limites les plus courants.';
+  'Vérifiez si votre carte de crédit fonctionne avec Alipay et WeChat Pay en Chine. Consultez le statut de compatibilité, les limites, les frais et la configuration selon la nationalité et le réseau de carte.';
 
 const nationalities = [
-  'United States', 'United Kingdom', 'Canada', 'Australia',
-  'Germany', 'France', 'Japan', 'Singapore', 'Other',
+  'États-Unis', 'Royaume-Uni', 'Canada', 'Australie',
+  'Allemagne', 'France', 'Japon', 'Singapour', 'Autre',
 ];
 const cardNetworks = ['Visa', 'Mastercard', 'Amex', 'Discover'];
 
 const nextSteps = [
-  { href: '/fr/posts/alipay-foreign-credit-card-step-by-step/', title: 'Configurez Alipay avec une carte étrangère' },
-  { href: '/fr/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: 'Lien Visa ou Mastercard vers WeChat Pay' },
-  { href: '/fr/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: 'Savoir quand l\'argent aide encore' },
-  { href: '/fr/payment/', title: 'Voir tous les guides de paiement pour la Chine' },
+  { href: '/posts/alipay-foreign-credit-card-step-by-step/', title: 'Configurer Alipay avec une carte étrangère' },
+  { href: '/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/', title: 'Lier Visa ou Mastercard à WeChat Pay' },
+  { href: '/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/', title: 'Savoir quand l’argent liquide reste utile' },
+  { href: '/payment/', title: 'Voir tous les guides de paiement pour la Chine' },
 ];
 
 const faqItems = [
   {
-    question: 'Toutes les Visa et Mastercard étrangères fonctionneront-elles en Chine ?',
+    question: 'Toutes les cartes Visa ou Mastercard étrangères fonctionneront-elles en Chine ?',
     answer:
-      'Non. Visa et Mastercard restent le point de départ le plus sûr pour Alipay et WeChat Pay, mais certaines banques peuvent encore bloquer la vérification, refuser l’ajout au portefeuille ou signaler les paiements en Chine. Gardez une seconde carte et un peu d’espèces en secours.',
+      'Non. Visa et Mastercard sont les options les plus sûres pour commencer avec Alipay et WeChat Pay, mais certaines banques peuvent toujours bloquer la vérification, refuser l’association à un portefeuille numérique ou signaler les transactions en Chine. Gardez une deuxième carte et un peu d’argent liquide en secours.',
   },
   {
-    question: 'Les touristes devraient-ils configurer Alipay et WeChat Pay ?',
+    question: 'Les touristes devraient-ils configurer à la fois Alipay et WeChat Pay ?',
     answer:
-      'Oui, si possible. Alipay est souvent plus facile à configurer pour les visiteurs, tandis que WeChat Pay peut être utile pour les mini programmes, restaurants et services locaux. Avoir les deux réduit les chances d\'être coincé chez un marchand.',
+      'Oui, si possible. Alipay est souvent plus facile à configurer pour les visiteurs, tandis que WeChat Pay peut être utile pour les mini-programmes, les restaurants et les services locaux. Avoir les deux réduit le risque d’être bloqué chez un commerçant.',
   },
   {
-    question: 'Combien d\'argent dois-je apporter si le paiement mobile fonctionne?',
+    question: 'Combien d’argent liquide devrais-je emporter si le paiement mobile fonctionne ?',
     answer:
-      'Apportez suffisamment de petits billets pour le transport de l\'aéroport, les repas de secours et les petites boutiques, mais ne comptez pas sur l\'argent seul. Beaucoup d\'endroits préfèrent le paiement QR, et certains employés n\'ont peut-être pas le changement prêt.',
+      'Emportez suffisamment de petites coupures pour le transport depuis l’aéroport, les repas de secours et les petites boutiques, mais ne comptez pas uniquement sur l’argent liquide. Beaucoup d’endroits préfèrent le paiement par QR code, et certains employés peuvent ne pas avoir de monnaie prête.',
   },
 ];
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Outil</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Vérificateur de compatibilité du paiement</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Vérificateur de compatibilité des paiements</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <section class="mt-6 grid gap-4 md:grid-cols-3" aria-label="Ce que ce vérificateur de paiement aide avec">
+    <section class="mt-6 grid gap-4 md:grid-cols-3" aria-label="Ce que ce vérificateur de paiement vous aide à faire">
       <div class="rounded-lg border border-gray-200 bg-white p-4">
-        <h2 class="text-base font-bold text-gray-900">Vérifier le support du portefeuille</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Vérifiez si votre réseau de cartes est bien adapté pour Alipay et WeChat Pay.</p>
+        <h2 class="text-base font-bold text-gray-900">Vérifier la compatibilité des portefeuilles</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Voyez si votre réseau de carte convient bien à Alipay et WeChat Pay.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-4">
-        <h2 class="text-base font-bold text-gray-900">Plan autour des limites</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Examiner les limites et les frais communs de transaction avant de faire des achats plus importants.</p>
+        <h2 class="text-base font-bold text-gray-900">Anticiper les limites</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Consultez les limites de transaction et les frais habituels avant d’effectuer des achats plus importants.</p>
       </div>
       <div class="rounded-lg border border-gray-200 bg-white p-4">
-        <h2 class="text-base font-bold text-gray-900">Construire un plan de sauvegarde</h2>
-        <p class="mt-2 text-sm leading-6 text-gray-600">Savoir quand transporter de l'argent comptant, changer de carte ou préparer les deux applications de paiement.</p>
+        <h2 class="text-base font-bold text-gray-900">Prévoir une solution de secours</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-600">Sachez quand emporter de l’argent liquide, changer de carte ou préparer les deux applications de paiement.</p>
       </div>
     </section>
 
@@ -78,7 +80,7 @@ const faqItems = [
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Réseau de cartes</span>
+        <span class="mb-1 font-medium text-gray-700">Réseau de carte</span>
         <select id="network" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           {cardNetworks.map((c) => <option value={c}>{c}</option>)}
         </select>
@@ -96,8 +98,8 @@ const faqItems = [
       </div>
 
       <AffiliateCta
-        title="Configurer une carte de voyage"
-        description="Obtenez une carte de voyage prépayée qui se connecte plus facilement à Alipay et WeChat Pay pour votre séjour en Chine."
+        title="Configurer une carte prête pour le voyage"
+        description="Obtenez une carte de voyage prépayée qui se lie de manière fiable à Alipay et WeChat Pay pour votre voyage en Chine."
         buttonText="Voir la carte recommandée"
         placeholder={AFFILIATE_LINKS.payment}
       />
@@ -107,12 +109,12 @@ const faqItems = [
       <div class="rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Comment utiliser ce vérificateur</h2>
         <ol class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
-          <li><strong class="text-gray-900">1. Choisissez votre passeport ou votre pays de résidence.</strong> Cela aide à encadrer les problèmes communs de banque et de vérification.</li>
-          <li><strong class="text-gray-900">2. Choisissez votre réseau de cartes.</strong> Visa et Mastercard sont généralement les meilleurs choix pour les portefeuilles de voyage en Chine.</li>
-          <li><strong class="text-gray-900">3. Préparez au moins un repli.</strong> Apportez une deuxième carte, installez les deux applications de paiement, et gardez de petites espèces pour les cas de bord.</li>
+          <li><strong class="text-gray-900">1. Choisissez votre pays de passeport ou de résidence.</strong> Cela aide à situer les problèmes courants liés aux banques et à la vérification.</li>
+          <li><strong class="text-gray-900">2. Choisissez votre réseau de carte.</strong> Visa et Mastercard sont généralement les meilleurs premiers choix pour les portefeuilles de voyage en Chine.</li>
+          <li><strong class="text-gray-900">3. Préparez au moins une solution de secours.</strong> Emportez une deuxième carte, installez les deux applications de paiement et gardez un peu de liquide pour les cas particuliers.</li>
         </ol>
         <p class="mt-4 text-sm leading-6 text-gray-600">
-          Les règles de paiement, la vérification du portefeuille et les vérifications des risques de l'émetteur peuvent changer. Traitez le résultat comme un guide pratique de planification de voyage, puis confirmez toute grande limite de transaction à l'intérieur de Alipay, WeChat Pay, et votre émetteur de carte avant le départ.
+          Les règles de paiement, la vérification des portefeuilles et les contrôles de risque des émetteurs peuvent changer. Considérez le résultat comme un guide pratique pour préparer votre voyage, puis confirmez toute limite importante de transaction dans Alipay, WeChat Pay et auprès de l’émetteur de votre carte avant le départ.
         </p>
       </div>
 
@@ -131,46 +133,47 @@ const faqItems = [
     <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="payment-checker-seo">
       <h2 id="payment-checker-seo" class="text-2xl font-bold text-gray-900">Ce que ce vérificateur peut et ne peut pas vous dire</h2>
       <p class="mt-3 text-sm leading-6 text-gray-600">
-        Cet outil est conçu pour la planification avant départ. Il vous aide à réfléchir à travers le réseau de cartes,
-support portefeuille, frais probables, et méthodes de secours avant de vous retrouver devant une caisse en Chine
-Compte de caisse. Il ne peut garantir que votre banque approuvera chaque paiement.
+        Cet outil est conçu pour la préparation avant le départ. Il vous aide à réfléchir au réseau
+        de carte, à la compatibilité des portefeuilles, aux frais probables et aux méthodes de secours avant
+        de vous retrouver à une caisse en Chine. Il ne peut pas garantir que votre banque
+        approuvera chacun de vos paiements.
       </p>
       <div class="mt-5 overflow-x-auto rounded-lg border border-gray-200">
         <table class="min-w-full divide-y divide-gray-200 text-sm">
           <thead class="bg-gray-50 text-left text-gray-700">
             <tr>
               <th class="px-4 py-3 font-semibold">Risque</th>
-              <th class="px-4 py-3 font-semibold">Pourquoi ça arrive</th>
-              <th class="px-4 py-3 font-semibold">Meilleure sauvegarde</th>
+              <th class="px-4 py-3 font-semibold">Pourquoi cela arrive</th>
+              <th class="px-4 py-3 font-semibold">Meilleure solution de secours</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200 bg-white text-gray-600">
             <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">La fixation de la carte échoue</td>
-              <td class="px-4 py-3">L'émetteur bloque la vérification du portefeuille ou 3-D Secure échoue.</td>
-              <td class="px-4 py-3">Essayez un autre Visa/Mastercard d'une autre banque.</td>
+              <td class="px-4 py-3 font-medium text-gray-900">Échec de liaison de la carte</td>
+              <td class="px-4 py-3">L’émetteur bloque la vérification du portefeuille ou 3-D Secure échoue.</td>
+              <td class="px-4 py-3">Essayez une autre Visa/Mastercard d’une banque différente.</td>
             </tr>
             <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">Paiement important rejeté</td>
-              <td class="px-4 py-3">La limite du portefeuille, du marchand ou de l'émetteur déclenche un réexamen.</td>
-              <td class="px-4 py-3">Paiement fractionné, utiliser la carte physique, ou demander hôtel / marchand pour les options.</td>
+              <td class="px-4 py-3 font-medium text-gray-900">Paiement important refusé</td>
+              <td class="px-4 py-3">Une limite du portefeuille, du commerçant ou de l’émetteur déclenche une vérification.</td>
+              <td class="px-4 py-3">Scindez le paiement, utilisez la carte physique ou demandez les options à l’hôtel/au commerçant.</td>
             </tr>
             <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">Pas de signal à la caisse</td>
-              <td class="px-4 py-3">Faiblesse des données mobiles, pas d'itinérance, ou l'application ne peut pas charger.</td>
-              <td class="px-4 py-3">Utilisez l'autre portefeuille, le marchand Wi-Fi, ou une petite sauvegarde en espèces.</td>
+              <td class="px-4 py-3 font-medium text-gray-900">Pas de signal en caisse</td>
+              <td class="px-4 py-3">Données mobiles faibles, pas d’itinérance ou impossibilité de charger l’application.</td>
+              <td class="px-4 py-3">Utilisez l’autre portefeuille, le Wi‑Fi du commerçant ou un petit secours en liquide.</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p class="mt-4 text-sm leading-6 text-gray-600">
-        Pour la configuration la plus solide, lisez <a href="/fr/posts/how-to-pay-in-china-tourist-guide/" class="font-semibold">notre guide pour payer en Chine en tant que touriste</a>,
-comparer <a href="/fr/posts/alipay-vs-wechat-pay-foreigners/" class="font-semibold">Alipay vs WeChat Pay</a>,
-et garder une petite sauvegarde RMB en utilisant notre <a href="/fr/posts/how-much-cash-to-bring-to-china/" class="font-semibold">Guide de trésorerie</a>.
+        Pour la configuration la plus solide, lisez le <a href="/posts/how-to-pay-in-china-tourist-guide/" class="font-semibold">guide complet de paiement pour les touristes en Chine</a>,
+        comparez <a href="/posts/alipay-vs-wechat-pay-foreigners/" class="font-semibold">Alipay vs WeChat Pay</a>,
+        et gardez un petit secours en RMB grâce à notre <a href="/posts/how-much-cash-to-bring-to-china/" class="font-semibold">guide sur l’argent liquide</a>.
       </p>
     </section>
 
-    <FaqSection items={faqItems} title="FAQ de la vérification des délais" />
+    <FaqSection items={faqItems} title="FAQ du vérificateur de paiement" />
   </main>
   <Footer />
 </BaseLayout>
@@ -184,20 +187,20 @@ et garder une petite sauvegarde RMB en utilisant notre <a href="/fr/posts/how-mu
     wechat: { status: string; single: string; daily: string; fee: string; how: string };
   }> = {
     Visa: {
-      alipay: { status: 'Pris en charge', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Ajoutez la carte dans le portefeuille Alipay puis vérifiez votre passeport' },
-      wechat: { status: 'Pris en charge', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Ajoutez la carte dans le portefeuille WeChat puis vérifiez votre passeport' },
+      alipay: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Ajoutez la carte dans Alipay Wallet, vérifiez le passeport' },
+      wechat: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Ajoutez la carte dans WeChat Wallet, vérifiez le passeport' },
     },
     Mastercard: {
-      alipay: { status: 'Pris en charge', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Ajoutez la carte dans le portefeuille Alipay puis vérifiez votre passeport' },
-      wechat: { status: 'Pris en charge', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Ajoutez la carte dans le portefeuille WeChat puis vérifiez votre passeport' },
+      alipay: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Ajoutez la carte dans Alipay Wallet, vérifiez le passeport' },
+      wechat: { status: 'Compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Ajoutez la carte dans WeChat Wallet, vérifiez le passeport' },
     },
     Amex: {
-      alipay: { status: 'Partiellement pris en charge', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Amex fonctionne souvent dans Alipay, mais gardez une Visa ou Mastercard de secours' },
-      wechat: { status: 'Limité', single: 'Variable', daily: 'Variable', fee: '~3% au-delà de 200 RMB', how: 'La prise en charge reste irrégulière ; mieux vaut privilégier Visa ou Mastercard sur WeChat' },
+      alipay: { status: 'Partiellement compatible', single: '~6,000 RMB', daily: '~50,000 RMB', fee: '~3% au-delà de 200 RMB', how: 'Amex fonctionne avec Alipay dans la plupart des cas ; gardez une Visa/MC en secours' },
+      wechat: { status: 'Limité', single: 'Variable', daily: 'Variable', fee: '~3% au-delà de 200 RMB', how: 'La compatibilité n’est pas constante ; privilégiez Visa/Mastercard sur WeChat' },
     },
     Discover: {
-      alipay: { status: 'Limité', single: 'Variable', daily: 'Variable', fee: 'Variable', how: 'L’acceptation reste limitée ; une Visa ou Mastercard est fortement recommandée' },
-      wechat: { status: 'Déconseillé', single: '—', daily: '—', fee: '—', how: 'Utilisez plutôt une Visa ou une Mastercard' },
+      alipay: { status: 'Limité', single: 'Variable', daily: 'Variable', fee: 'Variable', how: 'L’acceptation est limitée ; une Visa/Mastercard est fortement recommandée' },
+      wechat: { status: 'Non recommandé', single: '—', daily: '—', fee: '—', how: 'Utilisez plutôt une Visa ou Mastercard' },
     },
   };
 
@@ -215,7 +218,7 @@ et garder une petite sauvegarde RMB en utilisant notre <a href="/fr/posts/how-mu
         <div class="flex justify-between gap-4"><dt class="text-gray-500">Transaction unique</dt><dd class="font-medium text-gray-900">${d.single}</dd></div>
         <div class="flex justify-between gap-4"><dt class="text-gray-500">Limite quotidienne</dt><dd class="font-medium text-gray-900">${d.daily}</dd></div>
         <div class="flex justify-between gap-4"><dt class="text-gray-500">Frais de traitement</dt><dd class="font-medium text-gray-900">${d.fee}</dd></div>
-        <div class="pt-2 text-gray-600"><dt class="text-gray-500">Configuration</dt><dd class="mt-1">${d.how}</dd></div>
+        <div class="pt-2 text-gray-600"><dt class="text-gray-500">Comment configurer</dt><dd class="mt-1">${d.how}</dd></div>
       </dl>`;
   }
 

@@ -1,33 +1,34 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import CoverImage from '../../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
-const posts = (await getCollection('posts-fr'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Cuisine, restaurants et savoir-vivre en Chine';
-const description = 'Guides pratiques pour bien manger en Chine : livraison, street food, niveaux de piment, pourboires, étiquette au restaurant et repères utiles pour les visiteurs étrangers.';
+const title = 'Guides sur la gastronomie, les restaurants et les bonnes manières en Chine';
+const description =
+  'Guides pratiques sur la gastronomie en Chine pour les visiteurs étrangers : commander des plats en livraison, sécurité de la street food, niveaux de piquant, pourboires, étiquette au restaurant et culture des repas.';
 
 const pathways = [
   {
     title: 'Commander sans parler chinois',
-    desc: 'Préparez les applications de livraison, enregistrez l’adresse de votre hôtel et évitez les appels du livreur incompréhensibles.',
-    href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+    desc: 'Configurer les applis de livraison, enregistrer les adresses d’hôtel et éviter les confusions avec les appels des livreurs.',
+    href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
-    title: 'Manger la street food sans stress',
-    desc: 'Repérez les bons stands grâce au débit, à la cuisson visible, à l’eau servie et à quelques phrases utiles.',
-    href: '/fr/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
+    title: 'Manger la street food en toute sécurité',
+    desc: 'Se fier au débit, à la chaleur visible, aux habitudes concernant l’eau et aux expressions sur le piquant pour mieux choisir les stands.',
+    href: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: 'Comprendre les usages au restaurant',
-    desc: 'Sachez quand ne pas laisser de pourboire, quand les frais de service comptent et comment se passent les repas sur place.',
-    href: '/fr/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
+    title: 'Gérer les bonnes manières à table',
+    desc: 'Savoir quand ne pas laisser de pourboire, quand les frais de service comptent et comment fonctionnent les usages locaux au restaurant.',
+    href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
 
@@ -35,35 +36,52 @@ const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
     title: 'Baijiu 101',
-    desc: 'Un bon point de départ si un banquet ou un dîner offert inclut l’alcool national chinois.',
+    desc: 'Informations utiles si un banquet ou un dîner organisé comprend l’alcool national de la Chine.',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: 'Boire du baijiu avec les bons codes',
-    desc: 'Un complément utile pour comprendre les toasts, les petits verres et le rythme des repas formels.',
+    title: 'Comment boire du baijiu poliment',
+    desc: 'Un guide complémentaire plus approfondi sur les toasts, les petites quantités servies et le fait de gérer son rythme lors des repas formels.',
   },
 ];
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-    <header class="max-w-3xl">
-      <p class="section-kicker">Cuisine et restaurants</p>
+    <header>
+      <p class="section-kicker">Gastronomie & restaurants</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+      <p class="mt-4 max-w-3xl text-justify text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chengdu-food" alt="Plats de street food épicés dans un marché de nuit en Chine" loading="lazy" />
+    <div class="mt-6">
+      <CoverImage name="topic-chinese-cuisine" alt="Plats épicés de street food du Sichuan dans un marché de nuit en Chine" loading="lazy" />
+    </div>
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+  La cuisine chinoise est l’une des grandes traditions culinaires du monde, avec huit grands styles régionaux. Du hotpot brûlant du Sichuan aux délicats dim sum cantonais, du légendaire canard laqué de Beijing aux nouilles tirées à la main de Xi’an, chaque région offre des saveurs et des expériences uniques. En tant que visiteur étranger, vous trouverez une incroyable variété d’options pour manger, depuis les stands de rue et les échoppes de nouilles jusqu’aux restaurants haut de gamme et aux food courts dans chaque centre commercial. La Chine moderne propose aussi des applis de livraison de repas comme Meituan et Ele.me, ce qui permet de commander facilement des repas à votre hôtel. La plupart des villes proposent également une offre de cuisine internationale, même si la vraie aventure consiste à plonger dans la cuisine chinoise locale.
+      </p>
+      <p>
+  En mangeant au restaurant en Chine, quelques conseils pratiques peuvent aider : dans les grandes villes, Alipay et WeChat Pay sont acceptés presque partout, mais l’argent liquide reste utile pour les petits vendeurs de rue. Les menus en anglais sont courants dans les zones touristiques, mais avoir une application de traduction à portée de main aide dans les restaurants locaux. Le pourboire n’est pas attendu en Chine. La sécurité alimentaire est généralement bonne dans les restaurants populaires, même s’il est plus prudent de choisir des endroits fréquentés avec un fort débit. Pour les personnes ayant des restrictions alimentaires, notez que la cuisine chinoise utilise largement le glutamate monosodique, et que de nombreux plats contiennent de l’huile de soja. Des options végétariennes existent, mais communiquer clairement aide à éviter les malentendus.
+      </p>
+    </div>
 
     <AdSlot format="banner" />
 
-    <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">Parcours de lecture autour de la cuisine</h2>
+    <section class="mt-8 grid gap-5 md:grid-cols-3 auto-rows-fr" aria-labelledby="food-pathways">
+      <h2 id="food-pathways" class="sr-only">Parcours de planification gastronomique</h2>
       {pathways.map((item) => (
-        <a href={item.href} class="card block hover:no-underline">
-          <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
-          <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
+        <a href={item.href} class="card flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-brand-200 hover:bg-brand-50 hover:no-underline h-full">
+          <div>
+            <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
+          </div>
           <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Lire le guide</span>
         </a>
       ))}
@@ -73,29 +91,28 @@ const cultureLinks = [
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Articles</p>
-            <h2>Guides cuisine et étiquette</h2>
+            <p class="section-kicker">Guides</p>
+            <h2>Articles sur la gastronomie et les bonnes manières</h2>
           </div>
         </div>
-        <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="mt-6 grid gap-5 md:grid-cols-2 auto-rows-fr">
           {posts.map((post) => (
-            <a href={`/fr/posts/${post.slug}/`} class="card block hover:no-underline">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+            <a href={`/posts/${post.slug}/`} class="card flex flex-col p-5 rounded-xl border border-gray-200 bg-white shadow-sm hover:border-brand-200 hover:bg-brand-50 hover:no-underline h-full">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
-              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+              <p class="mt-2 text-sm leading-6 text-gray-600 flex-1">{post.data.description}</p>
             </a>
           ))}
         </div>
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">Complément culture</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">Quand le baijiu s’invite à table</h2>
+        <p class="section-kicker">Complément culturel</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Quand le baijiu fait son apparition</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          La plupart des repas de voyageurs ne demandent pas de connaissance particulière sur
-          l’alcool, mais les banquets, dîners d’affaires et repas de famille en dehors des grandes
-          villes peuvent inclure des toasts au baijiu. Ces ressources vont plus loin, tandis que
-          ChinaTripBox reste centré sur les aspects pratiques du voyage.
+          La plupart des repas touristiques ne demandent aucune connaissance particulière sur l’alcool, mais les banquets organisés, les dîners d’affaires
+          et les repas en famille à la campagne incluent parfois des toasts au baijiu. Ces ressources complémentaires vont plus loin
+          tandis que ChinaTripBox reste centré sur la logistique du voyage.
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
@@ -107,6 +124,28 @@ const cultureLinks = [
         </div>
       </aside>
     </section>
-  </main>
+  
+    <section class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+      <h2 class="text-xl font-bold text-gray-950">Autres conseils sur la gastronomie et les restaurants</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <a href="/posts/china-food-guide-regional-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Guide de la gastronomie régionale</p>
+          <p class="mt-1 text-sm text-gray-600">Que manger selon les régions : Sichuan, cuisine cantonaise, Beijing et plus encore</p>
+        </a>
+        <a href="/posts/ordering-food-in-china-without-chinese-meituan-ele-me/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Commander des plats sans parler chinois</p>
+          <p class="mt-1 text-sm text-gray-600">Utiliser Meituan et Ele.me en tant que visiteur étranger</p>
+        </a>
+        <a href="/posts/chengdu-street-food-safety-spice-levels-what-to-order/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Street food à Chengdu</p>
+          <p class="mt-1 text-sm text-gray-600">Conseils de sécurité, niveaux de piquant et plats à ne pas manquer</p>
+        </a>
+        <a href="/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Étiquette du pourboire</p>
+          <p class="mt-1 text-sm text-gray-600">Quand laisser un pourboire et quand ne pas le faire en Chine</p>
+        </a>
+      </div>
+    </section>
+</main>
   <Footer />
 </BaseLayout>

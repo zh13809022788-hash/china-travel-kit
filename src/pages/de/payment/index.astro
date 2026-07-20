@@ -1,72 +1,75 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import CoverImage from '../../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
 const CATEGORY = 'payment';
-const posts = (await getCollection('posts-de'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === CATEGORY)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Bezahlen in China: Alipay, WeChat Pay und ausländische Karten';
+const title = 'Zahlungsleitfaden für China — Alipay, WeChat Pay & ausländische Karten';
 const description =
-  'Schritt-für-Schritt-Leitfäden zum Bezahlen in China: Alipay und WeChat Pay einrichten, Karten verknüpfen und typische Probleme unterwegs vermeiden.';
+  'Schritt-für-Schritt-Anleitungen zum Bezahlen in China als ausländischer Besucher: Alipay und WeChat Pay einrichten, internationale Karten verknüpfen und häufige Stolperfallen vermeiden.';
 
 const prioritySteps = [
-  'Installiere Alipay und WeChat möglichst schon vor der Abreise und erledige notwendige Verifizierungen, solange du noch problemlos auf deine Bank und deine Rufnummer zugreifen kannst.',
-  'Verknüpfe mindestens eine Visa- oder Mastercard und nimm möglichst eine zweite Karte einer anderen Bank als Reserve mit.',
-  'Halte einen kleinen Betrag Bargeld in RMB bereit, falls die Wallet-Verifizierung, die Kartenautorisierung oder ein kleiner Händler Probleme macht.',
+  'Installiere Alipay und WeChat vor der Abreise und verifiziere dann deine Identität, solange du noch Zugriff auf deine Heimatbank und deine Telefonnummer hast.',
+  'Verknüpfe mindestens eine Visa oder Mastercard und halte dann eine zweite Karte von einem anderen Anbieter als Reserve bereit.',
+  'Nimm einen kleinen Betrag Bargeld in RMB mit für Taxis, kleine Geschäfte und Momente, in denen die Wallet-Verifizierung oder die Kartenautorisierung fehlschlägt.',
 ];
 
 const paymentTools = [
-  { href: '/de/tools/payment-checker/', title: 'Zahlungs-Checker', desc: 'Prüfe Kartenunterstützung, typische Limits und mögliche Gebühren bei Alipay und WeChat Pay.' },
-  { href: '/de/tools/budget-cash-estimator/', title: 'Budget- und Bargeldrechner', desc: 'Schätze Reiseausgaben und ermittle, wie viel Bargeld du sinnvoll als Reserve dabeihaben solltest.' },
-  { href: '/de/tools/currency-converter/', title: 'RMB-Umrechner', desc: 'Wandle Preise in Yuan um und bekomme ein besseres Gefühl für Alltagskosten.' },
+  { href: '/tools/payment-checker/', title: 'Prüfer für Zahlungskompatibilität', desc: 'Prüfe Kartenunterstützung, typische Limits und Gebühren für Alipay und WeChat Pay.' },
+  { href: '/tools/budget-cash-estimator/', title: 'Budget- und Bargeldrechner', desc: 'Schätze deine Reisekosten und wie viel Bargeld als Reserve du mitnehmen solltest.' },
+  { href: '/tools/currency-converter/', title: 'RMB-Währungsrechner', desc: 'Wandle Preise in Yuan um und verstehe typische Alltagskosten.' },
 ];
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-    <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Bezahlung</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Leitfäden zum Bezahlen in China</h1>
+    <header>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Zahlung</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Zahlungsleitfäden</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-how-to-pay" alt="Smartphone mit mobilen Zahlungsmethoden für China-Reisen" loading="lazy" />
+    <CoverImage name="topic-how-to-pay" alt="Einrichtung mobiler Zahlungen mit Smartphone, das Zahlungsmethoden für China-Reisen anzeigt" loading="lazy" />
 
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-payment">
-      <h2 id="featured-payment" class="sr-only">Empfohlene Inhalte zur Bezahlung</h2>
-      <a href="/de/posts/alipay-foreign-credit-card-step-by-step/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Alipay einrichten</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Schritt für Schritt mit ausländischer Kreditkarte</p>
+      <h2 id="featured-payment" class="sr-only">Empfohlene Zahlungsleitfäden</h2>
+      <a href="/posts/alipay-foreign-credit-card-step-by-step/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">Alipay-Einrichtung</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Schritt-für-Schritt-Anleitung zur Installation von Alipay und zum Verknüpfen einer ausländischen Kreditkarte</p>
       </a>
-      <a href="/de/posts/wechat-pay-foreign-visitors-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">WeChat Pay nutzen</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Komplette Anleitung für Einrichtung und Einsatz als Besucher</p>
+      <a href="/posts/wechat-pay-foreign-visitors-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">WeChat Pay</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Vollständige Einrichtungs- und Nutzungsanleitung für ausländische Besucher</p>
       </a>
-      <a href="/de/posts/alipay-vs-wechat-pay-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Alipay oder WeChat Pay?</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Welche Wallet für Reisende 2026 praktischer ist</p>
+      <a href="/posts/alipay-vs-wechat-pay-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">Alipay vs WeChat Pay</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Welche Zahlungs-App solltest du 2026 verwenden?</p>
       </a>
-      <a href="/de/posts/how-to-pay-in-china-tourist-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Kompletter Zahlungsleitfaden</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Alles Wichtige zum Bezahlen in China für Touristen</p>
+      <a href="/posts/how-to-pay-in-china-tourist-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">Vollständiger Zahlungsleitfaden</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Alles, was du über das Bezahlen in China als Tourist wissen musst</p>
       </a>
     </section>
 
     <section class="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Starte mit einer robusten Zahlungslösung</h2>
+        <h2 class="text-2xl font-bold text-gray-900">Beginne mit einer zuverlässigen Zahlungseinrichtung</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          In China dominieren QR-Zahlungen den Alltag. Für Reisende ist eine Kombination aus einer
-          Haupt-Wallet, einer Reserve-Wallet, zwei Kartenoptionen und etwas Bargeld meist am
-          zuverlässigsten.
+          In China stehen QR-Zahlungen meist an erster Stelle. Eine touristenfreundliche Einrichtung bedeutet in der Regel eine primäre Wallet, eine Backup-Wallet, zwei Kartenoptionen und einen kleinen Bargeldbetrag für Ausnahmen.
         </p>
         <ol class="mt-5 space-y-3 text-sm leading-6 text-gray-600">
           {prioritySteps.map((step, index) => (
@@ -79,7 +82,7 @@ const paymentTools = [
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">Nützliche Tools</h2>
+        <h2 class="text-lg font-bold text-gray-900">Zahlungstools</h2>
         <div class="mt-4 grid gap-3">
           {paymentTools.map((tool) => (
             <a href={tool.href} class="rounded-lg border border-brand-100 bg-white p-4 hover:border-brand-200 hover:no-underline">
@@ -94,19 +97,41 @@ const paymentTools = [
     <section class="mt-8 grid gap-6 md:grid-cols-2">
       {posts.map((post, i) => (
         <>
-          <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+          <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">
-              {post.data.pubDate.toLocaleDateString('de-DE', { year: 'numeric', month: 'short', day: 'numeric' })}
+              {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
             </time>
           </a>
           {(i + 1) % 3 === 0 && <div class="md:col-span-2"><AdSlot format="in-article" /></div>}
         </>
       ))}
-      {posts.length === 0 && <p class="text-gray-500">Weitere Leitfäden erscheinen in Kürze.</p>}
+      {posts.length === 0 && <p class="text-gray-500">Leitfäden folgen bald.</p>}
     </section>
-  </main>
+  
+    <section class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+      <h2 class="text-xl font-bold text-gray-950">Verwandte Zahlungsleitfäden</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <a href="/posts/alipay-foreign-credit-card-step-by-step/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Alipay-Einrichtungsleitfaden</p>
+          <p class="mt-1 text-sm text-gray-600">Schritt für Schritt: Verknüpfe eine ausländische Visa oder Mastercard mit Alipay</p>
+        </a>
+        <a href="/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">WeChat Pay-Einrichtung</p>
+          <p class="mt-1 text-sm text-gray-600">Verbinde deine ausländische Karte in wenigen Minuten mit WeChat Pay</p>
+        </a>
+        <a href="/posts/how-to-pay-in-china-tourist-guide/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Überblick über Zahlungsmethoden</p>
+          <p class="mt-1 text-sm text-gray-600">QR-Codes, Bargeld und Karten: was wo funktioniert</p>
+        </a>
+        <a href="/posts/can-you-still-use-cash-in-china-as-a-foreigner-in-2026/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Bargeld in China verwenden</p>
+          <p class="mt-1 text-sm text-gray-600">Wann und wo Bargeld 2026 noch akzeptiert wird</p>
+        </a>
+      </div>
+    </section>
+</main>
   <Footer />
 </BaseLayout>

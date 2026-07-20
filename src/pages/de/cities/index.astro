@@ -1,161 +1,94 @@
 ---
-
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import CoverImage from '../../../components/CoverImage.astro';
-import ChinaMap from '../../../components/ChinaMap.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import { getCategoryLabel } from "../../../i18n/categories";
+import { CITY_GUIDES, type CityGuideEntry } from "../../../data/cityGuideData";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import CoverImage from "../../../components/CoverImage.astro";
+import ChinaMap from "../../../components/ChinaMap.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
-const allPosts = await getCollection('posts-de');
-const cityNames = ['beijing', 'shanghai', 'chengdu', 'hangzhou', 'sanya', 'guangzhou', 'xian', 'chongqing', 'kunming', 'nanjing'];
+const allPosts = await getCollection('posts');
+
+// Finde heraus, welche Stadtfuhrer veroffentlichte Beitrage haben
+const postMap = new Map<string, typeof allPosts[0]>();
+for (const post of allPosts) {
+  for (const guide of CITY_GUIDES) {
+    if (post.slug === guide.slug || post.slug.includes(guide.slug)) {
+      postMap.set(guide.slug, post);
+    }
+  }
+}
+
+// Zeige nur Stadte an, die einen veroffentlichten Stadtfuhrer-Beitrag haben
+const activeGuides = CITY_GUIDES.filter((g) => postMap.has(g.slug));
+const activeSlugs = new Set(activeGuides.map((g) => g.slug));
+
+// Kartenkoordinaten mit korrekten href-Links
+const mapCities = CITY_GUIDES.map((g) => ({
+  name: g.name,
+  x: g.mapX,
+  y: g.mapY,
+  href: postMap.has(g.slug) ? `#${g.name.toLowerCase().replace(/[^a-z]/g, '')}` : '',
+}));
+
+// Stadtkarten nach Name sortiert
+const cities = [...activeGuides].sort((a, b) => a.name.localeCompare(b.name));
+
+// Alle stadtebezogenen Beitrage (nach Titel sortiert)
 const cityPosts = allPosts
-  .filter((post) => cityNames.some((city) => post.slug.includes(city) || post.data.tags.includes(city)))
+  .filter((post) => activeSlugs.has(post.slug) || post.data.tags?.some((t: string) =>
+    [...activeSlugs].some((s) => s.includes(t) || t.includes(s))
+  ))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-const title = 'Stadtführer für China für ausländische Besucher';
-const description = 'Plane praktische Städtetipps für China mit Reiseführern für Peking, Shanghai, Guangzhou, Chengdu, Xi\'an, Hangzhou, Chongqing und Sanya sowie den nächsten Schritten zu Flughafen, Metro, Essen und Verkehr.';
-
-const mapCities = [
-  { name: 'Beijing', x: 470, y: 80, href: '#beijing' },
-  { name: 'Xi\'an', x: 340, y: 155, href: '#xian' },
-  { name: 'Nanjing', x: 490, y: 180, href: '' },
-  { name: 'Shanghai', x: 540, y: 200, href: '#shanghai' },
-  { name: 'Chengdu', x: 250, y: 220, href: '#chengdu' },
-  { name: 'Hangzhou', x: 520, y: 205, href: '#hangzhou' },
-  { name: 'Chongqing', x: 310, y: 260, href: '#chongqing' },
-  { name: 'Guilin', x: 370, y: 300, href: '' },
-  { name: 'Kunming', x: 210, y: 335, href: '' },
-  { name: 'Guangzhou', x: 400, y: 370, href: '#guangzhou' },
-  { name: 'Shenzhen', x: 430, y: 390, href: '' },
-  { name: 'Sanya', x: 360, y: 440, href: '#sanya' },
-];
-
-const cities = [
-  {
-    name: 'Beijing',
-    href: '/de/posts/beijing-city-guide-for-foreigners/',
-    desc: 'Ideal für Geschichte, Hutongs, die Große Mauer und klassische Besichtigungen beim ersten Besuch.',
-    days: '4-5 Tage',
-    bestSeason: 'September-Oktober',
-    difficulty: 'Mittel',
-    whyGo: 'Kaiserliche Geschichte, Museen und der einfachste Zugang zur Großen Mauer.',
-    next: '/de/posts/beijing-daxing-airport-to-city-center-a-first-timer-s-guide/',
-    nextLabel: 'Leitfaden für den Flughafentransfer Daxing',
-  },
-  {
-    name: 'Shanghai',
-    href: '/de/posts/shanghai-city-guide-for-foreigners/',
-    desc: 'Ideal für einen einfachen Start, internationale Küche, Skyline-Spaziergänge und ein dichtes U-Bahn-Netz.',
-    days: '3-4 Tage',
-    bestSeason: 'März-Mai, Oktober-November',
-    difficulty: 'Einfach',
-    whyGo: 'Der unkomplizierteste erste Stopp für U-Bahn, Flughäfen, Essen und englischsprachige Dienstleistungen.',
-    next: '/de/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/',
-    nextLabel: 'Shanghai-U-Bahn-Leitfaden',
-  },
-  {
-    name: 'Chengdu',
-    href: '/de/posts/chengdu-city-guide-for-foreigners/',
-    desc: 'Ideal für Sichuan-Küche, Teehaus-Tempo, Pandas und einen ruhigeren Großstadt-Rhythmus.',
-    days: '3-5 Tage',
-    bestSeason: 'März-Juni, September-November',
-    difficulty: 'Mittel',
-    whyGo: 'Pandas, Sichuan-Essen, Teehäuser, niedrigere Kosten und Ausflüge in Westchina.',
-    next: '/de/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
-    nextLabel: 'Chengdu-Streetfood-Leitfaden',
-  },
-  {
-    name: 'Xi\'an',
-    href: '/de/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/',
-    desc: 'Ideal für alte Geschichte, die Terrakotta-Armee, alte Stadtmauern und gelebte chinesische Kultur.',
-    days: '3-4 Tage',
-    bestSeason: 'März-Mai, September-November',
-    difficulty: 'Mittel',
-    whyGo: 'Terrakotta-Armee, alte Stadtmauer, Essensstraße im muslimischen Viertel und ein tiefes Gefühl chinesischer Geschichte.',
-    next: '/de/posts/china-high-speed-rail-guide-foreigners/',
-    nextLabel: 'Hochgeschwindigkeitszug nach Xi\'an',
-  },
-  {
-    name: 'Guangzhou',
-    href: '/de/posts/airport-to-city-transport-beijing-shanghai-guangzhou/',
-    desc: 'Ideal für kantonesische Küche, Handelsstadt-Energie, südliches Flair und einfachen Zugang zu Hong Kong.',
-    days: '3-4 Tage',
-    bestSeason: 'Oktober-Dezember, März-April',
-    difficulty: 'Mittel',
-    whyGo: 'Kantonesisches Dim Sum, Chen-Clan-Akademie, Canton Tower und eine wärmere südliche Alternative zu Peking und Shanghai.',
-    next: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    nextLabel: 'Leitfaden für kantonesisches Essen',
-  },
-  {
-    name: 'Chongqing',
-    href: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
-    desc: 'Ideal für Sichuan-Hotpot, futuristische Skyline, Bergstadtgelände und Yangtze-Kreuzfahrten.',
-    days: '3-4 Tage',
-    bestSeason: 'März-Mai, September-November',
-    difficulty: 'Schwer',
-    whyGo: 'Chongqing-Hotpot, Hongya-Höhle, nächtliche Skyline, Yangtze-Seilbahn und ein einzigartig vertikales Stadtbild.',
-    next: '/de/food/',
-    nextLabel: 'Chongqing-Essensleitfaden',
-  },
-  {
-    name: 'Hangzhou',
-    href: '/de/posts/hangzhou-city-guide-for-foreigners/',
-    desc: 'Ideal für den Westsee, grüne Landschaften, entspanntes Wochenendtempo und einen gepflegten Städtetrip.',
-    days: '2-3 Tage',
-    bestSeason: 'März-Mai, September-November',
-    difficulty: 'Einfach-mittel',
-    whyGo: 'Westsee, Teedörfer, Tempel und eine ruhige Hochgeschwindigkeitszug-Ergänzung von Shanghai aus.',
-    next: '/de/transport/',
-    nextLabel: 'Züge und Nahverkehr planen',
-  },
-  {
-    name: 'Sanya',
-    href: '/de/posts/sanya-city-guide-for-foreigners/',
-    desc: 'Ideal für warmes Winterwetter, Resort-Aufenthalte, Strandzeit und Ausflüge auf Hainan.',
-    days: '3-7 Tage',
-    bestSeason: 'November-April',
-    difficulty: 'Mittel',
-    whyGo: 'Strandzeit in China, Wintersonne, Meeresfrüchte, Resorts und längere saisonale Aufenthalte.',
-    next: '/de/posts/what-to-pack-for-china-a-season-by-season-checklist/',
-    nextLabel: 'Saisonaler Packleitfaden',
-  },
-];
+const title = 'China-Stadtfuhrer fur auslandische Besucher';
+const description = `Plane praktische Stadtstopps in China mit Reisefuhrern fur ${activeGuides.map((g) => g.name).join(', ')}.`;
 
 const routes = [
   {
     name: 'Erste China-Reise, 8-10 Tage',
-    plan: 'Shanghai 3 Tage, Hangzhou 2 Tage, Peking 4 Tage',
-    fit: 'Beste Balance aus einfacher Anreise, klassischer Landschaft und den wichtigsten historischen Höhepunkten.',
+    plan: 'Shanghai 3 Tage, Hangzhou 2 Tage, Beijing 4 Tage',
+    fit: 'Die beste Balance aus einfacher Ankunft, klassischer Landschaft und bedeutender Geschichte.',
   },
   {
     name: 'Essen und entspanntes Tempo, 7-9 Tage',
-    plan: 'Chengdu 4 Tage, Peking oder Shanghai 3-4 Tage',
-    fit: 'Gut für Reisende, die Pandas, Teehauskultur, Hotpot und eine große Einstiegstadt möchten.',
+    plan: 'Chengdu 4 Tage, Beijing oder Shanghai 3-4 Tage',
+    fit: 'Gut fur Reisende, die Pandas, Teehause, Hotpot und eine grosse internationale Drehscheibenstadt wollen.',
   },
   {
     name: 'Winterflucht, 6-10 Tage',
     plan: 'Sanya 4-6 Tage, Shanghai 2-3 Tage',
-    fit: 'Am besten, wenn Nordchina kalt ist und du eine einfache Strand-Stadt-Kombination möchtest.',
+    fit: 'Am besten, wenn Nordchina kalt ist und du eine einfache Kombination aus Strand und Stadt willst.',
+  },
+  {
+    name: 'Entdeckung des Sudens, 10-12 Tage',
+    plan: 'Guangzhou 3 Tage, Guilin 3 Tage, Shanghai 4 Tage',
+    fit: 'Ideal fur Feinschmecker, malerische Landschaften und ein entspanntes Tempo durch Sudchina.',
+  },
+  {
+    name: 'Alte Hauptstadte, 10-12 Tage',
+    plan: 'Beijing 4 Tage, Xi\'an 3 Tage, Nanjing 2 Tage, Shanghai 3 Tage',
+    fit: 'Geschichtsorientierte Route durch Chinas kaiserliche Hauptstadte mit Hochgeschwindigkeitszug-Verbindungen.',
   },
 ];
 
 const faqItems = [
   {
-    question: 'Welche chinesische Stadt ist für ausländische Erstbesucher am einfachsten?',
+    question: 'Welche Stadt in China ist fur auslandische Erstbesucher am einfachsten?',
     answer:
-      'Shanghai ist meist die einfachste erste Stadt, weil Flughäfen, U-Bahn-Beschilderung, Hotels, Restaurants und internationale Dienstleistungen am ausländerfreundlichsten sind. Peking ist ebenfalls gut machbar, verlangt aber mehr Vorabbuchungen und eine sorgfältigere Tagesplanung.',
+      'Shanghai ist normalerweise die einfachste erste Stadt, weil Flughafen, Metro-Beschilderung, Hotels, Restaurants und internationale Dienstleistungen dort am auslanderfreundlichsten sind. Beijing ist weiterhin gut handhabbar, erfordert aber mehr Vorausbuchung und eine sorgfaltigere Tagesplanung.',
   },
   {
-    question: 'Wie viele chinesische Städte sollte ich auf einer Reise besuchen?',
+    question: 'Wie viele chinesische Stadte sollte ich auf einer Reise besuchen?',
     answer:
-      'Für eine erste Reise von 8 bis 10 Tagen reichen zwei oder drei Städte. China ist groß, und Flughafentransfers, Bahnhöfe, Sicherheitskontrollen und Hotelwechsel können mehr Zeit kosten als erwartet. Wähle eine Einstiegstadt, einen kulturellen oder landschaftlichen Zwischenstopp und eine optionale Verlängerung.',
+      'Fur eine erste Reise von 8-10 Tagen reichen zwei oder drei Stadte aus. China ist gross, und Flughafentransfers, Bahnhofe, Sicherheitskontrollen und Hotelwechsel konnen mehr Zeit in Anspruch nehmen als erwartet. Wahlen Sie eine Ankunftsstadt, einen kulturellen oder landschaftlichen Stopp und eine optionale Verlangerung.',
   },
   {
-    question: 'Welche Stadt eignet sich am besten für einen längeren Aufenthalt in China?',
+    question: 'Welche Stadt eignet sich am besten fur einen langeren Aufenthalt in China?',
     answer:
-      'Shanghai ist die einfachste Langzeitbasis für Dienstleistungen und englische Abdeckung, Chengdu ist stärker bei niedrigeren Kosten und entspanntem Leben, und Hangzhou bietet einen Mittelweg mit Landschaft und einer starken Tech-Wirtschaft. Sanya eignet sich gut für Winteraufenthalte statt für ganzjähriges Stadtleben.',
+      'Shanghai ist als Basis fur einen langeren Aufenthalt am einfachsten, wenn es um Dienstleistungen und Englischabdeckung geht, Chengdu ist starker bei niedrigeren Kosten und entspanntem Leben, und Hangzhou bietet einen Mittelweg mit Landschaft und einer starken Tech-Wirtschaft. Sanya eignet sich gut fur Winteraufenthalte statt fur ganzjahriges Stadtleben.',
   },
 ];
 
@@ -171,57 +104,56 @@ const faqJsonLd = {
     },
   })),
 };
+const locale = 'en';
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-    <header class="max-w-3xl">
-      <p class="section-kicker">Stadtplanung</p>
+    <header>
+      <p class="section-kicker">Stadteplanung</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="city-shanghai" alt="Shanghai-Skyline und der Bund in der Dämmerung als Symbol für Städtereisen in China" loading="eager" />
+    <CoverImage name="city-shanghai" alt="Skyline von Shanghai und der Bund in der Dammerung als Sinnbild fur Stadtereisen in China" loading="eager" />
 
     <ChinaMap cities={mapCities} />
 
     <AdSlot format="banner" />
 
     <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" aria-labelledby="city-shortcuts">
-      <h2 id="city-shortcuts" class="sr-only">Stadt-Shortcuts</h2>
+      <h2 id="city-shortcuts" class="sr-only">Stadtkurzverweise</h2>
       {cities.map((city) => (
-        <article class="card" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
+        <a href={city.slug ? `/posts/${city.slug}/` : '#'} class="card block hover:no-underline scroll-mt-20" id={city.name.toLowerCase().replace(/[^a-z]/g, '')}>
           <h3 class="text-xl font-bold text-gray-950">{city.name}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{city.desc}</p>
           <dl class="mt-4 grid gap-2 text-sm text-gray-700">
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Empfohlener Aufenthalt</dt>
+              <dt class="font-semibold text-gray-900">Empfohlene Aufenthaltsdauer</dt>
               <dd class="text-right">{city.days}</dd>
             </div>
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Beste Reisezeit</dt>
+              <dt class="font-semibold text-gray-900">Beste Jahreszeit</dt>
               <dd class="text-right">{city.bestSeason}</dd>
             </div>
             <div class="flex justify-between gap-4">
-              <dt class="font-semibold text-gray-900">Einfachheit für Besucher</dt>
+              <dt class="font-semibold text-gray-900">Einfachheit fur Besucher</dt>
               <dd class="text-right">{city.difficulty}</dd>
             </div>
           </dl>
-          <div class="mt-5 grid gap-2 text-sm font-semibold">
-            <a href={city.href} class="text-brand-700 hover:text-brand-800">Stadtleitfaden öffnen</a>
-            <a href={city.next} class="text-gray-700 hover:text-brand-700">{city.nextLabel}</a>
-          </div>
-        </article>
+          <span class="mt-3 inline-block text-sm font-semibold text-brand-700">Stadtfuhrer offnen →</span>
+        </a>
       ))}
     </section>
 
     <section class="mt-12" aria-labelledby="compare-cities">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">Städtevergleich</p>
-          <h2 id="compare-cities">Welche chinesische Stadt solltest du wählen?</h2>
+          <p class="section-kicker">Stadtevergleich</p>
+          <h2 id="compare-cities">Welche Stadt in China solltest du wahlen?</h2>
         </div>
       </div>
       <div class="mt-6 overflow-hidden rounded-lg border border-gray-200">
@@ -229,9 +161,9 @@ const faqJsonLd = {
           <thead class="bg-gray-50 text-xs font-semibold uppercase tracking-wide text-gray-600">
             <tr>
               <th class="px-4 py-3">Stadt</th>
-              <th class="px-4 py-3">Warum dorthin</th>
-              <th class="px-4 py-3">Aufenthalt</th>
-              <th class="px-4 py-3">Beste Reisezeit</th>
+              <th class="px-4 py-3">Warum hinfahren</th>
+              <th class="px-4 py-3">Empfohlene Aufenthaltsdauer</th>
+              <th class="px-4 py-3">Beste Jahreszeit</th>
               <th class="px-4 py-3">Einfachheit</th>
             </tr>
           </thead>
@@ -239,7 +171,7 @@ const faqJsonLd = {
             {cities.map((city) => (
               <tr>
                 <th class="px-4 py-4 font-bold text-gray-950">
-                  <a href={city.href} class="text-brand-700 hover:text-brand-800">{city.name}</a>
+                  <a href={`/posts/${city.slug}/`} class="text-brand-700 hover:text-brand-800">{city.name}</a>
                 </th>
                 <td class="px-4 py-4 leading-6 text-gray-700">{city.whyGo}</td>
                 <td class="px-4 py-4 text-gray-700">{city.days}</td>
@@ -255,12 +187,10 @@ const faqJsonLd = {
     <section class="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]" aria-labelledby="route-ideas">
       <div>
         <p class="section-kicker">Routenplanung</p>
-        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">Praktische Stadtkombinationen</h2>
+        <h2 id="route-ideas" class="mt-2 text-3xl font-bold text-gray-950">Praktische Stadtekombinationen</h2>
         <p class="mt-3 leading-7 text-gray-600">
-          Eine starke China-Reiseroute funktioniert meist besser, wenn Städte unterschiedliche Aufgaben haben.
-          Nutze Shanghai als einfachen Ankunftspunkt, Peking für Geschichte, Hangzhou für Landschaft,
-          Chengdu für Essen und Zugang zu Westchina und Sanya für einen Warmwetter-Trip. Vermeide zu viele
-          Flüge oder Bahnumstiege in einer kurzen Reise.
+          Eine gute China-Reiseroute funktioniert normalerweise besser, wenn die Stadte unterschiedliche Rollen haben. Nutze Shanghai als einfachen Ankunftsort, Beijing fur Geschichte, Hangzhou fur Landschaft, Chengdu fur Essen und Zugang zu Westchina und
+          Sanya fur eine Pause bei warmem Wetter. Vermeide es, einer kurzen Reise zu viele Fluge oder Umstiege an Bahnhofen hinzuzufugen.
         </p>
       </div>
       <div class="grid gap-4">
@@ -278,14 +208,14 @@ const faqJsonLd = {
       <div>
         <div class="section-heading">
           <div>
-            <p class="section-kicker">Alle stadtbezogenen Leitfäden</p>
-            <h2>Stadtartikel und Nahverkehr</h2>
+            <p class="section-kicker">Alle stadtebezogenen Reisefuhrer</p>
+            <h2>Stadtartikel und lokaler Verkehr</h2>
           </div>
         </div>
         <div class="mt-6 grid gap-5 md:grid-cols-2">
           {cityPosts.map((post) => (
-            <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+            <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
               <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
             </a>
@@ -294,13 +224,13 @@ const faqJsonLd = {
       </div>
 
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <p class="section-kicker">Vor der Wahl einer Stadt</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">Logistik-Stack prüfen</h2>
+        <p class="section-kicker">Bevor du eine Stadt auswählst</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Prufe die Logistik-Grundlagen</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-          <li><a href="/de/payment/" class="font-semibold text-brand-700">Bezahlung:</a> Richte Alipay, WeChat Pay und eine Bargeldreserve ein, bevor du in kleinere Städte reist.</li>
-          <li><a href="/de/esim/" class="font-semibold text-brand-700">Internet:</a> Wähle eSIM, Roaming oder lokale SIM, bevor du dich auf Karten und Übersetzung verlässt.</li>
-          <li><a href="/de/transport/" class="font-semibold text-brand-700">Verkehr:</a> Vergleiche Züge, Flughafentransfers, DiDi und U-Bahn-QR-Codes.</li>
-          <li><a href="/de/tools/best-time-to-visit/" class="font-semibold text-brand-700">Timing:</a> Prüfe Wetter, Feiertage und Besucherandrang nach Monat.</li>
+          <li><a href="/payment/" class="font-semibold text-brand-700">Zahlungen:</a> richte Alipay, WeChat Pay und Bargeld als Reserve ein, bevor du in kleinere Stadte reist.</li>
+          <li><a href="/esim/" class="font-semibold text-brand-700">Internet:</a> wahlen Sie eSIM, Roaming oder eine lokale SIM, bevor Sie sich auf Karten und Ubersetzung verlassen.</li>
+          <li><a href="/transport/" class="font-semibold text-brand-700">Verkehr:</a> vergleiche Zuge, Flughafentransfers, DiDi und Metro-QR-Codes.</li>
+          <li><a href="/tools/best-time-to-visit/" class="font-semibold text-brand-700">Zeitpunkt:</a> prufe Wetter, Feiertage und Besucherdruck nach Monat.</li>
         </ul>
       </aside>
     </section>
@@ -308,8 +238,8 @@ const faqJsonLd = {
     <section class="mt-12" aria-labelledby="city-faq">
       <div class="section-heading">
         <div>
-        <p class="section-kicker">Stadt-FAQ</p>
-        <h2 id="city-faq">Häufige Fragen zur Stadtplanung in China</h2>
+          <p class="section-kicker">Stadt-FAQ</p>
+          <h2 id="city-faq">Haufige Fragen zur Stadteplanung in China</h2>
         </div>
       </div>
       <div class="mt-6 grid gap-4 md:grid-cols-3">

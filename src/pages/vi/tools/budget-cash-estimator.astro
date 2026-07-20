@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import AffiliateCta from '../../../components/AffiliateCta.astro';
+import { AFFILIATE_LINKS } from '../../../config';
+
+const title = '中國旅行預算與現金估算器';
+const description =
+  '根據行程天數、旅行風格與城市等級，估算你在中國每天需要的預算，以及應攜帶多少現金備用。取得清楚的人民幣與美元明細。';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
+  <Header locale="zh-TW" />
+  <main class="container-page py-10">
+    <header class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">工具</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">預算與現金估算器</h1>
+      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <!-- 輸入控制項 -->
+    <div class="mt-6 grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-2">
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">行程長度（晚）</span>
+        <input id="nights" type="number" min="1" max="60" value="7"
+          class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">旅客人數</span>
+        <input id="travelers" type="number" min="1" max="10" value="1"
+          class="rounded-lg border border-gray-300 px-3 py-2 text-sm" />
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">旅行風格</span>
+        <select id="style" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          <option value="budget">省錢型（青年旅館、街邊小吃、地鐵）</option>
+          <option value="mid" selected>中等預算（3–4★ 酒店、餐廳）</option>
+          <option value="comfort">舒適型（4–5★ 酒店、計程車、正餐）</option>
+        </select>
+      </label>
+      <label class="flex flex-col text-sm">
+        <span class="mb-1 font-medium text-gray-700">城市等級</span>
+        <select id="tier" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+          <option value="tier1">一線城市（Beijing、Shanghai、Shenzhen）</option>
+          <option value="tier2" selected>二線城市（Chengdu、Xi'an、Hangzhou）</option>
+          <option value="tier3">較小城市與城鎮</option>
+        </select>
+      </label>
+      <div class="sm:col-span-2">
+        <button id="calc-btn" class="btn-primary w-full sm:w-auto">估算我的預算</button>
+      </div>
+    </div>
+
+    <!-- 結果 -->
+    <div id="result" class="mt-6 hidden">
+      <div class="grid gap-5 md:grid-cols-2">
+        <div class="card" id="budget-card"></div>
+        <div class="card" id="cash-card"></div>
+      </div>
+      <div class="card mt-5" id="breakdown-card"></div>
+      <p class="mt-3 text-xs text-gray-400">
+        估算僅供參考，且不包含國際航班。實際費用會因季節、匯率與個人選擇而異。
+        此處假設匯率約為 1 USD = 7.2 RMB。
+      </p>
+
+      <AffiliateCta
+        title="像當地人一樣付款，節省手續費"
+        description="先設定好適合旅行使用的付款方式，讓大多數消費都不需要使用現金。"
+        buttonText="查看付款選項"
+        placeholder={AFFILIATE_LINKS.payment}
+      />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  type StyleKey = 'budget' | 'mid' | 'comfort';
+  type TierKey = 'tier1' | 'tier2' | 'tier3';
+
+  const USD_RATE = 7.2; // 每 USD 約等於多少 RMB
+
+  // 每人每日支出（RMB），不含住宿。
+  const dailySpend: Record<StyleKey, { food: number; transport: number; activities: number; misc: number }> = {
+    budget: { food: 80, transport: 30, activities: 40, misc: 30 },
+    mid: { food: 180, transport: 70, activities: 100, misc: 60 },
+    comfort: { food: 400, transport: 200, activities: 220, misc: 130 },
+  };
+
+  // 每晚住宿費（RMB，每房，假設最多 2 人共用）。
+  const lodging: Record<StyleKey, number> = {
+    budget: 150,
+    mid: 450,
+    comfort: 1100,
+  };
+
+  // 城市等級費用倍率。
+  const tierMult: Record<TierKey, number> = {
+    tier1: 1.25,
+    tier2: 1.0,
+    tier3: 0.8,
+  };
+
+  const rmb = (n: number) => `¥${Math.round(n).toLocaleString()}`;
+  const usd = (n: number) => `$${Math.round(n / USD_RATE).toLocaleString()}`;
+
+  const btn = document.getElementById('calc-btn');
+  const result = document.getElementById('result');
+  const budgetCard = document.getElementById('budget-card');
+  const cashCard = document.getElementById('cash-card');
+  const breakdownCard = document.getElementById('breakdown-card');
+
+  const nightsEl = document.getElementById('nights') as HTMLInputElement;
+  const travelersEl = document.getElementById('travelers') as HTMLInputElement;
+  const styleEl = document.getElementById('style') as HTMLSelectElement;
+  const tierEl = document.getElementById('tier') as HTMLSelectElement;
+
+  function calc() {
+    if (!budgetCard || !cashCard || !breakdownCard || !result) return;
+
+    const nights = Math.max(1, Math.min(60, Number(nightsEl.value) || 1));
+    const travelers = Math.max(1, Math.min(10, Number(travelersEl.value) || 1));
+    const style = styleEl.value as StyleKey;
+    const tier = tierEl.value as TierKey;
+    const mult = tierMult[tier];
+
+    const spend = dailySpend[style];
+    const perPersonDaily = (spend.food + spend.transport + spend.activities + spend.misc) * mult;
+
+    // 住宿：每 2 位旅客 1 間房，無條件進位。
+    const rooms = Math.ceil(travelers / 2);
+    const lodgingTotal = lodging[style] * mult * rooms * nights;
+
+    const spendTotal = perPersonDaily * travelers * nights;
+    const grandTotal = spendTotal + lodgingTotal;
+
+    // 建議現金：約每日支出的 10%，並限制在合理備用金範圍。
+    const dailyCashFloat = Math.min(perPersonDaily * 0.15 * travelers, 200 * travelers);
+    const cashRecommended = Math.min(dailyCashFloat * nights, 2000 + 100 * travelers);
+
+    budgetCard.innerHTML = `
+      <h3 class="text-lg font-bold text-gray-900">預估總預算</h3>
+      <p class="mt-2 text-3xl font-bold text-brand-600">${rmb(grandTotal)}</p>
+      <p class="text-sm text-gray-500">約 ${usd(grandTotal)}，適用於 ${travelers} 位旅客、${nights} 晚</p>
+      <dl class="mt-4 space-y-2 text-sm">
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">住宿</dt><dd class="font-medium text-gray-900">${rmb(lodgingTotal)}</dd></div>
+        <div class="flex justify-between gap-4"><dt class="text-gray-500">每日支出</dt><dd class="font-medium text-gray-900">${rmb(spendTotal)}</dd></div>
+        <div class="flex justify-between gap-4 border-t border-gray-100 pt-2"><dt class="text-gray-700 font-semibold">每人</dt><dd class="font-semibold text-gray-900">${rmb(grandTotal / travelers)}</dd></div>
+      </dl>`;
+
+    cashCard.innerHTML = `
+      <h3 class="text-lg font-bold text-gray-900">建議攜帶現金</h3>
+      <p class="mt-2 text-3xl font-bold text-gray-900">${rmb(cashRecommended)}</p>
+      <p class="text-sm text-gray-500">約 ${usd(cashRecommended)} 的人民幣現鈔</p>
+      <p class="mt-4 text-sm text-gray-600">
+        中國以行動支付為主，你幾乎可以用綁定海外卡的 Alipay 或 WeChat Pay 支付大多數消費。
+        這筆現金是備用金，適合沒有 QR 掃碼設備的計程車、鄉鎮小攤，以及只收紙鈔的機器。
+        建議準備小面額紙鈔（¥10、¥20、¥50）。
+      </p>`;
+
+    breakdownCard.innerHTML = `
+      <h3 class="text-lg font-bold text-gray-900">每日支出明細 <span class="text-sm font-normal text-gray-500">（每人）</span></h3>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-4 text-sm">
+        <div><dt class="text-gray-500">餐飲</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.food * mult)}</dd></div>
+        <div><dt class="text-gray-500">市內交通</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.transport * mult)}</dd></div>
+        <div><dt class="text-gray-500">景點活動</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.activities * mult)}</dd></div>
+        <div><dt class="text-gray-500">雜費</dt><dd class="text-lg font-semibold text-gray-900">${rmb(spend.misc * mult)}</dd></div>
+      </dl>`;
+
+    result.classList.remove('hidden');
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  btn?.addEventListener('click', calc);
+</script>

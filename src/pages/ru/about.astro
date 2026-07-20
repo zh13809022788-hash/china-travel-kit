@@ -1,55 +1,135 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
-const title = 'About ChinaTripBox';
+const title = 'О ChinaTripBox';
 const description =
-  'ChinaTripBox provides practical China travel guides and 1-on-1 help for foreign visitors. Built by a team with roots at Tujia, Airbnb, Ctrip, Meituan, and Alibaba.';
+  'ChinaTripBox предоставляет практические путеводители по Китаю и персональную помощь 1-на-1 для иностранных посетителей. Проект создан командой с опытом работы в Tujia, Airbnb, Ctrip, Meituan и Alibaba.';
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<!-- TODO: This page needs Codex-native translation. Currently uses English as placeholder. -->
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
+
+      <!-- Hero -->
       <div class="mb-10 text-center">
         <img src="/images/logo-wordmark.png?v=2" alt="ChinaTripBox" class="mx-auto h-10 w-auto" />
-        <h1 class="mt-5 text-3xl font-bold text-gray-900">About Us</h1>
-        <p class="mx-auto mt-2 max-w-xl text-base leading-relaxed text-gray-600">Practical China travel resources and services — built by a team of travel-tech veterans.</p>
+        <h1 class="mt-5 text-3xl font-bold text-gray-900">О нас</h1>
+        <p class="mx-auto mt-2 max-w-xl text-base leading-relaxed text-gray-600">
+          Практичные ресурсы и услуги для путешествий по Китаю, созданные командой ветеранов travel-tech.
+        </p>
       </div>
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">What We Do</h2>
-      <p class="mt-3">ChinaTripBox provides free, practical China travel guides and tools — covering payments, internet access, transport, visas, and everyday logistics — so foreign visitors can solve the real problems of traveling to China.</p>
-      <p>When free guides and tools aren't enough, we also offer 1-on-1 human assistance. Whether it's trip planning, payment setup troubleshooting, or complex visa and transport questions, a real person works with your specific situation to provide targeted advice.</p>
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">Who We Are</h2>
-      <p class="mt-3">A professional team with rigorous editorial standards. ChinaTripBox's core members come from <strong>Tujia</strong>, <strong>Airbnb</strong>, <strong>Ctrip</strong>, <strong>Meituan</strong>, and <strong>Alibaba</strong> — spanning shared accommodation, OTA, lifestyle services, and e-commerce.</p>
-      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-emerald-200 bg-emerald-50 p-6 sm:flex-row">
-        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-emerald-600"><img src="/images/howie.jpg" alt="Howie" class="h-full w-full object-cover" /></div>
+
+      <!-- What We Do -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Что мы делаем</h2>
+      <p class="mt-3">
+        ChinaTripBox предоставляет бесплатные практические путеводители и инструменты для путешествий по Китаю, охватывающие
+        платежи, доступ в интернет, транспорт, визы и повседневную организацию поездки, чтобы иностранные
+        посетители могли решать реальные проблемы, возникающие во время путешествия по Китаю.
+      </p>
+      <p>
+        Когда бесплатных путеводителей и инструментов недостаточно, мы также предлагаем персональную помощь 1-на-1.
+        Будь то планирование поездки, устранение проблем с настройкой платежей или сложные вопросы по визам и
+        транспорту, с вашей конкретной ситуацией работает реальный человек, чтобы предоставить
+        адресные рекомендации.
+      </p>
+
+      <!-- Who We Are -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Кто мы</h2>
+      <p class="mt-3">
+        Профессиональная команда со строгими редакционными стандартами. Ключевые участники ChinaTripBox
+        пришли из <strong>Tujia</strong>, <strong>Airbnb</strong>, <strong>Ctrip</strong>,
+        <strong>Meituan</strong> и <strong>Alibaba</strong> и представляют сферы совместного размещения,
+        OTA, лайфстайл-сервисов и электронной коммерции.
+      </p>
+
+      <!-- Team Card -->
+      <div class="mt-6 flex flex-col gap-6 rounded-xl border border-brand-100 bg-brand-50 p-6 sm:flex-row">
+        <div class="h-20 w-20 flex-shrink-0 overflow-hidden rounded-full border-2 border-brand-400">
+          <img src="/images/howie.jpg" alt="Howie" class="h-full w-full object-cover" />
+        </div>
         <div class="flex-1">
-          <p class="font-semibold text-emerald-700">Founder — Howie</p>
-          <p class="mt-2 text-sm leading-relaxed text-gray-700">Howie was a founding team member of <strong>Tujia (途家网)</strong>, China's largest vacation rental platform, backed by Sequoia Capital, Ctrip, and HomeAway with over $400M in funding.</p>
-          <p class="mt-2 text-sm leading-relaxed text-gray-700">Beyond Tujia, our core team's backgrounds include Airbnb China, Ctrip product and operations, Meituan's hotel and travel division, and Alibaba's Fliggy. Together, we have over fifteen years of hands-on experience across China's travel-tech ecosystem — from payments and transport to accommodation and local lifestyle services.</p>
+          <p class="font-semibold text-brand-700">Основатель &mdash; Howie</p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            Howie был участником команды основателей <strong>Tujia (途家网)</strong>, крупнейшей
+            в Китае платформы аренды жилья для отдыха, поддержанной Sequoia Capital, Ctrip и HomeAway
+            и привлекшей более $400M инвестиций.
+          </p>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">
+            Помимо Tujia, в основной команде есть специалисты с опытом работы в Airbnb China, в продуктовых
+            и операционных командах Ctrip, в подразделении отелей и путешествий Meituan, а также во Fliggy от Alibaba.
+            В совокупности у нас более пятнадцати лет практического опыта в travel-tech экосистеме Китая:
+            от платежей и транспорта до размещения и
+            локальных лайфстайл-сервисов.
+          </p>
         </div>
       </div>
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">Our Approach</h2>
-      <p class="mt-3">We operate as a lean, AI-assisted content and service studio, where free resources and paid services complement each other.</p>
+
+      <!-- Our Approach -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Наш подход</h2>
+      <p class="mt-3">
+        Мы работаем как компактная студия контента и сервисов с поддержкой AI, где бесплатные ресурсы
+        и платные услуги дополняют друг друга.
+      </p>
       <ol class="mt-4 list-inside list-decimal space-y-3 text-gray-700">
-        <li><strong>Free resources demonstrate expertise.</strong> Guides, tools, and checkers let visitors solve common problems on their own while showcasing the quality of our work.</li>
-        <li><strong>AI helps us scale and stay current.</strong> We use AI to track regulatory changes, optimize content, and keep information accurate in near real time.</li>
-        <li><strong>1-on-1 human service for complex cases.</strong> When self-service isn't enough, a real person provides tailored advice based on your specific situation.</li>
+        <li>
+          <strong>Бесплатные ресурсы демонстрируют экспертизу.</strong> Путеводители, инструменты и проверки
+          позволяют посетителям самостоятельно решать распространённые проблемы, одновременно показывая качество
+          нашей работы.
+        </li>
+        <li>
+          <strong>AI помогает нам масштабироваться и оставаться актуальными.</strong> Мы используем AI, чтобы отслеживать изменения
+          в регулировании, оптимизировать контент и поддерживать точность информации почти в реальном времени.
+        </li>
+        <li>
+          <strong>Персональный сервис 1-на-1 для сложных случаев.</strong> Когда самообслуживания
+          недостаточно, реальный человек даёт рекомендации, адаптированные под вашу конкретную ситуацию.
+        </li>
       </ol>
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">What We Cover</h2>
-      <p class="mt-3"><strong>Free resources</strong> — Payment Checker, Visa-Free Checker, Trip Planner, App Availability Checker, and step-by-step guides.</p>
-      <p><strong>Paid services</strong> — 1-on-1 trip plan review, payment setup assistance, visa and transport consulting, and custom trip planning.</p>
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">Why Trust Us</h2>
+
+      <!-- What We Cover -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Что мы охватываем</h2>
+      <p class="mt-3">
+        <strong>Бесплатные ресурсы</strong> &mdash; Payment Checker, Visa-Free Checker, Trip Planner,
+        App Availability Checker и пошаговые путеводители.
+      </p>
+      <p>
+        <strong>Платные услуги</strong> &mdash; персональная проверка плана поездки 1-на-1, помощь с настройкой платежей,
+        консультации по визам и транспорту, а также индивидуальное планирование поездки.
+      </p>
+
+      <!-- Why Trust Us -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Почему нам можно доверять</h2>
       <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4"><p class="font-semibold text-brand-600">Professional Team</p><p class="mt-1 text-sm text-gray-600">Core members come from Tujia, Airbnb, Ctrip, Meituan, and Alibaba.</p></div>
-        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4"><p class="font-semibold text-brand-600">Rigorous Review</p><p class="mt-1 text-sm text-gray-600">AI improves efficiency, but every guide and plan is reviewed by an industry professional.</p></div>
-        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4"><p class="font-semibold text-brand-600">Personalized Service</p><p class="mt-1 text-sm text-gray-600">Over 15 years of frontline China travel-tech experience, delivering tailored solutions.</p></div>
-        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4"><p class="font-semibold text-brand-600">Always Current</p><p class="mt-1 text-sm text-gray-600">Rules change fast. Our AI workflow tracks and updates content in near real time.</p></div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Профессиональная команда</p>
+          <p class="mt-1 text-sm text-gray-600">Ключевые участники пришли из Tujia, Airbnb, Ctrip, Meituan и Alibaba.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Строгая проверка</p>
+          <p class="mt-1 text-sm text-gray-600">AI повышает эффективность, но каждый путеводитель и каждый план проверяется профессионалом отрасли.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Персонализированный сервис</p>
+          <p class="mt-1 text-sm text-gray-600">Более 15 лет практического опыта на переднем крае travel-tech в Китае, чтобы предлагать решения, адаптированные под конкретные задачи.</p>
+        </div>
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p class="font-semibold text-brand-600">Всегда актуально</p>
+          <p class="mt-1 text-sm text-gray-600">Правила быстро меняются. Наш рабочий процесс с AI отслеживает и обновляет контент почти в реальном времени.</p>
+        </div>
       </div>
-      <h2 class="mt-10 text-xl font-semibold text-gray-900">Get in Touch</h2>
-      <p class="mt-3">Have questions, corrections, or a trip scenario you need help with? <a href="/ru/contact/" class="text-brand-600 hover:underline">Contact us</a>.</p>
+
+      <!-- Contact -->
+      <h2 class="mt-10 text-xl font-semibold text-gray-900">Свяжитесь с нами</h2>
+      <p class="mt-3">
+        У вас есть вопросы, исправления или сценарий поездки, с которым нужна помощь?
+        <a href="/contact/" class="text-brand-600 hover:underline">Свяжитесь с нами</a>, и мы вам ответим.
+      </p>
+
     </article>
   </main>
   <Footer />

@@ -1,38 +1,43 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'modern-china';
-const posts = (await getCollection('posts-de'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = 'Modernes China — Was Ausländer am meisten überrascht';
-const description = 'Entdecke das moderne China als ausländischer Reisender: bargeldlose Gesellschaft, die schnellsten Züge der Welt, Navigation in Megacitys, Super-Apps, Nachtzüge und die Technik, die den Alltag prägt.';
+const description = 'Entdecke das moderne China als ausländischer Reisender: bargeldlose Gesellschaft, die schnellsten Züge der Welt, Orientierung in Megastädten, Super-Apps, Nachtzüge und die Technologie, die den Alltag prägt.';
 
 const relatedTools = [
-  { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'In China bezahlen', desc: 'Einrichtung mobiler Zahlung für Touristen' },
-  { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'Hochgeschwindigkeitszug-Leitfaden', desc: 'Mit Chinas Hochgeschwindigkeitszügen reisen' },
-  { href: '/de/posts/best-esim-for-china-travel-2026/', title: 'Beste eSIM für China', desc: 'Bleibe bei der Ankunft verbunden' },
+  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Wie man in China bezahlt', desc: 'Einrichtung mobiler Zahlungen für Touristen' },
+  { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Leitfaden für Hochgeschwindigkeitszüge', desc: 'Mit Chinas Hochgeschwindigkeitszügen fahren' },
+  { href: '/posts/best-esim-for-china-travel-2026/', title: 'Beste eSIM für China', desc: 'Bei der Ankunft verbunden bleiben' },
 ];
 
 const relatedCities = [
-  { href: '/de/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Chinas finanzielle Megastadt' },
-  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Peking', desc: 'Antike Hauptstadt trifft modernen Knotenpunkt' },
-  { href: '/de/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Shanghai U-Bahn', desc: 'Navigation in einem Mega-Transitsystem' },
+  { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Chinas Finanz-Megastadt' },
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Alte Hauptstadt trifft auf modernes Zentrum' },
+  { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Shanghai Metro', desc: 'Sich in einem riesigen Verkehrssystem zurechtfinden' },
 ];
 
 const otherSeries = [
-  { href: '/de/series/food-of-china/', title: 'Essen in China' },
-  { href: '/de/series/history-of-china/', title: 'Geschichte Chinas' },
-  { href: '/de/series/culture-of-china/', title: 'Kultur Chinas' },
+  { href: '/series/food-of-china/', title: 'Essen in China' },
+  { href: '/series/history-of-china/', title: 'Geschichte Chinas' },
+  { href: '/series/culture-of-china/', title: 'Kultur Chinas' },
 ];
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Inhaltsreihe</p>
@@ -47,28 +52,28 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">Artikel</p>
-            <h2>Reihe Modernes China</h2>
+            <h2>Reihe „Modernes China“</h2>
           </div>
         </div>
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
               </a>
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Artikel in dieser Reihe werden vorbereitet. Schau bald wieder vorbei.</p>
+          <p class="mt-6 text-gray-500">Die Artikel in dieser Reihe werden gerade vorbereitet. Schau bald wieder vorbei.</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <p class="section-kicker">Praktische Tools</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Im modernen China navigieren</h2>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Modernes China navigieren</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">

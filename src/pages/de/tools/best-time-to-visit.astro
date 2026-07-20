@@ -1,20 +1,23 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
 
-const title = 'Beste Reisezeit für China: Städte- und Monatsplaner';
+const title = 'Beste Reisezeit für China — Stadt- und Monatsplaner';
 const description =
-  'Sieh dir für wichtige Städte in China Monat für Monat Wetter, Andrang und Packtipps an. So findest du leichter die passende Reisezeit für Peking, Shanghai, Xi\'an, Chengdu, Guangzhou und Harbin.';
+  'Sieh dir Wetter, Besucherandrang und Packtipps für große chinesische Städte nach Monaten an. Plane die beste Reisezeit für Beijing, Shanghai, Xi\'an, Chengdu, Guangzhou und Harbin.';
 
-const cities = ['Peking', 'Shanghai', "Xi'an", 'Chengdu', 'Guangzhou', 'Harbin'];
+const cities = ['Beijing', 'Shanghai', "Xi'an", 'Chengdu', 'Guangzhou', 'Harbin'];
 const months = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
@@ -43,16 +46,17 @@ const months = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 
       <div class="card" id="result-card"></div>
     </div>
 
+    <!-- Travel-season warning note -->
     <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
-      <strong>Große Ferienzeiten im Blick behalten:</strong> Rund um das chinesische Neujahr
-      (Ende Januar oder Februar), den Tag der Arbeit Anfang Mai und die Goldene Woche Anfang Oktober
-      steigt der Inlandsreiseverkehr stark an. Züge und Hotels sind schneller ausgebucht, und die
-      Preise ziehen deutlich an. Wenn möglich, buche früh oder plane bewusst außerhalb dieser Zeiten.
+      <strong>Menschenmassen vermeiden:</strong> Chinesische Feiertage — besonders das chinesische
+      Neujahr (Ende Jan/Feb), der Tag der Arbeit (Anfang Mai) und der Nationalfeiertag / die Golden
+      Week (erste Oktoberwoche) — sorgen für enorme Inlandsreisen. Züge und Hotels sind ausgebucht,
+      und die Preise schießen in die Höhe. Buche weit im Voraus oder plane um diese Termine herum.
     </div>
 
     <AffiliateCta
-      title="Züge und Hotels rechtzeitig sichern"
-      description="Beliebte Strecken und Unterkünfte sind in der Hochsaison schnell weg. Buche Hochgeschwindigkeitszüge und Hotels besser frühzeitig."
+      title="Züge und Hotels früh buchen"
+      description="Beliebte Strecken sind in der Hochsaison schnell ausgebucht. Sichere dir deine Hochgeschwindigkeitszüge und Unterkünfte rechtzeitig."
       buttonText="Buchungsoptionen ansehen"
       placeholder={AFFILIATE_LINKS.transport}
     />
@@ -68,98 +72,99 @@ const months = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 
     pack: string;
   }
 
+  // Hinweise pro Stadt und Monat (Index 0 = Januar).
   const data: Record<string, MonthInfo[]> = {
-    Peking: [
-      { temp: '-8 bis 2 °C', rating: 'tough', weather: 'Kalt, trocken und oft klar. Weniger Besucher.', pack: 'Dicker Mantel, Mütze und Handschuhe.' },
-      { temp: '-5 bis 5 °C', rating: 'tough', weather: 'Winterlich kalt; rund um das Neujahrsfest kann es voller werden.', pack: 'Warme Winterkleidung im Zwiebellook.' },
-      { temp: '2 bis 12 °C', rating: 'ok', weather: 'Kühl, windig, teils staubig.', pack: 'Jacke und Windschutz.' },
-      { temp: '9 bis 20 °C', rating: 'great', weather: 'Milder Frühling mit Blütezeit. Sehr angenehm.', pack: 'Schichten und leichte Jacke.' },
-      { temp: '15 bis 26 °C', rating: 'great', weather: 'Warm und angenehm; Anfang Mai meist deutlich voller.', pack: 'Leichte Schichten.' },
-      { temp: '20 bis 31 °C', rating: 'good', weather: 'Warm bis heiß, Beginn der Regenzeit.', pack: 'Sommerkleidung und Regenschirm.' },
-      { temp: '22 bis 31 °C', rating: 'ok', weather: 'Heiß und feucht, meist die regenreichste Phase.', pack: 'Leichte Kleidung und Regenschutz.' },
-      { temp: '21 bis 30 °C', rating: 'ok', weather: 'Heiß, feucht und oft belebt.', pack: 'Sonnenschutz und leichte Kleidung.' },
-      { temp: '15 bis 26 °C', rating: 'great', weather: 'Frisch, klar und sehr angenehm. Einer der besten Monate.', pack: 'Schichten und leichte Jacke.' },
-      { temp: '8 bis 19 °C', rating: 'good', weather: 'Schöner Herbst; Anfang Oktober häufig sehr voll.', pack: 'Jacke und Schichten.' },
-      { temp: '0 bis 10 °C', rating: 'ok', weather: 'Kühl, trocken und vergleichsweise ruhig.', pack: 'Warmer Mantel.' },
-      { temp: '-6 bis 3 °C', rating: 'tough', weather: 'Kalt und trocken.', pack: 'Volle Winterausrüstung.' },
+    Beijing: [
+      { temp: '-8 bis 2°C', rating: 'tough', weather: 'Kalt, trocken, klar. Wenige Touristen.', pack: 'Schwerer Mantel, Mütze, Handschuhe.' },
+      { temp: '-5 bis 5°C', rating: 'tough', weather: 'Kalt; zu CNY sind Menschenmengen möglich.', pack: 'Warme Winterkleidung im Lagenlook.' },
+      { temp: '2 bis 12°C', rating: 'ok', weather: 'Kühl, windig, gelegentlich staubig.', pack: 'Jacke, Windbreaker.' },
+      { temp: '9 bis 20°C', rating: 'great', weather: 'Milder Frühling, Blütezeit. Ideal.', pack: 'Lagenlook, leichte Jacke.' },
+      { temp: '15 bis 26°C', rating: 'great', weather: 'Warm und angenehm. Menschenmengen rund um den Tag der Arbeit Anfang Mai.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '20 bis 31°C', rating: 'good', weather: 'Heiß, Beginn der Regenzeit.', pack: 'Sommerkleidung, Regenschirm.' },
+      { temp: '22 bis 31°C', rating: 'ok', weather: 'Heiß und feucht, die meisten Niederschläge.', pack: 'Leichte Kleidung, Regenschutz.' },
+      { temp: '21 bis 30°C', rating: 'ok', weather: 'Heiß, feucht, sommerliche Menschenmengen.', pack: 'Leichte Kleidung, Sonnenschutz.' },
+      { temp: '15 bis 26°C', rating: 'great', weather: 'Frisch, klar, angenehm. Bester Monat.', pack: 'Lagenlook, leichte Jacke.' },
+      { temp: '8 bis 19°C', rating: 'good', weather: 'Wunderschöner Herbst. Menschenmengen während der Golden Week vom 1. bis 7. Okt.', pack: 'Jacke, Lagenlook.' },
+      { temp: '0 bis 10°C', rating: 'ok', weather: 'Kalt, trocken, ruhig.', pack: 'Warmer Mantel.' },
+      { temp: '-6 bis 3°C', rating: 'tough', weather: 'Kalt und trocken.', pack: 'Schwere Winterausrüstung.' },
     ],
     Shanghai: [
-      { temp: '1 bis 8 °C', rating: 'ok', weather: 'Kühl, feucht und oft grau.', pack: 'Warmer, wasserfester Mantel.' },
-      { temp: '3 bis 10 °C', rating: 'ok', weather: 'Kühl; oft Reisezeit rund ums Neujahrsfest.', pack: 'Schichten und Regenschirm.' },
-      { temp: '7 bis 14 °C', rating: 'good', weather: 'Milder Frühling mit etwas Regen.', pack: 'Jacke und Regenschirm.' },
-      { temp: '12 bis 20 °C', rating: 'great', weather: 'Angenehmer Frühling. Sehr gute Reisezeit.', pack: 'Leichte Schichten.' },
-      { temp: '17 bis 25 °C', rating: 'great', weather: 'Warm und angenehm; an Feiertagen deutlich voller.', pack: 'Leichte Kleidung.' },
-      { temp: '21 bis 28 °C', rating: 'ok', weather: 'Feucht durch die Pflaumenregenzeit.', pack: 'Regenschutz und leichte Kleidung.' },
-      { temp: '25 bis 33 °C', rating: 'tough', weather: 'Heiß, schwül und mit möglichem Taifun-Einfluss.', pack: 'Leichte Kleidung, Sonnen- und Regenschutz.' },
-      { temp: '25 bis 33 °C', rating: 'tough', weather: 'Sehr heiß und feucht.', pack: 'Leichte Kleidung und genug Wasser.' },
-      { temp: '21 bis 28 °C', rating: 'great', weather: 'Noch warm, aber meist angenehmer als im Hochsommer.', pack: 'Leichte Schichten.' },
-      { temp: '15 bis 23 °C', rating: 'great', weather: 'Mild und klar; Anfang Oktober oft voller.', pack: 'Schichten und leichte Jacke.' },
-      { temp: '9 bis 17 °C', rating: 'good', weather: 'Kühl, aber angenehm für Stadtbesichtigungen.', pack: 'Jacke.' },
-      { temp: '3 bis 10 °C', rating: 'ok', weather: 'Kalt und feucht.', pack: 'Warmer Mantel.' },
+      { temp: '1 bis 8°C', rating: 'ok', weather: 'Kalt, feucht, grau.', pack: 'Warmer wasserdichter Mantel.' },
+      { temp: '3 bis 10°C', rating: 'ok', weather: 'Kühl; CNY-Zeit.', pack: 'Lagenlook, Regenschirm.' },
+      { temp: '7 bis 14°C', rating: 'good', weather: 'Milder Frühling, etwas Regen.', pack: 'Jacke, Regenschirm.' },
+      { temp: '12 bis 20°C', rating: 'great', weather: 'Angenehmer Frühling. Ideal.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '17 bis 25°C', rating: 'great', weather: 'Warm, herrlich. Menschenmengen Anfang Mai.', pack: 'Leichte Kleidung.' },
+      { temp: '21 bis 28°C', rating: 'ok', weather: 'Pflaumenregenzeit, feucht.', pack: 'Regenschutz, leichte Kleidung.' },
+      { temp: '25 bis 33°C', rating: 'tough', weather: 'Heiß, feucht, Taifunrisiko.', pack: 'Leichte Kleidung, Sonnen-/Regenschutz.' },
+      { temp: '25 bis 33°C', rating: 'tough', weather: 'Sehr heiß und feucht.', pack: 'Leichte Kleidung, genug trinken.' },
+      { temp: '21 bis 28°C', rating: 'great', weather: 'Warm, wird allmählich angenehmer. Großartig.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '15 bis 23°C', rating: 'great', weather: 'Mild, klar. Menschenmengen während der Golden Week Anfang Okt.', pack: 'Lagenlook, leichte Jacke.' },
+      { temp: '9 bis 17°C', rating: 'good', weather: 'Kühl, angenehm.', pack: 'Jacke.' },
+      { temp: '3 bis 10°C', rating: 'ok', weather: 'Kalt und feucht.', pack: 'Warmer Mantel.' },
     ],
     "Xi'an": [
-      { temp: '-4 bis 5 °C', rating: 'tough', weather: 'Kalt und trocken.', pack: 'Dicker Mantel.' },
-      { temp: '-1 bis 8 °C', rating: 'ok', weather: 'Winterlich; in der Feiertagszeit oft voller.', pack: 'Warme Schichten.' },
-      { temp: '4 bis 14 °C', rating: 'good', weather: 'Frischer Frühling.', pack: 'Jacke.' },
-      { temp: '10 bis 20 °C', rating: 'great', weather: 'Angenehm und ideal für Besichtigungen.', pack: 'Leichte Schichten.' },
-      { temp: '15 bis 26 °C', rating: 'great', weather: 'Warm und angenehm.', pack: 'Leichte Kleidung.' },
-      { temp: '20 bis 32 °C', rating: 'good', weather: 'Heiß, oft aber noch recht trocken.', pack: 'Sommerkleidung und Sonnenhut.' },
-      { temp: '23 bis 33 °C', rating: 'ok', weather: 'Heiß mit etwas Regen.', pack: 'Leichte Kleidung und Regenschirm.' },
-      { temp: '22 bis 31 °C', rating: 'ok', weather: 'Heiß und teils schwül.', pack: 'Leichte Kleidung.' },
-      { temp: '16 bis 26 °C', rating: 'great', weather: 'Mild, klar und sehr angenehm.', pack: 'Schichten.' },
-      { temp: '9 bis 19 °C', rating: 'good', weather: 'Kühler Herbst; in der Goldenen Woche deutlich voller.', pack: 'Jacke.' },
-      { temp: '2 bis 11 °C', rating: 'ok', weather: 'Kühl und trocken.', pack: 'Warmer Mantel.' },
-      { temp: '-3 bis 5 °C', rating: 'tough', weather: 'Kalt.', pack: 'Winterausrüstung.' },
+      { temp: '-4 bis 5°C', rating: 'tough', weather: 'Kalt, trocken.', pack: 'Schwerer Mantel.' },
+      { temp: '-1 bis 8°C', rating: 'ok', weather: 'Kalt; CNY-Zeit.', pack: 'Winterkleidung im Lagenlook.' },
+      { temp: '4 bis 14°C', rating: 'good', weather: 'Kühler Frühling.', pack: 'Jacke.' },
+      { temp: '10 bis 20°C', rating: 'great', weather: 'Angenehm. Großartig für Besichtigungen.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '15 bis 26°C', rating: 'great', weather: 'Warm und angenehm.', pack: 'Leichte Kleidung.' },
+      { temp: '20 bis 32°C', rating: 'good', weather: 'Heiß, trocken.', pack: 'Sommerkleidung, Sonnenhut.' },
+      { temp: '23 bis 33°C', rating: 'ok', weather: 'Heiß, etwas Regen.', pack: 'Leichte Kleidung, Regenschirm.' },
+      { temp: '22 bis 31°C', rating: 'ok', weather: 'Heiß, feucht.', pack: 'Leichte Kleidung.' },
+      { temp: '16 bis 26°C', rating: 'great', weather: 'Mild, klar. Ideal.', pack: 'Lagenlook.' },
+      { temp: '9 bis 19°C', rating: 'good', weather: 'Kühler Herbst. Menschenmengen während der Golden Week.', pack: 'Jacke.' },
+      { temp: '2 bis 11°C', rating: 'ok', weather: 'Kalt, trocken.', pack: 'Warmer Mantel.' },
+      { temp: '-3 bis 5°C', rating: 'tough', weather: 'Kalt.', pack: 'Schwere Winterausrüstung.' },
     ],
     Chengdu: [
-      { temp: '3 bis 9 °C', rating: 'ok', weather: 'Kühl, feucht und häufig bedeckt.', pack: 'Warme Schichten und Regenschirm.' },
-      { temp: '5 bis 11 °C', rating: 'ok', weather: 'Mild, oft grau; um das Neujahrsfest belebter.', pack: 'Schichten.' },
-      { temp: '9 bis 16 °C', rating: 'good', weather: 'Milder Frühling.', pack: 'Jacke und Regenschirm.' },
-      { temp: '13 bis 22 °C', rating: 'great', weather: 'Sehr angenehm, auch gut für Panda-Besuche.', pack: 'Leichte Schichten.' },
-      { temp: '17 bis 26 °C', rating: 'great', weather: 'Warm und angenehm.', pack: 'Leichte Kleidung.' },
-      { temp: '20 bis 28 °C', rating: 'good', weather: 'Warm mit häufigerem Regen.', pack: 'Regenschutz.' },
-      { temp: '22 bis 30 °C', rating: 'ok', weather: 'Heiß, feucht und oft nass.', pack: 'Leichte Kleidung und Regenschirm.' },
-      { temp: '22 bis 30 °C', rating: 'ok', weather: 'Heiß und schwül.', pack: 'Leichte Kleidung.' },
-      { temp: '19 bis 26 °C', rating: 'great', weather: 'Noch warm, aber spürbar angenehmer.', pack: 'Leichte Schichten.' },
-      { temp: '15 bis 21 °C', rating: 'great', weather: 'Milder Herbst; Anfang Oktober meist voller.', pack: 'Jacke.' },
-      { temp: '9 bis 16 °C', rating: 'good', weather: 'Kühl und angenehm.', pack: 'Jacke.' },
-      { temp: '4 bis 10 °C', rating: 'ok', weather: 'Kühl und feucht.', pack: 'Warme Schichten.' },
+      { temp: '3 bis 9°C', rating: 'ok', weather: 'Kühl, feucht, bedeckt.', pack: 'Warme Kleidung im Lagenlook, Regenschirm.' },
+      { temp: '5 bis 11°C', rating: 'ok', weather: 'Mild, grau; CNY-Zeit.', pack: 'Lagenlook.' },
+      { temp: '9 bis 16°C', rating: 'good', weather: 'Milder Frühling.', pack: 'Jacke, Regenschirm.' },
+      { temp: '13 bis 22°C', rating: 'great', weather: 'Angenehm. Gut für Pandas.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '17 bis 26°C', rating: 'great', weather: 'Warm, angenehm.', pack: 'Leichte Kleidung.' },
+      { temp: '20 bis 28°C', rating: 'good', weather: 'Warm, regnerisch.', pack: 'Regenschutz.' },
+      { temp: '22 bis 30°C', rating: 'ok', weather: 'Heiß, feucht, niederschlagsreichster Monat.', pack: 'Leichte Kleidung, Regenschirm.' },
+      { temp: '22 bis 30°C', rating: 'ok', weather: 'Heiß, feucht.', pack: 'Leichte Kleidung.' },
+      { temp: '19 bis 26°C', rating: 'great', weather: 'Warm, lässt nach. Gut.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '15 bis 21°C', rating: 'great', weather: 'Milder Herbst. Menschenmengen während der Golden Week.', pack: 'Jacke.' },
+      { temp: '9 bis 16°C', rating: 'good', weather: 'Kühl, angenehm.', pack: 'Jacke.' },
+      { temp: '4 bis 10°C', rating: 'ok', weather: 'Kühl, feucht.', pack: 'Warme Kleidung im Lagenlook.' },
     ],
     Guangzhou: [
-      { temp: '10 bis 18 °C', rating: 'great', weather: 'Mild und trocken. Sehr angenehm.', pack: 'Leichte Schichten.' },
-      { temp: '12 bis 19 °C', rating: 'great', weather: 'Mild; oft gute Reisezeit rund ums Neujahrsfest.', pack: 'Leichte Schichten.' },
-      { temp: '15 bis 22 °C', rating: 'good', weather: 'Wird wärmer und feuchter.', pack: 'Leichte Kleidung.' },
-      { temp: '19 bis 26 °C', rating: 'good', weather: 'Warm, Regen nimmt zu.', pack: 'Leichte Kleidung und Regenschirm.' },
-      { temp: '23 bis 30 °C', rating: 'ok', weather: 'Heiß, feucht und oft nass.', pack: 'Leichte Kleidung und Regenschutz.' },
-      { temp: '25 bis 32 °C', rating: 'tough', weather: 'Heiß, sehr feucht und mit Taifunrisiko.', pack: 'Leichte Kleidung und Regenschutz.' },
-      { temp: '26 bis 34 °C', rating: 'tough', weather: 'Sehr heiß, schwül und teils stürmisch.', pack: 'Leichte Kleidung und genug Wasser.' },
-      { temp: '26 bis 34 °C', rating: 'tough', weather: 'Sehr heiß, mitten in der Taifunsaison.', pack: 'Sonnen- und Regenschutz.' },
-      { temp: '24 bis 32 °C', rating: 'ok', weather: 'Weiter warm, aber etwas nachlassend.', pack: 'Leichte Kleidung.' },
-      { temp: '21 bis 29 °C', rating: 'great', weather: 'Warm, trockener und sehr angenehm; an Feiertagen voller.', pack: 'Leichte Kleidung.' },
-      { temp: '16 bis 24 °C', rating: 'great', weather: 'Warm, angenehm und trockener.', pack: 'Leichte Schichten.' },
-      { temp: '11 bis 19 °C', rating: 'great', weather: 'Mild und trocken.', pack: 'Leichte Schichten.' },
+      { temp: '10 bis 18°C', rating: 'great', weather: 'Mild, trocken. Sehr angenehm.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '12 bis 19°C', rating: 'great', weather: 'Mild; CNY-Zeit.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '15 bis 22°C', rating: 'good', weather: 'Wird wärmer, feucht.', pack: 'Leichte Kleidung.' },
+      { temp: '19 bis 26°C', rating: 'good', weather: 'Warm, Regen beginnt.', pack: 'Leichte Kleidung, Regenschirm.' },
+      { temp: '23 bis 30°C', rating: 'ok', weather: 'Heiß, feucht, nass.', pack: 'Leichte Kleidung, Regenschutz.' },
+      { temp: '25 bis 32°C', rating: 'tough', weather: 'Heiß, sehr nass, Taifunrisiko.', pack: 'Regenschutz, leichte Kleidung.' },
+      { temp: '26 bis 34°C', rating: 'tough', weather: 'Heiß, feucht, stürmisch.', pack: 'Leichte Kleidung, genug trinken.' },
+      { temp: '26 bis 34°C', rating: 'tough', weather: 'Sehr heiß, Taifunsaison.', pack: 'Leichte Kleidung, Sonnen-/Regenschutz.' },
+      { temp: '24 bis 32°C', rating: 'ok', weather: 'Heiß, lässt nach.', pack: 'Leichte Kleidung.' },
+      { temp: '21 bis 29°C', rating: 'great', weather: 'Warm, trockener. Großartig. Menschenmengen während der Golden Week.', pack: 'Leichte Kleidung.' },
+      { temp: '16 bis 24°C', rating: 'great', weather: 'Warm, angenehm, trocken.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '11 bis 19°C', rating: 'great', weather: 'Mild und trocken.', pack: 'Leichte Kleidung im Lagenlook.' },
     ],
     Harbin: [
-      { temp: '-24 bis -12 °C', rating: 'good', weather: 'Extrem kalt, aber ideal für das Eis- und Schneefestival.', pack: 'Ausrüstung für starke Kälte.' },
-      { temp: '-20 bis -6 °C', rating: 'good', weather: 'Sehr kalt; das Festival läuft meist weiter.', pack: 'Vollständige Winterausrüstung.' },
-      { temp: '-9 bis 4 °C', rating: 'ok', weather: 'Kalt mit beginnendem Tauwetter.', pack: 'Dicker Mantel.' },
-      { temp: '2 bis 14 °C', rating: 'good', weather: 'Kühler Frühling.', pack: 'Jacke und Schichten.' },
-      { temp: '10 bis 22 °C', rating: 'great', weather: 'Mild und angenehm.', pack: 'Leichte Schichten.' },
-      { temp: '16 bis 27 °C', rating: 'great', weather: 'Warmer, angenehmer Sommer.', pack: 'Leichte Kleidung.' },
-      { temp: '19 bis 29 °C', rating: 'great', weather: 'Warm und oft eine willkommene Pause von der Südhitze.', pack: 'Leichte Kleidung.' },
-      { temp: '18 bis 27 °C', rating: 'great', weather: 'Warm und angenehm.', pack: 'Leichte Schichten.' },
-      { temp: '11 bis 21 °C', rating: 'good', weather: 'Kühler Herbst.', pack: 'Jacke.' },
-      { temp: '2 bis 13 °C', rating: 'ok', weather: 'Kühl mit schöner Herbstfärbung.', pack: 'Warmer Mantel.' },
-      { temp: '-11 bis 0 °C', rating: 'ok', weather: 'Kalt, oft mit erstem Schnee.', pack: 'Dicke Winterkleidung.' },
-      { temp: '-20 bis -9 °C', rating: 'good', weather: 'Sehr kalt; Ende Dezember beginnt meist die Festivalsaison.', pack: 'Ausrüstung für starke Kälte.' },
+      { temp: '-24 bis -12°C', rating: 'good', weather: 'Bitterkalt — Ice & Snow Festival! Magisch, wenn du dafür gekleidet bist.', pack: 'Ausrüstung für extreme Kälte.' },
+      { temp: '-20 bis -6°C', rating: 'good', weather: 'Sehr kalt; das Ice Festival geht weiter.', pack: 'Extreme Winterausrüstung.' },
+      { temp: '-9 bis 4°C', rating: 'ok', weather: 'Kalt, Tauwetter.', pack: 'Schwerer Mantel.' },
+      { temp: '2 bis 14°C', rating: 'good', weather: 'Kühler Frühling.', pack: 'Jacke, Lagenlook.' },
+      { temp: '10 bis 22°C', rating: 'great', weather: 'Mild und angenehm.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '16 bis 27°C', rating: 'great', weather: 'Warmer, angenehmer Sommer.', pack: 'Leichte Kleidung.' },
+      { temp: '19 bis 29°C', rating: 'great', weather: 'Warm, angenehme Flucht vor der südlichen Hitze.', pack: 'Leichte Kleidung.' },
+      { temp: '18 bis 27°C', rating: 'great', weather: 'Warm, angenehm.', pack: 'Leichte Kleidung im Lagenlook.' },
+      { temp: '11 bis 21°C', rating: 'good', weather: 'Kühler Herbst.', pack: 'Jacke.' },
+      { temp: '2 bis 13°C', rating: 'ok', weather: 'Kalt, farbenfroher Herbst.', pack: 'Warmer Mantel.' },
+      { temp: '-11 bis 0°C', rating: 'ok', weather: 'Kalt, erste Schneefälle.', pack: 'Schwere Winterausrüstung.' },
+      { temp: '-20 bis -9°C', rating: 'good', weather: 'Sehr kalt; das Ice Festival beginnt Ende Dez.', pack: 'Ausrüstung für extreme Kälte.' },
     ],
   };
 
   const ratingStyle = {
     great: { cls: 'border-green-200 bg-green-50', badge: 'bg-green-600', label: 'Großartige Reisezeit' },
     good: { cls: 'border-teal-200 bg-teal-50', badge: 'bg-teal-600', label: 'Gute Reisezeit' },
-    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: 'Machbar mit Abstrichen' },
-    tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: 'Eher anstrengend' },
+    ok: { cls: 'border-amber-200 bg-amber-50', badge: 'bg-amber-500', label: 'Machbar, mit Abstrichen' },
+    tough: { cls: 'border-red-200 bg-red-50', badge: 'bg-red-500', label: 'Anspruchsvolle Bedingungen' },
   } as const;
 
   const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
@@ -182,8 +187,8 @@ const months = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 
         <span class="whitespace-nowrap rounded-full px-3 py-0.5 text-xs font-semibold text-white ${style.badge}">${style.label}</span>
       </div>
       <dl class="mt-4 space-y-3 text-sm">
-        <div><dt class="text-gray-500">Typische Temperaturen</dt><dd class="text-lg font-semibold text-gray-900">${info.temp}</dd></div>
-        <div><dt class="text-gray-500">Wetter und Andrang</dt><dd class="text-gray-700">${info.weather}</dd></div>
+        <div><dt class="text-gray-500">Typische Temperatur</dt><dd class="text-lg font-semibold text-gray-900">${info.temp}</dd></div>
+        <div><dt class="text-gray-500">Wetter & Besucherandrang</dt><dd class="text-gray-700">${info.weather}</dd></div>
         <div><dt class="text-gray-500">Was du einpacken solltest</dt><dd class="text-gray-700">${info.pack}</dd></div>
       </dl>`;
   }

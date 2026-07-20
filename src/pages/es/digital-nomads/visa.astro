@@ -1,64 +1,247 @@
 ---
-import GuideLayout from '../../../layouts/GuideLayout.astro';
+import GuideLayout from "../../../layouts/GuideLayout.astro";
 
-const title = 'Visa para nómadas digitales en China (2026): opciones reales';
+const title = 'Visa para nómadas digitales en China (2026): todas tus opciones';
 const description =
-  'China no tiene una visa oficial para nómadas digitales. Esta guía resume las vías más realistas para trabajar en remoto desde allí: visa turística, visa de negocios, tránsito sin visa y límites de las salidas a Hong Kong o Macao.';
+  'China no tiene una visa oficial para nómadas digitales. Aquí están las opciones legales y prácticas para trabajadores remotos: visas de turista, visas de negocios, reglas de tránsito y border runs.';
 const url = '/digital-nomads/visa/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
   { label: 'Inicio', href: '/' },
-  { label: 'Nómadas digitales', href: '/es/digital-nomads/' },
+  { label: 'Nómadas digitales', href: '/digital-nomads/' },
   { label: 'Guía de visa' },
 ];
 
 const toc = [
-  { id: 'no-nomad-visa', label: 'Lo esencial' },
-  { id: 'tourist', label: 'Opción 1: visa turística (L)' },
-  { id: 'business', label: 'Opción 2: visa de negocios (M)' },
-  { id: 'transit', label: 'Opción 3: tránsito sin visa' },
-  { id: 'work', label: 'Opción 4: visa de trabajo (Z)' },
-  { id: 'border-runs', label: 'Salidas a Hong Kong y Macao' },
-  { id: 'nationality', label: 'Diferencias según pasaporte' },
+  { id: 'no-nomad-visa', label: 'La conclusión' },
+  { id: 'tourist', label: 'Opción 1: Visa de turista (L)' },
+  { id: 'business', label: 'Opción 2: Visa de negocios (M)' },
+  { id: 'transit', label: 'Opción 3: Tránsito sin visa' },
+  { id: 'work', label: 'Opción 4: Visa de trabajo (Z)' },
+  { id: 'border-runs', label: 'Border runs a Hong Kong y Macau' },
+  { id: 'nationality', label: 'Límites de estancia por nacionalidad' },
   { id: 'faq', label: 'Preguntas frecuentes' },
 ];
 
 const faqs = [
-  { question: '¿China tiene una visa para nómadas digitales?', answer: 'No. En 2026 China no ofrece una categoría de visa pensada específicamente para trabajadores remotos. En la práctica, la mayoría usa visa turística (L), visa de negocios (M) o tránsito sin visa cuando encaja.' },
-  { question: '¿Puedo trabajar en remoto con una visa turística?', answer: 'Trabajar online para una empresa o clientes extranjeros se mueve en una zona gris. Lo que sí está claramente prohibido es aceptar empleo local o prestar servicios remunerados a clientes chinos con una visa L.' },
-  { question: '¿Qué pasa si me quedo más tiempo del permitido?', answer: 'Superar el límite de estancia puede implicar multa diaria, problemas migratorios e incluso detención en casos graves. Lo correcto es ampliar a tiempo en la oficina local o salir antes de que venza la estancia.' },
-  { question: '¿Puedo ampliar una visa turística dentro de China?', answer: 'A menudo sí, una sola vez. Muchas nacionalidades pueden solicitar una prórroga de 30 días en la oficina local de entrada y salida antes de que expire la estancia vigente.' },
-  { question: '¿Puedo pasar de visa turística a visa de negocios sin salir del país?', answer: 'Por norma general, no. Cambiar de categoría suele exigir tramitar la nueva visa fuera de China continental, a menudo en tu país o en Hong Kong.' },
-  { question: '¿Una salida a Hong Kong reinicia la estancia de forma fiable?', answer: 'Puede funcionar si tu visa es de entradas múltiples, pero deja de ser fiable cuando se repite demasiado. Las autoridades pueden cuestionar el patrón y reducir o negar la siguiente estancia.' },
-  { question: '¿Con cuánto margen conviene solicitar la visa?', answer: 'Lo prudente es hacerlo entre tres y seis semanas antes del viaje. El proceso en sí puede ser rápido, pero las citas, documentos y envíos añaden tiempo.' },
+  {
+    question: '¿China tiene una visa para nómadas digitales?',
+    answer:
+      'No. A partir de 2026, China no tiene una categoría de visa diseñada para trabajadores remotos o profesionales independientes de la ubicación. En su lugar, los nómadas digitales usan visas de turista (L), visas de negocios (M) o tránsito sin visa, y las combinan o extienden para cubrir la duración de estancia que necesitan.',
+  },
+  {
+    question: '¿Puedo trabajar remotamente de forma legal con una visa de turista en China?',
+    answer:
+      'Trabajar en línea para tu propio negocio extranjero o para clientes del extranjero mientras estás con una visa de turista se sitúa en una zona gris no regulada, en lugar de estar claramente permitido. Lo que sí está claramente prohibido es aceptar empleo local o hacer trabajo remunerado para clientes chinos con una visa L. Mantén tu trabajo estrictamente transfronterizo, evita cualquier actividad económica local y no digas que estás trabajando al entrar.',
+  },
+  {
+    question: '¿Qué pasa si me quedo más tiempo del permitido por mi visa china?',
+    answer:
+      'Exceder el tiempo permitido activa una multa diaria (comúnmente de hasta 500 RMB por día, con un máximo establecido), posible detención en casos de excesos más largos y un historial que puede perjudicar futuras solicitudes de visa. Siempre solicita una extensión en la oficina local de salida y entrada o sal antes de que termine tu estancia permitida. Nunca confíes en que te dejarán pasar sin más.',
+  },
+  {
+    question: '¿Puedo extender mi visa de turista desde dentro de China?',
+    answer:
+      'A menudo sí, una vez. Muchas nacionalidades pueden solicitar una sola extensión de 30 días de una visa L en la oficina local de salida y entrada del Buró de Seguridad Pública, siempre que la soliciten varios días antes de que expire la estancia actual y presenten una reserva de hotel o registro de residencia, además de prueba de fondos. La aprobación queda a discreción del funcionario y no está garantizada.',
+  },
+  {
+    question: '¿Puedo cambiar de una visa de turista a una visa de negocios sin salir de China?',
+    answer:
+      'Por lo general, no. Cambiar de tipo de visa normalmente requiere solicitar la nueva visa desde fuera de China continental, a menudo en tu país de origen o en un centro cercano como Hong Kong. Planifica el cambio como un viaje de salida y reingreso, no como una conversión dentro del país.',
+  },
+  {
+    question: '¿Es un border run a Hong Kong una forma fiable de reiniciar mi estancia?',
+    answer:
+      'Puede funcionar si tu visa tiene entradas múltiples, pero es menos fiable de lo que era antes. Los agentes de inmigración vigilan las salidas cortas repetidas que se usan para vivir en China de forma continua, y pueden hacer preguntas o acortar la estancia. Trata los border runs como una herramienta ocasional, no como una estrategia de visa a largo plazo.',
+  },
+  {
+    question: '¿Con cuánta antelación debo solicitar una visa para China?',
+    answer:
+      'Solicítala entre tres y seis semanas antes del viaje. Las visas de turista y de negocios suelen procesarse en unos cuatro a siete días hábiles una vez presentadas, pero la disponibilidad de citas en los centros de visas, la recopilación de documentos (incluida cualquier carta de invitación para una visa M) y el tiempo de mensajería se acumulan. Acelerar el proceso aumenta el riesgo de una solicitud rechazada o incompleta.',
+  },
 ];
 
 const related = [
-  { title: 'Cómo pagar en China siendo extranjero', description: 'Con la cuestión del visado clara, toca dejar listos Alipay, WeChat Pay, tarjetas y efectivo.', href: '/es/digital-nomads/payment/' },
-  { title: 'Guía completa para nómadas digitales en China', description: 'Internet, coste de vida, ciudades recomendadas y realidad del trabajo remoto.', href: '/es/digital-nomads/' },
-  { title: 'Comprobador de entrada sin visa y tránsito', description: 'Revisa si tu pasaporte te permite entrar sin visa o usar el tránsito de 240 horas.', href: '/es/tools/visa-free-checker/' },
+  {
+    title: 'Cómo pagar cosas en China siendo extranjero',
+    description: 'Con tu visa resuelta, configura Alipay y WeChat Pay y entiende el uso de efectivo y tarjetas.',
+    href: '/digital-nomads/payment/',
+  },
+  {
+    title: 'La guía completa para nómadas digitales en China',
+    description: 'La guía principal: internet, costo de vida, mejores ciudades y la realidad del trabajo remoto.',
+    href: '/digital-nomads/',
+  },
+  {
+    title: 'Verificador de entrada sin visa y tránsito',
+    description: 'Comprueba si tu pasaporte califica para entrada sin visa o tránsito de 240 horas.',
+    href: '/tools/visa-free-checker/',
+  },
 ];
 ---
-<GuideLayout title={title} description={description} url={url} datePublished={datePublished} breadcrumbs={breadcrumbs} toc={toc} faqs={faqs} related={related} cover="cover-visa" coverAlt="Pasaporte y documentación de visa para viajar a China" locale="es">
-  <p>La respuesta corta es muy clara: <strong>China no tiene una visa específica para nómadas digitales</strong>. Eso no impide usar el país como base temporal, pero sí obliga a entender bien qué permiten las visas existentes y qué no.</p>
-  <h2 id="no-nomad-visa">Lo esencial: cuatro vías posibles</h2>
-  <p>La visa turística (L) suele ser la puerta de entrada inicial, la visa de negocios (M) encaja mejor en estancias más largas o repetidas, el tránsito sin visa sirve para visitas cortas y la visa de trabajo (Z) solo vale para empleo patrocinado por una entidad china.</p>
-  <h2 id="tourist">Opción 1: visa turística (L), la vía más habitual</h2>
-  <p>La visa L está pensada para turismo. El trabajo en remoto para clientes extranjeros no aparece expresamente autorizado, pero muchas veces se tolera mientras no exista actividad económica local ni relación laboral con el mercado chino.</p>
-  <ul><li><strong>Duración:</strong> normalmente 30, 60 o 90 días por entrada.</li><li><strong>Entradas:</strong> una, dos o múltiples, según el pasaporte y la emisión concreta.</li><li><strong>Documentos:</strong> pasaporte, formulario, foto, vuelos y reservas o carta de invitación.</li><li><strong>Prórrogas:</strong> en bastantes casos se puede pedir una ampliación de 30 días antes del vencimiento.</li></ul>
-  <h2 id="business">Opción 2: visa de negocios (M), mejor para 3-6 meses</h2>
-  <p>Si viajas por reuniones, proveedores, ferias o actividad comercial real, la visa M suele tener más sentido que encadenar extensiones turísticas. Requiere una carta de invitación auténtica de empresa, entidad comercial u organizador.</p>
-  <h2 id="transit">Opción 3: tránsito sin visa de 240 horas</h2>
-  <p>Muchas nacionalidades pueden entrar hasta 240 horas si van camino de un tercer país a través de puertos concretos. No es una solución para vivir en China, pero sí para probar una ciudad o resolver una estancia corta. Usa el <a href="/es/tools/visa-free-checker/">comprobador de entrada sin visa</a>.</p>
-  <h2 id="work">Opción 4: visa de trabajo (Z), no pensada para freelancers</h2>
-  <p>La visa Z depende de un empleador chino patrocinador y desemboca en un permiso de residencia. No sirve para autopatrocinarse como freelance ni para trabajar en remoto desde una empresa extranjera por cuenta propia.</p>
-  <h2 id="border-runs">Salidas a Hong Kong y Macao</h2>
-  <p>Una salida rápida a Hong Kong o Macao consiste en abandonar China continental para usar una nueva entrada de una visa múltiple. Puede servir de forma puntual, pero repetirlo demasiado llama la atención.</p>
-  <ul><li><strong>Solo si tienes entradas múltiples.</strong> Una visa de entrada única se agota al salir.</li><li><strong>Evita patrones mecánicos.</strong> Una salida cada mes sugiere residencia continua.</li><li><strong>Existe riesgo real.</strong> Inmigración puede reducir o negar la siguiente estancia.</li></ul>
-  <h2 id="nationality">Diferencias según pasaporte</h2>
-  <p>La validez y la duración por entrada cambian bastante según la nacionalidad. Lo correcto es confirmar siempre con el centro de visados chino que te corresponda.</p>
-  <table><thead><tr><th>Nacionalidad</th><th>Validez habitual visa L</th><th>Estancia típica por entrada</th></tr></thead><tbody><tr><td>Estados Unidos</td><td>Hasta 10 años, entradas múltiples</td><td>Hasta 60 días</td></tr><tr><td>Canadá</td><td>Hasta 10 años, entradas múltiples</td><td>Hasta 30 días</td></tr><tr><td>Reino Unido</td><td>Hasta 2 años, entradas múltiples</td><td>Hasta 30 días</td></tr><tr><td>Australia</td><td>Hasta 10 años, entradas múltiples</td><td>Hasta 60-90 días</td></tr><tr><td>UE</td><td>Hasta 5 años, entradas múltiples</td><td>Hasta 30-90 días</td></tr></tbody></table>
-  <h2 id="next">Siguiente paso: entender cómo pagar en China</h2>
-  <p>Una vez resuelto el tema del visado, la siguiente pieza crítica son los pagos. Sigue con <a href="/es/digital-nomads/payment/">cómo pagar en China siendo extranjero</a> para dejar preparados Alipay, WeChat Pay, tarjetas y efectivo.</p>
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<GuideLayout
+  title={title}
+  description={description}
+  url={url}
+  datePublished={datePublished}
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  related={related}
+  cover="cover-visa"
+  coverAlt="Documentos de visa china y pasaporte para viajar"
+>
+  <p>
+    Aquí va la respuesta directa que la mayoría de la gente viene buscando: <strong>China no tiene una visa
+    para nómadas digitales</strong>, y no hay señales de que vaya a existir en 2026. Pero eso no
+    significa que no puedas establecerte en China como trabajador remoto. Significa que usas las
+    herramientas migratorias que sí existen, y que las usas de forma deliberada. Hay cuatro rutas
+    realistas, además de la táctica del border run, y la elección correcta depende de cuánto tiempo
+    quieras quedarte y de si tienes algún motivo de negocios para estar allí. Esta guía recorre cada
+    una con honestidad, incluida la parte en la que están las zonas grises legales.
+  </p>
+
+  <h2 id="no-nomad-visa">La conclusión: cuatro opciones legales</h2>
+  <p>
+    En resumen: la <strong>visa de turista (L)</strong> es la opción por defecto para estancias de
+    hasta unos tres meses, la <strong>visa de negocios (M)</strong> es la que mejor encaja para
+    estancias más largas o repetidas, el <strong>tránsito sin visa</strong> cubre viajes cortos de
+    reconocimiento, y la <strong>visa de trabajo (Z)</strong> existe pero no encaja para
+    freelancers. A continuación, se desglosa cada opción con para quién sirve, cuánto dura y qué
+    hace falta para obtenerla.
+  </p>
+
+  <h2 id="tourist">Opción 1: Visa de turista (L) — la opción por defecto</h2>
+  <p>
+    La visa L es la que la mayoría de los nómadas digitales usa para una primera estancia. Está
+    diseñada para turismo y visitas, e inmigración trata el trabajo remoto para un empleador del
+    extranjero como una zona gris tolerada, en lugar de un permiso explícito, así que mantén tu
+    actividad estrictamente transfronteriza.
+  </p>
+  <ul>
+    <li><strong>Duración de la estancia:</strong> comúnmente 30, 60 o 90 días por entrada según tu nacionalidad y la visa emitida.</li>
+    <li><strong>Entradas:</strong> una, dos o múltiples, válidas hasta varios años para algunos pasaportes.</li>
+    <li><strong>Documentos:</strong> pasaporte con más de 6 meses de validez, formulario de solicitud, foto, reserva de vuelo de ida y vuelta y reservas de hotel o una invitación de un anfitrión.</li>
+    <li><strong>Extensiones:</strong> a menudo hay disponible una extensión de 30 días en la oficina local de salida y entrada si la solicitas antes del vencimiento.</li>
+  </ul>
+  <p>
+    <strong>La zona gris, dicho claramente:</strong> trabajar en línea para tu propio negocio
+    extranjero o para clientes no chinos no está claramente autorizado con una visa L, pero se hace
+    ampliamente y, por lo general, se tolera siempre que no aceptes empleo local, no atiendas a
+    clientes chinos y no generes ingresos locales. No exageres tus actividades en la frontera.
+  </p>
+
+  <h2 id="business">Opción 2: Visa de negocios (M) — la mejor para 3-6 meses</h2>
+  <p>
+    Si tienes cualquier conexión empresarial legítima con China — reuniones, proveedores, ferias
+    comerciales — la visa M encaja mucho mejor para estancias largas o repetidas que ir acumulando
+    extensiones de visa de turista.
+  </p>
+  <ul>
+    <li><strong>Duración de la estancia:</strong> con frecuencia de 90 a 180 días por entrada.</li>
+    <li><strong>Validez:</strong> a menudo entradas múltiples durante 6 meses hasta varios años, ideal para nómadas que salen y regresan.</li>
+    <li><strong>Requisito clave:</strong> una carta de invitación de una empresa china, una entidad comercial o un organizador de exposiciones.</li>
+    <li><strong>Formas legítimas de obtener una invitación:</strong> asistir a una feria comercial, relaciones reales con proveedores o socios, o servicios de facilitación de visas de negocios vinculados a eventos reales. El motivo de negocios debe ser real.</li>
+  </ul>
+
+  <h2 id="transit">Opción 3: Tránsito sin visa de 240 horas — estancias cortas</h2>
+  <p>
+    Muchas nacionalidades pueden entrar en China sin visa por hasta 240 horas (10 días) al transitar
+    hacia un tercer país a través de puertos de entrada designados. Esto no es una solución para
+    vivir allí, pero sí es perfecto para explorar una ciudad antes de comprometerte con una visa
+    completa.
+  </p>
+  <ul>
+    <li><strong>Quién califica:</strong> titulares de pasaportes de una larga lista de países elegibles; consulta nuestro <a href="/tools/visa-free-checker/">verificador de entrada sin visa</a> para tu nacionalidad.</li>
+    <li><strong>Regla del tercer país:</strong> debes viajar del país A al país C pasando por China, no regresar a tu punto de origen.</li>
+    <li><strong>Se aplica en:</strong> ciudades y provincias designadas; por lo general debes permanecer dentro de la región permitida.</li>
+    <li><strong>Ideal para:</strong> probar si una ciudad te conviene antes de solicitar una visa más larga.</li>
+  </ul>
+
+  <h2 id="work">Opción 4: Visa de trabajo (Z) — no es para freelancers</h2>
+  <p>
+    La visa Z es la verdadera visa de trabajo de China, pero está vinculada a un empleo patrocinado
+    por un empleador chino con licencia y conduce a un permiso de residencia. Requiere una oferta de
+    trabajo formal, verificación de credenciales y documentación del empleador.
+  </p>
+  <p>
+    <strong>Por qué no encaja para la mayoría de los nómadas digitales:</strong> no puedes
+    autopatrocinar una visa Z como freelancer o trabajador remoto para una empresa extranjera. Sin
+    un empleador chino dispuesto a patrocinarte durante todo el proceso de permiso de trabajo,
+    simplemente no es una vía disponible. Se menciona solo para descartarla.
+  </p>
+
+  <h2 id="border-runs">Border runs a Hong Kong y Macau</h2>
+  <p>
+    Un "border run" significa salir brevemente de China continental — normalmente hacia Hong Kong o
+    Macau — para usar una nueva entrada de una visa de entradas múltiples y reiniciar tu estancia
+    permitida. Es una táctica real, pero manéjala con cuidado en 2026.
+  </p>
+  <ul>
+    <li><strong>¿Puedes hacerlo?</strong> Solo si tu visa tiene entradas múltiples. Una visa de una sola entrada se agota en el momento en que sales.</li>
+    <li><strong>¿Con qué frecuencia?</strong> Los viajes ocasionales están bien; un patrón mensual rígido que claramente indique residencia continua levanta sospechas.</li>
+    <li><strong>El riesgo:</strong> los agentes de inmigración pueden cuestionar el propósito de salidas cortas repetidas y acortar o rechazar una estancia a su discreción.</li>
+    <li><strong>La tendencia:</strong> el control fronterizo se ha endurecido, así que no bases un plan de varios años solo en border runs. Combínalos con una visa adecuada.</li>
+  </ul>
+
+  <h2 id="nationality">Límites de estancia por nacionalidad</h2>
+  <p>
+    La duración de estancia por entrada y la validez de la visa varían según el pasaporte debido a
+    acuerdos recíprocos. La tabla muestra patrones típicos de visa de turista; confírmalo siempre en
+    tu centro de visas chino más cercano, ya que las políticas cambian.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Nacionalidad</th>
+        <th>Validez típica de la visa L</th>
+        <th>Estancia típica por entrada</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Estados Unidos</td>
+        <td>Hasta 10 años, entradas múltiples</td>
+        <td>Hasta 60 días por entrada</td>
+      </tr>
+      <tr>
+        <td>Canadá</td>
+        <td>Hasta 10 años, entradas múltiples</td>
+        <td>Hasta 30 días por entrada</td>
+      </tr>
+      <tr>
+        <td>Reino Unido</td>
+        <td>Hasta 2 años, entradas múltiples</td>
+        <td>Hasta 30 días por entrada</td>
+      </tr>
+      <tr>
+        <td>Australia</td>
+        <td>Hasta 10 años, entradas múltiples</td>
+        <td>Hasta 60-90 días por entrada</td>
+      </tr>
+      <tr>
+        <td>UE (principales estados)</td>
+        <td>Hasta 5 años, entradas múltiples</td>
+        <td>Hasta 30-90 días por entrada</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Ten en cuenta que varias nacionalidades también se benefician de esquemas unilaterales de entrada
+    sin visa de corta duración para turismo que cambian periódicamente, otra razón más para revisar
+    las reglas actuales antes de reservar.
+  </p>
+
+  <h2 id="next">Siguiente: manejar el dinero en China</h2>
+  <p>
+    Una vez que tengas clara tu vía de visa, lo siguiente que moldea la vida diaria es el dinero,
+    porque en China casi todo funciona con pagos móviles. Lee
+    <a href="/digital-nomads/payment/">cómo pagar cosas en China siendo extranjero</a> para configurar
+    Alipay y WeChat Pay, entender los límites de tarjetas y efectivo, y manejar el alquiler y los
+    fondos transfronterizos.
+  </p>
 </GuideLayout>

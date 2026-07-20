@@ -1,39 +1,43 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'food-of-china';
-const posts = (await getCollection('posts-fr'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'La cuisine de Chine — un voyage culinaire pour étrangers';
-const description = 'Explorez la culture culinaire chinoise en tant que voyageur étranger : les huit grandes cuisines, le hotpot régional, la sécurité de la street food, les dim sum, le petit-déjeuner, les options végétariennes et les plats qui méritent de traverser une ville.';
+const title = 'La cuisine chinoise — Le voyage culinaire d\'un étranger';
+const description = 'Explorez la culture culinaire chinoise en tant que voyageur étranger : les huit grandes cuisines, les hot pots régionaux, la sécurité de la street food, le dim sum, le petit-déjeuner, les options végétariennes et les plats qui valent de traverser toute une ville.';
 
 const relatedTools = [
-  { href: '/fr/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Commander à manger sans chinois', desc: 'Configuration de Meituan & Ele.me pour les étrangers' },
-  { href: '/fr/posts/how-to-pay-in-china-tourist-guide/', title: 'Comment payer en Chine', desc: 'Alipay, WeChat Pay et espèces pour la restauration' },
-  { href: '/fr/food/', title: 'Guides cuisine et restaurants', desc: 'Tous les articles liés à la nourriture sur ChinaTripBox' },
+  { href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Commander à manger sans parler chinois', desc: 'Configuration de Meituan et Ele.me pour les étrangers' },
+  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Comment payer en Chine', desc: 'Alipay, WeChat Pay et espèces pour les repas' },
+  { href: '/food/', title: 'Guides sur la nourriture et les repas', desc: 'Tous les articles liés à la nourriture sur ChinaTripBox' },
 ];
 
 const relatedCities = [
-  { href: '/fr/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Capitale de la cuisine du Sichuan' },
-  { href: '/fr/posts/beijing-city-guide-for-foreigners/', title: 'Pékin', desc: 'Canard laqué de Pékin et cuisine du Nord' },
-  { href: '/fr/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Bouchées à la soupe et cuisine fusion' },
+  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Capitale de la cuisine du Sichuan' },
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Canard laqué et cuisine du Nord' },
+  { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Xiaolongbao et cuisine fusion' },
 ];
 
 const otherSeries = [
-  { href: '/fr/series/history-of-china/', title: 'Histoire de Chine' },
-  { href: '/fr/series/culture-of-china/', title: 'Culture de Chine' },
-  { href: '/fr/series/modern-china/', title: 'Chine moderne' },
+  { href: '/series/history-of-china/', title: 'Histoire de la Chine' },
+  { href: '/series/culture-of-china/', title: 'Culture de la Chine' },
+  { href: '/series/modern-china/', title: 'La Chine moderne' },
 ];
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Série de contenu</p>
@@ -48,21 +52,21 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">Articles</p>
-            <h2>Série La cuisine de Chine</h2>
+            <h2>Série sur la cuisine chinoise</h2>
           </div>
         </div>
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/fr/posts/${post.slug}/`} class="card block hover:no-underline">
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
               </a>
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Les articles de cette série sont en préparation. Revenez bientôt.</p>
+          <p class="mt-6 text-gray-500">Les articles de cette série sont en cours de préparation. Revenez bientôt.</p>
         )}
       </div>
 
@@ -81,7 +85,7 @@ const otherSeries = [
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Guides gastronomiques par ville</p>
+          <p class="section-kicker">Guides culinaires par ville</p>
           <h2 class="mt-1 text-xl font-bold text-gray-950">Où manger</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (

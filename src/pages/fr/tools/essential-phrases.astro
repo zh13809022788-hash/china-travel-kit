@@ -1,37 +1,163 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
 
 const title = 'Phrases chinoises essentielles pour les voyageurs';
 const description =
-  'Une liste pratique et imprimable de phrases de mandarin utiles en voyage, avec pinyin et traduction française. Paiement, transport, repas, salutations et urgences.';
----
+  'Une liste pratique et imprimable de phrases essentielles en chinois mandarin pour les touristes en Chine — avec pinyin et anglais. Couvre les salutations, le paiement, les transports, la nourriture et les urgences.';
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+interface Phrase {
+  en: string;
+  zh: string;
+  pinyin: string;
+}
+interface Group {
+  id: string;
+  label: string;
+  icon: string;
+  phrases: Phrase[];
+}
+
+const groups: Group[] = [
+  {
+    id: 'basics', label: 'Salutations et bases', icon: '👋',
+    phrases: [
+      { en: 'Bonjour', zh: '你好', pinyin: 'nǐ hǎo' },
+      { en: 'Merci', zh: '谢谢', pinyin: 'xièxie' },
+      { en: 'Je vous en prie', zh: '不客气', pinyin: 'bú kèqi' },
+      { en: 'Désolé / Excusez-moi', zh: '对不起', pinyin: 'duìbuqǐ' },
+      { en: 'Oui / Correct', zh: '对', pinyin: 'duì' },
+      { en: 'Non / Pas', zh: '不是', pinyin: 'bú shì' },
+      { en: 'Je ne comprends pas', zh: '我不明白', pinyin: 'wǒ bù míngbái' },
+      { en: 'Parlez-vous anglais ?', zh: '你会说英语吗？', pinyin: 'nǐ huì shuō yīngyǔ ma?' },
+    ],
+  },
+  {
+    id: 'payment', label: 'Argent et paiement', icon: '💳',
+    phrases: [
+      { en: 'Combien ça coûte ?', zh: '多少钱？', pinyin: 'duōshao qián?' },
+      { en: 'Puis-je utiliser Alipay ?', zh: '可以用支付宝吗？', pinyin: 'kěyǐ yòng zhīfùbǎo ma?' },
+      { en: 'Puis-je utiliser WeChat Pay ?', zh: '可以用微信支付吗？', pinyin: 'kěyǐ yòng wēixìn zhīfù ma?' },
+      { en: 'C’est trop cher', zh: '太贵了', pinyin: 'tài guì le' },
+      { en: 'Puis-je payer par carte ?', zh: '可以刷卡吗？', pinyin: 'kěyǐ shuākǎ ma?' },
+      { en: 'Je vais scanner votre code', zh: '我扫你的码', pinyin: 'wǒ sǎo nǐ de mǎ' },
+    ],
+  },
+  {
+    id: 'transport', label: 'Se déplacer', icon: '🚕',
+    phrases: [
+      { en: 'Où est le métro ?', zh: '地铁站在哪里？', pinyin: 'dìtiě zhàn zài nǎlǐ?' },
+      { en: 'Veuillez me conduire à cette adresse', zh: '请带我去这个地址', pinyin: 'qǐng dài wǒ qù zhège dìzhǐ' },
+      { en: 'Arrêtez-vous ici, s’il vous plaît', zh: '请在这里停', pinyin: 'qǐng zài zhèlǐ tíng' },
+      { en: 'Gare ferroviaire', zh: '火车站', pinyin: 'huǒchē zhàn' },
+      { en: 'Aéroport', zh: '机场', pinyin: 'jīchǎng' },
+      { en: 'Comment aller à... ?', zh: '怎么去...？', pinyin: 'zěnme qù...?' },
+    ],
+  },
+  {
+    id: 'food', label: 'Nourriture et repas', icon: '🍜',
+    phrases: [
+      { en: 'Le menu, s’il vous plaît', zh: '请给我菜单', pinyin: 'qǐng gěi wǒ càidān' },
+      { en: 'Je suis végétarien', zh: '我吃素', pinyin: 'wǒ chī sù' },
+      { en: 'Pas épicé, s’il vous plaît', zh: '请不要辣', pinyin: 'qǐng búyào là' },
+      { en: 'De l’eau, s’il vous plaît', zh: '请给我水', pinyin: 'qǐng gěi wǒ shuǐ' },
+      { en: 'L’addition, s’il vous plaît', zh: '买单', pinyin: 'mǎidān' },
+      { en: 'C’est délicieux', zh: '很好吃', pinyin: 'hěn hǎochī' },
+    ],
+  },
+  {
+    id: 'help', label: 'Aide et urgences', icon: '🆘',
+    phrases: [
+      { en: 'À l’aide !', zh: '救命！', pinyin: 'jiùmìng!' },
+      { en: 'Où sont les toilettes ?', zh: '洗手间在哪里？', pinyin: 'xǐshǒujiān zài nǎlǐ?' },
+      { en: 'J’ai besoin d’un médecin', zh: '我需要看医生', pinyin: 'wǒ xūyào kàn yīshēng' },
+      { en: 'Appelez la police', zh: '请报警', pinyin: 'qǐng bàojǐng' },
+      { en: 'Je suis perdu', zh: '我迷路了', pinyin: 'wǒ mílù le' },
+      { en: 'Veuillez l’écrire', zh: '请写下来', pinyin: 'qǐng xiě xiàlái' },
+    ],
+  },
+];
+---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Outil</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Phrases chinoises essentielles</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
+
     <AdSlot format="banner" />
-    <div class="mt-6 rounded-lg border border-gray-200 bg-white p-5">
-      <p class="text-sm leading-6 text-gray-600">
-        Cette page sert surtout d’aide visuelle rapide. Les caractères chinois et le pinyin restent
-        inchangés, mais les intitulés sont adaptés pour un public francophone.
-      </p>
+
+    <!-- Controls -->
+    <div class="mt-6 flex flex-wrap items-center gap-3 print:hidden">
+      <button data-filter="all" class="phrase-filter btn-primary text-sm">Toutes</button>
+      {groups.map((g) => (
+        <button data-filter={g.id} class="phrase-filter rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
+          {g.icon} {g.label}
+        </button>
+      ))}
+      <button id="print-btn" class="ml-auto rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-400">
+        🖨️ Imprimer / Enregistrer en PDF
+      </button>
     </div>
+
+    <!-- Phrase groups -->
+    <div class="mt-6 space-y-8">
+      {groups.map((g) => (
+        <section class="phrase-group" data-group={g.id}>
+          <h2 class="mb-3 text-xl font-bold text-gray-900">{g.icon} {g.label}</h2>
+          <div class="grid gap-3 sm:grid-cols-2">
+            {g.phrases.map((p) => (
+              <div class="card flex flex-col">
+                <span class="text-sm text-gray-500">{p.en}</span>
+                <span class="mt-1 text-2xl font-bold text-gray-900">{p.zh}</span>
+                <span class="mt-0.5 text-sm italic text-brand-600">{p.pinyin}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
     <AffiliateCta
-      title="Restez connecté pour traduire sur place"
-      description="Une eSIM adaptée facilite l’usage des applications de traduction, des cartes et des messages dès l’arrivée."
-      buttonText="Voir les eSIM"
+      title="Restez connecté pour traduire en déplacement"
+      description="Une eSIM de voyage pour la Chine permet aux applications de traduction et aux cartes de fonctionner dès votre arrivée."
+      buttonText="Se connecter"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
   <Footer />
 </BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.phrase-filter');
+  const sections = document.querySelectorAll<HTMLElement>('.phrase-group');
+  const printBtn = document.getElementById('print-btn');
+
+  const activeCls = ['btn-primary'];
+  const idleCls = ['rounded-lg', 'border', 'border-gray-300', 'px-3', 'py-1.5', 'text-sm', 'font-medium', 'text-gray-700', 'hover:border-brand-400'];
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      sections.forEach((s) => {
+        s.classList.toggle('hidden', filter !== 'all' && s.dataset.group !== filter);
+      });
+      buttons.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('btn-primary', on);
+        idleCls.forEach((c) => b.classList.toggle(c, !on));
+      });
+    });
+  });
+
+  printBtn?.addEventListener('click', () => window.print());
+</script>

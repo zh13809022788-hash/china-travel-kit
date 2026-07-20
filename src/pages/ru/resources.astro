@@ -1,94 +1,96 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
-const title = 'Ресурсы для поездки в Китай';
+const title = 'Ресурсы для путешествий по Китаю для иностранных посетителей';
 const description =
-  'Практичный центр материалов для иностранных путешественников по Китаю: оплата, eSIM, поезда, визы, гиды по городам, полезные инструменты и ссылки для подготовки первой поездки.';
+  'Практичный центр ресурсов для иностранных посетителей Китая: платежи, eSIM, поезда, визы, путеводители по городам, инструменты и ссылки для планирования первой поездки.';
 
 const resourceGroups = [
   {
     title: 'Если у вас есть только 30 минут',
-    description: 'Короткий маршрут чтения для тех, кому нужно быстро подготовиться к поездке в Китай.',
+    description: 'Короткий маршрут чтения для путешественников, которым нужно быстро подготовить рабочий набор для поездки в Китай.',
     links: [
-      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Чек-лист подготовки перед вылетом' },
-      { href: '/ru/tools/survival-kit/', title: 'Карточки и чек-листы для выживания в Китае' },
-      { href: '/ru/tools/payment-checker/', title: 'Проверить запасной план по оплате' },
-      { href: '/ru/tools/visa-free-checker/', title: 'Проверить безвизовый въезд или транзит' },
-      { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'Как бронировать поезда и проходить на вокзал' },
+      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Чеклист подготовки перед поездкой' },
+      { href: '/tools/survival-kit/', title: 'Карточки и чеклисты набора для выживания в Китае' },
+      { href: '/tools/payment-checker/', title: 'Проверьте свой резервный план оплаты' },
+      { href: '/tools/visa-free-checker/', title: 'Проверьте безвизовый въезд или транзит' },
+      { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Разберитесь в бронировании поездов и проходе на станцию' },
     ],
   },
   {
-    title: 'Начните отсюда: подготовка к первой поездке',
-    description: 'Самый короткий путь от мысли "я еду в Китай" до понятного плана на день прилёта.',
+    title: 'Начните здесь: подготовка к первой поездке',
+    description: 'Самый короткий путь от "Я еду в Китай" до рабочего плана прибытия.',
     links: [
-      { href: '/ru/trip-planner/', title: 'Бесплатный планировщик поездки в Китай' },
-      { href: '/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'Планировщик поездки в Китай для новичков' },
-      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Что настроить перед поездкой в Китай' },
-      { href: '/ru/posts/china-visa-free-entry-transit-guide-2026/', title: 'Гид по безвизовому въезду и транзиту' },
-      { href: '/ru/tools/best-time-to-visit/', title: 'Когда лучше ехать в Китай' },
-      { href: '/ru/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Что взять с собой в Китай' },
+      { href: '/trip-planner/', title: 'Бесплатный планировщик поездки в Китай' },
+      { href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'Планировщик поездки в Китай для тех, кто едет впервые' },
+      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Что настроить перед поездкой в Китай' },
+      { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'Гид по безвизовому въезду и транзиту в Китае' },
+      { href: '/tools/best-time-to-visit/', title: 'Лучшее время для поездки в Китай' },
+      { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Что взять с собой в Китай' },
     ],
   },
   {
-    title: 'Оплата и деньги',
-    description: 'Мобильные платежи, наличные на всякий случай, банковские карты и типичные проблемы на кассе.',
+    title: 'Платежи и деньги',
+    description: 'Мобильные платежи, наличные как запасной вариант, карты и повседневные проблемы при оплате.',
     links: [
-      { href: '/ru/posts/how-to-pay-in-china-tourist-guide/', title: 'Как туристу платить в Китае' },
-      { href: '/ru/posts/alipay-foreign-credit-card-step-by-step/', title: 'Как настроить Alipay с иностранной картой' },
-      { href: '/ru/posts/wechat-pay-foreign-visitors-guide/', title: 'Гид по WeChat Pay для иностранных гостей' },
-      { href: '/ru/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Чек-лист по оплате и приложениям перед выездом' },
-      { href: '/ru/tools/payment-checker/', title: 'Проверка совместимости способов оплаты' },
+      { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Как платить в Китае туристу' },
+      { href: '/posts/alipay-foreign-credit-card-step-by-step/', title: 'Настройте Alipay с иностранной картой' },
+      { href: '/posts/wechat-pay-foreign-visitors-guide/', title: 'Руководство по WeChat Pay для иностранных посетителей' },
+      { href: '/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/', title: 'Чеклист платежей и приложений перед поездкой' },
+      { href: '/tools/payment-checker/', title: 'Проверка совместимости способов оплаты' },
     ],
   },
   {
     title: 'Интернет и приложения',
-    description: 'Как оставаться онлайн, выбрать eSIM и заранее понять, какие приложения будут работать.',
+    description: 'Оставайтесь онлайн, выберите eSIM и узнайте, какие приложения будут работать до прибытия.',
     links: [
-      { href: '/ru/posts/best-esim-for-china-travel-2026/', title: 'Лучшая eSIM для поездки в Китай' },
-      { href: '/ru/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'Сравнение eSIM и роуминга по стоимости' },
-      { href: '/ru/posts/internet-access-china-apps-that-work-2026/', title: 'Интернет и приложения в Китае' },
-      { href: '/ru/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'Планирование первой поездки: eSIM и приложения' },
-      { href: '/ru/tools/app-availability-checker/', title: 'Будут ли мои приложения работать в Китае?' },
+      { href: '/posts/best-esim-for-china-travel-2026/', title: 'Лучшая eSIM для поездки в Китай' },
+      { href: '/posts/china-esim-vs-roaming-2026-the-real-10-day-cost/', title: 'Стоимость eSIM и роуминга в Китае' },
+      { href: '/posts/internet-access-china-apps-that-work-2026/', title: 'Доступ в интернет и приложения в Китае' },
+      { href: '/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/', title: 'Планирование первой поездки с eSIM и приложениями' },
+      { href: '/tools/app-availability-checker/', title: 'Будут ли мои приложения работать в Китае?' },
     ],
   },
   {
-    title: 'Транспорт и гиды по городам',
-    description: 'Поезда, метро, аэропорты, такси через приложения и практическая логистика по городам.',
+    title: 'Транспорт и путеводители по городам',
+    description: 'Поезда, метро, аэропорты, сервисы заказа поездок и практичное планирование по городу.',
     links: [
-      { href: '/ru/cities/', title: 'Центр гидов по городам Китая' },
-      { href: '/ru/posts/china-high-speed-rail-guide-foreigners/', title: 'Гид по скоростным поездам Китая для иностранцев' },
-      { href: '/ru/posts/book-china-train-tickets-12306-foreigners/', title: 'Как купить билеты на поезд через 12306' },
-      { href: '/ru/posts/didi-china-foreign-tourists-guide/', title: 'Как пользоваться DiDi иностранному туристу' },
-      { href: '/ru/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Как добраться из аэропорта в город' },
+      { href: '/cities/', title: 'Центр путеводителей по городам Китая' },
+      { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Гид по высокоскоростным железным дорогам Китая для иностранцев' },
+      { href: '/posts/book-china-train-tickets-12306-foreigners/', title: 'Купите билеты на поезд в Китае через 12306' },
+      { href: '/posts/didi-china-foreign-tourists-guide/', title: 'Пользуйтесь DiDi как иностранный турист' },
+      { href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Гид по транспорту из аэропорта в город' },
     ],
   },
   {
     title: 'Еда, этикет и повседневная жизнь',
-    description: 'Рестораны, чаевые, доставка еды, уличная еда и бытовые привычки, которые помогают избежать лишних сложностей.',
+    description: 'Питание, чаевые, приложения для доставки, уличная еда и практичные привычки, которые уменьшают трения на месте.',
     links: [
-      { href: '/ru/food/', title: 'Раздел о еде и ресторанах в Китае' },
-      { href: '/ru/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Как заказывать еду без знания китайского' },
-      { href: '/ru/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: 'Безопасность уличной еды в Чэнду и уровень остроты' },
-      { href: '/ru/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Чаевые в Китае: когда они уместны' },
+      { href: '/food/', title: 'Центр материалов о еде и питании в Китае' },
+      { href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Заказывайте еду без знания китайского' },
+      { href: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/', title: 'Гид по безопасности уличной еды и уровню остроты в Chengdu' },
+      { href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/', title: 'Чаевые в Китае: когда они ожидаются' },
     ],
   },
   {
-    title: 'Долгие поездки и удалённая работа',
-    description: 'Для поездок на недели и месяцы: легальность, жильё, оплата и надёжность рабочих инструментов.',
+    title: 'Долгие поездки и удаленная работа',
+    description: 'Для поездок продолжительностью в недели или месяцы начните с законности, жилья, платежей и надежности рабочих инструментов.',
     links: [
-      { href: '/ru/long-stay/', title: 'Гид по длительному пребыванию в Китае' },
-      { href: '/ru/digital-nomads/', title: 'Гид по Китаю для цифровых кочевников' },
-      { href: '/ru/digital-nomads/visa/', title: 'Визовый гид для цифровых кочевников' },
-      { href: '/ru/digital-nomads/payment/', title: 'Настройка оплаты для долгого пребывания' },
+      { href: '/long-stay/', title: 'Гид по долгосрочному пребыванию в Китае' },
+      { href: '/digital-nomads/', title: 'Гид по Китаю для цифровых кочевников' },
+      { href: '/digital-nomads/visa/', title: 'Гид по визам в Китай для цифровых кочевников' },
+      { href: '/digital-nomads/payment/', title: 'Настройка платежей для долгого пребывания' },
     ],
   },
 ];
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <section class="max-w-3xl">
       <p class="section-kicker">Центр ресурсов</p>
@@ -98,19 +100,21 @@ const resourceGroups = [
 
     <section class="mt-10 grid gap-5 md:grid-cols-2">
       {resourceGroups.map((group) => (
-        <article class="card">
+        <div class="card">
           <h2 class="text-xl font-bold text-gray-950">{group.title}</h2>
           <p class="mt-2 text-sm leading-6 text-gray-600">{group.description}</p>
-          <ul class="mt-5 grid gap-3">
+          <ul class="mt-5 grid gap-2">
             {group.links.map((link) => (
               <li>
-                <a href={link.href} class="font-semibold text-brand-700 hover:text-brand-800">
+                <a href={link.href}
+                   class="block rounded-lg border border-gray-200 px-4 py-3 text-sm font-semibold
+                          text-brand-700 transition-colors hover:border-brand-300 hover:bg-brand-50">
                   {link.title}
                 </a>
               </li>
             ))}
           </ul>
-        </article>
+        </div>
       ))}
     </section>
   </main>

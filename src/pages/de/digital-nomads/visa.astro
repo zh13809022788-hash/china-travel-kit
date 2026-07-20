@@ -1,85 +1,87 @@
 ---
-import GuideLayout from '../../../layouts/GuideLayout.astro';
+import GuideLayout from "../../../layouts/GuideLayout.astro";
 
-const title = 'China-Visum für digitale Nomaden (2026): Alle Optionen';
+const title = 'China-Visum für digitale Nomaden (2026): Alle deine Optionen';
 const description =
-  'China hat kein offizielles Visum für digitale Nomaden. Hier sind die legalen, praktischen Optionen für Remote-Arbeitende: Touristenvisa, Geschäftsvisa, Transitregeln und Grenzübergänge.';
+  'China hat kein offizielles Visum für digitale Nomaden. Hier sind die legalen, praktischen Optionen für Remote-Arbeiter: Touristenvisa, Geschäftsvisa, Transitregeln und Border Runs.';
 const url = '/digital-nomads/visa/';
 const datePublished = '2026-07-09';
 
 const breadcrumbs = [
   { label: 'Startseite', href: '/' },
-  { label: 'Digitale Nomaden', href: '/de/digital-nomads/' },
-  { label: 'Visa-Leitfaden' },
+  { label: 'Digitale Nomaden', href: '/digital-nomads/' },
+  { label: 'Visum-Guide' },
 ];
 
 const toc = [
-  { id: 'no-nomad-visa', label: 'Das Wichtigste' },
+  { id: 'no-nomad-visa', label: 'Das Wichtigste in Kürze' },
   { id: 'tourist', label: 'Option 1: Touristenvisum (L)' },
   { id: 'business', label: 'Option 2: Geschäftsvisum (M)' },
   { id: 'transit', label: 'Option 3: Visumfreier Transit' },
   { id: 'work', label: 'Option 4: Arbeitsvisum (Z)' },
-  { id: 'border-runs', label: 'Grenzübergänge über Hong Kong und Macau' },
+  { id: 'border-runs', label: 'Hong Kong- & Macau-Border-Runs' },
   { id: 'nationality', label: 'Aufenthaltsgrenzen nach Staatsangehörigkeit' },
-  { id: 'faq', label: 'Häufige Fragen' },
+  { id: 'faq', label: 'FAQ' },
 ];
 
 const faqs = [
   {
     question: 'Hat China ein Visum für digitale Nomaden?',
     answer:
-      'Nein. Stand 2026 hat China keine Visumkategorie, die für Remote-Arbeitende oder ortsunabhängige Berufstätige gedacht ist. Digitale Nomaden nutzen stattdessen Touristenvisa (L), Geschäftsvisa (M) oder visumfreien Transit und kombinieren oder verlängern diese, um die benötigte Aufenthaltsdauer abzudecken.',
+      'Nein. Stand 2026 hat China keine Visumkategorie, die für Remote-Arbeiter oder ortsunabhängige Berufstätige ausgelegt ist. Digitale Nomaden nutzen stattdessen Touristenvisa (L), Geschäftsvisa (M) oder visumfreien Transit und kombinieren oder verlängern diese, um die benötigte Aufenthaltsdauer abzudecken.',
   },
   {
     question: 'Darf ich mit einem Touristenvisum in China legal remote arbeiten?',
     answer:
-      'Online für dein eigenes ausländisches Unternehmen oder für Kunden im Ausland zu arbeiten, während du ein Touristenvisum hast, liegt eher in einer ungeregelten Grauzone, als dass es eindeutig erlaubt wäre. Klar verboten ist lokale Beschäftigung oder bezahlte Arbeit für chinesische Kunden mit einem L-Visum. Halte deine Arbeit strikt grenzüberschreitend, vermeide jede lokale wirtschaftliche Aktivität und beschreibe dich bei der Einreise nicht als arbeitend.',
+      'Online für dein eigenes ausländisches Unternehmen oder für ausländische Kunden zu arbeiten, während du mit einem Touristenvisum in China bist, bewegt sich in einer unregulierten Grauzone, statt klar erlaubt zu sein. Klar verboten ist dagegen, eine lokale Beschäftigung anzunehmen oder bezahlte Arbeit für chinesische Kunden mit einem L-Visum zu leisten. Halte deine Arbeit strikt grenzüberschreitend, vermeide jede lokale wirtschaftliche Tätigkeit und gib bei der Einreise nicht an, dass du arbeitest.',
   },
   {
     question: 'Was passiert, wenn ich mein chinesisches Visum überziehe?',
     answer:
-      'Eine Überziehung führt zu einer täglichen Geldstrafe, möglicher Haft bei längeren Überziehungen und einem Eintrag, der künftige Visumanträge erschweren kann. Verlängere immer bei der lokalen Ausreise- und Einreisebehörde oder reise aus, bevor dein erlaubter Aufenthalt endet. Verlasse dich nie darauf, einfach durchgewinkt zu werden.',
+      'Ein überzogener Aufenthalt führt zu einer täglichen Geldstrafe (häufig bis zu 500 RMB pro Tag, mit einer Obergrenze), möglicher Haft bei längeren Überschreitungen und einem Eintrag, der künftige Visumanträge erschweren kann. Verlängere es immer beim lokalen Exit-Entry-Büro oder reise aus, bevor dein erlaubter Aufenthalt endet. Verlass dich niemals darauf, einfach durchgewunken zu werden.',
   },
   {
     question: 'Kann ich mein Touristenvisum innerhalb Chinas verlängern?',
     answer:
-      'Oft ja, einmal. Viele Staatsangehörige können beim lokalen Ausreise- und Einreisebüro des Büros für öffentliche Sicherheit eine einmalige 30-tägige Verlängerung eines L-Visums beantragen, sofern sie mehrere Tage vor Ablauf des aktuellen Aufenthalts einen Antrag stellen und eine Hotelbuchung oder Wohnsitzregistrierung sowie einen Finanzierungsnachweis vorlegen. Die Genehmigung liegt im Ermessen der Beamtin oder des Beamten und ist nicht garantiert.',
+      'Oft ja, einmal. Viele Staatsangehörige können beim lokalen Exit-Entry-Büro des Public Security Bureau eine einmalige 30-tägige Verlängerung eines L-Visums beantragen, sofern sie dies mehrere Tage vor Ablauf des aktuellen Aufenthalts tun und eine Hotelbuchung oder Wohnsitzregistrierung sowie einen Finanzierungsnachweis vorlegen. Die Genehmigung liegt im Ermessen des Beamten und ist nicht garantiert.',
   },
   {
     question: 'Kann ich von einem Touristenvisum zu einem Geschäftsvisum wechseln, ohne China zu verlassen?',
     answer:
-      'In der Regel nein. Ein Wechsel des Visumtyps erfordert normalerweise, das neue Visum außerhalb des chinesischen Festlands zu beantragen, oft im Heimatland oder an einem nahegelegenen Knotenpunkt wie Hong Kong. Plane den Wechsel als Ausreise mit anschließender Wiedereinreise, nicht als Umwandlung im Land.',
+      'Im Allgemeinen nein. Ein Wechsel des Visumtyps erfordert normalerweise, das neue Visum außerhalb des chinesischen Festlands zu beantragen, oft im Heimatland oder in einem nahegelegenen Drehkreuz wie Hong Kong. Plane den Wechsel eher als Ausreise-und-Wiedereinreise-Reise statt als Umwandlung innerhalb des Landes.',
   },
   {
-    question: 'Ist ein Grenzübergang nach Hong Kong eine verlässliche Möglichkeit, meinen Aufenthalt zurückzusetzen?',
+    question: 'Ist ein Border Run nach Hong Kong eine verlässliche Methode, um meinen Aufenthalt zurückzusetzen?',
     answer:
-      'Das kann funktionieren, wenn dein Visum mehrere Einreisen erlaubt, ist aber weniger verlässlich als früher. Grenzbeamtinnen und Grenzbeamte achten auf wiederholte kurze Ausreisen, die genutzt werden, um dauerhaft in China zu leben, und können Aufenthalte hinterfragen oder verkürzen. Betrachte Grenzübergänge als gelegentliches Werkzeug, nicht als langfristige Visa-Strategie.',
+      'Es kann funktionieren, wenn dein Visum mehrere Einreisen erlaubt, ist aber weniger verlässlich als früher. Einwanderungsbeamte achten auf wiederholte kurze Ausreisen, die dazu genutzt werden, dauerhaft in China zu leben, und können Fragen stellen oder Aufenthalte verkürzen. Betrachte Border Runs als gelegentliches Hilfsmittel, nicht als langfristige Visastrategie.',
   },
   {
-    question: 'Wie weit im Voraus sollte ich ein China-Visum beantragen?',
+    question: 'Wie lange im Voraus sollte ich ein China-Visum beantragen?',
     answer:
-      'Beantrage es drei bis sechs Wochen vor der Reise. Touristen- und Geschäftsvisa werden nach Einreichung typischerweise in etwa vier bis sieben Arbeitstagen bearbeitet, aber Terminverfügbarkeit in Visa-Zentren, Dokumentenbeschaffung einschließlich eines Einladungsschreibens für ein M-Visum und Kurierzeiten kommen hinzu. Eile erhöht das Risiko eines abgelehnten oder unvollständigen Antrags.',
+      'Beantrage es drei bis sechs Wochen vor der Reise. Touristen- und Geschäftsvisa werden nach Einreichung typischerweise in etwa vier bis sieben Arbeitstagen bearbeitet, aber die Verfügbarkeit von Terminen in Visazentren, das Zusammenstellen der Unterlagen (einschließlich eines etwaigen Einladungsschreibens für ein M-Visum) und die Kurierzeit summieren sich. Zu knapp zu planen erhöht das Risiko eines abgelehnten oder unvollständigen Antrags.',
   },
 ];
 
 const related = [
   {
-    title: 'So bezahlst du als Ausländer in China',
-    description: 'Wenn dein Visum geklärt ist, richte Alipay und WeChat Pay ein und verstehe Bargeld- und Kartennutzung.',
-    href: '/de/digital-nomads/payment/',
+    title: 'Wie man in China als Ausländer bezahlt',
+    description: 'Wenn dein Visum geregelt ist, richte Alipay und WeChat Pay ein und verstehe den Umgang mit Bargeld und Karten.',
+    href: '/digital-nomads/payment/',
   },
   {
-    title: 'Der vollständige China-Leitfaden für digitale Nomaden',
-    description: 'Der zentrale Leitfaden: Internet, Lebenshaltungskosten, beste Städte und die Realität von Remote-Arbeit.',
-    href: '/de/digital-nomads/',
+    title: 'Der vollständige China-Guide für digitale Nomaden',
+    description: 'Der zentrale Guide: Internet, Lebenshaltungskosten, beste Städte und die Realität von Remote-Arbeit.',
+    href: '/digital-nomads/',
   },
   {
-    title: 'Prüfer für visumfreie Einreise und Transit',
+    title: 'Checker für visumfreie Einreise & Transit',
     description: 'Prüfe, ob dein Reisepass für visumfreie Einreise oder 240-Stunden-Transit qualifiziert ist.',
-    href: '/de/tools/visa-free-checker/',
+    href: '/tools/visa-free-checker/',
   },
 ];
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
 
 <GuideLayout
   title={title}
@@ -91,109 +93,111 @@ const related = [
   faqs={faqs}
   related={related}
   cover="cover-visa"
-  coverAlt="China-Visum und Reisepassdokumente für die Reise"
- locale="de">
+  coverAlt="China-Visum und Passdokumente für Reisen"
+>
   <p>
-    Hier ist die direkte Antwort, nach der die meisten suchen: <strong>China hat kein Visum für
-    digitale Nomaden</strong>, und 2026 gibt es keine Anzeichen für ein solches Visum. Das bedeutet
-    aber nicht, dass du dich als Remote-Arbeitender nicht in China aufhalten kannst. Es bedeutet, dass
-    du die vorhandenen Visa-Werkzeuge bewusst nutzt. Es gibt vier realistische Wege plus die
-    Grenzübergangs-Taktik, und die richtige Wahl hängt davon ab, wie lange du bleiben möchtest und ob
-    du einen geschäftlichen Grund für den Aufenthalt hast. Dieser Leitfaden geht jede Option
-    ehrlich durch, einschließlich der rechtlichen Grauzonen.
+    Hier ist die direkte Antwort, nach der die meisten Menschen suchen: <strong>China hat kein
+    Visum für digitale Nomaden</strong>, und es gibt auch 2026 keinerlei Anzeichen dafür. Das
+    bedeutet aber nicht, dass du dich als Remote-Arbeiter nicht in China niederlassen kannst. Es
+    bedeutet, dass du die Visuminstrumente nutzt, die es tatsächlich gibt, und sie gezielt
+    einsetzt. Es gibt vier realistische Wege plus die Border-Run-Taktik, und die richtige Wahl
+    hängt davon ab, wie lange du bleiben willst und ob du irgendeinen geschäftlichen Grund hast,
+    dort zu sein. Dieser Guide geht jeden davon ehrlich durch, einschließlich der Punkte, an denen
+    die rechtlichen Grauzonen liegen.
   </p>
 
-  <h2 id="no-nomad-visa">Das Wichtigste: Vier legale Optionen</h2>
+  <h2 id="no-nomad-visa">Das Wichtigste in Kürze: Vier legale Optionen</h2>
   <p>
-    Kurz gesagt: Das <strong>Touristenvisum (L)</strong> ist der Standard für Aufenthalte bis etwa
-    drei Monate, das <strong>Geschäftsvisum (M)</strong> passt am besten für längere oder
-    wiederholte Aufenthalte, <strong>visumfreier Transit</strong> deckt kurze Erkundungsreisen ab,
-    und das <strong>Arbeitsvisum (Z)</strong> existiert, passt aber nicht zu Freelancern. Unten wird
-    jede Option aufgeschlüsselt: für wen sie geeignet ist, wie lange sie gilt und was du dafür
-    brauchst.
+    Kurz gesagt: Das <strong>Touristenvisum (L)</strong> ist die Standardoption für Aufenthalte von
+    bis zu etwa drei Monaten, das <strong>Geschäftsvisum (M)</strong> eignet sich am besten für
+    längere oder wiederholte Aufenthalte, der <strong>visumfreie Transit</strong> deckt kurze
+    Erkundungsreisen ab, und das <strong>Arbeitsvisum (Z)</strong> existiert zwar, passt aber nicht
+    zu Freelancern. Im Folgenden wird jede Option danach aufgeschlüsselt, für wen sie geeignet ist,
+    wie lange sie gilt und was erforderlich ist, um sie zu bekommen.
   </p>
 
-  <h2 id="tourist">Option 1: Touristenvisum (L) - Der Standard</h2>
+  <h2 id="tourist">Option 1: Touristenvisum (L) — Die Standardoption</h2>
   <p>
-    Das L-Visum nutzen die meisten digitalen Nomaden für ihren ersten Aufenthalt. Es ist für
-    Tourismus und Besuche gedacht, und die Einwanderungsbehörden behandeln Remote-Arbeit für einen
-    ausländischen Arbeitgeber eher als tolerierte Grauzone denn als ausdrückliche Erlaubnis. Halte
-    deine Tätigkeit daher strikt grenzüberschreitend.
+    Das L-Visum ist das, was die meisten digitalen Nomaden für einen ersten Aufenthalt nutzen. Es
+    ist für Tourismus und Besuche gedacht, und die Einwanderungsbehörden behandeln Remote-Arbeit
+    für einen ausländischen Arbeitgeber als tolerierte Grauzone statt als ausdrückliche Erlaubnis
+    — halte deine Tätigkeit also strikt grenzüberschreitend.
   </p>
   <ul>
-    <li><strong>Aufenthaltsdauer:</strong> häufig 30, 60 oder 90 Tage pro Einreise, je nach Staatsangehörigkeit und ausgestelltem Visum.</li>
-    <li><strong>Einreisen:</strong> einmalig, zweimalig oder mehrfach, bei manchen Reisepässen bis zu mehrere Jahre gültig.</li>
-    <li><strong>Dokumente:</strong> Reisepass mit mehr als 6 Monaten Gültigkeit, Antragsformular, Foto, Buchung für Hin- und Rückflug sowie Hotelreservierungen oder eine Einladung von einem Gastgeber.</li>
-    <li><strong>Verlängerungen:</strong> oft ist eine 30-tägige Verlängerung bei der lokalen Ausreise- und Einreisebehörde möglich, wenn du vor Ablauf beantragst.</li>
+    <li><strong>Aufenthaltsdauer:</strong> häufig 30, 60 oder 90 Tage pro Einreise, abhängig von deiner Staatsangehörigkeit und dem ausgestellten Visum.</li>
+    <li><strong>Einreisen:</strong> einmalig, zweimalig oder mehrfach, für manche Reisepässe bis zu mehrere Jahre gültig.</li>
+    <li><strong>Unterlagen:</strong> Reisepass mit mindestens 6 Monaten Gültigkeit, Antragsformular, Foto, Hin- und Rückflugbuchung sowie Hotelreservierungen oder eine Einladung eines Gastgebers.</li>
+    <li><strong>Verlängerungen:</strong> oft ist eine einmalige 30-tägige Verlängerung beim lokalen Exit-Entry-Büro möglich, wenn du sie vor Ablauf beantragst.</li>
   </ul>
   <p>
-    <strong>Die Grauzone, klar gesagt:</strong> Online-Arbeit für dein eigenes ausländisches
-    Unternehmen oder nicht-chinesische Kunden ist mit einem L-Visum nicht eindeutig erlaubt, wird aber
-    häufig praktiziert und im Allgemeinen toleriert, solange du keine lokale Beschäftigung annimmst,
-    keine chinesischen Kunden bedienst und kein lokales Einkommen erzielst. Übertreibe deine
-    Aktivitäten an der Grenze nicht.
+    <strong>Die Grauzone, klar ausgesprochen:</strong> online für dein eigenes ausländisches
+    Unternehmen oder nicht-chinesische Kunden zu arbeiten, ist mit einem L-Visum nicht klar
+    genehmigt, wird aber weit verbreitet praktiziert und im Allgemeinen toleriert, solange du keine
+    lokale Beschäftigung annimmst, keine chinesischen Kunden bedienst und kein lokales Einkommen
+    erzielst. Stelle deine Tätigkeiten an der Grenze nicht übertrieben dar.
   </p>
 
-  <h2 id="business">Option 2: Geschäftsvisum (M) - Am besten für 3 bis 6 Monate</h2>
+  <h2 id="business">Option 2: Geschäftsvisum (M) — Am besten für 3-6 Monate</h2>
   <p>
-    Wenn du eine legitime geschäftliche Verbindung zu China hast, etwa Besprechungen, Lieferanten oder
-    Messen, passt das M-Visum für längere oder wiederholte Aufenthalte deutlich besser als eine
-    Aneinanderreihung von Touristenvisum-Verlängerungen.
+    Wenn du irgendeine legitime geschäftliche Verbindung zu China hast — Meetings, Lieferanten,
+    Handelsveranstaltungen — dann passt das M-Visum für verlängerte oder wiederholte Aufenthalte
+    wesentlich besser als das Aneinanderreihen von Touristenvisum-Verlängerungen.
   </p>
   <ul>
     <li><strong>Aufenthaltsdauer:</strong> häufig 90 bis 180 Tage pro Einreise.</li>
     <li><strong>Gültigkeit:</strong> oft mehrere Einreisen über 6 Monate bis mehrere Jahre, ideal für Nomaden, die ausreisen und zurückkehren.</li>
-    <li><strong>Zentrale Voraussetzung:</strong> ein Einladungsschreiben eines chinesischen Unternehmens, Handelsverbands oder Messeveranstalters.</li>
-    <li><strong>Legitime Wege zu einer Einladung:</strong> Teilnahme an einer Messe, echte Lieferanten- oder Partnerbeziehungen oder Dienste zur Geschäftsvisum-Unterstützung, die an reale Veranstaltungen gebunden sind. Der geschäftliche Grund muss echt sein.</li>
+    <li><strong>Wichtige Voraussetzung:</strong> ein Einladungsschreiben eines chinesischen Unternehmens, eines Handelsverbands oder eines Messeveranstalters.</li>
+    <li><strong>Legitime Wege, eine Einladung zu erhalten:</strong> die Teilnahme an einer Fachmesse, echte Beziehungen zu Lieferanten oder Partnern oder Dienstleistungen zur Unterstützung von Geschäftsvisa, die an reale Veranstaltungen gebunden sind. Der geschäftliche Grund muss real sein.</li>
   </ul>
 
-  <h2 id="transit">Option 3: 240-Stunden-Transit ohne Visum - Kurze Aufenthalte</h2>
+  <h2 id="transit">Option 3: 240-Stunden visumfreier Transit — Kurze Aufenthalte</h2>
   <p>
-    Viele Staatsangehörige können für bis zu 240 Stunden (10 Tage) visumfrei nach China
-    einreisen, wenn sie über ausgewiesene Einreisehäfen in ein Drittland weiterreisen. Das ist
-    keine Lösung zum Leben, eignet sich aber perfekt, um eine Stadt zu erkunden, bevor du ein
-    vollwertiges Visum beantragst.
+    Viele Staatsangehörige können visumfrei für bis zu 240 Stunden (10 Tage) nach China einreisen,
+    wenn sie über ausgewiesene Einreisehäfen in ein Drittland weiterreisen. Das ist keine Lösung
+    zum Leben dort, aber perfekt, um eine Stadt zu testen, bevor du dich auf ein vollständiges
+    Visum festlegst.
   </p>
   <ul>
-    <li><strong>Wer qualifiziert ist:</strong> Reisepassinhaber aus einer langen Liste berechtigter Länder. Prüfe deine Staatsangehörigkeit mit unserem <a href="/de/tools/visa-free-checker/">Prüfer für visumfreie Einreise</a>.</li>
-    <li><strong>Drittlandregel:</strong> Du musst von Land A über China nach Land C reisen und darfst nicht an deinen Ausgangsort zurückkehren.</li>
-    <li><strong>Gilt an:</strong> ausgewiesenen Städten und Provinzen; im Allgemeinen musst du in der erlaubten Region bleiben.</li>
-    <li><strong>Am besten für:</strong> den Test, ob eine Stadt zu dir passt, bevor du ein längeres Visum beantragst.</li>
+    <li><strong>Wer qualifiziert ist:</strong> Inhaber von Reisepässen aus einer langen Liste berechtigter Länder — prüfe unsere <a href="/tools/visa-free-checker/">Checker für visumfreie Einreise</a> für deine Staatsangehörigkeit.</li>
+    <li><strong>Drittland-Regel:</strong> du musst von Land A über China nach Land C reisen, nicht zu deinem Ursprungsland zurückkehren.</li>
+    <li><strong>Gilt in:</strong> ausgewiesenen Städten und Provinzen; in der Regel musst du innerhalb der erlaubten Region bleiben.</li>
+    <li><strong>Am besten geeignet für:</strong> zu testen, ob eine Stadt zu dir passt, bevor du ein längeres Visum beantragst.</li>
   </ul>
 
-  <h2 id="work">Option 4: Arbeitsvisum (Z) - Nicht für Freelancer</h2>
+  <h2 id="work">Option 4: Arbeitsvisum (Z) — Nicht für Freelancer</h2>
   <p>
-    Das Z-Visum ist Chinas eigentliches Arbeitsvisum, ist aber an eine gesponserte Beschäftigung bei
-    einem lizenzierten chinesischen Arbeitgeber gebunden und führt zu einer Aufenthaltserlaubnis. Es
-    erfordert ein formelles Jobangebot, die Prüfung von Nachweisen und Unterlagen des Arbeitgebers.
+    Das Z-Visum ist Chinas tatsächliches Arbeitsvisum, aber es ist an eine gesponserte
+    Beschäftigung bei einem lizenzierten chinesischen Arbeitgeber gebunden und führt zu einer
+    Aufenthaltserlaubnis. Es erfordert ein formelles Jobangebot, die Verifizierung von
+    Qualifikationen und Unterlagen des Arbeitgebers.
   </p>
   <p>
-    <strong>Warum es für die meisten digitalen Nomaden nicht passt:</strong> Als Freelancer oder
-    Remote-Arbeitender für ein ausländisches Unternehmen kannst du ein Z-Visum nicht selbst
-    sponsern. Ohne einen chinesischen Arbeitgeber, der bereit ist, dich durch den gesamten
-    Arbeitserlaubnisprozess zu sponsern, ist dieser Weg schlicht nicht verfügbar. Er wird hier nur
-    erwähnt, um ihn auszuschließen.
+    <strong>Warum es für die meisten digitalen Nomaden nicht passt:</strong> Du kannst ein Z-Visum
+    als Freelancer oder Remote-Arbeiter für ein ausländisches Unternehmen nicht selbst sponsern.
+    Ohne einen chinesischen Arbeitgeber, der bereit ist, dich durch den vollständigen
+    Arbeitserlaubnisprozess zu sponsern, ist es schlicht kein verfügbarer Weg. Es wird nur erwähnt,
+    um es auszuschließen.
   </p>
 
-  <h2 id="border-runs">Grenzübergänge über Hong Kong und Macau</h2>
+  <h2 id="border-runs">Hong Kong &amp; Macau Border Runs</h2>
   <p>
-    Ein "Grenzübergang" bedeutet, das chinesische Festland kurz zu verlassen, meist nach Hong Kong oder
-    Macau, um bei einem Visum mit mehrfacher Einreise eine neue Einreise zu nutzen und den erlaubten
-    Aufenthalt zurückzusetzen. Das ist eine reale Taktik, sollte 2026 aber mit Vorsicht genutzt
-    werden.
+    Ein "Border Run" bedeutet, das chinesische Festland kurz zu verlassen — in der Regel nach Hong
+    Kong oder Macau —, um eine neue Einreise mit einem Visum für mehrfache Einreisen zu nutzen und
+    deinen erlaubten Aufenthalt zurückzusetzen. Es ist eine reale Taktik, aber geh 2026 vorsichtig
+    damit um.
   </p>
   <ul>
-    <li><strong>Geht das?</strong> Nur wenn dein Visum mehrere Einreisen erlaubt. Ein Visum für einmalige Einreise ist in dem Moment verbraucht, in dem du ausreist.</li>
-    <li><strong>Wie oft?</strong> Gelegentliche Grenzübergänge sind in Ordnung; ein starres monatliches Muster, das klar auf dauerhaftes Wohnen hindeutet, weckt Aufmerksamkeit.</li>
-    <li><strong>Das Risiko:</strong> Grenzbeamtinnen und Grenzbeamte können den Zweck wiederholter kurzer Ausreisen hinterfragen und einen Aufenthalt nach Ermessen verkürzen oder verweigern.</li>
-    <li><strong>Der Trend:</strong> Die Grenzprüfung ist strenger geworden, daher solltest du keinen Mehrjahresplan allein auf Grenzübergänge aufbauen. Kombiniere sie mit einem passenden Visum.</li>
+    <li><strong>Kannst du das tun?</strong> Nur wenn dein Visum mehrere Einreisen erlaubt. Ein Visum für eine einmalige Einreise ist in dem Moment verbraucht, in dem du ausreist.</li>
+    <li><strong>Wie oft?</strong> Gelegentliche Runs sind in Ordnung; ein starres monatliches Muster, das klar auf kontinuierliches Leben hindeutet, wirft Warnsignale auf.</li>
+    <li><strong>Das Risiko:</strong> Einwanderungsbeamte können den Zweck wiederholter kurzer Ausreisen hinterfragen und einen Aufenthalt nach eigenem Ermessen verkürzen oder verweigern.</li>
+    <li><strong>Der Trend:</strong> Die Grenzkontrollen sind strenger geworden, also baue keinen mehrjährigen Plan allein auf Border Runs auf. Kombiniere sie mit einem passenden Visum.</li>
   </ul>
 
   <h2 id="nationality">Aufenthaltsgrenzen nach Staatsangehörigkeit</h2>
   <p>
-    Aufenthaltsdauer pro Einreise und Visumgültigkeit unterscheiden sich je nach Reisepass aufgrund
-    gegenseitiger Abkommen. Die Tabelle zeigt typische Muster für Touristenvisa; bestätige die
-    Angaben immer beim nächstgelegenen chinesischen Visa-Zentrum, da sich Regeln ändern.
+    Die Aufenthaltsdauer pro Einreise und die Visumgültigkeit variieren je nach Reisepass aufgrund
+    gegenseitiger Abkommen. Die Tabelle zeigt typische Muster für Touristenvisa; prüfe immer bei
+    deinem nächstgelegenen chinesischen Visazentrum nach, da sich die Richtlinien ändern.
   </p>
   <table>
     <thead>
@@ -225,25 +229,24 @@ const related = [
         <td>Bis zu 60-90 Tage pro Einreise</td>
       </tr>
       <tr>
-        <td>EU (große Staaten)</td>
+        <td>EU (große Mitgliedstaaten)</td>
         <td>Bis zu 5 Jahre, mehrfache Einreise</td>
         <td>Bis zu 30-90 Tage pro Einreise</td>
       </tr>
     </tbody>
   </table>
   <p>
-    Beachte, dass mehrere Staatsangehörigkeiten auch von kurzen einseitigen visumfreien
-    Einreiseregelungen für Tourismus profitieren, die sich regelmäßig ändern. Das ist ein weiterer
-    Grund, die aktuellen Regeln vor der Buchung zu prüfen.
+    Beachte, dass mehrere Staatsangehörigkeiten auch von kurzen einseitigen Regelungen zur
+    visumfreien Einreise für touristische Zwecke profitieren, die sich regelmäßig ändern — ein
+    weiterer Grund, die aktuellen Regeln zu prüfen, bevor du buchst.
   </p>
 
-  <h2 id="next">Weiter: Geld in China handhaben</h2>
+  <h2 id="next">Als Nächstes: Umgang mit Geld in China</h2>
   <p>
-    Sobald deine Visa-Route klar ist, prägt als Nächstes Geld den Alltag, denn in China läuft fast
-    alles über mobiles Bezahlen. Lies
-    <a href="/de/digital-nomads/payment/">wie du als Ausländer in China bezahlst</a>, um Alipay und
+    Sobald dein Visumsweg klar ist, ist das Nächste, was den Alltag prägt, Geld — denn in China
+    läuft fast alles über mobile Bezahlung. Lies
+    <a href="/digital-nomads/payment/">wie man in China als Ausländer bezahlt</a>, um Alipay und
     WeChat Pay einzurichten, Karten- und Bargeldgrenzen zu verstehen und Miete sowie
-    grenzüberschreitende Gelder zu handhaben.
+    grenzüberschreitende Geldmittel zu handhaben.
   </p>
 </GuideLayout>
-

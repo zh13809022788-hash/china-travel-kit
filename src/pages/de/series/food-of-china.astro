@@ -1,41 +1,46 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'food-of-china';
-const posts = (await getCollection('posts-de'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Essen in China — Eine kulinarische Reise für Ausländer';
-const description = 'Erkunde die chinesische Esskultur als ausländischer Reisender: acht große Küchen, regionaler Hotpot, Streetfood-Sicherheit, Dim Sum, Frühstück, vegetarische Optionen und Gerichte, für die sich ein Stadtausflug lohnt.';
+const title = 'Essen in China — Die kulinarische Reise eines Ausländers';
+const description = 'Entdecke die chinesische Esskultur als ausländischer Reisender: acht große Küchen, regionaler Hot Pot, Streetfood-Sicherheit, Dim Sum, Frühstück, vegetarische Optionen und die Gerichte, für die es sich lohnt, eine ganze Stadt zu durchqueren.';
 
 const relatedTools = [
-  { href: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Essen ohne Chinesisch bestellen', desc: 'Meituan- & Ele.me-Einrichtung für Ausländer' },
-  { href: '/de/posts/how-to-pay-in-china-tourist-guide/', title: 'In China bezahlen', desc: 'Alipay, WeChat Pay und Bargeld für Restaurantbesuche' },
-  { href: '/de/food/', title: 'Essen- und Restaurant-Leitfäden', desc: 'Alle essensbezogenen Artikel auf ChinaTripBox' },
+  { href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Essen bestellen ohne Chinesisch', desc: 'Meituan- & Ele.me-Einrichtung für Ausländer' },
+  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Wie man in China bezahlt', desc: 'Alipay, WeChat Pay und Bargeld fürs Essen' },
+  { href: '/food/', title: 'Essens- & Dining-Guides', desc: 'Alle foodbezogenen Artikel auf ChinaTripBox' },
 ];
 
 const relatedCities = [
-  { href: '/de/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Hauptstadt der Sichuan-Küche' },
-  { href: '/de/posts/beijing-city-guide-for-foreigners/', title: 'Peking', desc: 'Pekingente und nordchinesische Küche' },
-  { href: '/de/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Suppenknödel und Fusion-Küche' },
+  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Hauptstadt der Sichuan-Küche' },
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Peking-Ente und nordchinesische Küche' },
+  { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Suppenklöße und Fusion' },
 ];
 
 const otherSeries = [
-  { href: '/de/series/history-of-china/', title: 'Geschichte Chinas' },
-  { href: '/de/series/culture-of-china/', title: 'Kultur Chinas' },
-  { href: '/de/series/modern-china/', title: 'Modernes China' },
+  { href: '/series/history-of-china/', title: 'Geschichte Chinas' },
+  { href: '/series/culture-of-china/', title: 'Kultur Chinas' },
+  { href: '/series/modern-china/', title: 'Das moderne China' },
 ];
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
-      <p class="section-kicker">Content-Reihe</p>
+      <p class="section-kicker">Inhaltsreihe</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
@@ -47,21 +52,21 @@ const otherSeries = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">Artikel</p>
-            <h2>Reihe über das Essen Chinas</h2>
+            <h2>Reihe „Essen in China“</h2>
           </div>
         </div>
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
               </a>
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Artikel in dieser Reihe werden vorbereitet. Schauen Sie bald wieder vorbei.</p>
+          <p class="mt-6 text-gray-500">Die Artikel dieser Reihe werden gerade vorbereitet. Schau bald wieder vorbei.</p>
         )}
       </div>
 
@@ -80,8 +85,8 @@ const otherSeries = [
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Kulinarische Stadtleitfäden</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Wo man essen kann</h2>
+          <p class="section-kicker">Kulinarische Stadtführer</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Wo man essen sollte</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">

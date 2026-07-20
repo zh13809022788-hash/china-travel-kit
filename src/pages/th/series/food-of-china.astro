@@ -1,0 +1,110 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+
+const seriesSlug = 'food-of-china';
+const posts = (await getCollection('posts-zh-tw'))
+  .filter((p) => p.data.series === seriesSlug)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const title = '中國美食：外國人的味覺之旅';
+const description = '從外國旅客的視角探索中國飲食文化：八大菜系、各地火鍋、街頭小吃安全、點心、早餐、素食選擇，以及值得為它橫跨整座城市的美味。';
+
+const relatedTools = [
+  { href: '/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: '不懂中文也能點餐', desc: '外國人使用 Meituan 與 Ele.me 的設定指南' },
+  { href: '/zh-tw/posts/how-to-pay-in-china-tourist-guide/', title: '在中國如何付款', desc: '用餐時使用 Alipay、WeChat Pay 與現金' },
+  { href: '/zh-tw/food/', title: '美食與用餐指南', desc: 'ChinaTripBox 上所有與美食相關的文章' },
+];
+
+const relatedCities = [
+  { href: '/zh-tw/posts/chengdu-city-guide-for-foreigners/', title: '成都', desc: '四川美食之都' },
+  { href: '/zh-tw/posts/beijing-city-guide-for-foreigners/', title: '北京', desc: '北京烤鴨與北方料理' },
+  { href: '/zh-tw/posts/shanghai-city-guide-for-foreigners/', title: '上海', desc: '小籠包與融合風味' },
+];
+
+const otherSeries = [
+  { href: '/zh-tw/series/history-of-china/', title: '中國歷史' },
+  { href: '/zh-tw/series/culture-of-china/', title: '中國文化' },
+  { href: '/zh-tw/series/modern-china/', title: '現代中國' },
+];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'zh-tw';
+---
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
+  <Header locale="zh-TW" />
+  <main class="container-page py-10">
+    <header class="max-w-3xl">
+      <p class="section-kicker">內容系列</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
+      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+    </header>
+
+    <AdSlot format="banner" />
+
+    <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">文章</p>
+            <h2>中國美食系列</h2>
+          </div>
+        </div>
+        {posts.length > 0 ? (
+          <div class="mt-6 grid gap-5 md:grid-cols-2">
+            {posts.map((post) => (
+              <a href={`/zh-tw/posts/${post.slug}/`} class="card block hover:no-underline">
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
+                <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
+                <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <p class="mt-6 text-gray-500">本系列文章正在準備中，敬請稍後再回來查看。</p>
+        )}
+      </div>
+
+      <aside class="space-y-6">
+        <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <p class="section-kicker">實用工具</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">在中國吃得更好</h2>
+          <div class="mt-4 grid gap-3">
+            {relatedTools.map((item) => (
+              <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+                <h3 class="text-sm font-semibold text-gray-950">{item.title}</h3>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{item.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <p class="section-kicker">城市美食指南</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">去哪裡吃</h2>
+          <div class="mt-4 grid gap-3">
+            {relatedCities.map((item) => (
+              <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+                <h3 class="text-sm font-semibold text-gray-950">{item.title}</h3>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{item.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <p class="section-kicker">更多系列</p>
+          <div class="mt-3 grid gap-2">
+            {otherSeries.map((s) => (
+              <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

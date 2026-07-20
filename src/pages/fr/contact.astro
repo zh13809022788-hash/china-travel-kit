@@ -3,22 +3,25 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = 'Contact';
+const title = 'Contactez-nous';
 const description =
-  'Contactez l’équipe ChinaTripBox pour poser une question, signaler une erreur ou évoquer un partenariat.';
+  "Contactez l'équipe de ChinaTripBox pour toute question, correction ou demande de partenariat.";
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">Contact</h1>
+      <h1 class="text-3xl font-bold text-gray-900">Contactez-nous</h1>
       <p class="mt-4">
-        Vous avez repéré une erreur dans un guide, une information à mettre à jour ou une question
-        pratique sur un voyage en Chine ? Utilisez les coordonnées ci-dessous.
+        Nous serions ravis d'avoir de vos nouvelles. Que vous ayez trouvé une erreur dans un guide,
+        que vous ayez une question sur un voyage en China, ou que vous souhaitiez discuter d'un
+        partenariat, utilisez les coordonnées ci-dessous.
       </p>
 
-      <h2>E-mail</h2>
+      <h2>Email</h2>
       <p>
         Questions générales et corrections :
         <a href="mailto:zh13809022788@gmail.com">zh13809022788@gmail.com</a>
@@ -30,30 +33,32 @@ const description =
 
       <h2>Délai de réponse</h2>
       <p>
-        Nous essayons de répondre à tous les messages sous 3 à 5 jours ouvrés. Si votre départ est
-        proche, consultez d’abord nos guides : la réponse s’y trouve peut-être déjà.
+        Nous nous efforçons de répondre à tous les messages sous 3 à 5 jours ouvrés. Pour les
+        questions de voyage urgentes, veuillez d'abord consulter nos guides. La réponse s'y trouve
+        peut-être déjà.
       </p>
 
       <h2>Corrections</h2>
       <p>
-        Les applications, les prix et les règles en Chine changent souvent. Si une information ne
-        correspond plus à votre expérience, signalez-le-nous : nous la vérifierons et mettrons le
-        guide à jour si nécessaire.
+        Les applications, les prix et la réglementation en China changent fréquemment. Si vous
+        remarquez quelque chose qui ne correspond plus à votre expérience, faites-le-nous savoir et
+        nous vérifierons puis mettrons le guide à jour.
       </p>
 
-      <h2>Informations utiles à inclure</h2>
+      <h2>Éléments à inclure</h2>
       <p>
-        Si vous signalez un problème, indiquez l’URL de la page, la ville ou le service concerné,
-        ainsi que la date à laquelle vous avez constaté le changement. Cela nous aide à vérifier
-        l’information plus vite.
+        Si vous signalez un problème, veuillez inclure l'URL de la page, la ville ou le service
+        concerné, ainsi que la date à laquelle vous avez remarqué le problème. Cela nous aide à
+        vérifier rapidement l'information.
       </p>
 
-      <h2>Remarque importante</h2>
+      <h2>Note importante</h2>
       <p>
-        ChinaTripBox fournit uniquement des informations générales de voyage. Nous ne pouvons pas
-        fournir de conseil juridique, migratoire, bancaire, médical ou d’urgence. Pour toute
-        exigence officielle, vérifiez toujours auprès de l’administration, de la compagnie
-        aérienne, de la banque, de l’opérateur télécom ou du service concerné.
+        ChinaTripBox fournit uniquement des informations générales sur les voyages. Nous ne pouvons
+        pas fournir de conseils juridiques, en matière d'immigration, bancaires, médicaux ou
+        d'urgence. Pour les exigences officielles, confirmez toujours auprès de l'administration
+        compétente, de la compagnie aérienne, de la banque, de l'opérateur télécom ou du
+        prestataire de service concerné.
       </p>
     </article>
   </main>

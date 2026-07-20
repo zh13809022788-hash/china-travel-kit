@@ -1,44 +1,53 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
 
-const title = 'Comparateur de forfaits eSIM pour la Chine';
+const title = 'Comparateur de forfaits eSIM pour voyager en Chine';
 const description =
-  'Comparez les principaux forfaits eSIM pour la Chine selon le volume de data, la durée de validité, le prix et le réseau.';
+  'Comparez les meilleurs forfaits eSIM pour voyager en Chine selon les données, la durée de validité, le prix et le réseau. Filtrez et triez pour trouver le meilleur forfait pour votre voyage.';
 
+// 8 preset China travel eSIM products (representative sample data)
 const plans = [
-  { id: 1, name: 'China Explorer 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: 'Contourne les restrictions locales sur certaines applis' },
-  { id: 2, name: 'China Explorer 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: 'Contourne les restrictions locales sur certaines applis' },
+  { id: 1, name: 'China Explorer 5GB', data: 5, dataLabel: '5 GB', days: 7, price: 9.5, network: 'China Unicom', note: 'Contourne les restrictions des applications locales' },
+  { id: 2, name: 'China Explorer 10GB', data: 10, dataLabel: '10 GB', days: 15, price: 16, network: 'China Unicom', note: 'Contourne les restrictions des applications locales' },
   { id: 3, name: 'Mainland Lite 3GB', data: 3, dataLabel: '3 GB', days: 7, price: 6.5, network: 'China Mobile', note: 'Réseau local, sans routage VPN' },
-  { id: 4, name: 'Greater China 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Couvre la Chine continentale, Hong Kong, Macao et Taïwan' },
-  { id: 5, name: 'Unlimited Daily', data: 9999, dataLabel: 'Illimité*', days: 10, price: 29, network: 'China Unicom', note: 'Ralentissement après 2 GB/jour' },
-  { id: 6, name: 'Business 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Contourne les restrictions locales sur certaines applis' },
-  { id: 7, name: 'Short Trip 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Idéal pour une escale courte' },
-  { id: 8, name: 'Family 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Partageable en point d’accès' },
+  { id: 4, name: 'Greater China 8GB', data: 8, dataLabel: '8 GB', days: 30, price: 18.9, network: 'China Unicom', note: 'Couvre CN, HK, MO, TW' },
+  { id: 5, name: 'Unlimited Daily', data: 9999, dataLabel: 'Unlimited*', days: 10, price: 29, network: 'China Unicom', note: 'Limite d’usage raisonnable après 2GB/jour' },
+  { id: 6, name: 'Business 20GB', data: 20, dataLabel: '20 GB', days: 30, price: 32, network: 'China Unicom', note: 'Contourne les restrictions des applications locales' },
+  { id: 7, name: 'Short Trip 1GB', data: 1, dataLabel: '1 GB', days: 3, price: 3.2, network: 'China Mobile', note: 'Idéal pour les escales rapides' },
+  { id: 8, name: 'Family 30GB', data: 30, dataLabel: '30 GB', days: 30, price: 45, network: 'China Unicom', note: 'Partageable via point d’accès' },
 ];
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Outil</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Comparateur eSIM</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Comparateur de forfaits eSIM</h1>
+<p class="mt-4 max-w-3xl text-lg leading-8 text-gray-600">
+  Une eSIM est le moyen le plus pratique de rester connecté lors d’un voyage en Chine. Contrairement aux cartes SIM physiques, les eSIM sont numériques — vous achetez un forfait en ligne et l’activez instantanément sans avoir à vous rendre dans un magasin ni à remplacer votre carte SIM habituelle. La plupart des eSIM pour la Chine fonctionnent soit sur le réseau China Unicom, soit sur le réseau China Mobile, qui offrent tous deux une excellente couverture 4G et 5G dans les villes et dans la plupart des zones rurales. Lorsque vous choisissez un forfait, tenez compte de la durée de votre voyage, de vos besoins en données et du fait de savoir si vous avez besoin d’un numéro de téléphone chinois pour des applications comme DiDi et Meituan. Pour les courts voyages (1 à 7 jours), un petit forfait de 1 à 3 GB suffit pour les cartes et la messagerie. Pour les séjours plus longs ou une utilisation intensive, envisagez des forfaits illimités ou de 10 GB et plus qui prennent en charge le partage de connexion.
+</p>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
+
     <AdSlot format="banner" />
+
+    <!-- Controls -->
     <div class="mt-6 flex flex-wrap items-end gap-4 rounded-xl border border-gray-200 bg-gray-50 p-4">
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Trier par</span>
         <select id="sort-by" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          <option value="price-asc">Prix croissant</option>
-          <option value="price-desc">Prix décroissant</option>
-          <option value="data-desc">Data décroissante</option>
-          <option value="days-desc">Validité la plus longue d’abord</option>
+          <option value="price-asc">Prix : du plus bas au plus élevé</option>
+          <option value="price-desc">Prix : du plus élevé au plus bas</option>
+          <option value="data-desc">Données : du plus élevé au plus bas</option>
+          <option value="days-desc">Validité : de la plus longue à la plus courte</option>
         </select>
       </label>
       <label class="flex flex-col text-sm">
@@ -50,7 +59,7 @@ const plans = [
         </select>
       </label>
       <label class="flex flex-col text-sm">
-        <span class="mb-1 font-medium text-gray-700">Data min. (GB)</span>
+        <span class="mb-1 font-medium text-gray-700">Données min. (GB)</span>
         <select id="filter-data" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           <option value="0">Peu importe</option>
           <option value="5">5+ GB</option>
@@ -59,12 +68,14 @@ const plans = [
         </select>
       </label>
     </div>
+
+    <!-- Comparison table -->
     <div class="mt-6 overflow-x-auto">
       <table class="w-full min-w-[720px] border-collapse text-sm">
         <thead>
           <tr class="border-b-2 border-gray-200 text-left text-gray-500">
             <th class="py-3 pr-4 font-semibold">Forfait</th>
-            <th class="py-3 pr-4 font-semibold">Data</th>
+            <th class="py-3 pr-4 font-semibold">Données</th>
             <th class="py-3 pr-4 font-semibold">Validité</th>
             <th class="py-3 pr-4 font-semibold">Prix (USD)</th>
             <th class="py-3 pr-4 font-semibold">Réseau</th>
@@ -75,10 +86,11 @@ const plans = [
       </table>
       <p id="no-results" class="hidden py-8 text-center text-gray-500">Aucun forfait ne correspond à vos filtres.</p>
     </div>
+
     <AffiliateCta
       title="Prêt à vous connecter ?"
-      description="Activez une eSIM adaptée à votre voyage et soyez en ligne dès l’atterrissage."
-      buttonText="Voir les eSIM"
+      description="Activez une eSIM recommandée pour la Chine et soyez en ligne dès votre atterrissage."
+      buttonText="Obtenez votre eSIM"
       placeholder={AFFILIATE_LINKS.esim}
     />
   </main>
@@ -96,15 +108,20 @@ const plans = [
     let list = [...plans];
     const net = filterNetwork.value;
     const minData = Number(filterData.value);
+
     if (net !== 'all') list = list.filter((p) => p.network === net);
     if (minData > 0) list = list.filter((p) => p.data >= minData);
+
     switch (sortBy.value) {
       case 'price-asc': list.sort((a, b) => a.price - b.price); break;
       case 'price-desc': list.sort((a, b) => b.price - a.price); break;
       case 'data-desc': list.sort((a, b) => b.data - a.data); break;
       case 'days-desc': list.sort((a, b) => b.days - a.days); break;
     }
-    rowsEl.innerHTML = list.map((p) => `
+
+    rowsEl.innerHTML = list
+      .map(
+        (p) => `
       <tr class="border-b border-gray-100">
         <td class="py-3 pr-4 font-semibold text-gray-900">${p.name}</td>
         <td class="py-3 pr-4">${p.dataLabel}</td>
@@ -112,7 +129,10 @@ const plans = [
         <td class="py-3 pr-4 font-semibold">$${p.price.toFixed(2)}</td>
         <td class="py-3 pr-4">${p.network}</td>
         <td class="py-3 pr-4 text-gray-500">${p.note}</td>
-      </tr>`).join('');
+      </tr>`
+      )
+      .join('');
+
     noResults.classList.toggle('hidden', list.length > 0);
   }
 

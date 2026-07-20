@@ -1,41 +1,41 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import { TOOLS as tools } from '../../../config';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import { TOOLS as tools } from "../../../config";
 
-const title = 'Kostenlose Tools für China-Reisen: Visum, Bezahlung, eSIM, Budget und mehr';
+const title = 'Kostenlose China-Reisetools: Visum, Zahlung, eSIM, Budget, Fahrerkarten und Redewendungen';
 const description =
-  'Kostenlose interaktive Tools für die Reiseplanung in China: visumfreie Einreise prüfen, Karten-Kompatibilität einschätzen, eSIMs vergleichen, Budget kalkulieren, Netzstecker checken und Adresskarten oder wichtige Sätze vorbereiten.';
+  'Kostenlose interaktive Tools fur die Reiseplanung nach China: visumfreie Einreise prufen, Kompatibilitat von Zahlungskarten, eSIM-Optionen, Reisebudget, Bargeld als Reserve, Steckdosen, chinesische Redewendungen und Adresskarten fur Taxifahrer.';
 
 const toolUseCases = [
   {
-    title: 'Vor der Buchung',
-    text: 'Prüfe zuerst Einreise, Reisezeit und grobes Budget, bevor du Reisedaten festlegst oder Städte kombinierst.',
+    title: 'Vor der Flugbuchung',
+    text: 'Nutze den Checker fur visumfreie Einreise, den Planer fur die beste Reisezeit und den Budget-Rechner, bevor du Termine und Stadte festlegst.',
     links: [
-      { href: '/de/tools/visa-free-checker/', label: 'Visumfrei-Prüfung' },
-      { href: '/de/tools/best-time-to-visit/', label: 'Beste Reisezeit' },
-      { href: '/de/tools/budget-cash-estimator/', label: 'Budgetrechner' },
+      { href: '/tools/visa-free-checker/', label: 'Checker fur visumfreie Einreise' },
+      { href: '/tools/best-time-to-visit/', label: 'Beste Reisezeit' },
+      { href: '/tools/budget-cash-estimator/', label: 'Budget-Rechner' },
     ],
   },
   {
-    title: 'Vor dem Abflug',
-    text: 'Nutze die Tools zu Bezahlung, eSIM, App-Zugang, Steckern und Redewendungen, solange du zu Hause noch alles in Ruhe einrichten kannst.',
+    title: 'Vor der Abreise',
+    text: 'Nutze die Tools fur Zahlung, eSIM, Apps, Stecker und Redewendungen, solange du noch Zeit hast, Einrichtungsprobleme zu Hause zu beheben.',
     links: [
-      { href: '/de/tools/payment-checker/', label: 'Zahlungsprüfung' },
-      { href: '/de/tools/esim-comparison/', label: 'eSIM-Vergleich' },
-      { href: '/de/tools/app-availability-checker/', label: 'App-Prüfung' },
+      { href: '/tools/payment-checker/', label: 'Zahlungs-Checker' },
+      { href: '/tools/esim-comparison/', label: 'eSIM-Vergleich' },
+      { href: '/tools/app-availability-checker/', label: 'App-Checker' },
     ],
   },
   {
     title: 'Vor Ort in China',
-    text: 'Wenn etwas hakt, helfen Fahrerkarten, Währungsumrechnung, Überlebenskit und wichtige Sätze bei Taxi, Hotel, Restaurant oder Bahnhof weiter.',
+    text: 'Nutze Fahrerkarten, Wahrungsumrechnung und wichtige Redewendungen, wenn Apps, Taxis, Speisekarten oder Hotelrezeptionen verwirrend werden.',
     links: [
-      { href: '/de/tools/survival-kit/', label: 'Überlebenskit' },
-      { href: '/de/tools/show-to-driver/', label: 'Dem Fahrer zeigen' },
-      { href: '/de/tools/currency-converter/', label: 'RMB-Umrechner' },
-      { href: '/de/tools/essential-phrases/', label: 'Wichtige Sätze' },
+      { href: '/tools/survival-kit/', label: 'Survival kit' },
+      { href: '/tools/show-to-driver/', label: 'Show to Driver' },
+      { href: '/tools/currency-converter/', label: 'RMB-Umrechner' },
+      { href: '/tools/essential-phrases/', label: 'Wichtige Redewendungen' },
     ],
   },
 ];
@@ -54,18 +54,20 @@ const toolsJsonLd = {
   })),
 };
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(toolsJsonLd)} />
-  <Header locale="de" />
+  <Header />
   <main class="container-page py-12">
-    <header class="max-w-2xl">
-      <p class="section-kicker">Tool-Hub</p>
+    <header>
+      <p class="section-kicker">Tool-Center</p>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Kostenlose China-Reisetools</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <div class="mt-5 flex flex-wrap gap-3">
-        <a href="/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Zur Checkliste vor der Reise</a>
-        <a href="/de/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Planer für Erstbesucher lesen</a>
+        <a href="/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="btn-primary">Checkliste vor der Reise nutzen</a>
+        <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">Planer fur Erstbesucher lesen</a>
       </div>
     </header>
 
@@ -73,18 +75,18 @@ const toolsJsonLd = {
 
     <section class="mt-8 grid gap-5 lg:grid-cols-3" aria-labelledby="tool-use-cases-heading">
       <div class="lg:col-span-3">
-        <h2 id="tool-use-cases-heading" class="text-2xl font-bold text-gray-950">Welches Tool ist der beste Einstieg?</h2>
+        <h2 id="tool-use-cases-heading" class="text-2xl font-bold text-gray-950">Welches Tool solltest du zuerst nutzen?</h2>
       </div>
       {toolUseCases.map((useCase) => (
-        <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+        <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <h3 class="text-lg font-bold text-gray-950">{useCase.title}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-600">{useCase.text}</p>
           <div class="mt-4 flex flex-wrap gap-2">
             {useCase.links.map((link) => (
-              <a href={link.href} class="rounded-full border border-gray-200 px-3 py-1.5 text-xs font-semibold text-brand-700 hover:border-brand-300 hover:bg-brand-50 hover:no-underline">{link.label}</a>
+              <a href={link.href} class="block rounded-lg border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700 hover:border-brand-300 hover:bg-brand-100 hover:no-underline">{link.label}</a>
             ))}
           </div>
-        </article>
+        </div>
       ))}
     </section>
 
@@ -94,7 +96,7 @@ const toolsJsonLd = {
           <div class="text-3xl">{tool.icon}</div>
           <h2 class="mt-3 text-lg font-bold text-gray-900">{tool.title}</h2>
           <p class="mt-1.5 text-sm text-gray-600">{tool.desc}</p>
-          <span class="mt-3 inline-block text-sm font-semibold text-brand-600">Jetzt öffnen →</span>
+          <span class="mt-3 inline-block text-sm font-semibold text-brand-600">Tool offnen →</span>
         </a>
       ))}
     </section>

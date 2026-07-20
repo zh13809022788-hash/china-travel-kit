@@ -6,18 +6,20 @@ import AdSlot from '../../../components/AdSlot.astro';
 
 const title = 'Dem Fahrer zeigen: Chinesische Adresskarte';
 const description =
-  'Erstelle auf deinem Smartphone eine große chinesische Hinweiskarte für Taxifahrer, Hotelpersonal und Wegfragen in China. Kein Login, keine App-Installation, keine Speicherung persönlicher Daten.';
+  'Erstelle auf deinem Handy eine große chinesische Nachrichtenkarte für Taxifahrer, Hotelpersonal und zum Fragen nach dem Weg in China. Kein Login, keine App-Installation, keine Speicherung persönlicher Daten.';
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-8 md:py-10">
     <header class="max-w-3xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Dem Fahrer zeigen</h1>
       <p class="mt-3 text-lg text-gray-600">
-        Erstelle eine große chinesische Karte für Taxis, Fahrdienst-Abholungen, Hotelrezeptionen und
-        Wegfragen. Alles läuft in deinem Browser.
+        Erstelle eine große chinesische Karte für Taxis, Ride-Hailing-Abholungen, Hotelrezeptionen und
+        um nach dem Weg zu fragen. Alles läuft in deinem Browser.
       </p>
     </header>
 
@@ -35,24 +37,24 @@ const description =
               placeholder="Füge die chinesische Adresse aus Amap, Trip.com, deiner Hotelbuchung oder von einem Freund ein."
             ></textarea>
             <span class="mt-1 text-xs text-gray-500">
-              Bestes Ergebnis: Füge den chinesischen Namen bzw. die chinesische Adresse ein. Ortsnamen nur auf Englisch
-              können für lokale Fahrer schwer zu erkennen sein.
+              Bestes Ergebnis: Füge den chinesischen Namen bzw. die Adresse ein. Ortsnamen nur auf Englisch
+              können für einen Fahrer vor Ort schwer zu erkennen sein.
             </span>
           </label>
 
           <label class="flex flex-col text-sm">
             <span class="mb-1 font-medium text-gray-700">Optionale Notiz</span>
             <select id="note" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-              <option value="route">Bitte folge der Navigation und bringe mich zu dieser Adresse.</option>
-              <option value="pickup">Ich warte hier. Bitte rufe mich an oder schreibe mir in der App.</option>
-              <option value="hotel">Bitte hilf mir, zu diesem Hotel zu kommen, oder kontaktiere die Rezeption.</option>
-              <option value="stop">Bitte halte hier, wenn es sicher und erlaubt ist.</option>
-              <option value="receipt">Bitte gib mir nach Möglichkeit eine Quittung.</option>
+              <option value="route">Bitte folgen Sie der Navigation und bringen Sie mich zu dieser Adresse.</option>
+              <option value="pickup">Ich warte hier. Bitte rufen Sie mich an oder schreiben Sie mir in der App.</option>
+              <option value="hotel">Bitte helfen Sie mir, zu diesem Hotel zu kommen, oder kontaktieren Sie die Rezeption.</option>
+              <option value="stop">Bitte halten Sie hier an, wenn es sicher und erlaubt ist.</option>
+              <option value="receipt">Bitte geben Sie mir nach Möglichkeit eine Quittung.</option>
             </select>
           </label>
 
           <label class="flex flex-col text-sm">
-            <span class="mb-1 font-medium text-gray-700">Zusätzliche Angaben für den Fahrer</span>
+            <span class="mb-1 font-medium text-gray-700">Zusätzliche Details für den Fahrer</span>
             <input
               id="extra"
               class="rounded-lg border border-gray-300 px-3 py-2 text-base"
@@ -72,8 +74,8 @@ const description =
         </div>
 
         <div class="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-          Dieses Tool bucht keine Fahrten und kontaktiert keine Fahrer. Wende dich in Notfällen zuerst
-          an lokale Rettungsdienste oder dein Hotel.
+          Dieses Tool bucht keine Fahrten und kontaktiert keine Fahrer. Wende dich in Notfällen zuerst an
+          die örtlichen Notdienste oder dein Hotel.
         </div>
       </div>
 
@@ -112,7 +114,7 @@ const description =
             <button id="fullscreen-btn" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:border-brand-400">
               Vollbild
             </button>
-            <a href="/de/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
+            <a href="/travel-help/" class="rounded-lg border border-brand-200 px-4 py-2 text-center text-sm font-semibold text-brand-700 hover:border-brand-400">
               KI-Hilfe fragen
             </a>
           </div>
@@ -129,7 +131,7 @@ const description =
             Sicher anhalten
           </button>
           <button data-quick="如果找不到我，请在打车软件里发消息。" class="quick rounded-lg border border-gray-300 px-4 py-3 text-left text-sm font-medium text-gray-700 hover:border-brand-400">
-            Mir in der App schreiben
+            Schreib mir in der App
           </button>
         </div>
       </section>

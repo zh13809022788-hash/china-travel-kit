@@ -13,7 +13,7 @@ const posts = (await getCollection('posts-zh-tw'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const title = '中國 eSIM 與網路使用指南：落地立即連線';
-const description = '比較並設定最適合中國旅遊的 eSIM 數據方案。一下飛機就能上網，無需更換實體 SIM 卡。';
+const description = '比較並設定最適合中國旅遊的 eSIM 數據方案。一下飛機就能上網，無需更換實體 SIM 卡。';
 
 const connectionChoices = [
   {
@@ -42,7 +42,7 @@ const locale = 'zh-tw';
 <BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
   <Header locale="zh-TW" />
   <main class="container-page py-10">
-    <header class="max-w-2xl">
+    <header>
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">eSIM 網路連線</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">eSIM 與行動數據上網指南</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>

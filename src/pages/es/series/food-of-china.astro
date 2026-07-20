@@ -1,210 +1,112 @@
 ---
-
 import { getCollection } from 'astro:content';
-
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-
-import Header from '../../../components/Header.astro';
-
-import Footer from '../../../components/Footer.astro';
-
-import AdSlot from '../../../components/AdSlot.astro';
-
-
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'food-of-china';
-
-const posts = (await getCollection('posts-es'))
-
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
-
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-
-
-const title = 'La comida de China — Un viaje culinario para extranjeros';
-
-const description = 'Explora la cultura alimentaria china como viajero extranjero: las ocho grandes cocinas, el hot pot regional, la seguridad de la comida callejera, el dim sum, el desayuno, las opciones vegetarianas y los platos por los que merece cruzar la ciudad.';
-
-
+const title = 'La comida de China — El viaje culinario de un extranjero';
+const description = 'Explora la cultura gastronómica china como viajero extranjero: las ocho grandes cocinas, el hot pot regional, la seguridad de la comida callejera, dim sum, desayunos, opciones vegetarianas y los platos por los que vale la pena cruzar una ciudad.';
 
 const relatedTools = [
-
-  { href: '/es/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Pedir comida sin saber chino', desc: 'Configuración de Meituan y Ele.me para extranjeros' },
-
-  { href: '/es/posts/how-to-pay-in-china-tourist-guide/', title: 'Cómo pagar en China', desc: 'Alipay, WeChat Pay y efectivo para comer' },
-
-  { href: '/es/food/', title: 'Guías de comida y restaurantes', desc: 'Todos los artículos sobre comida en ChinaTripBox' },
-
+  { href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/', title: 'Pedir comida sin saber chino', desc: 'Configuración de Meituan y Ele.me para extranjeros' },
+  { href: '/posts/how-to-pay-in-china-tourist-guide/', title: 'Cómo pagar en China', desc: 'Alipay, WeChat Pay y efectivo para comer' },
+  { href: '/food/', title: 'Guías de comida y gastronomía', desc: 'Todos los artículos relacionados con comida en ChinaTripBox' },
 ];
-
-
 
 const relatedCities = [
-
-  { href: '/es/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Capital de la cocina de Sichuan' },
-  { href: '/es/posts/beijing-city-guide-for-foreigners/', title: 'Pekín', desc: 'Pato laqueado y cocina del norte' },
-  { href: '/es/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghái', desc: 'Xiaolongbao y cocina de fusión' },
+  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Capital gastronómica de Sichuan' },
+  { href: '/posts/beijing-city-guide-for-foreigners/', title: 'Beijing', desc: 'Pato pekinés y cocina del norte' },
+  { href: '/posts/shanghai-city-guide-for-foreigners/', title: 'Shanghai', desc: 'Xiaolongbao y cocina fusión' },
 ];
-
-
 
 const otherSeries = [
-
-  { href: '/es/series/history-of-china/', title: 'Historia de China' },
-
-  { href: '/es/series/culture-of-china/', title: 'Cultura de China' },
-
-  { href: '/es/series/modern-china/', title: 'China moderna' },
-
+  { href: '/series/history-of-china/', title: 'Historia de China' },
+  { href: '/series/culture-of-china/', title: 'Cultura de China' },
+  { href: '/series/modern-china/', title: 'China moderna' },
 ];
-
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
 
-  <Header locale="es" />
-
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-
     <header class="max-w-3xl">
-
       <p class="section-kicker">Serie de contenido</p>
-
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
-
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
-
     </header>
-
-
 
     <AdSlot format="banner" />
 
-
-
     <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
-
       <div>
-
         <div class="section-heading">
-
           <div>
-
             <p class="section-kicker">Artículos</p>
-
-            <h2>Serie sobre la comida de China</h2>
-
+            <h2>Serie La comida de China</h2>
           </div>
-
         </div>
-
         {posts.length > 0 ? (
-
           <div class="mt-6 grid gap-5 md:grid-cols-2">
-
             {posts.map((post) => (
-
-              <a href={`/es/posts/${post.slug}/`} class="card block hover:no-underline">
-
-                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
-
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+                <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
-
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
-
               </a>
-
             ))}
-
           </div>
-
         ) : (
-
-          <p class="mt-6 text-gray-500">Los artículos de esta serie se están preparando. Vuelve pronto.</p>
-
+          <p class="mt-6 text-gray-500">Los artículos de esta serie están en preparación. Vuelve pronto.</p>
         )}
-
       </div>
 
-
-
       <aside class="space-y-6">
-
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-
           <p class="section-kicker">Herramientas prácticas</p>
-
           <h2 class="mt-1 text-xl font-bold text-gray-950">Come bien en China</h2>
-
           <div class="mt-4 grid gap-3">
-
             {relatedTools.map((item) => (
-
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-
                 <h3 class="text-sm font-semibold text-gray-950">{item.title}</h3>
-
                 <p class="mt-1 text-sm leading-6 text-gray-600">{item.desc}</p>
-
               </a>
-
             ))}
-
           </div>
-
         </div>
 
-
-
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-
-          <p class="section-kicker">Guías gastronómicas de ciudades</p>
-
+          <p class="section-kicker">Guías gastronómicas por ciudad</p>
           <h2 class="mt-1 text-xl font-bold text-gray-950">Dónde comer</h2>
-
           <div class="mt-4 grid gap-3">
-
             {relatedCities.map((item) => (
-
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-
                 <h3 class="text-sm font-semibold text-gray-950">{item.title}</h3>
-
                 <p class="mt-1 text-sm leading-6 text-gray-600">{item.desc}</p>
-
               </a>
-
             ))}
-
           </div>
-
         </div>
-
-
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-
           <p class="section-kicker">Más series</p>
-
           <div class="mt-3 grid gap-2">
-
             {otherSeries.map((s) => (
-
               <a href={s.href} class="text-sm font-semibold text-brand-700 hover:underline">{s.title}</a>
-
             ))}
-
           </div>
-
         </div>
-
       </aside>
-
     </section>
-
   </main>
-
   <Footer />
-
 </BaseLayout>

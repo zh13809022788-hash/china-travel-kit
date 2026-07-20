@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
 
-const title = 'Funktionieren meine Apps in China? App-Verfügbarkeitsprüfer';
+const title = 'Werden meine Apps in China funktionieren? App-Verfugbarkeitsprufer';
 const description =
-  'Prüfen Sie, ob Google, WhatsApp, Instagram und andere Apps in China ohne VPN funktionieren — und sehen Sie die lokale Alternative für jeden gesperrten Dienst.';
+  'Prufe, ob Google, WhatsApp, Instagram und andere Apps in China ohne VPN funktionieren - und sieh dir fur jeden blockierten Dienst die lokale Alternative an.';
 
 interface AppInfo {
   name: string;
@@ -19,33 +19,36 @@ interface AppInfo {
 }
 
 const apps: AppInfo[] = [
-  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Bing (funktioniert) oder Baidu' },
-  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Lädt, aber Daten sind im chinesischen Festland ungenau/verschoben.', alt: 'Apple Maps, Amap oder Baidu Maps' },
-  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Outlook / eine Nicht-Google-E-Mail' },
-  { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Bilibili (lokal)' },
-  { name: 'WhatsApp', category: 'Nachrichten', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat' },
-  { name: 'Facebook', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat Moments / RED' },
-  { name: 'Instagram', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'RED (Xiaohongshu)' },
-  { name: 'X (Twitter)', category: 'Soziales', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'Weibo' },
-  { name: 'Telegram', category: 'Nachrichten', status: 'blocked', note: 'Ohne VPN gesperrt.', alt: 'WeChat' },
-  { name: 'WeChat', category: 'Nachrichten', status: 'works', note: 'Funktioniert vollständig — der Standard in China.' },
-  { name: 'Apple-Dienste (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Funktioniert normal.' },
+  { name: 'Google Search', category: 'Google', status: 'blocked', note: 'Ohne VPN blockiert.', alt: 'Bing (funktioniert) oder Baidu' },
+  { name: 'Google Maps', category: 'Google', status: 'partial', note: 'Ladt, aber die Daten sind im chinesischen Festland ungenau/verschoben.', alt: 'Apple Maps, Amap oder Baidu Maps' },
+  { name: 'Gmail', category: 'Google', status: 'blocked', note: 'Ohne VPN blockiert.', alt: 'Outlook / eine E-Mail ohne Google' },
+  { name: 'YouTube', category: 'Google', status: 'blocked', note: 'Ohne VPN blockiert.', alt: 'Bilibili (lokal)' },
+  { name: 'WhatsApp', category: 'Messaging', status: 'blocked', note: 'Ohne VPN blockiert.', alt: 'WeChat' },
+  { name: 'Facebook', category: 'Social', status: 'blocked', note: 'Ohne VPN blockiert.', alt: 'WeChat Moments / RED' },
+  { name: 'Instagram', category: 'Social', status: 'blocked', note: 'Ohne VPN blockiert.', alt: 'RED (Xiaohongshu)' },
+  { name: 'X (Twitter)', category: 'Social', status: 'blocked', note: 'Ohne VPN blockiert.', alt: 'Weibo' },
+  { name: 'Telegram', category: 'Messaging', status: 'blocked', note: 'Ohne VPN blockiert.', alt: 'WeChat' },
+  { name: 'WeChat', category: 'Messaging', status: 'works', note: 'Funktioniert vollstandig - der Standard in China.' },
+  { name: 'Apple services (iMessage, App Store)', category: 'Apple', status: 'works', note: 'Funktioniert normal.' },
   { name: 'Microsoft / Bing / Outlook', category: 'Microsoft', status: 'works', note: 'Funktioniert normal.' },
-  { name: 'Booking.com', category: 'Reise', status: 'works', note: 'Funktioniert normal.' },
-  { name: 'Airbnb', category: 'Reise', status: 'works', note: 'Funktioniert normal.' },
-  { name: 'Trip.com', category: 'Reise', status: 'works', note: 'Funktioniert vollständig — toll für Züge und Hotels.' },
-  { name: 'Alipay', category: 'Bezahlung', status: 'works', note: 'Funktioniert vollständig — unterstützt ausländische Karten.' },
-  { name: 'Uber', category: 'Verkehr', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'DiDi' },
-  { name: 'Netflix', category: 'Medien', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'Lokales Streaming oder vorher herunterladen' },
-  { name: 'Spotify', category: 'Medien', status: 'blocked', note: 'Nicht im chinesischen Festland verfügbar.', alt: 'QQ Music / zuerst offline herunterladen' },
+  { name: 'Booking.com', category: 'Travel', status: 'works', note: 'Funktioniert normal.' },
+  { name: 'Airbnb', category: 'Travel', status: 'works', note: 'Funktioniert normal.' },
+  { name: 'Trip.com', category: 'Travel', status: 'works', note: 'Funktioniert vollstandig - ideal fur Zuge und Hotels.' },
+  { name: 'Alipay', category: 'Payment', status: 'works', note: 'Funktioniert vollstandig - unterstutzt auslandische Karten.' },
+  { name: 'Uber', category: 'Transport', status: 'blocked', note: 'Im chinesischen Festland nicht in Betrieb.', alt: 'DiDi' },
+  { name: 'Netflix', category: 'Media', status: 'blocked', note: 'Im chinesischen Festland nicht verfugbar.', alt: 'Lokales Streaming oder vorher herunterladen' },
+  { name: 'Spotify', category: 'Media', status: 'blocked', note: 'Im chinesischen Festland nicht verfugbar.', alt: 'QQ Music / zuerst offline herunterladen' },
 ];
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Werkzeug</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Funktionieren meine Apps in China?</h1>
+      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Tool</span>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Werden meine Apps in China funktionieren?</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
@@ -61,16 +64,16 @@ const apps: AppInfo[] = [
         <button data-status="all" class="status-filter btn-primary px-3 py-1">Alle</button>
         <button data-status="works" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">✅ Funktioniert</button>
         <button data-status="partial" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">⚠️ Teilweise</button>
-        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Gesperrt</button>
+        <button data-status="blocked" class="status-filter rounded-lg border border-gray-300 px-3 py-1 font-medium text-gray-700">🚫 Blockiert</button>
       </div>
     </div>
 
     <div id="app-list" class="mt-6 grid gap-3 sm:grid-cols-2"></div>
-    <p id="no-results" class="hidden py-8 text-center text-gray-500">Keine Apps entsprechen Ihrer Suche.</p>
+    <p id="no-results" class="hidden py-8 text-center text-gray-500">Keine Apps entsprechen deiner Suche.</p>
 
     <AffiliateCta
-      title="Halten Sie Ihre Apps mit einer Reise-eSIM funktionsfähig"
-      description="Eine China-Reise-eSIM, die lokale Einschränkungen umgeht, hält Ihre gewohnten Apps online — keine separate VPN-Einrichtung erforderlich."
+      title="Halte deine Apps mit einer Reise-eSIM funktionsfahig"
+      description="Eine China-Reise-eSIM, die lokale Beschrankungen umgeht, halt deine gewohnten Apps online - ganz ohne separate VPN-Einrichtung."
       buttonText="eSIM-Optionen ansehen"
       placeholder={AFFILIATE_LINKS.esim}
     />
@@ -88,7 +91,7 @@ const apps: AppInfo[] = [
   const badge = {
     works: { cls: 'bg-green-100 text-green-800', label: '✅ Funktioniert' },
     partial: { cls: 'bg-amber-100 text-amber-800', label: '⚠️ Teilweise' },
-    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Gesperrt' },
+    blocked: { cls: 'bg-red-100 text-red-800', label: '🚫 Blockiert' },
   };
 
   function render() {

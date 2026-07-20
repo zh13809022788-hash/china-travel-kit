@@ -30,13 +30,18 @@ const locale = 'ja';
   description="中国の交通機関完全ガイド：高速鉄道網、都市の地下鉄、DiDi配車、国内線、バスの利用方法。">
   <Header locale="ja" />
   <main class="container-page py-10">
-    <header class="max-w-2xl">
+    <header>
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">交通案内</span>
       <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">中国の交通情報をご案内します</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="hub-transport" alt="中国の近代的な高速鉄道と鉄道網の様子です" loading="lazy" />
+    
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>中国は世界で最も高度で広範な交通ネットワークを誇り、都市間や都市内の移動が驚くほど簡単です。その中心となるのが、世界最大の高速鉄道網であり、時速350kmで主要都市を結んでいます。北京から上海まではわずか4.5時間、北京から西安までは約4時間です。列車はG（高速）、D（準高速）、K/T（一般）に分類され、G列車が長距離移動に最も快適で人気があります。チケットは公式アプリ12306または英語対応のTrip.comで予約できます。</p>
+      <p>都市内では、地下鉄システムが効率的で手頃な料金であり、北京、上海、広州、深圳などの主要都市では英語表記も充実しています。DiDi（中国のUber）は外国人でも簡単に利用できます。タクシーは広く利用可能ですが、英語のコミュニケーションが難しい場合があるため、目的地を中国語で書いておくと便利です。長距離には国内線も良い選択肢で、中国南方航空、中国国際航空、中国東方航空などの主要航空会社が競争力のある料金を提供しています。最良の体験を得るには、地域間の移動に高速鉄道、都市内の移動に地下鉄とDiDiを組み合わせることをお勧めします。</p>
+    </div>
 
     <AdSlot format="banner" />
 

@@ -1,74 +1,74 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import CoverImage from '../../../components/CoverImage.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import CoverImage from "../../../components/CoverImage.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
-const title = 'Wichtige China-Apps: Downloadlinks und Web-Alternativen';
-const description = 'Ein vollständiges Verzeichnis der Apps, die du in China brauchst: WeChat, Alipay, DiDi, Baidu Maps, Meituan, 12306, VPN und mehr. Jede App enthält Downloadlinks für App Store / Google Play sowie H5-Webversionen, die ohne Installation funktionieren.';
+const title = 'Unverzichtbare China-Apps fur auslandische Reisende: Download-Links & Web-Alternativen';
+const description = 'Ein vollstandiges Verzeichnis der Apps, die du in China brauchst — WeChat, Alipay, DiDi, Baidu Maps, Meituan, 12306, VPN und mehr. Jede App enthalt Download-Links fur App Store / Google Play sowie H5-Webversionen, die ohne Installation funktionieren.';
 
 const appGroups = [
   {
-    category: 'Bezahlung & digitale Geldbörse',
+    category: 'Zahlung & Wallet',
     apps: [
       {
         name: 'Alipay',
-        desc: 'Die am häufigsten akzeptierte digitale Geldbörse in China. Verknüpfe eine ausländische Visa- oder Mastercard und bezahle per QR-Code in Geschäften, Restaurants, Taxis und bei Straßenständen.',
+        desc: 'Das in China am weitesten akzeptierte mobile Wallet. Verknupfe eine auslandische Visa oder Mastercard und bezahle per QR-Code in Geschaften, Restaurants, Taxis und bei StraBenhandlern.',
         android: 'https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone',
         ios: 'https://apps.apple.com/app/alipay/id333206289',
         h5: null,
-        note: 'Die Einrichtung dauert 10-15 Minuten. Für die Verifizierung ist ein Reisepass erforderlich.',
-        guide: '/de/posts/alipay-foreign-credit-card-step-by-step/',
+        note: 'Die Einrichtung dauert 10-15 Min. Fur die Verifizierung wird ein Reisepass benotigt.',
+        guide: '/posts/alipay-foreign-credit-card-step-by-step/',
       },
       {
         name: 'WeChat',
-        desc: 'Chinas Super-App. Nutze sie für Nachrichten, Anrufe, Moments und WeChat Pay. Die meisten Menschen in China verwenden sie täglich für fast alles.',
+        desc: 'Chinas Super-App. Nutze sie fur Nachrichten, Anrufe, Moments (sozialer Feed) und WeChat Pay. Die meisten Chinesen nutzen sie taglich fur alles.',
         android: 'https://play.google.com/store/apps/details?id=com.tencent.mm',
         ios: 'https://apps.apple.com/app/wechat/id414478124',
         h5: 'https://web.wechat.com/',
-        note: 'WeChat Pay benötigt eine verknüpfte Karte. WeChat selbst funktioniert für Nachrichten auch ohne Einrichtung.',
-        guide: '/de/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/',
+        note: 'WeChat Pay benotigt eine verknupfte Karte. WeChat selbst funktioniert fur Nachrichten auch ohne Einrichtung.',
+        guide: '/posts/link-a-foreign-visa-or-mastercard-to-wechat-pay-in-china/',
       },
     ],
   },
   {
-    category: 'Verkehr & Fahrdienste',
+    category: 'Transport & Ride-Hailing',
     apps: [
       {
         name: 'DiDi',
-        desc: 'Chinas Uber. Buche Taxis und private Fahrdienste. Unterstützt eine englische Oberfläche. Bezahlen kannst du mit Alipay oder WeChat Pay.',
+        desc: 'Chinas Uber. Buche Taxis und Privatwagen. Unterstutzt eine englische Benutzeroberflache. Bezahlen ist mit Alipay oder WeChat Pay moglich.',
         android: 'https://play.google.com/store/apps/details?id=com.didi.sdk',
         ios: 'https://apps.apple.com/app/didi/id1164272094',
-        h5: 'https://m.didiglobal.com/',
-        note: 'Die H5-Version funktioniert im Browser oder als WeChat-Mini-Programm. Für gelegentliche Fahrten ist keine App nötig.',
-        guide: '/de/posts/didi-china-foreign-tourists-guide/',
+        h5: 'https://www.didiglobal.com/',
+        note: 'Die H5-Version funktioniert im Browser oder als WeChat-Mini-Programm. Fur gelegentliche Fahrten ist keine App notig.',
+        guide: '/posts/didi-china-foreign-tourists-guide/',
       },
       {
-        name: 'Alipay Verkehrs-Mini-Programm',
-        desc: 'Nutze in Alipay das Verkehrs-Mini-Programm, um in den meisten Großstädten QR-Codes für U-Bahn und Busse zu scannen.',
+        name: 'Alipay Transport Mini-Program',
+        desc: 'Innerhalb von Alipay kannst du mit dem Transport-Mini-Programm QR-Codes fur U-Bahn und Busse in den meisten groBen Stadten scannen.',
         android: null,
         ios: null,
         h5: null,
-        note: 'Öffne Alipay und tippe auf das Symbol „Verkehr“. Keine separate Installation nötig.',
-        guide: '/de/transport/',
+        note: 'Offne Alipay → Symbol "Transport". Keine separate Installation notig.',
+        guide: '/transport/',
       },
       {
         name: '12306',
-        desc: 'Offizielle App der chinesischen Eisenbahn zum Buchen von Zugtickets. Nur chinesische Oberfläche, Verifizierung erforderlich. Alternative: Trip.com nutzen.',
+        desc: 'Offizielle China-Railway-App zum Buchen von Zugtickets. Nur chinesische Benutzeroberflache, Verifizierung erforderlich. Alternative: Trip.com verwenden.',
         android: 'https://play.google.com/store/apps/details?id=com.cars.blaili',
         ios: 'https://apps.apple.com/app/12306/id564757494',
         h5: 'https://www.12306.cn/',
-        note: 'Für Ausländer etwas kompliziert. Nutze Trip.com (Englisch, keine umständliche Verifizierung).',
-        guide: '/de/posts/book-china-train-tickets-12306-foreigners/',
+        note: 'Fur Auslander knifflig. Verwende Trip.com (Englisch, kein Verifizierungsaufwand).',
+        guide: '/posts/book-china-train-tickets-12306-foreigners/',
       },
       {
         name: 'Trip.com (Ctrip)',
-        desc: 'Englischfreundliche App zum Buchen von Zügen, Flügen und Hotels. Akzeptiert ausländische Karten direkt.',
+        desc: 'Englischfreundliche App zum Buchen von Zugen, Flugen und Hotels. Akzeptiert auslandische Karten direkt.',
         android: 'https://play.google.com/store/apps/details?id=com.ctrip',
         ios: 'https://apps.apple.com/app/trip-com/id1612956441',
         h5: 'https://www.trip.com/',
-        note: 'Beste Alternative zu 12306 für Zugtickets. Höhere Servicegebühr, aber deutlich einfacher.',
+        note: 'Die beste Alternative zu 12306 fur Zugtickets. Hoherer Serviceaufschlag, aber deutlich einfacher.',
         guide: null,
       },
     ],
@@ -78,62 +78,62 @@ const appGroups = [
     apps: [
       {
         name: 'Baidu Maps',
-        desc: 'Die detaillierteste Karte für China. Schritt-für-Schritt-Navigation, Routen mit öffentlichen Verkehrsmitteln und Restaurantsuche. Nur auf Chinesisch, aber mit Gesten nutzbar.',
+        desc: 'Die detaillierteste Karte fur China. Turn-by-Turn-Navigation, Routen fur offentliche Verkehrsmittel, Restaurantsuche. Nur auf Chinesisch, aber mit Gesten nutzbar.',
         android: 'https://play.google.com/store/apps/details?id=com.baidu.BaiduMap',
         ios: 'https://apps.apple.com/app/baidu-maps/id452186370',
         h5: 'https://map.baidu.com/',
-        note: 'Google Maps ist in China blockiert. Für Navigation brauchst du Baidu oder Amap.',
+        note: 'Google Maps ist in China blockiert. Fur die Navigation brauchst du Baidu oder Amap.',
         guide: null,
       },
       {
         name: 'Amap (Gaode)',
-        desc: 'Alternative zu Baidu Maps. Viele Einheimische bevorzugen Amap. Besser für Taxi-Navigation, Live-Verkehr und Restaurantbewertungen.',
+        desc: 'Alternative zu Baidu Maps. Viele Einheimische bevorzugen Amap. Besser fur Taxinavigation, Live-Verkehr und Restaurantbewertungen.',
         android: 'https://play.google.com/store/apps/details?id=com.autonavi.minimap',
         ios: 'https://apps.apple.com/app/amap/id461703208',
         h5: 'https://ditu.amap.com/',
-        note: 'Sowohl Baidu als auch Amap funktionieren. Wähle eine App. Amap ist beim Taxi-Rufen tendenziell genauer.',
+        note: 'Sowohl Baidu als auch Amap funktionieren. Wahle eine davon. Amap ist fur Taxirufe meist genauer.',
         guide: null,
       },
       {
         name: 'Google Maps',
-        desc: 'Funktioniert in China teilweise zum Stöbern, aber Navigation und Echtzeitverkehr sind unzuverlässig. Gut für die Reiseplanung vorab.',
+        desc: 'Funktioniert in China teilweise zum Durchsuchen, aber Navigation und Echtzeitverkehr sind unzuverlassig. Gut fur die Planung vor der Reise.',
         android: null,
         ios: null,
         h5: 'https://maps.google.com/',
-        note: 'Schritt-für-Schritt-Navigation funktioniert in China ohne VPN nicht.',
-        guide: '/de/posts/do-you-need-a-vpn-in-china-2026/',
+        note: 'Turn-by-Turn-Navigation in China funktioniert ohne VPN nicht.',
+        guide: '/posts/do-you-need-a-vpn-in-china-2026/',
       },
     ],
   },
   {
-    category: 'Essen & Restaurants',
+    category: 'Essen & Gastronomie',
     apps: [
       {
         name: 'Meituan',
-        desc: 'Essenslieferung, Restaurantreservierungen, Kinotickets und Hotelbuchungen. Nur auf Chinesisch. Für englische Hilfe im Alipay-Mini-Programm nutzen.',
+        desc: 'Essenslieferung, Restaurantbuchung, Kinotickets, Hotelbuchung. Nur auf Chinesisch. Fur Hilfe auf Englisch innerhalb des Alipay-Mini-Programms nutzbar.',
         android: 'https://play.google.com/store/apps/details?id=com.sankuai.meituan',
         ios: 'https://apps.apple.com/app/meituan/id423924287',
         h5: 'https://waimai.meituan.com/',
-        note: 'Die H5-Essenslieferung funktioniert im Browser. Bei Lieferung mit Alipay bezahlen.',
-        guide: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+        note: 'Die H5-Version fur Essenslieferung funktioniert im Browser. Bezahle bei der Lieferung mit Alipay.',
+        guide: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Ele.me',
-        desc: 'App für Essenslieferungen (gehört zu Alibaba). Ähnlich wie Meituan. Essen kann mit Alipay bestellt werden.',
+        desc: 'App fur Essenslieferung (gehort zu Alibaba). Ahnlich wie Meituan. Essen kann mit Alipay bestellt werden.',
         android: 'https://play.google.com/store/apps/details?id=me.ele',
         ios: 'https://apps.apple.com/app/ele-me/id532785356',
         h5: 'https://www.ele.me/',
-        note: 'Sowohl Meituan als auch Ele.me funktionieren. Probiere beide aus, um die beste Restaurantabdeckung zu erhalten.',
-        guide: '/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+        note: 'Sowohl Meituan als auch Ele.me funktionieren. Probiere beide fur die beste Restaurantabdeckung.',
+        guide: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
       },
       {
         name: 'Dianping',
-        desc: 'Das Yelp Chinas. Restaurantbewertungen, Rezensionen und Fotos. Hilft dabei, gute lokale Lokale zu finden. Nur auf Chinesisch.',
+        desc: 'Das Yelp von China. Restaurantbewertungen, Rezensionen, Fotos. Hilft dabei, gute lokale Lokale zu finden. Nur auf Chinesisch.',
         android: 'https://play.google.com/store/apps/details?id=com.dianping.v1',
         ios: 'https://apps.apple.com/app/dianping/id416896465',
         h5: 'https://www.dianping.com/',
-        note: 'Nutze die Fotosuche, um vor der Bestellung zu sehen, wie Gerichte aussehen.',
-        guide: '/de/food/',
+        note: 'Nutze die Fotosuchfunktion — so siehst du vor der Bestellung, wie die Gerichte aussehen.',
+        guide: '/food/',
       },
     ],
   },
@@ -141,22 +141,22 @@ const appGroups = [
     category: 'Kommunikation & VPN',
     apps: [
       {
-        name: 'VPN (vor der Reise auswählen)',
-        desc: 'Installiere ein VPN, BEVOR du abreist. ExpressVPN, NordVPN und Astrill funktionieren in China. Kostenlose VPNs sind meist blockiert.',
+        name: 'VPN (choose one before travel)',
+        desc: 'Installiere ein VPN BEVOR du abreist. ExpressVPN, NordVPN und Astrill funktionieren in China. Kostenlose VPNs sind meist blockiert.',
         android: null,
         ios: null,
         h5: null,
-        note: 'WICHTIG: Vor der Ankunft installieren und testen. Nach der Landung aktivieren.',
-        guide: '/de/posts/do-you-need-a-vpn-in-china-2026/',
+        note: 'UNVERZICHTBAR: Vor der Ankunft installieren und testen. Nach der Landung aktivieren.',
+        guide: '/posts/do-you-need-a-vpn-in-china-2026/',
       },
       {
         name: 'Google Translate',
-        desc: 'Kameraübersetzung für Speisekarten, Schilder und Dokumente. Lade das Offline-Paket für Chinesisch (vereinfacht) herunter.',
+        desc: 'Kameraubersetzung fur Speisekarten, Schilder und Dokumente. Lade das Offline-Paket fur Chinesisch (vereinfacht) herunter.',
         android: 'https://play.google.com/store/apps/details?id=com.google.android.apps.translate',
         ios: 'https://apps.apple.com/app/google-translate/id414706506',
         h5: 'https://translate.google.com/',
-        note: 'Bestes Übersetzungstool. Offline-Paket vor der Reise herunterladen.',
-        guide: '/de/tools/survival-kit/',
+        note: 'Das beste Ubersetzungstool. Lade das Offline-Paket vor der Reise herunter.',
+        guide: '/tools/survival-kit/',
       },
     ],
   },
@@ -165,40 +165,42 @@ const appGroups = [
     apps: [
       {
         name: 'Trip.com (Hotels)',
-        desc: 'Am besten zum Buchen von Hotels mit ausländischen Karten. Große Abdeckung. Englische Oberfläche.',
+        desc: 'Am besten fur Hotelbuchungen mit auslandischen Karten. GroBe Abdeckung. Englische Benutzeroberflache.',
         android: null,
         ios: null,
         h5: 'https://www.trip.com/hotels/',
-        note: 'Funktioniert auch für Flüge und Züge. Alles aus einer Hand.',
+        note: 'Funktioniert auch fur Fluge und Zuge. Alles an einem Ort.',
         guide: null,
       },
       {
         name: 'Fliggy (Alitrip)',
-        desc: 'Alibabas Plattform für Reisebuchungen. In der Alipay-App integriert. Gut für Inlandsflüge.',
+        desc: 'Alibabas Plattform fur Reisebuchungen. Innerhalb der Alipay-App. Gut fur Inlandsfluge.',
         android: null,
         ios: null,
         h5: 'https://www.fliggy.com/',
-        note: 'Bezahlung mit Alipay möglich. Kein separater Download nötig.',
+        note: 'Bezahlung mit Alipay moglich. Kein separater Download notig.',
         guide: null,
       },
     ],
   },
 ];
 ---
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-    <header class="max-w-3xl">
-      <p class="section-kicker">Mobile Anwendungen</p>
-      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">Wichtige China-Apps</h1>
+    <header>
+      <p class="section-kicker">Mobile Apps</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">Unverzichtbare China-Apps</h1>
       <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-internet-apps" alt="Smartphone mit Symbolen wichtiger China-Reise-Apps" loading="eager" />
+    <CoverImage name="topic-internet-apps" alt="Smartphone mit Symbolen unverzichtbarer China-Reise-Apps" loading="eager" />
 
     <div class="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-900">
-      <strong>Vor der Abreise:</strong> Installiere diese Apps vor der Abreise im WLAN. Manche App-Marktplätze sind in China langsam oder blockiert. Lade Offline-Übersetzungspakete und VPN-Apps zu Hause herunter.
+      <strong>Bevor du losfahrst:</strong> Installiere diese Apps vor der Abreise im WLAN. Einige App Stores sind innerhalb Chinas langsam oder blockiert. Lade Offline-Ubersetzungspakete und VPN-Apps zu Hause herunter.
     </div>
 
     <AdSlot format="banner" />
@@ -228,7 +230,7 @@ const appGroups = [
                 {app.h5 && (
                   <a href={app.h5} target="_blank" rel="noopener" class="inline-flex items-center gap-1 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 transition-colors hover:bg-gray-50">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    Webversion öffnen
+                    Webversion offnen
                   </a>
                 )}
               </div>
@@ -246,27 +248,26 @@ const appGroups = [
     ))}
 
     <section class="mt-12 rounded-lg border border-gray-200 p-6">
-      <h2 class="text-xl font-bold text-gray-950">H5-Web-Apps: Kein Download nötig</h2>
+      <h2 class="text-xl font-bold text-gray-950">H5-Web-Apps — Kein Download notig</h2>
       <p class="mt-2 text-sm leading-6 text-gray-600">
-        Viele Dienste in China haben <strong>webbasierte (H5) Versionen</strong>, die direkt im Smartphone-Browser oder in WeChat-/Alipay-Mini-Programmen funktionieren. Sie sind ideal für Kurzzeitreisende, die ihr Smartphone nicht mit mehr als 10 Apps überladen möchten. Die wichtigsten:
+        Viele Dienste in China haben <strong>webbasierte (H5) Versionen</strong>, die direkt im Browser deines Handys oder innerhalb von WeChat-/Alipay-Mini-Programmen funktionieren. Diese sind ideal fur Kurzzeitreisende, die ihr Handy nicht mit mehr als 10 Apps uberfullen wollen. Die wichtigsten:
       </p>
       <div class="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">m.didiglobal.com (Englisch verfügbar)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">DiDi</strong> — <span class="text-gray-600">www.didiglobal.com (Englisch verfugbar)</span></div>
         <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Baidu Maps</strong> — <span class="text-gray-600">map.baidu.com (nur Chinesisch)</span></div>
         <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">WeChat Web</strong> — <span class="text-gray-600">web.wechat.com (nur Nachrichten)</span></div>
         <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Meituan</strong> — <span class="text-gray-600">waimai.meituan.com (Essenslieferung)</span></div>
         <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Dianping</strong> — <span class="text-gray-600">dianping.com (Restaurantsuche)</span></div>
-        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay-Mini-Programme</strong> — <span class="text-gray-600">Alles in Alipay (keine zusätzliche Installation)</span></div>
+        <div class="rounded-md bg-gray-50 p-3"><strong class="text-gray-900">Alipay Mini-Programs</strong> — <span class="text-gray-600">Alles innerhalb von Alipay (keine zusatzliche Installation)</span></div>
       </div>
       <p class="mt-4 text-xs text-gray-500">
-        <strong>Webversionen funktionieren in den meisten Fällen ohne VPN</strong>. App-Downloads solltest du vor der Ankunft im heimischen WLAN installieren.
+        <strong>Webversionen funktionieren in den meisten Fallen ohne VPN</strong>. Fur App-Downloads solltest du alles vor der Ankunft im heimischen WLAN installieren.
       </p>
     </section>
 
     <section class="mt-10 text-center">
-      <p class="text-sm text-gray-500">Links zum App Store öffnen offizielle Seiten. Preise und Verfügbarkeit können regionalen Einschränkungen unterliegen.</p>
+      <p class="text-sm text-gray-500">Links zu den App Stores offnen offizielle Seiten. Preise und Verfugbarkeit unterliegen regionalen Einschrankungen.</p>
     </section>
   </main>
   <Footer />
 </BaseLayout>
-

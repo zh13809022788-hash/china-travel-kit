@@ -1,106 +1,110 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
-const title = 'Conditions d’utilisation';
+const title = 'Conditions d\'utilisation';
 const description =
-  'Conditions applicables à l’utilisation de ChinaTripBox, y compris l’usage informatif du site, les liens externes, la publicité et les limites de responsabilité.';
+  'Conditions d\'utilisation de ChinaTripBox, y compris l\'usage informatif, les liens externes, la publicité et les limitations de responsabilité.';
 const lastUpdated = '10 juillet 2026';
 ---
+<!-- Contenu genere avec assistance IA, revise par un redacteur natif -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="fr">
-  <Header locale="fr" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-12">
     <article class="prose-content article-body">
-      <h1 class="text-3xl font-bold text-gray-900">Conditions d’utilisation</h1>
+      <h1 class="text-3xl font-bold text-gray-900">Conditions d'utilisation</h1>
       <p class="mt-2 text-sm text-gray-500">Dernière mise à jour : {lastUpdated}</p>
 
       <p class="mt-4">
-        En utilisant ChinaTripBox, vous acceptez les présentes conditions d’utilisation. Si vous ne
-        les acceptez pas, veuillez ne pas utiliser ce site.
+        En utilisant ChinaTripBox, vous acceptez les présentes Conditions d'utilisation. Si vous
+        n'êtes pas d'accord, veuillez ne pas utiliser ce site web.
       </p>
 
-      <h2>Finalité informative</h2>
+      <h2>But informatif</h2>
       <p>
-        ChinaTripBox fournit des informations générales de voyage destinées aux visiteurs étrangers
-        en Chine. Nous faisons de notre mieux pour garder nos guides exacts et utiles, mais les
-        applications, tarifs, itinéraires, règles d’entrée, politiques et disponibilités de service
-        peuvent évoluer sans préavis.
+        ChinaTripBox fournit des informations générales de voyage aux visiteurs étrangers en Chine.
+        Nous nous efforçons de maintenir l'exactitude et l'utilité de nos guides, mais les
+        informations concernant les applications, les prix, les itinéraires, les politiques, les
+        règles d'entrée et la disponibilité des services peuvent changer sans préavis.
       </p>
 
       <h2>Absence de conseil professionnel</h2>
       <p>
-        Le contenu publié sur ce site ne constitue pas un conseil juridique, migratoire, financier,
-        médical, fiscal, sécuritaire ou d’urgence. Il vous appartient de vérifier les exigences
+        Le contenu de ce site ne constitue pas un conseil juridique, d'immigration, financier,
+        médical, fiscal, de sécurité ou d'urgence. Il vous appartient de confirmer les exigences
         officielles et de prendre vos propres décisions de voyage.
       </p>
 
-      <h2>Fonctionnalités AI et aide au voyage</h2>
+      <h2>Fonctionnalités d'IA et d'aide au voyage</h2>
       <p>
-        ChinaTripBox peut proposer une assistance au voyage fondée sur l’AI ou complétée par une
-        intervention humaine pour des questions pratiques. Ces services sont fournis uniquement à
-        titre d’aide générale au voyage. Les réponses générées par AI peuvent être incomplètes ou
-        inexactes, et les intervenants humains ne sont pas des représentants officiels, des avocats,
-        des conseillers en immigration, des professionnels de santé, des conseillers financiers, des
-        banques, des opérateurs télécoms, des compagnies aériennes ni des plateformes de paiement.
+        ChinaTripBox peut proposer une aide au voyage assistée par IA ou assurée par des personnes
+        pour répondre à des questions pratiques. Ces fonctionnalités sont destinées uniquement à une
+        assistance générale au voyage. Les réponses de l'IA peuvent être inexactes ou incomplètes,
+        et les assistants humains ne sont pas des représentants officiels, des conseillers
+        juridiques, des conseillers en immigration, des professionnels de santé, des conseillers
+        financiers, des banques, des fournisseurs de télécommunications, des compagnies aériennes
+        ou des plateformes de paiement.
       </p>
       <p>
-        N’envoyez pas de photo de passeport, de numéro complet de carte bancaire, de mot de passe,
-        de code PIN, de code de vérification à usage unique ni d’autre information sensible. Nous
-        pouvons refuser, supprimer ou ignorer toute demande qui nous semble dangereuse, illégale,
-        abusive ou en dehors du cadre d’une aide pratique au voyage.
+        Ne soumettez pas de photos de passeport, de numéros de carte bancaire, de mots de passe, de
+        codes PIN, de codes de vérification à usage unique ou d'autres informations sensibles. Nous
+        pouvons refuser, supprimer ou ignorer les demandes qui semblent dangereuses, illégales,
+        abusives ou en dehors du cadre d'une assistance pratique au voyage.
       </p>
 
       <h2>Liens externes</h2>
       <p>
-        Nous faisons parfois référence à des sites, outils, applications, produits ou services
-        tiers. Nous n’exerçons aucun contrôle sur ces tiers et déclinons toute responsabilité quant
-        à leur contenu, leurs tarifs, leurs pratiques de confidentialité, leur disponibilité ou
-        leurs décisions.
+        Nous proposons des liens vers des sites web, outils, applications, produits et services de
+        tiers. Nous ne contrôlons pas ces tiers et ne sommes pas responsables de leur contenu, de
+        leur tarification, de leurs pratiques en matière de confidentialité, de leur disponibilité
+        ou de leurs décisions.
       </p>
 
-      <h2>Publicité et affiliation</h2>
+      <h2>Publicité et relations d'affiliation</h2>
       <p>
-        ChinaTripBox peut afficher de la publicité et utiliser des liens d’affiliation. Nous pouvons
-        recevoir une rémunération si vous cliquez sur un lien affilié ou effectuez un achat via ce
-        lien. Cela n’augmente pas le prix que vous payez.
+        ChinaTripBox peut afficher des publicités et utiliser des liens d'affiliation. Nous pouvons
+        recevoir une compensation si vous cliquez sur un lien d'affiliation ou effectuez un achat
+        via l'un de ces liens. Cela n'augmente pas votre coût.
       </p>
 
       <h2>Pourboires et aide payante</h2>
       <p>
-        Si des pourboires facultatifs, des demandes payantes ou une aide individuelle sont proposés
-        à l’avenir, les conditions de paiement, règles de remboursement, frais de plateforme et
-        responsabilités de l’intervenant seront affichés avant tout règlement. Les pourboires restent
-        volontaires sauf si un service payant est clairement présenté et accepté.
+        Si des pourboires facultatifs, des demandes payantes ou une aide individuelle sont
+        introduits, les conditions de paiement, les règles de remboursement, les frais de plateforme
+        et les responsabilités des assistants seront affichés avant le paiement. Les pourboires sont
+        volontaires, sauf si un service payant est clairement proposé et accepté.
       </p>
 
-      <h2>Usage autorisé</h2>
+      <h2>Utilisation acceptable</h2>
       <p>
-        Vous pouvez utiliser ce site pour préparer un voyage à titre personnel et non commercial.
-        Vous ne pouvez pas détourner le site de son usage, tenter de le perturber, l’extraire à
-        grande échelle ni republier des portions substantielles de notre contenu sans autorisation.
+        Vous pouvez utiliser ce site pour une planification de voyage personnelle et non
+        commerciale. Vous ne pouvez pas faire un usage abusif du site, tenter de le perturber, le
+        scraper à grande échelle, ni republier des parties substantielles de notre contenu sans
+        autorisation.
       </p>
 
       <h2>Limitation de responsabilité</h2>
       <p>
-        ChinaTripBox est fourni « en l’état » et « selon disponibilité ». Dans toute la mesure
-        permise par la loi, nous déclinons toute responsabilité pour les pertes ou dommages liés à
-        votre utilisation du site, à votre confiance dans ses informations, à des perturbations de
-        voyage, à des changements de service ou à l’action de tiers.
+        ChinaTripBox est fourni "tel quel" et "selon disponibilité". Dans toute la mesure permise
+        par la loi, nous ne sommes pas responsables des pertes ou dommages résultant de votre
+        utilisation du site, de votre confiance dans les informations, d'une perturbation de voyage,
+        de changements de service ou des actions de tiers.
       </p>
 
-      <h2>Modification des conditions</h2>
+      <h2>Modifications des présentes conditions</h2>
       <p>
-        Nous pouvons mettre à jour ces conditions d’utilisation à tout moment. En continuant à
-        utiliser le site après la publication de modifications, vous acceptez les conditions mises à
-        jour.
+        Nous pouvons mettre à jour les présentes Conditions d'utilisation de temps à autre.
+        L'utilisation continue du site après la publication des modifications signifie que vous
+        acceptez les conditions mises à jour.
       </p>
 
       <h2>Contact</h2>
       <p>
-        Si vous avez des questions sur ces conditions, contactez-nous via notre
-        <a href="/fr/contact/">page de contact</a>.
+        Si vous avez des questions sur ces conditions, veuillez nous contacter via notre
+        <a href="/contact/">page de contact</a>.
       </p>
     </article>
   </main>

@@ -1,27 +1,33 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import AffiliateCta from '../../../components/AffiliateCta.astro';
-import { AFFILIATE_LINKS } from '../../../config';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import AffiliateCta from "../../../components/AffiliateCta.astro";
+import { AFFILIATE_LINKS } from "../../../config";
 
-const title = 'Conversor de moneda RMB para viajeros en China';
+const title = 'Convertidor de divisas RMB para viajeros a China';
 const description =
-  'Convierte tu moneda local a yuanes chinos (RMB) y viceversa, y consulta cuanto cuestan las cosas cotidianas en China para comprobar precios al momento.';
+  'Convierte tu moneda local a yuan chino (RMB) y viceversa, y mira cuánto cuestan las cosas cotidianas en China para poder comparar precios en el momento.';
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
-  <Header locale="es" />
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Conversor de moneda RMB</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Convertidor de divisas RMB</h1>
+<p class="mt-4 max-w-3xl text-lg leading-8 text-gray-600">
+  Usa este convertidor para consultar los tipos de cambio actuales entre tu moneda local y el yuan chino (RMB/CNY). Los precios de referencia que aparecen abajo te dan una idea de los costos habituales: un plato de fideos cuesta alrededor de 15-25 RMB, un viaje en metro 3-7 RMB y un hotel de gama media 200-500 RMB por noche. China es, en gran medida, una sociedad sin efectivo: Alipay y WeChat Pay se aceptan en todas partes, desde vendedores ambulantes hasta hoteles de lujo. Para obtener los mejores tipos de cambio, usa la tarjeta de débito internacional de tu banco en cajeros automáticos de bancos chinos, o cambia divisa en bancos locales en lugar de hacerlo en aeropuertos u hoteles.
+</p>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
     </header>
 
     <AdSlot format="banner" />
 
-    <!-- Conversor -->
+    <!-- Converter -->
     <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
       <div class="grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-end">
         <label class="flex flex-col text-sm">
@@ -49,12 +55,12 @@ const description =
       </div>
       <p id="rate-line" class="mt-3 text-sm text-gray-500"></p>
       <p class="mt-1 text-xs text-gray-400">
-        Las tasas son referencias aproximadas para planificar, no tipos de mercado en tiempo real. Consulta tu banco o un conversor
-        en vivo para conocer el tipo exacto en el momento de la transacción.
+        Los tipos de cambio son referencias aproximadas para planificar, no tipos de mercado en tiempo real. Consulta con tu banco o un
+        convertidor en vivo para conocer el tipo exacto en el momento de tu transacción.
       </p>
     </div>
 
-    <!-- Cuánto cuestan las cosas -->
+    <!-- What things cost -->
     <section class="mt-8">
       <h2 class="text-xl font-bold text-gray-900">Cuánto cuestan las cosas en China</h2>
       <p class="mt-1 text-sm text-gray-500">Precios típicos en RMB, con tu moneda mostrada como referencia.</p>
@@ -62,9 +68,9 @@ const description =
     </section>
 
     <AffiliateCta
-      title="Evita la casa de cambio"
-      description="Vincula una tarjeta sin comisión por cambio de divisa a Alipay o WeChat Pay y paga al tipo real, sin recargo de cambio en efectivo."
-      buttonText="Ver configuración de pagos"
+      title="Evita la ventanilla de cambio"
+      description="Vincula una tarjeta sin comisiones por cambio de divisa a Alipay o WeChat Pay y paga al tipo de cambio real, sin recargo por cambio en efectivo."
+      buttonText="Ver configuración de pago"
       placeholder={AFFILIATE_LINKS.payment}
     />
   </main>
@@ -72,7 +78,7 @@ const description =
 </BaseLayout>
 
 <script>
-  // Tipos de referencia aproximados: 1 unidad de moneda = X RMB.
+  // Approximate reference rates: 1 unit of currency = X RMB.
   const ratesToRmb: Record<string, number> = {
     USD: 7.2,
     EUR: 7.8,
@@ -89,12 +95,12 @@ const description =
   const commonCosts: { label: string; rmb: number }[] = [
     { label: 'Botella de agua', rmb: 2 },
     { label: 'Viaje en metro', rmb: 4 },
-    { label: 'Snack callejero', rmb: 10 },
-    { label: 'Café', rmb: 30 },
+    { label: 'Tentempié de comida callejera', rmb: 10 },
+    { label: 'Café (cafetería)', rmb: 30 },
     { label: 'Comida en restaurante informal', rmb: 45 },
     { label: 'Trayecto corto en DiDi / taxi', rmb: 25 },
-    { label: 'Tren de alta velocidad (1-2 h)', rmb: 250 },
-    { label: 'Entrada de museo / atracción', rmb: 60 },
+    { label: 'Tren de alta velocidad (1–2 h)', rmb: 250 },
+    { label: 'Entrada a museo / atracción', rmb: 60 },
     { label: 'Hotel de gama media / noche', rmb: 450 },
   ];
 
@@ -124,7 +130,7 @@ const description =
 
   function updateMeta() {
     if (rateLine) {
-      rateLine.textContent = `Tipo de referencia: 1 ${currencyEl.value} ≈ ¥${rate().toFixed(2)} RMB`;
+      rateLine.textContent = `Tipo de cambio de referencia: 1 ${currencyEl.value} ≈ ¥${rate().toFixed(2)} RMB`;
     }
     if (costGrid) {
       costGrid.innerHTML = commonCosts

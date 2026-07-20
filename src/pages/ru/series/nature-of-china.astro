@@ -1,41 +1,43 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
 
 const seriesSlug = 'nature-of-china';
-const posts = (await getCollection('posts-ru'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.series === seriesSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Природа Китая — пейзажи и дикие места';
-const description = 'Откройте природные чудеса Китая глазами иностранного путешественника: горы Аватара в Чжанцзяцзе, сказочные озёра Цзючжайгоу, море облаков Хуаншаня, карстовые пики Гуйлиня и Тибетское плато.';
+const title = 'Природа Китая — ландшафты и дикие места';
+const description = 'Исследуйте природные чудеса Китая глазами иностранного путешественника: «аватарские» горы Zhangjiajie, сказочные озера Jiuzhaigou, море облаков Huangshan, карстовые пики Guilin и Тибетское нагорье.';
 
 const relatedTools = [
-  { href: '/ru/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Чек-лист для сборов', desc: 'Снаряжение для поездок на природу по сезонам' },
-  { href: '/ru/posts/china-visa-free-entry-transit-guide-2026/', title: 'Гид по визе и въезду', desc: 'Разрешения и правила въезда в удалённые регионы' },
-  { href: '/ru/trip-planner/', title: 'Планировщик поездки', desc: 'Соберите маршрут по природным местам Китая' },
+  { href: '/posts/what-to-pack-for-china-a-season-by-season-checklist/', title: 'Список вещей', desc: 'Снаряжение для путешествий на природу по сезонам' },
+  { href: '/posts/china-visa-free-entry-transit-guide-2026/', title: 'Гид по визам и въезду', desc: 'Разрешения и правила въезда в удаленные регионы' },
+  { href: '/trip-planner/', title: 'Планировщик поездки', desc: 'Составьте свой маршрут по природным местам Китая' },
 ];
 
 const relatedCities = [
-  { href: '/ru/posts/sanya-city-guide-for-foreigners/', title: 'Санья', desc: 'Тропические пляжи и дождевые леса' },
-  { href: '/ru/posts/hangzhou-city-guide-for-foreigners/', title: 'Ханчжоу', desc: 'Западное озеро и чайные холмы' },
-  { href: '/ru/posts/chengdu-city-guide-for-foreigners/', title: 'Чэнду', desc: 'Ворота к западным горам и пандам' },
+  { href: '/posts/sanya-city-guide-for-foreigners/', title: 'Sanya', desc: 'Тропические пляжи и дождевой лес' },
+  { href: '/posts/hangzhou-city-guide-for-foreigners/', title: 'Hangzhou', desc: 'West Lake и чайные холмы' },
+  { href: '/posts/chengdu-city-guide-for-foreigners/', title: 'Chengdu', desc: 'Ворота к западным горам и пандам' },
 ];
 
 const otherSeries = [
-  { href: '/ru/series/history-of-china/', title: 'История Китая' },
-  { href: '/ru/series/culture-of-china/', title: 'Культура Китая' },
-  { href: '/ru/series/food-of-china/', title: 'Еда Китая' },
+  { href: '/series/history-of-china/', title: 'История Китая' },
+  { href: '/series/culture-of-china/', title: 'Культура Китая' },
+  { href: '/series/food-of-china/', title: 'Еда Китая' },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'ru';
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-3xl">
       <p class="section-kicker">Серия материалов</p>
@@ -56,7 +58,7 @@ const locale = 'ru';
         {posts.length > 0 ? (
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <a href={`/ru/posts/${post.slug}/`} class="card block hover:no-underline">
+              <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
                 <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
                 <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
@@ -64,14 +66,14 @@ const locale = 'ru';
             ))}
           </div>
         ) : (
-          <p class="mt-6 text-gray-500">Статьи в этой серии пока готовятся. Загляните позже.</p>
+          <p class="mt-6 text-gray-500">Статьи этой серии находятся в подготовке. Загляните позже.</p>
         )}
       </div>
 
       <aside class="space-y-6">
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Полезные инструменты</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Спланируйте поездку</h2>
+          <p class="section-kicker">Практические инструменты</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Спланируйте свою поездку</h2>
           <div class="mt-4 grid gap-3">
             {relatedTools.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
@@ -83,8 +85,8 @@ const locale = 'ru';
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-          <p class="section-kicker">Города-гейты</p>
-          <h2 class="mt-1 text-xl font-bold text-gray-950">Города для старта</h2>
+          <p class="section-kicker">Гиды по городам</p>
+          <h2 class="mt-1 text-xl font-bold text-gray-950">Города-ворота</h2>
           <div class="mt-4 grid gap-3">
             {relatedCities.map((item) => (
               <a href={item.href} class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">

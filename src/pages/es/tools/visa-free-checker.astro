@@ -6,46 +6,33 @@ import AdSlot from '../../../components/AdSlot.astro';
 import AffiliateCta from '../../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../../config';
 
-const title = 'Comprobador de entrada sin visa y tránsito en China';
+const title = 'Verificador de Entrada sin Visa y Tránsito';
 const description =
-  'Comprueba si puedes entrar en China sin visa, usar el tránsito sin visa de 240 horas o si necesitas solicitar una visa según tu nacionalidad y tipo de viaje.';
+  'Comprueba si puedes entrar a China sin visa, usar el tránsito de 240 horas sin visa, o si necesitas solicitarla según tu nacionalidad y tipo de viaje.';
 
 const lastReviewed = '13 de julio de 2026';
 
-// Datos representativos de políticas para 2026. Es orientación, no asesoramiento legal;
-// los viajeros deben confirmar con una embajada antes de reservar.
+// Datos representativos de la politica para 2026. Esto es orientacion, no asesoramiento legal;
+// los viajeros deben confirmarlo con una embajada antes de reservar.
 const countries = [
-  { value: 'United States', label: 'Estados Unidos' },
-  { value: 'United Kingdom', label: 'Reino Unido' },
-  { value: 'Canada', label: 'Canadá' },
-  { value: 'Australia', label: 'Australia' },
-  { value: 'Germany', label: 'Alemania' },
-  { value: 'France', label: 'Francia' },
-  { value: 'Italy', label: 'Italia' },
-  { value: 'Spain', label: 'España' },
-  { value: 'Netherlands', label: 'Países Bajos' },
-  { value: 'Japan', label: 'Japón' },
-  { value: 'South Korea', label: 'Corea del Sur' },
-  { value: 'Singapore', label: 'Singapur' },
-  { value: 'Malaysia', label: 'Malasia' },
-  { value: 'Thailand', label: 'Tailandia' },
-  { value: 'Brazil', label: 'Brasil' },
-  { value: 'New Zealand', label: 'Nueva Zelanda' },
-  { value: 'Switzerland', label: 'Suiza' },
-  { value: 'Ireland', label: 'Irlanda' },
-  { value: 'Norway', label: 'Noruega' },
-  { value: 'Other', label: 'Otro' },
+  'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
+  'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
+  'Singapore', 'Malaysia', 'Thailand', 'Brazil', 'New Zealand',
+  'Switzerland', 'Ireland', 'Norway', 'Other',
 ];
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="es">
-  <Header locale="es" />
+<!-- Contenido generado con asistencia de IA, revisado por redactor nativo -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
     <header class="max-w-2xl">
       <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Herramienta</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Comprobador de entrada sin visa y tránsito</h1>
+      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Verificador de Entrada sin Visa y Tránsito</h1>
       <p class="mt-3 text-lg text-gray-600">{description}</p>
       <p class="mt-3 text-sm text-gray-500">
-        Última revisión: {lastReviewed}. Este comprobador ayuda a planificar; no es una decisión oficial de elegibilidad.
+        Ultima revision: {lastReviewed}. Este verificador es una ayuda para la planificacion, no una decision oficial de elegibilidad.
       </p>
     </header>
 
@@ -56,7 +43,7 @@ const countries = [
       <label class="flex flex-col text-sm">
         <span class="mb-1 font-medium text-gray-700">Nacionalidad de tu pasaporte</span>
         <select id="country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
-          {countries.map((c) => <option value={c.value}>{c.label}</option>)}
+          {countries.map((c) => <option value={c}>{c}</option>)}
         </select>
       </label>
       <label class="flex flex-col text-sm">
@@ -64,11 +51,11 @@ const countries = [
         <select id="trip" class="rounded-lg border border-gray-300 px-3 py-2 text-sm">
           <option value="tourism">Turismo / visita</option>
           <option value="business">Negocios</option>
-          <option value="transit">Solo tránsito hacia otro país</option>
+          <option value="transit">Solo en transito hacia otro pais</option>
         </select>
       </label>
       <div class="sm:col-span-2">
-        <button id="check-btn" class="btn-primary w-full sm:w-auto">Comprobar elegibilidad</button>
+        <button id="check-btn" class="btn-primary w-full sm:w-auto">Comprobar mi elegibilidad</button>
       </div>
     </div>
 
@@ -76,53 +63,53 @@ const countries = [
     <div id="result" class="mt-6 hidden">
       <div class="card" id="result-card"></div>
       <p class="mt-3 text-xs text-gray-400">
-        Las políticas cambian con frecuencia y dependen de tus circunstancias concretas. Confirma siempre con una
-        embajada o consulado chino antes de reservar el viaje. Esta herramienta solo ofrece orientación general.
+        Las politicas cambian con frecuencia y dependen de tus circunstancias especificas. Confirma siempre con una
+        embajada o consulado chino antes de reservar tu viaje. Esta herramienta solo ofrece orientacion general.
       </p>
 
       <AffiliateCta
         title="Planifica el resto de tu viaje"
-        description="Organiza conectividad, pagos y transporte antes de aterrizar en China."
-        buttonText="Ver básicos de viaje"
+        description="Organiza tu conectividad, pagos y transporte antes de aterrizar en China."
+        buttonText="Ver esenciales de viaje"
         placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
 
     <section class="mt-10 rounded-lg border border-gray-200 bg-white p-6" aria-labelledby="official-sources">
-      <h2 id="official-sources" class="text-xl font-bold text-gray-950">Fuentes oficiales que verificar antes de reservar</h2>
+      <h2 id="official-sources" class="text-xl font-bold text-gray-950">Fuentes oficiales que debes verificar antes de reservar</h2>
       <p class="mt-2 text-sm leading-6 text-gray-600">
-        Las listas de países sin visa, puertos de entrada, zonas de viaje permitidas y comprobaciones de embarque de aerolíneas pueden cambiar.
-        Considera definitivas las normas oficiales del gobierno y de la aerolínea.
+        Las listas de paises sin visa, los puertos de entrada, las areas de viaje permitidas y los controles de embarque de las aerolineas pueden cambiar.
+        Considera las normas oficiales del gobierno y de las aerolineas como definitivas.
       </p>
       <ul class="mt-4 grid gap-2 text-sm leading-6 text-gray-700">
-        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Administración Nacional de Inmigración</a> para actualizaciones sobre inspección fronteriza y exenciones de tránsito.</li>
-        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Portal informativo del Consejo de Estado</a> para anuncios de políticas en inglés.</li>
-        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministerio de Asuntos Exteriores</a> y sitios web de embajadas o consulados chinos para normas específicas por pasaporte.</li>
+        <li><a href="https://en.nia.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Administracion Nacional de Inmigracion</a> para actualizaciones sobre inspeccion fronteriza y exenciones de transito.</li>
+        <li><a href="https://english.www.gov.cn/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Portal informativo del Consejo de Estado</a> para anuncios de politicas en ingles.</li>
+        <li><a href="https://www.mfa.gov.cn/eng/" rel="nofollow noopener" target="_blank" class="font-semibold text-brand-700">Ministerio de Relaciones Exteriores</a> y los sitios web de embajadas o consulados chinos para normas especificas segun el pasaporte.</li>
       </ul>
     </section>
 
     <section class="mt-10 grid gap-8 lg:grid-cols-[1fr_320px]">
       <div class="rounded-lg border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Cómo evitar errores con la entrada sin visa</h2>
+        <h2 class="text-2xl font-bold text-gray-900">Como evitar errores con la entrada sin visa</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          El error más común es confundir la entrada ordinaria sin visa con el tránsito sin visa. Un
-          viaje normal de ida y vuelta y una escala hacia un tercer país no son el mismo itinerario. Las aerolíneas
-          revisan los documentos antes de embarcar, así que un malentendido puede detener el viaje antes de llegar a
-          China.
+          El error mas comun es confundir la entrada ordinaria sin visa con el transito sin visa. Un
+          viaje normal de ida y vuelta y una escala hacia un tercer pais no son el mismo itinerario. Las aerolineas
+          revisan los documentos antes del embarque, asi que un malentendido puede impedir el viaje antes de que llegues
+          a China.
         </p>
         <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-600">
-          <li><strong class="text-gray-900">Comprueba primero la nacionalidad del pasaporte.</strong> El país de residencia y el país de facturación de la tarjeta no determinan la elegibilidad sin visa.</li>
-          <li><strong class="text-gray-900">Distingue entrada de tránsito.</strong> El tránsito suele requerir un viaje posterior confirmado a un tercer país o región.</li>
-          <li><strong class="text-gray-900">Confirma los puertos de entrada.</strong> Las políticas de tránsito dependen de puertos designados y zonas de viaje permitidas.</li>
-          <li><strong class="text-gray-900">Ten las pruebas preparadas.</strong> Las aerolíneas y los agentes fronterizos pueden pedir billete de salida, hotel, itinerario o detalles de invitación.</li>
+          <li><strong class="text-gray-900">Primero verifica la nacionalidad del pasaporte.</strong> El pais de residencia y el pais de facturacion de la tarjeta no determinan la elegibilidad sin visa.</li>
+          <li><strong class="text-gray-900">Distingue entre entrada y transito.</strong> El transito normalmente requiere un viaje posterior confirmado a un tercer pais o region.</li>
+          <li><strong class="text-gray-900">Confirma los puertos de entrada.</strong> Las politicas de transito dependen de los puertos designados y de las areas de viaje permitidas.</li>
+          <li><strong class="text-gray-900">Ten tus comprobantes listos.</strong> Las aerolineas y los agentes fronterizos pueden pedir billete de salida, hotel, itinerario o detalles de invitacion.</li>
         </ul>
       </div>
       <aside class="rounded-lg border border-brand-100 bg-brand-50 p-6">
-        <h2 class="text-lg font-bold text-gray-900">Planifica el resto de la llegada</h2>
+        <h2 class="text-lg font-bold text-gray-900">Planifica el resto de tu llegada</h2>
         <div class="mt-4 grid gap-3">
-          <a href="/es/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Leer la guía completa de entrada sin visa</a>
-          <a href="/es/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Usar la lista de llegada</a>
-          <a href="/es/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Planificar transporte desde el aeropuerto</a>
+          <a href="/posts/china-visa-free-entry-transit-guide-2026/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Lee la guia completa sobre entrada sin visa</a>
+          <a href="/posts/first-24-hours-in-china-arrival-checklist/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Usa la lista de verificacion de llegada</a>
+          <a href="/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-brand-100 bg-white p-3 text-sm font-semibold text-gray-900 hover:border-brand-200 hover:text-brand-700 hover:no-underline">Planifica el transporte desde el aeropuerto</a>
         </div>
       </aside>
     </section>
@@ -133,38 +120,15 @@ const countries = [
 <script>
   type TripKey = 'tourism' | 'business' | 'transit';
 
-  const countryLabels: Record<string, string> = {
-    'United States': 'Estados Unidos',
-    'United Kingdom': 'Reino Unido',
-    Canada: 'Canadá',
-    Australia: 'Australia',
-    Germany: 'Alemania',
-    France: 'Francia',
-    Italy: 'Italia',
-    Spain: 'España',
-    Netherlands: 'Países Bajos',
-    Japan: 'Japón',
-    'South Korea': 'Corea del Sur',
-    Singapore: 'Singapur',
-    Malaysia: 'Malasia',
-    Thailand: 'Tailandia',
-    Brazil: 'Brasil',
-    'New Zealand': 'Nueva Zelanda',
-    Switzerland: 'Suiza',
-    Ireland: 'Irlanda',
-    Norway: 'Noruega',
-    Other: 'Otro',
-  };
-
-  // Nacionalidades elegibles para la entrada unilateral sin visa de 30 días (programa 2026).
+  // Nacionalidades elegibles para la entrada unilateral sin visa de 30 dias (programa 2026).
   const visaFree30 = new Set([
     'Germany', 'France', 'Italy', 'Spain', 'Netherlands', 'Switzerland',
     'Ireland', 'Norway', 'Japan', 'South Korea', 'Brazil', 'New Zealand',
     'Malaysia', 'Thailand', 'Australia',
   ]);
 
-  // Nacionalidades elegibles para tránsito sin visa de 240 horas (10 días) a través de
-  // puertos designados al viajar hacia un tercer país o región.
+  // Nacionalidades elegibles para el transito sin visa de 240 horas (10 dias) a traves de
+  // puertos designados al viajar posteriormente a un tercer pais o region.
   const transit240 = new Set([
     'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
     'France', 'Italy', 'Spain', 'Netherlands', 'Japan', 'South Korea',
@@ -178,34 +142,29 @@ const countries = [
     points: string[];
   }
 
-  function getCountryLabel(country: string): string {
-    return countryLabels[country] ?? country;
-  }
-
   function evaluate(country: string, trip: TripKey): Verdict {
     const has30 = visaFree30.has(country);
     const hasTransit = transit240.has(country);
-    const countryLabel = getCountryLabel(country);
 
     if (trip === 'transit') {
       if (hasTransit) {
         return {
           tone: 'good',
-          heading: 'Probablemente calificas para el tránsito sin visa de 240 horas',
-          body: `Como titular de pasaporte de ${countryLabel} en tránsito por China hacia un tercer país, normalmente puedes permanecer hasta 240 horas (10 días) sin visa si entras por un puerto elegible.`,
+          heading: 'Probablemente calificas para el transito sin visa de 240 horas',
+          body: `Como titular de un pasaporte de ${country} en transito por China hacia un tercer pais, por lo general puedes permanecer hasta 240 horas (10 dias) sin visa al entrar por un puerto elegible.`,
           points: [
-            'Debes tener un billete confirmado hacia un tercer país o región dentro de las 240 horas.',
-            'La entrada y salida deben realizarse por puertos de tránsito designados (la mayoría de aeropuertos internacionales principales califican).',
-            'Normalmente estás limitado a la provincia o región de entrada; consulta las normas específicas del puerto.',
+            'Debes tener un billete confirmado de continuacion hacia un tercer pais o region dentro de las 240 horas.',
+            'La entrada y la salida deben hacerse por puertos de transito designados (la mayoria de los principales aeropuertos internacionales califican).',
+            'Normalmente estas limitado a la provincia o region de entrada; revisa las normas especificas del puerto.',
           ],
         };
       }
       return {
         tone: 'warn',
-        heading: 'La exención de visa de tránsito puede no aplicarse a tu nacionalidad',
-        body: `${countryLabel} no figura en nuestra lista estándar de tránsito de 240 horas. Aun así podrías calificar para entrada sin visa si eres elegible, o podrías necesitar una visa de tránsito (G).`,
+        heading: 'Es posible que la exencion de visa de transito no se aplique a tu nacionalidad',
+        body: `${country} no aparece en la lista estandar de transito de 240 horas en nuestros datos. Aun asi, podrias calificar para entrada sin visa si eres elegible, o podrias necesitar una visa de transito (G).`,
         points: [
-          'Comprueba si tu nacionalidad califica para entrada completa sin visa.',
+          'Verifica si tu nacionalidad califica en cambio para entrada completa sin visa.',
           'Si no, solicita la visa adecuada antes de viajar.',
         ],
       };
@@ -215,33 +174,33 @@ const countries = [
     if (has30) {
       return {
         tone: 'good',
-        heading: 'Probablemente calificas para entrada sin visa de 30 días',
-        body: `Como titular de pasaporte de ${countryLabel}, normalmente puedes entrar en China sin visa hasta 30 días por turismo, negocios, visitas familiares o tránsito bajo la política unilateral actual.`,
+        heading: 'Probablemente calificas para entrada sin visa de 30 dias',
+        body: `Como titular de un pasaporte de ${country}, por lo general puedes entrar a China sin visa por hasta 30 dias por turismo, negocios, visitas familiares o transito segun la politica unilateral vigente.`,
         points: [
-          'Tu pasaporte debe tener al menos 6 meses de validez y páginas en blanco.',
-          'Ten preparada prueba de viaje de salida o regreso y alojamiento para inmigración.',
-          'Los 30 días son por entrada; confirma el cálculo más reciente antes de reservar.',
+          'Tu pasaporte debe tener una validez minima de 6 meses y paginas en blanco.',
+          'Ten preparada prueba de viaje de salida/regreso y alojamiento para inmigracion.',
+          'Los 30 dias son por entrada; confirma el conteo mas reciente antes de reservar.',
         ],
       };
     }
     if (hasTransit) {
       return {
         tone: 'info',
-        heading: 'Probablemente necesitas visa, pero la exención de tránsito puede ayudar',
-        body: `${countryLabel} no está en nuestra lista de 30 días sin visa para turismo/negocios, así que por lo general se requiere visa. Sin embargo, si estás de paso hacia un tercer país, podrías usar el tránsito sin visa de 240 horas.`,
+        heading: 'Probablemente se requiere visa, pero la exencion de transito puede ayudarte',
+        body: `${country} no esta en nuestra lista de 30 dias sin visa para turismo/negocios, por lo que en general se requiere visa. Sin embargo, si estas de paso hacia un tercer pais, puedes usar en su lugar el transito sin visa de 240 horas.`,
         points: [
-          'Para una visita específica, solicita con antelación una visa L (turismo) o M (negocios).',
-          'Para una escala de camino a otro lugar, podrías calificar para el tránsito de 240 horas; cambia "Tipo de viaje" a Tránsito para comprobarlo.',
+          'Para una visita propiamente dicha, solicita con antelacion una visa L (turistica) o M (negocios).',
+          'Para una escala rumbo a otro destino, podrias calificar para el transito de 240 horas; cambia "Tipo de viaje" a Transito para comprobarlo.',
         ],
       };
     }
     return {
       tone: 'warn',
-      heading: 'Probablemente necesitas visa',
-      body: `Según nuestros datos, los titulares de pasaporte de ${countryLabel} generalmente necesitan visa para entrar en China para este tipo de viaje. Solicítala en una embajada, consulado o centro de visas autorizado chino antes de viajar.`,
+      heading: 'Probablemente se requiere visa',
+      body: `Segun nuestros datos, los titulares de pasaporte de ${country} por lo general necesitan visa para entrar a China para este tipo de viaje. Solicitala a traves de una embajada, consulado o centro de visados autorizado chino antes de viajar.`,
       points: [
-        'Solicita una visa L (turismo) o M (negocios) con bastante antelación.',
-        'Los requisitos suelen incluir una invitación o itinerario, reservas de hotel y billetes de regreso.',
+        'Solicita una visa L (turistica) o M (negocios) con bastante antelacion a tu viaje.',
+        'Los requisitos normalmente incluyen una invitacion o itinerario, reservas de hotel y billetes de regreso.',
       ],
     };
   }

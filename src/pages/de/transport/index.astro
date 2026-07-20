@@ -7,56 +7,72 @@ import AdSlot from '../../../components/AdSlot.astro';
 import CoverImage from '../../../components/CoverImage.astro';
 
 const CATEGORY = 'transport';
-const posts = (await getCollection('posts-de'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === CATEGORY)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Verkehr in China: Züge, Fahrdienste und Mobilität';
+const title = 'China Transport Guides — Züge, Ride-Hailing & Fortbewegung';
 const description =
-  'So buchen ausländische Besucher Hochgeschwindigkeitszüge, nutzen DiDi und kommen mit U-Bahn, Taxi und Flughafentransfers zuverlässig ans Ziel.';
+  'Erfahren Sie, wie Sie Tickets für Hochgeschwindigkeitszüge buchen, DiDi Ride-Hailing nutzen und sich als ausländischer Besucher im öffentlichen Verkehr in China zurechtfinden.';
 
 const transportPaths = [
-  { href: '/de/posts/china-high-speed-rail-guide-foreigners/', title: 'Fernzüge', desc: 'Für Reisen zwischen Städten: Buchung, Sitzklassen, Passdaten und Timing am Bahnhof.' },
-  { href: '/de/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Ankunft am Flughafen', desc: 'Vergleiche Metro, Taxi, Fahrdienst und Flughafenbahn für die erste Strecke in die Stadt.' },
-  { href: '/de/posts/didi-china-foreign-tourists-guide/', title: 'Fahrdienste', desc: 'Richte DiDi ein, nutze übersetzte Abholpunkte und vermeide Rückfragen vom Fahrer.' },
-  { href: '/de/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'U-Bahn-Systeme', desc: 'Verstehe QR-Tickets, Umstiege und Stoßzeiten am Beispiel Shanghai.' },
+  { href: '/posts/china-high-speed-rail-guide-foreigners/', title: 'Fernzüge', desc: 'Nutzen Sie dies für die Planung zwischen Städten, Sitzklassen, Passangaben und das Timing am Bahnhof.' },
+  { href: '/posts/airport-to-city-transport-beijing-shanghai-guangzhou/', title: 'Ankunft am Flughafen', desc: 'Vergleichen Sie Metro, Taxi, Ride-Hailing und Flughafenbahn für die erste Fahrt in die Stadt.' },
+  { href: '/posts/didi-china-foreign-tourists-guide/', title: 'Ride-Hailing', desc: 'Richten Sie DiDi ein, verwenden Sie übersetzte Abholpins und verringern Sie Reibung durch Fahreranrufe.' },
+  { href: '/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/', title: 'Metrosysteme', desc: 'Lernen Sie QR-Tickets, Umstiege und Gewohnheiten zur Hauptverkehrszeit am Beispiel Shanghai kennen.' },
 ];
+import { getCategoryLabel } from '../../../i18n/categories';
+const locale = 'en';
 ---
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="de">
-  <Header locale="de" />
+<!-- KI-unterstutzt erstellter Inhalt, von muttersprachlichem Redakteur gepruft -->
+
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-    <header class="max-w-2xl">
-      <span class="text-sm font-semibold uppercase tracking-wide text-brand-600">Verkehr</span>
-      <h1 class="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Leitfäden für Verkehr in China</h1>
-      <p class="mt-3 text-lg text-gray-600">{description}</p>
+    <header>
+      <p class="section-kicker">Verkehr</p>
+      <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">Verkehrsführer</h1>
+      <p class="mt-4 max-w-3xl text-justify text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="hub-transport" alt="Moderner Hochgeschwindigkeitszug in China" loading="lazy" />
+    <div class="mt-6">
+      <CoverImage name="hub-transport" alt="Moderner Hochgeschwindigkeitszug und Eisenbahnsystem in China" loading="lazy" />
+    </div>
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+        China verfügt über eines der fortschrittlichsten und umfangreichsten Verkehrsnetze der Welt, was das Reisen zwischen und innerhalb von Städten bemerkenswert einfach macht. Das Kronjuwel ist das Hochgeschwindigkeitsbahnnetz — das größte der Erde — das die meisten großen Städte mit Zügen verbindet, die 350 km/h erreichen. Eine Reise von Beijing nach Shanghai dauert nur 4,5 Stunden, während Beijing nach Xian etwa 4 Stunden dauert. Züge werden in G (Hochgeschwindigkeit), D (schnell) und K/T (regulär) kategorisiert, wobei G-Züge für Fernreisen am komfortabelsten und beliebtesten sind. Tickets können über die offizielle 12306-App oder über Trip.com für Buchungen auf Englisch gebucht werden.
+      </p>
+      <p>
+        Innerhalb der Städte sind U-Bahn-Systeme effizient, erschwinglich und touristenfreundlich, mit englischer Beschilderung in großen Städten wie Beijing, Shanghai, Guangzhou und Shenzhen. DiDi (Chinas Uber) funktioniert für Ausländer nahtlos — laden Sie einfach die App herunter und verknüpfen Sie Alipay oder WeChat Pay. Taxis sind weithin verfügbar, aber die Kommunikation auf Englisch kann schwierig sein, daher ist es hilfreich, Ziele auf Chinesisch aufgeschrieben zu haben. Inlandsflüge sind eine weitere gute Option für lange Distanzen, wobei große Fluggesellschaften wie China Southern, Air China und China Eastern wettbewerbsfähige Preise anbieten. Für das vollständige Erlebnis kombinieren Sie Hochgeschwindigkeitszüge zwischen Regionen mit U-Bahn und DiDi für den lokalen Verkehr.
+      </p>
+    </div>
 
     <AdSlot format="banner" />
 
     <section class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-labelledby="featured-transport">
-      <h2 id="featured-transport" class="sr-only">Empfohlene Verkehrsartikel</h2>
-      <a href="/de/posts/china-high-speed-rail-guide-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">Leitfaden für Hochgeschwindigkeitszüge</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Tickets buchen, Klassen wählen und Bahnhöfe stressfrei meistern</p>
+      <h2 id="featured-transport" class="sr-only">Ausgewählte Verkehrsführer</h2>
+      <a href="/posts/china-high-speed-rail-guide-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">Hochgeschwindigkeitsbahn-Leitfaden</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Tickets buchen, Klassen wählen, Bahnhöfe navigieren</p>
       </a>
-      <a href="/de/posts/book-china-train-tickets-12306-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+      <a href="/posts/book-china-train-tickets-12306-foreigners/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">12306-Zugbuchung</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Schritt für Schritt mit ausländischem Reisepass</p>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Schritt-für-Schritt-Anleitung mit ausländischem Reisepass</p>
       </a>
-      <a href="/de/posts/didi-china-foreign-tourists-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
-        <span class="font-semibold text-gray-950">DiDi nutzen</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">So funktioniert Chinas wichtigste Fahrdienst-App</p>
+      <a href="/posts/didi-china-foreign-tourists-guide/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+        <span class="font-semibold text-gray-950">DiDi Ride-Hailing</span>
+        <p class="mt-1 text-xs leading-5 text-gray-600">So nutzen Sie Ride-Hailing in China als ausländischer Tourist</p>
       </a>
-      <a href="/de/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
+      <a href="/posts/airport-to-city-transport-beijing-shanghai-guangzhou/" class="rounded-lg border border-gray-200 bg-white p-4 text-sm shadow-sm transition-colors hover:border-brand-300 hover:bg-brand-50 hover:no-underline">
         <span class="font-semibold text-gray-950">Flughafentransfers</span>
-        <p class="mt-1 text-xs leading-5 text-gray-600">Praxisleitfäden für Peking, Shanghai und Guangzhou</p>
+        <p class="mt-1 text-xs leading-5 text-gray-600">Leitfäden für Beijing, Shanghai, Guangzhou</p>
       </a>
     </section>
 
     <section class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4" aria-labelledby="transport-paths">
-      <h2 id="transport-paths" class="sr-only">Verkehrsplanung nach Thema</h2>
+      <h2 id="transport-paths" class="sr-only">Wege zur Verkehrsplanung</h2>
       {transportPaths.map((path) => (
         <a href={path.href} class="card block hover:no-underline">
           <h3 class="text-lg font-bold text-gray-950">{path.title}</h3>
@@ -68,18 +84,40 @@ const transportPaths = [
     <section class="mt-8 grid gap-6 md:grid-cols-2">
       {posts.map((post, i) => (
         <>
-          <a href={`/de/posts/${post.slug}/`} class="card block hover:no-underline">
-            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{post.data.category}</span>
+          <a href={`/posts/${post.slug}/`} class="card block hover:no-underline">
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-600">{getCategoryLabel(post.data.category, locale)}</span>
             <h2 class="mt-1.5 text-lg font-bold text-gray-900">{post.data.title}</h2>
             <p class="mt-1.5 text-sm text-gray-600">{post.data.description}</p>
             <time datetime={post.data.pubDate.toISOString()} class="mt-3 block text-xs text-gray-400">
-              {post.data.pubDate.toLocaleDateString('de-DE', { year: 'numeric', month: 'short', day: 'numeric' })}
+              {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
             </time>
           </a>
           {(i + 1) % 3 === 0 && <div class="md:col-span-2"><AdSlot format="in-article" /></div>}
         </>
       ))}
-      {posts.length === 0 && <p class="text-gray-500">Weitere Artikel erscheinen in Kürze.</p>}
+      {posts.length === 0 && <p class="text-gray-500">Leitfäden erscheinen in Kürze.</p>}
+    </section>
+
+    <section class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+      <h2 class="text-xl font-bold text-gray-950">Wesentliche Verkehrsführer</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <a href="/posts/china-high-speed-rail-guide-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Hochgeschwindigkeitsbahn-Leitfaden</p>
+          <p class="mt-1 text-sm text-gray-600">Sitzklassen, Buchungstipps und Orientierung am Bahnhof</p>
+        </a>
+        <a href="/posts/book-china-train-tickets-12306-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Zugtickets buchen</p>
+          <p class="mt-1 text-sm text-gray-600">12306 Schritt für Schritt mit ausländischem Reisepass</p>
+        </a>
+        <a href="/posts/didi-china-foreign-tourists-guide/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">DiDi Ride-Hailing</p>
+          <p class="mt-1 text-sm text-gray-600">So nutzen Sie Ride-Hailing in China als ausländischer Tourist</p>
+        </a>
+        <a href="/posts/shanghai-metro-for-foreigners-tickets-qr-codes-transfers/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Shanghai-Metro-Leitfaden</p>
+          <p class="mt-1 text-sm text-gray-600">QR-Codes, Tickets und Umsteigetipps</p>
+        </a>
+      </div>
     </section>
   </main>
   <Footer />

@@ -1,72 +1,87 @@
 ---
-
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import CoverImage from '../../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
-const posts = (await getCollection('posts-ru'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = 'Еда, рестораны и этикет в Китае';
-const description = 'Практичные гастрономические гиды по Китаю для иностранных гостей: доставка еды, безопасность уличной еды, уровни остроты, чаевые, ресторанный этикет и культура питания.';
+const title = 'Гиды по еде, ресторанам и этикету в Китае';
+const description =
+  'Практические гиды по еде в Китае для иностранных путешественников: заказ доставки, безопасность уличной еды, уровни остроты, чаевые, ресторанный этикет и культура питания.';
 
 const pathways = [
   {
-    title: 'Заказать еду без знания китайского',
-    desc: 'Настройте приложения доставки, сохраните адрес отеля и избегайте путаницы со звонками курьеров.',
-    href: '/ru/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+    title: 'Заказывайте без знания китайского',
+    desc: 'Настройте приложения доставки, сохраните адреса отелей и избегайте путаницы со звонками курьеров.',
+    href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
-    title: 'Безопасно есть уличную еду',
-    desc: 'Ориентируйтесь на поток покупателей, видимый жар, привычки с водой и фразы про остроту, чтобы выбирать удачные точки.',
-    href: '/ru/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
+    title: 'Ешьте уличную еду безопасно',
+    desc: 'Оценивайте поток посетителей, видимый нагрев, привычки с водой и фразы об остроте, чтобы выбирать лучшие точки.',
+    href: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: 'Разобраться в ресторанном этикете',
-    desc: 'Поймите, когда чаевые не нужны, когда важен сервисный сбор и как устроены местные ресторанные нормы.',
-    href: '/ru/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
+    title: 'Разберитесь с ресторанным этикетом',
+    desc: 'Знайте, когда не стоит оставлять чаевые, когда важны сервисные сборы и как работают местные ресторанные нормы.',
+    href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
 
 const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
-    title: 'Байцзю: основы',
-    desc: 'Полезная база, если на банкете или званом ужине подают национальный китайский крепкий напиток.',
+    title: 'Baijiu 101',
+    desc: 'Полезная справка, если на банкете или организованном ужине подают национальный крепкий напиток Китая.',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: 'Как вежливо пить байцзю',
-    desc: 'Более подробный гид по тостам, небольшим порциям и тому, как держать темп на официальных застольях.',
+    title: 'Как вежливо пить baijiu',
+    desc: 'Более подробный сопутствующий гид по тостам, маленьким порциям и тому, как держать темп на официальных трапезах.',
   },
 ];
-import { getCategoryLabel } from '../../../i18n/categories';
-const locale = 'ru';
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
+<!-- Контент создан с помощью ИИ, проверен носителем языка -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ru">
-  <Header locale="ru" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-    <header class="max-w-3xl">
+    <header>
       <p class="section-kicker">Еда и рестораны</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+      <p class="mt-4 max-w-3xl text-justify text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chinese-cuisine" alt="Острые сычуаньские блюда уличной еды на ночном рынке в Китае" loading="lazy" />
+    <div class="mt-6">
+      <CoverImage name="topic-chinese-cuisine" alt="Острые блюда сычуаньской уличной еды на ночном рынке в Китае" loading="lazy" />
+    </div>
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+  Китайская кухня — одна из великих кулинарных традиций мира, включающая восемь основных региональных направлений. От обжигающе острого сычуаньского хотпота до изысканного кантонского димсама, от легендарной пекинской утки Beijing до лапши ручной вытяжки Xi’an — каждый регион предлагает уникальные вкусы и впечатления. Как иностранный путешественник, вы найдёте невероятное разнообразие вариантов питания: от уличных лавок и лапшичных до ресторанов высокого класса и фуд-кортов в каждом торговом центре. Современный Китай также предлагает приложения доставки еды, такие как Meituan и Ele.me, благодаря которым можно легко заказать еду в отель. В большинстве городов есть и международная кухня, хотя настоящее приключение — это погружение в местную китайскую еду.
+      </p>
+      <p>
+  Когда вы едите вне дома в Китае, помогут несколько практических советов: в крупных городах Alipay и WeChat Pay принимают повсюду, но наличные полезны для небольших уличных продавцов. Англоязычные меню часто встречаются в туристических районах, но в местных ресторанах полезно иметь под рукой приложение для перевода. Чаевые в Китае не ожидаются. С безопасностью еды в популярных ресторанах обычно всё хорошо, хотя разумно выбирать оживлённые места с высокой проходимостью. Тем, у кого есть пищевые ограничения, стоит учитывать, что в китайской кухне широко используется MSG, а многие блюда содержат соевое масло. Вегетарианские варианты есть, но чёткое объяснение своих потребностей помогает избежать недопонимания.
+      </p>
+    </div>
 
     <AdSlot format="banner" />
 
-    <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">Маршруты планирования еды</h2>
+    <section class="mt-8 grid gap-5 md:grid-cols-3 auto-rows-fr" aria-labelledby="food-pathways">
+      <h2 id="food-pathways" class="sr-only">Маршруты планирования питания</h2>
       {pathways.map((item) => (
-        <a href={item.href} class="card block hover:no-underline">
-          <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
-          <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
+        <a href={item.href} class="card flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-brand-200 hover:bg-brand-50 hover:no-underline h-full">
+          <div>
+            <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
+          </div>
           <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">Читать гид</span>
         </a>
       ))}
@@ -80,24 +95,24 @@ const locale = 'ru';
             <h2>Статьи о еде и этикете</h2>
           </div>
         </div>
-        <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="mt-6 grid gap-5 md:grid-cols-2 auto-rows-fr">
           {posts.map((post) => (
-            <a href={`/ru/posts/${post.slug}/`} class="card block hover:no-underline">
+            <a href={`/posts/${post.slug}/`} class="card flex flex-col p-5 rounded-xl border border-gray-200 bg-white shadow-sm hover:border-brand-200 hover:bg-brand-50 hover:no-underline h-full">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
-              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+              <p class="mt-2 text-sm leading-6 text-gray-600 flex-1">{post.data.description}</p>
             </a>
           ))}
         </div>
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">Культурный контекст</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">Если на столе появляется байцзю</h2>
+        <p class="section-kicker">Культурное дополнение</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Когда появляется baijiu</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          Для большинства туристических ужинов знания об алкоголе не нужны, но на банкетах, деловых
-          ужинах и семейных застольях в сельской местности иногда бывают тосты с байцзю. Эти материалы
-          помогут разобраться глубже, а ChinaTripBox по-прежнему сосредоточен на практической стороне поездки.
+          Для большинства туристических приёмов пищи знание алкоголя не требуется, но на организованных банкетах, деловых ужинах
+          и семейных трапезах в сельской местности иногда бывают тосты с baijiu. Эти дополнительные материалы раскрывают тему глубже,
+          в то время как ChinaTripBox остаётся сосредоточенным на логистике путешествий.
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
@@ -109,6 +124,28 @@ const locale = 'ru';
         </div>
       </aside>
     </section>
-  </main>
+  
+    <section class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+      <h2 class="text-xl font-bold text-gray-950">Больше советов о еде и ресторанах</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <a href="/posts/china-food-guide-regional-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Гид по региональной кухне</p>
+          <p class="mt-1 text-sm text-gray-600">Что есть по регионам: сычуаньская, кантонская, пекинская кухня и не только</p>
+        </a>
+        <a href="/posts/ordering-food-in-china-without-chinese-meituan-ele-me/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Заказ еды без китайского</p>
+          <p class="mt-1 text-sm text-gray-600">Как пользоваться Meituan и Ele.me иностранному путешественнику</p>
+        </a>
+        <a href="/posts/chengdu-street-food-safety-spice-levels-what-to-order/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Уличная еда Chengdu</p>
+          <p class="mt-1 text-sm text-gray-600">Советы по безопасности, уровни остроты и блюда, которые стоит попробовать</p>
+        </a>
+        <a href="/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Этикет чаевых</p>
+          <p class="mt-1 text-sm text-gray-600">Когда оставлять чаевые в Китае, а когда нет</p>
+        </a>
+      </div>
+    </section>
+</main>
   <Footer />
 </BaseLayout>

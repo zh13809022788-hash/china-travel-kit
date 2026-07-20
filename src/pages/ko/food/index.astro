@@ -1,34 +1,34 @@
 ---
-
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import AdSlot from '../../../components/AdSlot.astro';
-import CoverImage from '../../../components/CoverImage.astro';
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import AdSlot from "../../../components/AdSlot.astro";
+import CoverImage from "../../../components/CoverImage.astro";
 
-const posts = (await getCollection('posts-ko'))
+const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === 'food' || p.data.tags.includes('tipping') || p.data.tags.includes('restaurants'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const title = '중국 음식·식당·식사 예절 가이드';
-const description = '중국 여행자를 위한 음식 가이드 모음입니다. 주문 방법, 길거리 음식, 매운맛, 팁 문화, 식당 이용 흐름을 정리했습니다.';
+const title = '중국 음식, 외식 및 에티켓 가이드';
+const description =
+  '외국인 방문객을 위한 실용적인 중국 음식 가이드: 배달 주문, 길거리 음식 안전, 매운맛 단계, 팁 문화, 식당 예절, 그리고 외식 문화까지 다룹니다.';
 
 const pathways = [
   {
     title: '중국어 없이 주문하기',
-    desc: '배달 앱을 준비하고, 호텔 주소를 저장하고, 배달 기사 연락 문제를 줄이는 방법을 확인하세요.',
-    href: '/ko/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
+    desc: '배달 앱을 설정하고, 호텔 주소를 저장하고, 배달 기사 전화로 생기는 혼선을 피하세요.',
+    href: '/posts/ordering-food-in-china-without-chinese-meituan-ele-me/',
   },
   {
     title: '길거리 음식 안전하게 먹기',
-    desc: '손님 회전율, 조리 온도, 물 사용 습관, 매운맛 표현을 기준으로 더 안전하게 고르는 방법입니다.',
-    href: '/ko/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
+    desc: '회전율, 눈에 보이는 가열 상태, 물 사용 습관, 매운맛 표현을 활용해 더 나은 가게를 고르세요.',
+    href: '/posts/chengdu-street-food-safety-spice-levels-what-to-order/',
   },
   {
-    title: '식당 예절 이해하기',
-    desc: '중국에서 언제 팁이 필요 없는지, 서비스 요금은 어떻게 보아야 하는지, 기본적인 식당 문화를 정리했습니다.',
-    href: '/ko/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
+    title: '외식 예절 익히기',
+    desc: '언제 팁을 주지 않는지, 언제 서비스 요금이 중요한지, 그리고 현지 식당 예절이 어떻게 작동하는지 알아두세요.',
+    href: '/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/',
   },
 ];
 
@@ -36,37 +36,53 @@ const cultureLinks = [
   {
     href: 'https://baijiu365.com/baijiu-101/',
     title: 'Baijiu 101',
-    desc: '연회나 초대 식사에서 중국식 증류주를 접하게 될 때 배경지식으로 참고하기 좋습니다.',
+    desc: '연회나 초대를 받은 저녁 식사에 중국의 대표 증류주가 포함될 때 유용한 배경지식입니다.',
   },
   {
     href: 'https://baijiu365.com/how-to-drink-baijiu/',
-    title: 'How to drink baijiu politely',
-    desc: '건배 문화, 잔 비우는 속도, 격식 있는 식사 자리에서의 기본 예절을 더 자세히 볼 수 있습니다.',
+    title: 'Baijiu를 예의 있게 마시는 법',
+    desc: '건배, 소량씩 따르기, 그리고 격식 있는 식사에서 자신의 페이스를 조절하는 법을 더 깊이 다루는 동반 가이드입니다.',
   },
 ];
+import { getCategoryLabel } from "../../../i18n/categories";
+const locale = 'en';
 ---
+<!-- AI 지원으로 생성된 콘텐츠, 원어민 검토 완료 -->
 
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="ko">
-  <Header locale="ko" />
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main class="container-page py-10">
-    <header class="max-w-3xl">
-      <p class="section-kicker">음식과 식문화</p>
+    <header>
+      <p class="section-kicker">음식 및 외식</p>
       <h1 class="mt-2 text-4xl font-bold leading-tight text-gray-950">{title}</h1>
-      <p class="mt-4 text-lg leading-8 text-gray-600">{description}</p>
+      <p class="mt-4 max-w-3xl text-justify text-lg leading-8 text-gray-600">{description}</p>
     </header>
 
-    <CoverImage name="topic-chengdu-food" alt="중국 야시장의 매콤한 쓰촨 길거리 음식" loading="lazy" />
+    <div class="mt-6">
+      <CoverImage name="topic-chinese-cuisine" alt="중국 야시장의 매콤한 쓰촨 길거리 음식 요리들" loading="lazy" />
+    </div>
+
+    <div class="mt-8 space-y-4 text-justify text-lg leading-8 text-gray-600">
+      <p>
+  중국 요리는 세계적인 미식 전통 가운데 하나로, 크게 여덟 가지 주요 지역 스타일로 나뉩니다. 화끈한 쓰촨 훠궈부터 섬세한 광둥식 딤섬, 베이징의 전설적인 베이징덕부터 Xi’an의 수타면까지, 각 지역은 저마다 독특한 맛과 경험을 선사합니다. 외국인 방문객이라면 길거리 노점과 국수집부터 고급 레스토랑, 쇼핑몰마다 있는 푸드코트까지 놀라울 만큼 다양한 외식 선택지를 만나게 됩니다. 현대 중국에서는 Meituan과 Ele.me 같은 음식 배달 앱도 제공되어, 호텔로 식사를 주문하기도 쉽습니다. 대부분의 도시에는 세계 각국의 음식도 있지만, 진짜 모험은 현지 중국 요리에 뛰어드는 데 있습니다.
+      </p>
+      <p>
+  중국에서 외식할 때는 몇 가지 실용적인 팁이 도움이 됩니다. 대도시에서는 거의 모든 곳에서 Alipay와 WeChat Pay를 사용할 수 있지만, 작은 길거리 상인에게는 현금이 유용합니다. 관광지에서는 영어 메뉴가 흔하지만, 현지 식당에서는 번역 앱을 준비해 두면 도움이 됩니다. 중국에서는 팁을 주는 문화가 일반적이지 않습니다. 음식 위생은 인기 있는 식당에서는 대체로 좋은 편이지만, 손님이 많아 회전율이 높은 곳을 선택하는 것이 현명합니다. 식이 제한이 있는 경우에는 중국 요리에 MSG가 널리 사용되고 많은 요리에 대두유가 들어간다는 점을 알아두세요. 채식 메뉴도 있기는 하지만, 오해를 피하려면 분명하게 의사소통하는 것이 좋습니다.
+      </p>
+    </div>
 
     <AdSlot format="banner" />
 
-    <section class="mt-8 grid gap-5 md:grid-cols-3" aria-labelledby="food-pathways">
-      <h2 id="food-pathways" class="sr-only">음식 준비 경로</h2>
+    <section class="mt-8 grid gap-5 md:grid-cols-3 auto-rows-fr" aria-labelledby="food-pathways">
+      <h2 id="food-pathways" class="sr-only">음식 계획 경로</h2>
       {pathways.map((item) => (
-        <a href={item.href} class="card block hover:no-underline">
-          <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
-          <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">가이드 보기</span>
+        <a href={item.href} class="card flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-brand-200 hover:bg-brand-50 hover:no-underline h-full">
+          <div>
+            <h3 class="text-lg font-bold text-gray-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">{item.desc}</p>
+          </div>
+          <span class="mt-4 inline-flex text-sm font-semibold text-brand-700">가이드 읽기</span>
         </a>
       ))}
     </section>
@@ -76,27 +92,27 @@ const cultureLinks = [
         <div class="section-heading">
           <div>
             <p class="section-kicker">가이드</p>
-            <h2>음식과 식당 관련 글</h2>
+            <h2>음식 및 식사 예절 관련 글</h2>
           </div>
         </div>
-        <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="mt-6 grid gap-5 md:grid-cols-2 auto-rows-fr">
           {posts.map((post) => (
-            <a href={`/ko/posts/${post.slug}/`} class="card block hover:no-underline">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{post.data.category}</span>
+            <a href={`/posts/${post.slug}/`} class="card flex flex-col p-5 rounded-xl border border-gray-200 bg-white shadow-sm hover:border-brand-200 hover:bg-brand-50 hover:no-underline h-full">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-700">{getCategoryLabel(post.data.category, locale)}</span>
               <h3 class="mt-2 text-lg font-bold text-gray-950">{post.data.title}</h3>
-              <p class="mt-2 text-sm leading-6 text-gray-600">{post.data.description}</p>
+              <p class="mt-2 text-sm leading-6 text-gray-600 flex-1">{post.data.description}</p>
             </a>
           ))}
         </div>
       </div>
 
       <aside class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <p class="section-kicker">문화 참고 자료</p>
-        <h2 class="mt-1 text-xl font-bold text-gray-950">바이주를 마주할 때</h2>
+        <p class="section-kicker">문화 동반 가이드</p>
+        <h2 class="mt-1 text-xl font-bold text-gray-950">Baijiu가 등장할 때</h2>
         <p class="mt-3 text-sm leading-6 text-gray-600">
-          대부분의 관광객 식사에서는 술 지식이 꼭 필요하지 않지만, 연회나 비즈니스 식사,
-          지방 가정식 초대에서는 바이주 건배 문화가 나올 수 있습니다. ChinaTripBox는 여행
-          실무에 집중하고, 아래 자료는 문화적 배경을 더 깊게 알고 싶을 때 참고하기 좋습니다.
+          대부분의 여행자 식사는 술에 대한 지식을 필요로 하지 않지만, 초대받은 연회, 비즈니스 저녁 식사,
+          그리고 지방의 가정 식사에서는 때때로 baijiu 건배가 포함됩니다. 이 동반 자료들은 그 주제를 더 깊이 다루며,
+          ChinaTripBox는 여행 실무 정보에 집중합니다.
         </p>
         <div class="mt-5 grid gap-3">
           {cultureLinks.map((link) => (
@@ -108,6 +124,28 @@ const cultureLinks = [
         </div>
       </aside>
     </section>
-  </main>
+  
+    <section class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+      <h2 class="text-xl font-bold text-gray-950">더 많은 음식 및 외식 팁</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <a href="/posts/china-food-guide-regional-foreigners/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">지역별 음식 가이드</p>
+          <p class="mt-1 text-sm text-gray-600">쓰촨, 광둥, 베이징 등 지역별로 무엇을 먹어야 하는지</p>
+        </a>
+        <a href="/posts/ordering-food-in-china-without-chinese-meituan-ele-me/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">중국어 없이 음식 주문하기</p>
+          <p class="mt-1 text-sm text-gray-600">외국인 방문객으로서 Meituan과 Ele.me를 사용하는 방법</p>
+        </a>
+        <a href="/posts/chengdu-street-food-safety-spice-levels-what-to-order/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">Chengdu 길거리 음식</p>
+          <p class="mt-1 text-sm text-gray-600">안전 팁, 매운맛 단계, 꼭 먹어봐야 할 음식</p>
+        </a>
+        <a href="/posts/tipping-in-china-when-it-s-expected-and-when-it-s-not/" class="rounded-lg bg-white p-4 shadow-sm hover:shadow transition">
+          <p class="font-semibold text-brand-600">팁 문화 에티켓</p>
+          <p class="mt-1 text-sm text-gray-600">중국에서 팁을 줘야 할 때와 그렇지 않을 때</p>
+        </a>
+      </div>
+    </section>
+</main>
   <Footer />
 </BaseLayout>

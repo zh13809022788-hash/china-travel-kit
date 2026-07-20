@@ -1,53 +1,56 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AdSlot from '../../components/AdSlot.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import AdSlot from "../../components/AdSlot.astro";
 
-const title = '免費中國行程規劃工具';
+const title = '免費中國旅行規劃工具';
 const description =
-  '用付款、eSIM、交通、App 設定、現金和第一天清單建議，打造實用的首次中國旅行計畫。';
+  '為第一次前往中國的旅程建立實用計畫，涵蓋付款、eSIM、交通、App 設定、現金與首日檢查清單建議。';
 
 const needOptions = [
   { value: 'payment', label: '付款設定' },
-  { value: 'esim', label: 'eSIM 與上網' },
+  { value: 'esim', label: 'eSIM 與網路' },
   { value: 'transport', label: '機場與火車' },
-  { value: 'hotel', label: '酒店區域選擇' },
+  { value: 'hotel', label: '飯店區域選擇邏輯' },
   { value: 'apps', label: 'App 與翻譯' },
-  { value: 'cash', label: '現金備用' },
+  { value: 'cash', label: '現金備用方案' },
   { value: 'visa', label: '免簽入境' },
-  { value: 'food', label: '美食與外送' },
+  { value: 'food', label: '餐飲與外送' },
 ];
 ---
+<!-- AI輔助生成內容，經母語者審校 -->
 
-<BaseLayout title={`${title} | ChinaTripBox`} description={description} locale="zh-TW">
-  <Header locale="zh-TW" />
+
+<BaseLayout title={`${title} | ChinaTripBox`} description={description}>
+  <Header />
   <main>
     <section class="border-b border-gray-200 bg-white">
       <div class="container-page grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
         <div>
           <p class="section-kicker">免費規劃工具</p>
           <h1 class="mt-3 max-w-3xl text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-            出發前打造實用的中國抵達計畫
+            在起飛前建立一份實用的中國入境計畫
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            獲得付款、eSIM 數據、機場交通、App 設定、現金備用和每日行程安排的初步計畫。工具在瀏覽器中運行，不會儲存您的答案。
+            取得一份涵蓋付款、eSIM 數據、機場交通、App 設定、現金備援與每日節奏安排的初步計畫。
+            它會在你的瀏覽器中運行，且不會儲存你的回答。
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
             <a href="#planner" class="btn-primary">開始規劃</a>
-            <a href="/zh-tw/travel-help/" class="btn-outline">尋求旅行協助</a>
-            <a href="/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">閱讀首次旅行指南</a>
+            <a href="/travel-help/" class="btn-outline">詢問旅遊協助</a>
+            <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="btn-outline">閱讀新手指南</a>
           </div>
         </div>
 
         <aside class="rounded-lg border border-gray-200 bg-gray-50 p-5">
           <p class="section-kicker">最適合</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">首次訪中的旅客</h2>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">首次旅客的行前設定</h2>
           <ul class="mt-4 grid gap-3 text-sm leading-6 text-gray-700">
-            <li>抵達前的付款準備</li>
-            <li>eSIM、漫遊和 App 存取決策</li>
-            <li>機場到市區的第一步規劃</li>
-            <li>簡單的逐城市行程框架</li>
+            <li>抵達前完成付款準備</li>
+            <li>eSIM、漫遊與 App 存取方式的決策</li>
+            <li>從機場前往市區的第一步規劃</li>
+            <li>簡單的逐城市旅行架構</li>
           </ul>
         </aside>
       </div>
@@ -59,43 +62,43 @@ const needOptions = [
       <section id="planner" class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <form id="trip-planner-form" class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm md:p-6">
           <div class="border-b border-gray-200 pb-5">
-            <p class="section-kicker">旅行資訊</p>
-            <h2 class="mt-2 text-2xl font-bold text-gray-950">告訴我們你的情況</h2>
+            <p class="section-kicker">旅程資訊</p>
+            <h2 class="mt-2 text-2xl font-bold text-gray-950">告訴我們你目前知道的資訊</h2>
           </div>
 
           <div class="mt-6 grid gap-5 md:grid-cols-2">
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              出發國家或地區
-              <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="美國、英國、新加坡..." />
+              居住國家或地區
+              <input id="home-country" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="United States, UK, Singapore..." />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               抵達城市
               <select id="arrival-city" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>上海</option>
-                <option>北京</option>
-                <option>廣州</option>
-                <option>深圳</option>
-                <option>成都</option>
-                <option>杭州</option>
-                <option>其他城市</option>
+                <option>Shanghai</option>
+                <option>Beijing</option>
+                <option>Guangzhou</option>
+                <option>Shenzhen</option>
+                <option>Chengdu</option>
+                <option>Hangzhou</option>
+                <option>Other city</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800 md:col-span-2">
-              目的城市
-              <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="上海、杭州、北京" />
+              目的地城市
+              <input id="destination-cities" class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal text-gray-700" placeholder="Shanghai, Hangzhou, Beijing" />
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
-              旅行天數
+              旅程長度
               <select id="trip-length" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
                 <option value="3">3 天</option>
                 <option value="5">5 天</option>
                 <option value="7" selected>7 天</option>
                 <option value="10">10 天</option>
                 <option value="14">14 天</option>
-                <option value="21">21 天以上</option>
+                <option value="21">21 天或以上</option>
               </select>
             </label>
 
@@ -107,34 +110,34 @@ const needOptions = [
                 <option>長住</option>
                 <option>數位遊牧</option>
                 <option>探親</option>
-                <option>過境</option>
+                <option>轉機</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               預算範圍
               <select id="budget-range" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>經濟</option>
-                <option selected>舒適</option>
-                <option>高級</option>
+                <option>節省型</option>
+                <option selected>舒適型</option>
+                <option>高級型</option>
               </select>
             </label>
 
             <label class="grid gap-1 text-sm font-semibold text-gray-800">
               旅行風格
               <select id="travel-style" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-700">
-                <option>高效</option>
-                <option>經濟</option>
-                <option selected>舒適</option>
-                <option>家庭</option>
-                <option>商務</option>
+                <option>效率優先</option>
+                <option>節省預算</option>
+                <option selected>舒適輕鬆</option>
+                <option>家庭旅遊</option>
+                <option>商務行程</option>
                 <option>美食導向</option>
               </select>
             </label>
           </div>
 
           <fieldset class="mt-6">
-            <legend class="text-sm font-semibold text-gray-800">你需要什麼方面的協助？</legend>
+            <legend class="text-sm font-semibold text-gray-800">你需要哪方面的協助？</legend>
             <div class="mt-3 grid gap-3 sm:grid-cols-2">
               {needOptions.map((option) => (
                 <label class="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700">
@@ -146,7 +149,7 @@ const needOptions = [
           </fieldset>
 
           <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p id="planner-status" class="text-sm text-gray-500">不需帳號或敏感資料。</p>
+            <p id="planner-status" class="text-sm text-gray-500">不需要帳號或敏感資料。</p>
             <button class="btn-primary" type="submit">產生計畫</button>
           </div>
         </form>
@@ -154,9 +157,10 @@ const needOptions = [
         <aside class="space-y-6">
           <section class="rounded-lg border border-gray-200 bg-white p-5">
             <p class="section-kicker">升級方案</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">需要人工審查？</h2>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">需要真人審查嗎？</h2>
             <p class="mt-3 text-sm leading-6 text-gray-600">
-              如果你的路線、時間、付款設定或第一天安排讓你不放心，可以將產生的計畫透過電子郵件發送，索取人工審查的修正清單。
+              如果你的路線、時間安排、付款設定或第一天的行程讓你覺得有風險，可以把產生的
+              計畫透過電子郵件寄出，請對方提供一份經人工審查的修正清單。
             </p>
             <a id="planner-email-link" class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 hover:border-brand-600 hover:text-brand-600 hover:no-underline" href="mailto:zh13809022788@gmail.com?subject=ChinaTripBox%20Trip%20Review%20Request">
               準備審查郵件
@@ -164,10 +168,11 @@ const needOptions = [
           </section>
 
           <section class="rounded-lg border border-amber-200 bg-amber-50 p-5">
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">使用限制</p>
-            <h2 class="mt-2 text-xl font-bold text-gray-950">請作為規劃參考</h2>
+            <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">限制</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-950">請將此工具作為規劃輔助</h2>
             <p class="mt-3 text-sm leading-6 text-gray-700">
-              本工具非法律、移民、醫療、銀行或緊急建議。請向官方來源確認重要的入境、航空、酒店、信用卡、電信和 App 規定。
+              此工具不構成法律、移民、醫療、銀行或緊急情況建議。重要的入境、航空公司、
+              飯店、卡片、電信與 App 規定，請務必向官方來源查證。
             </p>
           </section>
         </aside>
@@ -175,41 +180,41 @@ const needOptions = [
 
       <section id="plan-output" class="mt-10 hidden rounded-lg border border-brand-100 bg-brand-50 p-5 md:p-6" aria-live="polite">
         <div class="border-b border-brand-100 pb-4">
-          <p class="section-kicker">產生的計畫</p>
-          <h2 class="mt-2 text-2xl font-bold text-gray-950">你的中國旅行設定草稿</h2>
+          <p class="section-kicker">已產生的計畫</p>
+          <h2 class="mt-2 text-2xl font-bold text-gray-950">你的中國旅行設定草案</h2>
         </div>
         <div id="plan-content" class="mt-5 grid gap-5"></div>
       </section>
 
       <section class="mt-12 grid gap-5 md:grid-cols-3">
-        <a href="/zh-tw/payment/" class="card block hover:no-underline">
+        <a href="/payment/" class="card block hover:no-underline">
           <p class="section-kicker">付款</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">準備 Alipay 和 WeChat Pay</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">抵達前至少設定一個錢包和一個備用付款方式。</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">先準備好 Alipay 與 WeChat Pay</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">至少在抵達前設定好一個電子錢包與一種備用付款方式。</p>
         </a>
-        <a href="/zh-tw/esim/" class="card block hover:no-underline">
-          <p class="section-kicker">上網</p>
+        <a href="/esim/" class="card block hover:no-underline">
+          <p class="section-kicker">網路</p>
           <h2 class="mt-2 text-xl font-bold text-gray-950">選擇 eSIM 或漫遊方案</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">確保第一天就能載入地圖、翻譯、傳訊和叫車。</p>
+          <p class="mt-3 text-sm leading-6 text-gray-600">確保你在第一天就能載入地圖、翻譯、傳訊息並叫車。</p>
         </a>
-        <a href="/zh-tw/transport/" class="card block hover:no-underline">
+        <a href="/transport/" class="card block hover:no-underline">
           <p class="section-kicker">交通</p>
-          <h2 class="mt-2 text-xl font-bold text-gray-950">規劃你的第一條路線</h2>
-          <p class="mt-3 text-sm leading-6 text-gray-600">了解機場到酒店的路線，以及何時使用地鐵、計程車、DiDi 或火車。</p>
+          <h2 class="mt-2 text-xl font-bold text-gray-950">規劃你的第一段路線</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">事先了解從機場到飯店的路線，以及何時該搭地鐵、計程車、DiDi 或火車。</p>
         </a>
       </section>
 
       <section class="mt-10 rounded-lg border border-gray-200 bg-white p-5 md:p-6">
         <p class="section-kicker">使用規劃工具前</p>
-        <h2 class="mt-2 text-2xl font-bold text-gray-950">如果是首次中國旅行，請先閱讀設定指南</h2>
+        <h2 class="mt-2 text-2xl font-bold text-gray-950">如果這是你第一次去中國，先閱讀設定指南</h2>
         <div class="mt-5 grid gap-4 md:grid-cols-2">
-          <a href="/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">首次訪中旅客的行程規劃</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">使用與本工具相同的規劃順序：上網、付款、機場路線、App、城市順序和第一天清單。</p>
+          <a href="/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+            <h3 class="font-bold text-gray-950">給第一次旅客的中國旅行規劃指南</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">依照此工具相同的規劃順序進行：網路、付款、機場路線、App、城市順序與首日檢查清單。</p>
           </a>
-          <a href="/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
-            <h3 class="font-bold text-gray-950">出發前往中國前要設定什麼</h3>
-            <p class="mt-2 text-sm leading-6 text-gray-600">Alipay、WeChat Pay、eSIM、DiDi、火車票、地圖和現金備用的實用出發前清單。</p>
+          <a href="/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/" class="rounded-lg border border-gray-200 p-4 hover:border-brand-200 hover:bg-brand-50 hover:no-underline">
+            <h3 class="font-bold text-gray-950">前往中國前要先設定好的事項</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-600">一份實用的出發前檢查清單，涵蓋 Alipay、WeChat Pay、eSIM、DiDi、火車票、地圖與現金備用方案。</p>
           </a>
         </div>
       </section>
@@ -255,97 +260,97 @@ const needOptions = [
   `;
 
   const buildPlan = () => {
-    const home = getValue('home-country') || '你的出發國';
-    const arrival = getValue('arrival-city') || '上海';
+    const home = getValue('home-country') || '你的居住國家';
+    const arrival = getValue('arrival-city') || 'Shanghai';
     const cities = splitCities(getValue('destination-cities'), arrival);
     const days = Number(getValue('trip-length') || '7');
     const purpose = getValue('trip-purpose') || '觀光';
-    const budget = getValue('budget-range') || '舒適';
-    const style = getValue('travel-style') || '舒適';
+    const budget = getValue('budget-range') || '舒適型';
+    const style = getValue('travel-style') || '舒適輕鬆';
     const needs = selectedNeeds();
     const perCity = Math.max(1, Math.floor(days / Math.max(1, cities.length)));
 
     const preDeparture = [
-      `離開${escapeHtml(home)}前安裝 Alipay、WeChat、DiDi、翻譯 App 和離線地圖。`,
+      `在離開 ${escapeHtml(home)} 之前，先安裝 Alipay、WeChat、DiDi、翻譯 App 與離線地圖。`,
       needs.includes('payment')
-        ? '將一張海外 Visa 或 Mastercard 綁定到 Alipay，出發前先完成小額驗證。'
-        : '付款設定保持簡單：一個行動錢包、一張實體卡和一些人民幣現金。',
+        ? '將一張海外 Visa 或 Mastercard 綁定到 Alipay，並在出發前先做一次小額驗證。'
+        : '把付款設定保持簡單：一個行動錢包、一張實體卡，再加上一些人民幣現金。',
       needs.includes('esim')
-        ? '搭機前購買並啟用 eSIM 或漫遊方案，QR Code 離線可用。'
-        : '確認手機抵達後有數據可用，再依賴地圖或叫車。',
-      '用英文和中文儲存酒店地址，加上最近的地鐵站。',
+        ? '在搭機前先購買並啟用 eSIM 或漫遊方案，並將 QR code 離線保存。'
+        : '在依賴地圖或叫車前，先確認你的手機在抵達時能夠上網。',
+      '把你的飯店地址以英文與中文儲存好，並記下最近的地鐵站。',
     ];
 
     const payment = [
-      '主要設定：Alipay 綁定海外卡，通常是旅客最實用的首選錢包。',
-      '備用設定：如果卡片綁定成功，設定 WeChat Pay，加上一張實體 Visa 或 Mastercard。',
-      budget === '經濟'
-        ? '現金備用：攜�少量人民幣，以備攤位、押金或卡片/錢包問題。'
-        : '現金備用：準備足夠的人民幣應付計程車、小吃和一頓簡餐，以防行動支付故障。',
-      '不要依賴 Apple Pay 或 Google Pay 作為在中國的主要付款方式。',
+      '主要設定：使用綁定海外卡片的 Alipay，因為對旅客來說，這通常是最實用的第一個電子錢包。',
+      '備用設定：如果你的卡片能成功綁定，就再準備 WeChat Pay，另外攜帶一張實體 Visa 或 Mastercard。',
+      budget === '節省型'
+        ? '現金備用：攜帶少量人民幣，以備小攤、押金或卡片／錢包出問題時使用。'
+        : '現金備用：準備足夠的人民幣，用於支付計程車、點心以及一頓簡單餐點，以防行動支付失敗。',
+      '不要把 Apple Pay 或 Google Pay 當作你在中國大陸的主要付款方式。',
     ];
 
     const internet = [
-      '短期旅行，如果手機支援 eSIM，旅遊 eSIM 通常是最簡單的方案。',
-      '長期或大量使用數據，抵達前比較漫遊、eSIM、口袋 WiFi 和當地 SIM 卡選項。',
-      '離開機場前測試行動數據，因為付款 App、叫車、翻譯和地圖都依賴它。',
-      '離線儲存酒店和交通資訊，以防首次連線不穩定。',
+      '對短期旅���來���，如果你的手機支援 eSIM，旅遊 eSIM 通常是最簡單的方案。',
+      '如果是較長時間停留或需要大量數據，請在抵達前比較漫遊、eSIM、隨身 WiFi 與當地 SIM 卡方案。',
+      '離開機場前先測試行動數據，因為付款 App、叫車、翻譯與地圖全都依賴網路。',
+      '把飯店與交通資訊離線保存，以防你的第一次連線不穩定。',
     ];
 
     const transport = [
-      `第一條路線：落地前規劃好${escapeHtml(arrival)}機場或車站到酒店的路線。`,
-      '市內用地鐵走固定路線，DiDi 門到門，城際用高鐵。',
+      `第一段路線：在落地前先規劃好從 ${escapeHtml(arrival)} 機場或車站到飯店的路線。`,
+      '市區內固定路線搭地鐵最可預測，點對點移動用 DiDi，而城市之間移動則選擇高鐵。',
       needs.includes('transport')
-        ? '搭火車那天，盡早訂票，護照資訊與購票平台保持一致。'
-        : '避免國際航班和長途火車安排在同一天轉乘。',
-      '準備一張中文地址卡，以備計程車或酒店櫃台使用。',
+        ? '如果有搭火車的日子，能提早訂就盡早訂，並確保護照資料與訂票平台上的資訊一致。'
+        : '避免把國際航班與長途火車安排成當天緊湊轉乘。',
+      '為計程車司機或飯店櫃台準備好中文地址卡。',
     ];
 
     const dayPlan = cities.map((city, index) => {
       const start = index * perCity + 1;
       const end = index === cities.length - 1 ? days : Math.min(days, start + perCity - 1);
-      return `第 ${start}-${end} 天：${escapeHtml(city)} — 前半天行程安排輕鬆些，確認付款/上網，然後按區域分組景點。`;
+      return `第 ${start}-${end} 天：${escapeHtml(city)} - 前半天行程安排輕鬆一些，先確認付款與網路，再按行政區集中安排行程景點。`;
     });
 
     const mistakes = [
-      '不要等到抵達才設定所有 App、卡片和數據方案。',
-      '不要在長途飛行後立即安排滿檔觀光行程。',
-      '不要只依賴一種付款方式。',
+      '不要等到抵達後才開始設定所有 App、卡片與數據方案。',
+      '不要在長途飛行後立刻安排滿滿的觀光行程。',
+      '不要只依賴單一付款方式。',
       purpose === '商務'
-        ? '商務旅行，預留額外時間應付交通、安檢、發票和大樓進出手續。'
-        : '休閒旅行，每兩三天留一個彈性時段，以應對天氣、人潮或疲勞。',
+        ? '如果是商務旅行，請多預留一些時間給交通、安檢、發票與大樓出入流程。'
+        : '如果是休閒旅行，每兩到三天請保留一段彈性時段，以應對天氣、人潮或疲勞。',
       style === '美食導向'
-        ? '美食旅行，用中文儲存餐廳名稱，確認營業時間後再跨區前往。'
-        : '在酒店附近準備一個簡單的用餐備案。',
+        ? '如果是美食導向行程，請把餐廳名稱以中文保存，並在特地前往前先確認營業時間。'
+        : '在飯店附近保留一個簡單的備用用餐方案。',
     ];
 
     const html = [
-      panel('出發前清單', preDeparture),
+      panel('出發前檢查清單', preDeparture),
       panel('付款與現金設定', payment),
-      panel('上網與 App 設定', internet),
-      panel('交通與第一天', transport),
-      panel('每日行程框架', dayPlan),
+      panel('網路與 App 設定', internet),
+      panel('交通與第一天安排', transport),
+      panel('簡單的逐日行程架構', dayPlan),
       panel('常見錯誤提醒', mistakes),
     ].join('');
 
     const emailBody = [
-      'ChinaTripBox 行程審查請求',
+      'ChinaTripBox Trip Review Request',
       '',
-      `出發國家或地區：${home}`,
-      `抵達城市：${arrival}`,
-      `目的城市：${cities.join(', ')}`,
-      `旅行天數：${days} 天`,
-      `目的：${purpose}`,
-      `預算：${budget}`,
-      `風格：${style}`,
-      `需求：${needs.join(', ') || '未指定'}`,
+      `Home country or region: ${home}`,
+      `Arrival city: ${arrival}`,
+      `Destination cities: ${cities.join(', ')}`,
+      `Trip length: ${days} days`,
+      `Purpose: ${purpose}`,
+      `Budget: ${budget}`,
+      `Style: ${style}`,
+      `Needs: ${needs.join(', ') || 'not specified'}`,
       '',
-      '請審查我的中國旅行設定，包括付款、eSIM、交通、時間安排和第一天可能犯的錯誤。',
+      'Please review my China trip setup for payment, eSIM, transport, timing, and first-day mistakes.',
     ].join('\n');
 
     if (emailLink) {
       emailLink.href = `mailto:zh13809022788@gmail.com?subject=${encodeURIComponent(
-        'ChinaTripBox 行程審查請求',
+        'ChinaTripBox Trip Review Request',
       )}&body=${encodeURIComponent(emailBody)}`;
     }
 
@@ -358,6 +363,6 @@ const needOptions = [
     content.innerHTML = buildPlan();
     output.classList.remove('hidden');
     output.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (status) status.textContent = '計畫已產生。隨時可以調整答案重新產生。';
+    if (status) status.textContent = '計畫已產生。你可以隨時調整答案後重新產生。';
   });
 </script>
