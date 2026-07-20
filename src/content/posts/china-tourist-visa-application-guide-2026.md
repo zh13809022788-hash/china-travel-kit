@@ -2,7 +2,7 @@
 title: "China Tourist Visa (L Visa) Application Guide 2026: Step by Step for US, UK, Canada, Australia & More"
 description: "Complete 2026 guide to applying for a Chinese tourist visa — who needs one, documents required, application process, fees, processing times at Chinese visa centers worldwide, and how to avoid common rejection reasons."
 pubDate: 2026-07-20
-category: travel
+category: essentials
 tags: ["china visa", "tourist visa", "L visa", "visa application", "china travel"]
 cover: "topic-visa-free"
 coverAlt: "Chinese visa page in a passport with entry and exit stamps"
