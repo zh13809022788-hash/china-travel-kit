@@ -18,6 +18,10 @@ export const LOCALE_PREFIXES: Record<LocaleCode, string> = {
   fr: '/fr/', de: '/de/', es: '/es/', th: '/th/', vi: '/vi/', ms: '/ms/',
 };
 
-export const NOINDEX_LOCALES: LocaleCode[] = ['de', 'es', 'th', 'vi', 'ms'];
+export const NOINDEX_LOCALES: LocaleCode[] = ['zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es', 'th', 'vi', 'ms'];
 
-export const SITEMAP_EXCLUDED_PREFIXES = ['/authors/', '/de/', '/es/', '/th/', '/vi/', '/ms/'];
+export const SITEMAP_EXCLUDED_PREFIXES = [
+  '/authors/',
+  '/zh-tw/', '/ja/', '/ko/', '/ru/',
+  '/fr/', '/de/', '/es/', '/th/', '/vi/', '/ms/',
+];
