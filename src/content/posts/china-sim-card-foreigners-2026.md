@@ -1,6 +1,6 @@
 ---
-title: "How to Buy a Chinese SIM Card as a Foreigner 2026: China Mobile, Unicom, Telecom Compared"
-description: "Step-by-step guide to buying a local Chinese SIM card as a foreign tourist in 2026 to compare China Mobile, China Unicom, and China Telecom on price, coverage, English support, and airport pickup options."
+title: "How to Buy a Chinese SIM Card as a Foreigner 2026: China Mobile, Unicom,..."
+description: "Learn how foreign travelers can buy a Chinese SIM card in 2026, compare major carriers, and choose the best option for coverage, price, and pickup."
 pubDate: 2026-07-16
 category: esim
 tags: ["china sim card", "china mobile", "china unicom", "china telecom", "local sim", "mobile data china", "china tourist sim"]
@@ -18,6 +18,8 @@ faqs:
     answer: "Most prepaid tourist plans expire automatically. Some carriers allow you to convert to a postpaid plan if you visit frequently, but this requires a Chinese bank account for billing. For occasional visitors, buying a new SIM each trip is the simpler path."
   - question: "Do Chinese SIM cards work in Hong Kong, Macau, and Taiwan?"
     answer: "Generally no. Hong Kong, Macau, and Taiwan operate on separate telecom networks. You will need a separate SIM or roaming add-on for these regions. Some China Mobile plans include a small roaming data allowance for Hong Kong and Macau, but this is not standard on basic prepaid SIMs."
+---
+
 ---
 
 Not having a local phone number in China creates friction at almost every turn. The food delivery app asks for SMS verification. The train ticket platform won't let you complete a booking without one. The restaurant hostess gestures that she needs to call you when your table is ready, and your international number isn't ringing through.
@@ -110,3 +112,15 @@ China Mobile and China Unicom do not block VPN usage on their networks, but they
 - **Where to buy**: Airport arrivals counter for convenience; city carrier store for lower prices
 - **English hotlines**: China Mobile 10086, China Unicom 10010
 - **Two-SIM setup for uncensored apps**: Travel eSIM for data + local Chinese SIM for the phone number
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/esim-comparison/" rel="nofollow">eSIM plan comparator</a> — Compare data plans across different China eSIM providers.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

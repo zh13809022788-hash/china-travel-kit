@@ -1,9 +1,11 @@
 ---
 title: "중국 공중화장실 사용 가이드: 외국인 여행자를 위한 생존 팁"
 category: essentials
-description: "중국에서 공중화장실을 찾고 이용할 때 덜 당황하고, 덜 헤매고, 조금 더 편하게 지나가기 위한 외국인 여행자용 실전 가이드."
+description: "중국 여행 중 공중화장실을 쉽게 찾고 덜 당황스럽게 이용하도록 위치 확인, 준비물, 위생 습관, 기본 예절, 돌발 상황 대처까지 알려주는 외국인 맞춤 실전 가이드입니다."
 pubDate: 2026-07-19
 tags: ["화장실", "중국", "가이드"]
+---
+
 ---
 
 # 중국 공중화장실 사용 가이드: 외국인 여행자를 위한 생존 팁
@@ -161,6 +163,14 @@ tags: ["화장실", "중국", "가이드"]
 
 티슈를 챙기고, 손소독제를 챙기고, 좋은 화장실을 보이면 미리 쓰자. 안내문을 따르고, 너무 겁먹지 말자. 지구 반대편에 있어도 화장실은 결국 화장실이다.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### 중국 공중화장실은 무료인가요?
@@ -190,3 +200,5 @@ tags: ["화장실", "중국", "가이드"]
 ### 중국어로 화장실이 어디냐고 어떻게 묻나요?
 
 `ce suo zai na li?` 또는 `qing wen, wei sheng jian zai na li?`라고 말하면 됩니다. 많은 곳에서는 화장실 표지판을 가리키는 것만으로도 충분합니다.
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,5 +1,5 @@
 ---
-title: "Cómo usar los baños públicos en China sin entrar en pánico: guía de supervivencia para turistas"
+title: "Cómo usar los baños públicos en China sin entrar en pánico: guía de..."
 category: essentials
 description: "Guía práctica para visitantes extranjeros sobre cómo encontrar, usar y sobrevivir a los baños públicos en China con menos estrés y menos sorpresas."
 pubDate: 2026-07-19
@@ -159,6 +159,14 @@ Los baños públicos en China dejan de ser un misterio cuando aceptas que hay de
 
 Lleva pañuelos. Lleva gel. Usa los baños buenos cuando aparezcan. Sigue las señales. Y recuerda: un baño es solo un baño, aunque estés al otro lado del mundo.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### ¿Los baños públicos en China son gratis?
@@ -181,3 +189,5 @@ Usa baños en aeropuertos, estaciones de tren de alta velocidad, centros comerci
 
 ### ¿Cómo pregunto por el baño en chino?
 Puedes decir `ce suo zai na li?` o `qing wen, wei sheng jian zai na li?` En muchos sitios, señalar un cartel o icono de baño es suficiente.
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

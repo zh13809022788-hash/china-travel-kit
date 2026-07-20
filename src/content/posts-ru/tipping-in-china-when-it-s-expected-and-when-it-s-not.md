@@ -1,6 +1,6 @@
 ---
 title: "Чаевые в Китае 2026: когда уместны и когда нет"
-description: "Рестораны, такси, отели, гиды, service charge, Hong Kong и Macau: где чаевые нужны."
+description: "Рестораны, такси, отели, гиды, service charge, Hong Kong и Macau: где чаевые нужны. [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["чаевые", "этикет", "Китай", "сервис"]

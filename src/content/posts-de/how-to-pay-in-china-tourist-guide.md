@@ -46,3 +46,15 @@ Nur mit Kreditkarte anzureisen ist der haeufigste Fehler. Der zweite ist, alles 
 ## Fazit
 
 Wer in China angenehm zahlen will, richtet Alipay und WeChat Pay ein, verknuepft eine auslaendische Karte, nimmt eine zweite physische Karte mit und traegt etwas Bargeld. Damit sind fast alle Alltagssituationen abgedeckt.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

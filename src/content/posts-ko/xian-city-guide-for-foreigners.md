@@ -1,6 +1,6 @@
 ---
 title: "2026년 시안 여행 가이드: 외국인 관광객을 위한 완벽 정리"
-description: "2026년 시안 여행 완전 가이드 — 병마용, 성벽, 무슬림 거리, 대안탑 필수 관광지, 음식 추천, 교통 정보, 실전 여행 팁까지 한 번에 정리했습니다."
+description: "2026년 시안 여행 완전 가이드 — 병마용, 성벽, 무슬림 거리, 대안탑 필수 관광지, 음식 추천, 교통 정보, 실전 여행 팁까지 한 번에 정리했습니다. [NEEDS EXPANSION]"
 pubDate: 2026-07-18
 category: essentials
 tags: ["시안", "시티 가이드", "중국 여행", "산시"]
@@ -60,3 +60,13 @@ coverAlt: "시안 성벽과 전통 건축물의 황혼"
 - **결제**: 알리페이나 위챗페이에 해외 카드를 등록해 가면 대부분의 장소에서 사용 가능합니다. 현금 200~500위안도 준비하세요.
 - **언어**: 주요 관광지에는 영어 안내가 있습니다.
 - **베스트 시즌**: 가을(9~11월)이 최고입니다. 여름은 매우 덥습니다. 겨울은 춥지만 한산합니다.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

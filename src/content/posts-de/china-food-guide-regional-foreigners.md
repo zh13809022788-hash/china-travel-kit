@@ -58,3 +58,11 @@ Essen ist einer der besten Gruende fuer eine China-Reise. Probieren Sie regional
 
 - [Chengdu Street Food Guide](/de/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
 - [Essen bestellen in China](/de/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>

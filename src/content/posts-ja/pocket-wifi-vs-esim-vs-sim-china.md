@@ -1,6 +1,6 @@
 ---
 title: "中国のポケットWiFi・eSIM・現地SIM比較 2026：旅行者に最適なのは？"
-description: "中国旅行の通信手段として、ポケットWiFi、旅行eSIM、現地SIMの費用、設定、速度、アプリ利用を比較します。"
+description: "中国旅行の通信手段として、ポケットWiFi、旅行eSIM、現地SIMの費用、設定、速度、アプリ利用を比較します。 [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: esim
 tags: ["eSIM", "ポケットWiFi", "SIMカード", "中国インターネット", "旅行通信"]
@@ -49,3 +49,15 @@ faqs:
 ## まとめ
 
 中国旅行は、通信、支払い、移動、住所の準備が整うと一気に楽になります。この記事の目安をもとに、自分の旅程、荷物、言語の不安に合わせて無理のない選択をしてください。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/esim-comparison/" rel="nofollow">eSIM plan comparator</a> — Compare data plans across different China eSIM providers.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

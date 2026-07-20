@@ -1,6 +1,6 @@
 ---
-title: "Does Apple Pay Work in China? The Honest Truth for Travelers (2026)"
-description: "Does Apple Pay or Google Pay work in China in 2026? Here's the real answer for tourists — where contactless taps work, when they fail, and which payment method to actually use at each merchant type."
+title: "Apple Pay in China 2026: Where It Works and Where It Does Not"
+description: "Can you use Apple Pay or Google Pay in China? Short answer: rarely. Here is exactly which stores accept it and why you still need Alipay as backup."
 pubDate: 2026-07-08
 category: payment
 tags: ["apple pay", "google pay", "china payment", "contactless", "travel tips", "does apple pay work in china"]
@@ -21,6 +21,8 @@ faqs:
     answer: "Yes, it is smart to carry a few hundred yuan in small notes, because rural areas, tiny shops, taxis, and occasional terminal outages can leave contactless payments unavailable."
   - question: "Why do so many shops in China reject my Apple Pay tap?"
     answer: "Most small Chinese merchants are built entirely around Alipay and WeChat Pay QR codes and never installed the NFC terminals that read international contactless cards, so the tap simply has nowhere to register."
+---
+
 ---
 
 ## Introduction

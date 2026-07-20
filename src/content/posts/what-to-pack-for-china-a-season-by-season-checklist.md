@@ -1,6 +1,6 @@
 ---
-title: "What to Pack for China 2026: Season-by-Season Checklist for Foreign Tourists"
-description: "Ultimate packing checklist for China travel in 2026 — what to pack by season (spring, summer, autumn, winter), essential apps and documents, luggage tips, and items you should not forget."
+title: "What to Pack for China 2026: Season-by-Season Checklist for Foreign..."
+description: "Pack smarter for China in 2026 with a season-by-season checklist covering clothing, documents, apps, luggage tips, and must-have essentials."
 pubDate: 2026-07-09
 category: essentials
 tags: ["china travel", "packing list", "travel essentials", "first trip", "china tips"]
@@ -21,6 +21,8 @@ faqs:
     answer: "No, tap water is not considered safe to drink, so plan to drink bottled or boiled water; hotels usually provide a kettle and free bottles, and a reusable bottle with a filter can save money and waste."
   - question: "How much should I pack for a two-week trip?"
     answer: "Pack light with a carry-on plus a small daypack if you can, since domestic flights and trains have luggage limits and cities involve a lot of walking and stairs; laundry services and cheap clothing shops make it easy to travel with less."
+---
+
 ---
 
 ## Introduction

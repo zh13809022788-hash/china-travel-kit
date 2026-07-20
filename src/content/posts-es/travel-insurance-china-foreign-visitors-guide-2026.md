@@ -1,6 +1,6 @@
 ---
-title: "Seguro de Viaje para China 2026: Lo que los visitantes extranjeros realmente necesitan"
-description: "Guía práctica 2026 sobre el seguro de viaje para China — coberturas que realmente necesitas, cuánto cuesta, qué aseguradoras funcionan y los escenarios reales donde el seguro te ahorra miles."
+title: "Seguro de Viaje para China 2026: Lo que los visitantes extranjeros..."
+description: "Guía 2026 para elegir seguro de viaje a China: coberturas clave, costes reales y cuándo puede ahorrarte miles ante imprevistos."
 pubDate: 2026-07-17
 category: essentials
 tags: ["travel insurance", "china insurance", "medical china", "china travel tips", "foreign visitors china"]
@@ -18,6 +18,8 @@ faqs:
     answer: "La mayoría de los seguros actualizados para 2026 incluyen cobertura médica COVID-19, pero revisa la letra pequeña. China trata ahora el COVID-19 como una enfermedad respiratoria común. Algunas pólizas excluyen reclamaciones relacionadas con pandemias — verifícalo explícitamente."
   - question: "¿Aseguradora china o internacional?"
     answer: "Ambas tienen ventajas e inconvenientes. Las aseguradoras chinas (Ping An, PICC) son más baratas (¥30–100 por semana) y tienen facturación directa con hospitales públicos locales, pero el soporte en inglés es limitado y las reclamaciones son casi en su totalidad en chino. Las aseguradoras internacionales (World Nomads, AXA, SafetyWing) cuestan más (¥150–400 por semana) pero ofrecen asistencia en inglés 24h, acceso a redes de hospitales internacionales y cobertura de evacuación. Si no hablas nada de chino, la opción internacional ahorra un estrés enorme en una emergencia real."
+---
+
 ---
 
 Ese momento en el mostrador de facturación cuando el agente pregunta "¿quiere añadir un seguro de viaje?" y tu cerebro hace un cálculo coste-beneficio en 0,3 segundos antes de decir "no, gracias".
@@ -91,3 +93,11 @@ Guarda el número de póliza y la línea de emergencia en un lugar accesible sin
 ---
 
 **Leer después:** [Primeras 24 horas en China: lista de llegada](/es/posts/first-24-hours-in-china-arrival-checklist/) cubre qué hacer al aterrizar. [Qué configurar antes de viajar a China](/es/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) repasa la lista de preparación previa al viaje.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

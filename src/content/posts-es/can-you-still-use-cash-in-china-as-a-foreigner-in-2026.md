@@ -29,3 +29,22 @@ Sí, pero solo como respaldo. El efectivo es útil para:
 - Las máquinas expendedoras y aparcamientos son solo digitales
 
 Mi consejo: lleva 500 yuanes en billetes pequeños por si acaso, pero usa Alipay para casi todo.
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.
+
+
+## Cómo se paga hoy en China: efectivo, tarjetas y pagos móviles
+## Dónde todavía puedes usar efectivo sin problemas
+## Qué hacer si no tienes Alipay ni WeChat Pay
+## Consejos prácticos para evitar problemas al pagar
+
+(Content to be added)

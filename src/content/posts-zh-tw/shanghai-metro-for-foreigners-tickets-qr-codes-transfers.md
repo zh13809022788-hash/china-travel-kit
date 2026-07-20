@@ -1,6 +1,6 @@
 ---
 title: "外國人怎麼搭上海地鐵 2026：交通碼、車票與轉乘"
-description: "外國旅客上海地鐵指南：Alipay 交通碼、單程票、路線轉乘、機場連接、安檢與不會中文時的搭乘技巧。"
+description: "外國旅客上海地鐵指南：Alipay 交通碼、單程票、路線轉乘、機場連接、安檢與不會中文時的搭乘技巧。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: transport
 tags: ["上海地鐵", "中國交通", "QR code 付款", "地鐵車票", "支付寶", "外國人搭上海地鐵"]
@@ -49,3 +49,13 @@ faqs:
 ## 總結
 
 上海地鐵對外國人非常友善：雙語標示、票價便宜、路網密集。提前開通交通 QR code，進站留出安檢時間，並注意末班車，你就能靠地鐵完成大部分上海行程。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

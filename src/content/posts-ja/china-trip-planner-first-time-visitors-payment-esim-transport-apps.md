@@ -1,6 +1,6 @@
 ---
 title: "中国旅行プランナー 2026：初めての支払い・eSIM・交通・必須アプリ"
-description: "初めて中国へ行く人が出発前に準備すべき通信、支払い、交通、アプリ、到着初日の動きを順番に整理します。"
+description: "2026年に初めて中国へ行く人向けに、モバイル決済、eSIM、鉄道・配車などの交通、翻訳や地図を含む必須アプリを解説。出発前の準備から現地で困らない使い方まで整理する実践ガイドです。"
 pubDate: 2026-07-13
 category: essentials
 tags: ["初めての中国", "旅行計画", "支払い", "eSIM", "交通", "アプリ"]
@@ -45,3 +45,13 @@ faqs:
 ## まとめ
 
 中国旅行は、通信、支払い、移動、住所の準備が整うと一気に楽になります。この記事の目安をもとに、自分の旅程、荷物、言語の不安に合わせて無理のない選択をしてください。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -42,3 +42,13 @@ Plage, snorkeling, sorties en bateau, sources chaudes, marchés de fruits de mer
 
 Sanya est idéale pour finir un voyage en Chine sans courir. Choisissez bien votre baie, vérifiez la saison et gardez DiDi ou l'hôtel comme support de transport.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

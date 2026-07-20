@@ -42,3 +42,15 @@ WeChat pour communiquer et payer, Alipay pour services et transport, Amap ou Bai
 
 La meilleure stratégie est double : une connexion fiable et des applications chinoises prêtes. Une fois ce socle installé, le voyage devient beaucoup moins dépendant des services bloqués.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/esim-comparison/" rel="nofollow">eSIM plan comparator</a> — Compare data plans across different China eSIM providers.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

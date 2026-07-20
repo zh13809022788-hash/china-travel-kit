@@ -47,3 +47,13 @@ Zeigen Sie Fotos, nutzen Sie Uebersetzung und halten Sie wichtige Saetze bereit:
 ## Fazit
 
 Chengdu Street Food ist sicher und fantastisch, wenn Sie belebte Staende waehlen, Schaerfe langsam angehen und Mobile Payment vorbereitet haben. Essen Sie neugierig, aber nicht heroisch.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

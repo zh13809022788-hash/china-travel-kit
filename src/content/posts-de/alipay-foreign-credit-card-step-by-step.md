@@ -1,5 +1,5 @@
 ---
-title: "Alipay in China 2026: Ausländische Kreditkarte Schritt für Schritt verknüpfen"
+title: "Alipay in China 2026: Ausländische Kreditkarte Schritt für Schritt..."
 description: "Praxisnaher Alipay-Guide für China-Reisende: App installieren, Reisepass verifizieren, Visa oder Mastercard hinterlegen, Gebühren und typische Fehler vermeiden."
 pubDate: 2026-07-07
 category: payment

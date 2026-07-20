@@ -1,6 +1,6 @@
 ---
 title: "Alipay と WeChat Pay 2026：外国人旅行者はどちらを使うべき？"
-description: "中国旅行で使うAlipayとWeChat Payを、設定のしやすさ、外国カード対応、手数料、日常の使いやすさで比較します。"
+description: "2026年の中国旅行でAlipayとWeChat Payのどちらを使うべきか、外国カード登録、手数料、店舗・交通での使いやすさを比較して最適な選び方を解説します。"
 pubDate: 2026-07-14
 category: payment
 tags: ["Alipay", "WeChat Pay", "モバイル決済", "外国カード", "中国旅行"]
@@ -16,6 +16,8 @@ faqs:
     answer: "少額決済は無料になることが多い一方、一定額を超える支払いでは処理手数料がかかる場合があります。カード会社の海外手数料も確認しましょう。"
   - question: "片方だけで旅行できますか？"
     answer: "可能ですが理想的ではありません。認証失敗、店側の対応、通信障害に備えて両方と少額現金を用意すると安心です。"
+---
+
 ---
 
 ## 結論
@@ -43,3 +45,15 @@ faqs:
 ## まとめ
 
 中国旅行は、最初の準備さえ整えばとても動きやすい旅先です。この記事の数字や手順は、完璧に暗記するより「どの場面で何を選ぶか」を決めるための目安として使ってください。迷ったら、通信、支払い、住所、移動手段の順に確認すると落ち着いて対処できます。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

@@ -1,6 +1,6 @@
 ---
 title: "為什麼中國沒有小費文化？外國旅客禮儀指南"
-description: "理解中國為什麼不流行給小費：文化差異、服務費、如何表達感謝，以及餐廳、計程車與飯店禮儀。"
+description: "理解中國為什麼不流行給小費：文化差異、服務費、如何表達感謝，以及餐廳、計程車與飯店禮儀。 [NEEDS EXPANSION]"
 pubDate: 2026-07-11
 category: essentials
 tags: ["小費", "中國文化", "旅行禮儀", "餐廳", "服務"]
@@ -47,3 +47,13 @@ faqs:
 ## 總結
 
 中國沒有小費文化，不是因為不重視服務，而是交易方式不同。外國旅客照標價付款、在例外場景酌情給、用好評和感謝表達善意，就是最合適的做法。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

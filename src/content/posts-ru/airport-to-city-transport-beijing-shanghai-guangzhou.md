@@ -1,6 +1,6 @@
 ---
 title: "Из аэропорта в город в Китае 2026: Пекин, Шанхай и Гуанчжоу"
-description: "Метро, аэроэкспресс, Maglev, такси и DiDi из аэропортов PEK, PKX, PVG, SHA и CAN."
+description: "Метро, аэроэкспресс, Maglev, такси и DiDi из аэропортов PEK, PKX, PVG, SHA и CAN. [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: transport
 tags: ["аэропорт", "трансфер", "Пекин", "Шанхай", "Гуанчжоу"]

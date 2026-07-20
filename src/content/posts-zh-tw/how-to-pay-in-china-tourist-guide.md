@@ -1,6 +1,6 @@
 ---
 title: "旅客在中國怎麼付款：2026 完整指南"
-description: "給外國旅客的中國付款實用指南：從行動支付、海外信用卡、現金，到最常見的踩雷情境。"
+description: "給外國旅客的中國付款實用指南：從行動支付、海外信用卡、現金，到最常見的踩雷情境。 [NEEDS EXPANSION]"
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "wechat pay", "mobile payment", "cash"]

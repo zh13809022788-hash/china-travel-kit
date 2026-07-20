@@ -1,5 +1,5 @@
 ---
-title: "Cómo reservar billetes de tren en China 2026: guía para extranjeros en 12306"
+title: "Cómo reservar billetes de tren en China 2026: guía para extranjeros en..."
 description: "Guía paso a paso para comprar billetes de tren en China siendo extranjero: usar 12306 en inglés, verificación de pasaporte, métodos de pago y consejos prácticos."
 pubDate: 2026-07-18
 category: transport
@@ -23,3 +23,20 @@ Comprar billetes de tren en China siendo extranjero es más fácil de lo que par
 **Paso 5:** Paga con tarjeta extranjera o Alipay.
 
 El tren de alta velocidad en China es puntual, cómodo y las estaciones son modernas. Merece la pena.
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+
+## Requisitos para comprar billetes de tren en China
+## Cómo reservar trenes en China paso a paso
+## Tipos de trenes, clases de asiento y tarifas
+## Consejos para recoger billetes, embarcar y viajar sin problemas
+
+(Content to be added)

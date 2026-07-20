@@ -8,7 +8,7 @@ import { ADSENSE_PUBLISHER_ID, CLARITY_PROJECT_ID, GA4_MEASUREMENT_ID } from '..
 import ContextAiBubble from '../components/ContextAiBubble.astro';
 import NewsletterSticky from '../components/NewsletterSticky.astro';
 
-type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es';
+type LocaleCode = 'en' | 'zh-TW' | 'ja' | 'ko' | 'ru' | 'fr' | 'de' | 'es' | 'th' | 'ms' | 'vi';
 
 export interface Props {
   title?: string;
@@ -44,11 +44,11 @@ const ogImage = new URL(image, Astro.site);
 const siteName = 'ChinaTripBox';
 const siteURL = new URL('/', Astro.site).toString();
 
-const htmlLangMap: Record<string, string> = { en: 'en', 'zh-TW': 'zh-TW', ja: 'ja', ko: 'ko', ru: 'ru', fr: 'fr', de: 'de', es: 'es' };
+const htmlLangMap: Record<string, string> = { en: 'en', 'zh-TW': 'zh-TW', ja: 'ja', ko: 'ko', ru: 'ru', fr: 'fr', de: 'de', es: 'es', th: 'th', ms: 'ms', vi: 'vi' };
 const htmlLang = htmlLangMap[locale] ?? 'en';
 
-const hreflangCodes: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es'];
-const localePrefixes: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/' };
+const hreflangCodes: LocaleCode[] = ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es', 'th', 'ms', 'vi'];
+const localePrefixes: Record<LocaleCode, string> = { en: '/', 'zh-TW': '/zh-tw/', ja: '/ja/', ko: '/ko/', ru: '/ru/', fr: '/fr/', de: '/de/', es: '/es/', th: '/th/', ms: '/ms/', vi: '/vi/' };
 
 const stripLocalePrefix = (path: string) => {
   for (const prefix of Object.values(localePrefixes).filter((p) => p !== '/')) {
@@ -73,7 +73,7 @@ const samePageAlternates = (() => {
 const pageAlternates = alternates ?? samePageAlternates;
 
 const availableLanguage = locale === 'en'
-  ? ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es']
+  ? ['en', 'zh-TW', 'ja', 'ko', 'ru', 'fr', 'de', 'es', 'th', 'ms', 'vi']
   : [locale, 'en'];
 
 const jsonLd = {
@@ -221,7 +221,7 @@ const jsonLd = {
     <slot />
     <script is:inline set:html={`(function(){
       var PREF_KEY='ctb-lang-pref';
-      var LOCALE_PREFIXES=['zh-tw','ja','ko','ru','fr','de','es'];
+      var LOCALE_PREFIXES=['zh-tw','ja','ko','ru','fr','de','es','th','ms','vi'];
       var pref=null;
       try{pref=localStorage.getItem(PREF_KEY);}catch(e){}
       function hasLocalePrefix(p){
@@ -268,6 +268,9 @@ const jsonLd = {
         if(lang.startsWith('fr')){detected='fr';break;}
         if(lang.startsWith('de')){detected='de';break;}
         if(lang.startsWith('es')){detected='es';break;}
+        if(lang.startsWith('th')){detected='th';break;}
+        if(lang.startsWith('ms')){detected='ms';break;}
+        if(lang.startsWith('vi')){detected='vi';break;}
         if(lang.startsWith('en')){detected='en';break;}
       }
       if(!detected||detected==='en')return;

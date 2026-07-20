@@ -1,6 +1,6 @@
 ---
 title: "桂林旅行ガイド2026：外国人観光客が知っておくべきこと"
-description: "2026年版・桂林観光完全ガイド。漓江下り、陽朔、龍脊棚田、蘆笛岩の見どころ、グルメ情報と実用的な旅行アドバイス。"
+description: "2026年に桂林を旅する外国人向けに、漓江下りや陽朔、龍脊棚田、蘆笛岩の見どころ、移動、食事、滞在の実用情報をわかりやすく紹介。初めてでも安心して絶景と街歩きを楽しめる旅行ガイド。"
 pubDate: 2026-07-18
 category: essentials
 tags: ["桂林", "シティガイド", "中国旅行", "広西"]
@@ -22,8 +22,27 @@ cover: "city-guilin"
 coverAlt: "漓江のカルスト地形"
 ---
 
+---
+
 ## はじめに
 
 桂林は中国で最も美しい風景地です。議論の余地はありません——漓江の両岸にそびえる石灰岩のカルスト峰林は、千年以上にわたって中国の絵画や詩で称えられてきました。実物を見ればその理由がわかります。霧に包まれた山々、竹林、水田の水牛、筏の上の漁師——西洋が想像する中国のイメージそのものです。
 
 外国人旅行者にとって、桂林は中国で最も象徴的な風景体験を提供します。また、個人旅行が最も簡単な場所の一つでもあります。陽朔の観光インフラは非常に成熟しており、外国人に優しい。自転車で田んぼの中を走り、世界有数の船旅を楽しみ、美味しいものを食べる——すべてがスムーズです。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+
+## 桂林への行き方と市内交通
+## 漓江・陽朔で楽しむ定番スポット
+## 外国人旅行者向けの滞在準備
+
+(Content to be added)

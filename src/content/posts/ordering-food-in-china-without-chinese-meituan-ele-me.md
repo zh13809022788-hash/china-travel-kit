@@ -1,6 +1,6 @@
 ---
-title: "Ordering Food in China Without Chinese 2026: Meituan, Ele.me and Restaurant Tips"
-description: "How to order food delivery in China without speaking Chinese in 2026 — using Meituan and Ele.me, H5 web alternatives, Alipay mini-programs, and restaurant ordering tips for foreigners."
+title: "Ordering Food in China Without Chinese 2026: Meituan, Ele.me and..."
+description: "How to order food delivery in China without speaking Chinese in 2026 — using Meituan and Ele."
 pubDate: 2026-07-08
 category: food
 series: food-of-china

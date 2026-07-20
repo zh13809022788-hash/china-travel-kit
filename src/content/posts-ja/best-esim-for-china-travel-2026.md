@@ -1,6 +1,6 @@
 ---
 title: "中国旅行に最適なeSIM 2026: 選び方と設定方法"
-description: "2026年の中国旅行向けeSIMの選び方。データプランの比較、アプリ制限を回避しやすい選択肢、設定手順を解説します。"
+description: "2026年の中国旅行向けeSIMの選び方。データプランの比較、アプリ制限を回避しやすい選択肢、設定手順を解説します。 [NEEDS EXPANSION]"
 pubDate: 2026-07-05
 category: esim
 tags: ["esim", "china data", "mobile internet", "travel sim"]

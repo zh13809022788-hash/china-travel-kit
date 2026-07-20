@@ -1,6 +1,6 @@
 ---
 title: "Guangzhou City Guide for Foreigners 2026: What to Know Before You Go"
-description: "Complete 2026 guide to Guangzhou for foreign tourists — Canton Tower, Shamian Island, Chen Clan Academy, Cantonese food guide, metro tips, and practical advice for visiting southern China's capital of commerce and cuisine."
+description: "Plan your 2026 Guangzhou trip with essential tips on top sights, Cantonese food, metro travel, and practical advice for foreign visitors."
 pubDate: 2026-07-18
 category: essentials
 tags: ["guangzhou", "city guide", "china travel", "guangdong"]
@@ -20,6 +20,8 @@ faqs:
     answer: "Excellent. Shenzhen is 30 minutes by high-speed train, Hong Kong is 50 minutes, Macau is about 1.5 hours by ferry, and Foshan (kung fu's birthplace and a ceramics center) is 20 minutes by metro. Zhuhai and the Kaiping Diaolou are also easy day trips. Guangzhou's high-speed rail station connects it to the rest of China's network."
 cover: "city-guangzhou"
 coverAlt: "Guangzhou skyline with Canton Tower and the Pearl River"
+---
+
 ---
 
 ## Introduction
@@ -87,3 +89,13 @@ The best food streets: **Wen De Lu (文明路)** and **Bao Hua Lu (宝华路)** 
 - **Getting around:** The metro is the best option for most trips. Taxis are relatively expensive. DiDi is reliable.
 - **Nearby:** Shenzhen (30 min by train), Hong Kong (50 min by train), Macau (1.5h by ferry).
 - **Best season:** October to December. Avoid May to September if possible.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

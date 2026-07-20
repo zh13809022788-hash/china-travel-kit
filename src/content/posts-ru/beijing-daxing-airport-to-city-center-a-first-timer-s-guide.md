@@ -1,6 +1,6 @@
 ---
 title: "Из Beijing Daxing в центр 2026: трансфер для новичка"
-description: "Экспресс, метро, поезд, такси, DiDi и ночные варианты из аэропорта Daxing до Пекина."
+description: "Экспресс, метро, поезд, такси, DiDi и ночные варианты из аэропорта Daxing до Пекина. [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: transport
 tags: ["Пекин", "Daxing", "аэропорт", "трансфер"]

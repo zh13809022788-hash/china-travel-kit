@@ -2,7 +2,7 @@
 title: "広州シティガイド2026：外国人旅行者が知っておきたいこと"
 date: 2026-07-19
 category: essentials
-description: "2026年に広州を訪れる外国人旅行者向けの実用ガイド。交通、滞在エリア、食事、費用、気候、よくある質問をまとめています。"
+description: "2026年に広州を訪れる外国人旅行者向けの実用ガイド。交通、滞在エリア、食事、費用、気候、よくある質問をまとめています。 [NEEDS EXPANSION]"
 pubDate: 2026-07-19
 tags: ["guide", "China"]
 ---
@@ -137,6 +137,14 @@ tags: ["guide", "China"]
 
 出張や華南旅行の途中で少し見るだけなら、丸2日あれば最初の感触はつかめます。食事をきちんと楽しみ、主要な見どころをいくつか回り、ゆっくり歩く日も作るなら3 to 4日あるといいです。食が目的なら、もっと長くても困りません。広州では、食事が「観光の合間」ではなく、旅程そのものになりやすいです。
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### 広州は外国人旅行者にも行く価値がありますか？
@@ -172,3 +180,5 @@ tags: ["guide", "China"]
 広州は、見た目の派手さだけで勝負する街ではありません。中身があります。実用的で、費用感も悪くなく、食とローカルな都市生活に興味がある人ほど楽しくなります。地下鉄を軸に動き、アクセスのいいエリアに泊まり、ちゃんと食べる時間を残しておく。それが広州を楽しむ基本です。
 
 2026年の広州は、移動のしやすさ、快適さ、そして地元らしいリズムをほどよく兼ね備えた、中国旅行でかなり使える一都市です。
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,6 +1,6 @@
 ---
 title: "中國旅遊保險 2026：外國旅客真正需要的保障是什麼"
-description: "2026 年中國旅遊保險實用指南——外國旅客需要哪些保障、費用多少、哪些保險公司靠譜，以及哪些真實情境下保險能幫你省下數萬元。"
+description: "2026 年中國旅遊保險實用指南——外國旅客需要哪些保障、費用多少、哪些保險公司靠譜，以及哪些真實情境下保險能幫你省下數萬元。 [NEEDS EXPANSION]"
 pubDate: 2026-07-17
 category: essentials
 tags: ["travel insurance", "china insurance", "medical china", "china travel tips", "foreign visitors china"]
@@ -113,3 +113,11 @@ faqs:
 ---
 
 **延伸閱讀：**[抵達中國前 24 小時：行前準備檢查清單](/zh-tw/posts/first-24-hours-in-china-arrival-checklist/) 告訴你落地後該做的每一件事——包含要不要在機場買保險。[出發前該搞定的 App、支付和文件](/zh-tw/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) 幫你把出發前的準備工作做好，保險有買沒買都能順利入境。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

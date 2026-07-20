@@ -1,5 +1,5 @@
 ---
-title: "WeChat Pay pour visiteurs étrangers 2026 : installation et utilisation complète"
+title: "WeChat Pay pour visiteurs étrangers 2026 : installation et utilisation..."
 description: "Comment configurer WeChat Pay en Chine avec une carte étrangère : inscription, portefeuille, vérification passeport, paiement, limites, frais et problèmes fréquents."
 pubDate: 2026-07-06
 category: payment
@@ -42,3 +42,15 @@ Menus de restaurants, mini-programmes, commandes locales, petits commerces et si
 
 WeChat Pay demande parfois plus de patience qu'Alipay, mais il couvre des usages que l'autre application ne remplace pas toujours. Configurez-le avant d'en avoir besoin.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

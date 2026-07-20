@@ -1,6 +1,6 @@
 ---
-title: "Reiseversicherung für China 2026: Was ausländische Besucher wirklich brauchen"
-description: "Praktischer Leitfaden 2026 zur Reiseversicherung für China — welche Deckungen ausländische Reisende tatsächlich benötigen, was sie kosten, welche Anbieter funktionieren und in welchen Situationen eine Versicherung Tausende spart."
+title: "Reiseversicherung für China 2026: Was ausländische Besucher wirklich..."
+description: "Reiseversicherung für China 2026: Welche Deckung Besucher wirklich brauchen, was sie kostet und wann sie vor hohen Ausgaben schützt."
 pubDate: 2026-07-17
 category: essentials
 tags: ["travel insurance", "china insurance", "medical china", "china travel tips", "foreign visitors china"]
@@ -18,6 +18,8 @@ faqs:
     answer: "Die meisten für 2026 aktualisierten Policen enthalten COVID-19-Deckung, aber prüfen Sie das Kleingedruckte. China behandelt COVID-19 inzwischen als normale Atemwegserkrankung. Einige Policen schließen pandemiebedingte Ansprüche aus — klären Sie das vor dem Kauf."
   - question: "Chinesischen oder internationalen Versicherer wählen?"
     answer: "Beide haben Kompromisse. Chinesische Versicherer wie Ping An oder PICC sind günstiger (¥30–100 pro Woche) und haben Direktabrechnung mit lokalen öffentlichen Krankenhäusern, aber kaum englischsprachigen Support. Internationale Versicherer wie World Nomads, AXA oder SafetyWing kosten mehr (¥150–400 pro Woche), bieten aber 24/7 englische Unterstützung, Zugang zu internationalen Krankenhausnetzwerken und Rücktransportdeckung. Ohne Chinesischkenntnisse spart die internationale Option enormen Stress im Ernstfall."
+---
+
 ---
 
 Diesen Moment am Check-in-Schalter kennen Sie: Der Agent fragt „Reiseversicherung dazu?" und Ihr Gehirn macht eine Kosten-Nutzen-Rechnung in 0,3 Sekunden, bevor Sie „nein danke" sagen.
@@ -87,3 +89,11 @@ Internationale Anbieter kosten 3–5× mehr. Dafür bekommen Sie englische Schad
 ---
 
 **Weiterlesen:** [Die ersten 24 Stunden in China: Ankunfts-Checkliste](/de/posts/first-24-hours-in-china-arrival-checklist/) zeigt, was direkt nach der Landung zu tun ist. [Vor der China-Reise einzurichten](/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) führt durch die Pre-Departure-Checkliste.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

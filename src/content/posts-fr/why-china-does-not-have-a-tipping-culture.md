@@ -1,5 +1,5 @@
 ---
-title: "Pourquoi la Chine n'a pas de culture du pourboire : guide d'étiquette pour étrangers"
+title: "Pourquoi la Chine n'a pas de culture du pourboire : guide d'étiquette..."
 description: "Comprendre pourquoi le pourboire n'est pas habituel en Chine : prix affichés, service, exceptions, frais de service et façons naturelles de remercier."
 pubDate: 2026-07-11
 category: essentials
@@ -46,3 +46,13 @@ Les avis en ligne, recommandations, retours au même commerce et paroles de reme
 
 En Chine continentale, la règle simple est de ne pas donner de pourboire, sauf service touristique privé ou environnement international. Vous serez plus poli en respectant la norme locale.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

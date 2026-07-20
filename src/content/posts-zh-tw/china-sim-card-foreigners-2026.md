@@ -1,6 +1,6 @@
 ---
 title: "外國人在中國怎麼買手機 SIM 卡 2026：中國移動、聯通、電信比較"
-description: "2026 年外國旅客在中國購買本地 SIM 卡的逐步指南，比較中國移動、中國聯通和中國電信的價格、訊號覆蓋、英文服務和機場櫃檯購買選項。"
+description: "2026 年外國旅客在中國購買本地 SIM 卡的逐步指南，比較中國移動、中國聯通和中國電信的價格、訊號覆蓋、英文服務和機場櫃檯購買選項。 [NEEDS EXPANSION]"
 pubDate: 2026-07-16
 category: esim
 tags: ["china sim card", "china mobile", "china unicom", "china telecom", "local sim", "mobile data china", "china tourist sim"]
@@ -110,3 +110,15 @@ faqs:
 - **購買地點**：機場入境大廳圖方便；市區營業廳圖便宜
 - **英文客服**：中國移動 10086、中國聯通 10010
 - **雙卡組合**：旅行 eSIM 負責上網 + 本地中國 SIM 提供手機號碼
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/esim-comparison/" rel="nofollow">eSIM plan comparator</a> — Compare data plans across different China eSIM providers.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

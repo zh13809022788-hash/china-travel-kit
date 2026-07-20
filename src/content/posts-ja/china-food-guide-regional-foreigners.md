@@ -1,6 +1,6 @@
 ---
 title: "中国グルメガイド 2026：外国人向け地域料理・注文・安全対策"
-description: "中国各地の料理、都市別に食べたい名物、注文方法、食の安全、ベジタリアン対応、予算感をまとめます。"
+description: "2026年版の中国グルメガイド。外国人旅行者向けに、地域別の名物料理、注文のコツ、食のマナー、衛生面の注意点、安全に楽しむための対策を初めてでもわかりやすく紹介します。"
 pubDate: 2026-07-15
 category: food
 tags: ["中国料理", "地域料理", "屋台", "食事ガイド", "四川料理", "広東料理"]
@@ -55,3 +55,13 @@ faqs:
 ## まとめ
 
 中国旅行は、通信、支払い、移動、住所の準備が整うと一気に楽になります。この記事の目安をもとに、自分の旅程、荷物、言語の不安に合わせて無理のない選択をしてください。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

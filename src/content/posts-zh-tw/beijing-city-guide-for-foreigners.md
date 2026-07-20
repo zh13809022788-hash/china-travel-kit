@@ -1,6 +1,6 @@
 ---
 title: "外國旅客北京城市指南：出發前要知道什麼"
-description: "給外國旅客的北京實用指南：交通、付款、住宿區域、必訪景點、季節、行程安排與第一次到北京的注意事項。"
+description: "給外國旅客的北京實用指南：交通、付款、住宿區域、必訪景點、季節、行程安排與第一次到北京的注意事項。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["beijing", "city guide", "china travel", "great wall"]

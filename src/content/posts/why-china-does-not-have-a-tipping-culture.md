@@ -1,6 +1,6 @@
 ---
-title: "Why China Does Not Have a Tipping Culture: A Foreigner's Guide to Service Etiquette"
-description: "Understand why tipping is not customary in China — cultural differences, when service charges apply, how to show appreciation without tipping, and practical etiquette for foreign visitors."
+title: "Why China Does Not Have a Tipping Culture: A Foreigner's Guide to..."
+description: "Learn why tipping is uncommon in China, when service charges apply, and how foreign visitors can show appreciation politely."
 pubDate: 2026-07-11
 category: essentials
 tags: ["tipping", "china culture", "travel etiquette", "restaurants", "service"]
@@ -21,6 +21,8 @@ faqs:
     answer: "Hong Kong and Macau follow different norms from mainland China. A 10 percent service charge is common, and small tips are more widely understood."
   - question: "How can I show appreciation if I do not tip?"
     answer: "A sincere thank-you, a positive review, returning to the same business, or recommending the service to others often feels more natural in mainland China than leaving extra cash."
+---
+
 ---
 
 ## The Short Answer

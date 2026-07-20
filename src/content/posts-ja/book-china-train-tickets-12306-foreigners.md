@@ -1,6 +1,6 @@
 ---
 title: "外国人向け12306中国鉄道チケット予約ガイド 2026"
-description: "外国人がパスポートで12306を使い、中国高速鉄道チケットを予約、支払い、改札通過、変更・払い戻しする手順を解説します。"
+description: "2026年の最新ルールに沿って、外国人旅行者が12306で中国鉄道チケットを予約する手順をわかりやすく解説。パスポート登録、支払い、改札、変更・払い戻しまで安心して旅を準備できます。"
 pubDate: 2026-07-04
 category: transport
 tags: ["12306", "中国鉄道", "高速鉄道", "列車チケット", "交通"]
@@ -22,6 +22,8 @@ faqs:
     answer: "出発前であればアプリ内で変更や払い戻しが可能です。時刻が近いほど手数料が高くなることがあります。"
   - question: "第三者予約サイトは安全ですか？"
     answer: "信頼できる大手サービスなら一般的に安全です。手数料はありますが、外国語サポートが必要な人には便利です。"
+---
+
 ---
 
 ## まず知っておくこと
@@ -49,3 +51,13 @@ Trip.comなどの第三者サービスは手数料がかかりますが、英語
 ## まとめ
 
 中国旅行は、最初の準備さえ整えばとても動きやすい旅先です。この記事の数字や手順は、完璧に暗記するより「どの場面で何を選ぶか」を決めるための目安として使ってください。迷ったら、通信、支払い、住所、移動手段の順に確認すると落ち着いて対処できます。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

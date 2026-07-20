@@ -1,6 +1,6 @@
 ---
-title: "How to Visit a TCM Doctor or Clinic in China 2026: Practical Guide for Foreign Visitors"
-description: "Step-by-step guide to seeing a Traditional Chinese Medicine doctor in China as a foreigner: choosing a clinic, booking appointments, costs, translation tools, and what to expect during your visit."
+title: "How to Visit a TCM Doctor or Clinic in China 2026: Practical Guide for..."
+description: "Learn how to visit a TCM doctor in China in 2026, from finding clinics and booking appointments to costs, translation tips, and what to expect."
 pubDate: 2026-07-15
 category: essentials
 tags: ["tcm", "traditional chinese medicine", "acupuncture", "health", "medical", "china travel"]
@@ -32,6 +32,8 @@ faqs:
     answer: "Public hospitals accept Alipay, WeChat Pay, and cash. Foreign credit cards are rarely accepted directly. Make sure you have Alipay or WeChat Pay set up before visiting. International clinics may accept foreign cards but always confirm in advance."
   - question: "Is there a difference between TCM in Beijing vs Shanghai vs smaller cities?"
     answer: "Beijing has the highest concentration of top-tier TCM hospitals (Guanganmen, Xiyuan). Shanghai has strong TCM departments at Yueyang and Longhua hospitals. Smaller cities have basic TCM services but less English support. Costs are lower outside first-tier cities."
+---
+
 ---
 
 **This guide is for informational purposes only. It does not constitute medical advice. Always consult a qualified healthcare professional before starting any treatment.**
@@ -170,6 +172,14 @@ Most TCM doctors recommend a follow-up visit after 5-7 days to adjust the formul
 
 **Smaller cities** have basic TCM services at local public hospitals. English support is minimal. Costs are significantly lower — a consultation may be as little as 30-50 RMB.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ (Updated July 2026)
 
 Refer to the FAQ section at the top of this guide for answers to the most common questions about visiting a TCM doctor in China.

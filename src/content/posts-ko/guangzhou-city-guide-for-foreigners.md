@@ -1,6 +1,6 @@
 ---
 title: "2026년 광저우 여행 가이드: 외국인 관광객을 위한 완벽 정리"
-description: "2026년 광저우 여행 가이드 — 광저우 타워, 진자 사원, 사면섬, 광둥 요리, 지하철 교통, 실전 여행 팁까지 정리했습니다."
+description: "2026년 광저우 여행 가이드 — 광저우 타워, 진자 사원, 사면섬, 광둥 요리, 지하철 교통, 실전 여행 팁까지 정리했습니다. [NEEDS EXPANSION]"
 pubDate: 2026-07-18
 category: essentials
 tags: ["광저우", "시티 가이드", "중국 여행", "광둥"]
@@ -27,3 +27,20 @@ coverAlt: "광저우 타워와 주강 야경"
 광저우는 중국 남부의 엔진입니다. 2,000년 이상 항구 도시로서 해상 실크로드의 출발점이었고, 외국 무역이 중국으로 들어오는 관문이었습니다. 오늘날 중국 제3의 도시이자 제조업과 물류의 중심지, 그리고 광둥 요리——중국 최고의 요리로 평가받는——의 발상지입니다.
 
 광저우는 베이징의 제국적 웅장함이나 상하이의 국제적 화려함과는 다른 중국을 보여줍니다. 이곳은 비즈니스와 미식, 아열대 에너지의 도시입니다.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+
+## 광저우 여행 전 필수 준비사항
+## 광저우에서 꼭 가봐야 할 명소
+## 교통, 결제, 숙소 이용 팁
+
+(Content to be added)

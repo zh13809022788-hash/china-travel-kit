@@ -1,5 +1,5 @@
 ---
-title: "Réserver un billet de train en Chine sur 12306 en 2026 avec un passeport étranger"
+title: "Réserver un billet de train en Chine sur 12306 en 2026 avec un passeport..."
 description: "Guide étape par étape pour réserver des trains chinois sur 12306 : inscription, passeport, vérification, paiement, e-billet et alternatives pour voyageurs étrangers."
 pubDate: 2026-07-04
 category: transport
@@ -50,3 +50,13 @@ Si 12306 refuse votre carte ou si vous voulez une interface plus simple, utilise
 
 12306 est le meilleur choix si vous acceptez une configuration initiale un peu stricte. Pour les fêtes et les grands axes, réservez dès l'ouverture de la vente.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

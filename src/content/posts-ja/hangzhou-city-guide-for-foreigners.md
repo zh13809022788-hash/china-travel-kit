@@ -1,6 +1,6 @@
 ---
 title: "杭州旅行ガイド 2026：外国人向け西湖・茶文化・週末旅"
-description: "杭州を訪れる外国人旅行者向けに、西湖、龍井茶、上海からの行き方、交通、食事、滞在日数をまとめます。"
+description: "杭州を訪れる外国人旅行者向けに、西湖、龍井茶、上海からの行き方、交通、食事、滞在日数をまとめます。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["杭州", "都市ガイド", "中国旅行", "西湖", "茶文化"]
@@ -47,3 +47,13 @@ faqs:
 ## まとめ
 
 中国旅行は、通信、支払い、移動、住所の準備が整うと一気に楽になります。この記事の目安をもとに、自分の旅程、荷物、言語の不安に合わせて無理のない選択をしてください。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

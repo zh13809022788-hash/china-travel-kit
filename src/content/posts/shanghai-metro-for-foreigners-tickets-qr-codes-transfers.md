@@ -1,6 +1,6 @@
 ---
-title: "How to Use the Shanghai Metro as a Foreigner: QR Codes, Tickets & Tips (2026)"
-description: "How to use the Shanghai metro as a foreign tourist in 2026 — Alipay QR code entry, ticket machines, line transfers, airport connections, and troubleshooting for non-Chinese speakers."
+title: "How to Use the Shanghai Metro as a Foreigner: QR Codes, Tickets & Tips..."
+description: "Learn how to ride the Shanghai Metro as a foreigner with QR codes, tickets, airport links, transfers, and practical tips for a smooth trip."
 pubDate: 2026-07-09
 category: transport
 tags: ["shanghai metro", "china transport", "qr code payment", "subway tickets", "alipay", "shanghai metro for foreigners"]
@@ -21,6 +21,8 @@ faqs:
     answer: "Yes, ticket machines have an English mode, all station names and signage are bilingual, and onboard announcements are made in both Mandarin and English, so navigating without Chinese is very doable."
   - question: "Do I have to go through security to enter the metro?"
     answer: "Yes, every station has a security checkpoint where you place bags on an X-ray belt, and occasionally staff may ask you to take a sip from a bottled drink you are carrying, so allow a couple of extra minutes at busy stations."
+---
+
 ---
 
 ## Why This Matters

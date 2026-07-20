@@ -118,6 +118,14 @@ Die Menschen in Guangzhou sind an Geschäftsreisende und Besucher gewöhnt. Trot
 
 Zwei volle Tage reichen für einen ersten Eindruck, vor allem wenn man ohnehin wegen Business oder Transit in Südchina ist. Drei bis vier Tage sind besser, wenn man gut essen, ein paar wichtige Orte sehen und einen langsameren Vierteltag einbauen möchte. Wer es mit dem Essen ernst meint, sollte mehr Zeit einplanen. In Guangzhou werden Mahlzeiten schnell Teil des Reiseplans, nicht bloß Pausen dazwischen.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### Lohnt sich Guangzhou für ausländische Reisende?
@@ -146,3 +154,5 @@ Mit dem Hochgeschwindigkeitszug dauert Guangzhou South nach Shenzhen oft etwa 30
 Guangzhou ist eine starke Wahl für ausländische Besucher, die eine Stadt mit Substanz suchen. Sie ist praktisch, preislich fair und besonders lohnend, wenn man sich für Essen und lokales Stadtleben interessiert. In der Nähe der Metro wohnen, ein gut angebundenes Viertel wählen und genug Zeit fürs Essen lassen: Das ist im Grunde die Formel.
 
 Für 2026 bleibt Guangzhou eine der nützlichsten Städte Chinas für Reisende, die gute Verbindungen, Komfort und einen echten lokalen Rhythmus möchten, ohne auf die Basics einer einfachen Reise zu verzichten.
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

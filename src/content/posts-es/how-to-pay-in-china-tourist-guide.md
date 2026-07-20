@@ -39,3 +39,22 @@ Pago > 200 RMB → Alipay o efectivo
 Hotel grande → Tarjeta de crédito
 Taxi/DiDi → Alipay o WeChat
 Emergencia → Efectivo
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.
+
+
+## Métodos de pago más usados en China
+## Cómo configurar Alipay y WeChat Pay antes del viaje
+## Consejos para pagar en tiendas, transporte y restaurantes
+## Qué hacer si tu tarjeta o app de pago no funciona
+
+(Content to be added)

@@ -1,5 +1,5 @@
 ---
-title: "Street food à Chengdu 2026 : sécurité, niveau de piment et plats à commander"
+title: "Street food à Chengdu 2026 : sécurité, niveau de piment et plats à..."
 description: "Guide pratique de la street food à Chengdu : manger sans se tromper, gérer le piment du Sichuan, choisir les stands sûrs et commander sans parler chinois."
 pubDate: 2026-07-09
 category: food
@@ -46,3 +46,13 @@ Les QR codes dominent. Si le menu est en chinois, photographiez-le avec une appl
 
 La street food de Chengdu est l'une des grandes raisons de venir. Choisissez les stands vivants, commencez doucement sur le piment et payez avec Alipay ou WeChat Pay.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

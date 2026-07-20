@@ -1,6 +1,6 @@
 ---
 title: "外國人在中國看中醫 2026：門診、針灸與就診指南"
-description: "外國旅客在中國看中醫指南：如何選診所、掛號預約、費用、翻譯工具、針灸推拿與公立醫院就診流程。"
+description: "外國旅客在中國看中醫指南：如何選診所、掛號預約、費用、翻譯工具、針灸推拿與公立醫院就診流程。 [NEEDS EXPANSION]"
 pubDate: 2026-07-15
 category: essentials
 tags: ["中醫", "傳統中醫", "針灸", "健康", "醫療", "中國旅行"]
@@ -64,3 +64,11 @@ faqs:
 
 - [中國自由行規劃：支付、eSIM、交通與 App](/zh-tw/posts/china-trip-planner-first-time-visitors-payment-esim-transport-apps/)
 - [中國旅行行李清單：四季打包指南](/zh-tw/posts/what-to-pack-for-china-a-season-by-season-checklist/)
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: "Что настроить перед поездкой в Китай 2026"
-description: "Alipay, WeChat Pay, eSIM, DiDi, 12306, переводчик, VPN, документы и офлайн-копии."
+description: "Alipay, WeChat Pay, eSIM, DiDi, 12306, переводчик, VPN, документы и офлайн-копии. [NEEDS EXPANSION]"
 pubDate: 2026-07-13
 category: essentials
 tags: ["чек-лист", "Alipay", "eSIM", "DiDi", "12306"]

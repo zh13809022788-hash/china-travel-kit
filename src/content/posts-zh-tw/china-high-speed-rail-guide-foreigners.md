@@ -1,6 +1,6 @@
 ---
 title: "外國旅客中國高鐵指南：訂票、進站與座位選擇"
-description: "2026 年中國高鐵完整指南：如何用 12306 訂票、用護照作為無紙化車票進站，以及不同座位等級怎麼選。"
+description: "2026 年中國高鐵完整指南：如何用 12306 訂票、用護照作為無紙化車票進站，以及不同座位等級怎麼選。 [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: transport
 tags: ["high-speed rail", "12306", "china train", "transport"]

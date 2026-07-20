@@ -113,3 +113,11 @@ faqs:
 ---
 
 **함께 읽기:** [중국 도착 후 24시간: 준비 체크리스트](/ko/posts/first-24-hours-in-china-arrival-checklist/)는 공항에서 보험을 살지 여부를 포함해 착륙 직후 해야 할 일을 다룹니다. [중국 여행 전 설정해야 할 것들](/ko/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)은 보험 유무와 상관없이 입국을 순조롭게 하는 출발 전 체크리스트입니다.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

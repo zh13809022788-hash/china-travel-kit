@@ -1,5 +1,5 @@
 ---
-title: "Aéroport Pékin Daxing vers centre-ville 2026 : guide transport pour première visite"
+title: "Aéroport Pékin Daxing vers centre-ville 2026 : guide transport pour..."
 description: "Guide 2026 pour rejoindre Pékin depuis l'aéroport Daxing : train express, métro, taxi, DiDi, navettes de nuit, coûts et conseils pratiques."
 pubDate: 2026-07-08
 category: transport
@@ -44,3 +44,13 @@ Après la fin des trains, allez uniquement à la file officielle de taxis ou com
 
 De jour, prenez l'express. Pour l'ouest de Pékin, envisagez le train interurbain. Après minuit ou avec beaucoup de bagages, taxi officiel ou DiDi deviennent les options les plus pratiques.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

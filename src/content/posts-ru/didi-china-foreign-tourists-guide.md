@@ -1,6 +1,6 @@
 ---
 title: "DiDi в Китае для туристов 2026"
-description: "Как вызвать машину, указать адрес, оплатить поездку и избежать ошибок с DiDi."
+description: "Как вызвать машину, указать адрес, оплатить поездку и избежать ошибок с DiDi. [NEEDS EXPANSION]"
 pubDate: 2026-07-03
 category: transport
 tags: ["DiDi", "такси", "транспорт", "ride-hailing"]

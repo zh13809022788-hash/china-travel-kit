@@ -1,6 +1,6 @@
 ---
 title: "Работает ли Apple Pay в Китае в 2026: честный ответ"
-description: "Где Apple Pay и Google Pay проходят, где не помогают, и чем туристу платить каждый день."
+description: "Где Apple Pay и Google Pay проходят, где не помогают, и чем туристу платить каждый день. [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: payment
 tags: ["Apple Pay", "Google Pay", "оплата", "NFC"]

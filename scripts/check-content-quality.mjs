@@ -1,10 +1,24 @@
-import { readdirSync, readFileSync } from 'node:fs';
+import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-const postsDir = join(process.cwd(), 'src', 'content', 'posts');
+const contentDir = join(process.cwd(), 'src', 'content');
 const strict = process.argv.includes('--strict');
 const requiredFields = ['title', 'description', 'pubDate', 'category', 'tags'];
 const allowedCategories = new Set(['payment', 'esim', 'transport', 'essentials', 'food']);
+
+// Discover every posts-* collection directory (en, zh-tw, ja, ko, ru, fr, de, es, th, ms, vi).
+const collectionDirs = readdirSync(contentDir)
+  .filter((entry) => entry.startsWith('posts'))
+  .filter((entry) => statSync(join(contentDir, entry)).isDirectory())
+  .sort();
+
+if (collectionDirs.length === 0) {
+  console.error('No posts-* collections found in', contentDir);
+  process.exit(1);
+}
+
+const localeLabel = (dirName) => (dirName === 'posts' ? 'en' : dirName.replace(/^posts-/, ''));
+
 const issues = [];
 
 function parseFrontmatter(source, file) {
@@ -36,43 +50,60 @@ function parseFrontmatter(source, file) {
 }
 
 function wordCount(markdown) {
-  return (markdown.match(/\b[A-Za-z][A-Za-z0-9'-]*\b/g) || []).length;
+  // Word boundary that also matches CJK characters as individual "words".
+  const cjk = markdown.match(/[\u3400-\u9fff\uf900-\ufaff]/g) || [];
+  const latin = (markdown.match(/\b[A-Za-z][A-Za-z0-9'-]*\b/g) || []).length;
+  return cjk.length + latin;
 }
 
-const files = readdirSync(postsDir).filter((file) => file.endsWith('.md'));
+let totalFiles = 0;
+let filesByLocale = {};
 
-for (const file of files) {
-  const source = readFileSync(join(postsDir, file), 'utf8');
-  const { data, body } = parseFrontmatter(source, file);
-  const words = wordCount(body);
-  const internalLinks = (body.match(/\]\(\/(?!\/)/g) || []).length;
-  const externalLinks = (body.match(/\]\(https?:\/\//g) || []).length;
-  const headings = (body.match(/^##\s+/gm) || []).length;
+for (const dirName of collectionDirs) {
+  const dirPath = join(contentDir, dirName);
+  const files = readdirSync(dirPath).filter((file) => file.endsWith('.md'));
+  const locale = localeLabel(dirName);
+  filesByLocale[locale] = files.length;
+  totalFiles += files.length;
 
-  for (const field of requiredFields) {
-    if (!data[field]) issues.push(`${file}: missing ${field}`);
+  for (const file of files) {
+    const source = readFileSync(join(dirPath, file), 'utf8');
+    const tag = `[${locale}] ${file}`;
+    const { data, body } = parseFrontmatter(source, tag);
+    const words = wordCount(body);
+    const mdLinks = (body.match(/\]\(\/(?!\/)/g) || []).length;
+    const htmlLinks = (body.match(/href="\/(?!\/)/g) || []).length;
+    const internalLinks = mdLinks + htmlLinks;
+    const externalLinks = (body.match(/\]\(https?:\/\//g) || []).length;
+    const headings = (body.match(/^##\s+/gm) || []).length;
+
+    for (const field of requiredFields) {
+      if (!data[field]) issues.push(`${tag}: missing ${field}`);
+    }
+
+    if (data.title && data.title.length > 75) issues.push(`${tag}: title is long (${data.title.length} chars)`);
+    if (data.description && (data.description.length < 90 || data.description.length > 180)) {
+      issues.push(`${tag}: description should be 90-180 chars (${data.description.length})`);
+    }
+    if (data.category && !allowedCategories.has(data.category)) issues.push(`${tag}: invalid category ${data.category}`);
+    if (words < 900) issues.push(`${tag}: thin body (${words} words)`);
+    if (headings < 4) issues.push(`${tag}: add more section headings (${headings})`);
+    if (internalLinks < 3) issues.push(`${tag}: add internal links (${internalLinks})`);
+    if (data.faqCount < 3) issues.push(`${tag}: add at least 3 FAQ entries (${data.faqCount})`);
+    if (/TODO|TBD|lorem ipsum|placeholder/i.test(source)) issues.push(`${tag}: contains placeholder text`);
+    if (externalLinks > 8) issues.push(`${tag}: unusually many external links (${externalLinks})`);
   }
-
-  if (data.title && data.title.length > 75) issues.push(`${file}: title is long (${data.title.length} chars)`);
-  if (data.description && (data.description.length < 90 || data.description.length > 180)) {
-    issues.push(`${file}: description should be 90-180 chars (${data.description.length})`);
-  }
-  if (data.category && !allowedCategories.has(data.category)) issues.push(`${file}: invalid category ${data.category}`);
-  if (words < 900) issues.push(`${file}: thin body (${words} words)`);
-  if (headings < 4) issues.push(`${file}: add more section headings (${headings})`);
-  if (internalLinks < 3) issues.push(`${file}: add internal links (${internalLinks})`);
-  if (data.faqCount < 3) issues.push(`${file}: add at least 3 FAQ entries (${data.faqCount})`);
-  if (/TODO|TBD|lorem ipsum|placeholder/i.test(source)) issues.push(`${file}: contains placeholder text`);
-  if (externalLinks > 8) issues.push(`${file}: unusually many external links (${externalLinks})`);
 }
+
+const summary = collectionDirs.map((d) => `${localeLabel(d)}=${filesByLocale[localeLabel(d)] ?? 0}`).join(' ');
 
 if (issues.length) {
   const method = strict ? 'error' : 'warn';
-  console[method](`Content quality check found ${issues.length} issue(s):`);
+  console[method](`Content quality check found ${issues.length} issue(s) across ${totalFiles} post(s) [${summary}]:`);
   for (const issue of issues) console[method](`- ${issue}`);
   if (strict) process.exit(1);
   console.warn('Report mode only. Use `npm run check:content -- --strict` to fail on these issues.');
   process.exit(0);
 }
 
-console.log(`Content quality check passed for ${files.length} post(s).`);
+console.log(`Content quality check passed for ${totalFiles} post(s) across ${collectionDirs.length} locale(s) [${summary}].`);

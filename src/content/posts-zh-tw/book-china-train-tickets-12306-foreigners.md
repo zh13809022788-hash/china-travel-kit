@@ -1,6 +1,6 @@
 ---
 title: "外國人如何用 12306 訂中國火車票 2026：護照購票完整指南"
-description: "2026 年外國旅客用 12306 訂中國火車票教學：註冊、護照驗證、外國卡付款、進站、改簽退票與第三方平台比較。"
+description: "2026 年外國旅客用 12306 訂中國火車票教學：註冊、護照驗證、外國卡付款、進站、改簽退票與第三方平台比較。 [NEEDS EXPANSION]"
 pubDate: 2026-07-04
 category: transport
 tags: ["12306", "火車票", "高鐵", "交通"]
@@ -49,3 +49,13 @@ faqs:
 ## 總結
 
 外國人用護照就能在 12306 訂中國火車票，不需要中國身份證或銀行帳戶。熱門路線盡早買，到站預留人工核驗時間，並確認車站位置。把這三件事做好，高鐵會是中國旅行最舒服的移動方式之一。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

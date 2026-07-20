@@ -23,3 +23,22 @@ China tiene su propio ecosistema de pagos NFC llamado UnionPay QuickPass. Apple 
 Google Pay está completamente bloqueado por el Gran Cortafuegos. La app no se conecta a los servidores de Google, por lo que es inútil en territorio chino.
 
 **La realidad es que necesitas Alipay o WeChat Pay.** No hay forma de moverse por China cómodamente sin una de las dos. Apple Pay o Google Pay pueden servir como respaldo muy ocasional, pero no como método principal.
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.
+
+
+## Compatibilidad de Apple Pay y Google Pay en China en 2026
+## Qué métodos de pago móvil sí funcionan para turistas
+## Cómo configurar pagos antes de viajar a China
+## Consejos para evitar problemas al pagar en China
+
+(Content to be added)

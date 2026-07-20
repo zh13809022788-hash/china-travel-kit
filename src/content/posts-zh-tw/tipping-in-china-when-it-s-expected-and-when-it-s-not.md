@@ -1,6 +1,6 @@
 ---
 title: "中國小費指南 2026：什麼時候該給、什麼時候不用給？"
-description: "外國旅客中國小費指南：餐廳、飯店、計程車、導遊、服務費、香港澳門差異與避免尷尬的禮儀。"
+description: "外國旅客中國小費指南：餐廳、飯店、計程車、導遊、服務費、香港澳門差異與避免尷尬的禮儀。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["小費", "中國旅行", "禮儀", "服務費", "實用資訊"]
@@ -47,3 +47,13 @@ faqs:
 ## 總結
 
 中國內地的小費規則很簡單：日常不用給，服務費已列就不再給，私人導遊或司機可酌情給。照當地習慣付款，反而最不尷尬。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

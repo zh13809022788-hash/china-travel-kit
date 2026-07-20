@@ -1,6 +1,6 @@
 ---
-title: "Que faire en cas de perte de passeport en Chine : guide d'urgence pour touristes"
-description: "Guide d'urgence étape par étape pour les touristes étrangers qui perdent leur passeport en Chine — déclaration à la police, procédure à l'ambassade, documents de voyage temporaires, coûts, délais et que faire pendant l'attente."
+title: "Que faire en cas de perte de passeport en Chine : guide d'urgence pour..."
+description: "Passeport perdu en Chine ? Suivez les démarches clés : déclaration à la police, ambassade, document temporaire, délais et conseils d'attente."
 pubDate: 2026-07-17
 category: essentials
 tags: ["lost passport china", "emergency passport", "china embassy", "passport stolen china", "china travel emergency", "temporary travel document"]
@@ -18,6 +18,8 @@ faqs:
     answer: "Prévoyez ¥1 500–3 500 au total. Détail : déclaration police gratuite. Passeport d'urgence ¥300–1 200 selon nationalité. Visa de sortie ¥160. Photos ¥20–40. Taxis entre les bureaux ¥500–1 000. Nuits d'hôtel supplémentaires si le processus retarde votre départ."
   - question: "Et si je perds mon passeport dans une petite ville sans consulat ?"
     answer: "Vous devrez vous rendre dans la ville la plus proche avec un consulat. Sans pièce d'identité valide, pas de vol intérieur ni de train à grande vitesse. Le récépissé de police est parfois accepté pour les trains, mais pas garanti. Solution la plus sûre : voiture avec chauffeur, bus longue distance, ou contacter le consulat."
+---
+
 ---
 
 Perdre son passeport est déjà pénible. Le perdre en Chine, où le passeport n'est pas juste une pièce d'identité mais aussi la clé de l'hôtel, le billet de train, la vérification de paiement et l'autorisation de séjour — c'est un tout autre niveau de problème.
@@ -103,3 +105,11 @@ Vous recevrez un 停留证件 — permis de séjour de 15–30 jours. Démarrez 
 ---
 
 **À lire ensuite :** [Entrée sans visa et transit en Chine 2026](/fr/posts/china-visa-free-entry-transit-guide-2026/) sur les règles de visa après remplacement des documents. [Les premières 24 heures en Chine : check-list d'arrivée](/fr/posts/first-24-hours-in-china-arrival-checklist/) sur les gestes qui préviennent les urgences.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: "Chongqing City Guide for Foreigners 2026: What to Know Before You Go"
-description: "Complete 2026 guide to Chongqing for foreign tourists — Yangtze River, hotpot, Hongya Cave, mountain city landscape, metro tips, and practical advice for visiting China's most unique megacity."
+description: "Plan your 2026 Chongqing trip with essential tips on transport, hotpot, top sights, local customs, and navigating China’s mountain megacity."
 pubDate: 2026-07-18
 category: essentials
 tags: ["chongqing", "city guide", "china travel", "sichuan"]
@@ -20,6 +20,8 @@ faqs:
     answer: "Chongqing Jiangbei International Airport (CKG) is about 20 km north of the city. Metro Line 3 connects to the city center in about 45 minutes. A taxi takes 30-40 minutes and costs 60-80 yuan. DiDi works well."
 cover: "city-chongqing"
 coverAlt: "Chongqing skyline at night with Hongya Cave illuminated"
+---
+
 ---
 
 ## Introduction
@@ -84,3 +86,13 @@ Chongqing hotpot is the star. The broth is a deep red from chili oil, studded wi
 - **Hotpot etiquette:** Order yuanyang if you cannot handle spice. Do not drink the broth directly — it is for cooking ingredients, not for soup.
 - **Visa:** 240-hour visa-free transit is available through Chongqing's entry ports.
 - **Best season:** March-May and September-November. Avoid July-August.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

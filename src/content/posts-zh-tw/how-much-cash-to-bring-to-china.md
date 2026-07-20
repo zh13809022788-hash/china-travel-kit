@@ -1,6 +1,6 @@
 ---
 title: "2026 去中國要帶多少現金？旅客金錢指南"
-description: "2026 年旅客去中國要帶多少現金、哪些場景仍會用到人民幣、換匯與 ATM 技巧，以及入出境現金申報限制。"
+description: "2026 年旅客去中國要帶多少現金、哪些場景仍會用到人民幣、換匯與 ATM 技巧，以及入出境現金申報限制。 [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: payment
 tags: ["cash", "currency exchange", "china money", "rmb"]

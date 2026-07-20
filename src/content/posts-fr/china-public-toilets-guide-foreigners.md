@@ -1,5 +1,5 @@
 ---
-title: "Comment utiliser les toilettes publiques en Chine sans paniquer : guide de survie pour voyageurs"
+title: "Comment utiliser les toilettes publiques en Chine sans paniquer : guide..."
 category: essentials
 description: "Guide pratique pour les visiteurs étrangers afin de trouver, utiliser et gérer les toilettes publiques en Chine avec moins de stress et moins de surprises."
 pubDate: 2026-07-19
@@ -159,6 +159,14 @@ Les toilettes publiques en Chine ne sont plus un mystère dès qu’on accepte q
 
 Ayez des mouchoirs. Ayez du gel. Utilisez les bonnes toilettes quand vous les trouvez. Suivez les panneaux. Et gardez en tête qu’une toilette reste une toilette, même à l’autre bout du monde.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### Les toilettes publiques en Chine sont-elles gratuites ?
@@ -181,3 +189,5 @@ Utilisez les toilettes des aéroports, des gares de trains à grande vitesse, de
 
 ### Comment demander les toilettes en chinois ?
 Vous pouvez dire `ce suo zai na li?` ou `qing wen, wei sheng jian zai na li?` Dans beaucoup d’endroits, montrer le pictogramme des toilettes suffit.
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

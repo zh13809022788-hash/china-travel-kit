@@ -1,6 +1,6 @@
 ---
 title: "Pocket WiFi, eSIM или SIM в Китае 2026"
-description: "Что выбрать для интернета: pocket WiFi, туристическую eSIM, местную SIM или роуминг."
+description: "Что выбрать для интернета: pocket WiFi, туристическую eSIM, местную SIM или роуминг. [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: esim
 tags: ["pocket WiFi", "eSIM", "SIM", "интернет"]

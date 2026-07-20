@@ -1,6 +1,6 @@
 ---
-title: "First 24 Hours in China 2026: Complete Arrival Checklist for Foreign Visitors"
-description: "What to do in your first 24 hours in China as a foreign tourist — airport arrival checklist, getting internet, setting up Alipay, using Didi, and navigating to your hotel without stress."
+title: "First 24 Hours in China 2026: Complete Arrival Checklist for Foreign..."
+description: "Navigate your first 24 hours in China with a simple arrival checklist covering airport steps, internet, Alipay, Didi, and hotel transfer."
 pubDate: 2026-07-14
 category: essentials
 tags: ["arrival checklist", "first time china", "payment", "transport"]
@@ -17,6 +17,8 @@ faqs:
     answer: "It depends on arrival time, luggage, language comfort, and city. Airport metro is cheap and reliable in major cities. Ride-hailing is convenient if your app works. Official taxi queues are useful late at night, but prepare your destination in Chinese."
   - question: "What is the biggest first-day mistake?"
     answer: "Leaving payment, data, and address preparation until after you are tired and jet-lagged. Set up your apps before departure and keep your hotel address in Chinese offline."
+---
+
 ---
 
 Your first 24 hours in China should not be improvised. Most problems foreign visitors face on arrival are not dramatic. They are small, practical failures: no mobile data, a payment app that needs SMS verification, a hotel address only written in English, a taxi driver who cannot read your booking screenshot, or a tired traveler trying to solve everything at midnight.

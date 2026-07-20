@@ -42,3 +42,15 @@ Gardez quelques billets sur vous, une autre partie dans le bagage ou le coffre, 
 
 En Chine, le cash est une assurance, pas le moteur du voyage. Préparez le paiement mobile, puis gardez assez d'espèces pour absorber les ratés.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

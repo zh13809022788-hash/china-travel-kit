@@ -1,6 +1,6 @@
 ---
 title: "上海地下鉄の乗り方 2026：外国人向けQRコード・切符・乗換ガイド"
-description: "上海地下鉄を外国人旅行者が使う方法を、Alipay交通QR、券売機、運賃、乗り換え、空港接続、トラブル対策で解説します。"
+description: "上海地下鉄の乗り方を2026年最新情報で解説。外国人旅行者向けにQRコード乗車、切符購入、交通カード、乗換方法、空港アクセス、料金の目安、改札での注意点まで初めてでもわかりやすく紹介します。"
 pubDate: 2026-07-09
 category: transport
 tags: ["上海地下鉄", "中国交通", "QR決済", "地下鉄切符", "Alipay"]
@@ -49,3 +49,13 @@ faqs:
 ## まとめ
 
 中国旅行は、通信、支払い、移動、住所の準備が整うと一気に楽になります。この記事の目安をもとに、自分の旅程、荷物、言語の不安に合わせて無理のない選択をしてください。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

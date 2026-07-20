@@ -1,6 +1,6 @@
 ---
 title: "中国で外国クレジットカードは使える？2026年対応場所ガイド"
-description: "中国で外国発行VisaやMastercardを直接使える場所、使えない場面、ATM、手数料、モバイル決済との使い分けを解説します。"
+description: "中国旅行で外国発行クレジットカードはどこで使える？2026年最新の対応店舗、ホテル、空港、交通機関、観光地での利用可否、手数料や注意点、Alipay・WeChat Pay連携まで解説します。"
 pubDate: 2026-07-08
 category: payment
 tags: ["クレジットカード", "Visa Mastercard", "中国決済", "ATM", "外国カード"]
@@ -49,3 +49,15 @@ faqs:
 ## まとめ
 
 中国旅行は、通信、支払い、移動、住所の準備が整うと一気に楽になります。この記事の目安をもとに、自分の旅程、荷物、言語の不安に合わせて無理のない選択をしてください。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

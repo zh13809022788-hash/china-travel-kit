@@ -1,5 +1,5 @@
 ---
-title: "Préparer un premier voyage en Chine en 2026 : paiement, eSIM, transport et apps"
+title: "Préparer un premier voyage en Chine en 2026 : paiement, eSIM, transport..."
 description: "Planificateur pratique pour un premier voyage en Chine : données mobiles, Alipay, WeChat Pay, transport, applications, itinéraire réaliste et premières 24 heures."
 pubDate: 2026-07-13
 category: essentials

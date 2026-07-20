@@ -41,3 +41,13 @@ DiDi ist fuer Wege zwischen Buchten praktisch. Mobile Payment ist Standard. Engl
 ## Fazit
 
 Sanya eignet sich fuer drei bis fuenf Tage Strand, Resort und warmes Wetter. Waehlen Sie das Gebiet nach Reisestil: Dadonghai fuer einfach, Yalong Bay fuer Resort, Sanya Bay fuer Budget und lokaleres Umfeld.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

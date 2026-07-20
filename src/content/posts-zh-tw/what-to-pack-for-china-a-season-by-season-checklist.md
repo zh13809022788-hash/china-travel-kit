@@ -1,6 +1,6 @@
 ---
 title: "中國旅行行李清單 2026：四季打包指南"
-description: "中國旅行打包清單：四季衣物、必備 App、證件、藥品、轉接頭、行李技巧與外國旅客容易忘的物品。"
+description: "中國旅行打包清單：四季衣物、必備 App、證件、藥品、轉接頭、行李技巧與外國旅客容易忘的物品。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["中國旅行", "打包清單", "旅行必備", "第一次旅行", "中國提示"]
@@ -47,3 +47,13 @@ faqs:
 ## 總結
 
 中國旅行打包的核心是輕裝但不失手：證件、付款、網路、充電、藥品先到位，再依季節補衣物。行李越輕，你搭高鐵、走地鐵和爬樓梯時越感謝自己。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,6 +1,6 @@
 ---
 title: "中国で中医クリニックを受診する方法 2026：外国人向け実用ガイド"
-description: "外国人旅行者が中国で中医、鍼灸、推拿、漢方相談を受ける時の病院選び、予約、費用、翻訳、安全面を解説します。"
+description: "中国で中医クリニックを受診したい外国人向けに、予約方法、必要書類、診察の流れ、費用相場、保険対応、通訳手配、薬の受け取りまで2026年の実情に沿って解説します。"
 pubDate: 2026-07-15
 category: essentials
 tags: ["中医", "漢方", "鍼灸", "健康", "医療", "中国旅行"]
@@ -59,3 +59,13 @@ faqs:
 ## まとめ
 
 中国旅行は、通信、支払い、移動、住所の準備が整うと一気に楽になります。この記事の目安をもとに、自分の旅程、荷物、言語の不安に合わせて無理のない選択をしてください。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

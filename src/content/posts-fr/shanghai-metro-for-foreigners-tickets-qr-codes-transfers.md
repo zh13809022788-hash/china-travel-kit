@@ -1,5 +1,5 @@
 ---
-title: "Métro de Shanghai pour étrangers 2026 : QR codes, tickets et correspondances"
+title: "Métro de Shanghai pour étrangers 2026 : QR codes, tickets et..."
 description: "Guide du métro de Shanghai pour touristes : paiement Alipay, tickets, QR codes, transferts, aéroports, erreurs fréquentes et conseils pour non sinophones."
 pubDate: 2026-07-09
 category: transport
@@ -46,3 +46,13 @@ Suivez numéro de ligne, couleur et direction terminus. Dans les grandes station
 
 Le métro de Shanghai est l'un des meilleurs outils du voyage. Préparez votre QR code, évitez les heures de pointe avec bagages et vérifiez toujours la direction finale.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

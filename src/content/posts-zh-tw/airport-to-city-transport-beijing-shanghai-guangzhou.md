@@ -1,6 +1,6 @@
 ---
 title: "中國機場到市區交通 2026：北京、上海、廣州攻略"
-description: "北京、上海、廣州機場進市區指南：地鐵、機場快線、磁浮、計程車與 DiDi 費用時間，適合第一次來中國的旅客。"
+description: "北京、上海、廣州機場進市區指南：地鐵、機場快線、磁浮、計程車與 DiDi 費用時間，適合第一次來中國的旅客。 [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: transport
 tags: ["機場交通", "北京", "上海", "廣州", "廣州機場到市區", "北京機場交通"]
@@ -58,3 +58,13 @@ faqs:
 ## 總結
 
 北京首都機場選機場快線，大興機場優先選大興快線；上海浦東想快可坐磁浮，想省錢搭 2 號線，虹橋幾乎怎麼走都方便；廣州白雲機場則以 3 號線最穩。先把網路和付款準備好，你的中國第一段路會輕鬆很多。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

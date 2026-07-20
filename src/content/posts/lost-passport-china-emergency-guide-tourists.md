@@ -1,6 +1,6 @@
 ---
 title: "What to Do If You Lose Your Passport in China: Emergency Guide for Tourists"
-description: "Step-by-step emergency guide for foreign tourists who lose their passport in China — police report, embassy process, temporary travel documents, costs, timelines, and what to do while you wait."
+description: "Lost your passport in China? Follow clear emergency steps for police reports, embassy help, travel documents, and staying safe while you wait."
 pubDate: 2026-07-17
 category: essentials
 tags: ["lost passport china", "emergency passport", "china embassy", "passport stolen china", "china travel emergency", "temporary travel document"]
@@ -18,6 +18,8 @@ faqs:
     answer: "Expect ¥1,500–3,500 total, depending on your nationality. Breakdown: police report is free. Emergency passport fees range from ¥300 (France) to ¥1,200 (US). The Chinese exit visa costs ¥160. Passport photos cost ¥20–40. Budget another ¥500–1,000 for taxis between police stations, photo studios, embassies, and the Exit-Entry bureau — these offices are rarely close to each other. Factor in extra hotel nights if the process delays your departure."
   - question: "What if I lose my passport in a small city without a consulate?"
     answer: "You will need to travel to the nearest city with a consulate. This creates a logistical headache because you cannot board a domestic flight or high-speed train without valid ID. The police report receipt sometimes works for train travel, but it is not guaranteed — station staff have discretion and may refuse it. Your safest option is to have someone drive you, take a long-distance bus (which is less strict about ID), or contact your consulate for guidance on remote-area cases."
+---
+
 ---
 
 Losing your passport anywhere is bad. Losing it in China, where your passport is not just your ID but your hotel key, your train ticket, your payment verification, and your permission to be in the country — that is a different category of problem.
@@ -117,3 +119,11 @@ The Yangshuo case illustrates why location matters enormously. Losing your passp
 ---
 
 **Read next:** [China Visa-Free Entry and Transit Guide 2026](/posts/china-visa-free-entry-transit-guide-2026/) explains what visa rules apply and how to avoid overstay problems after you get your replacement documents. [First 24 Hours in China: Arrival Checklist](/posts/first-24-hours-in-china-arrival-checklist/) covers the practical steps that prevent emergencies — including making a passport photocopy the moment you check into your hotel.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

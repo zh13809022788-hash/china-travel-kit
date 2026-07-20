@@ -78,3 +78,13 @@ Les meilleures rues pour manger : **Laomendong (老门东)**, une ruelle histori
 - **Depuis l'aéroport :** Métro S1 jusqu'à Nanjing Sud (50 min), puis correspondance. Taxi jusqu'à Xinjiekou : 120-150 yuans (45-60 min).
 - **Internet :** Les restrictions chinoises s'appliquent. Installez un VPN ou achetez un eSIM avant le départ.
 - **Meilleure saison :** Automne (septembre-novembre). Évitez juillet-août.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

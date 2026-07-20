@@ -1,6 +1,6 @@
 ---
 title: "중국 여행 중 중의원·중의과 진료받는 법 2026: 외국인 여행자를 위한 실전 가이드"
-description: "중국에서 외국인 여행자가 중의학 진료를 받을 때 필요한 병원 선택, 예약, 비용, 번역 준비, 진료 과정, 약 수령 방법을 단계별로 정리한 실용 가이드."
+description: "중국에서 외국인 여행자가 중의학 진료를 받을 때 필요한 병원 선택, 예약, 비용, 번역 준비, 진료 과정, 약 수령 방법을 단계별로 정리한 실용 가이드. [NEEDS EXPANSION]"
 pubDate: 2026-07-15
 category: essentials
 tags: ["중의학", "전통중의학", "침", "건강", "의료", "중국 여행"]
@@ -196,3 +196,11 @@ faqs:
 5. **숙소와 가까운 공립병원을 미리 찾아두세요.** 컨디션이 나빠진 뒤 검색을 시작하면 병원 예약과 이동이 더 번거롭습니다.
 
 *이 가이드는 2026년 7월 기준으로 업데이트되었습니다. 진료비와 병원 정책은 바뀔 수 있으므로 방문 전 해당 병원의 최신 안내를 확인하세요.*
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: "2026 去中國需要 VPN 嗎？外國旅客網路與 App 使用指南"
-description: "2026 年旅客在中國是否需要 VPN：哪些 App 可能無法使用、eSIM 與漫遊差異、行前準備與合法實用注意事項。"
+description: "2026 年旅客在中國是否需要 VPN：哪些 App 可能無法使用、eSIM 與漫遊差異、行前準備與合法實用注意事項。 [NEEDS EXPANSION]"
 pubDate: 2026-07-14
 category: esim
 tags: ["VPN", "網路", "eSIM", "App"]
@@ -43,3 +43,15 @@ Google 相關服務、YouTube、WhatsApp、Instagram、Facebook、X、Signal、T
 ## 總結
 
 去中國不一定每個人都需要 VPN，但每個人都需要可靠網路方案和本地替代 App。最佳做法是：先確保 eSIM 或漫遊可用，再把中國常用工具準備好，VPN 只作輔助而非唯一救命繩。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/esim-comparison/" rel="nofollow">eSIM plan comparator</a> — Compare data plans across different China eSIM providers.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

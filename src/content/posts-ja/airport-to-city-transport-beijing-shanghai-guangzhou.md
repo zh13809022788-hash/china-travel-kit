@@ -1,6 +1,6 @@
 ---
 title: "中国 空港から市内 2026：北京・上海・広州の移動ガイド"
-description: "北京、上海、広州の空港から市内へ行く方法を、地下鉄、空港線、タクシー、DiDiの費用と所要時間で比較します。"
+description: "2026年版の中国空港アクセスガイド。北京・上海・広州の主要空港から市内まで、地下鉄・空港バス・タクシーの所要時間や料金、乗り換え、支払いのコツをわかりやすく紹介します。"
 pubDate: 2026-07-08
 category: transport
 tags: ["空港アクセス", "北京", "上海", "広州", "中国旅行", "交通"]
@@ -49,3 +49,13 @@ faqs:
 ## まとめ
 
 中国旅行は、最初の準備さえ整えばとても動きやすい旅先です。この記事の数字や手順は、完璧に暗記するより「どの場面で何を選ぶか」を決めるための目安として使ってください。迷ったら、通信、支払い、住所、移動手段の順に確認すると落ち着いて対処できます。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

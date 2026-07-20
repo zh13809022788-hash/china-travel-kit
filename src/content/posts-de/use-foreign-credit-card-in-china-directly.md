@@ -42,3 +42,20 @@ Nutzen Sie Bank of China oder ICBC und waehlen Sie RMB-Abrechnung. Pruefen Sie L
 ## Fazit
 
 Die physische Kreditkarte bleibt wichtig fuer Hotels, ATMs und Backups. Fuer den Alltag ist dieselbe Karte in Alipay oder WeChat Pay deutlich wertvoller.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.
+
+
+## Mobile Payment als Alternative
+
+(Content to be added)

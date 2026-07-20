@@ -1,6 +1,6 @@
 ---
 title: "外國 Visa 或 Mastercard 綁定 WeChat Pay 2026：中國付款逐步教學"
-description: "2026 年外國旅客把 Visa 或 Mastercard 綁到 WeChat Pay 的完整步驟：App 設定、身份驗證、綁卡與常見錯誤排除。"
+description: "2026 年外國旅客把 Visa 或 Mastercard 綁到 WeChat Pay 的完整步驟：App 設定、身份驗證、綁卡與常見錯誤排除。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: payment
 tags: ["微信支付", "付款", "外國信用卡", "中國旅行", "Mastercard"]
@@ -47,3 +47,15 @@ faqs:
 ## 總結
 
 WeChat Pay 對外國卡已經相當可用，但不代表永遠一次成功。出發前設定、用信用卡優先、準備 Alipay 備援和少量現金，才是最穩的付款組合。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

@@ -1,6 +1,6 @@
 ---
-title: "Airport to City in China 2026: Beijing, Shanghai & Guangzhou Transport Guide"
-description: "How to get from the airport to city center in Beijing (PEK/PKX), Shanghai (PVG/SHA), and Guangzhou (CAN) in 2026 — metro costs, express train times, taxi fares, DiDi alternatives, and step-by-step instructions for first-time visitors."
+title: "Airport to City in China 2026: Beijing, Shanghai & Guangzhou Transport..."
+description: "Airport-to-city transport in Beijing, Shanghai and Guangzhou for 2026, with metro, train, taxi and DiDi options for first-time visitors."
 pubDate: 2026-07-08
 category: transport
 tags: ["airport transport", "beijing", "shanghai", "guangzhou", "guangzhou airport to city", "beijing airport transport"]
@@ -21,6 +21,8 @@ faqs:
     answer: "Metro Line 3 connects Baiyun Airport (CAN) to the city center for about 7 RMB, taking roughly 50 to 70 minutes, and it avoids road traffic entirely. A taxi costs around 150 to 180 RMB and takes 40 to 60 minutes depending on traffic, while DiDi is similar or slightly cheaper. The metro is the most reliable choice for timing."
   - question: "Can I pay for airport transport with a foreign card or mobile wallet?"
     answer: "For metro and airport express trains, you can usually pay via Alipay or WeChat Pay QR codes, or buy a ticket at machines that increasingly accept mobile payment, and some cities let you tap a bank card. For DiDi, you pay in-app through your linked wallet or card. Taxis may prefer cash or mobile pay, so having a mobile wallet set up and a small amount of cash covers all cases."
+---
+
 ---
 
 ## Introduction

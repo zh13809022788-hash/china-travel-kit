@@ -1,6 +1,6 @@
 ---
-title: "Qué hacer si pierdes el pasaporte en China: guía de emergencia para turistas"
-description: "Guía de emergencia paso a paso para turistas extranjeros que pierden su pasaporte en China — denuncia policial, trámite en la embajada, documentos de viaje temporales, costes, plazos y qué hacer durante la espera."
+title: "Qué hacer si pierdes el pasaporte en China: guía de emergencia para..."
+description: "Guía rápida para actuar si pierdes el pasaporte en China: denuncia, embajada, documento temporal y consejos para seguir tu viaje."
 pubDate: 2026-07-17
 category: essentials
 tags: ["lost passport china", "emergency passport", "china embassy", "passport stolen china", "china travel emergency", "temporary travel document"]
@@ -18,6 +18,8 @@ faqs:
     answer: "Calcula entre ¥1 500–3 500 en total. Desglose: denuncia policial gratuita. Tasa del pasaporte de emergencia ¥300–1 200 según nacionalidad. Visado de salida ¥160. Fotos ¥20–40. Taxis entre oficinas ¥500–1 000. Noches extra de hotel si el proceso retrasa tu salida."
   - question: "¿Y si pierdo el pasaporte en una ciudad pequeña sin consulado?"
     answer: "Tendrás que desplazarte a la ciudad más cercana con consulado. Sin documento de identidad válido no puedes tomar vuelos nacionales ni trenes de alta velocidad. A veces aceptan la denuncia policial para el tren, pero no está garantizado. La opción más segura: coche con conductor, autobús de larga distancia o llamar al consulado."
+---
+
 ---
 
 Perder el pasaporte en cualquier sitio es malo. Perderlo en China, donde el pasaporte no es solo tu identificación sino la llave del hotel, el billete de tren, la verificación de pago y el permiso para estar en el país — es otro nivel de problema.
@@ -103,3 +105,11 @@ Recibirás un 停留证件 — permiso de estancia de 15–30 días. Empieza est
 ---
 
 **Leer después:** [Guía de entrada sin visa y tránsito en China 2026](/es/posts/china-visa-free-entry-transit-guide-2026/) sobre las normas de visado tras reponer los documentos. [Primeras 24 horas en China: lista de llegada](/es/posts/first-24-hours-in-china-arrival-checklist/) sobre medidas que previenen emergencias.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

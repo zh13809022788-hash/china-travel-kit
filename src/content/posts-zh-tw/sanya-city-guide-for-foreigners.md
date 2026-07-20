@@ -1,6 +1,6 @@
 ---
 title: "三亞旅遊指南 2026：外國旅客海灘、度假區與海南玩法"
-description: "2026 年三亞外國旅客指南：最佳季節、海灘區域、度假村、水上活動、海南旅行提示、冬季避寒與交通建議。"
+description: "2026 年三亞外國旅客指南：最佳季節、海灘區域、度假村、水上活動、海南旅行提示、冬季避寒與交通建議。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["三亞", "海南", "城市指南", "中國旅行"]
@@ -45,3 +45,13 @@ coverAlt: "海南三亞熱帶海灘"
 ## 總結
 
 三亞最適合 3 到 5 天海灘假期，冬季體驗最好。選好住宿區域、提前訂旺季住宿、用叫車移動、吃海鮮先問價，就能把它當成中國旅程裡的一段陽光休息。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

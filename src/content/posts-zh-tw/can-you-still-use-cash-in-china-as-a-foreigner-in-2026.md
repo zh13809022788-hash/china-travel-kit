@@ -1,6 +1,6 @@
 ---
 title: "2026 外國人在中國還能用現金嗎？人民幣付款實用指南"
-description: "中國高度無現金化，但現金仍可使用。本文說明 2026 年外國旅客何時需要現金、去哪裡換人民幣、該帶多少現金作備用。"
+description: "中國高度無現金化，但現金仍可使用。本文說明 2026 年外國旅客何時需要現金、去哪裡換人民幣、該帶多少現金作備用。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: payment
 tags: ["現金", "付款", "中國旅行", "人民幣", "用錢提示"]
@@ -51,3 +51,15 @@ faqs:
 ## 總結
 
 2026 年在中國仍能用現金，但它已不是最順的付款方式。先設定 Alipay 或 WeChat Pay，再帶一疊小面額人民幣作保險，才是外國旅客最舒服的配置。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

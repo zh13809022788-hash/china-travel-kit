@@ -159,6 +159,14 @@ Public toilets in China are not a mystery once you accept the range. Some are mo
 
 Carry tissues. Carry sanitizer. Use the good toilets when you find them. Follow the signs. And remember that a toilet is just a toilet, even when you are on the other side of the world.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### Are public toilets in China free?
@@ -181,3 +189,5 @@ Use restrooms in airports, high-speed rail stations, major malls, and hotel lobb
 
 ### How do I ask for the restroom in Chinese?
 You can say `ce suo zai na li?` or `qing wen, wei sheng jian zai na li?` In many places, pointing at a restroom sign is enough.
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

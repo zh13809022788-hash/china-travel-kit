@@ -1,6 +1,6 @@
 ---
 title: "在中國弄丟護照怎麼辦：外國旅客緊急處理指南"
-description: "外國旅客在中國遺失護照的逐步緊急處理指南——報案、大使館補辦、臨時旅行證件、費用、時間線和等待期間的應對方法。"
+description: "外國旅客在中國遺失護照的逐步緊急處理指南——報案、大使館補辦、臨時旅行證件、費用、時間線和等待期間的應對方法。 [NEEDS EXPANSION]"
 pubDate: 2026-07-17
 category: essentials
 tags: ["lost passport china", "emergency passport", "china embassy", "passport stolen china", "china travel emergency", "temporary travel document"]
@@ -113,3 +113,11 @@ faqs:
 ---
 
 **延伸閱讀：**[中國免簽入境與過境轉機指南 2026](/zh-tw/posts/china-visa-free-entry-transit-guide-2026/) 說明補辦文件後的簽證規定和如何避免逾期滯留。[抵達中國前 24 小時：行前準備檢查清單](/zh-tw/posts/first-24-hours-in-china-arrival-checklist/) 涵蓋防止緊急狀況的實用作法——包含入住飯店當下就先影印護照備用。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

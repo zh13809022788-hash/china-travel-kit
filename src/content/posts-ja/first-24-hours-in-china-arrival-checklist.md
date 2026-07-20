@@ -1,6 +1,6 @@
 ---
 title: "中国到着後24時間チェックリスト 2026：外国人旅行者向け"
-description: "中国に到着して最初の24時間でやるべき通信、支払い、現金、空港移動、ホテル到着、食事、翌日の準備を整理します。"
+description: "中国に到着して最初の24時間でやるべき通信、支払い、現金、空港移動、ホテル到着、食事、翌日の準備を整理します。 [NEEDS EXPANSION]"
 pubDate: 2026-07-14
 category: essentials
 tags: ["到着チェックリスト", "初めての中国", "支払い", "交通", "中国旅行"]
@@ -43,3 +43,13 @@ eSIMやローミングが動いているか確認し、AlipayかWeChat Payで少
 ## まとめ
 
 中国旅行は、通信、支払い、移動、住所の準備が整うと一気に楽になります。この記事の目安をもとに、自分の旅程、荷物、言語の不安に合わせて無理のない選択をしてください。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

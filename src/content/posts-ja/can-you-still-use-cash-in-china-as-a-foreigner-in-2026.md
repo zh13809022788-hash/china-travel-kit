@@ -1,6 +1,6 @@
 ---
 title: "中国で現金はまだ使える？2026年外国人旅行者ガイド"
-description: "中国で現金が使える場面、使いにくい場面、両替、ATM、小額紙幣の持ち方を旅行者向けに整理します。"
+description: "2026年に中国を訪れる外国人旅行者向けに、現金がまだ使える場所と使いにくい場面、両替・ATM・小額紙幣の準備、スマホ決済との使い分け、安心して支払うための注意点まで実用的に解説します。"
 pubDate: 2026-07-09
 category: payment
 tags: ["現金", "支払い", "中国旅行", "人民元", "お金の準備"]
@@ -20,6 +20,8 @@ faqs:
     answer: "大きな店なら問題ありませんが、屋台や小さな食堂ではお釣りがないことがあります。10元、20元も持ちましょう。"
   - question: "現金だけで旅行できますか？"
     answer: "できますがかなり不便です。AlipayかWeChat Payを設定し、現金は予備にするのがおすすめです。"
+---
+
 ---
 
 ## 結論
@@ -49,3 +51,15 @@ faqs:
 ## まとめ
 
 中国旅行は、最初の準備さえ整えばとても動きやすい旅先です。この記事の数字や手順は、完璧に暗記するより「どの場面で何を選ぶか」を決めるための目安として使ってください。迷ったら、通信、支払い、住所、移動手段の順に確認すると落ち着いて対処できます。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

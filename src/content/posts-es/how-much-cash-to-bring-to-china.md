@@ -30,3 +30,22 @@ China es mayoritariamente digital, pero un poco de efectivo sigue siendo necesar
 - Lleva siempre tu pasaporte para cambiar dinero
 - No dependas del efectivo como método principal
 - Alipay es más cómodo para todo
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.
+
+
+## Límites de efectivo y normas aduaneras en China
+## Presupuesto diario recomendado según tu tipo de viaje
+## Cuándo usar efectivo, tarjeta o pagos móviles
+## Consejos para cambiar y retirar dinero en China
+
+(Content to be added)

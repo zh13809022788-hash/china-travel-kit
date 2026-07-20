@@ -1,6 +1,6 @@
 ---
 title: "外國旅客上海城市指南：出發前要知道什麼"
-description: "給外國旅客的上海實用指南：交通、付款、上網、住宿區域、飲食、短旅行與長住準備。"
+description: "給外國旅客的上海實用指南：交通、付款、上網、住宿區域、飲食、短旅行與長住準備。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["shanghai", "city guide", "china travel", "expat"]

@@ -31,3 +31,20 @@ China tiene ocho grandes tradiciones culinarias. Conocerlas te ayudará a saber 
 - Prueba el desayuno chino: congee, youtiao, bollos al vapor
 - No temas a los puestos callejeros con mucha rotación
 - Lleva siempre Alipay para pagar
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+
+## Regiones culinarias de China y sus sabores principales
+## Platos imprescindibles para probar en tu primer viaje
+## Consejos para pedir comida y entender el menú
+## Etiqueta, costumbres y seguridad alimentaria
+
+(Content to be added)

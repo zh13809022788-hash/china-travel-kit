@@ -1,6 +1,6 @@
 ---
 title: "中国旅行保険 2026：外国人旅行者が本当に必要な補償とは"
-description: "2026年の中国旅行保険に関する実用的ガイド——外国人旅行者に必要な補償内容、費用の目安、使える保険会社、そして保険が数万円を節約してくれる実際のシチュエーション。"
+description: "2026年の中国旅行保険に関する実用的ガイド——外国人旅行者に必要な補償内容、費用の目安、使える保険会社、そして保険が数万円を節約してくれる実際のシチュエーション。 [NEEDS EXPANSION]"
 pubDate: 2026-07-17
 category: essentials
 tags: ["travel insurance", "china insurance", "medical china", "china travel tips", "foreign visitors china"]
@@ -113,3 +113,11 @@ faqs:
 ---
 
 **続けて読む：**[中国到着後24時間：準備チェックリスト](/ja/posts/first-24-hours-in-china-arrival-checklist/) では、空港で保険を買うべきかを含め、着陸直後にやるべきことをカバーしています。[中国渡航前に準備すべきこと](/ja/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) では、保険があってもなくてもスムーズに入国するための出発前チェックリストを解説。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

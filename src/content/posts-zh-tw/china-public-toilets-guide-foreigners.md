@@ -1,7 +1,7 @@
 ---
 title: "中國公廁使用指南2026：外國遊客不慌張的生存技巧"
 category: essentials
-description: "中國公共廁所實用指南：哪裡找乾淨洗手間、裡面長什麼樣、蹲式vs坐式選擇、外國遊客應急技巧。"
+description: "中國公共廁所實用指南：哪裡找乾淨洗手間、裡面長什麼樣、蹲式vs坐式選擇、外國遊客應急技巧。 [NEEDS EXPANSION]"
 pubDate: 2026-07-19
 tags: ["廁所", "中國", "指南"]
 ---
@@ -159,6 +159,14 @@ tags: ["廁所", "中國", "指南"]
 
 帶面紙，帶乾洗手，看到好廁所就先用，照標示走，記得廁所就是廁所，不管你人在世界哪一邊。
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### 中國的公共廁所要錢嗎？
@@ -181,3 +189,5 @@ tags: ["廁所", "中國", "指南"]
 
 ### 中文要怎麼問廁所？
 你可以說 `ce suo zai na li?`，或者 `qing wen, wei sheng jian zai na li?`。很多地方直接指著廁所標誌也可以。
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

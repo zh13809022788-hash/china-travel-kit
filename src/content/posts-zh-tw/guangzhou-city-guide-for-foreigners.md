@@ -1,6 +1,6 @@
 ---
 title: "廣州旅遊指南 2026：外國遊客行前必讀"
-description: "2026最新廣州旅遊攻略——廣州塔、陳家祠、沙面島、北京路必訪景點，粵菜美食推薦，交通方式，給外國旅客的完整實用指南。"
+description: "2026最新廣州旅遊攻略——廣州塔、陳家祠、沙面島、北京路必訪景點，粵菜美食推薦，交通方式，給外國旅客的完整實用指南。 [NEEDS EXPANSION]"
 pubDate: 2026-07-18
 category: essentials
 tags: ["廣州", "城市指南", "中國旅遊", "廣東"]
@@ -80,3 +80,13 @@ coverAlt: "廣州塔與珠江夜景"
 - **簽證**：240小時過境免簽，從廣東口岸進出即可。包括香港——你可以飛廣州、坐高鐵去香港、從香港飛走，全程免簽。
 - **周邊**：深圳30分鐘、香港50分鐘、澳門1.5小時。
 - **最佳季節**：十月到十二月。避開五月到九月。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

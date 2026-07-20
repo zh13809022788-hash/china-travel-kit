@@ -1,6 +1,6 @@
 ---
 title: "外国人観光客向けDiDiガイド: 中国の配車アプリの使い方 2026"
-description: "2026年に外国人観光客が中国でDiDiを使う方法。英語アプリ設定、海外カード連携、目的地入力、安全機能、料金、トラブル対応を解説します。"
+description: "中国旅行でDiDiを使いたい外国人観光客向けに、アプリ登録、海外電話番号の認証、AlipayやWeChat Payの支払い設定、配車手順、空港や市内移動の注意点を2026年版で解説します。"
 pubDate: 2026-07-03
 category: transport
 tags: ["didi", "ride-hailing", "taxi", "transport"]

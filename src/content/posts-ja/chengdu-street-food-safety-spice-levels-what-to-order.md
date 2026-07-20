@@ -1,6 +1,6 @@
 ---
 title: "成都屋台グルメ 2026：安全・辛さ・注文すべき料理"
-description: "成都の屋台料理を安全に楽しむための店選び、辛さ調整、麻辣の意味、初心者向けメニューを紹介します。"
+description: "成都の屋台料理を安全に楽しむための店選び、辛さ調整、麻辣の意味、初心者向けメニューを紹介します。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: food
 tags: ["成都", "屋台グルメ", "四川", "食の安全", "辛い料理"]
@@ -47,3 +47,13 @@ faqs:
 ## まとめ
 
 中国旅行は、最初の準備さえ整えばとても動きやすい旅先です。この記事の数字や手順は、完璧に暗記するより「どの場面で何を選ぶか」を決めるための目安として使ってください。迷ったら、通信、支払い、住所、移動手段の順に確認すると落ち着いて対処できます。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

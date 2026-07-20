@@ -1,6 +1,6 @@
 ---
 title: "外国人向けShanghaiシティガイド: 行く前に知るべきこと"
-description: "外国人旅行者向けの実用的なShanghaiガイド。移動、支払い、通信、滞在エリア、食事、短期旅行と長期滞在のコツを解説します。"
+description: "外国人旅行者向けの実用的なShanghaiガイド。移動、支払い、通信、滞在エリア、食事、短期旅行と長期滞在のコツを解説します。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["shanghai", "city guide", "china travel", "expat"]

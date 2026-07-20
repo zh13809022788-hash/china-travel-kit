@@ -1,6 +1,6 @@
 ---
 title: "Nanjing City Guide for Foreigners 2026: What to Know Before You Go"
-description: "Complete 2026 guide to Nanjing for foreign tourists — top attractions like Ming Xiaoling and Niushoushan, Qinhuai River nightlife, local food, metro tips, and practical advice for a smooth visit."
+description: "Plan your 2026 Nanjing trip with essential tips on sights, food, transport, nightlife, and practical advice for foreign visitors."
 pubDate: 2026-07-18
 category: essentials
 tags: ["nanjing", "city guide", "china travel", "jiangsu"]
@@ -20,6 +20,8 @@ faqs:
     answer: "Nanjing's food scene is one of China's most underrated. Must-tries: duck blood vermicelli soup (鸭血粉丝汤), salted duck (盐水鸭) — the city's signature dish, beef pot stickers (牛肉锅贴) from the famous Li Ji brand, and xiaolongbao (soup dumplings). The breakfast scene is stellar — try a fan团 (sticky rice roll) with youtiao from a street cart. The food is less spicy than Sichuan but more flavorful than Shanghai cuisine."
 cover: "city-nanjing"
 coverAlt: "Nanjing skyline with Confucius Temple and Qinhuai River at dusk"
+---
+
 ---
 
 ## Introduction
@@ -92,3 +94,13 @@ The best food streets are **Laomendong (老门东)**, a restored historic alley 
 - **Getting from the airport:** Metro Line S1 from Nanjing Lukou International Airport (NKG) to Nanjing South Station takes about 50 minutes, then transfer to Line 1 or 3 for the city center. A taxi to Xinjiekou costs about 120-150 RMB and takes 45-60 minutes.
 - **Internet:** China's internet restrictions apply. Install a VPN or buy an eSIM before arrival. Airlo and Holafly both offer China-specific eSIMs that work with Google services.
 - **Best season:** Autumn (September-November) is unbeatable. Spring (March-May) is beautiful but can be rainy. Avoid July and August unless you tolerate heat well.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

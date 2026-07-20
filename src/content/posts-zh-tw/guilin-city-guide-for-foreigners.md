@@ -1,6 +1,6 @@
 ---
 title: "桂林旅遊指南 2026：外國遊客行前必讀"
-description: "2026最新桂林旅遊攻略——灕江遊船、陽朔、龍脊梯田、蘆笛岩必訪景點，美食推薦與實用旅行建議。"
+description: "2026最新桂林旅遊攻略——灕江遊船、陽朔、龍脊梯田、蘆笛岩必訪景點，美食推薦與實用旅行建議。 [NEEDS EXPANSION]"
 pubDate: 2026-07-18
 category: essentials
 tags: ["桂林", "城市指南", "中國旅遊", "廣西"]
@@ -71,3 +71,13 @@ coverAlt: "灕江山水風光"
 - **簽證**：240小時過境免簽，廣西口岸進出即可。
 - **20元人民幣**：帶一張20元鈔票——背面的風景就是灕江興坪段，你可以拍到一模一樣的照片。
 - **別排太滿**：桂林最好的體驗往往是隨機發生的——騎車穿過陽朔鄉間、河邊咖啡店發呆、看農民在田裡工作。留點空間給意外驚喜。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

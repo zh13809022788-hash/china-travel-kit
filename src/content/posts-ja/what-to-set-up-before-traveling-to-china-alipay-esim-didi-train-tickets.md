@@ -1,6 +1,6 @@
 ---
 title: "中国旅行前に設定しておくこと: Alipay、eSIM、DiDi"
-description: "中国旅行の出発前チェックリスト。Alipay、WeChat Pay、eSIM、DiDi、鉄道チケット、地図、翻訳、現金の予備、到着日の失敗を解説します。"
+description: "中国旅行の出発前チェックリスト。Alipay、WeChat Pay、eSIM、DiDi、鉄道チケット、地図、翻訳、現金の予備、到着日の失敗を解説します。 [NEEDS EXPANSION]"
 pubDate: 2026-07-13
 category: essentials
 tags: ["china checklist", "alipay", "esim", "didi", "train tickets", "travel apps"]

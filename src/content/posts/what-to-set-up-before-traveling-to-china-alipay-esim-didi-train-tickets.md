@@ -1,6 +1,6 @@
 ---
 title: "What to Set Up Before Traveling to China 2026: Apps, Payments and Documents"
-description: "Essential pre-departure checklist for China 2026 — install Alipay and WeChat Pay, buy an eSIM, set up Didi and 12306, download translation apps, and prepare your documents before you fly."
+description: "Get ready for China in 2026 with a practical pre-trip checklist for apps, mobile payments, eSIMs, transport, translation, and documents."
 pubDate: 2026-07-13
 category: essentials
 tags: ["china checklist", "alipay", "esim", "didi", "train tickets", "travel apps"]
@@ -19,6 +19,8 @@ faqs:
     answer: "You can travel without DiDi if you use metro and taxis, but ride-hailing is very useful for airports, late-night trips, rain, luggage, and hotel-to-station transfers."
   - question: "What should I keep offline?"
     answer: "Keep offline copies of your passport page, visa or entry documents if applicable, hotel address in Chinese, train and flight bookings, eSIM setup instructions, and emergency contact details."
+---
+
 ---
 
 The easiest China trip is the one you prepare before the flight. You do not need to master every local app, but you should finish the core setup while you still have stable home internet, access to your bank, and time to solve verification problems.

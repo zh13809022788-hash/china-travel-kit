@@ -1,6 +1,6 @@
 ---
 title: "Guilin City Guide for Foreigners 2026: What to Know Before You Go"
-description: "Complete 2026 guide to Guilin for foreign tourists — Li River cruise, Yangshuo, Longji Rice Terraces, Reed Flute Cave, food guide, and practical advice for visiting China's most scenic destination."
+description: "Plan your 2026 Guilin trip with tips on Li River cruises, Yangshuo, Longji Rice Terraces, local food, and practical travel essentials."
 pubDate: 2026-07-18
 category: essentials
 tags: ["guilin", "city guide", "china travel", "guangxi"]
@@ -20,6 +20,8 @@ faqs:
     answer: "Guilin is mid-range by Chinese standards. A good hotel in Guilin city costs 250-500 yuan, in Yangshuo 200-400 yuan. Meals are cheap — 20-40 yuan at local restaurants, 60-100 yuan at tourist-oriented places. The Li River cruise is the biggest expense at 400-500 yuan. The Longji Terraces entry is 80 yuan. Budget 500-800 yuan per day including accommodation."
 cover: "city-guilin"
 coverAlt: "Li River karst landscape near Guilin"
+---
+
 ---
 
 ## Introduction
@@ -90,3 +92,13 @@ Guilin's cuisine reflects its Guangxi location — lighter than northern Chinese
 - **Visa:** 240-hour visa-free transit is available for eligible nationalities through Guangxi entry ports.
 - **The 20 yuan note:** Bring a 20 yuan bill from your home country — the scene on the back is the Li River landscape near Xingping. You can take the exact same photo.
 - **Don't overplan:** The best Guilin experiences are spontaneous — cycling through Yangshuo countryside, stopping at a riverside cafe, watching farmers work the rice paddies. Leave room for serendipity.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

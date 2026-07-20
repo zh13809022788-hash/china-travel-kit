@@ -1,6 +1,6 @@
 ---
-title: "Which eSIM Works in China Without a VPN? 2026 Comparison Guide (Airalo, Holafly, Nomad)"
-description: "Compare the best eSIM providers for China in 2026 — Airalo, Holafly, Nomad — with pricing, data limits, and which ones bypass the Great Firewall so Google, WhatsApp, and Instagram work without a separate VPN."
+title: "Which eSIM Works in China Without a VPN? 2026 Comparison Guide (Airalo,..."
+description: "Compare China eSIMs for 2026, including Airalo, Holafly, and Nomad, to see which work without a VPN for Google, WhatsApp, and more."
 pubDate: 2026-07-05
 category: esim
 tags: ["esim", "china data", "mobile internet", "travel sim", "china travel esim", "best esim china"]
@@ -21,6 +21,8 @@ faqs:
     answer: "Yes. eSIM lets you run two lines at once, so you can keep your home SIM active for calls and texts on your original number while using the China eSIM as your data line. Just remember that leaving your home line on may incur roaming charges, so consider disabling its data roaming."
   - question: "What happens if my eSIM has no signal after I land in China?"
     answer: "First toggle Airplane Mode on and off, confirm data roaming is enabled for the eSIM line, and check that the eSIM is selected as your default mobile data. If it still fails, manually select a network operator in your cellular settings. A profile that was installed but never fully activated is the most common cause."
+---
+
 ---
 
 ## Introduction

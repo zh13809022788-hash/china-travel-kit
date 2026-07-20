@@ -1,5 +1,5 @@
 ---
-title: "Peut-on encore payer en espèces en Chine en 2026 ? Guide pour visiteurs étrangers"
+title: "Peut-on encore payer en espèces en Chine en 2026 ? Guide pour visiteurs..."
 description: "La Chine est presque sans cash, mais les espèces restent utiles. Où payer en RMB, combien emporter, comment obtenir de petites coupures et quand utiliser Alipay ou WeChat Pay."
 pubDate: 2026-07-09
 category: payment
@@ -46,3 +46,15 @@ Retirez ou changez une somme modérée, puis transformez-la en coupures de 10, 2
 
 Oui, le cash fonctionne encore, mais il n'est plus le chemin le plus pratique. Pour 2026, le bon équilibre est mobile d'abord, espèces en réserve.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

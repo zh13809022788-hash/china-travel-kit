@@ -1,6 +1,6 @@
 ---
 title: "Beijing Daxing Airport to City Center 2026: First-Timer's Transport Guide"
-description: "Complete 2026 guide to getting from Beijing Daxing International Airport to the city center — airport express train, taxi costs, Didi, metro options, and tips for first-time visitors."
+description: "Compare train, taxi, Didi, and metro options from Beijing Daxing Airport to central Beijing with 2026 costs and first-timer tips."
 pubDate: 2026-07-08
 category: transport
 tags: ["beijing", "daxing airport", "airport transfer", "airport express", "late-night travel"]
@@ -18,6 +18,8 @@ faqs:
     answer: "Yes, the Beijing-Xiong'an intercity railway connects the airport to Beijing West Railway Station in about 28 minutes, which is handy if your onward train or hotel is on that side of town."
   - question: "Do I need to buy a transit card before I arrive?"
     answer: "No, you can pay for the metro and express line with Alipay or WeChat Pay QR codes or a contactless bank card, so there is no need to buy a physical card just for the airport transfer."
+---
+
 ---
 
 ## Introduction

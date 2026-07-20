@@ -1,6 +1,6 @@
 ---
 title: "外國旅客在中國使用 DiDi：叫車、付款與實用技巧"
-description: "給外國旅客的 DiDi 中國叫車指南：如何設定 App、輸入中文地址、綁定付款、從機場叫車並避免常見問題。"
+description: "給外國旅客的 DiDi 中國叫車指南：如何設定 App、輸入中文地址、綁定付款、從機場叫車並避免常見問題。 [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: transport
 tags: ["didi", "ride hailing", "taxi", "transport"]

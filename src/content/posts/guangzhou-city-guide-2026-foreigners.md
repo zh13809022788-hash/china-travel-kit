@@ -118,6 +118,14 @@ People in Guangzhou are used to business travel and visitors, but this is still 
 
 Two full days is enough for a first look if you are already in South China for business or transit. Three to four days is better if you want to eat well, visit a few major sights, and make one slower neighborhood day of it. If you are serious about food, give yourself more time. Guangzhou is a city where meals easily become part of the itinerary instead of a break from it.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### Is Guangzhou worth visiting for foreign travelers?
@@ -147,3 +155,5 @@ Guangzhou is a strong choice for foreign visitors who want a city with substance
 
 For 2026, Guangzhou remains one of China’s most useful cities for travelers who want access, comfort, and a genuine local rhythm without giving up the basics that make a trip easy.
 ```
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,6 +1,6 @@
 ---
 title: "成都旅行ガイド 2026：外国人向けパンダ・四川料理・街歩き"
-description: "成都を初めて訪れる外国人向けに、パンダ基地、四川料理、茶館文化、交通、日帰り旅行、実用情報をまとめます。"
+description: "初めて成都を旅する外国人へ。パンダ基地、四川料理、茶館、街歩き、交通、日帰り旅まで、2026年に役立つ最新の実用情報と現地で安心して楽しむコツ、モデルルートをわかりやすく案内します。"
 pubDate: 2026-07-09
 category: essentials
 tags: ["成都", "都市ガイド", "中国旅行", "パンダ", "四川料理"]
@@ -20,6 +20,8 @@ faqs:
     answer: "上海ほどではありません。地下鉄表示は分かりやすいので、翻訳アプリと地図アプリを使えば旅行は十分可能です。"
   - question: "成都は何日必要ですか？"
     answer: "市内だけなら2〜3日、楽山大仏や周辺の山へ行くならさらに1〜2日あると楽しめます。"
+---
+
 ---
 
 ## 成都の魅力
@@ -47,3 +49,13 @@ faqs:
 ## まとめ
 
 中国旅行は、最初の準備さえ整えばとても動きやすい旅先です。この記事の数字や手順は、完璧に暗記するより「どの場面で何を選ぶか」を決めるための目安として使ってください。迷ったら、通信、支払い、住所、移動手段の順に確認すると落ち着いて対処できます。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

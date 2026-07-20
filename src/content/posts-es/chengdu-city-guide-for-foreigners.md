@@ -30,3 +30,20 @@ Chengdu es la capital de la provincia de Sichuan y una de las ciudades más vibr
 - Té de jazmín en las casas de té locales
 
 Chengdu es una ciudad ideal para pasar 3-4 días antes o después de un viaje a Tíbet o Yunnan.
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+
+## Cómo llegar a Chengdu y moverse por la ciudad
+## Dónde alojarse: mejores zonas para turistas
+## Qué ver y hacer en Chengdu
+## Consejos prácticos para viajar a Chengdu en 2026
+
+(Content to be added)

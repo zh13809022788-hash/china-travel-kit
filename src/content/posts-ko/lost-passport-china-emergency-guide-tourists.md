@@ -1,6 +1,6 @@
 ---
 title: "중국에서 여권을 분실했을 때: 외국인 관광객을 위한 긴급 가이드"
-description: "중국에서 여권을 분실한 외국인 여행자를 위한 단계별 긴급 가이드 — 경찰 신고, 대사관 절차, 임시 여행 서류 발급, 비용, 소요 기간, 대기 기간 중 대처법."
+description: "중국에서 여권을 분실한 외국인 여행자를 위한 단계별 긴급 가이드 — 경찰 신고, 대사관 절차, 임시 여행 서류 발급, 비용, 소요 기간, 대기 기간 중 대처법. [NEEDS EXPANSION]"
 pubDate: 2026-07-17
 category: essentials
 tags: ["lost passport china", "emergency passport", "china embassy", "passport stolen china", "china travel emergency", "temporary travel document"]
@@ -115,3 +115,11 @@ faqs:
 ---
 
 **함께 읽기:** [중국 무비자 입국 및 경유 가이드 2026](/ko/posts/china-visa-free-entry-transit-guide-2026/)에서 대체 서류 발급 후 비자 규정과 체류 초과 방지법 확인. [중국 도착 후 24시간: 준비 체크리스트](/ko/posts/first-24-hours-in-china-arrival-checklist/)에서 호텔 체크인 즉시 여권 사본 만들기 등 비상사태 예방 실천법을 알아보세요.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

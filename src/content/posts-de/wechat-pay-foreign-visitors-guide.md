@@ -42,3 +42,15 @@ Kleine Zahlungen sind besonders attraktiv. Bei groesseren Betraegen ueber 200 RM
 ## Fazit
 
 WeChat Pay lohnt sich fuer fast alle China-Besucher als zweite Zahlungsschiene. Richten Sie es vor der Reise ein, verknuepfen Sie eine Karte und nutzen Sie es besonders dort, wo der ganze Ablauf ohnehin in WeChat stattfindet.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

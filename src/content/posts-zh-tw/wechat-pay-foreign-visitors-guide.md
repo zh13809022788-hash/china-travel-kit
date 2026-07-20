@@ -1,6 +1,6 @@
 ---
 title: "WeChat Pay 外國旅客指南 2026：微信支付設定與使用完整教學"
-description: "2026 年外國遊客如何設定 WeChat Pay：下載 WeChat、註冊、綁定外國卡、身份驗證、付款、轉帳與小程式使用。"
+description: "2026 年外國遊客如何設定 WeChat Pay：下載 WeChat、註冊、綁定外國卡、身份驗證、付款、轉帳與小程式使用。 [NEEDS EXPANSION]"
 pubDate: 2026-07-06
 category: payment
 tags: ["微信支付", "微信", "外國信用卡", "行動支付"]
@@ -45,3 +45,15 @@ WeChat Pay 是中國日常付款的重要工具，尤其在餐廳小程式、社
 ## 總結
 
 WeChat Pay 是中國旅行很有價值的備用甚至主力工具，尤其在小程式和社交場景中。出發前完成註冊、綁卡、護照驗證，並搭配 Alipay 使用，付款會穩很多。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

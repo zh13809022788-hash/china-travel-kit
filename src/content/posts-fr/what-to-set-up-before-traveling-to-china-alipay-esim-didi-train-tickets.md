@@ -1,5 +1,5 @@
 ---
-title: "À configurer avant de voyager en Chine 2026 : applis, paiements et documents"
+title: "À configurer avant de voyager en Chine 2026 : applis, paiements et..."
 description: "Checklist avant départ pour la Chine : Alipay, WeChat Pay, eSIM, DiDi, 12306, traduction, adresses chinoises, documents hors ligne et cash de secours."
 pubDate: 2026-07-13
 category: essentials
@@ -44,3 +44,13 @@ Conservez une copie numérique et hors ligne du passeport, des réservations, de
 
 Un voyage en Chine se simplifie avant le décollage. Si paiement, internet, adresses et documents sont prêts, l'arrivée devient beaucoup plus calme.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,6 +1,6 @@
 ---
 title: "南京旅遊指南 2026：外國遊客行前必讀"
-description: "2026最新南京旅遊攻略——明孝陵、牛首山、秦淮河必訪景點，地鐵交通、美食推薦、住宿選擇，給外國旅客的完整實用指南。"
+description: "2026最新南京旅遊攻略——明孝陵、牛首山、秦淮河必訪景點，地鐵交通、美食推薦、住宿選擇，給外國旅客的完整實用指南。 [NEEDS EXPANSION]"
 pubDate: 2026-07-18
 category: essentials
 tags: ["南京", "城市指南", "中國旅遊", "江蘇"]
@@ -86,3 +86,13 @@ coverAlt: "南京夫子廟秦淮河夜景"
 - **語言**：地鐵和主要景點有英文標示。一般餐廳和路邊不太說英文。準備好翻譯軟體。
 - **機場交通**：地鐵 S1 線到南京南站約 50 分鐘，轉 1 或 3 號線到市中心。打車到新街口約 120-150 元。
 - **最佳季節**：秋天（9-11月）無敵。春天（3-5月）美但多雨。避開七八月。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

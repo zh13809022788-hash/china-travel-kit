@@ -1,6 +1,6 @@
 ---
 title: "Travel Insurance for China 2026: What Foreign Visitors Actually Need"
-description: "Honest 2026 guide to travel insurance for China — what coverage foreigners actually need, how much it costs, which providers work, and the real scenarios where insurance saves you thousands."
+description: "A practical 2026 guide to China travel insurance, covering what visitors really need, typical costs, trusted providers, and costly gaps to avoid."
 pubDate: 2026-07-17
 category: essentials
 tags: ["travel insurance", "china insurance", "medical china", "china travel tips", "foreign visitors china"]
@@ -18,6 +18,8 @@ faqs:
     answer: "Most travel insurance policies updated for 2026 include COVID-19 medical coverage, but check the fine print. China treats COVID-19 as a regular respiratory illness now, and treatment follows standard medical protocols. Some policies exclude pandemic-related claims, so verify this explicitly before buying."
   - question: "Should I buy insurance from a Chinese company or an international one?"
     answer: "Both have trade-offs. Chinese insurers like Ping An or PICC are cheaper (¥30–100 for a week) and have direct billing relationships with local public hospitals, but their English customer service is limited and claims support is almost entirely in Chinese. International insurers like World Nomads, AXA, or SafetyWing cost more (¥150–400 for a week) but offer 24/7 English support, access to international hospital networks, and evacuation coverage that Chinese budget plans often lack. If you speak zero Chinese, the international option saves enormous stress during an actual emergency."
+---
+
 ---
 
 You know that moment at the airport check-in counter when the agent asks, "Would you like to add travel insurance?" and your brain does a quick cost-benefit calculation that lasts about 0.3 seconds before you say "no thanks"?
@@ -115,3 +117,11 @@ Three scenarios from actual travelers:
 ---
 
 **Read next:** [First 24 Hours in China: Arrival Checklist](/posts/first-24-hours-in-china-arrival-checklist/) covers what to do the moment you land — including whether to buy insurance at the airport. [What to Set Up Before Traveling to China](/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) walks through the pre-departure checklist so your arrival is smooth, insured or not.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

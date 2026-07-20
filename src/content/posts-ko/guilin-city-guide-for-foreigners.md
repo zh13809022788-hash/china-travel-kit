@@ -1,6 +1,6 @@
 ---
 title: "2026년 구이린 여행 가이드: 외국인 관광객을 위한 완벽 정리"
-description: "2026년 구이린 여행 가이드 — 리강 유람, 양숴, 룽지 계단식 논, 갈대피리 동굴, 음식 추천과 실전 여행 팁."
+description: "2026년 구이린 여행 가이드: 리강 유람, 양숴, 룽지 계단식 논, 동굴 명소, 음식과 교통 팁까지 외국인 여행자를 위한 핵심 정보를 한눈에 정리."
 pubDate: 2026-07-18
 category: essentials
 tags: ["구이린", "시티 가이드", "중국 여행", "광시"]
@@ -18,8 +18,27 @@ cover: "city-guilin"
 coverAlt: "구이린 리강 카르스트 풍경"
 ---
 
+---
+
 ## 소개
 
 구이린은 중국에서 가장 아름다운 풍경을 가진 곳입니다. 리강 양안에 솟아오른 카르스트 석회암 봉우리는 천 년 넘게 중국 회화와 시에서 찬미받아 왔습니다. 서양인이 상상하는 중국의 이미지가 바로 여기 있습니다.
 
 외국인 여행자에게 구이린은 중국의 가장 상징적인 풍경을 제공합니다. 또한 중국에서 개인 여행이 가장 쉬운 곳 중 하나입니다. 양숴의 관광 인프라는 매우 성숙되어 있습니다.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+
+## 구이린 여행 준비와 입국 전 체크리스트
+## 꼭 가봐야 할 구이린 명소와 추천 일정
+## 교통, 숙소, 현지 예절 실전 팁
+
+(Content to be added)

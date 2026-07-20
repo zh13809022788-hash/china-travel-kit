@@ -54,3 +54,11 @@ TCM ist in China gut zugaenglich, wenn Sie die richtige Einrichtung waehlen und 
 
 - [Die ersten 24 Stunden in China: Ankunfts-Checkliste](/de/posts/first-24-hours-in-china-arrival-checklist/)
 - [Was vor der China-Reise einrichten](/de/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/)
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

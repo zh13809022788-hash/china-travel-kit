@@ -1,6 +1,6 @@
 ---
-title: "How to Pay for Things in China 2026: 3 Methods Ranked for Tourists (Alipay, Card, Cash)"
-description: "How to pay for things in China as a tourist in 2026 — Alipay, WeChat Pay, foreign credit cards, cash backup, and which method works at each type of merchant. Includes a quick decision flowchart."
+title: "How to Pay in China 2026: Alipay, WeChat Pay and Cash Ranked"
+description: "Three ways to pay in China as a tourist. Alipay works everywhere, credit cards work at hotels, cash is backup. Here is exactly which method to use at each type of store."
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "wechat pay", "mobile payment", "cash", "how to pay in china", "china payment guide"]

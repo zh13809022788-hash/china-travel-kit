@@ -2,7 +2,7 @@
 title: "廣州城市指南 2026：外國旅客出發前該知道的事"
 date: 2026-07-19
 category: essentials
-description: "給 2026 年外國旅客的實用廣州城市指南，整理交通、住宿區域、美食、花費、天氣與常見問題。"
+description: "給 2026 年外國旅客的實用廣州城市指南，整理交通、住宿區域、美食、花費、天氣與常見問題。 [NEEDS EXPANSION]"
 pubDate: 2026-07-19
 tags: ["guide", "China"]
 ---
@@ -131,6 +131,14 @@ tags: ["guide", "China"]
 
 如果你本來就在華南出差或轉車，兩個完整白天足夠先看一眼廣州。三到四天會更剛好，可以吃幾頓好飯、走幾個主要景點，再安排一天慢慢逛街區。要是你認真為了美食而來，那就多留一點時間吧。廣州很容易讓「吃飯」變成行程本身，而不是行程中間的休息時間。
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### 廣州值得外國旅客去嗎？
@@ -166,3 +174,5 @@ tags: ["guide", "China"]
 廣州很適合想看見城市真實底子的外國旅客。它實用、物價相對合理，尤其適合在意吃和在地生活感的人。行程安排上，抓住幾個原則就好：靠地鐵移動，住在交通方便的區域，然後認真留時間吃飯。
 
 到了 2026 年，廣州依然是中國最實用的旅行城市之一。它有交通、有舒適度，也有很明顯的本地節奏；不需要把旅程變得很複雜，就能玩得很扎實。
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

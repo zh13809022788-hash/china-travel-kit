@@ -1,6 +1,6 @@
 ---
 title: "杭州旅遊指南 2026：外國旅客西湖、龍井茶與週末行程攻略"
-description: "2026 年杭州外國旅客指南：西湖景點、茶文化、上海出發交通、週末玩法、城市移動與實用建議。"
+description: "這份2026杭州旅遊指南專為外國旅客整理西湖必訪景點、龍井茶文化體驗、上海出發交通、週末行程規劃，以及住宿、支付、市內移動與避開人潮的實用建議，從初訪到短天數旅行都好上手。"
 pubDate: 2026-07-09
 category: essentials
 tags: ["杭州", "城市指南", "中國旅行", "外籍人士"]
@@ -20,6 +20,8 @@ faqs:
     answer: "英文比上海少，但地鐵有雙語標示，科技產業也讓部分場所較友善。翻譯 App、Alipay 和 WeChat 小程式足以處理大部分日常需求。"
 cover: "city-hangzhou"
 coverAlt: "杭州西湖與傳統園林亭台"
+---
+
 ---
 
 ## 為什麼把杭州排進行程
@@ -45,3 +47,13 @@ coverAlt: "杭州西湖與傳統園林亭台"
 ## 總結
 
 杭州最適合兩到三天：一天西湖、半天龍井、再留半天給寺廟、運河或老街。它是上海行程的自然延伸，也是一座適合慢下來的中國城市。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

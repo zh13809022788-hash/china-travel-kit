@@ -212,3 +212,11 @@ faqs:
 가격은 1인 기준이며, 환율은 이해를 돕기 위한 대략적인 원화 환산입니다. 중국 도시의 식당에서는 알리페이와 위챗페이가 거의 표준 결제 수단입니다. 여행 전 해외 카드가 연동된 알리페이를 준비해 두면 식당, 노점, 배달까지 훨씬 편해집니다.
 
 *이 가이드는 2026년 7월 기준으로 업데이트되었습니다. 가격과 식당 운영 여부는 지역과 시기에 따라 달라질 수 있으므로, 여행 전 최신 환율과 현지 상황을 확인하세요.*
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>

@@ -1,5 +1,5 @@
 ---
-title: "Guide de la cuisine chinoise 2026 pour étrangers : régions, commandes et sécurité"
+title: "Guide de la cuisine chinoise 2026 pour étrangers : régions, commandes et..."
 description: "Guide pratique de la cuisine régionale chinoise : quoi manger par région, comment commander sans chinois, éviter les erreurs, payer et manger en sécurité."
 pubDate: 2026-07-15
 category: food
@@ -54,3 +54,13 @@ Alipay et WeChat Pay sont les plus pratiques. Le partage des plats est normal ; 
 
 Manger en Chine devient simple quand on pense par région, qu'on utilise les photos et qu'on garde quelques phrases prêtes. La variété est immense ; avancez curieusement, mais progressivement.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,6 +1,6 @@
 ---
-title: "Assurance Voyage pour la Chine 2026 : Ce dont les visiteurs étrangers ont vraiment besoin"
-description: "Guide pratique 2026 de l'assurance voyage pour la Chine — couvertures vraiment nécessaires, coûts réels, assureurs fiables et les scénarios où l'assurance vous évite des milliers d'euros de dépenses."
+title: "Assurance Voyage pour la Chine 2026 : Ce dont les visiteurs étrangers..."
+description: "Guide clair 2026 pour choisir une assurance voyage Chine utile, éviter les frais médicaux imprévus et partir l’esprit tranquille."
 pubDate: 2026-07-17
 category: essentials
 tags: ["travel insurance", "china insurance", "medical china", "china travel tips", "foreign visitors china"]
@@ -18,6 +18,8 @@ faqs:
     answer: "La plupart des assurances mises à jour pour 2026 incluent la couverture médicale COVID-19, mais vérifiez les petites lignes. La Chine traite désormais le COVID-19 comme une maladie respiratoire ordinaire. Certaines polices excluent les réclamations liées aux pandémies — vérifiez-le explicitement."
   - question: "Assureur chinois ou international : lequel choisir ?"
     answer: "Chacun a ses compromis. Les assureurs chinois (Ping An, PICC) sont moins chers (¥30–100 la semaine) et ont des accords de facturation directe avec les hôpitaux publics locaux, mais le service en anglais est limité et les réclamations se font presque entièrement en chinois. Les assureurs internationaux (World Nomads, AXA, SafetyWing) coûtent plus cher (¥150–400 la semaine) mais offrent une assistance 24h/24 en anglais, l'accès aux réseaux d'hôpitaux internationaux et une couverture d'évacuation que les formules chinoises économiques omettent souvent. Si vous ne parlez pas un mot de chinois, l'option internationale vous épargne un stress énorme en cas d'urgence réelle."
+---
+
 ---
 
 Ce moment au comptoir d'enregistrement quand l'agent demande « Voulez-vous ajouter une assurance voyage ? » et que votre cerveau fait un calcul coût-bénéfice en 0,3 seconde avant de dire « non merci » ?
@@ -113,3 +115,11 @@ Dans les hôpitaux publics, attendez-vous à payer chaque étape : ¥200 l'enreg
 ---
 
 **À lire ensuite :** [Les premières 24 heures en Chine : check-list d'arrivée](/fr/posts/first-24-hours-in-china-arrival-checklist/) couvre tout ce qu'il faut faire à l'atterrissage. [Ce qu'il faut configurer avant de partir en Chine](/fr/posts/what-to-set-up-before-traveling-to-china-alipay-esim-didi-train-tickets/) détaille la check-list pré-départ.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

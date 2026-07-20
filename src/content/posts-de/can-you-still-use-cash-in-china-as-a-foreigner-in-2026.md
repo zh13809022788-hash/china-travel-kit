@@ -48,3 +48,15 @@ Richten Sie vor der Reise Alipay oder WeChat Pay ein, verknuepfen Sie eine Visa 
 ## Fazit
 
 Bargeld ist in China weiterhin legal und nuetzlich, aber nicht mehr die bequemste Zahlungsform. Wer mobil zahlt und 500 bis 1.000 RMB in kleinen Scheinen dabeihat, ist fuer normale Reisesituationen gut vorbereitet.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

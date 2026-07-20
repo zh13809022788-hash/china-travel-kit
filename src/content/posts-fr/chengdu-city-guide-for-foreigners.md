@@ -1,6 +1,6 @@
 ---
-title: "Guide de Chengdu 2026 pour étrangers : pandas, cuisine du Sichuan et conseils voyage"
-description: "Guide pratique de Chengdu pour visiteurs étrangers : pandas, hotpot, maisons de thé, transports, excursions, budget et conseils pour profiter de la capitale gastronomique du Sichuan."
+title: "Guide de Chengdu 2026 pour étrangers : pandas, cuisine du Sichuan et..."
+description: "Découvrez Chengdu en 2026 : pandas, cuisine du Sichuan, maisons de thé, transports et conseils pratiques pour un voyage étranger réussi."
 pubDate: 2026-07-09
 category: essentials
 tags: ["chengdu", "guide de ville", "voyage en chine", "expatriés"]
@@ -20,6 +20,8 @@ faqs:
     answer: "Moins qu'à Shanghai, mais le métro est bilingue et les applications de traduction couvrent la plupart des situations. Certains cafés, hôtels et services liés à la communauté étrangère sont plus anglophones."
   - question: "Combien de jours faut-il à Chengdu ?"
     answer: "Deux à trois jours couvrent les pandas, les vieux quartiers, les temples, un hotpot et les maisons de thé. Ajoutez du temps pour Leshan, le mont Qingcheng ou l'ouest du Sichuan."
+---
+
 ---
 
 ## Introduction
@@ -50,3 +52,13 @@ Leshan et son Grand Bouddha se font bien en journée. Le mont Qingcheng et Dujia
 
 Chengdu est idéale pour les voyageurs qui veulent de la Chine urbaine sans courir toute la journée. Trois jours donnent déjà un très bon aperçu.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

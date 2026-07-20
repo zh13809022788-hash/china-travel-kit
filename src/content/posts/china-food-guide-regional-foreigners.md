@@ -1,6 +1,6 @@
 ---
-title: "China Food Guide for Foreigners 2026: Regional Dishes, How to Order & Eat Safely"
-description: "A practical guide to Chinese regional cuisine for foreign visitors — what to eat by region, how to order without speaking Chinese, restaurant tips, food safety, and essential dining phrases."
+title: "China Food Guide for Foreigners 2026: Regional Dishes, How to Order &..."
+description: "Explore China’s regional dishes, order with confidence, and enjoy practical dining tips, food safety advice, and useful phrases for travelers."
 pubDate: 2026-07-15
 category: food
 tags: ["chinese food", "regional cuisine", "street food", "food guide", "dining", "sichuan", "cantonese"]
@@ -28,6 +28,8 @@ faqs:
     answer: "Yes. You can register with a foreign number on Meituan. The H5 web version works without registration. Alipay's food delivery mini-programs work with your existing Alipay account. Pay at the door with cash if app payment fails."
   - question: "What is the best way to find good restaurants near me?"
     answer: "Use Dianping (大众点评) — it's the Yelp of China. Search by location and filter by rating. The app is Chinese-only, but the visual interface with photos makes it usable. Alternatively, search on Alipay's 'Nearby' feature for English-friendly restaurants."
+---
+
 ---
 
 China's food scene can feel overwhelming on first arrival. Eight major culinary traditions, unfamiliar ingredients, language barriers, and a payment system that assumes you have Alipay or WeChat Pay.
@@ -208,3 +210,11 @@ Print or save this card on your phone:
 All prices are per person. Mobile payment is accepted at virtually every restaurant in cities.
 
 *This guide was updated in July 2026. Prices and restaurant availability may vary. Always check current exchange rates and local conditions before your trip.*
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: "中國美食指南 2026：地方菜、點餐與飲食安全"
-description: "外國旅客中國美食指南：地方菜、城市必吃、不會中文點餐、食品安全、素食過敏表達與餐廳付款技巧。"
+description: "外國旅客中國美食指南：地方菜、城市必吃、不會中文點餐、食品安全、素食過敏表達與餐廳付款技巧。 [NEEDS EXPANSION]"
 pubDate: 2026-07-15
 category: food
 tags: ["中國美食", "地方菜", "街頭小吃", "美食指南", "用餐", "四川菜", "粵菜"]
@@ -62,3 +62,11 @@ faqs:
 
 - [不會中文怎麼在中國點餐與叫外送](/zh-tw/posts/ordering-food-in-china-without-chinese-meituan-ele-me/)
 - [成都街頭小吃安全與辣度指南](/zh-tw/posts/chengdu-street-food-safety-spice-levels-what-to-order/)
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>

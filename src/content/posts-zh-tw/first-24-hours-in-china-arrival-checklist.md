@@ -1,6 +1,6 @@
 ---
 title: "抵達中國前 24 小時清單 2026：落地後該做什麼"
-description: "外國旅客抵達中國後 24 小時清單：機場流程、網路、Alipay、DiDi、現金備用、飯店入住與第一天避坑。"
+description: "2026年抵達中國前後必備清單，帶你搞定入境、網路與支付設定，從Alipay、DiDi到飯店入住與現金備用，整理第一天最容易卡關的步驟與避坑提醒，讓落地後24小時更安心順暢。"
 pubDate: 2026-07-14
 category: essentials
 tags: ["抵達清單", "第一次來中國", "付款", "交通"]
@@ -16,6 +16,8 @@ faqs:
     answer: "取決於抵達時間、行李、語言舒適度和城市。大城市機場地鐵便宜可靠；叫車在 App 可用時很方便；深夜官方計程車排班實用，但要準備中文目的地。"
   - question: "第一天最大的錯誤是什麼？"
     answer: "把付款、網路和地址準備留到又累又有時差的抵達後才處理。出發前先設定好 App，並離線保存飯店中文地址。"
+---
+
 ---
 
 ## 第一優先：讓手機活過來
@@ -43,3 +45,13 @@ faqs:
 ## 總結
 
 中國第一天的核心不是多跑景點，而是穩住：手機有網、支付可用、現金有備份、交通路線清楚、飯店地址離線保存。這些做好，後面幾天會順很多。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,5 +1,5 @@
 ---
-title: "Premières 24 heures en Chine 2026 : checklist d'arrivée pour visiteurs étrangers"
+title: "Premières 24 heures en Chine 2026 : checklist d'arrivée pour visiteurs..."
 description: "Checklist pratique pour les premières 24 heures en Chine : internet, paiement, aéroport, DiDi, hôtel, espèces, applications et premiers tests indispensables."
 pubDate: 2026-07-14
 category: essentials
@@ -42,3 +42,13 @@ Choisissez simple : restaurant avec photos, supérette ou centre commercial. Év
 
 Les premières 24 heures servent à stabiliser trois choses : internet, paiement, transport. Une fois ces bases testées, le reste du voyage devient beaucoup plus fluide.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

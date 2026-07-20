@@ -1,6 +1,6 @@
 ---
-title: "SIM-Karte in China als Ausländer kaufen 2026: China Mobile, Unicom und Telecom im Vergleich"
-description: "Schritt-für-Schritt-Anleitung zum Kauf einer lokalen SIM-Karte in China als ausländischer Tourist im Jahr 2026. Vergleich von China Mobile, China Unicom und China Telecom nach Preis, Netzabdeckung, englischem Support und Kaufoptionen am Flughafen."
+title: "SIM-Karte in China als Ausländer kaufen 2026: China Mobile, Unicom und..."
+description: "Schritt-für-Schritt-Anleitung zum Kauf einer lokalen SIM-Karte in China als ausländischer Tourist im Jahr 2026."
 pubDate: 2026-07-16
 category: esim
 tags: ["china sim card", "china mobile", "china unicom", "china telecom", "local sim", "mobile data china", "china tourist sim"]
@@ -110,3 +110,15 @@ China Mobile und China Unicom blockieren die VPN-Nutzung nicht, drosseln aber de
 - **Wo kaufen**: Flughafen-Ankunftsschalter für Bequemlichkeit; Anbietershop in der Stadt für niedrigere Preise
 - **Englische Hotlines**: China Mobile 10086, China Unicom 10010
 - **Dual-SIM-Einrichtung**: Reise-eSIM für Daten + lokale chinesische SIM für die Telefonnummer
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/esim-comparison/" rel="nofollow">eSIM plan comparator</a> — Compare data plans across different China eSIM providers.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

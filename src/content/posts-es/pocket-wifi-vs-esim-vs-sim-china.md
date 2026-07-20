@@ -27,3 +27,22 @@ faqs:
 - Viaje largo (> 2 semanas): SIM china física
 - Grupo familiar: Pocket WiFi
 - Respaldo: Siempre lleva un eSIM + un poco de efectivo
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/esim-comparison/" rel="nofollow">eSIM plan comparator</a> — Compare data plans across different China eSIM providers.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.
+
+
+## Diferencias clave entre Pocket WiFi, eSIM y SIM física
+## Ventajas y desventajas de cada opción en China
+## Qué opción conviene según tu tipo de viaje
+## Consejos para tener internet sin problemas en China
+
+(Content to be added)

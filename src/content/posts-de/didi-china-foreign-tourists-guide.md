@@ -45,3 +45,13 @@ DiDi reduziert Sprach- und Zahlungsprobleme. Ein offizielles Taxi ist gut, wenn 
 ## Fazit
 
 DiDi ist kein Muss fuer jede Fahrt, aber ein sehr starkes Backup. Mit Alipay-Zahlung, chinesischen Adressen und etwas Aufmerksamkeit beim Einsteigen ist es fuer Besucher meist einfacher als ein spontanes Taxi.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/show-to-driver/" rel="nofollow">show to driver tool</a> — Show Chinese addresses to taxi drivers.<br><a href="/tools/budget-cash-estimator/" rel="nofollow">budget & cash estimator</a> — Plan your trip budget and how much cash to bring.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

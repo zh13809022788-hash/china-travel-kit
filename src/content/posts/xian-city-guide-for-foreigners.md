@@ -1,6 +1,6 @@
 ---
 title: "Xi'an City Guide for Foreigners 2026: What to Know Before You Go"
-description: "Complete 2026 guide to Xi'an for foreign tourists — Terracotta Warriors, City Wall, Muslim Quarter, food guide, metro tips, and practical advice for visiting China's ancient capital."
+description: "Plan your 2026 Xi'an trip with essential tips on top sights, local food, transport, and practical advice for foreign visitors."
 pubDate: 2026-07-18
 category: essentials
 tags: ["xian", "city guide", "china travel", "shaanxi"]
@@ -20,6 +20,8 @@ faqs:
     answer: "Spring (March-May) and Autumn (September-November) are ideal. The weather is mild and the skies are clearer. Summer is extremely hot and crowded with domestic tourism. Winter is cold but the city has a stark beauty, and you'll have the Terracotta Warriors almost to yourself in January-February."
 cover: "city-xian"
 coverAlt: "Xi'an City Wall at dusk with traditional architecture"
+---
+
 ---
 
 ## Introduction
@@ -96,3 +98,13 @@ The best place to eat is the Muslim Quarter, specifically the side streets off t
 - **Language:** Major sites have English. Muslim Quarter vendors are used to foreigners and will communicate with hand gestures and calculators for prices. Download Pleco for text translation and Google Translate or DeepL for voice.
 - **Best season:** Autumn (Sep-Nov) is perfect. Spring (Mar-May) is good but dusty. Summer is brutally hot. Winter is cold but uncrowded.
 - **Visa:** Xi'an operates the 240-hour visa-free transit policy for eligible nationalities, provided you arrive and depart through Shaanxi entry ports.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

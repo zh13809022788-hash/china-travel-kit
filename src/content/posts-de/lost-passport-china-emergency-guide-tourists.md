@@ -1,6 +1,6 @@
 ---
 title: "Was tun bei Passverlust in China: Notfall-Leitfaden für Touristen"
-description: "Schritt-für-Schritt-Notfallleitfaden für ausländische Touristen, die ihren Pass in China verlieren — Polizeimeldung, Botschaftsverfahren, vorläufige Reisedokumente, Kosten, Zeitrahmen und was während der Wartezeit zu tun ist."
+description: "Pass in China verloren? Dieser Notfall-Leitfaden zeigt Touristen die wichtigsten Schritte zu Polizei, Botschaft und Ersatzdokument."
 pubDate: 2026-07-17
 category: essentials
 tags: ["lost passport china", "emergency passport", "china embassy", "passport stolen china", "china travel emergency", "temporary travel document"]
@@ -18,6 +18,8 @@ faqs:
     answer: "Rechnen Sie mit ¥1 500–3 500 insgesamt. Aufschlüsselung: Polizeimeldung kostenlos. Notpass-Gebühr ¥300–1 200 je nach Nationalität. Ausreisevisum ¥160. Passfotos ¥20–40. Taxis zwischen den Ämtern ¥500–1 000. Zusätzliche Hotelübernachtungen bei Verzögerung."
   - question: "Was bei Passverlust in einer Kleinstadt ohne Konsulat?"
     answer: "Sie müssen zur nächsten Stadt mit Konsulat reisen. Ohne gültigen Ausweis kein Inlandsflug oder Hochgeschwindigkeitszug. Die Polizeibescheinigung wird manchmal für Züge akzeptiert, aber ohne Garantie. Sicherste Option: Auto mit Fahrer, Fernbus, oder Konsulat anrufen."
+---
+
 ---
 
 Den Pass zu verlieren ist überall schlimm. In China, wo der Pass nicht nur Ausweis, sondern Hotelschlüssel, Zugticket, Zahlungsverifikation und Aufenthaltsgenehmigung ist — eine ganz andere Dimension.
@@ -103,3 +105,11 @@ Sie erhalten ein 停留证件 — Aufenthaltserlaubnis für 15–30 Tage. Beginn
 ---
 
 **Weiterlesen:** [China visumfreie Einreise und Transit 2026](/de/posts/china-visa-free-entry-transit-guide-2026/) zu Visaregeln nach Dokumentenersatz. [Die ersten 24 Stunden in China: Ankunfts-Checkliste](/de/posts/first-24-hours-in-china-arrival-checklist/) zu vorbeugenden Maßnahmen.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

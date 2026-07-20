@@ -1,6 +1,6 @@
 ---
 title: "観光客向け中国での支払い完全ガイド 2026"
-description: "外国人旅行者が中国で支払うための実用的な最新ガイド。モバイルウォレット、海外カード、現金、避けたい落とし穴を解説します。"
+description: "外国人旅行者が中国で支払うための実用的な最新ガイド。モバイルウォレット、海外カード、現金、避けたい落とし穴を解説します。 [NEEDS EXPANSION]"
 pubDate: 2026-07-07
 category: payment
 tags: ["alipay", "wechat pay", "mobile payment", "cash"]

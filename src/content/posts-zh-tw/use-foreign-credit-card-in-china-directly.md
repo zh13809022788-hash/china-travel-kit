@@ -1,6 +1,6 @@
 ---
 title: "2026 外國信用卡在中國能直接刷嗎？Visa、Mastercard 可用場景"
-description: "2026 年外國 Visa、Mastercard 在中國的可用範圍：飯店、ATM、連鎖店、機場，以及何時仍需要 Alipay 或 WeChat Pay。"
+description: "2026 年外國 Visa、Mastercard 在中國的可用範圍：飯店、ATM、連鎖店、機場，以及何時仍需要 Alipay 或 WeChat Pay。 [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: payment
 tags: ["信用卡", "Visa Mastercard", "中國支付", "ATM"]
@@ -47,3 +47,15 @@ faqs:
 ## 總結
 
 外國信用卡在中國能用，但覆蓋不完整。最穩的做法是：實體卡用於飯店、ATM 和大型商家；日常付款靠 Alipay 或 WeChat Pay；現金只留作備援。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

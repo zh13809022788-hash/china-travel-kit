@@ -2,7 +2,7 @@
 title: "2026 광저우 여행 가이드: 외국인 여행자가 알아두면 좋은 것들"
 pubDate: 2026-07-19
 category: essentials
-description: "2026년 외국인 여행자를 위한 실용적인 광저우 도시 가이드. 교통, 숙소 지역, 음식, 비용, 날씨, 자주 묻는 질문까지 정리했습니다."
+description: "2026년 외국인 여행자를 위한 실용적인 광저우 도시 가이드. 교통, 숙소 지역, 음식, 비용, 날씨, 자주 묻는 질문까지 정리했습니다. [NEEDS EXPANSION]"
 tags: ["guide", "China"]
 ---
 
@@ -118,6 +118,14 @@ tags: ["guide", "China"]
 
 남중국 출장이나 환승 일정 중 잠깐 들르는 정도라면 이틀이면 첫인상을 보기에는 충분하다. 그래도 제대로 먹고, 주요 명소 몇 곳을 보고, 하루쯤은 동네를 천천히 걸어보고 싶다면 3 to 4 days가 더 좋다. 음식에 진심이라면 더 길게 잡아도 후회가 적다. 광저우에서는 식사가 여행 사이의 휴식이 아니라, 여행 일정 그 자체가 되는 일이 흔하다.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### 광저우는 외국인 여행자가 가볼 만한 도시인가요?
@@ -146,3 +154,5 @@ tags: ["guide", "China"]
 광저우는 내용이 있는 도시를 원하는 외국인 여행자에게 꽤 좋은 선택지다. 실용적이고, 비용 대비 만족도가 높고, 특히 음식과 현지 도시 생활에 관심이 있다면 보상이 크다. 지하철 중심으로 동선을 짜고, 연결 좋은 지역에 숙소를 잡고, 제대로 먹을 시간을 남겨두면 된다. 기본 공식은 그 정도면 충분하다.
 
 2026년에도 광저우는 중국에서 여행하기 좋은 실용적인 도시 중 하나다. 접근성, 편의성, 그리고 현지의 리듬을 함께 느끼고 싶은 여행자에게 잘 맞는다.
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

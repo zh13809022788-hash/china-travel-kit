@@ -1,6 +1,6 @@
 ---
 title: "成都街頭小吃 2026：安全、辣度與外國旅客必點清單"
-description: "2026 年成都街頭小吃實用指南：如何判斷衛生、理解四川辣度、必吃品項，以及不會中文也能點餐的方法。"
+description: "2026成都街頭小吃實用指南，帶你判斷攤位衛生與食材新鮮度、掌握四川辣度分級，精選外國旅客必吃品項，附點餐技巧與避雷建議，從夜市到巷弄攤位都能吃得安全、過癮又不踩雷。"
 pubDate: 2026-07-09
 category: food
 tags: ["成都", "街頭小吃", "四川", "食品安全", "辣味食物"]
@@ -20,6 +20,8 @@ faqs:
     answer: "如果你不習慣辣椒和重油，確實可能不適。建議慢慢吃，旁邊配白飯或甜豆漿，並隨身帶基本腸胃藥。"
   - question: "成都街邊攤收現金或刷卡嗎？"
     answer: "多數攤販偏好 Alipay 或 WeChat Pay，很多人已不常準備零錢。出發前把外國卡綁到行動錢包，點餐會順很多。"
+---
+
 ---
 
 ## 先學會看攤位
@@ -47,3 +49,13 @@ faqs:
 ## 總結
 
 成都街頭小吃值得試，但節奏要慢。選忙碌攤位、吃熱食、辣度從低開始，行動支付先設定好。這樣你能把注意力放在味道上，而不是放在腸胃風險上。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/essential-phrases/" rel="nofollow">essential chinese phrases</a> — Must-know Mandarin phrases for restaurants.<br><a href="/tools/clothing-size-converter/" rel="nofollow">clothing & shoe size converter</a> — Convert your sizes to Chinese sizes.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

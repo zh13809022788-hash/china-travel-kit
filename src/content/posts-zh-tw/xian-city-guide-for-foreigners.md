@@ -1,6 +1,6 @@
 ---
 title: "西安旅遊指南 2026：外國遊客行前必讀"
-description: "2026最新西安旅遊攻略——兵馬俑、古城牆、回民街、大雁塔必訪景點，交通方式、美食推薦，給外國旅客的完整實用指南。"
+description: "2026最新西安旅遊攻略——兵馬俑、古城牆、回民街、大雁塔必訪景點，交通方式、美食推薦，給外國旅客的完整實用指南。 [NEEDS EXPANSION]"
 pubDate: 2026-07-18
 category: essentials
 tags: ["西安", "城市指南", "中國旅遊", "陝西"]
@@ -88,3 +88,13 @@ coverAlt: "西安古城牆南門夜景"
 - **語言**：主要景點有英文標示。回民街攤販習慣和外國人打交道，會比手畫腳＋計算機報價。
 - **最佳季節**：秋天（9-11月）無敵。夏天非常熱。冬天冷但遊客少。
 - **簽證**：西安實施240小時過境免簽，符合資格的國籍從陝西口岸進出即可。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

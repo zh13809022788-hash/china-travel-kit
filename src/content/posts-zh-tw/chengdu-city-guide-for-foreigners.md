@@ -1,6 +1,6 @@
 ---
 title: "成都旅遊指南 2026：外國旅客看熊貓、吃川菜與城市攻略"
-description: "2026 年外國旅客成都指南：熊貓基地、四川美食、茶館、交通、近郊旅行與實用生活建議。"
+description: "2026 年外國旅客成都指南：熊貓基地、四川美食、茶館、交通、近郊旅行與實用生活建議。 [NEEDS EXPANSION]"
 pubDate: 2026-07-09
 category: essentials
 tags: ["成都", "城市指南", "中國旅行", "外籍人士"]
@@ -51,3 +51,13 @@ coverAlt: "成都大熊貓繁育研究基地的大熊貓"
 ## 總結
 
 成都適合想看熊貓、吃好、放慢步調，又想感受中國西部城市氣質的旅客。兩三天能玩到精華，多留幾天則能把川西與周邊一起串起來。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

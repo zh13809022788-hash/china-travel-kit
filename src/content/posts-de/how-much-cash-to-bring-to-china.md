@@ -42,3 +42,20 @@ Flughafenwechselstuben sind bequem, aber selten die guenstigste Wahl. Banken sin
 ## Fazit
 
 Bringen oder heben Sie genug fuer Notfaelle ab, nicht fuer die ganze Reise. Mit 1.000 bis 2.000 RMB, kleinen Scheinen und funktionierender Wallet sind die meisten Touristen gut abgesichert.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/payment-checker/" rel="nofollow">payment compatibility checker</a> — Check if your card works with Alipay and WeChat Pay in China.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.
+
+
+## Bezahlen mit Karte und Mobile Payment in China
+
+(Content to be added)

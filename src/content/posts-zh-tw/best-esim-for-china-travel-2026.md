@@ -1,6 +1,6 @@
 ---
 title: "2026 中國旅行最佳 eSIM：怎麼選、怎麼設定"
-description: "2026 年中國旅行 eSIM 選購指南：比較流量方案、確認哪些方案能使用常見國際 App，並完成安裝設定。"
+description: "2026 年中國旅行 eSIM 選購指南：比較流量方案、確認哪些方案能使用常見國際 App，並完成安裝設定。 [NEEDS EXPANSION]"
 pubDate: 2026-07-05
 category: esim
 tags: ["esim", "china data", "mobile internet", "travel sim"]

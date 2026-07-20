@@ -1,5 +1,5 @@
 ---
-title: "Öffentliche Toiletten in China ohne Stress benutzen: Überlebensguide für Reisende"
+title: "Öffentliche Toiletten in China ohne Stress benutzen: Überlebensguide für..."
 category: essentials
 description: "Ein praktischer Leitfaden für ausländische Besucher: Wo man in China öffentliche Toiletten findet, was einen erwartet und wie man mit weniger Stress klarkommt."
 pubDate: 2026-07-19
@@ -161,6 +161,14 @@ Das spart Zeit, Stress und genau diese Dringlichkeit, bei der jede Entscheidung 
 
 Taschentücher einpacken. Desinfektionsgel mitnehmen. Gute Toiletten nutzen, wenn du sie findest. Schilder beachten. Und daran denken: Eine Toilette ist am Ende nur eine Toilette, auch am anderen Ende der Welt.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### Sind öffentliche Toiletten in China kostenlos?
@@ -183,3 +191,5 @@ Nutze Toiletten in Flughäfen, Hochgeschwindigkeitsbahnhöfen, großen Malls und
 
 ### Wie frage ich auf Chinesisch nach der Toilette?
 Du kannst `ce suo zai na li?` oder `qing wen, wei sheng jian zai na li?` sagen. In vielen Situationen reicht es auch, auf ein Toilettenschild zu zeigen.
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

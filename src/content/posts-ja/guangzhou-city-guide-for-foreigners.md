@@ -1,6 +1,6 @@
 ---
 title: "広州旅行ガイド2026：外国人観光客が知っておくべきこと"
-description: "2026年版・広州観光完全ガイド。広州塔、陳家祠、沙面島、広東料理、地下鉄の使い方、現地での実用的なアドバイス。"
+description: "2026年版・広州観光完全ガイド。広州塔、陳家祠、沙面島、広東料理、地下鉄の使い方、現地での実用的なアドバイス。 [NEEDS EXPANSION]"
 pubDate: 2026-07-18
 category: essentials
 tags: ["広州", "シティガイド", "中国旅行", "広東"]
@@ -27,3 +27,20 @@ coverAlt: "広州塔と珠江の夜景"
 広州は華南のエンジンルームです。2,000年以上にわたり港湾都市として、海のシルクロードの出発点であり、外国貿易が中国に入る玄関口でした。現在は中国第3の都市、製造業と物流の中心地、そして広東料理の発祥地——多くの人が中国最高の料理と評価する食文化の故郷です。
 
 2026年の外国人旅行者にとって、広州は北京の帝国的大将や上海の国際的な煌めきとは異なる中国を見せてくれます。ここはビジネスと食、亜熱帯のエネルギーにあふれた街。広東人は誇り高く、実利的で、精神的に独立しています。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+
+## 広州旅行の基本情報とベストシーズン
+## 外国人観光客向けの入国・通信・決済ガイド
+## 広州で訪れたい観光スポットと食文化
+
+(Content to be added)

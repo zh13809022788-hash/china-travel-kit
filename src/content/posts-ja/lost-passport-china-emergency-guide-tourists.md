@@ -1,6 +1,6 @@
 ---
 title: "中国でパスポートを紛失したら：外国人旅行者のための緊急ガイド"
-description: "中国でパスポートを紛失した外国人旅行者のためのステップバイステップ緊急ガイド——警察への届出、大使館での手続き、臨時渡航書の取得、費用、所要日数、待機期間中の過ごし方まで。"
+description: "中国でパスポートを紛失した外国人旅行者のためのステップバイステップ緊急ガイド——警察への届出、大使館での手続き、臨時渡航書の取得、費用、所要日数、待機期間中の過ごし方まで。 [NEEDS EXPANSION]"
 pubDate: 2026-07-17
 category: essentials
 tags: ["lost passport china", "emergency passport", "china embassy", "passport stolen china", "china travel emergency", "temporary travel document"]
@@ -115,3 +115,11 @@ faqs:
 ---
 
 **続けて読む：**[中国ビザなし入国とトランジットガイド 2026](/ja/posts/china-visa-free-entry-transit-guide-2026/) では、新しい書類取得後のビザルールとオーバーステイ防止策を解説。[中国到着後24時間：準備チェックリスト](/ja/posts/first-24-hours-in-china-arrival-checklist/) では、ホテルチェックイン時にパスポートのコピーを取るなど、緊急事態を未然に防ぐ実践的手順を紹介しています。
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>

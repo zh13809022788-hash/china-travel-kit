@@ -1,6 +1,6 @@
 ---
 title: "2026년 난징 여행 가이드: 외국인 관광객을 위한 완벽 정리"
-description: "2026년 난징 여행 완전 가이드 — 명효릉, 우셔우산, 진회하 필수 관광지, 지하철 교통팁, 현지 맛집 추천, 실전 여행 팁까지 한 번에 정리했습니다."
+description: "2026년 난징 여행 완전 가이드 — 명효릉, 우셔우산, 진회하 필수 관광지, 지하철 교통팁, 현지 맛집 추천, 실전 여행 팁까지 한 번에 정리했습니다. [NEEDS EXPANSION]"
 pubDate: 2026-07-18
 category: essentials
 tags: ["난징", "시티 가이드", "중국 여행", "장쑤"]
@@ -84,3 +84,13 @@ coverAlt: "난징 부자묘와 진회하 야경"
 - **공항에서 시내까지**: 지하철 S1선 타고 난징남역까지(50분), 환승해서 시내로. 택시는 신제커우까지 약 120~150위안.
 - **인터넷**: 출발 전에 VPN을 설치하거나 중국용 eSIM을 구입하세요. Airalo나 Holafly 중국 eSIM이 잘 작동합니다.
 - **베스트 시즌**: 가을(9~11월)이 최고입니다. 봄(3~5월)도 좋지만 비가 많아요. 7~8월은 매우 덥고 습하니 피하는 게 좋습니다.
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,5 +1,5 @@
 ---
-title: "Commander à manger en Chine sans parler chinois : Meituan, Ele.me et astuces 2026"
+title: "Commander à manger en Chine sans parler chinois : Meituan, Ele.me et..."
 description: "Guide pratique pour commander de la nourriture en Chine sans chinois : Meituan, Ele.me, mini-programmes Alipay, adresse, paiement, coursiers et dépannage."
 pubDate: 2026-07-08
 category: food

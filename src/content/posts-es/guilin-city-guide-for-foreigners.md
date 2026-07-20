@@ -26,3 +26,20 @@ Guilín es el paisaje de postal de China. Las montañas de karst que se elevan s
 **Comida local:**
 - Arroz de Guilín (桂林米粉) → El plato más famoso, fideos de arroz en caldo
 - Pescado del río Li al vapor
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+
+## Cuándo viajar a Guilín
+## Cómo llegar y moverse por la zona
+## Qué ver entre el río Li y Yangshuo
+## Consejos prácticos para planificar la visita
+
+(Content to be added)

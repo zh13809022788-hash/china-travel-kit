@@ -139,6 +139,54 @@ const postsEs = defineCollection({
   }),
 });
 
+const postsTh = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    category: categorySchema,
+    series: seriesSchema.optional(),
+    tags: z.array(z.string()).default([]),
+    featured: z.boolean().default(false),
+    faqs: z.array(faqSchema).default([]),
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
+  }),
+});
+
+const postsMs = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    category: categorySchema,
+    series: seriesSchema.optional(),
+    tags: z.array(z.string()).default([]),
+    featured: z.boolean().default(false),
+    faqs: z.array(faqSchema).default([]),
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
+  }),
+});
+
+const postsVi = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    category: categorySchema,
+    series: seriesSchema.optional(),
+    tags: z.array(z.string()).default([]),
+    featured: z.boolean().default(false),
+    faqs: z.array(faqSchema).default([]),
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
+  }),
+});
+
 const dataPipelinePages = defineCollection({
   loader: glob({
     base: './data_pipeline/pages',
@@ -176,4 +224,4 @@ const dataPipelinePages = defineCollection({
   }),
 });
 
-export const collections = { posts, 'posts-zh-tw': postsZhTw, 'posts-ja': postsJa, 'posts-ko': postsKo, 'posts-ru': postsRu, 'posts-fr': postsFr, 'posts-de': postsDe, 'posts-es': postsEs, dataPipelinePages };
+export const collections = { posts, 'posts-zh-tw': postsZhTw, 'posts-ja': postsJa, 'posts-ko': postsKo, 'posts-ru': postsRu, 'posts-fr': postsFr, 'posts-de': postsDe, 'posts-es': postsEs, 'posts-th': postsTh, 'posts-ms': postsMs, 'posts-vi': postsVi, dataPipelinePages };

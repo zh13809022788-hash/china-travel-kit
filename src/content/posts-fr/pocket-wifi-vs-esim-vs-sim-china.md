@@ -1,5 +1,5 @@
 ---
-title: "Pocket WiFi, eSIM ou SIM locale en Chine 2026 : meilleure option pour touristes"
+title: "Pocket WiFi, eSIM ou SIM locale en Chine 2026 : meilleure option pour..."
 description: "Comparatif 2026 entre Pocket WiFi, eSIM et carte SIM locale pour voyager en Chine : couverture, vitesse, installation, coût, blocages et choix selon le profil."
 pubDate: 2026-07-08
 category: esim
@@ -46,3 +46,15 @@ Elle peut offrir un très bon réseau et parfois un numéro chinois utile, mais 
 
 Pour un premier voyage, choisissez une eSIM fiable. Pour une famille, envisagez Pocket WiFi. Pour un séjour long, regardez la SIM locale en complément.
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/esim-comparison/" rel="nofollow">eSIM plan comparator</a> — Compare data plans across different China eSIM providers.
+  </p>
+</div>
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>
+
+[Explore all China travel tools](/tools/) — trip planner, visa checker, currency converter and more.

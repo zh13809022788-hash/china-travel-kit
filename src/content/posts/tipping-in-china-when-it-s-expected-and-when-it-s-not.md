@@ -1,6 +1,6 @@
 ---
 title: "Tipping in China 2026: When It's Expected and When It's Not (Tourist Guide)"
-description: "Should you tip in China in 2026? Practical guide for foreign visitors — which services expect tips, which do not, how much to tip at hotels and restaurants, and cultural etiquette to avoid awkward moments."
+description: "Learn when to tip in China in 2026, how much to give at hotels or restaurants, and the etiquette travelers need to avoid awkward moments."
 pubDate: 2026-07-09
 category: essentials
 tags: ["tipping", "china travel", "etiquette", "service charge", "essentials"]
@@ -21,6 +21,8 @@ faqs:
     answer: "Tour guides and drivers on organized trips are the main exception where tipping is genuinely expected, and roughly 50 to 200 RMB per day depending on group size and service is a reasonable range."
   - question: "Can I tip with a mobile payment app like WeChat or Alipay?"
     answer: "You can tip digitally by scanning a personal QR code or sending a red packet through WeChat, but many foreigners cannot easily set this up, so a small amount of cash remains the simplest option for the rare cases where you do tip."
+---
+
 ---
 
 ## The Short Answer

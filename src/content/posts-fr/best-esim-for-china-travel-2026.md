@@ -1,5 +1,5 @@
 ---
-title: "Meilleure eSIM pour voyager en Chine en 2026 : choisir, installer et éviter les pièges"
+title: "Meilleure eSIM pour voyager en Chine en 2026 : choisir, installer et..."
 description: "Comment choisir une eSIM pour la Chine en 2026 : compatibilité téléphone, routage, données, Airalo, Holafly, Nomad, installation et dépannage."
 pubDate: 2026-07-05
 category: esim

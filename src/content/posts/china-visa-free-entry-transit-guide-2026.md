@@ -1,6 +1,6 @@
 ---
 title: "China Visa-Free Entry and Transit 2026: Do You Need a Visa?"
-description: "Complete 2026 guide to China visa-free entry, 240-hour transit, and visa policies by nationality — eligibility checker, airport processes, required documents, and common questions for foreign travelers."
+description: "Check China visa-free entry and 240-hour transit rules for 2026, with clear guidance on eligibility, documents, and when you need a visa."
 pubDate: 2026-07-08
 category: transport
 tags: ["visa free", "china visa", "transit visa", "entry rules"]
@@ -21,6 +21,8 @@ faqs:
     answer: "The key difference is the onward-ticket requirement. Visa-free transit (240 hours) requires you to be traveling onward to a third country, so it suits stopovers. Unilateral visa-free entry (30 days) has no such requirement and works for a normal round-trip visit, but covers a different, though overlapping, set of countries. Transit allows up to 10 days; unilateral entry allows up to 30. Check which one, if any, applies to your nationality and trip."
   - question: "Where can I confirm the current visa-free rules for my country?"
     answer: "China's visa-free country lists and eligible ports change as new countries are added and policies are extended, so always verify against an official source before you travel. The National Immigration Administration, China's Ministry of Foreign Affairs, the State Council information portal, and your nearest Chinese embassy or consulate are the authoritative sources. Treat official government sources and airline boarding rules as the final word for your specific nationality and travel dates."
+---
+
 ---
 
 ## Introduction

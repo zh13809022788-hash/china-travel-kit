@@ -1,7 +1,7 @@
 ---
 title: "中国の公衆トイレで慌てないための使い方ガイド"
 category: essentials
-description: "中国の公衆トイレを、どこで見つけるか、どう使うか、何に気をつけるかまでまとめた、外国人旅行者向けの実用ガイド。"
+description: "中国の公衆トイレを、どこで見つけるか、どう使うか、何に気をつけるかまでまとめた、外国人旅行者向けの実用ガイド。 [NEEDS EXPANSION]"
 pubDate: 2026-07-19
 tags: ["トイレ", "中国", "ガイド"]
 ---
@@ -159,6 +159,14 @@ tags: ["トイレ", "中国", "ガイド"]
 
 ティッシュを持つ。サニタイザーを持つ。良いトイレを見つけたら先に使う。表示に従う。そんな基本で十分です。地球の反対側にいても、トイレはトイレです。
 
+
+
+<div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+  <p class="text-sm text-gray-700">
+    <strong>Planning your trip?</strong><br>
+    <a href="/tools/survival-kit/" rel="nofollow">china survival kit</a> — Full-screen translation cards and checklists for your trip.<br><a href="/tools/best-time-to-visit/" rel="nofollow">best time to visit china</a> — Check weather and crowds by city and month.
+  </p>
+</div>
 ## FAQ
 
 ### 中国の公衆トイレは無料ですか？
@@ -181,3 +189,5 @@ tags: ["トイレ", "中国", "ガイド"]
 
 ### 中国語でトイレはどう聞けばいいですか？
 `ce suo zai na li?` か `qing wen, wei sheng jian zai na li?` が使いやすいです。多くの場所では、トイレの表示を指さすだけでも通じます。
+
+<div class="my-4"><a href="/tools/" class="text-brand-600 underline">Explore all China travel tools</a> — trip planner, visa checker, currency converter and more.</div>

@@ -1,6 +1,6 @@
 ---
 title: "2026年の中国旅行に現金はいくら持っていくべき？観光客のお金ガイド"
-description: "2026年に観光客が中国へ持っていく現金額、現金がまだ必要な場所、両替とATMのコツ、知っておきたい税関上限を解説します。"
+description: "2026年に観光客が中国へ持っていく現金額、現金がまだ必要な場所、両替とATMのコツ、知っておきたい税関上限を解説します。 [NEEDS EXPANSION]"
 pubDate: 2026-07-08
 category: payment
 tags: ["cash", "currency exchange", "china money", "rmb"]
