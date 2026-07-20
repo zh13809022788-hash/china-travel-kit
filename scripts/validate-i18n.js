@@ -70,25 +70,50 @@ function checkApostrophes(filePath, relPath) {
     const line = lines[i];
     const trimmed = line.trim();
 
-    // Skip lines that are clearly HTML, comments, or template literals
-    if (trimmed.startsWith("<") || trimmed.startsWith("{/*") || trimmed.startsWith("`")) continue;
+    // Only check lines inside frontmatter (between --- markers)
+    // HTML template content can safely contain apostrophes
+    let inFrontmatter = false;
+    // Re-scan from top to determine if this line is inside frontmatter
+    for (let k = 0; k < i; k++) {
+      if (lines[k].trim() === "---") {
+        inFrontmatter = !inFrontmatter;
+      }
+    }
+    if (!inFrontmatter) continue;
+
+    // Skip import lines (already checked by import path validator)
+    if (trimmed.startsWith("import ")) continue;
+
+    // Skip lines that are only HTML or comments
+    if (trimmed.startsWith("<") || trimmed.startsWith("{/*") || trimmed.startsWith("//")) continue;
 
     // Look for unescaped ' inside single-quoted JS strings
-    // Pattern: alphabetic char followed by ' followed by alphabetic char
-    // (e.g., d'hôtel — the ' is NOT escaped with \)
+    // First, determine if we're in a backtick string (template literal)
+    const inBacktick = (trimmed.match(/`/g) || []).length % 2 === 1;
+
     for (let j = 0; j < trimmed.length - 2; j++) {
       const c = trimmed[j];
       if (/[a-zA-Z]/.test(c) && trimmed[j + 1] === "'" && /[a-zA-Z]/.test(trimmed[j + 2])) {
         // Check if this ' is preceded by a backslash (escaped)
         if (j > 0 && trimmed[j - 1] === "\\") continue; // already escaped — OK
 
-        // Now verify we're inside a JS string (odd count of quotes before this position)
+        // Now verify we're inside a single-quoted JS string
         const beforeQuote = trimmed.substring(0, j + 1);
-        const quoteCount = (beforeQuote.match(/'/g) || []).length;
-        const escapedCount = (beforeQuote.match(/\\'/g) || []).length;
-        const effectiveQuotes = quoteCount - escapedCount;
+        const singleQuotes = (beforeQuote.match(/'/g) || []).length;
+        const doubleQuotes = (beforeQuote.match(/"/g) || []).length;
+        const escapedSingle = (beforeQuote.match(/\\'/g) || []).length;
+        const effectiveSingle = singleQuotes - escapedSingle;
 
-        if (effectiveQuotes % 2 === 1) {
+        // We're inside a single-quoted string if: odd single quotes AND
+        // either even double quotes OR we're before the first double-quote
+        // (handles: const x = 'text d'word'; vs const x = "text d'word";)
+        const inSingleQuotes = effectiveSingle % 2 === 1;
+        const inDoubleQuotes = doubleQuotes % 2 === 1;
+
+        // Skip if we're in a backtick or double-quoted string (safe)
+        if (inBacktick || inDoubleQuotes) continue;
+
+        if (inSingleQuotes) {
           // We're inside a single-quoted JS string — this is an unescaped apostrophe!
           const context = trimmed.substring(Math.max(0, j - 15), j + 15);
           errors.push(
