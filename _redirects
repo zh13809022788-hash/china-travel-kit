@@ -1,5 +1,16 @@
+# SEO: legacy URL redirects
+/blog /resources/ 301
+/blog/* /posts/:splat 301
+/guides /resources/ 301
+/guides/* /resources/ 301
+/visa /digital-nomads/visa/ 301
+/visa/* /digital-nomads/visa/ 301
+
+# Canonical domain & locale
 /sitemap.xml /sitemap-index.xml 301
 /sitemap.html /sitemap-index.xml 301
 /en/* /:splat 301
 https://chinatripbox.com/* https://www.chinatripbox.com/:splat 301
+
+# 404 catch-all (must be last)
 /* /404.html 404
