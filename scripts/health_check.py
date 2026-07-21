@@ -171,6 +171,10 @@ def write_locale_copy(content, target_path, locale_dir):
         f"from '{old_prefix}data/", f"from '{new_prefix}data/"
     ).replace(
         f"from '{old_prefix}assets/", f"from '{new_prefix}assets/"
+    ).replace(
+        f"from '{old_prefix}i18n/", f"from '{new_prefix}i18n/"
+    ).replace(
+        f"from '{old_prefix}images/", f"from '{new_prefix}images/"
     )
 
     # Add locale to BaseLayout / GuideLayout

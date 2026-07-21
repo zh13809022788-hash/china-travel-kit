@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
+import ToolSchema from '../../components/ToolSchema.astro';
 
 const title = 'Will My Apps Work in China? App Availability Checker';
 const description =
@@ -74,6 +75,11 @@ const apps: AppInfo[] = [
       description="A China travel eSIM that routes around local restrictions keeps your usual apps online — no separate VPN setup needed."
       buttonText="See eSIM Options"
       placeholder={AFFILIATE_LINKS.esim}
+    />
+      <ToolSchema
+      name="App Availability Checker"
+      description="Check whether Google, WhatsApp, Instagram and more work in China without a VPN"
+      url="https://www.chinatripbox.com/tools/app-availability-checker/"
     />
   </main>
   <Footer />

@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
+import ToolSchema from '../../components/ToolSchema.astro';
 
 const title = 'Essential Chinese Phrases for Travelers';
 const description =
@@ -130,6 +131,11 @@ const groups: Group[] = [
       description="A China travel eSIM keeps translation apps and maps working the moment you land."
       buttonText="Get Connected"
       placeholder={AFFILIATE_LINKS.esim}
+    />
+      <ToolSchema
+      name="Essential Chinese Phrases"
+      description="A printable list of must-know Mandarin phrases with pinyin for payment, transport, food and help"
+      url="https://www.chinatripbox.com/tools/essential-phrases/"
     />
   </main>
   <Footer />

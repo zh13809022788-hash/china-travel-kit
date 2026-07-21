@@ -330,7 +330,7 @@ export const CITY_GUIDES: CityGuideEntry[] = [
     name: 'Xining', nameZh: '西宁',
     desc: 'Gateway to Qinghai Lake and Tibetan Amdo region.',
     days: '2-3 days', bestSeason: 'Jun-Sep', difficulty: 'Medium',
-    whyGo: 'Qinghai Lake, Ta'er Monastery, Tibetan culture.',
+    whyGo: 'Qinghai Lake, Ta\u2019er Monastery, Tibetan culture.',
     mapX: -372, mapY: -617,
   },
   {

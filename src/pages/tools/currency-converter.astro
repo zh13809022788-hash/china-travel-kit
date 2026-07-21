@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
+import ToolSchema from '../../components/ToolSchema.astro';
 
 const title = 'RMB Currency Converter for China Travelers';
 const description =
@@ -70,6 +71,11 @@ const description =
       description="Link a no-FX-fee card to Alipay or WeChat Pay and pay at the real rate, with no cash exchange markup."
       buttonText="See Payment Setup"
       placeholder={AFFILIATE_LINKS.payment}
+    />
+      <ToolSchema
+      name="RMB Currency Converter"
+      description="Convert your currency to yuan and back and see what everyday things cost in China"
+      url="https://www.chinatripbox.com/tools/currency-converter/"
     />
   </main>
   <Footer />

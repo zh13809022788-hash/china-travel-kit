@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
+import ToolSchema from '../../components/ToolSchema.astro';
 
 const title = 'China Power Plug & Voltage Checker';
 const description =
@@ -57,6 +58,11 @@ const countries = [
         placeholder={AFFILIATE_LINKS.transport}
       />
     </div>
+      <ToolSchema
+      name="Power Plug & Voltage Checker"
+      description="Find out if you need a plug adapter or voltage converter for China based on your home country"
+      url="https://www.chinatripbox.com/tools/power-plug-checker/"
+    />
   </main>
   <Footer />
 </BaseLayout>

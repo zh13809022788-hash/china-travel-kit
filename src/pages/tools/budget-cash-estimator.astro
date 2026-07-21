@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
+import ToolSchema from '../../components/ToolSchema.astro';
 
 const title = 'China Trip Budget & Cash Estimator';
 const description =
@@ -74,6 +75,11 @@ const description =
         placeholder={AFFILIATE_LINKS.payment}
       />
     </div>
+      <ToolSchema
+      name="Budget & Cash Estimator"
+      description="Estimate your total trip budget and how much cash to bring, by length, style and city tier"
+      url="https://www.chinatripbox.com/tools/budget-cash-estimator/"
+    />
   </main>
   <Footer />
 </BaseLayout>

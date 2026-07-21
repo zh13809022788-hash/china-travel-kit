@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
+import ToolSchema from '../../components/ToolSchema.astro';
 
 const title = 'China Clothing & Shoe Size Converter';
 const description =
@@ -53,6 +54,11 @@ const description =
       description="Sort your payments and connectivity first so you can buy from any shop or app in China without friction."
       buttonText="See Travel Essentials"
       placeholder={AFFILIATE_LINKS.transport}
+    />
+      <ToolSchema
+      name="Clothing & Shoe Size Converter"
+      description="Convert US, UK and EU sizes to Chinese sizes for clothing and footwear"
+      url="https://www.chinatripbox.com/tools/clothing-size-converter/"
     />
   </main>
   <Footer />

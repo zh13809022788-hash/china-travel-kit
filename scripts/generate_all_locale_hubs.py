@@ -74,6 +74,8 @@ def adjust_imports_single(content):
         .replace("from '../styles/", "from '../../styles/")
         .replace("from '../data/", "from '../../data/")
         .replace("from '../assets/", "from '../../assets/")
+        .replace("from '../i18n/", "from '../../i18n/")
+        .replace("from '../images/", "from '../../images/")
     )
 
 
@@ -86,6 +88,8 @@ def adjust_imports_dir(content):
         .replace("from '../../styles/", "from '../../../styles/")
         .replace("from '../../data/", "from '../../../data/")
         .replace("from '../../assets/", "from '../../../assets/")
+        .replace("from '../../i18n/", "from '../../../i18n/")
+        .replace("from '../../images/", "from '../../../images/")
     )
 
 

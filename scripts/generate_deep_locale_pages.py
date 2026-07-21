@@ -100,6 +100,8 @@ def process_file(content, locale_dir, locale_code):
     content = content.replace("from '../../styles/", "from '../../../styles/")
     content = content.replace("from '../../data/", "from '../../../data/")
     content = content.replace("from '../../assets/", "from '../../../assets/")
+    content = content.replace("from '../../i18n/", "from '../../../i18n/")
+    content = content.replace("from '../../images/", "from '../../../images/")
     content = content.replace("from '../../images/", "from '../../../images/")
 
     # Add locale to BaseLayout

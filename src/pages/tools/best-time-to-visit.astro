@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import AffiliateCta from '../../components/AffiliateCta.astro';
 import { AFFILIATE_LINKS } from '../../config';
+import ToolSchema from '../../components/ToolSchema.astro';
 
 const title = 'Best Time to Visit China — City & Month Planner';
 const description =
@@ -57,6 +58,11 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
       description="Popular routes sell out fast in peak season. Lock in your high-speed rail and stays ahead of time."
       buttonText="See Booking Options"
       placeholder={AFFILIATE_LINKS.transport}
+    />
+      <ToolSchema
+      name="Best Time to Visit China"
+      description="Check weather, crowds and what to pack by city and month across major Chinese destinations"
+      url="https://www.chinatripbox.com/tools/best-time-to-visit/"
     />
   </main>
   <Footer />

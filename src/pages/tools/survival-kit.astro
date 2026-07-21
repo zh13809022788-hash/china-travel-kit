@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ShowToLocal from '../../components/ShowToLocal.astro';
 import SurvivalChecklist from '../../components/SurvivalChecklist.astro';
+import ToolSchema from '../../components/ToolSchema.astro';
 import survivalKits from '../../data/survival-kits.json';
 
 const title = 'China Survival Kit: Translation Cards and Trip Checklists';
@@ -67,6 +68,11 @@ const description =
         </section>
       ))}
     </div>
+      <ToolSchema
+      name="China Survival Kit"
+      description="Full-screen translation cards and saved checklists for arrival, restaurants, hotels and local communication"
+      url="https://www.chinatripbox.com/tools/survival-kit/"
+    />
   </main>
   <Footer />
 </BaseLayout>
